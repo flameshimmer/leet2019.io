@@ -53,5 +53,8 @@
     <ClCompile Include="TreeHelpers.cpp">
       <Filter>Helpers</Filter>
     </ClCompile>
+    <ClCompile Include="TwoSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

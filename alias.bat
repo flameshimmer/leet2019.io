@@ -1,0 +1,16 @@
+DOSKEY t=textpad $*
+DOSKEY s="C:\Program Files\Sublime Text 3\sublime_text.exe" $*
+DOSKEY ..=cd ..
+DOSKEY ...=cd ../..
+DOSKEY ....=cd ../../..
+DOSKEY dt=cd C:\Users\Administrator\Desktop
+DOSKEY dl=cd C:\Users\Administrator\Download
+DOSKEY code=cd C:\Users\Administrator\Desktop\leet2019
+DOSKEY me=notepad C:\Users\Administrator\Desktop\leet2019\alias.bat
+DOSKEY reload=C:\Users\Administrator\Desktop\leet2019\alias.bat
+DOSKEY ls=dir $*
+DOSKEY gs=git status
+DOSKEY ga=git add *
+DOSKEY gc=git commit -m $*
+DOSKEY gp=git push
+DOSKEY open=start $*

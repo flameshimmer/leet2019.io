@@ -15,7 +15,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 
-	Solution2019::Test::Main(); // Medium
+	//Solution2019::Test::Main(); // Medium
+	
+	// 8/15/2019
+	Solution2019::TwoSum::Main();
 	
 
 

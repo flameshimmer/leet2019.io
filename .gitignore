@@ -33,4 +33,7 @@
 
 # Folders
 Debug/
+ipch/
 
+# Others
+.opensdf
