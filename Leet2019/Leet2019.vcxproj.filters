@@ -56,5 +56,3479 @@
     <ClCompile Include="TwoSum.cpp">
       <Filter>Solution2019</Filter>
     </ClCompile>
+    <ClCompile Include="AccountsMerge.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ActiveBusinesses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorsandDirectorsWhoCooperatedAtLeastThreeTimes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddandSearchWordDatastructuredesign.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBinary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddBoldTaginString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddDigits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddingTwoNegabinaryNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AdditiveNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddOneRowtoTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddtoArrayFormofInteger.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddTwoNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AddTwoNumbersII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvantageShuffle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AlienDictionary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AllNodesDistanceKinBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AllOoneDataStructure.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AllPathsfromSourceLeadtoDestination.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AllPathsFromSourcetoTarget.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AllPossibleFullBinaryTrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AlphabetBoardPath.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AmbiguousCoordinates.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AnalyzeUserWebsiteVisitPattern.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AndroidUnlockPatterns.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArithmeticSlices.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArithmeticSlicesIISubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArmstrongNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrangingCoins.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayNesting.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayofDoubledPairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArrayPartitionI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArticleViewsI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ArticleViewsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AssignCookies.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AsteroidCollision.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AvailableCapturesforRook.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AverageofLevelsinBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="AverageSalaryDepartmentsVSCompany.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BackspaceStringCompare.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BagofTokens.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BalancedBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseballGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseSeven.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicCalculator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicCalculatorII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicCalculatorIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BasicCalculatorIV.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleshipsinaBoard.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BeautifulArrangement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BeautifulArrangementII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BeautifulArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestMeetingPoint.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestSightseeingPair.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestTimetoBuyandSellStock.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestTimetoBuyandSellStockII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestTimetoBuyandSellStockIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestTimetoBuyandSellStockIV.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestTimetoBuyandSellStockwithCooldown.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BestTimetoBuyandSellStockwithTransactionFee.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BigCountries.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BiggestSingleNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryGap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryNumberwithAlternatingBits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryPrefixDivisibleByFive.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearch.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTreeIterator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTreetoGreaterSumTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryStringWithSubstringsRepresentingOneToN.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySubarraysWithSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeCameras.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeColoringGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeInorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeLevelOrderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeLevelOrderTraversalII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeLongestConsecutiveSequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeLongestConsecutiveSequenceII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeMaximumPathSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreePaths.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreePostorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreePreorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreePruning.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeRightSideView.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreesWithFactors.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeTilt.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeUpsideDown.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeVerticalOrderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTreeZigzagLevelOrderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryWatch.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BitwiseANDofNumbersRange.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BitwiseORsofSubarrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BoatstoSavePeople.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BoldWordsinString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BombEnemy.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BoundaryofBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BraceExpansion.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BraceExpansionII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BricksFallingWhenHit.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BrickWall.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BrokenCalculator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BuddyStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildingHTwoO.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BulbSwitcher.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BulbSwitcherII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BullsandCows.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BurstBalloons.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BusRoutes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CamelcaseMatching.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CampusBikes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CampusBikesII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Candy.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CandyCrush.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CanIWin.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CanPlaceFlowers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CapacityToShipPackagesWithinDDays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CardFlippingGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CarFleet.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CarPooling.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CatandMouse.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ChalkboardXORGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ChampagneTower.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CheapestFlightsWithinKStops.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckCompletenessofaBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckIfaNumberIsMajorityElementinaSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckIfWordIsValidAfterSubstitutions.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CherryPickup.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CircularArrayLoop.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesMoreThanFiveStudents.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ClimbingStairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CloneGraph.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ClosestBinarySearchTreeValue.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ClosestBinarySearchTreeValueII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ClosestLeafinaBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ClumsyFactorial.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinChange.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinChangeTwo.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CoinPath.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ColoringABorder.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Combinations.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CombinationSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CombinationSumII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CombinationSumIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CombinationSumIV.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CombineTwoTables.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CompareVersionNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ComplementofBaseOneZeroInteger.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CompleteBinaryTreeInserter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ComplexNumberMultiplication.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcatenatedWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfusingNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfusingNumberII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConnectingCitiesWithMinimumCost.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsecutiveAvailableSeats.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsecutiveNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsecutiveNumbersSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructBinarySearchTreefromPreorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructBinaryTreefromInorderandPostorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructBinaryTreefromPreorderandInorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructBinaryTreefromPreorderandPostorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructBinaryTreefromString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructQuadTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructStringfromBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConstructtheRectangle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainerWithMostWater.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainsDuplicate.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainsDuplicateII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainsDuplicateIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ContainVirus.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ContiguousArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ContinuousSubarraySum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertaNumbertoHexadecimal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertBinarySearchTreetoSortedDoublyLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertBSTtoGreaterTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertSortedArraytoBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvertSortedListtoBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConverttoBaseTwo.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ConvexPolygon.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CopyListwithRandomPointer.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CorporateFlightBookings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountandSay.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountBinarySubstrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountCompleteTreeNodes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountDifferentPalindromicSubsequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountingBits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountNumberswithUniqueDigits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountofRangeSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountofSmallerNumbersAfterSelf.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountPrimes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountStudentNumberinDepartments.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountTheRepetitions.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountUnivalueSubtrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CouplesHoldingHands.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CourseSchedule.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CourseScheduleII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CourseScheduleIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CousinsinBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CrackingtheSafe.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateMaximumNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomerPlacingtheLargestNumberofOrders.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomersWhoBoughtAllProducts.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomersWhoNeverOrder.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CustomSortString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CutOffTreesforGolfEvent.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DailyTemperatures.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStreamasDisjointIntervals.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DayoftheYear.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DecodedStringatIndex.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DecodeString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DecodeWays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DecodeWaysII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DecreaseElementsToMakeArrayZigzag.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DefanginganIPAddress.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DegreeofanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteandEarn.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteColumnstoMakeSorted.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteColumnstoMakeSortedII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteColumnstoMakeSortedIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteDuplicateEmails.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteNodeinaBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteNodeinaLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteNodesAndReturnForest.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DeleteOperationforTwoStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DepartmentHighestSalary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DepartmentTopThreeSalaries.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignCircularDeque.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignCircularQueue.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignCompressedStringIterator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignExcelSumFormula.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignHashMap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignHashSet.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignHitCounter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignInMemoryFileSystem.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignLogStorageSystem.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignPhoneDirectory.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignSearchAutocompleteSystem.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignSnakeGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignTicTacToe.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DesignTwitter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectCapital.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DiagonalTraverse.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DiameterofBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DifferentWaystoAddParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DigitCountinRange.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DistantBarcodes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DistinctSubsequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DistinctSubsequencesII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DistributeCandies.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DistributeCandiestoPeople.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DistributeCoinsinBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DIStringMatch.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DivideArrayIntoIncreasingSequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DivideTwoIntegers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DivisorGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DominoandTrominoTiling.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DotaTwoSenate.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DungeonGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DuplicateEmails.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DuplicateZeros.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EditDistance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EliminationGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeBonus.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeFreeTime.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeImportance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeesEarningMoreThanTheirManagers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EncodeandDecodeStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EncodeandDecodeTinyURL.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EncodeNaryTreetoBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EncodeStringwithShortestLength.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EqualRationalNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EqualTreePartition.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ErecttheFence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EscapeaLargeMaze.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EscapeTheGhosts.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EvaluateDivision.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="EvaluateReversePolishNotation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ExamRoom.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcelSheetColumnNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ExcelSheetColumnTitle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ExchangeSeats.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ExclusiveTimeofFunctions.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressionAddOperators.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpressiveWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FactorCombinations.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FactorialTrailingZeroes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FairCandySwap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FallingSquares.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FibonacciNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FillingBookcaseShelves.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindAllAnagramsinaString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindAllDuplicatesinanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindAllNumbersDisappearedinanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindAnagramMappings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindAndReplaceinString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindandReplacePattern.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindBottomLeftTreeValue.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindCommonCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindCumulativeSalaryofanEmployee.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindCustomerReferee.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindDuplicateFileinSystem.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindDuplicateSubtrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindEventualSafeStates.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindFirstandLastPositionofElementinSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindinMountainArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindKClosestElements.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindKLengthSubstringsWithNoRepeatedCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindKPairswithSmallestSums.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindKthSmallestPairDistance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindLargestValueinEachTreeRow.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindLeavesofBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMedianfromDataStream.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMedianGivenFrequencyofNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMinimuminRotatedSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMinimuminRotatedSortedArrayII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindModeinBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindPeakElement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindPermutation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindPivotIndex.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindRightInterval.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindSmallestLetterGreaterThanTarget.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindtheCelebrity.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindtheClosestPalindrome.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindtheDerangementofAnArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindtheDifference.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindtheDuplicateNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindtheShortestSuperstring.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FindtheTownJudge.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstBadVersion.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstMissingPositive.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstUniqueCharacterinaString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FixedPoint.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FizzBuzz.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlattenaMultilevelDoublyLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlattenBinaryTreetoLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlattenNestedListIterator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlattenTwoDVector.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipBinaryTreeToMatchPreorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipColumnsForMaximumNumberofEqualRows.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipEquivalentBinaryTrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipGameII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlippinganImage.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlipStringtoMonotoneIncreasing.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FloodFill.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FlowerPlantingWithNoAdjacent.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FourKeysKeyboard.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FourSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FourSumII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FractionAdditionandSubtraction.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FractiontoRecurringDecimal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FreedomTrail.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FriendCircles.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FriendRequestsIIWhoHastheMostFriends.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FriendRequestsIOverallAcceptanceRate.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FriendsOfAppropriateAges.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FrogJump.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="FruitIntoBaskets.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GameofLife.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayAnalysisI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayAnalysisII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayAnalysisIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayAnalysisIV.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePlayAnalysisV.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GasStation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneralizedAbbreviation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GenerateParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GenerateRandomPointinaCircle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GetHighestAnswerRateQuestion.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalandLocalInversions.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GoatLatin.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphValidTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GrayCode.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GreatestCommonDivisorofStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GridIllumination.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupAnagrams.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupShiftedStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GroupsofSpecialEquivalentStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GrumpyBookstoreOwner.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GuessNumberHigherorLower.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GuessNumberHigherorLowerII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GuesstheWord.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HammingDistance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HandofStraights.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HappyNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Heaters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HeightChecker.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HighestGradeForEachStudent.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HighFive.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HIndex.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HIndexII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HouseRobber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HouseRobberII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HouseRobberIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanTrafficofStadium.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageOverlap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageSmoother.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplementMagicDictionary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplementQueueusingStacks.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplementRandOneZero.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplementStackusingQueues.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplementstrStr.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ImplementTrie.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IncreasingOrderSearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IncreasingSubsequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IncreasingTripletSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexPairsofaString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InorderSuccessorinBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InorderSuccessorinBSTII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertDeleteGetRandomO.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertDeleteGetRandomODuplicatesallowed.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertInterval.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertintoaBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertintoaCyclicSortedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InsertionSortList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InsufficientNodesinRoottoLeafPaths.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegerBreak.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegerReplacement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegertoEnglishWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntegertoRoman.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InterleavingString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntersectionofTwoArrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntersectionofTwoArraysII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntersectionofTwoLinkedLists.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntervalListIntersections.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InvertBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InvestmentsinTwoZeroOneSix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IPO.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IPtoCIDR.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IsGraphBipartite.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IslandPerimeter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IsomorphicStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IsSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="JewelsandStones.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="JumpGameII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KClosestPointstoOrigin.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KdiffPairsinanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KEmptySlots.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyboardRow.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KeysandRooms.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KillProcess.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KInversePairsArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KnightDialer.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KnightProbabilityinChessboard.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KokoEatingBananas.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KSimilarStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthLargestElementinanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthLargestElementinaStream.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthSmallestElementinaBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthSmallestElementinaSortedMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthSmallestinLexicographicalOrder.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthSmallestNumberinMultiplicationTable.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthSmallestPrimeFraction.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="KthSymbolinGrammar.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestBSTSubtree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestComponentSizebyCommonFactor.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestDivisibleSubset.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestNumberAtLeastTwiceofOthers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestOneBorderedSquare.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestPalindromeProduct.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestPerimeterTriangle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestPlusSign.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestRectangleinHistogram.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestSumofAverages.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestTimeforGivenDigits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestTriangleArea.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestUniqueNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LargestValuesFromLabels.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LastStoneWeight.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LastStoneWeightII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LeafSimilarTrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LeastOperatorstoExpressNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LemonadeChange.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LengthofLastWord.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LengthofLongestFibonacciSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LetterCasePermutation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LetterCombinationsofaPhoneNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LetterTilePossibilities.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicographicallySmallestEquivalentString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LexicographicalNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LFUCache.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LicenseKeyFormatting.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LineReflection.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListComponents.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListCycle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListCycleII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedListRandomNode.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LoggerRateLimiter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LonelyPixelI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LonelyPixelII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestAbsoluteFilePath.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestArithmeticSequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestChunkedPalindromeDecomposition.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestCommonPrefix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestCommonSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestConsecutiveSequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestContinuousIncreasingSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestDuplicateSubstring.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestHarmoniousSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestIncreasingPathinaMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestIncreasingSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestLineofConsecutiveOneinMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestMountaininArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestPalindrome.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestPalindromicSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestPalindromicSubstring.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestRepeatingCharacterReplacement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestRepeatingSubstring.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestStringChain.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestSubstringwithAtLeastKRepeatingCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestSubstringwithAtMostKDistinctCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestSubstringwithAtMostTwoDistinctCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestSubstringWithoutRepeatingCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestTurbulentSubarray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestUncommonSubsequenceI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestUncommonSubsequenceII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestUnivaluePath.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestValidParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestWellPerformingInterval.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestWordinDictionary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestWordinDictionarythroughDeleting.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LongPressedName.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LoudandRich.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LowestCommonAncestorofaBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LowestCommonAncestorofaBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LowestCommonAncestorofDeepestLeaves.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="LRUCache.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicalString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MagicSquaresInGrid.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MajorityElement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MajorityElementII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MakingALargeIsland.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ManagerswithatLeastFiveDirectReports.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MapSumPairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MarketAnalysisI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MarketAnalysisII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaskingPersonalInformation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MatchstickstoSquare.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MatrixCellsinDistanceOrder.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxAreaofIsland.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxChunksToMakeSorted.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxChunksToMakeSortedII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxConsecutiveOnes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxConsecutiveOnesII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxConsecutiveOnesIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximalRectangle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximalSquare.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximizeDistancetoClosestPerson.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximizeSumOfArrayAfterKNegations.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumAverageSubarrayI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumAverageSubarrayII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumAverageSubtree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumBinaryTreeII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumDepthofBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumDepthofNaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumDifferenceBetweenNodeandAncestor.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumDistanceinArrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumFrequencyStack.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumGap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumLengthofPairChain.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumLengthofRepeatedSubarray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumNestingDepthofTwoValidParenthesesStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumofAbsoluteValueExpression.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumProductofThreeNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumProductofWordLengths.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumProductSubarray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumSizeSubarraySumEqualsk.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumSubarray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumSumCircularSubarray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumSumofThreeNonOverlappingSubarrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumSumofTwoNonOverlappingSubarrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumSwap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumVacationDays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumWidthofBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumWidthRamp.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumXORofTwoNumbersinanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxIncreasetoKeepCitySkyline.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxPointsonaLine.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxStack.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaxSumofRectangleNoLargerThanK.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MedianEmployeeSalary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MedianofTwoSortedArrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MeetingRooms.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MeetingRoomsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeIntervals.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MergekSortedLists.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeTwoBinaryTrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MergeTwoSortedLists.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MiddleoftheLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinCostClimbingStairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Minesweeper.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimizeMalwareSpread.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimizeMalwareSpreadII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimizeMaxDistancetoGasStation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimizeRoundingErrortoMeetTarget.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumAbsoluteDifferenceinBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumAddtoMakeParenthesesValid.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumAreaRectangle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumAreaRectangleII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumASCIIDeleteSumforTwoStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumCostForTickets.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumCosttoHireKWorkers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumCosttoMergeStones.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumCostTreeFromLeafValues.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumDepthofBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumDistanceBetweenBSTNodes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumDominoRotationsForEqualRow.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumFactorization.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumFallingPathSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumGeneticMutation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumHeightTrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumIncrementtoMakeArrayUnique.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumIndexSumofTwoLists.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumMovestoEqualArrayElements.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumMovestoEqualArrayElementsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumNumberofArrowstoBurstBalloons.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumNumberofKConsecutiveBitFlips.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumNumberofRefuelingStops.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumPathSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumScoreTriangulationofPolygon.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumSizeSubarraySum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumSwapstoGroupAllOnesTogether.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumSwapsToMakeSequencesIncreasing.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumTimeDifference.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumUniqueWordAbbreviation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumWindowSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumWindowSubstring.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MiniParser.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinStack.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MirrorReflection.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MissingElementinSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MissingNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MissingRanges.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MonotoneIncreasingDigits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MonotonicArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MostCommonWord.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MostFrequentSubtreeSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MostProfitAssigningWork.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MostStonesRemovedwithSameRoworColumn.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MoveZeroes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingAveragefromDataStream.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingStonesUntilConsecutive.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingStonesUntilConsecutiveII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiplyStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MyCalendarI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MyCalendarII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MyCalendarIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NaryTreeLevelOrderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NaryTreePostorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NaryTreePreorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NestedListWeightSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NestedListWeightSumII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkDelayTime.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NewTwoOneGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NewUsersDailyCount.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NextClosestTime.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NextGreaterElementI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NextGreaterElementII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NextGreaterElementIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NextGreaterNodeInLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NextPermutation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NimGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NondecreasingArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NonnegativeIntegerswithoutConsecutiveOnes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NonoverlappingIntervals.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NotBoringMovies.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NQueens.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NQueensII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NRepeatedElementinSizeTwoNArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NthDigit.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NthHighestSalary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NthMagicalNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NthTribonacciNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberComplement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofAtoms.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofBoomerangs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofConnectedComponentsinanUndirectedGraph.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberOfCornerRectangles.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofDaysinaMonth.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofDiceRollsWithTargetSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofDigitOne.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofDistinctIslands.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofDistinctIslandsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofEnclaves.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofEquivalentDominoPairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofIslands.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofIslandsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofLinesToWriteString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofLongestIncreasingSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofMatchingSubsequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofMusicPlaylists.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofOneBits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofRecentCalls.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofSegmentsinaString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofSquarefulArrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofSubarrayswithBoundedMaximum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofSubmatricesThatSumtoTarget.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberofValidSubarrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumbersAtMostNGivenDigitSet.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumbersWithRepeatedDigits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="NumbersWithSameConsecutiveDifferences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OccurrencesAfterBigram.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OddEvenJump.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OddEvenLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OnebitandTwobitCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OneEditDistance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OnesandZeroes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OneThreeTwoPattern.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OnlineElection.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OnlineMajorityElementInSubarray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OnlineStockSpan.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OpentheLock.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OptimalAccountBalancing.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OptimalDivision.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OrderlyQueue.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OutofBoundaryPaths.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputContestMatches.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PacificAtlanticWaterFlow.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PaintFence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PaintHouse.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PaintHouseII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PairsofSongsWithTotalDurationsDivisiblebySixZero.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromeLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromeNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromePairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromePartitioning.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromePartitioningII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromePermutation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromePermutationII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PalindromicSubstrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PancakeSorting.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ParallelCourses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseLispExpression.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ParsingABooleanExpression.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PartitionArrayforMaximumSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PartitionArrayintoDisjointIntervals.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PartitionArrayIntoThreePartsWithEqualSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PartitionEqualSubsetSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PartitionLabels.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PartitionList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PartitiontoKEqualSumSubsets.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PascalsTriangle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PascalsTriangleII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PatchingArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PathInZigzagLabelledBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PathSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PathSumII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PathSumIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PathSumIV.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PathWithMaximumMinimumValue.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PeakIndexinaMountainArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PeekingIterator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfectNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfectRectangle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PerfectSquares.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PermutationinString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Permutations.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PermutationSequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PermutationsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PlusOne.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PlusOneLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PoorPigs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PopulatingNextRightPointersinEachNode.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PopulatingNextRightPointersinEachNodeII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PositionsofLargeGroups.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PossibleBipartition.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PourWater.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Pow.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerfulIntegers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerofFour.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerofThree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PowerofTwo.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PredicttheWinner.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrefixandSuffixSearch.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PreimageSizeofFactorialZeroesFunction.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PreviousPermutationWithOneSwap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimeNumberofSetBitsinBinaryRepresentation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimePalindrome.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintFooBarAlternately.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintinOrder.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintZeroEvenOdd.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrisonCellsAfterNDays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductofArrayExceptSelf.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductSalesAnalysisI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductSalesAnalysisII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProductSalesAnalysisIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProfitableSchemes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEmployeesI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEmployeesII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectEmployeesIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectionAreaofThreeDShapes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PushDominoes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PyramidTransitionMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTreeIntersection.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="QueueReconstructionbyHeight.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RabbitsinForest.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RaceCar.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomFlipMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomPickIndex.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomPickwithBlacklist.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomPickwithWeight.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomPointinNonoverlappingRectangles.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeAddition.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeAdditionII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeModule.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeSumofBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeSumQueryImmutable.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeSumQueryMutable.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeSumQueryTwoDImmutable.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RangeSumQueryTwoDMutable.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RankScores.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RansomNote.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReachableNodesInSubdividedGraph.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReachaNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReachingPoints.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadNCharactersGivenReadFour.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadNCharactersGivenReadFourIICallmultipletimes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RearrangeStringkDistanceApart.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReconstructItinerary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReconstructOriginalDigitsfromEnglish.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RecoveraTreeFromPreorderTraversal.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RecoverBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleArea.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleAreaII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleOverlap.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RedundantConnection.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RedundantConnectionII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RegionsCutBySlashes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RegularExpressionMatching.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RelativeRanks.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RelativeSortArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveAllAdjacentDuplicatesInString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveBoxes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveComments.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveDuplicateLetters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveDuplicatesfromSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveDuplicatesfromSortedArrayII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveDuplicatesfromSortedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveDuplicatesfromSortedListII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveElement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveInvalidParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveKDigits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveLinkedListElements.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveNine.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveNthNodeFromEndofList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveOutermostParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RemoveVowelsfromaString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReorderedPowerofTwo.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReorderList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReorderLogFiles.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReorganizeString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RepeatedDNASequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RepeatedStringMatch.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RepeatedSubstringPattern.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplaceWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReportedPosts.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReportedPostsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReshapetheMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RestoreIPAddresses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RevealCardsInIncreasingOrder.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseBits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseInteger.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseLinkedListII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseNodesinkGroup.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseOnlyLetters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReversePairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseStringII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseVowelsofaString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseWordsinaString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseWordsinaStringII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseWordsinaStringIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RisingTemperature.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RLEIterator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotBoundedInCircle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotReturntoOrigin.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotRoomCleaner.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RomantoInteger.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RotateArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RotatedDigits.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RotateFunction.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RotateImage.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RotateList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RotateString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RottingOranges.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="RussianDollEnvelopes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SalesAnalysisI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SalesAnalysisII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SalesAnalysisIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SalesPerson.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SameTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SatisfiabilityofEqualityEquations.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreAfterFlippingMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreofParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrambleString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchaTwoDMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchaTwoDMatrixII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchinaBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchinaSortedArrayofUnknownSize.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchinRotatedSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchinRotatedSortedArrayII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SearchInsertPosition.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondDegreeFollower.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondHighestSalary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondMinimumNodeInaBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfCrossing.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SelfDividingNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SentenceScreenFitting.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SentenceSimilarity.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SentenceSimilarityII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SequenceReconstruction.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SerializeandDeserializeBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SerializeandDeserializeBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SerializeandDeserializeNaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SetIntersectionSizeAtLeastTwo.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SetMatrixZeroes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SetMismatch.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShiftingLetters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShoppingOffers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortEncodingofWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestBridge.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestCommonSupersequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestCompletingWord.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestDistancefromAllBuildings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestDistanceinaLine.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestDistanceinaPlane.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestDistancetoaCharacter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestPalindrome.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestPathinBinaryMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestPathtoGetAllKeys.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestPathVisitingAllNodes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestPathwithAlternatingColors.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestSubarraywithSumatLeastK.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestUnsortedContinuousSubarray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestWaytoFormString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestWordDistance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestWordDistanceII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShortestWordDistanceIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ShuffleanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SimilarRGBColor.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SimilarStringGroups.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SimplifyPath.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleElementinaSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleNumberII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleNumberIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SlidingPuzzle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SlidingWindowMaximum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SlidingWindowMedian.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestGoodBase.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestIntegerDivisiblebyK.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestRangeCoveringElementsfromKLists.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestRangeI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestRangeII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestRectangleEnclosingBlackPixels.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestRotationwithHighestScore.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestStringStartingFromLeaf.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestSubsequenceofDistinctCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestSubtreewithalltheDeepestNodes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestSufficientTeam.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SnakesandLadders.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SnapshotArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SolvetheEquation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SortanArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SortArrayByParity.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SortArrayByParityII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SortCharactersByFrequency.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SortColors.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SortList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SortTransformedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SoupServings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SparseMatrixMultiplication.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecialBinaryString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SpiralMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SpiralMatrixII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SpiralMatrixIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitArrayintoConsecutiveSubsequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitArrayintoFibonacciSequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitArrayLargestSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitArraywithEqualSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitArrayWithSameAverage.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitConcatenatedStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitLinkedListinParts.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Sqrt.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SquaresofaSortedArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SquirrelSimulation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StampingTheSequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StatisticsfromaLargeSample.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StickerstoSpellWord.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StoneGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StoneGameII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StrangePrinter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StreamofCharacters.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StringCompression.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StringtoInteger.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StringTransformsIntoAnotherString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StringWithoutAAAorBBB.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StrobogrammaticNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StrobogrammaticNumberII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StrobogrammaticNumberIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StrongPasswordChecker.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentAttendanceRecordI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentAttendanceRecordII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="StudentsReportByGeography.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubarrayProductLessThanK.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubarraySumEqualsK.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubarraySumsDivisiblebyK.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubarrayswithKDifferentIntegers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubdomainVisitCount.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Subsets.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubsetsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubstringwithConcatenationofAllWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SubtreeofAnotherTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SudokuSolver.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SummaryRanges.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofDigitsintheMinimumNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofDistancesinTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofEvenNumbersAfterQueries.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofLeftLeaves.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofRootToLeafBinaryNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofSquareNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofSubarrayMinimums.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofSubsequenceWidths.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumofTwoIntegers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SumRoottoLeafNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperEggDrop.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperPalindromes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperPow.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperUglyNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperWashingMachines.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfaceAreaofThreeDShapes.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SurroundedRegions.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapAdjacentinLRString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapForLongestRepeatedCharacterSubstring.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapNodesinPairs.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapSalary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SwiminRisingWater.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SymmetricTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TagValidator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TallestBillboard.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TargetSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskScheduler.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TeemoAttacking.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TenthLine.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TernaryExpressionParser.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TextJustification.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TheEarliestMomentWhenEveryoneBecomeFriends.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TheMaze.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TheMazeII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TheMazeIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TheSkylineProblem.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ThirdMaximumNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeEqualParts.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeSum.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeSumClosest.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeSumSmaller.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreeSumWithMultiplicity.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeBasedKeyValueStore.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ToeplitzMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ToLowerCase.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TopKFrequentElements.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TopKFrequentWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TotalHammingDistance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TransformtoChessboard.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TransposeFile.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TransposeMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TrappingRainWater.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TrappingRainWaterII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeNode.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleJudgement.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TrimaBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TripleswithBitwiseANDEqualToZero.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TripsandUsers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoCityScheduling.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoFourGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoKeysKeyboard.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoSumIIIDatastructuredesign.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoSumIIInputarrayissorted.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoSumIVInputisaBST.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="TwoSumLessThanK.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UglyNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UglyNumberII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UncommonWordsfromTwoSentences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UncrossedLines.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueBinarySearchTrees.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueBinarySearchTreesII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueEmailAddresses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueLetterString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueMorseCodeWords.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniquePaths.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniquePathsII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniquePathsIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueSubstringsinWraparoundString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueWordAbbreviation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UnivaluedBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UnpopularBooks.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UserActivityforthePastThreeZeroDaysI.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UserActivityforthePastThreeZeroDaysII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UserPurchasePlatform.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UTFEightValidation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidAnagram.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidateBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidateIPAddress.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidateStackSequences.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidBoomerang.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidMountainArray.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidPalindrome.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidPalindromeII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidParenthesisString.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidPerfectSquare.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidPermutationsforDISequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidPhoneNumbers.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidSquare.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidSudoku.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidTicTacToeState.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidTriangleNumber.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidWordAbbreviation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ValidWordSquare.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="VerifyinganAlienDictionary.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="VerifyPreorderSequenceinBinarySearchTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="VerifyPreorderSerializationofaBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="VerticalOrderTraversalofaBinaryTree.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="VideoStitching.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="VowelSpellchecker.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkingRobotSimulation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WallsandGates.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WaterandJugProblem.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WiggleSort.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WiggleSortII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WiggleSubsequence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WildcardMatching.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WinningCandidate.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordAbbreviation.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordBreak.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordBreakII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordFrequency.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordLadder.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordLadderII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordPattern.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordPatternII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordSearch.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordSearchII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordSquares.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="WordSubsets.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="XofaKindinaDeckofCards.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ZeroOneMatrix.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ZigZagConversion.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ZigzagIterator.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ZumaGame.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
