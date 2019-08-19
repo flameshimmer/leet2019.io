@@ -19,7 +19,7 @@ namespace Solution2019
 		{
 			return p1.first < p2.first;
 		}
-		vector<int> TwoSum(vector<int> nums, int target) {
+		vector<int> TwoSumSortFirst(vector<int> nums, int target) {
 			vector<int> result;
 			if (nums.size() < 2) { return result; }
 
@@ -45,7 +45,25 @@ namespace Solution2019
 			return result;
 		}
 		
-		
+		vector<int> TwoSum(vector<int> nums, int target)
+		{
+			vector<int> result;
+			int len = nums.size();
+			if (len < 2) { return result; }
+
+			unordered_map<int, int> map;
+			for (int i = 0; i < len; i++) {
+				int curTarget = target - nums[i];
+				if (map.find(curTarget) != map.end()) {
+					result.push_back(map[curTarget]);
+					result.push_back(i);					
+				}
+				map[nums[i]] = i;
+			}
+			return result;
+		}
+
+
 		void Main() {
 			vector<int> nums = {3, 2, 4};
 			

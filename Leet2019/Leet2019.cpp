@@ -18,10 +18,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Test::Main(); // Medium
 	
 	// 8/15/2019
-	Solution2019::TwoSum::Main();
-	 
+	//Solution2019::TwoSum::Main(); // using sorted array
+
+	// 8/18/2019
+	//Solution2019::TwoSum::Main(); //using hashmap 
 	//Solution2019::AddTwoNumbers::Main();
-	//Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
+	//Solution2019::AddTwoNumbersII::Main();
+	//Solution2019::ReverseLinkedList::Main();
+
+	// 8/19/2019
+	//Solution2019::ReverseLinkedListII::Main();
+
+	Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
 	//Solution2019::MedianofTwoSortedArrays::Main();
 	//Solution2019::LongestPalindromicSubstring::Main();
 	//Solution2019::ZigZagConversion::Main();
@@ -109,8 +117,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MergeSortedArray::Main();
 	//Solution2019::GrayCode::Main();
 	//Solution2019::SubsetsII::Main();
-	//Solution2019::DecodeWays::Main();
-	//Solution2019::ReverseLinkedListII::Main();
+	//Solution2019::DecodeWays::Main();	
 	//Solution2019::RestoreIPAddresses::Main();
 	//Solution2019::BinaryTreeInorderTraversal::Main();
 	//Solution2019::UniqueBinarySearchTreesII::Main();
@@ -224,7 +231,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveLinkedListElements::Main();
 	//Solution2019::CountPrimes::Main();
 	//Solution2019::IsomorphicStrings::Main();
-	//Solution2019::ReverseLinkedList::Main();
 	//Solution2019::CourseSchedule::Main();
 	//Solution2019::ImplementTrie::Main();
 	//Solution2019::MinimumSizeSubarraySum::Main();
@@ -463,7 +469,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FindAllDuplicatesinanArray::Main();
 	//Solution2019::StringCompression::Main();
 	//Solution2019::SequenceReconstruction::Main();
-	//Solution2019::AddTwoNumbersII::Main();
+	
 	//Solution2019::ArithmeticSlicesIISubsequence::Main();
 	//Solution2019::NumberofBoomerangs::Main();
 	//Solution2019::FindAllNumbersDisappearedinanArray::Main();
