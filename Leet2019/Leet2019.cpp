@@ -29,8 +29,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	// 8/19/2019
 	//Solution2019::ReverseLinkedListII::Main();
 
-	Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
-	//Solution2019::MedianofTwoSortedArrays::Main();
+	// 8/20/2019
+	//Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
+	
+	
+	Solution2019::MedianofTwoSortedArrays::Main();
 	//Solution2019::LongestPalindromicSubstring::Main();
 	//Solution2019::ZigZagConversion::Main();
 	//Solution2019::ReverseInteger::Main();

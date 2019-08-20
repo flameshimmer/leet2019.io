@@ -22,7 +22,31 @@ namespace Solution2019
 {
 	namespace LongestSubstringWithoutRepeatingCharacters
 	{
-		int LongestSubstringWithoutRepeatingCharacters(string input)
+		int LongestSubstringWithoutRepeatingCharacters(string s)
+		{
+			int len = s.size();
+			if (len < 2) { return len; }
+
+			int map[256]; // Using int array instead of hashmap. This is very efficient!. 
+			memset(map, -1, sizeof(map)); // using memset to set the init the array!
+			int start = 0;
+			int end = 0;
+			int longest = 0;
+			while (end < len) {
+				char c = s[end];
+				if (map[c] != -1) {
+					longest = max(longest, end - start);
+					start = max(start, map[c] + 1); // Notice this line! This is equivalent to clearing the hashmap. Very interesting and very fast. 
+				}
+				map[c] = end;
+				end++;				
+			}
+			longest = max(longest, end - start); // Don't forget to do this!
+			return longest;
+		}
+
+
+		int LongestSubstringWithoutRepeatingCharactersNotVeryEffecitent(string input)
 		{
 			int len = input.size();
 			if (len < 2) { return len; }
