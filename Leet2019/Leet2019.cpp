@@ -31,14 +31,19 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	// 8/20/2019
 	//Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
-	
-	
-	Solution2019::MedianofTwoSortedArrays::Main();
+	//Solution2019::MedianofTwoSortedArrays::Main();???
+
+	//8/21/2019
 	//Solution2019::LongestPalindromicSubstring::Main();
+	//Solution2019::LongestPalindrome::Main();
+	//Solution2019::PalindromeNumber::Main();
+	Solution2019::ValidPalindrome::Main();
+
+
+
 	//Solution2019::ZigZagConversion::Main();
 	//Solution2019::ReverseInteger::Main();
-	//Solution2019::StringtoInteger::Main();
-	//Solution2019::PalindromeNumber::Main();
+	//Solution2019::StringtoInteger::Main();	
 	//Solution2019::RegularExpressionMatching::Main();
 	//Solution2019::ContainerWithMostWater::Main();
 	//Solution2019::IntegertoRoman::Main();
@@ -153,7 +158,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BestTimetoBuyandSellStockII::Main();
 	//Solution2019::BestTimetoBuyandSellStockIII::Main();
 	//Solution2019::BinaryTreeMaximumPathSum::Main();
-	//Solution2019::ValidPalindrome::Main();
+	
 	//Solution2019::WordLadderII::Main();
 	//Solution2019::WordLadder::Main();
 	//Solution2019::LongestConsecutiveSequence::Main();
@@ -436,7 +441,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::QueueReconstructionbyHeight::Main();
 	//Solution2019::TrappingRainWaterII::Main();
 	//Solution2019::ValidWordAbbreviation::Main();
-	//Solution2019::LongestPalindrome::Main();
+	
 	//Solution2019::SplitArrayLargestSum::Main();
 	//Solution2019::MinimumUniqueWordAbbreviation::Main();
 	//Solution2019::FizzBuzz::Main();
