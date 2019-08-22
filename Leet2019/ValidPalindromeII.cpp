@@ -18,9 +18,36 @@ namespace Solution2019
 {
 	namespace ValidPalindromeII
 	{
-		void Main() {
-			string test = "tst test test";
-			print(test);
+		bool IsPalindrome(string s, int start, int end) {
+			while (start < end) {
+				if (s[start] != s[end]) { return false; }
+				start++; end--;
+			}
+			return true;
+		}
+
+		bool ValidPalindromeII(string s) {
+			int len = s.size();
+			if (len < 3) { return true; }
+
+			int start = 0;
+			int end = len - 1;
+			while (start < end) {
+				if (s[start] != s[end]) {
+					return IsPalindrome(s, start + 1, end) || IsPalindrome(s, start, end - 1);
+				}				
+				start++;
+				end--;
+			}
+			return true;		
+		}
+
+
+		void Main() {			
+			print(ValidPalindromeII("aba"));
+			print(ValidPalindromeII("abac"));
+			print(ValidPalindromeII("abca"));
+			print(ValidPalindromeII("abdca"));
 		}
 	}
 }

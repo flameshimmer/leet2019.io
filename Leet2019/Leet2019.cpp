@@ -37,8 +37,24 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestPalindromicSubstring::Main();
 	//Solution2019::LongestPalindrome::Main();
 	//Solution2019::PalindromeNumber::Main();
-	Solution2019::ValidPalindrome::Main();
+	//Solution2019::ValidPalindrome::Main();
 
+	//8/22/2019
+	//Solution2019::ValidPalindromeII::Main();
+	//Solution2019::ShortestPalindrome::Main();
+	
+	Solution2019::PalindromeLinkedList::Main();
+	//Solution2019::PalindromePartitioning::Main();
+	//Solution2019::PalindromePartitioningII::Main();
+	
+	//Solution2019::PalindromePermutation::Main();
+	//Solution2019::PalindromePermutationII::Main();
+	//Solution2019::PalindromePairs::Main();
+	//Solution2019::LargestPalindromeProduct::Main();
+	//Solution2019::FindtheClosestPalindrome::Main();
+	//Solution2019::PrimePalindrome::Main();
+	//Solution2019::SuperPalindromes::Main();
+	//Solution2019::LongestChunkedPalindromeDecomposition::Main();
 
 
 	//Solution2019::ZigZagConversion::Main();
@@ -157,15 +173,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BestTimetoBuyandSellStock::Main();
 	//Solution2019::BestTimetoBuyandSellStockII::Main();
 	//Solution2019::BestTimetoBuyandSellStockIII::Main();
-	//Solution2019::BinaryTreeMaximumPathSum::Main();
-	
+	//Solution2019::BinaryTreeMaximumPathSum::Main();	
 	//Solution2019::WordLadderII::Main();
 	//Solution2019::WordLadder::Main();
 	//Solution2019::LongestConsecutiveSequence::Main();
 	//Solution2019::SumRoottoLeafNumbers::Main();
 	//Solution2019::SurroundedRegions::Main();
-	//Solution2019::PalindromePartitioning::Main();
-	//Solution2019::PalindromePartitioningII::Main();
 	//Solution2019::CloneGraph::Main();
 	//Solution2019::GasStation::Main();
 	//Solution2019::Candy::Main();
@@ -246,7 +259,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::AddandSearchWordDatastructuredesign::Main();
 	//Solution2019::WordSearchII::Main();
 	//Solution2019::HouseRobberII::Main();
-	//Solution2019::ShortestPalindrome::Main();
+	
 	//Solution2019::KthLargestElementinanArray::Main();
 	//Solution2019::CombinationSumIII::Main();
 	//Solution2019::ContainsDuplicate::Main();
@@ -266,7 +279,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PowerofTwo::Main();
 	//Solution2019::ImplementQueueusingStacks::Main();
 	//Solution2019::NumberofDigitOne::Main();
-	//Solution2019::PalindromeLinkedList::Main();
 	//Solution2019::LowestCommonAncestorofaBinarySearchTree::Main();
 	//Solution2019::LowestCommonAncestorofaBinaryTree::Main();
 	//Solution2019::DeleteNodeinaLinkedList::Main();
@@ -298,8 +310,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UglyNumber::Main();
 	//Solution2019::UglyNumberII::Main();
 	//Solution2019::PaintHouseII::Main();
-	//Solution2019::PalindromePermutation::Main();
-	//Solution2019::PalindromePermutationII::Main();
 	//Solution2019::MissingNumber::Main();
 	//Solution2019::AlienDictionary::Main();
 	//Solution2019::ClosestBinarySearchTreeValue::Main();
@@ -368,7 +378,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LargestBSTSubtree::Main();
 	//Solution2019::IncreasingTripletSubsequence::Main();
 	//Solution2019::SelfCrossing::Main();
-	//Solution2019::PalindromePairs::Main();
 	//Solution2019::HouseRobberIII::Main();
 	//Solution2019::CountingBits::Main();
 	//Solution2019::NestedListWeightSum::Main();
@@ -511,7 +520,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberComplement::Main();
 	//Solution2019::TotalHammingDistance::Main();
 	//Solution2019::GenerateRandomPointinaCircle::Main();
-	//Solution2019::LargestPalindromeProduct::Main();
 	//Solution2019::SlidingWindowMedian::Main();
 	//Solution2019::MagicalString::Main();
 	//Solution2019::LicenseKeyFormatting::Main();
@@ -596,7 +604,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ArrayPartitionI::Main();
 	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
 	//Solution2019::BinaryTreeTilt::Main();
-	//Solution2019::FindtheClosestPalindrome::Main();
 	//Solution2019::ArrayNesting::Main();
 	//Solution2019::ReshapetheMatrix::Main();
 	//Solution2019::PermutationinString::Main();
@@ -712,7 +719,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MapSumPairs::Main();
 	//Solution2019::ValidParenthesisString::Main();
 	//Solution2019::TwoFourGame::Main();
-	//Solution2019::ValidPalindromeII::Main();
+	
 	//Solution2019::NextClosestTime::Main();
 	//Solution2019::BaseballGame::Main();
 	//Solution2019::KEmptySlots::Main();
@@ -898,7 +905,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::AllNodesDistanceKinBinaryTree::Main();
 	//Solution2019::ShortestPathtoGetAllKeys::Main();
 	//Solution2019::SmallestSubtreewithalltheDeepestNodes::Main();
-	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::TransposeMatrix::Main();
 	//Solution2019::BinaryGap::Main();
 	//Solution2019::ReorderedPowerofTwo::Main();
@@ -938,7 +944,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ValidPermutationsforDISequence::Main();
 	//Solution2019::FruitIntoBaskets::Main();
 	//Solution2019::SortArrayByParity::Main();
-	//Solution2019::SuperPalindromes::Main();
 	//Solution2019::SumofSubarrayMinimums::Main();
 	//Solution2019::SmallestRangeI::Main();
 	//Solution2019::SnakesandLadders::Main();
@@ -1179,7 +1184,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DecreaseElementsToMakeArrayZigzag::Main();
 	//Solution2019::BinaryTreeColoringGame::Main();
 	//Solution2019::SnapshotArray::Main();
-	//Solution2019::LongestChunkedPalindromeDecomposition::Main();
 	//Solution2019::ArticleViewsI::Main();
 	//Solution2019::ArticleViewsII::Main();
 	//Solution2019::CheckIfaNumberIsMajorityElementinaSortedArray::Main();
