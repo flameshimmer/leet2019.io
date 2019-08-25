@@ -30,6 +30,7 @@
 #include <map>
 #include <set>
 #include <stdint.h>
+#include <climits>
 using namespace std;
 
 // Template helper functions

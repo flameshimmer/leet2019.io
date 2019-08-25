@@ -41,36 +41,45 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//8/22/2019
 	//Solution2019::ValidPalindromeII::Main();
-	//Solution2019::ShortestPalindrome::Main();
+	//Solution2019::ShortestPalindrome::Main();	
+	//Solution2019::PalindromeLinkedList::Main();
 	
-	Solution2019::PalindromeLinkedList::Main();
-	//Solution2019::PalindromePartitioning::Main();
-	//Solution2019::PalindromePartitioningII::Main();
+	//8/24/2019	
+	//Solution2019::ReverseInteger::Main();
+	//Solution2019::RomantoInteger::Main();
+	//Solution2019::IntegertoRoman::Main();
+
+	//8/25/2019
+	//Solution2019::LongestCommonPrefix::Main();
+	Solution2019::ValidParentheses::Main();
 	
-	//Solution2019::PalindromePermutation::Main();
-	//Solution2019::PalindromePermutationII::Main();
+
+
 	//Solution2019::PalindromePairs::Main();
-	//Solution2019::LargestPalindromeProduct::Main();
-	//Solution2019::FindtheClosestPalindrome::Main();
 	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::SuperPalindromes::Main();
+	//Solution2019::LargestPalindromeProduct::Main();
+	//Solution2019::FindtheClosestPalindrome::Main();
 	//Solution2019::LongestChunkedPalindromeDecomposition::Main();
+	//Solution2019::PalindromePermutation::Main();
+	//Solution2019::PalindromePermutationII::Main();
+	//Solution2019::PalindromePartitioning::Main();
+	//Solution2019::PalindromePartitioningII::Main();
 
 
 	//Solution2019::ZigZagConversion::Main();
-	//Solution2019::ReverseInteger::Main();
+	
 	//Solution2019::StringtoInteger::Main();	
 	//Solution2019::RegularExpressionMatching::Main();
 	//Solution2019::ContainerWithMostWater::Main();
-	//Solution2019::IntegertoRoman::Main();
-	//Solution2019::RomantoInteger::Main();
-	//Solution2019::LongestCommonPrefix::Main();
+	
+	
 	//Solution2019::ThreeSum::Main();
 	//Solution2019::ThreeSumClosest::Main();
 	//Solution2019::LetterCombinationsofaPhoneNumber::Main();
 	//Solution2019::FourSum::Main();
 	//Solution2019::RemoveNthNodeFromEndofList::Main();
-	//Solution2019::ValidParentheses::Main();
+	
 	//Solution2019::MergeTwoSortedLists::Main();
 	//Solution2019::GenerateParentheses::Main();
 	//Solution2019::MergekSortedLists::Main();
