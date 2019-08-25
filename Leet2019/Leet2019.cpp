@@ -51,7 +51,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//8/25/2019
 	//Solution2019::LongestCommonPrefix::Main();
-	Solution2019::ValidParentheses::Main();
+	//Solution2019::ValidParentheses::Main();
+	//Solution2019::MergeTwoSortedLists::Main();
+	Solution2019::RemoveDuplicatesfromSortedArray::Main();
 	
 
 
@@ -80,12 +82,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FourSum::Main();
 	//Solution2019::RemoveNthNodeFromEndofList::Main();
 	
-	//Solution2019::MergeTwoSortedLists::Main();
+	
 	//Solution2019::GenerateParentheses::Main();
 	//Solution2019::MergekSortedLists::Main();
 	//Solution2019::SwapNodesinPairs::Main();
 	//Solution2019::ReverseNodesinkGroup::Main();
-	//Solution2019::RemoveDuplicatesfromSortedArray::Main();
+	
 	//Solution2019::RemoveElement::Main();
 	//Solution2019::ImplementstrStr::Main();
 	//Solution2019::DivideTwoIntegers::Main();

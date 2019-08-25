@@ -1,5 +1,4 @@
 #include "stdafx.h"
-// 
 
 namespace Solution2019
 {
