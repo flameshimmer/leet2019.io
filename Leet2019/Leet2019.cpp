@@ -53,8 +53,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestCommonPrefix::Main();
 	//Solution2019::ValidParentheses::Main();
 	//Solution2019::MergeTwoSortedLists::Main();
-	Solution2019::RemoveDuplicatesfromSortedArray::Main();
+	//Solution2019::RemoveDuplicatesfromSortedArray::Main();
 	
+	//8/26/2019
+	//Solution2019::RemoveElement::Main();
+	//Solution2019::ImplementstrStr::Main(); /// ----> still need KMP solution. 
+	//Solution2019::SearchInsertPosition::Main();
+	Solution2019::CountandSay::Main();
 
 
 	//Solution2019::PalindromePairs::Main();
@@ -88,18 +93,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SwapNodesinPairs::Main();
 	//Solution2019::ReverseNodesinkGroup::Main();
 	
-	//Solution2019::RemoveElement::Main();
-	//Solution2019::ImplementstrStr::Main();
+	
+	
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::NextPermutation::Main();
 	//Solution2019::LongestValidParentheses::Main();
 	//Solution2019::SearchinRotatedSortedArray::Main();
 	//Solution2019::FindFirstandLastPositionofElementinSortedArray::Main();
-	//Solution2019::SearchInsertPosition::Main();
+	
 	//Solution2019::ValidSudoku::Main();
 	//Solution2019::SudokuSolver::Main();
-	//Solution2019::CountandSay::Main();
+	
 	//Solution2019::CombinationSum::Main();
 	//Solution2019::CombinationSumII::Main();
 	//Solution2019::FirstMissingPositive::Main();
