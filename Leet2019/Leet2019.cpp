@@ -59,8 +59,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveElement::Main();
 	//Solution2019::ImplementstrStr::Main(); /// ----> still need KMP solution. 
 	//Solution2019::SearchInsertPosition::Main();
-	Solution2019::CountandSay::Main();
+	//Solution2019::CountandSay::Main();
 
+	//8/27/2019
+	Solution2019::MaximumSubarray::Main();
 
 	//Solution2019::PalindromePairs::Main();
 	//Solution2019::PrimePalindrome::Main();
@@ -119,7 +121,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Pow::Main();
 	//Solution2019::NQueens::Main();
 	//Solution2019::NQueensII::Main();
-	//Solution2019::MaximumSubarray::Main();
+	
 	//Solution2019::SpiralMatrix::Main();
 	//Solution2019::JumpGame::Main();
 	//Solution2019::MergeIntervals::Main();
