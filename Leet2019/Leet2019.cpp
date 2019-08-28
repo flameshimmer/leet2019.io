@@ -61,8 +61,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SearchInsertPosition::Main();
 	//Solution2019::CountandSay::Main();
 
-	//8/27/2019
-	Solution2019::MaximumSubarray::Main();
+	//8/28/2019
+	//Solution2019::MaximumSubarray::Main();
+	//Solution2019::LengthofLastWord::Main();
+	//Solution2019::PlusOne::Main();
+	//Solution2019::AddBinary::Main();
+	Solution2019::Sqrt::Main();
+
+
+
+
 
 	//Solution2019::PalindromePairs::Main();
 	//Solution2019::PrimePalindrome::Main();
@@ -126,7 +134,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::JumpGame::Main();
 	//Solution2019::MergeIntervals::Main();
 	//Solution2019::InsertInterval::Main();
-	//Solution2019::LengthofLastWord::Main();
+	
 	//Solution2019::SpiralMatrixII::Main();
 	//Solution2019::PermutationSequence::Main();
 	//Solution2019::RotateList::Main();
@@ -134,10 +142,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UniquePathsII::Main();
 	//Solution2019::MinimumPathSum::Main();
 	//Solution2019::ValidNumber::Main();
-	//Solution2019::PlusOne::Main();
-	//Solution2019::AddBinary::Main();
+	
+	
 	//Solution2019::TextJustification::Main();
-	//Solution2019::Sqrt::Main();
 	//Solution2019::ClimbingStairs::Main();
 	//Solution2019::SimplifyPath::Main();
 	//Solution2019::EditDistance::Main();
