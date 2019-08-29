@@ -66,12 +66,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LengthofLastWord::Main();
 	//Solution2019::PlusOne::Main();
 	//Solution2019::AddBinary::Main();
-	Solution2019::Sqrt::Main();
+	//Solution2019::Sqrt::Main();
+
+	//8/29/2019
+	//Solution2019::ClimbingStairs::Main();
+	//Solution2019::RemoveDuplicatesfromSortedList::Main();
+	//Solution2019::RemoveDuplicatesfromSortedListII::Main();
+	Solution2019::MergeSortedArray::Main();
 
 
 
 
-
+	// Untackled!!!!!!!!!!!!!!!!!!!!!
 	//Solution2019::PalindromePairs::Main();
 	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::SuperPalindromes::Main();
@@ -145,7 +151,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	
 	
 	//Solution2019::TextJustification::Main();
-	//Solution2019::ClimbingStairs::Main();
+	
 	//Solution2019::SimplifyPath::Main();
 	//Solution2019::EditDistance::Main();
 	//Solution2019::SetMatrixZeroes::Main();
@@ -157,13 +163,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::WordSearch::Main();
 	//Solution2019::RemoveDuplicatesfromSortedArrayII::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
-	//Solution2019::RemoveDuplicatesfromSortedListII::Main();
-	//Solution2019::RemoveDuplicatesfromSortedList::Main();
 	//Solution2019::LargestRectangleinHistogram::Main();
 	//Solution2019::MaximalRectangle::Main();
 	//Solution2019::PartitionList::Main();
 	//Solution2019::ScrambleString::Main();
-	//Solution2019::MergeSortedArray::Main();
+	
 	//Solution2019::GrayCode::Main();
 	//Solution2019::SubsetsII::Main();
 	//Solution2019::DecodeWays::Main();	

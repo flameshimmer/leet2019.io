@@ -57,7 +57,7 @@ namespace Solution2019
 		void Main() {
 			string test = "tst test test";
 			
-			print(Sqrt());
+			print(Sqrt(INT_MIN));
 			print(Sqrt(8));
 			print(Sqrt(4));
 		}
