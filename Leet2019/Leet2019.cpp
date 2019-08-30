@@ -72,9 +72,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ClimbingStairs::Main();
 	//Solution2019::RemoveDuplicatesfromSortedList::Main();
 	//Solution2019::RemoveDuplicatesfromSortedListII::Main();
-	Solution2019::MergeSortedArray::Main();
+	//Solution2019::MergeSortedArray::Main();
 
-
+	//8/30/2019
+	//Solution2019::SameTree::Main();
+	//Solution2019::SymmetricTree::Main();
+	//Solution2019::MaximumDepthofBinaryTree::Main();---> need to add more method to solve. Need to revisit the tree algo before proceeding with treees. 
+	//Solution2019::PascalsTriangle::Main();
+	Solution2019::PascalsTriangleII::Main();
+	
+	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
 
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
@@ -177,16 +184,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UniqueBinarySearchTrees::Main();
 	//Solution2019::InterleavingString::Main();
 	//Solution2019::ValidateBinarySearchTree::Main();
-	//Solution2019::RecoverBinarySearchTree::Main();
-	//Solution2019::SameTree::Main();
-	//Solution2019::SymmetricTree::Main();
+	//Solution2019::RecoverBinarySearchTree::Main();	
 	//Solution2019::BinaryTreeLevelOrderTraversal::Main();
 	//Solution2019::BinaryTreeZigzagLevelOrderTraversal::Main();
-	//Solution2019::MaximumDepthofBinaryTree::Main();
 	//Solution2019::ConstructBinaryTreefromPreorderandInorderTraversal::Main();
 	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();
 	//Solution2019::BinaryTreeLevelOrderTraversalII::Main();
-	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
 	//Solution2019::ConvertSortedListtoBinarySearchTree::Main();
 	//Solution2019::BalancedBinaryTree::Main();
 	//Solution2019::MinimumDepthofBinaryTree::Main();
@@ -196,8 +199,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DistinctSubsequences::Main();
 	//Solution2019::PopulatingNextRightPointersinEachNode::Main();
 	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();
-	//Solution2019::PascalsTriangle::Main();
-	//Solution2019::PascalsTriangleII::Main();
 	//Solution2019::Triangle::Main();
 	//Solution2019::BestTimetoBuyandSellStock::Main();
 	//Solution2019::BestTimetoBuyandSellStockII::Main();
