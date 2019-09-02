@@ -79,12 +79,23 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SymmetricTree::Main();
 	//Solution2019::MaximumDepthofBinaryTree::Main();---> need to add more method to solve. Need to revisit the tree algo before proceeding with treees. 
 	//Solution2019::PascalsTriangle::Main();
-	Solution2019::PascalsTriangleII::Main();
+	//Solution2019::PascalsTriangleII::Main();
 	
-	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
+	//9/1/2019
+	//Solution2019::RemoveNthNodeFromEndofList::Main();	
+	
+	//9/2/2019
+	//Solution2019::MergekSortedLists::Main(); ---> didn't implement a heap myself. If have time can revisit that. 
+	//Solution2019::SwapNodesinPairs::Main();
+	//Solution2019::ReverseNodesinkGroup::Main();
+	//Solution2019::RotateList::Main();
+	Solution2019::PartitionList::Main();
+	
+	
 
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
+	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
 	//Solution2019::PalindromePairs::Main();
 	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::SuperPalindromes::Main();
@@ -95,39 +106,23 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PalindromePermutationII::Main();
 	//Solution2019::PalindromePartitioning::Main();
 	//Solution2019::PalindromePartitioningII::Main();
-
-
 	//Solution2019::ZigZagConversion::Main();
-	
 	//Solution2019::StringtoInteger::Main();	
 	//Solution2019::RegularExpressionMatching::Main();
 	//Solution2019::ContainerWithMostWater::Main();
-	
-	
 	//Solution2019::ThreeSum::Main();
 	//Solution2019::ThreeSumClosest::Main();
 	//Solution2019::LetterCombinationsofaPhoneNumber::Main();
 	//Solution2019::FourSum::Main();
-	//Solution2019::RemoveNthNodeFromEndofList::Main();
-	
-	
-	//Solution2019::GenerateParentheses::Main();
-	//Solution2019::MergekSortedLists::Main();
-	//Solution2019::SwapNodesinPairs::Main();
-	//Solution2019::ReverseNodesinkGroup::Main();
-	
-	
-	
+	//Solution2019::GenerateParentheses::Main();	
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::NextPermutation::Main();
 	//Solution2019::LongestValidParentheses::Main();
 	//Solution2019::SearchinRotatedSortedArray::Main();
-	//Solution2019::FindFirstandLastPositionofElementinSortedArray::Main();
-	
+	//Solution2019::FindFirstandLastPositionofElementinSortedArray::Main();	
 	//Solution2019::ValidSudoku::Main();
 	//Solution2019::SudokuSolver::Main();
-	
 	//Solution2019::CombinationSum::Main();
 	//Solution2019::CombinationSumII::Main();
 	//Solution2019::FirstMissingPositive::Main();
@@ -142,23 +137,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Pow::Main();
 	//Solution2019::NQueens::Main();
 	//Solution2019::NQueensII::Main();
-	
 	//Solution2019::SpiralMatrix::Main();
 	//Solution2019::JumpGame::Main();
 	//Solution2019::MergeIntervals::Main();
 	//Solution2019::InsertInterval::Main();
-	
 	//Solution2019::SpiralMatrixII::Main();
 	//Solution2019::PermutationSequence::Main();
-	//Solution2019::RotateList::Main();
 	//Solution2019::UniquePaths::Main();
 	//Solution2019::UniquePathsII::Main();
 	//Solution2019::MinimumPathSum::Main();
 	//Solution2019::ValidNumber::Main();
-	
-	
 	//Solution2019::TextJustification::Main();
-	
 	//Solution2019::SimplifyPath::Main();
 	//Solution2019::EditDistance::Main();
 	//Solution2019::SetMatrixZeroes::Main();
@@ -172,9 +161,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::LargestRectangleinHistogram::Main();
 	//Solution2019::MaximalRectangle::Main();
-	//Solution2019::PartitionList::Main();
 	//Solution2019::ScrambleString::Main();
-	
 	//Solution2019::GrayCode::Main();
 	//Solution2019::SubsetsII::Main();
 	//Solution2019::DecodeWays::Main();	
