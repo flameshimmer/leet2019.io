@@ -89,8 +89,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SwapNodesinPairs::Main();
 	//Solution2019::ReverseNodesinkGroup::Main();
 	//Solution2019::RotateList::Main();
-	Solution2019::PartitionList::Main();
+	//Solution2019::PartitionList::Main();
 	
+	//9/3/2019
+	//Solution2019::ConvertSortedListtoBinarySearchTree::Main();
+	//Solution2019::CopyListwithRandomPointer::Main();
+	//Solution2019::LinkedListCycle::Main();
+	//Solution2019::LinkedListCycleII::Main();
 	
 
 
@@ -176,8 +181,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryTreeZigzagLevelOrderTraversal::Main();
 	//Solution2019::ConstructBinaryTreefromPreorderandInorderTraversal::Main();
 	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();
-	//Solution2019::BinaryTreeLevelOrderTraversalII::Main();
-	//Solution2019::ConvertSortedListtoBinarySearchTree::Main();
+	//Solution2019::BinaryTreeLevelOrderTraversalII::Main();	
 	//Solution2019::BalancedBinaryTree::Main();
 	//Solution2019::MinimumDepthofBinaryTree::Main();
 	//Solution2019::PathSum::Main();
@@ -201,11 +205,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Candy::Main();
 	//Solution2019::SingleNumber::Main();
 	//Solution2019::SingleNumberII::Main();
-	//Solution2019::CopyListwithRandomPointer::Main();
 	//Solution2019::WordBreak::Main();
 	//Solution2019::WordBreakII::Main();
-	//Solution2019::LinkedListCycle::Main();
-	//Solution2019::LinkedListCycleII::Main();
 	//Solution2019::ReorderList::Main();
 	//Solution2019::BinaryTreePreorderTraversal::Main();
 	//Solution2019::BinaryTreePostorderTraversal::Main();
