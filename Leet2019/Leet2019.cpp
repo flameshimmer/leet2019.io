@@ -96,6 +96,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CopyListwithRandomPointer::Main();
 	//Solution2019::LinkedListCycle::Main();
 	//Solution2019::LinkedListCycleII::Main();
+
+	//9/4/2019
+	//Solution2019::ReorderList::Main();
+	//Solution2019::InsertionSortList::Main();
+	//Solution2019::SortList::Main();
+	Solution2019::IntersectionofTwoLinkedLists::Main();
 	
 
 
@@ -207,12 +213,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SingleNumberII::Main();
 	//Solution2019::WordBreak::Main();
 	//Solution2019::WordBreakII::Main();
-	//Solution2019::ReorderList::Main();
 	//Solution2019::BinaryTreePreorderTraversal::Main();
 	//Solution2019::BinaryTreePostorderTraversal::Main();
 	//Solution2019::LRUCache::Main();
-	//Solution2019::InsertionSortList::Main();
-	//Solution2019::SortList::Main();
 	//Solution2019::MaxPointsonaLine::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
 	//Solution2019::ReverseWordsinaString::Main();
@@ -224,7 +227,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReadNCharactersGivenReadFour::Main();
 	//Solution2019::ReadNCharactersGivenReadFourIICallmultipletimes::Main();
 	//Solution2019::LongestSubstringwithAtMostTwoDistinctCharacters::Main();
-	//Solution2019::IntersectionofTwoLinkedLists::Main();
 	//Solution2019::OneEditDistance::Main();
 	//Solution2019::FindPeakElement::Main();
 	//Solution2019::MissingRanges::Main();
