@@ -85,7 +85,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveNthNodeFromEndofList::Main();	
 	
 	//9/2/2019
-	//Solution2019::MergekSortedLists::Main(); ---> didn't implement a heap myself. If have time can revisit that. 
+	////Solution2019::MergekSortedLists::Main(); ---> didn't implement a heap myself. If have time can revisit that. 
 	//Solution2019::SwapNodesinPairs::Main();
 	//Solution2019::ReverseNodesinkGroup::Main();
 	//Solution2019::RotateList::Main();
@@ -101,8 +101,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReorderList::Main();
 	//Solution2019::InsertionSortList::Main();
 	//Solution2019::SortList::Main();
-	Solution2019::IntersectionofTwoLinkedLists::Main();
+	//Solution2019::IntersectionofTwoLinkedLists::Main();
 	
+	//9/5/2019
+	//Solution2019::RemoveLinkedListElements::Main();
+	//Solution2019::DeleteNodeinaLinkedList::Main();
+	//Solution2019::OddEvenLinkedList::Main();
+	//Solution2019::PlusOneLinkedList::Main();
+	Solution2019::NextGreaterNodeInLinkedList::Main();
 
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
@@ -269,7 +275,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofIslands::Main();
 	//Solution2019::BitwiseANDofNumbersRange::Main();
 	//Solution2019::HappyNumber::Main();
-	//Solution2019::RemoveLinkedListElements::Main();
 	//Solution2019::CountPrimes::Main();
 	//Solution2019::IsomorphicStrings::Main();
 	//Solution2019::CourseSchedule::Main();
@@ -301,7 +306,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofDigitOne::Main();
 	//Solution2019::LowestCommonAncestorofaBinarySearchTree::Main();
 	//Solution2019::LowestCommonAncestorofaBinaryTree::Main();
-	//Solution2019::DeleteNodeinaLinkedList::Main();
 	//Solution2019::ProductofArrayExceptSelf::Main();
 	//Solution2019::SlidingWindowMaximum::Main();
 	//Solution2019::SearchaTwoDMatrixII::Main();
@@ -390,7 +394,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
 	//Solution2019::PowerofThree::Main();
 	//Solution2019::CountofRangeSum::Main();
-	//Solution2019::OddEvenLinkedList::Main();
 	//Solution2019::LongestIncreasingPathinaMatrix::Main();
 	//Solution2019::PatchingArray::Main();
 	//Solution2019::VerifyPreorderSerializationofaBinaryTree::Main();
@@ -430,7 +433,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FindLeavesofBinaryTree::Main();
 	//Solution2019::ValidPerfectSquare::Main();
 	//Solution2019::LargestDivisibleSubset::Main();
-	//Solution2019::PlusOneLinkedList::Main();
 	//Solution2019::RangeAddition::Main();
 	//Solution2019::SumofTwoIntegers::Main();
 	//Solution2019::SuperPow::Main();
@@ -1076,7 +1078,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryStringWithSubstringsRepresentingOneToN::Main();
 	//Solution2019::ConverttoBaseTwo::Main();
 	//Solution2019::BinaryPrefixDivisibleByFive::Main();
-	//Solution2019::NextGreaterNodeInLinkedList::Main();
 	//Solution2019::NumberofEnclaves::Main();
 	//Solution2019::RemoveOutermostParentheses::Main();
 	//Solution2019::SumofRootToLeafBinaryNumbers::Main();
