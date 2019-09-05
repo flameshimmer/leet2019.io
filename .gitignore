@@ -38,3 +38,6 @@ ipch/
 # Others
 .opensdf
 Leet2019.opensdf
+Leet2019.vcxproj
+*.vcxproj.user
+*.vcxproj

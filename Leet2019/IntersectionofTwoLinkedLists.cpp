@@ -39,7 +39,7 @@ namespace Solution2019
 {
 	namespace IntersectionofTwoLinkedLists
 	{
-		ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+		ListNode *getIntersectionNodeWithLoopAlgo(ListNode *headA, ListNode *headB) {
 			if (!headA || !headB) { return nullptr; }
 
 			ListNode* tailA = headA;
