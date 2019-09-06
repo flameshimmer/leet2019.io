@@ -108,7 +108,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DeleteNodeinaLinkedList::Main();
 	//Solution2019::OddEvenLinkedList::Main();
 	//Solution2019::PlusOneLinkedList::Main();
-	Solution2019::NextGreaterNodeInLinkedList::Main();
+	//Solution2019::NextGreaterNodeInLinkedList::Main();
+	
+	// 9/6/2018
+	//Solution2019::DesignPhoneDirectory::Main();
+	//Solution2019::FlattenaMultilevelDoublyLinkedList::Main();
+	Solution2019::DesignLinkedList::Main();
 
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
@@ -442,7 +447,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::WiggleSubsequence::Main();
 	//Solution2019::CombinationSumIV::Main();
 	//Solution2019::KthSmallestElementinaSortedMatrix::Main();
-	//Solution2019::DesignPhoneDirectory::Main();
 	//Solution2019::InsertDeleteGetRandomO::Main();
 	//Solution2019::InsertDeleteGetRandomODuplicatesallowed::Main();
 	//Solution2019::LinkedListRandomNode::Main();
@@ -493,7 +497,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ConstructQuadTree::Main();
 	//Solution2019::SerializeandDeserializeNaryTree::Main();
 	//Solution2019::NaryTreeLevelOrderTraversal::Main();
-	//Solution2019::FlattenaMultilevelDoublyLinkedList::Main();
 	//Solution2019::EncodeNaryTreetoBinaryTree::Main();
 	//Solution2019::AllOoneDataStructure::Main();
 	//Solution2019::MinimumGeneticMutation::Main();
@@ -768,7 +771,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinarySearch::Main();
 	//Solution2019::DesignHashSet::Main();
 	//Solution2019::DesignHashMap::Main();
-	//Solution2019::DesignLinkedList::Main();
 	//Solution2019::InsertintoaCyclicSortedList::Main();
 	//Solution2019::ToLowerCase::Main();
 	//Solution2019::RandomPickwithBlacklist::Main();
