@@ -71,6 +71,16 @@ void print(ListNode* list)
 	cout << list->val << "\n";
 }
 
+void print(vector<ListNode*> list)
+{
+	cout << "vector of ListNode: \n";
+	if (list.empty()) { cout << "Empty vector!!!\n"; return; }
+	for (ListNode* n : list) {
+		print(n);
+	}
+}
+
+
 ListNode* createListWithCycle(initializer_list<int> listValue, int indexPointFrom, int indexPointTo)
 {
 	ListNode* list = createList(listValue);

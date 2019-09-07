@@ -110,10 +110,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PlusOneLinkedList::Main();
 	//Solution2019::NextGreaterNodeInLinkedList::Main();
 	
-	// 9/6/2018
+	//9/6/2018
 	//Solution2019::DesignPhoneDirectory::Main();
 	//Solution2019::FlattenaMultilevelDoublyLinkedList::Main();
-	Solution2019::DesignLinkedList::Main();
+	
+	//9/7/2018
+	//Solution2019::DesignLinkedList::Main();
+	//Solution2019::InsertintoaCyclicSortedList::Main();
+	//Solution2019::SplitLinkedListinParts::Main();
+	//Solution2019::LinkedListComponents::Main();
+	//Solution2019::MiddleoftheLinkedList::Main();
+	Solution2019::RemoveZeroSumConsecutiveNodesfromLinkedList::Main();
 
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
@@ -771,7 +778,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinarySearch::Main();
 	//Solution2019::DesignHashSet::Main();
 	//Solution2019::DesignHashMap::Main();
-	//Solution2019::InsertintoaCyclicSortedList::Main();
 	//Solution2019::ToLowerCase::Main();
 	//Solution2019::RandomPickwithBlacklist::Main();
 	//Solution2019::NumberofDistinctIslandsII::Main();
@@ -788,7 +794,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveComments::Main();
 	//Solution2019::CandyCrush::Main();
 	//Solution2019::FindPivotIndex::Main();
-	//Solution2019::SplitLinkedListinParts::Main();
 	//Solution2019::NumberofAtoms::Main();
 	//Solution2019::MinimumWindowSubsequence::Main();
 	//Solution2019::SelfDividingNumbers::Main();
@@ -880,7 +885,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryTreePruning::Main();
 	//Solution2019::BusRoutes::Main();
 	//Solution2019::AmbiguousCoordinates::Main();
-	//Solution2019::LinkedListComponents::Main();
 	//Solution2019::RaceCar::Main();
 	//Solution2019::MostCommonWord::Main();
 	//Solution2019::ShortEncodingofWords::Main();
@@ -938,7 +942,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LengthofLongestFibonacciSubsequence::Main();
 	//Solution2019::WalkingRobotSimulation::Main();
 	//Solution2019::KokoEatingBananas::Main();
-	//Solution2019::MiddleoftheLinkedList::Main();
 	//Solution2019::StoneGame::Main();
 	//Solution2019::NthMagicalNumber::Main();
 	//Solution2019::ProfitableSchemes::Main();

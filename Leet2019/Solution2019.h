@@ -1161,5 +1161,6 @@ namespace Solution2019
 	namespace MarketAnalysisI{ void Main(); }
 	namespace MarketAnalysisII{ void Main(); }
 
+	namespace RemoveZeroSumConsecutiveNodesfromLinkedList { void Main(); }
 
 };
