@@ -1162,5 +1162,6 @@ namespace Solution2019
 	namespace MarketAnalysisII{ void Main(); }
 
 	namespace RemoveZeroSumConsecutiveNodesfromLinkedList { void Main(); }
+	namespace FindWordsThatCanBeFormedbyCharacters { void Main(); }	
 
 };

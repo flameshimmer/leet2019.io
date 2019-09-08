@@ -130,6 +130,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SortArrayByParity::Main();
 	//Solution2019::SquaresofaSortedArray::Main();
 	//Solution2019::ArrayPartitionI::Main();
+	//Solution2019::FindWordsThatCanBeFormedbyCharacters::Main();
+	//Solution2019::HeightChecker::Main();
+	//Solution2019::LargestUniqueNumber::Main();
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
 	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
@@ -1118,7 +1121,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestStringChain::Main();
 	//Solution2019::LastStoneWeightII::Main();
 	//Solution2019::ActorsandDirectorsWhoCooperatedAtLeastThreeTimes::Main();
-	//Solution2019::HeightChecker::Main();
 	//Solution2019::GrumpyBookstoreOwner::Main();
 	//Solution2019::PreviousPermutationWithOneSwap::Main();
 	//Solution2019::DistantBarcodes::Main();
@@ -1197,7 +1199,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumCostTreeFromLeafValues::Main();
 	//Solution2019::MaximumofAbsoluteValueExpression::Main();
 	//Solution2019::ReportedPostsII::Main();
-	//Solution2019::LargestUniqueNumber::Main();
 	//Solution2019::ArmstrongNumber::Main();
 	//Solution2019::ConnectingCitiesWithMinimumCost::Main();
 	//Solution2019::ParallelCourses::Main();
