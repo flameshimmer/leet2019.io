@@ -134,6 +134,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HeightChecker::Main();
 	//Solution2019::LargestUniqueNumber::Main();
 
+	//9/9/2019
+	//Solution2019::SortArrayByParityII::Main();
+	Solution2019::DayoftheWeek::Main();
+
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
 	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
 	//Solution2019::PalindromePairs::Main();
@@ -994,7 +998,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CompleteBinaryTreeInserter::Main();
 	//Solution2019::NumberofMusicPlaylists::Main();
 	//Solution2019::MinimumAddtoMakeParenthesesValid::Main();
-	//Solution2019::SortArrayByParityII::Main();
 	//Solution2019::ThreeSumWithMultiplicity::Main();
 	//Solution2019::MinimizeMalwareSpread::Main();
 	//Solution2019::LongPressedName::Main();

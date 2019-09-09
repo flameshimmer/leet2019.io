@@ -1163,5 +1163,6 @@ namespace Solution2019
 
 	namespace RemoveZeroSumConsecutiveNodesfromLinkedList { void Main(); }
 	namespace FindWordsThatCanBeFormedbyCharacters { void Main(); }	
+	namespace DayoftheWeek { void Main(); }
 
 };
