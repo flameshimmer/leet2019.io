@@ -136,7 +136,13 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//9/9/2019
 	//Solution2019::SortArrayByParityII::Main();
-	Solution2019::DayoftheWeek::Main();
+	//Solution2019::DayoftheWeek::Main();
+	
+	//9/10/2019
+	//Solution2019::FibonacciNumber::Main();
+	//Solution2019::RelativeSortArray::Main();
+	//Solution2019::AvailableCapturesforRook::Main();
+	Solution2019::FindCommonCharacters::Main();
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
 	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
@@ -596,7 +602,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RelativeRanks::Main();
 	//Solution2019::PerfectNumber::Main();
 	//Solution2019::MostFrequentSubtreeSum::Main();
-	//Solution2019::FibonacciNumber::Main();
 	//Solution2019::InorderSuccessorinBSTII::Main();
 	//Solution2019::GamePlayAnalysisI::Main();
 	//Solution2019::GamePlayAnalysisII::Main();
@@ -1073,10 +1078,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofSquarefulArrays::Main();
 	//Solution2019::FindtheTownJudge::Main();
 	//Solution2019::MaximumBinaryTreeII::Main();
-	//Solution2019::AvailableCapturesforRook::Main();
 	//Solution2019::MinimumCosttoMergeStones::Main();
 	//Solution2019::GridIllumination::Main();
-	//Solution2019::FindCommonCharacters::Main();
 	//Solution2019::CheckIfWordIsValidAfterSubstitutions::Main();
 	//Solution2019::MaxConsecutiveOnesIII::Main();
 	//Solution2019::MaximizeSumOfArrayAfterKNegations::Main();
@@ -1191,7 +1194,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveVowelsfromaString::Main();
 	//Solution2019::MaximumAverageSubtree::Main();
 	//Solution2019::DivideArrayIntoIncreasingSequences::Main();
-	//Solution2019::RelativeSortArray::Main();
 	//Solution2019::LowestCommonAncestorofDeepestLeaves::Main();
 	//Solution2019::LongestWellPerformingInterval::Main();
 	//Solution2019::SmallestSufficientTeam::Main();
