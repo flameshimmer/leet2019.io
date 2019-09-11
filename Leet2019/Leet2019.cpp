@@ -142,7 +142,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FibonacciNumber::Main();
 	//Solution2019::RelativeSortArray::Main();
 	//Solution2019::AvailableCapturesforRook::Main();
-	Solution2019::FindCommonCharacters::Main();
+	//Solution2019::FindCommonCharacters::Main();
+
+	//9/11/2019
+	//Solution2019::CheckIfaNumberIsMajorityElementinaSortedArray::Main();
+	//Solution2019::TransposeMatrix::Main();
+	//Solution2019::SumofEvenNumbersAfterQueries::Main();
+	//Solution2019::ToeplitzMatrix::Main();
+	Solution2019::CompareStringsbyFrequencyoftheSmallestCharacter::Main();
+
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
 	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
@@ -853,7 +861,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PartitionLabels::Main();
 	//Solution2019::LargestPlusSign::Main();
 	//Solution2019::CouplesHoldingHands::Main();
-	//Solution2019::ToeplitzMatrix::Main();
 	//Solution2019::ReorganizeString::Main();
 	//Solution2019::MaxChunksToMakeSortedII::Main();
 	//Solution2019::MaxChunksToMakeSorted::Main();
@@ -951,7 +958,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::AllNodesDistanceKinBinaryTree::Main();
 	//Solution2019::ShortestPathtoGetAllKeys::Main();
 	//Solution2019::SmallestSubtreewithalltheDeepestNodes::Main();
-	//Solution2019::TransposeMatrix::Main();
 	//Solution2019::BinaryGap::Main();
 	//Solution2019::ReorderedPowerofTwo::Main();
 	//Solution2019::AdvantageShuffle::Main();
@@ -1064,7 +1070,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TripleswithBitwiseANDEqualToZero::Main();
 	//Solution2019::MinimumCostForTickets::Main();
 	//Solution2019::StringWithoutAAAorBBB::Main();
-	//Solution2019::SumofEvenNumbersAfterQueries::Main();
 	//Solution2019::IntervalListIntersections::Main();
 	//Solution2019::VerticalOrderTraversalofaBinaryTree::Main();
 	//Solution2019::SmallestStringStartingFromLeaf::Main();
@@ -1219,7 +1224,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SnapshotArray::Main();
 	//Solution2019::ArticleViewsI::Main();
 	//Solution2019::ArticleViewsII::Main();
-	//Solution2019::CheckIfaNumberIsMajorityElementinaSortedArray::Main();
 	//Solution2019::MinimumSwapstoGroupAllOnesTogether::Main();
 	//Solution2019::AnalyzeUserWebsiteVisitPattern::Main();
 	//Solution2019::StringTransformsIntoAnotherString::Main();
