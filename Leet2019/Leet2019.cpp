@@ -149,7 +149,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TransposeMatrix::Main();
 	//Solution2019::SumofEvenNumbersAfterQueries::Main();
 	//Solution2019::ToeplitzMatrix::Main();
-	Solution2019::CompareStringsbyFrequencyoftheSmallestCharacter::Main();
+	//Solution2019::CompareStringsbyFrequencyoftheSmallestCharacter::Main();
+
+	//9/12/2019
+	//Solution2019::TwoSumLessThanK::Main();
+	//Solution2019::ReshapetheMatrix::Main();
+	//Solution2019::DuplicateZeros::Main();
+	//Solution2019::DistanceBetweenBusStops::Main();
 
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
@@ -664,7 +670,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
 	//Solution2019::BinaryTreeTilt::Main();
 	//Solution2019::ArrayNesting::Main();
-	//Solution2019::ReshapetheMatrix::Main();
 	//Solution2019::PermutationinString::Main();
 	//Solution2019::MaximumVacationDays::Main();
 	//Solution2019::MedianEmployeeSalary::Main();
@@ -1166,7 +1171,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SalesAnalysisIII::Main();
 	//Solution2019::BraceExpansion::Main();
 	//Solution2019::ConfusingNumberII::Main();
-	//Solution2019::DuplicateZeros::Main();
 	//Solution2019::LargestValuesFromLabels::Main();
 	//Solution2019::ShortestPathinBinaryMatrix::Main();
 	//Solution2019::ShortestCommonSupersequence::Main();
@@ -1176,7 +1180,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BraceExpansionII::Main();
 	//Solution2019::GamePlayAnalysisV::Main();
 	//Solution2019::UnpopularBooks::Main();
-	//Solution2019::TwoSumLessThanK::Main();
 	//Solution2019::FindKLengthSubstringsWithNoRepeatedCharacters::Main();
 	//Solution2019::TheEarliestMomentWhenEveryoneBecomeFriends::Main();
 	//Solution2019::PathWithMaximumMinimumValue::Main();

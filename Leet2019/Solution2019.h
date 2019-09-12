@@ -1165,5 +1165,6 @@ namespace Solution2019
 	namespace FindWordsThatCanBeFormedbyCharacters { void Main(); }	
 	namespace DayoftheWeek { void Main(); }
 	namespace CompareStringsbyFrequencyoftheSmallestCharacter { void Main(); }
+	namespace DistanceBetweenBusStops { void Main(); }
 
 };
