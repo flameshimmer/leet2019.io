@@ -168,8 +168,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ContainsDuplicate::Main();
 	//Solution2019::ContainsDuplicateII::Main();
 	//Solution2019::ContainsDuplicateIII::Main();
-	//Solution2019::DegreeofanArray::Main();
-	Solution2019::TwoSumIIInputarrayissorted::Main();
+	//Solution2019::DegreeofanArray::Main()
+
+	//9/14/2019
+	//Solution2019::TwoSumIIInputarrayissorted::Main();
+	//Solution2019::ImageSmoother::Main();
+	//Solution2019::MissingNumber::Main();
+	//Solution2019::OnebitandTwobitCharacters::Main();
+	//Solution2019::PositionsofLargeGroups::Main();	
+	//Solution2019::MinCostClimbingStairs::Main();
+	//Solution2019::DietPlanPerformance::Main();
+	//Solution2019::BinaryPrefixDivisibleByFive::Main();
+	//Solution2019::MaximumProductofThreeNumbers::Main();
+	//Solution2019::PairsofSongsWithTotalDurationsDivisiblebySixZero::Main();
+
 
 
 	// Untackled!!!!!!!!!!!!!!!!!!!!!
@@ -390,7 +402,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UglyNumber::Main();
 	//Solution2019::UglyNumberII::Main();
 	//Solution2019::PaintHouseII::Main();
-	//Solution2019::MissingNumber::Main();
 	//Solution2019::AlienDictionary::Main();
 	//Solution2019::ClosestBinarySearchTreeValue::Main();
 	//Solution2019::EncodeandDecodeStrings::Main();
@@ -737,7 +748,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumFactorization::Main();
 	//Solution2019::ExchangeSeats::Main();
 	//Solution2019::SwapSalary::Main();
-	//Solution2019::MaximumProductofThreeNumbers::Main();
 	//Solution2019::KInversePairsArray::Main();
 	//Solution2019::CourseScheduleIII::Main();
 	//Solution2019::DesignExcelSumFormula::Main();
@@ -770,7 +780,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FindKClosestElements::Main();
 	//Solution2019::SplitArrayintoConsecutiveSubsequences::Main();
 	//Solution2019::RemoveNine::Main();
-	//Solution2019::ImageSmoother::Main();
 	//Solution2019::MaximumWidthofBinaryTree::Main();
 	//Solution2019::EqualTreePartition::Main();
 	//Solution2019::StrangePrinter::Main();
@@ -823,7 +832,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BestTimetoBuyandSellStockwithTransactionFee::Main();
 	//Solution2019::RangeModule::Main();
 	//Solution2019::MaxStack::Main();
-	//Solution2019::OnebitandTwobitCharacters::Main();
 	//Solution2019::MaximumLengthofRepeatedSubarray::Main();
 	//Solution2019::FindKthSmallestPairDistance::Main();
 	//Solution2019::LongestWordinDictionary::Main();
@@ -851,7 +859,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NetworkDelayTime::Main();
 	//Solution2019::FindSmallestLetterGreaterThanTarget::Main();
 	//Solution2019::PrefixandSuffixSearch::Main();
-	//Solution2019::MinCostClimbingStairs::Main();
 	//Solution2019::LargestNumberAtLeastTwiceofOthers::Main();
 	//Solution2019::ShortestCompletingWord::Main();
 	//Solution2019::ContainVirus::Main();
@@ -933,7 +940,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MakingALargeIsland::Main();
 	//Solution2019::UniqueLetterString::Main();
 	//Solution2019::ConsecutiveNumbersSum::Main();
-	//Solution2019::PositionsofLargeGroups::Main();
 	//Solution2019::MaskingPersonalInformation::Main();
 	//Solution2019::FindAndReplaceinString::Main();
 	//Solution2019::SumofDistancesinTree::Main();
@@ -1100,14 +1106,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumDominoRotationsForEqualRow::Main();
 	//Solution2019::ConstructBinarySearchTreefromPreorderTraversal::Main();
 	//Solution2019::ComplementofBaseOneZeroInteger::Main();
-	//Solution2019::PairsofSongsWithTotalDurationsDivisiblebySixZero::Main();
 	//Solution2019::CapacityToShipPackagesWithinDDays::Main();
 	//Solution2019::NumbersWithRepeatedDigits::Main();
 	//Solution2019::BestSightseeingPair::Main();
 	//Solution2019::SmallestIntegerDivisiblebyK::Main();
 	//Solution2019::BinaryStringWithSubstringsRepresentingOneToN::Main();
 	//Solution2019::ConverttoBaseTwo::Main();
-	//Solution2019::BinaryPrefixDivisibleByFive::Main();
 	//Solution2019::NumberofEnclaves::Main();
 	//Solution2019::RemoveOutermostParentheses::Main();
 	//Solution2019::SumofRootToLeafBinaryNumbers::Main();

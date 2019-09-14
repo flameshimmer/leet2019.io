@@ -1166,5 +1166,7 @@ namespace Solution2019
 	namespace DayoftheWeek { void Main(); }
 	namespace CompareStringsbyFrequencyoftheSmallestCharacter { void Main(); }
 	namespace DistanceBetweenBusStops { void Main(); }
+	namespace DietPlanPerformance { void Main(); }
+	
 
 };

@@ -19,6 +19,26 @@ namespace Solution2019
 {
 	namespace TwoSumIIInputarrayissorted
 	{
+		vector<int> twoSum(vector<int> A, int target) {
+			int len = A.size();
+			vector<int> result(2, -1);
+			if(len < 2) { return result; }
+
+			int start = 0;
+			int end = len - 1;
+			while (start < end) {
+				int sum = A[start] + A[end];
+				if (sum == target) {
+					result[0] = start + 1; // expected result index is 1 based
+					result[1] = end + 1;
+					break;
+				}
+				else if (sum < target) { start++; }
+				else { end--; }
+			}
+			return result;
+		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);
