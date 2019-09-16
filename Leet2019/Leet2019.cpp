@@ -14,177 +14,25 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	// Runtime begin marker start
 	clock_t begin = clock();
-
 	//Solution2019::Test::Main(); // Medium
+
+	//9/16/2019
+	//Solution2019::AddtoArrayFormofInteger::Main();
+	//Solution2019::FindPivotIndex::Main();
+	//Solution2019::MaximizeDistancetoClosestPerson::Main();
+	//Solution2019::LargestNumberAtLeastTwiceofOthers::Main();
+	//Solution2019::MaximumAverageSubarrayI::Main();	
+	//Solution2019::MaximumDistanceinArrays::Main();
+	//Solution2019::MagicSquaresInGrid::Main();
+	//Solution2019::XofaKindinaDeckofCards::Main();
+	//Solution2019::RotateArray::Main();
+	//Solution2019::CanPlaceFlowers::Main();
 	
-	// 8/15/2019
-	//Solution2019::TwoSum::Main(); // using sorted array
-
-	// 8/18/2019
-	//Solution2019::TwoSum::Main(); //using hashmap 
-	//Solution2019::AddTwoNumbers::Main();
-	//Solution2019::AddTwoNumbersII::Main();
-	//Solution2019::ReverseLinkedList::Main();
-
-	// 8/19/2019
-	//Solution2019::ReverseLinkedListII::Main();
-
-	// 8/20/2019
-	//Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
-	//Solution2019::MedianofTwoSortedArrays::Main();???
-
-	//8/21/2019
-	//Solution2019::LongestPalindromicSubstring::Main();
-	//Solution2019::LongestPalindrome::Main();
-	//Solution2019::PalindromeNumber::Main();
-	//Solution2019::ValidPalindrome::Main();
-
-	//8/22/2019
-	//Solution2019::ValidPalindromeII::Main();
-	//Solution2019::ShortestPalindrome::Main();	
-	//Solution2019::PalindromeLinkedList::Main();
 	
-	//8/24/2019	
-	//Solution2019::ReverseInteger::Main();
-	//Solution2019::RomantoInteger::Main();
-	//Solution2019::IntegertoRoman::Main();
-
-	//8/25/2019
-	//Solution2019::LongestCommonPrefix::Main();
-	//Solution2019::ValidParentheses::Main();
-	//Solution2019::MergeTwoSortedLists::Main();
-	//Solution2019::RemoveDuplicatesfromSortedArray::Main();
 	
-	//8/26/2019
-	//Solution2019::RemoveElement::Main();
-	//Solution2019::ImplementstrStr::Main(); /// ----> still need KMP solution. 
-	//Solution2019::SearchInsertPosition::Main();
-	//Solution2019::CountandSay::Main();
 
-	//8/28/2019
-	//Solution2019::MaximumSubarray::Main();
-	//Solution2019::LengthofLastWord::Main();
-	//Solution2019::PlusOne::Main();
-	//Solution2019::AddBinary::Main();
-	//Solution2019::Sqrt::Main();
-
-	//8/29/2019
-	//Solution2019::ClimbingStairs::Main();
-	//Solution2019::RemoveDuplicatesfromSortedList::Main();
-	//Solution2019::RemoveDuplicatesfromSortedListII::Main();
-	//Solution2019::MergeSortedArray::Main();
-
-	//8/30/2019
-	//Solution2019::SameTree::Main();
-	//Solution2019::SymmetricTree::Main();
-	//Solution2019::MaximumDepthofBinaryTree::Main();---> need to add more method to solve. Need to revisit the tree algo before proceeding with treees. 
-	//Solution2019::PascalsTriangle::Main();
-	//Solution2019::PascalsTriangleII::Main();
-	
-	//9/1/2019
-	//Solution2019::RemoveNthNodeFromEndofList::Main();	
-	
-	//9/2/2019
-	////Solution2019::MergekSortedLists::Main(); ---> didn't implement a heap myself. If have time can revisit that. 
-	//Solution2019::SwapNodesinPairs::Main();
-	//Solution2019::ReverseNodesinkGroup::Main();
-	//Solution2019::RotateList::Main();
-	//Solution2019::PartitionList::Main();
-	
-	//9/3/2019
-	//Solution2019::ConvertSortedListtoBinarySearchTree::Main();
-	//Solution2019::CopyListwithRandomPointer::Main();
-	//Solution2019::LinkedListCycle::Main();
-	//Solution2019::LinkedListCycleII::Main();
-
-	//9/4/2019
-	//Solution2019::ReorderList::Main();
-	//Solution2019::InsertionSortList::Main();
-	//Solution2019::SortList::Main();
-	//Solution2019::IntersectionofTwoLinkedLists::Main();
-	
-	//9/5/2019
-	//Solution2019::RemoveLinkedListElements::Main();
-	//Solution2019::DeleteNodeinaLinkedList::Main();
-	//Solution2019::OddEvenLinkedList::Main();
-	//Solution2019::PlusOneLinkedList::Main();
-	//Solution2019::NextGreaterNodeInLinkedList::Main();
-	
-	//9/6/2018
-	//Solution2019::DesignPhoneDirectory::Main();
-	//Solution2019::FlattenaMultilevelDoublyLinkedList::Main();
-	
-	//9/7/2018
-	//Solution2019::DesignLinkedList::Main();
-	//Solution2019::InsertintoaCyclicSortedList::Main();
-	//Solution2019::SplitLinkedListinParts::Main();
-	//Solution2019::LinkedListComponents::Main();
-	//Solution2019::MiddleoftheLinkedList::Main();
-	//Solution2019::RemoveZeroSumConsecutiveNodesfromLinkedList::Main();
-
-	//9/8/2019
-	//Solution2019::FixedPoint::Main();
-	//Solution2019::HighFive::Main();
-	//Solution2019::SumofDigitsintheMinimumNumber::Main();
-	//Solution2019::FlippinganImage::Main();
-	//Solution2019::SortArrayByParity::Main();
-	//Solution2019::SquaresofaSortedArray::Main();
-	//Solution2019::ArrayPartitionI::Main();
-	//Solution2019::FindWordsThatCanBeFormedbyCharacters::Main();
-	//Solution2019::HeightChecker::Main();
-	//Solution2019::LargestUniqueNumber::Main();
-
-	//9/9/2019
-	//Solution2019::SortArrayByParityII::Main();
-	//Solution2019::DayoftheWeek::Main();
-	
-	//9/10/2019
-	//Solution2019::FibonacciNumber::Main();
-	//Solution2019::RelativeSortArray::Main();
-	//Solution2019::AvailableCapturesforRook::Main();
-	//Solution2019::FindCommonCharacters::Main();
-
-	//9/11/2019
-	//Solution2019::CheckIfaNumberIsMajorityElementinaSortedArray::Main();
-	//Solution2019::TransposeMatrix::Main();
-	//Solution2019::SumofEvenNumbersAfterQueries::Main();
-	//Solution2019::ToeplitzMatrix::Main();
-	//Solution2019::CompareStringsbyFrequencyoftheSmallestCharacter::Main();
-
-	//9/12/2019
-	//Solution2019::TwoSumLessThanK::Main();
-	//Solution2019::ReshapetheMatrix::Main();
-	//Solution2019::DuplicateZeros::Main();
-	//Solution2019::DistanceBetweenBusStops::Main();
-	//Solution2019::FairCandySwap::Main();
-	//Solution2019::PartitionArrayIntoThreePartsWithEqualSum::Main();
-	//Solution2019::MonotonicArray::Main();
-	//Solution2019::MaxConsecutiveOnes::Main();
-	//Solution2019::MoveZeroes::Main();
-	
-	//9/13/2019
-	//Solution2019::FindAllNumbersDisappearedinanArray::Main();
-	//Solution2019::MajorityElement::Main();
-	//Solution2019::ContainsDuplicate::Main();
-	//Solution2019::ContainsDuplicateII::Main();
-	//Solution2019::ContainsDuplicateIII::Main();
-	//Solution2019::DegreeofanArray::Main()
-
-	//9/14/2019
-	//Solution2019::TwoSumIIInputarrayissorted::Main();
-	//Solution2019::ImageSmoother::Main();
-	//Solution2019::MissingNumber::Main();
-	//Solution2019::OnebitandTwobitCharacters::Main();
-	//Solution2019::PositionsofLargeGroups::Main();	
-	//Solution2019::MinCostClimbingStairs::Main();
-	//Solution2019::DietPlanPerformance::Main();
-	//Solution2019::BinaryPrefixDivisibleByFive::Main();
-	//Solution2019::MaximumProductofThreeNumbers::Main();
-	//Solution2019::PairsofSongsWithTotalDurationsDivisiblebySixZero::Main();
-
-
-
-	// Untackled!!!!!!!!!!!!!!!!!!!!!
+	// ========================= Untackled =================================
+	//Solution2019::MaximumAverageSubarrayII::Main();
 	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
 	//Solution2019::PalindromePairs::Main();
 	//Solution2019::PrimePalindrome::Main();
@@ -332,7 +180,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReverseWordsinaStringII::Main();
 	//Solution2019::RepeatedDNASequences::Main();
 	//Solution2019::BestTimetoBuyandSellStockIV::Main();
-	//Solution2019::RotateArray::Main();
 	//Solution2019::ReverseBits::Main();
 	//Solution2019::NumberofOneBits::Main();
 	//Solution2019::WordFrequency::Main();
@@ -725,7 +572,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FriendRequestsIIWhoHastheMostFriends::Main();
 	//Solution2019::ConsecutiveAvailableSeats::Main();
 	//Solution2019::DesignCompressedStringIterator::Main();
-	//Solution2019::CanPlaceFlowers::Main();
 	//Solution2019::ConstructStringfromBinaryTree::Main();
 	//Solution2019::SalesPerson::Main();
 	//Solution2019::TreeNode::Main();
@@ -744,7 +590,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TaskScheduler::Main();
 	//Solution2019::DesignCircularQueue::Main();
 	//Solution2019::AddOneRowtoTree::Main();
-	//Solution2019::MaximumDistanceinArrays::Main();
 	//Solution2019::MinimumFactorization::Main();
 	//Solution2019::ExchangeSeats::Main();
 	//Solution2019::SwapSalary::Main();
@@ -762,8 +607,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SolvetheEquation::Main();
 	//Solution2019::DesignCircularDeque::Main();
 	//Solution2019::DesignSearchAutocompleteSystem::Main();
-	//Solution2019::MaximumAverageSubarrayI::Main();
-	//Solution2019::MaximumAverageSubarrayII::Main();
 	//Solution2019::SetMismatch::Main();
 	//Solution2019::MaximumLengthofPairChain::Main();
 	//Solution2019::PalindromicSubstrings::Main();
@@ -792,13 +635,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SecondMinimumNodeInaBinaryTree::Main();
 	//Solution2019::BulbSwitcherII::Main();
 	//Solution2019::NumberofLongestIncreasingSubsequence::Main();
-	//Solution2019::LongestContinuousIncreasingSubsequence::Main();
 	//Solution2019::CutOffTreesforGolfEvent::Main();
 	//Solution2019::ImplementMagicDictionary::Main();
 	//Solution2019::MapSumPairs::Main();
 	//Solution2019::ValidParenthesisString::Main();
-	//Solution2019::TwoFourGame::Main();
-	
+	//Solution2019::TwoFourGame::Main();	
 	//Solution2019::NextClosestTime::Main();
 	//Solution2019::BaseballGame::Main();
 	//Solution2019::KEmptySlots::Main();
@@ -838,7 +679,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::AccountsMerge::Main();
 	//Solution2019::RemoveComments::Main();
 	//Solution2019::CandyCrush::Main();
-	//Solution2019::FindPivotIndex::Main();
 	//Solution2019::NumberofAtoms::Main();
 	//Solution2019::MinimumWindowSubsequence::Main();
 	//Solution2019::SelfDividingNumbers::Main();
@@ -859,7 +699,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NetworkDelayTime::Main();
 	//Solution2019::FindSmallestLetterGreaterThanTarget::Main();
 	//Solution2019::PrefixandSuffixSearch::Main();
-	//Solution2019::LargestNumberAtLeastTwiceofOthers::Main();
 	//Solution2019::ShortestCompletingWord::Main();
 	//Solution2019::ContainVirus::Main();
 	//Solution2019::NumberOfCornerRectangles::Main();
@@ -948,7 +787,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NewTwoOneGame::Main();
 	//Solution2019::PushDominoes::Main();
 	//Solution2019::SimilarStringGroups::Main();
-	//Solution2019::MagicSquaresInGrid::Main();
 	//Solution2019::KeysandRooms::Main();
 	//Solution2019::SplitArrayintoFibonacciSequence::Main();
 	//Solution2019::GuesstheWord::Main();
@@ -957,7 +795,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HandofStraights::Main();
 	//Solution2019::ShortestPathVisitingAllNodes::Main();
 	//Solution2019::ShiftingLetters::Main();
-	//Solution2019::MaximizeDistancetoClosestPerson::Main();
 	//Solution2019::RectangleAreaII::Main();
 	//Solution2019::LoudandRich::Main();
 	//Solution2019::PeakIndexinaMountainArray::Main();
@@ -1015,7 +852,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::OnlineElection::Main();
 	//Solution2019::SortanArray::Main();
 	//Solution2019::CatandMouse::Main();
-	//Solution2019::XofaKindinaDeckofCards::Main();
 	//Solution2019::PartitionArrayintoDisjointIntervals::Main();
 	//Solution2019::WordSubsets::Main();
 	//Solution2019::ReverseOnlyLetters::Main();
@@ -1087,7 +923,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::IntervalListIntersections::Main();
 	//Solution2019::VerticalOrderTraversalofaBinaryTree::Main();
 	//Solution2019::SmallestStringStartingFromLeaf::Main();
-	//Solution2019::AddtoArrayFormofInteger::Main();
 	//Solution2019::SatisfiabilityofEqualityEquations::Main();
 	//Solution2019::BrokenCalculator::Main();
 	//Solution2019::SubarrayswithKDifferentIntegers::Main();
@@ -1213,7 +1048,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SmallestSufficientTeam::Main();
 	//Solution2019::ActiveBusinesses::Main();
 	//Solution2019::UserPurchasePlatform::Main();
-	//Solution2019::NumberofEquivalentDominoPairs::Main();
 	//Solution2019::ShortestPathwithAlternatingColors::Main();
 	//Solution2019::MinimumCostTreeFromLeafValues::Main();
 	//Solution2019::MaximumofAbsoluteValueExpression::Main();
@@ -1244,6 +1078,177 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MarketAnalysisII::Main();
 
 	
+
+	// 8/15/2019
+	//Solution2019::TwoSum::Main(); // using sorted array
+
+	// 8/18/2019
+	//Solution2019::TwoSum::Main(); //using hashmap 
+	//Solution2019::AddTwoNumbers::Main();
+	//Solution2019::AddTwoNumbersII::Main();
+	//Solution2019::ReverseLinkedList::Main();
+
+	// 8/19/2019
+	//Solution2019::ReverseLinkedListII::Main();
+
+	// 8/20/2019
+	//Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
+	//Solution2019::MedianofTwoSortedArrays::Main();???
+
+	//8/21/2019
+	//Solution2019::LongestPalindromicSubstring::Main();
+	//Solution2019::LongestPalindrome::Main();
+	//Solution2019::PalindromeNumber::Main();
+	//Solution2019::ValidPalindrome::Main();
+
+	//8/22/2019
+	//Solution2019::ValidPalindromeII::Main();
+	//Solution2019::ShortestPalindrome::Main();	
+	//Solution2019::PalindromeLinkedList::Main();
+
+	//8/24/2019	
+	//Solution2019::ReverseInteger::Main();
+	//Solution2019::RomantoInteger::Main();
+	//Solution2019::IntegertoRoman::Main();
+
+	//8/25/2019
+	//Solution2019::LongestCommonPrefix::Main();
+	//Solution2019::ValidParentheses::Main();
+	//Solution2019::MergeTwoSortedLists::Main();
+	//Solution2019::RemoveDuplicatesfromSortedArray::Main();
+
+	//8/26/2019
+	//Solution2019::RemoveElement::Main();
+	//Solution2019::ImplementstrStr::Main(); /// ----> still need KMP solution. 
+	//Solution2019::SearchInsertPosition::Main();
+	//Solution2019::CountandSay::Main();
+
+	//8/28/2019
+	//Solution2019::MaximumSubarray::Main();
+	//Solution2019::LengthofLastWord::Main();
+	//Solution2019::PlusOne::Main();
+	//Solution2019::AddBinary::Main();
+	//Solution2019::Sqrt::Main();
+
+	//8/29/2019
+	//Solution2019::ClimbingStairs::Main();
+	//Solution2019::RemoveDuplicatesfromSortedList::Main();
+	//Solution2019::RemoveDuplicatesfromSortedListII::Main();
+	//Solution2019::MergeSortedArray::Main();
+
+	//8/30/2019
+	//Solution2019::SameTree::Main();
+	//Solution2019::SymmetricTree::Main();
+	//Solution2019::MaximumDepthofBinaryTree::Main();---> need to add more method to solve. Need to revisit the tree algo before proceeding with treees. 
+	//Solution2019::PascalsTriangle::Main();
+	//Solution2019::PascalsTriangleII::Main();
+
+	//9/1/2019
+	//Solution2019::RemoveNthNodeFromEndofList::Main();	
+
+	//9/2/2019
+	////Solution2019::MergekSortedLists::Main(); ---> didn't implement a heap myself. If have time can revisit that. 
+	//Solution2019::SwapNodesinPairs::Main();
+	//Solution2019::ReverseNodesinkGroup::Main();
+	//Solution2019::RotateList::Main();
+	//Solution2019::PartitionList::Main();
+
+	//9/3/2019
+	//Solution2019::ConvertSortedListtoBinarySearchTree::Main();
+	//Solution2019::CopyListwithRandomPointer::Main();
+	//Solution2019::LinkedListCycle::Main();
+	//Solution2019::LinkedListCycleII::Main();
+
+	//9/4/2019
+	//Solution2019::ReorderList::Main();
+	//Solution2019::InsertionSortList::Main();
+	//Solution2019::SortList::Main();
+	//Solution2019::IntersectionofTwoLinkedLists::Main();
+
+	//9/5/2019
+	//Solution2019::RemoveLinkedListElements::Main();
+	//Solution2019::DeleteNodeinaLinkedList::Main();
+	//Solution2019::OddEvenLinkedList::Main();
+	//Solution2019::PlusOneLinkedList::Main();
+	//Solution2019::NextGreaterNodeInLinkedList::Main();
+
+	//9/6/2018
+	//Solution2019::DesignPhoneDirectory::Main();
+	//Solution2019::FlattenaMultilevelDoublyLinkedList::Main();
+
+	//9/7/2018
+	//Solution2019::DesignLinkedList::Main();
+	//Solution2019::InsertintoaCyclicSortedList::Main();
+	//Solution2019::SplitLinkedListinParts::Main();
+	//Solution2019::LinkedListComponents::Main();
+	//Solution2019::MiddleoftheLinkedList::Main();
+	//Solution2019::RemoveZeroSumConsecutiveNodesfromLinkedList::Main();
+
+	//9/8/2019
+	//Solution2019::FixedPoint::Main();
+	//Solution2019::HighFive::Main();
+	//Solution2019::SumofDigitsintheMinimumNumber::Main();
+	//Solution2019::FlippinganImage::Main();
+	//Solution2019::SortArrayByParity::Main();
+	//Solution2019::SquaresofaSortedArray::Main();
+	//Solution2019::ArrayPartitionI::Main();
+	//Solution2019::FindWordsThatCanBeFormedbyCharacters::Main();
+	//Solution2019::HeightChecker::Main();
+	//Solution2019::LargestUniqueNumber::Main();
+
+	//9/9/2019
+	//Solution2019::SortArrayByParityII::Main();
+	//Solution2019::DayoftheWeek::Main();
+
+	//9/10/2019
+	//Solution2019::FibonacciNumber::Main();
+	//Solution2019::RelativeSortArray::Main();
+	//Solution2019::AvailableCapturesforRook::Main();
+	//Solution2019::FindCommonCharacters::Main();
+
+	//9/11/2019
+	//Solution2019::CheckIfaNumberIsMajorityElementinaSortedArray::Main();
+	//Solution2019::TransposeMatrix::Main();
+	//Solution2019::SumofEvenNumbersAfterQueries::Main();
+	//Solution2019::ToeplitzMatrix::Main();
+	//Solution2019::CompareStringsbyFrequencyoftheSmallestCharacter::Main();
+
+	//9/12/2019
+	//Solution2019::TwoSumLessThanK::Main();
+	//Solution2019::ReshapetheMatrix::Main();
+	//Solution2019::DuplicateZeros::Main();
+	//Solution2019::DistanceBetweenBusStops::Main();
+	//Solution2019::FairCandySwap::Main();
+	//Solution2019::PartitionArrayIntoThreePartsWithEqualSum::Main();
+	//Solution2019::MonotonicArray::Main();
+	//Solution2019::MaxConsecutiveOnes::Main();
+	//Solution2019::MoveZeroes::Main();
+
+	//9/13/2019
+	//Solution2019::FindAllNumbersDisappearedinanArray::Main();
+	//Solution2019::MajorityElement::Main();
+	//Solution2019::ContainsDuplicate::Main();
+	//Solution2019::ContainsDuplicateII::Main();
+	//Solution2019::ContainsDuplicateIII::Main();
+	//Solution2019::DegreeofanArray::Main()
+
+	//================================= Completed ==========================================================
+	//9/14/2019
+	//Solution2019::TwoSumIIInputarrayissorted::Main();
+	//Solution2019::ImageSmoother::Main();
+	//Solution2019::MissingNumber::Main();
+	//Solution2019::OnebitandTwobitCharacters::Main();
+	//Solution2019::PositionsofLargeGroups::Main();	
+	//Solution2019::MinCostClimbingStairs::Main();
+	//Solution2019::DietPlanPerformance::Main();
+	//Solution2019::BinaryPrefixDivisibleByFive::Main();
+	//Solution2019::MaximumProductofThreeNumbers::Main();
+	//Solution2019::PairsofSongsWithTotalDurationsDivisiblebySixZero::Main();
+
+	//9/15/2019
+	//Solution2019::NumberofEquivalentDominoPairs::Main();
+	//Solution2019::LongestContinuousIncreasingSubsequence::Main();
+
 
 
 	// Runtime end marker
