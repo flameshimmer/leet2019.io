@@ -15,18 +15,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//9/17/2019
-	//Solution2019::ValidMountainArray::Main();
-	//Solution2019::ShortestUnsortedContinuousSubarray::Main();
-	//Solution2019::KdiffPairsinanArray::Main();
-	//Solution2019::ThirdMaximumNumber::Main();
-	//Solution2019::NondecreasingArray::Main();	
-	//Solution2019::RevealCardsInIncreasingOrder::Main();
-	//Solution2019::FindAllDuplicatesinanArray::Main();
-	//Solution2019::PancakeSorting::Main();
-	//Solution2019::WiggleSort::Main();
-	//Solution2019::RangeAddition::Main();
+
+	//9/18/2019
+	//Solution2019::MaxAreaofIsland::Main();
+	//Solution2019::LonelyPixelI::Main();
+	//Solution2019::MinimumSwapstoGroupAllOnesTogether::Main();
+	//Solution2019::ProductofArrayExceptSelf::Main();
+	//Solution2019::Subsets::Main();
 	
+	//Solution2019::MaximumSumofTwoNonOverlappingSubarrays::Main();
 	
 	
 	// ========================= Untackled =================================
@@ -92,7 +89,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SortColors::Main();
 	//Solution2019::MinimumWindowSubstring::Main();
 	//Solution2019::Combinations::Main();
-	//Solution2019::Subsets::Main();
 	//Solution2019::WordSearch::Main();
 	//Solution2019::RemoveDuplicatesfromSortedArrayII::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -220,7 +216,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofDigitOne::Main();
 	//Solution2019::LowestCommonAncestorofaBinarySearchTree::Main();
 	//Solution2019::LowestCommonAncestorofaBinaryTree::Main();
-	//Solution2019::ProductofArrayExceptSelf::Main();
 	//Solution2019::SlidingWindowMaximum::Main();
 	//Solution2019::SearchaTwoDMatrixII::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
@@ -496,7 +491,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RandomPickwithWeight::Main();
 	//Solution2019::Minesweeper::Main();
 	//Solution2019::MinimumAbsoluteDifferenceinBST::Main();
-	//Solution2019::LonelyPixelI::Main();
 	//Solution2019::LonelyPixelII::Main();
 	//Solution2019::GamePlayAnalysisIII::Main();
 	//Solution2019::EncodeandDecodeTinyURL::Main();
@@ -646,7 +640,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TopKFrequentWords::Main();
 	//Solution2019::BinaryNumberwithAlternatingBits::Main();
 	//Solution2019::NumberofDistinctIslands::Main();
-	//Solution2019::MaxAreaofIsland::Main();
 	//Solution2019::CountBinarySubstrings::Main();
 	//Solution2019::PartitiontoKEqualSumSubsets::Main();
 	//Solution2019::FallingSquares::Main();
@@ -946,7 +939,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RecoveraTreeFromPreorderTraversal::Main();
 	//Solution2019::TwoCityScheduling::Main();
 	//Solution2019::MatrixCellsinDistanceOrder::Main();
-	//Solution2019::MaximumSumofTwoNonOverlappingSubarrays::Main();
 	//Solution2019::StreamofCharacters::Main();
 	//Solution2019::MovingStonesUntilConsecutive::Main();
 	//Solution2019::ColoringABorder::Main();
@@ -1055,7 +1047,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SnapshotArray::Main();
 	//Solution2019::ArticleViewsI::Main();
 	//Solution2019::ArticleViewsII::Main();
-	//Solution2019::MinimumSwapstoGroupAllOnesTogether::Main();
 	//Solution2019::AnalyzeUserWebsiteVisitPattern::Main();
 	//Solution2019::StringTransformsIntoAnotherString::Main();
 	//Solution2019::DayoftheYear::Main();
@@ -1249,7 +1240,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RotateArray::Main();
 	//Solution2019::CanPlaceFlowers::Main();
 
-
+	//9/17/2019
+	//Solution2019::ValidMountainArray::Main();
+	//Solution2019::ShortestUnsortedContinuousSubarray::Main();
+	//Solution2019::KdiffPairsinanArray::Main();
+	//Solution2019::ThirdMaximumNumber::Main();
+	//Solution2019::NondecreasingArray::Main();	
+	//Solution2019::RevealCardsInIncreasingOrder::Main();
+	//Solution2019::FindAllDuplicatesinanArray::Main();
+	//Solution2019::PancakeSorting::Main();
+	//Solution2019::WiggleSort::Main();
+	//Solution2019::RangeAddition::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
