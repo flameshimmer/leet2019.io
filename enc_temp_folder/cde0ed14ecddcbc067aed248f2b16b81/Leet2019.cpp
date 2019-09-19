@@ -21,7 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ShortestWordDistanceIII::Main();
 	//Solution2019::ImageOverlap::Main();
 	//Solution2019::ArrayNesting::Main();
-	//Solution2019::GrumpyBookstoreOwner::Main();
+	Solution2019::GrumpyBookstoreOwner::Main();
 	
 	// ========================= Untackled =================================
 	//Solution2019::CandyCrush::Main();

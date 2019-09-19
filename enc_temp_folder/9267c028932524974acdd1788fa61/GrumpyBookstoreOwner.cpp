@@ -29,16 +29,23 @@ namespace Solution2019
 	namespace GrumpyBookstoreOwner
 	{
 		int maxSatisfied(vector<int>& customers, vector<int>& grumpy, int X) {
-			int sat = 0;
-			int addSat = 0;
-			int maxAddSat = 0;
-			for (int i = 0; i < customers.size(); i++) {
-				sat += grumpy[i] ? 0 : customers[i];
-				addSat += grumpy[i] ? customers[i] : 0;
-				if (i >= X) { addSat -= customers[i - X] * grumpy[i - X]; }
-				maxAddSat = max(maxAddSat, addSat);
+			int curSum = 0;
+			int i = 0;
+			for (; i < X; i++) { curSum += customers[i]; }
+			int maxSum = curSum;
+			int start = 0;
+			for (; i < customers.size(); i++) {
+				curSum += customers[i] - customers[i-X];
+				if (curSum > maxSum) { maxSum = curSum; start = i-X+1; }
 			}
-			return sat + maxAddSat;
+
+			int result = 0;
+			for (int i = 0; i < customers.size(); i++) {
+				if ((i >= start && i < start + X) || grumpy[i] == 0) { 
+					result += customers[i]; 
+				}
+			}
+			return result;
 		}
 		void Main() {
 			vector<int>customers = { 4, 10, 10 };
