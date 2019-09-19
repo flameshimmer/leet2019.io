@@ -22,7 +22,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ImageOverlap::Main();
 	//Solution2019::ArrayNesting::Main();
 	//Solution2019::GrumpyBookstoreOwner::Main();
-	
+	//Solution2019::TeemoAttacking::Main();
+	Solution2019::MaxChunksToMakeSorted::Main();
 	// ========================= Untackled =================================
 	//Solution2019::CandyCrush::Main();
 	//Solution2019::MaximumAverageSubarrayII::Main();
@@ -452,7 +453,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ConstructtheRectangle::Main();
 	//Solution2019::ReversePairs::Main();
 	//Solution2019::TargetSum::Main();
-	//Solution2019::TeemoAttacking::Main();
 	//Solution2019::NextGreaterElementI::Main();
 	//Solution2019::RandomPointinNonoverlappingRectangles::Main();
 	//Solution2019::DiagonalTraverse::Main();
@@ -698,7 +698,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CouplesHoldingHands::Main();
 	//Solution2019::ReorganizeString::Main();
 	//Solution2019::MaxChunksToMakeSortedII::Main();
-	//Solution2019::MaxChunksToMakeSorted::Main();
 	//Solution2019::BasicCalculatorIV::Main();
 	//Solution2019::JewelsandStones::Main();
 	//Solution2019::BasicCalculatorIII::Main();
