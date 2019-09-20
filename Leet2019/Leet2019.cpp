@@ -15,26 +15,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
+	//9/20/2019
+	//Solution2019::CombinationSum::Main();
+	//Solution2019::CombinationSumII::Main();
+	//Solution2019::CombinationSumIII::Main();
+	//Solution2019::FindtheDuplicateNumber::Main();
+	//Solution2019::BeautifulArrangement::Main();
+	Solution2019::BeautifulArrangementII::Main();
 	
-	//9/19/2019
-	//Solution2019::CapacityToShipPackagesWithinDDays::Main();
-	//Solution2019::ShortestWordDistanceIII::Main();
-	//Solution2019::ImageOverlap::Main();
-	//Solution2019::ArrayNesting::Main();
-	//Solution2019::GrumpyBookstoreOwner::Main();
-	
-	//Solution2019::TeemoAttacking::Main();
-	//Solution2019::MaxChunksToMakeSorted::Main();
-	//Solution2019::RemoveVowelsfromaString::Main();
-	//Solution2019::SingleRowKeyboard::Main();
-	Solution2019::DefanginganIPAddress::Main();
-	
-	
-	//Solution2019::UncrossedLines::Main();
 
 
 
 	// ========================= Untackled =================================
+	//Solution2019::UncrossedLines::Main();
 	//Solution2019::CandyCrush::Main();
 	//Solution2019::MaximumAverageSubarrayII::Main();
 	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
@@ -65,8 +58,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FindFirstandLastPositionofElementinSortedArray::Main();	
 	//Solution2019::ValidSudoku::Main();
 	//Solution2019::SudokuSolver::Main();
-	//Solution2019::CombinationSum::Main();
-	//Solution2019::CombinationSumII::Main();
 	//Solution2019::FirstMissingPositive::Main();
 	//Solution2019::TrappingRainWater::Main();
 	//Solution2019::MultiplyStrings::Main();
@@ -266,7 +257,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PeekingIterator::Main();
 	//Solution2019::InorderSuccessorinBST::Main();
 	//Solution2019::WallsandGates::Main();
-	//Solution2019::FindtheDuplicateNumber::Main();
 	//Solution2019::UniqueWordAbbreviation::Main();
 	//Solution2019::GameofLife::Main();
 	//Solution2019::WordPattern::Main();
@@ -492,7 +482,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ContinuousSubarraySum::Main();
 	//Solution2019::LongestWordinDictionarythroughDeleting::Main();
 	//Solution2019::ContiguousArray::Main();
-	//Solution2019::BeautifulArrangement::Main();
 	//Solution2019::WordAbbreviation::Main();
 	//Solution2019::RandomPickwithWeight::Main();
 	//Solution2019::Minesweeper::Main();
@@ -619,7 +608,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EqualTreePartition::Main();
 	//Solution2019::StrangePrinter::Main();
 	//Solution2019::PathSumIV::Main();
-	//Solution2019::BeautifulArrangementII::Main();
 	//Solution2019::KthSmallestNumberinMultiplicationTable::Main();
 	//Solution2019::TrimaBinarySearchTree::Main();
 	//Solution2019::MaximumSwap::Main();
@@ -1258,6 +1246,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ProductofArrayExceptSelf::Main();
 	//Solution2019::Subsets::Main();
 	//Solution2019::MaximumSumofTwoNonOverlappingSubarrays::Main();
+
+	//9/19/2019
+	//Solution2019::CapacityToShipPackagesWithinDDays::Main();
+	//Solution2019::ShortestWordDistanceIII::Main();
+	//Solution2019::ImageOverlap::Main();
+	//Solution2019::ArrayNesting::Main();
+	//Solution2019::GrumpyBookstoreOwner::Main();
+	//Solution2019::TeemoAttacking::Main();
+	//Solution2019::MaxChunksToMakeSorted::Main();
+	//Solution2019::RemoveVowelsfromaString::Main();
+	//Solution2019::SingleRowKeyboard::Main();
+	//Solution2019::DefanginganIPAddress::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
