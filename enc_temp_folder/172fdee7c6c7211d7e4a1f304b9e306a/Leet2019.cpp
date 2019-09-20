@@ -26,8 +26,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TeemoAttacking::Main();
 	//Solution2019::MaxChunksToMakeSorted::Main();
 	//Solution2019::RemoveVowelsfromaString::Main();
-	//Solution2019::SingleRowKeyboard::Main();
-	Solution2019::DefanginganIPAddress::Main();
+	Solution2019::SingleRowKeyboard::Main();
 	
 	
 	//Solution2019::UncrossedLines::Main();
@@ -1010,6 +1009,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FillingBookcaseShelves::Main();
 	//Solution2019::ParsingABooleanExpression::Main();
 	//Solution2019::NewUsersDailyCount::Main();
+	//Solution2019::DefanginganIPAddress::Main();
 	//Solution2019::CorporateFlightBookings::Main();
 	//Solution2019::DeleteNodesAndReturnForest::Main();
 	//Solution2019::MaximumNestingDepthofTwoValidParenthesesStrings::Main();

@@ -1167,6 +1167,8 @@ namespace Solution2019
 	namespace CompareStringsbyFrequencyoftheSmallestCharacter { void Main(); }
 	namespace DistanceBetweenBusStops { void Main(); }
 	namespace DietPlanPerformance { void Main(); }
+	namespace SingleRowKeyboard { void Main(); }
+	
 	
 
 };
