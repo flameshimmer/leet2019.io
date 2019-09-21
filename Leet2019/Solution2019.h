@@ -1168,6 +1168,8 @@ namespace Solution2019
 	namespace DistanceBetweenBusStops { void Main(); }
 	namespace DietPlanPerformance { void Main(); }
 	namespace SingleRowKeyboard { void Main(); }
+	namespace CountSubstringswithOnlyOneDistinctLetter { void Main(); }
+	
 	
 	
 

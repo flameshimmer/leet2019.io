@@ -15,15 +15,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//9/20/2019
-	//Solution2019::CombinationSum::Main();
-	//Solution2019::CombinationSumII::Main();
-	//Solution2019::CombinationSumIII::Main();
-	//Solution2019::FindtheDuplicateNumber::Main();
-	//Solution2019::BeautifulArrangement::Main();
-	Solution2019::BeautifulArrangementII::Main();
-	
-
 
 
 	// ========================= Untackled =================================
@@ -600,7 +591,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaximumBinaryTree::Main();
 	//Solution2019::PrintBinaryTree::Main();
 	//Solution2019::CoinPath::Main();
-	//Solution2019::RobotReturntoOrigin::Main();
 	//Solution2019::FindKClosestElements::Main();
 	//Solution2019::SplitArrayintoConsecutiveSubsequences::Main();
 	//Solution2019::RemoveNine::Main();
@@ -643,7 +633,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinarySearch::Main();
 	//Solution2019::DesignHashSet::Main();
 	//Solution2019::DesignHashMap::Main();
-	//Solution2019::ToLowerCase::Main();
 	//Solution2019::RandomPickwithBlacklist::Main();
 	//Solution2019::NumberofDistinctIslandsII::Main();
 	//Solution2019::MinimumASCIIDeleteSumforTwoStrings::Main();
@@ -730,7 +719,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumSwapsToMakeSequencesIncreasing::Main();
 	//Solution2019::FindEventualSafeStates::Main();
 	//Solution2019::BricksFallingWhenHit::Main();
-	//Solution2019::UniqueMorseCodeWords::Main();
 	//Solution2019::SplitArrayWithSameAverage::Main();
 	//Solution2019::NumberofLinesToWriteString::Main();
 	//Solution2019::MaxIncreasetoKeepCitySkyline::Main();
@@ -1258,6 +1246,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveVowelsfromaString::Main();
 	//Solution2019::SingleRowKeyboard::Main();
 	//Solution2019::DefanginganIPAddress::Main();
+
+
+	//9/20/2019
+	//Solution2019::CombinationSum::Main();
+	//Solution2019::CombinationSumII::Main();
+	//Solution2019::CombinationSumIII::Main();
+	//Solution2019::FindtheDuplicateNumber::Main();
+	//Solution2019::BeautifulArrangement::Main();
+	//Solution2019::BeautifulArrangementII::Main();
+	//Solution2019::CountSubstringswithOnlyOneDistinctLetter::Main();
+	//Solution2019::ToLowerCase::Main();
+	//Solution2019::UniqueMorseCodeWords::Main();
+	//Solution2019::RobotReturntoOrigin::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
