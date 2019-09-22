@@ -38,7 +38,16 @@ namespace Solution2019
 	namespace UncrossedLines
 	{
 		int maxUncrossedLines(vector<int>& A, vector<int>& B) {
-			return 0;
+			int lenA = A.size();
+			int lenB = B.size();
+			vector<vector<int>> dp(lenA + 1, vector<int>(lenB + 1, 0));
+
+			for (int i = 1; i <= lenA; i++) {
+				for (int j = 1; j <= lenB; j++) {
+					dp[i][j] = (A[i - 1] == B[j - 1]) ? (dp[i - 1][j - 1] + 1) : max(dp[i][j - 1], dp[i-1][j]);
+				}
+			}
+			return dp[lenA][lenB];
 		}
 
 		void Main() {
