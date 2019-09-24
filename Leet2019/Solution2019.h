@@ -1170,6 +1170,9 @@ namespace Solution2019
 	namespace SingleRowKeyboard { void Main(); }
 	namespace CountSubstringswithOnlyOneDistinctLetter { void Main(); }
 	namespace ReverseStringIII { void Main(); }
+	namespace MinimumAbsoluteDifference { void Main(); }
+	namespace MaximumNumberofBalloons { void Main(); }
+	
 	
 	
 	
