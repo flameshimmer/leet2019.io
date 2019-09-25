@@ -6,7 +6,7 @@
 //of 'B' and 'W', which means blackand white pixels respectively.
 //
 //A black lonely pixel is character 'B' that located at a 
-//specific position where the same rowand same column 
+//specific position where the same row and same column 
 //don't have any other black pixels.
 //
 //Example:

@@ -15,7 +15,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 			
+	
 	// ========================= Untackled =================================
+	//Solution2019::IsSubsequence::Main();
 	//Solution2019::SimilarRGBColor::Main();
 	//Solution2019::CandyCrush::Main();
 	//Solution2019::MaximumAverageSubarrayII::Main();
@@ -296,7 +298,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MovingAveragefromDataStream::Main();
 	//Solution2019::TopKFrequentElements::Main();
 	//Solution2019::DesignTicTacToe::Main();
-	//Solution2019::IntersectionofTwoArraysII::Main();
 	//Solution2019::AndroidUnlockPatterns::Main();
 	//Solution2019::DataStreamasDisjointIntervals::Main();
 	//Solution2019::DesignSnakeGame::Main();
@@ -335,7 +336,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FindtheDifference::Main();
 	//Solution2019::EliminationGame::Main();
 	//Solution2019::PerfectRectangle::Main();
-	//Solution2019::IsSubsequence::Main();
 	//Solution2019::UTFEightValidation::Main();
 	//Solution2019::DecodeString::Main();
 	//Solution2019::LongestSubstringwithAtLeastKRepeatingCharacters::Main();
@@ -465,7 +465,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RandomPickwithWeight::Main();
 	//Solution2019::Minesweeper::Main();
 	//Solution2019::MinimumAbsoluteDifferenceinBST::Main();
-	//Solution2019::LonelyPixelII::Main();
 	//Solution2019::GamePlayAnalysisIII::Main();
 	//Solution2019::EncodeandDecodeTinyURL::Main();
 	//Solution2019::ConstructBinaryTreefromString::Main();
@@ -542,11 +541,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SecondDegreeFollower::Main();
 	//Solution2019::AverageSalaryDepartmentsVSCompany::Main();
 	//Solution2019::AddBoldTaginString::Main();
-	//Solution2019::MergeTwoBinaryTrees::Main();
 	//Solution2019::StudentsReportByGeography::Main();
 	//Solution2019::BiggestSingleNumber::Main();
 	//Solution2019::NotBoringMovies::Main();
-	//Solution2019::TaskScheduler::Main();
 	//Solution2019::DesignCircularQueue::Main();
 	//Solution2019::AddOneRowtoTree::Main();
 	//Solution2019::MinimumFactorization::Main();
@@ -616,7 +613,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::InsertintoaBinarySearchTree::Main();
 	//Solution2019::SearchinaSortedArrayofUnknownSize::Main();
 	//Solution2019::KthLargestElementinaStream::Main();
-	//Solution2019::BinarySearch::Main();
 	//Solution2019::DesignHashSet::Main();
 	//Solution2019::DesignHashMap::Main();
 	//Solution2019::RandomPickwithBlacklist::Main();
@@ -632,11 +628,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveComments::Main();
 	//Solution2019::NumberofAtoms::Main();
 	//Solution2019::MinimumWindowSubsequence::Main();
-	//Solution2019::SelfDividingNumbers::Main();
-	//Solution2019::MyCalendarI::Main();
 	//Solution2019::CountDifferentPalindromicSubsequences::Main();
-	//Solution2019::MyCalendarII::Main();
-	//Solution2019::MyCalendarIII::Main();
 	//Solution2019::FloodFill::Main();
 	//Solution2019::SentenceSimilarity::Main();
 	//Solution2019::AsteroidCollision::Main();
@@ -741,7 +733,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ShiftingLetters::Main();
 	//Solution2019::RectangleAreaII::Main();
 	//Solution2019::LoudandRich::Main();
-	//Solution2019::PeakIndexinaMountainArray::Main();
 	//Solution2019::CarFleet::Main();
 	//Solution2019::KSimilarStrings::Main();
 	//Solution2019::ExamRoom::Main();
@@ -1271,6 +1262,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BaseballGame::Main();
 	//Solution2019::BackspaceStringCompare::Main();
 	//Solution2019::NumberofRecentCalls::Main();
+
+	//9/25/2019
+	//Solution2019::MyCalendarI::Main();
+	//Solution2019::MyCalendarII::Main();
+	//Solution2019::MyCalendarIII::Main();
+	//Solution2019::LonelyPixelII::Main();
+	//Solution2019::TaskScheduler::Main();	
+	//Solution2019::PeakIndexinaMountainArray::Main();
+	//Solution2019::BinarySearch::Main();
+	//Solution2019::IntersectionofTwoArraysII::Main();
+	//Solution2019::SelfDividingNumbers::Main();
+	//Solution2019::MergeTwoBinaryTrees::Main();
 
 	// Runtime end marker
 	clock_t end = clock();

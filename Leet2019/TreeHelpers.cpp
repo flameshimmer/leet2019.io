@@ -107,6 +107,7 @@ TreeNode* ReadBinaryTree(vector<string>& treeData, int& index)
 	return newNode;
 }
 
+
 int printTree(TreeNode* root) {
 	cout << "Tree pretty print with level=1 and indentSpace=0\n\n";
 	// Output to console
