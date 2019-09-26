@@ -14,8 +14,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-			
 	
+	
+
+
 	// ========================= Untackled =================================
 	//Solution2019::IsSubsequence::Main();
 	//Solution2019::SimilarRGBColor::Main();
@@ -35,10 +37,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ZigZagConversion::Main();
 	//Solution2019::StringtoInteger::Main();	
 	//Solution2019::RegularExpressionMatching::Main();
-	//Solution2019::ThreeSum::Main();
-	//Solution2019::ThreeSumClosest::Main();
 	//Solution2019::LetterCombinationsofaPhoneNumber::Main();
-	//Solution2019::FourSum::Main();
 	//Solution2019::GenerateParentheses::Main();	
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
@@ -289,7 +288,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SelfCrossing::Main();
 	//Solution2019::HouseRobberIII::Main();
 	//Solution2019::CountingBits::Main();
-	//Solution2019::NestedListWeightSum::Main();
 	//Solution2019::LongestSubstringwithAtMostKDistinctCharacters::Main();
 	//Solution2019::FlattenNestedListIterator::Main();
 	//Solution2019::PowerofFour::Main();
@@ -393,7 +391,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SortCharactersByFrequency::Main();
 	//Solution2019::MinimumNumberofArrowstoBurstBalloons::Main();
 	//Solution2019::MinimumMovestoEqualArrayElements::Main();
-	//Solution2019::FourSumII::Main();
 	//Solution2019::AssignCookies::Main();
 	//Solution2019::OneThreeTwoPattern::Main();
 	//Solution2019::CircularArrayLoop::Main();
@@ -535,7 +532,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TreeNode::Main();
 	//Solution2019::FindDuplicateFileinSystem::Main();
 	//Solution2019::TriangleJudgement::Main();
-	//Solution2019::ValidTriangleNumber::Main();
 	//Solution2019::ShortestDistanceinaPlane::Main();
 	//Solution2019::ShortestDistanceinaLine::Main();
 	//Solution2019::SecondDegreeFollower::Main();
@@ -609,7 +605,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CountBinarySubstrings::Main();
 	//Solution2019::PartitiontoKEqualSumSubsets::Main();
 	//Solution2019::FallingSquares::Main();
-	//Solution2019::SearchinaBinarySearchTree::Main();
 	//Solution2019::InsertintoaBinarySearchTree::Main();
 	//Solution2019::SearchinaSortedArrayofUnknownSize::Main();
 	//Solution2019::KthLargestElementinaStream::Main();
@@ -682,7 +677,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EscapeTheGhosts::Main();
 	//Solution2019::DominoandTrominoTiling::Main();
 	//Solution2019::CustomSortString::Main();
-	//Solution2019::NumberofMatchingSubsequences::Main();
 	//Solution2019::PreimageSizeofFactorialZeroesFunction::Main();
 	//Solution2019::ValidTicTacToeState::Main();
 	//Solution2019::NumberofSubarrayswithBoundedMaximum::Main();
@@ -805,9 +799,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReorderLogFiles::Main();
 	//Solution2019::MinimumAreaRectangle::Main();
 	//Solution2019::DistinctSubsequencesII::Main();
-	//Solution2019::DIStringMatch::Main();
 	//Solution2019::FindtheShortestSuperstring::Main();
-	//Solution2019::DeleteColumnstoMakeSorted::Main();
 	//Solution2019::MinimumIncrementtoMakeArrayUnique::Main();
 	//Solution2019::ValidateStackSequences::Main();
 	//Solution2019::MostStonesRemovedwithSameRoworColumn::Main();
@@ -1274,6 +1266,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::IntersectionofTwoArraysII::Main();
 	//Solution2019::SelfDividingNumbers::Main();
 	//Solution2019::MergeTwoBinaryTrees::Main();
+
+	//9/26/2019
+	//Solution2019::ValidTriangleNumber::Main();
+	//Solution2019::ThreeSum::Main();
+	//Solution2019::ThreeSumClosest::Main();
+	//Solution2019::FourSum::Main();
+	//Solution2019::FourSumII::Main();
+	//Solution2019::NumberofMatchingSubsequences::Main();
+	//Solution2019::NestedListWeightSum::Main();
+	//Solution2019::DIStringMatch::Main();
+	//Solution2019::DeleteColumnstoMakeSorted::Main();
+	//Solution2019::SearchinaBinarySearchTree::Main();
+
 
 	// Runtime end marker
 	clock_t end = clock();
