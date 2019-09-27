@@ -15,11 +15,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	
-
+	//9/27/2019
+	//Solution2019::ThreeSumSmaller::Main();
+	//Solution2019::ThreeSumWithMultiplicity::Main();
+	//Solution2019::LongestTurbulentSubarray::Main();
+	//Solution2019::NumberofSubarrayswithBoundedMaximum::Main();
+	//Solution2019::SubsetsII::Main();
 
 	// ========================= Untackled =================================
 	//Solution2019::IsSubsequence::Main();
+	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
 	//Solution2019::SimilarRGBColor::Main();
 	//Solution2019::CandyCrush::Main();
 	//Solution2019::MaximumAverageSubarrayII::Main();
@@ -78,7 +83,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaximalRectangle::Main();
 	//Solution2019::ScrambleString::Main();
 	//Solution2019::GrayCode::Main();
-	//Solution2019::SubsetsII::Main();
 	//Solution2019::DecodeWays::Main();	
 	//Solution2019::RestoreIPAddresses::Main();
 	//Solution2019::BinaryTreeInorderTraversal::Main();
@@ -217,7 +221,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PaintHouse::Main();
 	//Solution2019::BinaryTreePaths::Main();
 	//Solution2019::AddDigits::Main();
-	//Solution2019::ThreeSumSmaller::Main();
 	//Solution2019::SingleNumberIII::Main();
 	//Solution2019::GraphValidTree::Main();
 	//Solution2019::TripsandUsers::Main();
@@ -488,7 +491,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::QuadTreeIntersection::Main();
 	//Solution2019::MaximumDepthofNaryTree::Main();
 	//Solution2019::SubarraySumEqualsK::Main();
-	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
 	//Solution2019::BinaryTreeTilt::Main();
 	//Solution2019::PermutationinString::Main();
 	//Solution2019::MaximumVacationDays::Main();
@@ -785,7 +787,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CompleteBinaryTreeInserter::Main();
 	//Solution2019::NumberofMusicPlaylists::Main();
 	//Solution2019::MinimumAddtoMakeParenthesesValid::Main();
-	//Solution2019::ThreeSumWithMultiplicity::Main();
 	//Solution2019::MinimizeMalwareSpread::Main();
 	//Solution2019::LongPressedName::Main();
 	//Solution2019::ThreeEqualParts::Main();
@@ -828,7 +829,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::KClosestPointstoOrigin::Main();
 	//Solution2019::OddEvenJump::Main();
 	//Solution2019::LargestPerimeterTriangle::Main();
-	//Solution2019::LongestTurbulentSubarray::Main();
 	//Solution2019::DistributeCoinsinBinaryTree::Main();
 	//Solution2019::UniquePathsIII::Main();
 	//Solution2019::TimeBasedKeyValueStore::Main();
