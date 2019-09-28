@@ -22,6 +22,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofSubarrayswithBoundedMaximum::Main();
 	//Solution2019::SubsetsII::Main();
 
+	//Solution2019::BinaryTreeInorderTraversal::Main();
+	//Solution2019::BinaryTreePreorderTraversal::Main();
+	//Solution2019::BinaryTreePostorderTraversal::Main();
+	//Solution2019::BinaryTreeLevelOrderTraversal::Main();
+	//Solution2019::BinaryTreeLevelOrderTraversalII::Main();
+
+
 	// ========================= Untackled =================================
 	//Solution2019::IsSubsequence::Main();
 	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
@@ -85,17 +92,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::GrayCode::Main();
 	//Solution2019::DecodeWays::Main();	
 	//Solution2019::RestoreIPAddresses::Main();
-	//Solution2019::BinaryTreeInorderTraversal::Main();
 	//Solution2019::UniqueBinarySearchTreesII::Main();
 	//Solution2019::UniqueBinarySearchTrees::Main();
 	//Solution2019::InterleavingString::Main();
 	//Solution2019::ValidateBinarySearchTree::Main();
 	//Solution2019::RecoverBinarySearchTree::Main();	
-	//Solution2019::BinaryTreeLevelOrderTraversal::Main();
 	//Solution2019::BinaryTreeZigzagLevelOrderTraversal::Main();
 	//Solution2019::ConstructBinaryTreefromPreorderandInorderTraversal::Main();
-	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();
-	//Solution2019::BinaryTreeLevelOrderTraversalII::Main();	
+	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();	
 	//Solution2019::BalancedBinaryTree::Main();
 	//Solution2019::MinimumDepthofBinaryTree::Main();
 	//Solution2019::PathSum::Main();
@@ -121,8 +125,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SingleNumberII::Main();
 	//Solution2019::WordBreak::Main();
 	//Solution2019::WordBreakII::Main();
-	//Solution2019::BinaryTreePreorderTraversal::Main();
-	//Solution2019::BinaryTreePostorderTraversal::Main();
 	//Solution2019::LRUCache::Main();
 	//Solution2019::MaxPointsonaLine::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
