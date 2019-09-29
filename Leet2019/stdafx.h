@@ -129,6 +129,19 @@ struct Point {
 	Point(int a, int b) : x(a), y(b) {}
 };
 
+//Defind for a node
+class Node {
+public:
+	int val;
+	vector<Node*> children;
+
+	Node() {}
+
+	Node(int _val, vector<Node*> _children) {
+		val = _val;
+		children = _children;
+	}
+};
 
 // Helper functions
 // int

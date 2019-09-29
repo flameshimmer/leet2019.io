@@ -16,21 +16,25 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Test::Main(); // Medium
 	
 	
-	//9/28/2019
-	//Solution2019::PartitionArrayintoDisjointIntervals::Main();
-	//Solution2019::SplitArraywithEqualSum::Main();
-	//Solution2019::InsertDeleteGetRandomO::Main();
-	//Solution2019::InsertDeleteGetRandomODuplicatesallowed::Main();
-	//Solution2019::MinimumIncrementtoMakeArrayUnique::Main();???
+	//9/29/2019
+	//Solution2019::FindMinimuminRotatedSortedArray::Main();
+	//Solution2019::FindMinimuminRotatedSortedArrayII::Main();
+	//Solution2019::ConstructBinaryTreefromPreorderandInorderTraversal::Main();
+	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();	
+	//Solution2019::SortColors::Main();
 
-	//Solution2019::HammingDistance::Main();
-	//Solution2019::MovingAveragefromDataStream::Main();
-	//Solution2019::UnivaluedBinaryTree::Main();
-	//Solution2019::LoggerRateLimiter::Main();
-	Solution2019::SubdomainVisitCount::Main();
+	//Solution2019::UniqueNumerofOccurrence::Main();
+	//Solution2019::HowManyApplesCanYouPutintotheBasket::Main();
+	//Solution2019::MaximumDepthofNaryTree::Main();
+	//Solution2019::IncreasingOrderSearchTree::Main();
+	//Solution2019::DivisorGame::Main();
+	
+
+
 
 
 	// ========================= Untackled =================================
+	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
 	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
 	//Solution2019::SimilarRGBColor::Main();
@@ -81,7 +85,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EditDistance::Main();
 	//Solution2019::SetMatrixZeroes::Main();
 	//Solution2019::SearchaTwoDMatrix::Main();
-	//Solution2019::SortColors::Main();
 	//Solution2019::MinimumWindowSubstring::Main();
 	//Solution2019::Combinations::Main();
 	//Solution2019::WordSearch::Main();
@@ -99,8 +102,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ValidateBinarySearchTree::Main();
 	//Solution2019::RecoverBinarySearchTree::Main();	
 	//Solution2019::BinaryTreeZigzagLevelOrderTraversal::Main();
-	//Solution2019::ConstructBinaryTreefromPreorderandInorderTraversal::Main();
-	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();	
 	//Solution2019::BalancedBinaryTree::Main();
 	//Solution2019::MinimumDepthofBinaryTree::Main();
 	//Solution2019::PathSum::Main();
@@ -131,8 +132,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EvaluateReversePolishNotation::Main();
 	//Solution2019::ReverseWordsinaString::Main();
 	//Solution2019::MaximumProductSubarray::Main();
-	//Solution2019::FindMinimuminRotatedSortedArray::Main();
-	//Solution2019::FindMinimuminRotatedSortedArrayII::Main();
 	//Solution2019::MinStack::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
 	//Solution2019::ReadNCharactersGivenReadFour::Main();
@@ -486,7 +485,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NextGreaterElementIII::Main();
 	//Solution2019::ReverseWordsinaStringIII::Main();
 	//Solution2019::QuadTreeIntersection::Main();
-	//Solution2019::MaximumDepthofNaryTree::Main();
 	//Solution2019::SubarraySumEqualsK::Main();
 	//Solution2019::BinaryTreeTilt::Main();
 	//Solution2019::PermutationinString::Main();
@@ -751,7 +749,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DecodedStringatIndex::Main();
 	//Solution2019::BoatstoSavePeople::Main();
 	//Solution2019::ReachableNodesInSubdividedGraph::Main();
-	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::UncommonWordsfromTwoSentences::Main();
 	//Solution2019::SpiralMatrixIII::Main();
 	//Solution2019::PossibleBipartition::Main();
@@ -762,7 +759,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SurfaceAreaofThreeDShapes::Main();
 	//Solution2019::AllPossibleFullBinaryTrees::Main();
 	//Solution2019::MaximumFrequencyStack::Main();
-	//Solution2019::IncreasingOrderSearchTree::Main();
 	//Solution2019::BitwiseORsofSubarrays::Main();
 	//Solution2019::OrderlyQueue::Main();
 	//Solution2019::OnlineStockSpan::Main();
@@ -856,7 +852,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SumofRootToLeafBinaryNumbers::Main();
 	//Solution2019::CamelcaseMatching::Main();
 	//Solution2019::VideoStitching::Main();
-	//Solution2019::DivisorGame::Main();
 	//Solution2019::MaximumDifferenceBetweenNodeandAncestor::Main();
 	//Solution2019::LongestArithmeticSequence::Main();
 	//Solution2019::RecoveraTreeFromPreorderTraversal::Main();
@@ -1284,6 +1279,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryTreeLevelOrderTraversal::Main();
 	//Solution2019::BinaryTreeLevelOrderTraversalII::Main();
 
+	//9/28/2019
+	//Solution2019::PartitionArrayintoDisjointIntervals::Main();
+	//Solution2019::SplitArraywithEqualSum::Main();
+	//Solution2019::InsertDeleteGetRandomO::Main();
+	//Solution2019::InsertDeleteGetRandomODuplicatesallowed::Main();
+	//Solution2019::MinimumIncrementtoMakeArrayUnique::Main();???
+	//Solution2019::HammingDistance::Main();
+	//Solution2019::MovingAveragefromDataStream::Main();
+	//Solution2019::UnivaluedBinaryTree::Main();
+	//Solution2019::LoggerRateLimiter::Main();
+	//Solution2019::SubdomainVisitCount::Main();
 
 	// Runtime end marker
 	clock_t end = clock();

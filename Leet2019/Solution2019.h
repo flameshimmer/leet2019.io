@@ -1172,9 +1172,7 @@ namespace Solution2019
 	namespace ReverseStringIII { void Main(); }
 	namespace MinimumAbsoluteDifference { void Main(); }
 	namespace MaximumNumberofBalloons { void Main(); }
+	namespace UniqueNumerofOccurrence { void Main(); }
+	namespace HowManyApplesCanYouPutintotheBasket { void Main(); }
 	
-	
-	
-	
-
 };
