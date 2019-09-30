@@ -14,24 +14,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-	
-	
-	//9/29/2019
-	//Solution2019::FindMinimuminRotatedSortedArray::Main();
-	//Solution2019::FindMinimuminRotatedSortedArrayII::Main();
-	//Solution2019::ConstructBinaryTreefromPreorderandInorderTraversal::Main();
-	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();	
-	//Solution2019::SortColors::Main();
 
-	//Solution2019::UniqueNumerofOccurrence::Main();
-	//Solution2019::HowManyApplesCanYouPutintotheBasket::Main();
-	//Solution2019::MaximumDepthofNaryTree::Main();
-	//Solution2019::IncreasingOrderSearchTree::Main();
-	//Solution2019::DivisorGame::Main();
-	
+	//9/30/2019
+	//Solution2019::AdvantageShuffle::Main();
+	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
+	//Solution2019::MaximumWidthRamp::Main();
+	//Solution2019::DecreaseElementsToMakeArrayZigzag::Main();
+	//Solution2019::FindPeakElement::Main();
 
-
-
+	//Solution2019::SmallestRangeI::Main();
+	//Solution2019::SmallestRangeII::Main();
+	//Solution2019::OccurrencesAfterBigram::Main();
 
 	// ========================= Untackled =================================
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
@@ -138,7 +131,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReadNCharactersGivenReadFourIICallmultipletimes::Main();
 	//Solution2019::LongestSubstringwithAtMostTwoDistinctCharacters::Main();
 	//Solution2019::OneEditDistance::Main();
-	//Solution2019::FindPeakElement::Main();
 	//Solution2019::MissingRanges::Main();
 	//Solution2019::MaximumGap::Main();
 	//Solution2019::CompareVersionNumbers::Main();
@@ -281,7 +273,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CoinChange::Main();
 	//Solution2019::NumberofConnectedComponentsinanUndirectedGraph::Main();
 	//Solution2019::WiggleSortII::Main();
-	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
 	//Solution2019::PowerofThree::Main();
 	//Solution2019::CountofRangeSum::Main();
 	//Solution2019::LongestIncreasingPathinaMatrix::Main();
@@ -738,7 +729,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SmallestSubtreewithalltheDeepestNodes::Main();
 	//Solution2019::BinaryGap::Main();
 	//Solution2019::ReorderedPowerofTwo::Main();
-	//Solution2019::AdvantageShuffle::Main();
 	//Solution2019::MinimumNumberofRefuelingStops::Main();
 	//Solution2019::LeafSimilarTrees::Main();
 	//Solution2019::WalkingRobotSimulation::Main();
@@ -766,9 +756,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ValidPermutationsforDISequence::Main();
 	//Solution2019::FruitIntoBaskets::Main();
 	//Solution2019::SumofSubarrayMinimums::Main();
-	//Solution2019::SmallestRangeI::Main();
 	//Solution2019::SnakesandLadders::Main();
-	//Solution2019::SmallestRangeII::Main();
 	//Solution2019::OnlineElection::Main();
 	//Solution2019::SortanArray::Main();
 	//Solution2019::CatandMouse::Main();
@@ -806,7 +794,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CheckCompletenessofaBinaryTree::Main();
 	//Solution2019::RegionsCutBySlashes::Main();
 	//Solution2019::DeleteColumnstoMakeSortedIII::Main();
-	//Solution2019::MaximumWidthRamp::Main();
 	//Solution2019::MinimumAreaRectangleII::Main();
 	//Solution2019::LeastOperatorstoExpressNumber::Main();
 	//Solution2019::VowelSpellchecker::Main();
@@ -892,7 +879,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ProjectEmployeesI::Main();
 	//Solution2019::ProjectEmployeesII::Main();
 	//Solution2019::ProjectEmployeesIII::Main();
-	//Solution2019::OccurrencesAfterBigram::Main();
 	//Solution2019::LetterTilePossibilities::Main();
 	//Solution2019::InsufficientNodesinRoottoLeafPaths::Main();
 	//Solution2019::SmallestSubsequenceofDistinctCharacters::Main();
@@ -948,7 +934,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UserActivityforthePastThreeZeroDaysI::Main();
 	//Solution2019::UserActivityforthePastThreeZeroDaysII::Main();
 	//Solution2019::LongestCommonSubsequence::Main();
-	//Solution2019::DecreaseElementsToMakeArrayZigzag::Main();
 	//Solution2019::BinaryTreeColoringGame::Main();
 	//Solution2019::SnapshotArray::Main();
 	//Solution2019::ArticleViewsI::Main();
@@ -1290,6 +1275,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UnivaluedBinaryTree::Main();
 	//Solution2019::LoggerRateLimiter::Main();
 	//Solution2019::SubdomainVisitCount::Main();
+
+	//9/29/2019
+	//Solution2019::FindMinimuminRotatedSortedArray::Main();
+	//Solution2019::FindMinimuminRotatedSortedArrayII::Main();
+	//Solution2019::ConstructBinaryTreefromPreorderandInorderTraversal::Main();
+	//Solution2019::ConstructBinaryTreefromInorderandPostorderTraversal::Main();	
+	//Solution2019::SortColors::Main();
+	//Solution2019::UniqueNumerofOccurrence::Main();
+	//Solution2019::HowManyApplesCanYouPutintotheBasket::Main();
+	//Solution2019::MaximumDepthofNaryTree::Main();
+	//Solution2019::IncreasingOrderSearchTree::Main();
+	//Solution2019::DivisorGame::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
