@@ -25,6 +25,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SmallestRangeI::Main();
 	//Solution2019::SmallestRangeII::Main();
 	//Solution2019::OccurrencesAfterBigram::Main();
+	//Solution2019::MatrixCellsinDistanceOrder::Main();
+	//Solution2019::ShortestDistancetoaCharacter::Main();
 
 	// ========================= Untackled =================================
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
@@ -689,7 +691,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RaceCar::Main();
 	//Solution2019::MostCommonWord::Main();
 	//Solution2019::ShortEncodingofWords::Main();
-	//Solution2019::ShortestDistancetoaCharacter::Main();
 	//Solution2019::CardFlippingGame::Main();
 	//Solution2019::BinaryTreesWithFactors::Main();
 	//Solution2019::GoatLatin::Main();
@@ -843,7 +844,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestArithmeticSequence::Main();
 	//Solution2019::RecoveraTreeFromPreorderTraversal::Main();
 	//Solution2019::TwoCityScheduling::Main();
-	//Solution2019::MatrixCellsinDistanceOrder::Main();
 	//Solution2019::StreamofCharacters::Main();
 	//Solution2019::ColoringABorder::Main();
 	//Solution2019::EscapeaLargeMaze::Main();
