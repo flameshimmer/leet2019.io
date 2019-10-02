@@ -15,18 +15,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//9/30/2019
-	//Solution2019::AdvantageShuffle::Main();
-	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
-	//Solution2019::MaximumWidthRamp::Main();
-	//Solution2019::DecreaseElementsToMakeArrayZigzag::Main();
-	//Solution2019::FindPeakElement::Main();
-
-	//Solution2019::SmallestRangeI::Main();
-	//Solution2019::SmallestRangeII::Main();
-	//Solution2019::OccurrencesAfterBigram::Main();
-	//Solution2019::MatrixCellsinDistanceOrder::Main();
-	//Solution2019::ShortestDistancetoaCharacter::Main();
+	//10/2/2019
+	//Solution2019::GlobalandLocalInversions::Main();
+	//Solution2019::SmallestStringWithSwaps::Main();
+	//Solution2019::FriendsOfAppropriateAges::Main();
+	//Solution2019::FindtheCelebrity::Main();
+	//Solution2019::AnalyzeUserWebsiteVisitPattern::Main();
+	
 
 	// ========================= Untackled =================================
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
@@ -78,12 +73,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TextJustification::Main();
 	//Solution2019::SimplifyPath::Main();
 	//Solution2019::EditDistance::Main();
-	//Solution2019::SetMatrixZeroes::Main();
 	//Solution2019::SearchaTwoDMatrix::Main();
 	//Solution2019::MinimumWindowSubstring::Main();
 	//Solution2019::Combinations::Main();
 	//Solution2019::WordSearch::Main();
-	//Solution2019::RemoveDuplicatesfromSortedArrayII::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::LargestRectangleinHistogram::Main();
 	//Solution2019::MaximalRectangle::Main();
@@ -105,7 +98,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DistinctSubsequences::Main();
 	//Solution2019::PopulatingNextRightPointersinEachNode::Main();
 	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();
-	//Solution2019::Triangle::Main();
 	//Solution2019::BestTimetoBuyandSellStock::Main();
 	//Solution2019::BestTimetoBuyandSellStockII::Main();
 	//Solution2019::BestTimetoBuyandSellStockIII::Main();
@@ -231,7 +223,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HIndex::Main();
 	//Solution2019::HIndexII::Main();
 	//Solution2019::PaintFence::Main();
-	//Solution2019::FindtheCelebrity::Main();
 	//Solution2019::FirstBadVersion::Main();
 	//Solution2019::PerfectSquares::Main();
 	//Solution2019::ZigzagIterator::Main();
@@ -570,7 +561,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PathSumIV::Main();
 	//Solution2019::KthSmallestNumberinMultiplicationTable::Main();
 	//Solution2019::TrimaBinarySearchTree::Main();
-	//Solution2019::MaximumSwap::Main();
 	//Solution2019::SecondMinimumNodeInaBinaryTree::Main();
 	//Solution2019::BulbSwitcherII::Main();
 	//Solution2019::NumberofLongestIncreasingSubsequence::Main();
@@ -634,7 +624,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::OpentheLock::Main();
 	//Solution2019::CrackingtheSafe::Main();
 	//Solution2019::ReachaNumber::Main();
-	//Solution2019::PourWater::Main();
 	//Solution2019::PyramidTransitionMatrix::Main();
 	//Solution2019::SetIntersectionSizeAtLeastTwo::Main();
 	//Solution2019::BoldWordsinString::Main();
@@ -650,7 +639,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BasicCalculatorIII::Main();
 	//Solution2019::SlidingPuzzle::Main();
 	//Solution2019::MinimizeMaxDistancetoGasStation::Main();
-	//Solution2019::GlobalandLocalInversions::Main();
 	//Solution2019::SplitBST::Main();
 	//Solution2019::SwapAdjacentinLRString::Main();
 	//Solution2019::SwiminRisingWater::Main();
@@ -678,7 +666,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FindEventualSafeStates::Main();
 	//Solution2019::BricksFallingWhenHit::Main();
 	//Solution2019::SplitArrayWithSameAverage::Main();
-	//Solution2019::NumberofLinesToWriteString::Main();
 	//Solution2019::MaxIncreasetoKeepCitySkyline::Main();
 	//Solution2019::SoupServings::Main();
 	//Solution2019::ExpressiveWords::Main();
@@ -694,7 +681,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CardFlippingGame::Main();
 	//Solution2019::BinaryTreesWithFactors::Main();
 	//Solution2019::GoatLatin::Main();
-	//Solution2019::FriendsOfAppropriateAges::Main();
 	//Solution2019::MostProfitAssigningWork::Main();
 	//Solution2019::MakingALargeIsland::Main();
 	//Solution2019::UniqueLetterString::Main();
@@ -731,7 +717,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryGap::Main();
 	//Solution2019::ReorderedPowerofTwo::Main();
 	//Solution2019::MinimumNumberofRefuelingStops::Main();
-	//Solution2019::LeafSimilarTrees::Main();
 	//Solution2019::WalkingRobotSimulation::Main();
 	//Solution2019::KokoEatingBananas::Main();
 	//Solution2019::StoneGame::Main();
@@ -938,7 +923,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SnapshotArray::Main();
 	//Solution2019::ArticleViewsI::Main();
 	//Solution2019::ArticleViewsII::Main();
-	//Solution2019::AnalyzeUserWebsiteVisitPattern::Main();
 	//Solution2019::StringTransformsIntoAnotherString::Main();
 	//Solution2019::DayoftheYear::Main();
 	//Solution2019::NumberofDiceRollsWithTargetSum::Main();
@@ -1287,6 +1271,27 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaximumDepthofNaryTree::Main();
 	//Solution2019::IncreasingOrderSearchTree::Main();
 	//Solution2019::DivisorGame::Main();
+
+	//9/30/2019
+	//Solution2019::AdvantageShuffle::Main();
+	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
+	//Solution2019::MaximumWidthRamp::Main();
+	//Solution2019::DecreaseElementsToMakeArrayZigzag::Main();
+	//Solution2019::FindPeakElement::Main();
+	//Solution2019::SmallestRangeI::Main();
+	//Solution2019::SmallestRangeII::Main();
+	//Solution2019::OccurrencesAfterBigram::Main();
+	//Solution2019::MatrixCellsinDistanceOrder::Main();
+	//Solution2019::ShortestDistancetoaCharacter::Main();
+
+	//10/1/2019
+	//Solution2019::PourWater::Main();
+	//Solution2019::RemoveDuplicatesfromSortedArrayII::Main();
+	//Solution2019::SetMatrixZeroes::Main();
+	//Solution2019::Triangle::Main();
+	//Solution2019::MaximumSwap::Main();
+	//Solution2019::LeafSimilarTrees::Main();
+	//Solution2019::NumberofLinesToWriteString::Main();
 
 	// Runtime end marker
 	clock_t end = clock();

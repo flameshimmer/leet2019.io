@@ -1174,5 +1174,7 @@ namespace Solution2019
 	namespace MaximumNumberofBalloons { void Main(); }
 	namespace UniqueNumerofOccurrence { void Main(); }
 	namespace HowManyApplesCanYouPutintotheBasket { void Main(); }
+	namespace SmallestStringWithSwaps { void Main(); }
+	
 	
 };
