@@ -15,9 +15,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	
+	//10/3/2019
+	//Solution2019::UncommonWordsfromTwoSentences::Main();
+	//Solution2019::TrimaBinarySearchTree::Main();
+	//Solution2019::SumofRootToLeafBinaryNumbers::Main();
+	//Solution2019::NaryTreeLevelOrderTraversal::Main();
+	//Solution2019::NextGreaterElementI::Main();
+
+	//Solution2019::PalindromePermutation::Main();
 
 	// ========================= Untackled =================================
+	//Solution2019::IPtoCIDR::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
 	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
@@ -31,7 +39,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LargestPalindromeProduct::Main();
 	//Solution2019::FindtheClosestPalindrome::Main();
 	//Solution2019::LongestChunkedPalindromeDecomposition::Main();
-	//Solution2019::PalindromePermutation::Main();
 	//Solution2019::PalindromePermutationII::Main();
 	//Solution2019::PalindromePartitioning::Main();
 	//Solution2019::PalindromePartitioningII::Main();
@@ -348,7 +355,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ConvertBinarySearchTreetoSortedDoublyLinkedList::Main();
 	//Solution2019::ConstructQuadTree::Main();
 	//Solution2019::SerializeandDeserializeNaryTree::Main();
-	//Solution2019::NaryTreeLevelOrderTraversal::Main();
 	//Solution2019::EncodeNaryTreetoBinaryTree::Main();
 	//Solution2019::AllOoneDataStructure::Main();
 	//Solution2019::MinimumGeneticMutation::Main();
@@ -405,7 +411,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ConstructtheRectangle::Main();
 	//Solution2019::ReversePairs::Main();
 	//Solution2019::TargetSum::Main();
-	//Solution2019::NextGreaterElementI::Main();
 	//Solution2019::RandomPointinNonoverlappingRectangles::Main();
 	//Solution2019::DiagonalTraverse::Main();
 	//Solution2019::TheMazeIII::Main();
@@ -551,7 +556,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::StrangePrinter::Main();
 	//Solution2019::PathSumIV::Main();
 	//Solution2019::KthSmallestNumberinMultiplicationTable::Main();
-	//Solution2019::TrimaBinarySearchTree::Main();
 	//Solution2019::SecondMinimumNodeInaBinaryTree::Main();
 	//Solution2019::BulbSwitcherII::Main();
 	//Solution2019::NumberofLongestIncreasingSubsequence::Main();
@@ -611,7 +615,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ShortestCompletingWord::Main();
 	//Solution2019::ContainVirus::Main();
 	//Solution2019::NumberOfCornerRectangles::Main();
-	//Solution2019::IPtoCIDR::Main();
 	//Solution2019::OpentheLock::Main();
 	//Solution2019::CrackingtheSafe::Main();
 	//Solution2019::ReachaNumber::Main();
@@ -716,7 +719,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DecodedStringatIndex::Main();
 	//Solution2019::BoatstoSavePeople::Main();
 	//Solution2019::ReachableNodesInSubdividedGraph::Main();
-	//Solution2019::UncommonWordsfromTwoSentences::Main();
 	//Solution2019::SpiralMatrixIII::Main();
 	//Solution2019::PossibleBipartition::Main();
 	//Solution2019::SuperEggDrop::Main();
@@ -813,7 +815,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryStringWithSubstringsRepresentingOneToN::Main();
 	//Solution2019::ConverttoBaseTwo::Main();
 	//Solution2019::NumberofEnclaves::Main();
-	//Solution2019::SumofRootToLeafBinaryNumbers::Main();
 	//Solution2019::CamelcaseMatching::Main();
 	//Solution2019::VideoStitching::Main();
 	//Solution2019::MaximumDifferenceBetweenNodeandAncestor::Main();
