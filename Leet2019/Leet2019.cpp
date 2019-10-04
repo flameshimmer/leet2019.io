@@ -15,6 +15,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
+	//10/4/2018
+	//Solution2019::SubarrayProductLessThanK::Main();
+	//Solution2019::SummaryRanges::Main();
+	//Solution2019::MergeIntervals::Main();
+	//Solution2019::MinimumSizeSubarraySum::Main();
+	//Solution2019::SearchaTwoDMatrix::Main();
+
+	//Solution2019::SearchaTwoDMatrixII::Main();
+	//Solution2019::LetterCasePermutation::Main();
+	//Solution2019::ComplementofBaseOneZeroInteger::Main();
+
+
 
 	// ========================= Untackled =================================
 	//Solution2019::IPtoCIDR::Main();
@@ -59,14 +71,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NQueens::Main();
 	//Solution2019::NQueensII::Main();
 	//Solution2019::JumpGame::Main();
-	//Solution2019::MergeIntervals::Main();
 	//Solution2019::InsertInterval::Main();
 	//Solution2019::PermutationSequence::Main();
 	//Solution2019::ValidNumber::Main();
 	//Solution2019::TextJustification::Main();
 	//Solution2019::SimplifyPath::Main();
 	//Solution2019::EditDistance::Main();
-	//Solution2019::SearchaTwoDMatrix::Main();
 	//Solution2019::MinimumWindowSubstring::Main();
 	//Solution2019::Combinations::Main();
 	//Solution2019::WordSearch::Main();
@@ -159,7 +169,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::IsomorphicStrings::Main();
 	//Solution2019::CourseSchedule::Main();
 	//Solution2019::ImplementTrie::Main();
-	//Solution2019::MinimumSizeSubarraySum::Main();
 	//Solution2019::CourseScheduleII::Main();
 	//Solution2019::AddandSearchWordDatastructuredesign::Main();
 	//Solution2019::WordSearchII::Main();
@@ -173,7 +182,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BasicCalculator::Main();
 	//Solution2019::ImplementStackusingQueues::Main();
 	//Solution2019::BasicCalculatorII::Main();
-	//Solution2019::SummaryRanges::Main();
 	//Solution2019::MajorityElementII::Main();
 	//Solution2019::KthSmallestElementinaBST::Main();
 	//Solution2019::PowerofTwo::Main();
@@ -182,7 +190,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LowestCommonAncestorofaBinarySearchTree::Main();
 	//Solution2019::LowestCommonAncestorofaBinaryTree::Main();
 	//Solution2019::SlidingWindowMaximum::Main();
-	//Solution2019::SearchaTwoDMatrixII::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
 	//Solution2019::ValidAnagram::Main();
 	//Solution2019::ShortestWordDistance::Main();
@@ -573,7 +580,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RandomPickwithBlacklist::Main();
 	//Solution2019::NumberofDistinctIslandsII::Main();
 	//Solution2019::MinimumASCIIDeleteSumforTwoStrings::Main();
-	//Solution2019::SubarrayProductLessThanK::Main();
 	//Solution2019::BestTimetoBuyandSellStockwithTransactionFee::Main();
 	//Solution2019::RangeModule::Main();
 	//Solution2019::MaxStack::Main();
@@ -625,7 +631,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RabbitsinForest::Main();
 	//Solution2019::TransformtoChessboard::Main();
 	//Solution2019::MinimumDistanceBetweenBSTNodes::Main();
-	//Solution2019::LetterCasePermutation::Main();
 	//Solution2019::IsGraphBipartite::Main();
 	//Solution2019::KthSmallestPrimeFraction::Main();
 	//Solution2019::CheapestFlightsWithinKStops::Main();
@@ -793,7 +798,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaximizeSumOfArrayAfterKNegations::Main();
 	//Solution2019::ClumsyFactorial::Main();
 	//Solution2019::ConstructBinarySearchTreefromPreorderTraversal::Main();
-	//Solution2019::ComplementofBaseOneZeroInteger::Main();
 	//Solution2019::NumbersWithRepeatedDigits::Main();
 	//Solution2019::SmallestIntegerDivisiblebyK::Main();
 	//Solution2019::BinaryStringWithSubstringsRepresentingOneToN::Main();
@@ -1157,7 +1161,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UniquePathsII::Main();
 	//Solution2019::CorporateFlightBookings::Main();	
 	//Solution2019::MinimumPathSum::Main();
-
 	//Solution2019::JewelsandStones::Main();
 	//Solution2019::ArmstrongNumber::Main();
 	//Solution2019::RemoveOutermostParentheses::Main();
