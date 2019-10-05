@@ -15,16 +15,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//10/4/2018
-	//Solution2019::SubarrayProductLessThanK::Main();
-	//Solution2019::SummaryRanges::Main();
-	//Solution2019::MergeIntervals::Main();
-	//Solution2019::MinimumSizeSubarraySum::Main();
-	//Solution2019::SearchaTwoDMatrix::Main();
 
-	//Solution2019::SearchaTwoDMatrixII::Main();
-	//Solution2019::LetterCasePermutation::Main();
-	//Solution2019::ComplementofBaseOneZeroInteger::Main();
 
 
 
@@ -567,7 +558,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EmployeeImportance::Main();
 	//Solution2019::StickerstoSpellWord::Main();
 	//Solution2019::TopKFrequentWords::Main();
-	//Solution2019::BinaryNumberwithAlternatingBits::Main();
 	//Solution2019::NumberofDistinctIslands::Main();
 	//Solution2019::CountBinarySubstrings::Main();
 	//Solution2019::PartitiontoKEqualSumSubsets::Main();
@@ -890,7 +880,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReportedPostsII::Main();
 	//Solution2019::ConnectingCitiesWithMinimumCost::Main();
 	//Solution2019::ParallelCourses::Main();
-	//Solution2019::NthTribonacciNumber::Main();
 	//Solution2019::AlphabetBoardPath::Main();
 	//Solution2019::LargestOneBorderedSquare::Main();
 	//Solution2019::StoneGameII::Main();
@@ -1296,6 +1285,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DistributeCandies::Main();
 	//Solution2019::AverageofLevelsinBinaryTree::Main();
 	//Solution2019::FlipGame::Main();
+
+	//10/4/2018
+	//Solution2019::SubarrayProductLessThanK::Main();
+	//Solution2019::SummaryRanges::Main();
+	//Solution2019::MergeIntervals::Main();
+	//Solution2019::MinimumSizeSubarraySum::Main();
+	//Solution2019::SearchaTwoDMatrix::Main();
+	//Solution2019::SearchaTwoDMatrixII::Main();
+	//Solution2019::LetterCasePermutation::Main();
+	//Solution2019::ComplementofBaseOneZeroInteger::Main();
+	//Solution2019::NthTribonacciNumber::Main();
+	//Solution2019::BinaryNumberwithAlternatingBits::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
