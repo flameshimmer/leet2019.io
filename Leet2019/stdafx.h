@@ -31,6 +31,7 @@
 #include <set>
 #include <stdint.h>
 #include <climits>
+#include <bitset>
 using namespace std;
 
 // Template helper functions

@@ -1175,6 +1175,7 @@ namespace Solution2019
 	namespace UniqueNumerofOccurrence { void Main(); }
 	namespace HowManyApplesCanYouPutintotheBasket { void Main(); }
 	namespace SmallestStringWithSwaps { void Main(); }
+	namespace GetEqualSubstringsWithinBudget { void Main(); }
 	
 	
 };
