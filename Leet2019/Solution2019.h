@@ -1176,6 +1176,7 @@ namespace Solution2019
 	namespace HowManyApplesCanYouPutintotheBasket { void Main(); }
 	namespace SmallestStringWithSwaps { void Main(); }
 	namespace GetEqualSubstringsWithinBudget { void Main(); }
-	
+	namespace PlaywithChips { void Main(); }
+	namespace IntersectionofThreeSortedArrays { void Main(); }
 	
 };

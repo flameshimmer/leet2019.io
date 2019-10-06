@@ -15,8 +15,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	
-
 
 	// ========================= Untackled =================================
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -52,14 +50,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TrappingRainWater::Main();
 	//Solution2019::MultiplyStrings::Main();
 	//Solution2019::WildcardMatching::Main();
-	//Solution2019::JumpGameII::Main();
 	//Solution2019::Permutations::Main();
 	//Solution2019::PermutationsII::Main();
 	//Solution2019::GroupAnagrams::Main();
 	//Solution2019::Pow::Main();
 	//Solution2019::NQueens::Main();
 	//Solution2019::NQueensII::Main();
-	//Solution2019::JumpGame::Main();
 	//Solution2019::InsertInterval::Main();
 	//Solution2019::PermutationSequence::Main();
 	//Solution2019::ValidNumber::Main();
@@ -218,7 +214,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UniqueWordAbbreviation::Main();
 	//Solution2019::WordPattern::Main();
 	//Solution2019::WordPatternII::Main();
-	//Solution2019::NimGame::Main();
 	//Solution2019::FlipGameII::Main();
 	//Solution2019::FindMedianfromDataStream::Main();
 	//Solution2019::BestMeetingPoint::Main();
@@ -414,7 +409,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CoinChangeTwo::Main();
 	//Solution2019::RandomFlipMatrix::Main();
 	//Solution2019::DetectCapital::Main();
-	//Solution2019::LongestUncommonSubsequenceI::Main();
 	//Solution2019::LongestUncommonSubsequenceII::Main();
 	//Solution2019::ContinuousSubarraySum::Main();
 	//Solution2019::LongestWordinDictionarythroughDeleting::Main();
@@ -561,7 +555,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::InsertintoaBinarySearchTree::Main();
 	//Solution2019::SearchinaSortedArrayofUnknownSize::Main();
 	//Solution2019::KthLargestElementinaStream::Main();
-	//Solution2019::DesignHashSet::Main();
 	//Solution2019::RandomPickwithBlacklist::Main();
 	//Solution2019::NumberofDistinctIslandsII::Main();
 	//Solution2019::MinimumASCIIDeleteSumforTwoStrings::Main();
@@ -638,7 +631,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SoupServings::Main();
 	//Solution2019::ExpressiveWords::Main();
 	//Solution2019::ChalkboardXORGame::Main();
-	//Solution2019::LargestTriangleArea::Main();
 	//Solution2019::LargestSumofAverages::Main();
 	//Solution2019::BinaryTreePruning::Main();
 	//Solution2019::BusRoutes::Main();
@@ -714,7 +706,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SortanArray::Main();
 	//Solution2019::CatandMouse::Main();
 	//Solution2019::WordSubsets::Main();
-	//Solution2019::MaximumSumCircularSubarray::Main();
 	//Solution2019::CompleteBinaryTreeInserter::Main();
 	//Solution2019::NumberofMusicPlaylists::Main();
 	//Solution2019::MinimumAddtoMakeParenthesesValid::Main();
@@ -876,7 +867,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UserActivityforthePastThreeZeroDaysII::Main();
 	//Solution2019::LongestCommonSubsequence::Main();
 	//Solution2019::BinaryTreeColoringGame::Main();
-	//Solution2019::SnapshotArray::Main();
 	//Solution2019::ArticleViewsI::Main();
 	//Solution2019::ArticleViewsII::Main();
 	//Solution2019::StringTransformsIntoAnotherString::Main();
@@ -1298,6 +1288,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LargestPerimeterTriangle::Main();
 	//Solution2019::ReverseOnlyLetters::Main();
 	//Solution2019::NumberofDaysinaMonth::Main();
+
+	//10/6/2019
+	//Solution2019::PlaywithChips::Main();
+	//Solution2019::MaximumSumCircularSubarray::Main();
+	//Solution2019::SnapshotArray::Main();
+	//Solution2019::JumpGame::Main();
+	//Solution2019::JumpGameII::Main();
+	//Solution2019::IntersectionofThreeSortedArrays::Main();
+	//Solution2019::LongestUncommonSubsequenceI::Main();
+	//Solution2019::LargestTriangleArea::Main();
+	//Solution2019::DesignHashSet::Main();
+	//Solution2019::NimGame::Main();
+
 
 	// Runtime end marker
 	clock_t end = clock();
