@@ -1178,5 +1178,7 @@ namespace Solution2019
 	namespace GetEqualSubstringsWithinBudget { void Main(); }
 	namespace PlaywithChips { void Main(); }
 	namespace IntersectionofThreeSortedArrays { void Main(); }
+	namespace CanMakePalindromefromSubstring { void Main(); }
+	
 	
 };

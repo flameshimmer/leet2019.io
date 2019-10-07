@@ -14,7 +14,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-
+	
+	//10/7/2019
+	//Solution2019::WordSearch::Main();
+	//Solution2019::WordSearchII::Main();
+	//Solution2019::CanMakePalindromefromSubstring::Main();
+	//Solution2019::NextPermutation::Main();
+	//Solution2019::MaximumProductSubarray::Main();
 
 	// ========================= Untackled =================================
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -42,7 +48,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::GenerateParentheses::Main();	
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
-	//Solution2019::NextPermutation::Main();
 	//Solution2019::LongestValidParentheses::Main();
 	//Solution2019::ValidSudoku::Main();
 	//Solution2019::SudokuSolver::Main();
@@ -64,7 +69,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EditDistance::Main();
 	//Solution2019::MinimumWindowSubstring::Main();
 	//Solution2019::Combinations::Main();
-	//Solution2019::WordSearch::Main();
 	//Solution2019::LargestRectangleinHistogram::Main();
 	//Solution2019::MaximalRectangle::Main();
 	//Solution2019::ScrambleString::Main();
@@ -97,7 +101,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CloneGraph::Main();
 	//Solution2019::GasStation::Main();
 	//Solution2019::Candy::Main();
-
 	//Solution2019::SingleNumberII::Main();
 	//Solution2019::WordBreak::Main();
 	//Solution2019::WordBreakII::Main();
@@ -105,7 +108,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaxPointsonaLine::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
 	//Solution2019::ReverseWordsinaString::Main();
-	//Solution2019::MaximumProductSubarray::Main();
 	//Solution2019::MinStack::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
 	//Solution2019::ReadNCharactersGivenReadFour::Main();
@@ -155,7 +157,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ImplementTrie::Main();
 	//Solution2019::CourseScheduleII::Main();
 	//Solution2019::AddandSearchWordDatastructuredesign::Main();
-	//Solution2019::WordSearchII::Main();
 	//Solution2019::HouseRobberII::Main();	
 	//Solution2019::KthLargestElementinanArray::Main();
 	//Solution2019::CombinationSumIII::Main();
