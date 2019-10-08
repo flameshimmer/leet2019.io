@@ -15,12 +15,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/7/2019
-	//Solution2019::WordSearch::Main();
-	//Solution2019::WordSearchII::Main();
-	//Solution2019::CanMakePalindromefromSubstring::Main();
-	//Solution2019::NextPermutation::Main();
-	//Solution2019::MaximumProductSubarray::Main();
 
 	// ========================= Untackled =================================
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -190,7 +184,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::VerifyPreorderSequenceinBinarySearchTree::Main();
 	//Solution2019::PaintHouse::Main();
 	//Solution2019::BinaryTreePaths::Main();
-	//Solution2019::AddDigits::Main();
 	//Solution2019::SingleNumberIII::Main();
 	//Solution2019::GraphValidTree::Main();
 	//Solution2019::TripsandUsers::Main();
@@ -546,7 +539,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestUnivaluePath::Main();
 	//Solution2019::KnightProbabilityinChessboard::Main();
 	//Solution2019::MaximumSumofThreeNonOverlappingSubarrays::Main();
-	//Solution2019::EmployeeImportance::Main();
 	//Solution2019::StickerstoSpellWord::Main();
 	//Solution2019::TopKFrequentWords::Main();
 	//Solution2019::NumberofDistinctIslands::Main();
@@ -582,7 +574,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NetworkDelayTime::Main();
 	//Solution2019::FindSmallestLetterGreaterThanTarget::Main();
 	//Solution2019::PrefixandSuffixSearch::Main();
-	//Solution2019::ShortestCompletingWord::Main();
 	//Solution2019::ContainVirus::Main();
 	//Solution2019::NumberOfCornerRectangles::Main();
 	//Solution2019::OpentheLock::Main();
@@ -613,7 +604,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::IsGraphBipartite::Main();
 	//Solution2019::KthSmallestPrimeFraction::Main();
 	//Solution2019::CheapestFlightsWithinKStops::Main();
-	//Solution2019::RotatedDigits::Main();
 	//Solution2019::EscapeTheGhosts::Main();
 	//Solution2019::DominoandTrominoTiling::Main();
 	//Solution2019::CustomSortString::Main();
@@ -730,7 +720,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LargestTimeforGivenDigits::Main();
 	//Solution2019::FlipEquivalentBinaryTrees::Main();
 	//Solution2019::LargestComponentSizebyCommonFactor::Main();
-	//Solution2019::VerifyinganAlienDictionary::Main();
 	//Solution2019::DeleteColumnstoMakeSortedII::Main();
 	//Solution2019::TallestBillboard::Main();
 	//Solution2019::PrisonCellsAfterNDays::Main();
@@ -1302,6 +1291,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DesignHashSet::Main();
 	//Solution2019::NimGame::Main();
 
+	//10/7/2019
+	//Solution2019::WordSearch::Main();
+	//Solution2019::WordSearchII::Main();
+	//Solution2019::CanMakePalindromefromSubstring::Main();
+	//Solution2019::NextPermutation::Main();
+	//Solution2019::MaximumProductSubarray::Main();
+	//Solution2019::VerifyinganAlienDictionary::Main();
+	//Solution2019::RotatedDigits::Main();
+	//Solution2019::ShortestCompletingWord::Main();
+	//Solution2019::EmployeeImportance::Main();
+	//Solution2019::AddDigits::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
