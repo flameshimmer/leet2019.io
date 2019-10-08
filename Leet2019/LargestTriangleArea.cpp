@@ -18,6 +18,10 @@ namespace Solution2019
 {
 	namespace LargestTriangleArea
 	{
+		double area(vector<int>& a, vector<int>& b, vector<int>& c) {
+			return 0.5 * (a[0] * (b[1] - c[1]) + b[0] * (c[1] - a[1]) + c[0] * (a[1] - b[1]));
+		}
+
 		double largestTriangleArea(vector<vector<int>>& points) {
 			double result = 0.0;
 			for (auto& a : points) {
@@ -30,9 +34,7 @@ namespace Solution2019
 			return result;
 		}
 
-		double area(vector<int>& a, vector<int>& b, vector<int>& c) {
-			return 0.5 * (a[0] * (b[1] - c[1]) + b[0] * (c[1] - a[1]) + c[0] * (a[1] - b[1]));
-		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);

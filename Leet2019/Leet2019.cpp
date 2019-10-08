@@ -14,6 +14,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
+
+	//10/8/2019
+	//Solution2019::SumofSubarrayMinimums::Main();
+	//Solution2019::CircularArrayLoop::Main();
+	//Solution2019::InvalidTransactions::Main();
+	//Solution2019::MissingRanges::Main();
+	//Solution2019::BestTimetoBuyandSellStock::Main();
+	
+		//Solution2019::BestTimetoBuyandSellStockII::Main();
+		//Solution2019::BestTimetoBuyandSellStockIII::Main();
 	
 
 	// ========================= Untackled =================================
@@ -83,9 +93,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DistinctSubsequences::Main();
 	//Solution2019::PopulatingNextRightPointersinEachNode::Main();
 	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();
-	//Solution2019::BestTimetoBuyandSellStock::Main();
-	//Solution2019::BestTimetoBuyandSellStockII::Main();
-	//Solution2019::BestTimetoBuyandSellStockIII::Main();
 	//Solution2019::BinaryTreeMaximumPathSum::Main();	
 	//Solution2019::WordLadderII::Main();
 	//Solution2019::WordLadder::Main();
@@ -108,7 +115,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReadNCharactersGivenReadFourIICallmultipletimes::Main();
 	//Solution2019::LongestSubstringwithAtMostTwoDistinctCharacters::Main();
 	//Solution2019::OneEditDistance::Main();
-	//Solution2019::MissingRanges::Main();
 	//Solution2019::MaximumGap::Main();
 	//Solution2019::CompareVersionNumbers::Main();
 	//Solution2019::FractiontoRecurringDecimal::Main();	
@@ -337,8 +343,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::KthSmallestinLexicographicalOrder::Main();
 	//Solution2019::ArrangingCoins::Main();
 	//Solution2019::StringCompression::Main();
-	//Solution2019::SequenceReconstruction::Main();
-	
+	//Solution2019::SequenceReconstruction::Main();	
 	//Solution2019::ArithmeticSlicesIISubsequence::Main();
 	//Solution2019::NumberofBoomerangs::Main();
 	//Solution2019::SerializeandDeserializeBST::Main();
@@ -348,7 +353,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumMovestoEqualArrayElements::Main();
 	//Solution2019::AssignCookies::Main();
 	//Solution2019::OneThreeTwoPattern::Main();
-	//Solution2019::CircularArrayLoop::Main();
 	//Solution2019::PoorPigs::Main();
 	//Solution2019::RepeatedSubstringPattern::Main();
 	//Solution2019::LFUCache::Main();
@@ -691,7 +695,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumbersAtMostNGivenDigitSet::Main();
 	//Solution2019::ValidPermutationsforDISequence::Main();
 	//Solution2019::FruitIntoBaskets::Main();
-	//Solution2019::SumofSubarrayMinimums::Main();
 	//Solution2019::SnakesandLadders::Main();
 	//Solution2019::OnlineElection::Main();
 	//Solution2019::SortanArray::Main();
