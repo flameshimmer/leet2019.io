@@ -15,7 +15,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-
 	// ========================= Untackled =================================
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::IPtoCIDR::Main();
@@ -25,7 +24,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestLineofConsecutiveOneinMatrix::Main();
 	//Solution2019::CandyCrush::Main();
 	//Solution2019::MaximumAverageSubarrayII::Main();
-	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
 	//Solution2019::PalindromePairs::Main();
 	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::SuperPalindromes::Main();
@@ -46,7 +44,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ValidSudoku::Main();
 	//Solution2019::SudokuSolver::Main();
 	//Solution2019::FirstMissingPositive::Main();
-	//Solution2019::TrappingRainWater::Main();
 	//Solution2019::MultiplyStrings::Main();
 	//Solution2019::WildcardMatching::Main();
 	//Solution2019::Permutations::Main();
@@ -165,7 +162,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LowestCommonAncestorofaBinaryTree::Main();
 	//Solution2019::SlidingWindowMaximum::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
-	//Solution2019::ValidAnagram::Main();
 	//Solution2019::ShortestWordDistance::Main();
 	//Solution2019::ShortestWordDistanceII::Main();
 	//Solution2019::StrobogrammaticNumber::Main();
@@ -174,7 +170,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::GroupShiftedStrings::Main();
 	//Solution2019::CountUnivalueSubtrees::Main();
 	//Solution2019::FlattenTwoDVector::Main();
-	//Solution2019::MeetingRooms::Main();
 	//Solution2019::MeetingRoomsII::Main();
 	//Solution2019::FactorCombinations::Main();
 	//Solution2019::VerifyPreorderSequenceinBinarySearchTree::Main();
@@ -285,7 +280,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LexicographicalNumbers::Main();
 	//Solution2019::FirstUniqueCharacterinaString::Main();
 	//Solution2019::LongestAbsoluteFilePath::Main();
-	//Solution2019::FindtheDifference::Main();
 	//Solution2019::EliminationGame::Main();
 	//Solution2019::PerfectRectangle::Main();
 	//Solution2019::UTFEightValidation::Main();
@@ -396,7 +390,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SuperWashingMachines::Main();
 	//Solution2019::CoinChangeTwo::Main();
 	//Solution2019::RandomFlipMatrix::Main();
-	//Solution2019::DetectCapital::Main();
 	//Solution2019::LongestUncommonSubsequenceII::Main();
 	//Solution2019::ContinuousSubarraySum::Main();
 	//Solution2019::LongestWordinDictionarythroughDeleting::Main();
@@ -428,7 +421,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NextGreaterElementIII::Main();
 	//Solution2019::ReverseWordsinaStringIII::Main();
 	//Solution2019::QuadTreeIntersection::Main();
-	//Solution2019::SubarraySumEqualsK::Main();
+	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
 	//Solution2019::BinaryTreeTilt::Main();
 	//Solution2019::PermutationinString::Main();
 	//Solution2019::MaximumVacationDays::Main();
@@ -505,7 +498,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TwoKeysKeyboard::Main();
 	//Solution2019::FourKeysKeyboard::Main();
 	//Solution2019::FindDuplicateSubtrees::Main();
-	//Solution2019::TwoSumIVInputisaBST::Main();
 	//Solution2019::MaximumBinaryTree::Main();
 	//Solution2019::PrintBinaryTree::Main();
 	//Solution2019::CoinPath::Main();
@@ -531,8 +523,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RedundantConnectionII::Main();
 	//Solution2019::RepeatedStringMatch::Main();
 	//Solution2019::LongestUnivaluePath::Main();
-	//Solution2019::KnightProbabilityinChessboard::Main();
-	//Solution2019::MaximumSumofThreeNonOverlappingSubarrays::Main();
+	//Solution2019::KnightProbabilityinChessboard::Main();	
 	//Solution2019::StickerstoSpellWord::Main();
 	//Solution2019::TopKFrequentWords::Main();
 	//Solution2019::NumberofDistinctIslands::Main();
@@ -789,10 +780,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofValidSubarrays::Main();
 	//Solution2019::CampusBikesII::Main();
 	//Solution2019::DigitCountinRange::Main();
-	//Solution2019::GreatestCommonDivisorofStrings::Main();
 	//Solution2019::FlipColumnsForMaximumNumberofEqualRows::Main();
 	//Solution2019::AddingTwoNegabinaryNumbers::Main();
-	//Solution2019::NumberofSubmatricesThatSumtoTarget::Main();
 	//Solution2019::ProjectEmployeesI::Main();
 	//Solution2019::ProjectEmployeesII::Main();
 	//Solution2019::ProjectEmployeesIII::Main();
@@ -1200,7 +1189,7 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//9/30/2019
 	//Solution2019::AdvantageShuffle::Main();
-	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
+	//Solution2019::SubarraySumEqualsk::Main();
 	//Solution2019::MaximumWidthRamp::Main();
 	//Solution2019::DecreaseElementsToMakeArrayZigzag::Main();
 	//Solution2019::FindPeakElement::Main();
@@ -1305,6 +1294,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TwoCityScheduling::Main();
 	//Solution2019::CountBinarySubstrings::Main();
 	//Solution2019::ReorderDatainLogFiles::Main();
+
+	//10/9/2019
+	//Solution2019::NumberofSubmatricesThatSumtoTarget::Main();
+	//Solution2019::TrappingRainWater::Main();
+	//Solution2019::MaximumSumofThreeNonOverlappingSubarrays::Main(); ???
+	//Solution2019::ValidAnagram::Main();
+	//Solution2019::GreatestCommonDivisorofStrings::Main();
+	//Solution2019::FindtheDifference::Main();
+	//Solution2019::TwoSumIVInputisaBST::Main();
+	//Solution2019::MeetingRooms::Main();
+	//Solution2019::ConvertSortedArraytoBinarySearchTree::Main();
+	//Solution2019::DetectCapital::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
