@@ -15,16 +15,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//10/8/2019
-	//Solution2019::SumofSubarrayMinimums::Main();
-	//Solution2019::CircularArrayLoop::Main();
-	//Solution2019::InvalidTransactions::Main();
-	//Solution2019::MissingRanges::Main();
-	//Solution2019::BestTimetoBuyandSellStock::Main();
-	
-		//Solution2019::BestTimetoBuyandSellStockII::Main();
-		//Solution2019::BestTimetoBuyandSellStockIII::Main();
-	
 
 	// ========================= Untackled =================================
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -546,7 +536,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::StickerstoSpellWord::Main();
 	//Solution2019::TopKFrequentWords::Main();
 	//Solution2019::NumberofDistinctIslands::Main();
-	//Solution2019::CountBinarySubstrings::Main();
 	//Solution2019::PartitiontoKEqualSumSubsets::Main();
 	//Solution2019::FallingSquares::Main();
 	//Solution2019::InsertintoaBinarySearchTree::Main();
@@ -774,7 +763,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaximumDifferenceBetweenNodeandAncestor::Main();
 	//Solution2019::LongestArithmeticSequence::Main();
 	//Solution2019::RecoveraTreeFromPreorderTraversal::Main();
-	//Solution2019::TwoCityScheduling::Main();
 	//Solution2019::StreamofCharacters::Main();
 	//Solution2019::ColoringABorder::Main();
 	//Solution2019::EscapeaLargeMaze::Main();
@@ -1305,6 +1293,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ShortestCompletingWord::Main();
 	//Solution2019::EmployeeImportance::Main();
 	//Solution2019::AddDigits::Main();
+
+	//10/8/2019
+	//Solution2019::SumofSubarrayMinimums::Main();
+	//Solution2019::CircularArrayLoop::Main();
+	//Solution2019::InvalidTransactions::Main();
+	//Solution2019::MissingRanges::Main();
+	//Solution2019::BestTimetoBuyandSellStock::Main();
+	//Solution2019::BestTimetoBuyandSellStockII::Main();	
+	//Solution2019::BestTimetoBuyandSellStockIII::Main();
+	//Solution2019::TwoCityScheduling::Main();
+	//Solution2019::CountBinarySubstrings::Main();
+	//Solution2019::ReorderDatainLogFiles::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
