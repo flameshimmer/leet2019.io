@@ -44,11 +44,14 @@ namespace Solution2019
 	namespace MovingStonesUntilConsecutive
 	{
 		vector<int> numMovesStones(int a, int b, int c) {
+			// first make sure x,y,z representing a, b, c in increasing order. 
 			int x = min(a, min(b, c));
 			int z = max(a, max(b, c));
 			int y = a + b + c - x - z;
 
-			if (y - x == 1 && z - y == 1) { return { 0, 0 }; }
+			if (y - x == 1 && z - y == 1) { return { 0, 0 }; } // consecutive case
+			// since can only move stone on the leftmost side or right most side, 
+			// (y-x+1-2) + (z-y+1-2) = z-x-2
 			else if (y - x <= 2 || z - y <= 2) { return { 1, z - x - 2 }; }
 			else { return { 2, z - x - 2 }; }
 		}

@@ -46,6 +46,53 @@ namespace Solution2019
 {
 	namespace CandyCrush
 	{
+		vector<vector<int>> candyCrush(vector<vector<int>>& board) {
+			int rowCount = board.size();
+			int colCount = board[0].size();
+			bool found = true;
+
+			while (found) {
+				found = false;
+				for (int i = 0; i < rowCount; i++) {
+					for (int j = 0; j < colCount; j++) {
+						int v = abs(board[i][j]);
+						if (v == 0) { continue; }
+						if (j + 2 < colCount && abs(board[i][j + 1]) == v && abs(board[i][j + 2]) == v) {
+							found = true;
+							int k = j;
+							while (k < colCount && abs(board[i][k]) == v) {
+								board[i][k] = -v;
+								k++;
+							}
+						}
+						if (i + 2 < rowCount && abs(board[i + 1][j]) == v && abs(board[i + 2][j]) == v) {
+							found = true;
+							int k = i;
+							while (k < rowCount && abs(board[k][j]) == v) {
+								board[k][j] = -v;
+								k++;
+							}
+						}
+					}
+				}
+
+				if (found) {
+					for (int j = 0; j < colCount; j++) {
+						int copyIndex = rowCount - 1;
+						for (int i = rowCount - 1; i >= 0; i--) {
+							if (board[i][j] > 0) {
+								board[copyIndex][j] = board[i][j];
+								copyIndex--;
+							}
+						}
+						for (; copyIndex >= 0; copyIndex--) {
+							board[copyIndex][j] = 0;
+						}
+					}
+				}
+			}
+			return board;
+		}
 		void Main() {
 			string test = "tst test test";
 			print(test);

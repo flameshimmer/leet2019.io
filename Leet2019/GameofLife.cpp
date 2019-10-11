@@ -50,38 +50,27 @@ namespace Solution2019
 {
 	namespace GameofLife
 	{
-		void updateBoard(vector<vector<int>>& board, int x, int y, int rowCount, int colCount) {
-			int n[3] = { -1, 0, 1 };
-			int sum = 0;
-			for (int i = 0; i < 3; i++) {
-				for (int j = 0; j < 3; j++) {
-					int cx = x + n[i];
-					int cy = y + n[j];
-					if (cx == x && cy == y) { continue; }
-					if (cx >= 0 && cx < rowCount && cy >= 0 && cy < colCount && abs(board[cx][cy] == 1))
-						sum++;
-				}
-			}
-			if ((sum < 2 || sum > 3) && board[x][y] == 1) { board[x][y] == -1; }
-			if (sum == 3 && board[x][y] == 0) { board[x][y] = 2; }
-		}
-
 		void gameOfLife(vector<vector<int>>& board) {
 			int rowCount = board.size();
-			if (rowCount == 0) { return; }
 			int colCount = board[0].size();
-			if (colCount == 0) { return; }
 
 			for (int i = 0; i < rowCount; i++) {
 				for (int j = 0; j < colCount; j++) {
-					updateBoard(board, i, j, rowCount, colCount);
+					int count = 0;
+					for (int a = max(i - 1, 0); a <= min(i + 1, rowCount - 1); a++) {
+						for (int b = max(j - 1, 0); b <= min(j + 1, colCount - 1); b++) {
+							count += board[a][b] & 1;
+						}
+					}
+					if (count == 3 || count - (board[i][j] & 1) == 3) {
+						board[i][j] |= 2;
+					}
 				}
 			}
 
 			for (int i = 0; i < rowCount; i++) {
 				for (int j = 0; j < colCount; j++) {
-					if (board[i][j] > 0) { board[i][j] = 1; }
-					else { board[i][j] = 0; }
+					board[i][j] >>= 1;
 				}
 			}
 		}
