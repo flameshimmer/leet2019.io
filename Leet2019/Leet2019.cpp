@@ -24,6 +24,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestConsecutiveSequence::Main();
 
 		//Solution2019::SumofTwoIntegers::Main();
+		//Solution2019::ExcelSheetColumnNumber::Main();
+		//Solution2019::ConvertBSTtoGreaterTree::Main();
+		//Solution2019::ConstructStringfromBinaryTree::Main();
+		//Solution2019::FloodFill::Main();
 	
 
 	// ========================= Untackled =================================
@@ -114,7 +118,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FractiontoRecurringDecimal::Main();	
 	//Solution2019::ExcelSheetColumnTitle::Main();
 	//Solution2019::TwoSumIIIDatastructuredesign::Main();
-	//Solution2019::ExcelSheetColumnNumber::Main();
 	//Solution2019::FactorialTrailingZeroes::Main();
 	//Solution2019::BinarySearchTreeIterator::Main();
 	//Solution2019::DungeonGame::Main();
@@ -408,7 +411,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EncodeandDecodeTinyURL::Main();
 	//Solution2019::ConstructBinaryTreefromString::Main();
 	//Solution2019::ComplexNumberMultiplication::Main();
-	//Solution2019::ConvertBSTtoGreaterTree::Main();
 	//Solution2019::MinimumTimeDifference::Main();
 	//Solution2019::SingleElementinaSortedArray::Main();
 	//Solution2019::ZeroOneMatrix::Main();
@@ -465,7 +467,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FriendRequestsIIWhoHastheMostFriends::Main();
 	//Solution2019::ConsecutiveAvailableSeats::Main();
 	//Solution2019::DesignCompressedStringIterator::Main();
-	//Solution2019::ConstructStringfromBinaryTree::Main();
 	//Solution2019::SalesPerson::Main();
 	//Solution2019::TreeNode::Main();
 	//Solution2019::FindDuplicateFileinSystem::Main();
@@ -550,7 +551,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofAtoms::Main();
 	//Solution2019::MinimumWindowSubsequence::Main();
 	//Solution2019::CountDifferentPalindromicSubsequences::Main();
-	//Solution2019::FloodFill::Main();
 	//Solution2019::SentenceSimilarity::Main();
 	//Solution2019::AsteroidCollision::Main();
 	//Solution2019::ParseLispExpression::Main();
