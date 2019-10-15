@@ -1181,6 +1181,5 @@ namespace Solution2019
 	namespace CanMakePalindromefromSubstring { void Main(); }
 	namespace InvalidTransactions { void Main(); }	
 	namespace ReorderDatainLogFiles { void Main(); }
-	
-	
+	namespace SplitaStringinBalancedStrings { void Main(); }
 };
