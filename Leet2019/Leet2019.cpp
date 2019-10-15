@@ -15,23 +15,16 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/14/2019
-	//Solution2019::ReverseWordsinaString::Main();
-	//Solution2019::OneEditDistance::Main();
-	//Solution2019::WordLadder::Main();
-	//Solution2019::WordLadderII::Main();
-	//Solution2019::PrimeArrangements::Main();
-	
-	//Solution2019::SumofLeftLeaves::Main();
-	//Solution2019::MinimumMovestoEqualArrayElements::Main();
-	//Solution2019::FindtheTownJudge::Main();
-	//Solution2019::RotateString::Main();
-	//Solution2019::RelativeRanks::Main();
-	
-
+	//10/15/2019
+	//Solution2019::LRUCache::Main();
+	//Solution2019::NumberofIslands::Main();
+	//Solution2019::MinimumWindowSubstring::Main();
+	//Solution2019::HappyNumber::Main();
+	//Solution2019::IntegertoEnglishWords::Main();
 
 	// ========================= Untackled =================================
-		//Solution2019::WordBreak::Main();
+		//Solution2019::RelativeRanks::Main();
+	//Solution2019::WordBreak::Main();
 	//Solution2019::WordBreakII::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::IPtoCIDR::Main();
@@ -70,7 +63,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TextJustification::Main();
 	//Solution2019::SimplifyPath::Main();
 	//Solution2019::EditDistance::Main();
-	//Solution2019::MinimumWindowSubstring::Main();
 	//Solution2019::Combinations::Main();
 	//Solution2019::ScrambleString::Main();
 	//Solution2019::GrayCode::Main();
@@ -97,7 +89,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::GasStation::Main();
 	//Solution2019::Candy::Main();
 	//Solution2019::SingleNumberII::Main();
-	//Solution2019::LRUCache::Main();
 	//Solution2019::MaxPointsonaLine::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
 	//Solution2019::MinStack::Main();
@@ -137,9 +128,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RisingTemperature::Main();
 	//Solution2019::HouseRobber::Main();
 	//Solution2019::BinaryTreeRightSideView::Main();
-	//Solution2019::NumberofIslands::Main();
 	//Solution2019::BitwiseANDofNumbersRange::Main();
-	//Solution2019::HappyNumber::Main();
 	//Solution2019::CountPrimes::Main();
 	//Solution2019::IsomorphicStrings::Main();
 	//Solution2019::CourseSchedule::Main();
@@ -186,7 +175,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ClosestBinarySearchTreeValue::Main();
 	//Solution2019::EncodeandDecodeStrings::Main();
 	//Solution2019::ClosestBinarySearchTreeValueII::Main();
-	//Solution2019::IntegertoEnglishWords::Main();
 	//Solution2019::HIndex::Main();
 	//Solution2019::HIndexII::Main();
 	//Solution2019::PaintFence::Main();
@@ -1322,6 +1310,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofBoomerangs::Main();
 	//Solution2019::MaximizeSumOfArrayAfterKNegations::Main();
 	//Solution2019::PaintHouse::Main();
+
+	//10/14/2019
+	//Solution2019::ReverseWordsinaString::Main();
+	//Solution2019::OneEditDistance::Main();
+	//Solution2019::WordLadder::Main();
+	//Solution2019::WordLadderII::Main();
+	//Solution2019::PrimeArrangements::Main();	
+	//Solution2019::SumofLeftLeaves::Main();
+	//Solution2019::MinimumMovestoEqualArrayElements::Main();
+	//Solution2019::FindtheTownJudge::Main();
+	//Solution2019::RotateString::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
