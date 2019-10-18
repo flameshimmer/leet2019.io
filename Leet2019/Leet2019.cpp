@@ -16,11 +16,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/17/2019
-		//Solution2019::RemoveInvalidParentheses::Main();
-		//Solution2019::MeetingRoomsII::Main();
-		//Solution2019::GroupAnagrams::Main();
-		Solution2019::DecodeWays::Main();	
+	//10/18/2019
+	//Solution2019::PalindromePairs::Main();
+	//Solution2019::DecodeString::Main();
+	//Solution2019::LetterCombinationsofaPhoneNumber::Main();
+	//Solution2019::Permutations::Main();
+	//Solution2019::PermutationsII::Main();
+
 	// ========================= Untackled =================================		
 	//Solution2019::WordBreak::Main();
 	//Solution2019::WordBreakII::Main();
@@ -29,7 +31,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SimilarRGBColor::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
-	//Solution2019::PalindromePairs::Main();
 	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::SuperPalindromes::Main();
 	//Solution2019::LargestPalindromeProduct::Main();
@@ -41,16 +42,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ZigZagConversion::Main();
 	//Solution2019::StringtoInteger::Main();	
 	//Solution2019::RegularExpressionMatching::Main();
-	//Solution2019::LetterCombinationsofaPhoneNumber::Main();
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::LongestValidParentheses::Main();
 	//Solution2019::ValidSudoku::Main();
 	//Solution2019::SudokuSolver::Main();
 	//Solution2019::MultiplyStrings::Main();
-	//Solution2019::WildcardMatching::Main();
-	//Solution2019::Permutations::Main();
-	//Solution2019::PermutationsII::Main();
+	//Solution2019::WildcardMatching::Main();	
 	//Solution2019::Pow::Main();
 	//Solution2019::NQueens::Main();
 	//Solution2019::NQueensII::Main();
@@ -259,7 +257,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestAbsoluteFilePath::Main();
 	//Solution2019::EliminationGame::Main();
 	//Solution2019::PerfectRectangle::Main();
-	//Solution2019::DecodeString::Main();
 	//Solution2019::LongestSubstringwithAtLeastKRepeatingCharacters::Main();
 	//Solution2019::RotateFunction::Main();
 	//Solution2019::IntegerReplacement::Main();
@@ -1325,6 +1322,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::KClosestPointstoOrigin::Main();
 	//Solution2019::TextJustification::Main();
 	//Solution2019::SerializeandDeserializeBinaryTree::Main();
+
+	//10/17/2019
+	//Solution2019::RemoveInvalidParentheses::Main();
+	//Solution2019::MeetingRoomsII::Main();
+	//Solution2019::GroupAnagrams::Main();
+	//Solution2019::DecodeWays::Main();	
+
 
 	// Runtime end marker
 	clock_t end = clock();
