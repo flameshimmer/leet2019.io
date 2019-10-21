@@ -15,17 +15,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-
-	//10/19/2019
-	//Solution2019::AlienDictionary::Main();
-	//Solution2019::RegularExpressionMatching::Main();
-	//Solution2019::FindDuplicateFileinSystem::Main();
-	//Solution2019::TimeBasedKeyValueStore::Main();
-	//Solution2019::CoinChange::Main();
-
-	// ========================= Untackled =================================		
+	
+	//10/20/2019
+	//Solution2019::CherryPickup::Main();
+	//Solution2019::MinStack::Main();
 	//Solution2019::WordBreak::Main();
 	//Solution2019::WordBreakII::Main();
+	//Solution2019::FindMedianfromDataStream::Main();
+
+	// ========================= Untackled =================================		
+	
+
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::IPtoCIDR::Main();
 	//Solution2019::SimilarRGBColor::Main();
@@ -82,7 +82,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SingleNumberII::Main();
 	//Solution2019::MaxPointsonaLine::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
-	//Solution2019::MinStack::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
 	//Solution2019::ReadNCharactersGivenReadFour::Main();
 	//Solution2019::ReadNCharactersGivenReadFourIICallmultipletimes::Main();
@@ -178,7 +177,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::WordPattern::Main();
 	//Solution2019::WordPatternII::Main();
 	//Solution2019::FlipGameII::Main();
-	//Solution2019::FindMedianfromDataStream::Main();
 	//Solution2019::BestMeetingPoint::Main();
 	//Solution2019::BinaryTreeLongestConsecutiveSequence::Main();
 	//Solution2019::BullsandCows::Main();
@@ -510,7 +508,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MonotoneIncreasingDigits::Main();
 	//Solution2019::DailyTemperatures::Main();
 	//Solution2019::DeleteandEarn::Main();
-	//Solution2019::CherryPickup::Main();
 	//Solution2019::ClosestLeafinaBinaryTree::Main();
 	//Solution2019::NetworkDelayTime::Main();
 	//Solution2019::FindSmallestLetterGreaterThanTarget::Main();
@@ -1332,6 +1329,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Permutations::Main();
 	//Solution2019::PermutationsII::Main();
 
+	//10/19/2019
+	//Solution2019::AlienDictionary::Main();
+	//Solution2019::RegularExpressionMatching::Main();
+	//Solution2019::FindDuplicateFileinSystem::Main();
+	//Solution2019::TimeBasedKeyValueStore::Main();
+	//Solution2019::CoinChange::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
