@@ -23,12 +23,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::WordBreakII::Main();
 	//Solution2019::FindMedianfromDataStream::Main();
 
+		//Solution2019::SimilarRGBColor::Main();
 	// ========================= Untackled =================================		
 	
 
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::IPtoCIDR::Main();
-	//Solution2019::SimilarRGBColor::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
 	//Solution2019::PrimePalindrome::Main();

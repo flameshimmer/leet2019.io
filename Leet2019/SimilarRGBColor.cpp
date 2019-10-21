@@ -28,6 +28,20 @@ namespace Solution2019
 {
 	namespace SimilarRGBColor
 	{
+		string similarRGB(string color) {
+			for (int i = 1; i < 7; i += 2) {
+				int value = stoi(color.substr(i, 2), nullptr, 16);
+
+				int index = value / 17; // [ 0x00(0) , 0x11(17), 0x22(34),  0x33(51), ........., 0xff(255) ]
+				int remainder = value % 17;
+				if (remainder > 17 / 2) {
+					index++;
+				}
+				color[i] = index > 9 ? index - 10 + 'a' : index + '0';
+				color[i + 1] = color[i];
+			}
+			return color;
+		}
 		void Main() {
 			string test = "tst test test";
 			print(test);

@@ -58,6 +58,52 @@ namespace Solution2019
 {
 	namespace IPtoCIDR
 	{
+		int ToIp(string& ip) {
+			stringstream s(ip);
+			int a, b, c, d;
+			char ch;
+			s >> a >> ch >> b >> ch >> c >> ch >> d;
+			return (a << 24) | (b << 16) | (c << 8) | d;
+		}
+
+		int GetTrailingZero(int ip) {
+			if (ip == 0) return sizeof(int);
+			int count = 0;
+			while ((ip & 1) == 0) {
+				count++;
+				ip >>= 1;
+			}
+			return count;
+		}
+
+		void Deal(int& startIp, int& number, vector<string>& result) {
+			int trailingZeros = GetTrailingZero(startIp);
+			int covered = 1 << trailingZeros;
+			while (covered > number) {
+				covered >>= 1;
+				trailingZeros--;
+			}
+
+			char buf[200];
+			sprintf(buf, "%d.%d.%d.%d/%d",
+				(startIp >> 24) & 0xFF,
+				(startIp >> 16) & 0xFF,
+				(startIp >> 8) & 0xFF,
+				startIp & 0xFF,
+				32 - trailingZeros);
+			result.push_back(buf);
+			number -= covered;
+			startIp += covered;
+		}
+
+		vector<string> ipToCIDR(string ip, int n) {
+			int startIp = ToIp(ip);
+			vector<string> result;
+			while (n) {
+				Deal(startIp, n, result);
+			}
+			return result;
+		}
 		void Main() {
 			string test = "tst test test";
 			print(test);

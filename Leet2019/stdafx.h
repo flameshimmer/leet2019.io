@@ -32,6 +32,8 @@
 #include <stdint.h>
 #include <climits>
 #include <bitset>
+#include <sstream>
+#include <numeric>
 using namespace std;
 
 // Template helper functions
