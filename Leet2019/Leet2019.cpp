@@ -16,19 +16,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/20/2019
-	//Solution2019::CherryPickup::Main();
-	//Solution2019::MinStack::Main();
-	//Solution2019::WordBreak::Main();
-	//Solution2019::WordBreakII::Main();
-	//Solution2019::FindMedianfromDataStream::Main();
+	//10/21/2019
+	//Solution2019::TheSkylineProblem::Main();
+	//Solution2019::MinimumTimeDifference::Main();
+	//Solution2019::FriendCircles::Main();
+	//Solution2019::ReconstructItinerary::Main();
 
-		//Solution2019::SimilarRGBColor::Main();
 	// ========================= Untackled =================================		
-	
-
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
-	//Solution2019::IPtoCIDR::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
 	//Solution2019::PrimePalindrome::Main();
@@ -128,7 +123,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HouseRobberII::Main();	
 	//Solution2019::KthLargestElementinanArray::Main();
 	//Solution2019::CombinationSumIII::Main();
-	//Solution2019::TheSkylineProblem::Main();
 	//Solution2019::MaximalSquare::Main();
 	//Solution2019::CountCompleteTreeNodes::Main();
 	//Solution2019::RectangleArea::Main();
@@ -208,7 +202,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestIncreasingPathinaMatrix::Main();
 	//Solution2019::PatchingArray::Main();
 	//Solution2019::VerifyPreorderSerializationofaBinaryTree::Main();
-	//Solution2019::ReconstructItinerary::Main();
 	//Solution2019::LargestBSTSubtree::Main();
 	//Solution2019::IncreasingTripletSubsequence::Main();
 	//Solution2019::SelfCrossing::Main();
@@ -364,14 +357,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EncodeandDecodeTinyURL::Main();
 	//Solution2019::ConstructBinaryTreefromString::Main();
 	//Solution2019::ComplexNumberMultiplication::Main();
-	//Solution2019::MinimumTimeDifference::Main();
 	//Solution2019::SingleElementinaSortedArray::Main();
 	//Solution2019::ZeroOneMatrix::Main();
 	//Solution2019::DiameterofBinaryTree::Main();
 	//Solution2019::OutputContestMatches::Main();
 	//Solution2019::BoundaryofBinaryTree::Main();
 	//Solution2019::RemoveBoxes::Main();
-	//Solution2019::FriendCircles::Main();
 	//Solution2019::BinaryTreeLongestConsecutiveSequenceII::Main();
 	//Solution2019::GamePlayAnalysisIV::Main();
 	//Solution2019::StudentAttendanceRecordI::Main();
@@ -1335,6 +1326,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FindDuplicateFileinSystem::Main();
 	//Solution2019::TimeBasedKeyValueStore::Main();
 	//Solution2019::CoinChange::Main();
+
+	//10/20/2019
+	//Solution2019::CherryPickup::Main();
+	//Solution2019::MinStack::Main();
+	//Solution2019::WordBreak::Main();
+	//Solution2019::WordBreakII::Main();
+	//Solution2019::FindMedianfromDataStream::Main();
+	//Solution2019::SimilarRGBColor::Main();
+	//Solution2019::IPtoCIDR::Main();
 
 	// Runtime end marker
 	clock_t end = clock();

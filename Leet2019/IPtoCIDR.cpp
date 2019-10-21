@@ -85,7 +85,7 @@ namespace Solution2019
 			}
 
 			char buf[200];
-			sprintf(buf, "%d.%d.%d.%d/%d",
+			sprintf_s(buf, "%d.%d.%d.%d/%d",
 				(startIp >> 24) & 0xFF,
 				(startIp >> 16) & 0xFF,
 				(startIp >> 8) & 0xFF,
