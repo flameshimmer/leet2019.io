@@ -21,6 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumTimeDifference::Main();
 	//Solution2019::FriendCircles::Main();
 	//Solution2019::ReconstructItinerary::Main();
+	Solution2019::MaximalSquare::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -123,7 +124,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HouseRobberII::Main();	
 	//Solution2019::KthLargestElementinanArray::Main();
 	//Solution2019::CombinationSumIII::Main();
-	//Solution2019::MaximalSquare::Main();
 	//Solution2019::CountCompleteTreeNodes::Main();
 	//Solution2019::RectangleArea::Main();
 	//Solution2019::BasicCalculator::Main();
