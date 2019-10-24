@@ -15,13 +15,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-
-	//10/23/2019
-	//Solution2019::LongestStringChain::Main();
-	//Solution2019::DesignSearchAutocompleteSystem::Main();
-	//Solution2019::BinaryTreeMaximumPathSum::Main();
-	//Solution2019::ZigZagConversion::Main();
-	//Solution2019::SerializeandDeserializeBST::Main();
+	
+	//10/24/2019
+	//Solution2019::EncodeandDecodeTinyURL::Main();
+	//Solution2019::BasicCalculator::Main();
+	//Solution2019::BasicCalculatorII::Main();
+	//Solution2019::TopKFrequentElements::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -121,9 +120,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CombinationSumIII::Main();
 	//Solution2019::CountCompleteTreeNodes::Main();
 	//Solution2019::RectangleArea::Main();
-	//Solution2019::BasicCalculator::Main();
 	//Solution2019::ImplementStackusingQueues::Main();
-	//Solution2019::BasicCalculatorII::Main();
 	//Solution2019::KthSmallestElementinaBST::Main();
 	//Solution2019::PowerofTwo::Main();
 	//Solution2019::ImplementQueueusingStacks::Main();
@@ -206,7 +203,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PowerofFour::Main();
 	//Solution2019::IntegerBreak::Main();
 	//Solution2019::ReverseVowelsofaString::Main();
-	//Solution2019::TopKFrequentElements::Main();
 	//Solution2019::DesignTicTacToe::Main();
 	//Solution2019::AndroidUnlockPatterns::Main();
 	//Solution2019::DataStreamasDisjointIntervals::Main();
@@ -346,7 +342,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RandomPickwithWeight::Main();
 	//Solution2019::Minesweeper::Main();
 	//Solution2019::GamePlayAnalysisIII::Main();
-	//Solution2019::EncodeandDecodeTinyURL::Main();
 	//Solution2019::ConstructBinaryTreefromString::Main();
 	//Solution2019::ComplexNumberMultiplication::Main();
 	//Solution2019::SingleElementinaSortedArray::Main();
@@ -1339,6 +1334,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EditDistance::Main();
 	//Solution2019::LongestValidParentheses::Main();
 	//Solution2019::KthLargestElementinanArray::Main();
+
+	//10/23/2019
+	//Solution2019::LongestStringChain::Main();
+	//Solution2019::DesignSearchAutocompleteSystem::Main();
+	//Solution2019::BinaryTreeMaximumPathSum::Main();
+	//Solution2019::ZigZagConversion::Main();
+	//Solution2019::SerializeandDeserializeBST::Main();
 
 	// Runtime end marker
 	clock_t end = clock();

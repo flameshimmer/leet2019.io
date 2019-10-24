@@ -34,6 +34,8 @@
 #include <bitset>
 #include <sstream>
 #include <numeric>
+#include <random> // for random_device
+
 using namespace std;
 
 // Template helper functions
