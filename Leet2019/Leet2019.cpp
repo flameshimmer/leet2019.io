@@ -16,12 +16,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//10/22/2019
-	//Solution2019::NestedListWeightSumII::Main();
-	//Solution2019::BurstBalloons::Main();
-	//Solution2019::EditDistance::Main();
-	//Solution2019::LongestValidParentheses::Main();
-	//Solution2019::KthLargestElementinanArray::Main();
+	//10/23/2019
+	//Solution2019::LongestStringChain::Main();
+	//Solution2019::DesignSearchAutocompleteSystem::Main();
+	//Solution2019::BinaryTreeMaximumPathSum::Main();
+	//Solution2019::ZigZagConversion::Main();
+	//Solution2019::SerializeandDeserializeBST::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -35,7 +35,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PalindromePermutationII::Main();
 	//Solution2019::PalindromePartitioning::Main();
 	//Solution2019::PalindromePartitioningII::Main();
-	//Solution2019::ZigZagConversion::Main();
 	//Solution2019::StringtoInteger::Main();	
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
@@ -66,8 +65,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FlattenBinaryTreetoLinkedList::Main();
 	//Solution2019::DistinctSubsequences::Main();
 	//Solution2019::PopulatingNextRightPointersinEachNode::Main();
-	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();
-	//Solution2019::BinaryTreeMaximumPathSum::Main();	
+	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();	
 	//Solution2019::SumRoottoLeafNumbers::Main();
 	//Solution2019::SurroundedRegions::Main();
 	//Solution2019::CloneGraph::Main();
@@ -282,7 +280,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ArrangingCoins::Main();
 	//Solution2019::SequenceReconstruction::Main();	
 	//Solution2019::ArithmeticSlicesIISubsequence::Main();
-	//Solution2019::SerializeandDeserializeBST::Main();
 	//Solution2019::DeleteNodeinaBST::Main();
 	//Solution2019::SortCharactersByFrequency::Main();
 	//Solution2019::MinimumNumberofArrowstoBurstBalloons::Main();
@@ -433,7 +430,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DecodeWaysII::Main();
 	//Solution2019::SolvetheEquation::Main();
 	//Solution2019::DesignCircularDeque::Main();
-	//Solution2019::DesignSearchAutocompleteSystem::Main();
 	//Solution2019::SetMismatch::Main();
 	//Solution2019::MaximumLengthofPairChain::Main();
 	//Solution2019::PalindromicSubstrings::Main();
@@ -694,7 +690,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PartitionArrayforMaximumSum::Main();
 	//Solution2019::LongestDuplicateSubstring::Main();
 	//Solution2019::CustomersWhoBoughtAllProducts::Main();
-	//Solution2019::LongestStringChain::Main();
 	//Solution2019::LastStoneWeightII::Main();
 	//Solution2019::ActorsandDirectorsWhoCooperatedAtLeastThreeTimes::Main();
 	//Solution2019::DistantBarcodes::Main();
@@ -1337,6 +1332,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FriendCircles::Main();
 	//Solution2019::ReconstructItinerary::Main();
 	//Solution2019::MaximalSquare::Main();
+
+	//10/22/2019
+	//Solution2019::NestedListWeightSumII::Main();
+	//Solution2019::BurstBalloons::Main();
+	//Solution2019::EditDistance::Main();
+	//Solution2019::LongestValidParentheses::Main();
+	//Solution2019::KthLargestElementinanArray::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
