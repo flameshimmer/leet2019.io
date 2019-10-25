@@ -3530,5 +3530,68 @@
     <ClCompile Include="ZumaGame.cpp">
       <Filter>Solution2019</Filter>
     </ClCompile>
+    <ClCompile Include="RemoveZeroSumConsecutiveNodesfromLinkedList.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DayoftheWeek.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CompareStringsbyFrequencyoftheSmallestCharacter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DistanceBetweenBusStops.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="DietPlanPerformance.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SingleRowKeyboard.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CountSubstringswithOnlyOneDistinctLetter.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseStringIII.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumAbsoluteDifference.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MaximumNumberofBalloons.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="UniqueNumerofOccurrence.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="HowManyApplesCanYouPutintotheBasket.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SmallestStringWithSwaps.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="GetEqualSubstringsWithinBudget.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaywithChips.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="IntersectionofThreeSortedArrays.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="CanMakePalindromefromSubstring.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="InvalidTransactions.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="ReorderDatainLogFiles.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="SplitaStringinBalancedStrings.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="PrimeArrangements.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -197,6 +197,7 @@
     <ClCompile Include="Candy.cpp" />
     <ClCompile Include="CandyCrush.cpp" />
     <ClCompile Include="CanIWin.cpp" />
+    <ClCompile Include="CanMakePalindromefromSubstring.cpp" />
     <ClCompile Include="CanPlaceFlowers.cpp" />
     <ClCompile Include="CapacityToShipPackagesWithinDDays.cpp" />
     <ClCompile Include="CardFlippingGame.cpp" />
@@ -228,6 +229,7 @@
     <ClCompile Include="CombinationSumIII.cpp" />
     <ClCompile Include="CombinationSumIV.cpp" />
     <ClCompile Include="CombineTwoTables.cpp" />
+    <ClCompile Include="CompareStringsbyFrequencyoftheSmallestCharacter.cpp" />
     <ClCompile Include="CompareVersionNumbers.cpp" />
     <ClCompile Include="ComplementofBaseOneZeroInteger.cpp" />
     <ClCompile Include="CompleteBinaryTreeInserter.cpp" />
@@ -273,6 +275,7 @@
     <ClCompile Include="CountofSmallerNumbersAfterSelf.cpp" />
     <ClCompile Include="CountPrimes.cpp" />
     <ClCompile Include="CountStudentNumberinDepartments.cpp" />
+    <ClCompile Include="CountSubstringswithOnlyOneDistinctLetter.cpp" />
     <ClCompile Include="CountTheRepetitions.cpp" />
     <ClCompile Include="CountUnivalueSubtrees.cpp" />
     <ClCompile Include="CouplesHoldingHands.cpp" />
@@ -289,6 +292,7 @@
     <ClCompile Include="CutOffTreesforGolfEvent.cpp" />
     <ClCompile Include="DailyTemperatures.cpp" />
     <ClCompile Include="DataStreamasDisjointIntervals.cpp" />
+    <ClCompile Include="DayoftheWeek.cpp" />
     <ClCompile Include="DayoftheYear.cpp" />
     <ClCompile Include="DecodedStringatIndex.cpp" />
     <ClCompile Include="DecodeString.cpp" />
@@ -326,8 +330,10 @@
     <ClCompile Include="DetectCapital.cpp" />
     <ClCompile Include="DiagonalTraverse.cpp" />
     <ClCompile Include="DiameterofBinaryTree.cpp" />
+    <ClCompile Include="DietPlanPerformance.cpp" />
     <ClCompile Include="DifferentWaystoAddParentheses.cpp" />
     <ClCompile Include="DigitCountinRange.cpp" />
+    <ClCompile Include="DistanceBetweenBusStops.cpp" />
     <ClCompile Include="DistantBarcodes.cpp" />
     <ClCompile Include="DistinctSubsequences.cpp" />
     <ClCompile Include="DistinctSubsequencesII.cpp" />
@@ -451,6 +457,7 @@
     <ClCompile Include="GeneralizedAbbreviation.cpp" />
     <ClCompile Include="GenerateParentheses.cpp" />
     <ClCompile Include="GenerateRandomPointinaCircle.cpp" />
+    <ClCompile Include="GetEqualSubstringsWithinBudget.cpp" />
     <ClCompile Include="GetHighestAnswerRateQuestion.cpp" />
     <ClCompile Include="GlobalandLocalInversions.cpp" />
     <ClCompile Include="GoatLatin.cpp" />
@@ -478,6 +485,7 @@
     <ClCompile Include="HouseRobber.cpp" />
     <ClCompile Include="HouseRobberII.cpp" />
     <ClCompile Include="HouseRobberIII.cpp" />
+    <ClCompile Include="HowManyApplesCanYouPutintotheBasket.cpp" />
     <ClCompile Include="HumanTrafficofStadium.cpp" />
     <ClCompile Include="ImageOverlap.cpp" />
     <ClCompile Include="ImageSmoother.cpp" />
@@ -505,10 +513,12 @@
     <ClCompile Include="IntegertoEnglishWords.cpp" />
     <ClCompile Include="IntegertoRoman.cpp" />
     <ClCompile Include="InterleavingString.cpp" />
+    <ClCompile Include="IntersectionofThreeSortedArrays.cpp" />
     <ClCompile Include="IntersectionofTwoArrays.cpp" />
     <ClCompile Include="IntersectionofTwoArraysII.cpp" />
     <ClCompile Include="IntersectionofTwoLinkedLists.cpp" />
     <ClCompile Include="IntervalListIntersections.cpp" />
+    <ClCompile Include="InvalidTransactions.cpp" />
     <ClCompile Include="InvertBinaryTree.cpp" />
     <ClCompile Include="InvestmentsinTwoZeroOneSix.cpp" />
     <ClCompile Include="IPO.cpp" />
@@ -651,6 +661,7 @@
     <ClCompile Include="MaximumLengthofPairChain.cpp" />
     <ClCompile Include="MaximumLengthofRepeatedSubarray.cpp" />
     <ClCompile Include="MaximumNestingDepthofTwoValidParenthesesStrings.cpp" />
+    <ClCompile Include="MaximumNumberofBalloons.cpp" />
     <ClCompile Include="MaximumofAbsoluteValueExpression.cpp" />
     <ClCompile Include="MaximumProductofThreeNumbers.cpp" />
     <ClCompile Include="MaximumProductofWordLengths.cpp" />
@@ -685,6 +696,7 @@
     <ClCompile Include="MinimizeMalwareSpreadII.cpp" />
     <ClCompile Include="MinimizeMaxDistancetoGasStation.cpp" />
     <ClCompile Include="MinimizeRoundingErrortoMeetTarget.cpp" />
+    <ClCompile Include="MinimumAbsoluteDifference.cpp" />
     <ClCompile Include="MinimumAbsoluteDifferenceinBST.cpp" />
     <ClCompile Include="MinimumAddtoMakeParenthesesValid.cpp" />
     <ClCompile Include="MinimumAreaRectangle.cpp" />
@@ -849,6 +861,7 @@
     <ClCompile Include="Permutations.cpp" />
     <ClCompile Include="PermutationSequence.cpp" />
     <ClCompile Include="PermutationsII.cpp" />
+    <ClCompile Include="PlaywithChips.cpp" />
     <ClCompile Include="PlusOne.cpp" />
     <ClCompile Include="PlusOneLinkedList.cpp" />
     <ClCompile Include="PoorPigs.cpp" />
@@ -866,6 +879,7 @@
     <ClCompile Include="PrefixandSuffixSearch.cpp" />
     <ClCompile Include="PreimageSizeofFactorialZeroesFunction.cpp" />
     <ClCompile Include="PreviousPermutationWithOneSwap.cpp" />
+    <ClCompile Include="PrimeArrangements.cpp" />
     <ClCompile Include="PrimeNumberofSetBitsinBinaryRepresentation.cpp" />
     <ClCompile Include="PrimePalindrome.cpp" />
     <ClCompile Include="PrintBinaryTree.cpp" />
@@ -938,6 +952,8 @@
     <ClCompile Include="RemoveNthNodeFromEndofList.cpp" />
     <ClCompile Include="RemoveOutermostParentheses.cpp" />
     <ClCompile Include="RemoveVowelsfromaString.cpp" />
+    <ClCompile Include="RemoveZeroSumConsecutiveNodesfromLinkedList.cpp" />
+    <ClCompile Include="ReorderDatainLogFiles.cpp" />
     <ClCompile Include="ReorderedPowerofTwo.cpp" />
     <ClCompile Include="ReorderList.cpp" />
     <ClCompile Include="ReorderLogFiles.cpp" />
@@ -960,6 +976,7 @@
     <ClCompile Include="ReversePairs.cpp" />
     <ClCompile Include="ReverseString.cpp" />
     <ClCompile Include="ReverseStringII.cpp" />
+    <ClCompile Include="ReverseStringIII.cpp" />
     <ClCompile Include="ReverseVowelsofaString.cpp" />
     <ClCompile Include="ReverseWordsinaString.cpp" />
     <ClCompile Include="ReverseWordsinaStringII.cpp" />
@@ -1038,6 +1055,7 @@
     <ClCompile Include="SingleNumber.cpp" />
     <ClCompile Include="SingleNumberII.cpp" />
     <ClCompile Include="SingleNumberIII.cpp" />
+    <ClCompile Include="SingleRowKeyboard.cpp" />
     <ClCompile Include="SlidingPuzzle.cpp" />
     <ClCompile Include="SlidingWindowMaximum.cpp" />
     <ClCompile Include="SlidingWindowMedian.cpp" />
@@ -1049,6 +1067,7 @@
     <ClCompile Include="SmallestRectangleEnclosingBlackPixels.cpp" />
     <ClCompile Include="SmallestRotationwithHighestScore.cpp" />
     <ClCompile Include="SmallestStringStartingFromLeaf.cpp" />
+    <ClCompile Include="SmallestStringWithSwaps.cpp" />
     <ClCompile Include="SmallestSubsequenceofDistinctCharacters.cpp" />
     <ClCompile Include="SmallestSubtreewithalltheDeepestNodes.cpp" />
     <ClCompile Include="SmallestSufficientTeam.cpp" />
@@ -1073,6 +1092,7 @@
     <ClCompile Include="SplitArrayLargestSum.cpp" />
     <ClCompile Include="SplitArraywithEqualSum.cpp" />
     <ClCompile Include="SplitArrayWithSameAverage.cpp" />
+    <ClCompile Include="SplitaStringinBalancedStrings.cpp" />
     <ClCompile Include="SplitBST.cpp" />
     <ClCompile Include="SplitConcatenatedStrings.cpp" />
     <ClCompile Include="SplitLinkedListinParts.cpp" />
@@ -1190,6 +1210,7 @@
     <ClCompile Include="UniqueEmailAddresses.cpp" />
     <ClCompile Include="UniqueLetterString.cpp" />
     <ClCompile Include="UniqueMorseCodeWords.cpp" />
+    <ClCompile Include="UniqueNumerofOccurrence.cpp" />
     <ClCompile Include="UniquePaths.cpp" />
     <ClCompile Include="UniquePathsII.cpp" />
     <ClCompile Include="UniquePathsIII.cpp" />

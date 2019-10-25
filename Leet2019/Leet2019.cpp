@@ -21,6 +21,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BasicCalculator::Main();
 	//Solution2019::BasicCalculatorII::Main();
 	//Solution2019::TopKFrequentElements::Main();
+	Solution2019::NQueens::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -42,7 +43,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MultiplyStrings::Main();
 	//Solution2019::WildcardMatching::Main();	
 	//Solution2019::Pow::Main();
-	//Solution2019::NQueens::Main();
 	//Solution2019::NQueensII::Main();
 	//Solution2019::PermutationSequence::Main();
 	//Solution2019::ValidNumber::Main();
