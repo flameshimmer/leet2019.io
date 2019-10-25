@@ -16,12 +16,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/24/2019
-	//Solution2019::EncodeandDecodeTinyURL::Main();
-	//Solution2019::BasicCalculator::Main();
-	//Solution2019::BasicCalculatorII::Main();
-	//Solution2019::TopKFrequentElements::Main();
-	Solution2019::NQueens::Main();
+	//10/25/2019
+	//Solution2019::CountofSmallerNumbersAfterSelf::Main();
+	//Solution2019::AsteroidCollision::Main();
+	//Solution2019::StringtoInteger::Main();	
+	//Solution2019::FlattenNestedListIterator::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -35,7 +34,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PalindromePermutationII::Main();
 	//Solution2019::PalindromePartitioning::Main();
 	//Solution2019::PalindromePartitioningII::Main();
-	//Solution2019::StringtoInteger::Main();	
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::ValidSudoku::Main();
@@ -179,7 +177,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SparseMatrixMultiplication::Main();
 	//Solution2019::SuperUglyNumber::Main();
 	//Solution2019::BinaryTreeVerticalOrderTraversal::Main();
-	//Solution2019::CountofSmallerNumbersAfterSelf::Main();
 	//Solution2019::RemoveDuplicateLetters::Main();
 	//Solution2019::ShortestDistancefromAllBuildings::Main();
 	//Solution2019::MaximumProductofWordLengths::Main();
@@ -199,7 +196,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HouseRobberIII::Main();
 	//Solution2019::CountingBits::Main();
 	//Solution2019::LongestSubstringwithAtMostKDistinctCharacters::Main();
-	//Solution2019::FlattenNestedListIterator::Main();
 	//Solution2019::PowerofFour::Main();
 	//Solution2019::IntegerBreak::Main();
 	//Solution2019::ReverseVowelsofaString::Main();
@@ -479,7 +475,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumWindowSubsequence::Main();
 	//Solution2019::CountDifferentPalindromicSubsequences::Main();
 	//Solution2019::SentenceSimilarity::Main();
-	//Solution2019::AsteroidCollision::Main();
 	//Solution2019::ParseLispExpression::Main();
 	//Solution2019::SentenceSimilarityII::Main();
 	//Solution2019::MonotoneIncreasingDigits::Main();
@@ -1341,6 +1336,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryTreeMaximumPathSum::Main();
 	//Solution2019::ZigZagConversion::Main();
 	//Solution2019::SerializeandDeserializeBST::Main();
+
+	//10/24/2019
+	//Solution2019::EncodeandDecodeTinyURL::Main();
+	//Solution2019::BasicCalculator::Main();
+	//Solution2019::BasicCalculatorII::Main();
+	//Solution2019::TopKFrequentElements::Main();
+	//Solution2019::NQueens::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
