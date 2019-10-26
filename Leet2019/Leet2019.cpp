@@ -16,11 +16,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/25/2019
-	//Solution2019::CountofSmallerNumbersAfterSelf::Main();
-	//Solution2019::AsteroidCollision::Main();
-	//Solution2019::StringtoInteger::Main();	
-	//Solution2019::FlattenNestedListIterator::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -52,7 +47,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UniqueBinarySearchTreesII::Main();
 	//Solution2019::UniqueBinarySearchTrees::Main();
 	//Solution2019::InterleavingString::Main();
-	//Solution2019::ValidateBinarySearchTree::Main();
 	//Solution2019::RecoverBinarySearchTree::Main();	
 	//Solution2019::BinaryTreeZigzagLevelOrderTraversal::Main();
 	//Solution2019::BalancedBinaryTree::Main();
@@ -123,8 +117,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PowerofTwo::Main();
 	//Solution2019::ImplementQueueusingStacks::Main();
 	//Solution2019::NumberofDigitOne::Main();
-	//Solution2019::LowestCommonAncestorofaBinarySearchTree::Main();
-	//Solution2019::LowestCommonAncestorofaBinaryTree::Main();
 	//Solution2019::SlidingWindowMaximum::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
 	//Solution2019::ShortestWordDistance::Main();
@@ -243,7 +235,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::QueueReconstructionbyHeight::Main();
 	//Solution2019::TrappingRainWaterII::Main();
 	//Solution2019::ValidWordAbbreviation::Main();
-	//Solution2019::SplitArrayLargestSum::Main();
 	//Solution2019::MinimumUniqueWordAbbreviation::Main();
 	//Solution2019::ArithmeticSlices::Main();
 	//Solution2019::PartitionEqualSubsetSum::Main();
@@ -280,7 +271,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::OneThreeTwoPattern::Main();
 	//Solution2019::PoorPigs::Main();
 	//Solution2019::RepeatedSubstringPattern::Main();
-	//Solution2019::LFUCache::Main();
 	//Solution2019::MinimumMovestoEqualArrayElementsII::Main();
 	//Solution2019::CanIWin::Main();
 	//Solution2019::OptimalAccountBalancing::Main();
@@ -732,7 +722,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BuildingHTwoO::Main();
 	//Solution2019::MaximumAverageSubtree::Main();
 	//Solution2019::DivideArrayIntoIncreasingSequences::Main();
-	//Solution2019::LowestCommonAncestorofDeepestLeaves::Main();
 	//Solution2019::LongestWellPerformingInterval::Main();
 	//Solution2019::SmallestSufficientTeam::Main();
 	//Solution2019::ActiveBusinesses::Main();
@@ -1343,6 +1332,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BasicCalculatorII::Main();
 	//Solution2019::TopKFrequentElements::Main();
 	//Solution2019::NQueens::Main();
+
+	//10/25/2019
+	//Solution2019::CountofSmallerNumbersAfterSelf::Main();
+	//Solution2019::AsteroidCollision::Main();
+	//Solution2019::StringtoInteger::Main();	
+	//Solution2019::FlattenNestedListIterator::Main();
+	//Solution2019::LFUCache::Main();
+
+	//10/26/2019
+	//Solution2019::LowestCommonAncestorofaBinaryTree::Main();	
+	//Solution2019::LowestCommonAncestorofaBinarySearchTree::Main();
+	//Solution2019::LowestCommonAncestorofDeepestLeaves::Main();
+	//Solution2019::SplitArrayLargestSum::Main();
+	//Solution2019::ValidateBinarySearchTree::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
