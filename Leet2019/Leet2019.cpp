@@ -32,7 +32,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::ValidSudoku::Main();
-	//Solution2019::SudokuSolver::Main();
 	//Solution2019::MultiplyStrings::Main();
 	//Solution2019::WildcardMatching::Main();	
 	//Solution2019::Pow::Main();
@@ -191,7 +190,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PowerofFour::Main();
 	//Solution2019::IntegerBreak::Main();
 	//Solution2019::ReverseVowelsofaString::Main();
-	//Solution2019::DesignTicTacToe::Main();
 	//Solution2019::AndroidUnlockPatterns::Main();
 	//Solution2019::DataStreamasDisjointIntervals::Main();
 	//Solution2019::DesignSnakeGame::Main();
@@ -202,7 +200,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RearrangeStringkDistanceApart::Main();
 	//Solution2019::SortTransformedArray::Main();
 	//Solution2019::BombEnemy::Main();
-	//Solution2019::DesignHitCounter::Main();
 	//Solution2019::MaxSumofRectangleNoLargerThanK::Main();
 	//Solution2019::WaterandJugProblem::Main();
 	//Solution2019::FindLeavesofBinaryTree::Main();
@@ -457,7 +454,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofDistinctIslandsII::Main();
 	//Solution2019::MinimumASCIIDeleteSumforTwoStrings::Main();
 	//Solution2019::RangeModule::Main();
-	//Solution2019::MaxStack::Main();
 	//Solution2019::LongestWordinDictionary::Main();
 	//Solution2019::AccountsMerge::Main();
 	//Solution2019::RemoveComments::Main();
@@ -633,7 +629,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TripleswithBitwiseANDEqualToZero::Main();
 	//Solution2019::MinimumCostForTickets::Main();
 	//Solution2019::StringWithoutAAAorBBB::Main();
-	//Solution2019::IntervalListIntersections::Main();
 	//Solution2019::VerticalOrderTraversalofaBinaryTree::Main();
 	//Solution2019::SmallestStringStartingFromLeaf::Main();
 	//Solution2019::SatisfiabilityofEqualityEquations::Main();
@@ -1346,6 +1341,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LowestCommonAncestorofDeepestLeaves::Main();
 	//Solution2019::SplitArrayLargestSum::Main();
 	//Solution2019::ValidateBinarySearchTree::Main();
+
+	//10/27/2019
+	//Solution2019::DesignHitCounter::Main();
+	//Solution2019::MaxStack::Main();
+	//Solution2019::DesignTicTacToe::Main();
+	//Solution2019::IntervalListIntersections::Main();
+	//Solution2019::SudokuSolver::Main();
 
 	// Runtime end marker
 	clock_t end = clock();
