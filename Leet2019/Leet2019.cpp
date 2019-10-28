@@ -16,6 +16,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
+	//10/28/2019
+	//Solution2019::ConsecutiveNumbersSum::Main();
+	//Solution2019::CriticalConnectionsinaNetwork::Main();
+	//Solution2019::BeforeandAfterPuzzle::Main();
+	
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -527,7 +532,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MostProfitAssigningWork::Main();
 	//Solution2019::MakingALargeIsland::Main();
 	//Solution2019::UniqueLetterString::Main();
-	//Solution2019::ConsecutiveNumbersSum::Main();
 	//Solution2019::MaskingPersonalInformation::Main();
 	//Solution2019::FindAndReplaceinString::Main();
 	//Solution2019::SumofDistancesinTree::Main();

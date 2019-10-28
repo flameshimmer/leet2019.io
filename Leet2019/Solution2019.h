@@ -1182,4 +1182,6 @@ namespace Solution2019
 	namespace InvalidTransactions { void Main(); }	
 	namespace ReorderDatainLogFiles { void Main(); }
 	namespace SplitaStringinBalancedStrings { void Main(); }
+	namespace CriticalConnectionsinaNetwork { void Main(); }	
+	namespace BeforeandAfterPuzzle { void Main(); }
 };
