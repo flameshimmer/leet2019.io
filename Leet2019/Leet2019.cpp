@@ -16,6 +16,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
+	//10/29/2019
+	//Solution2019::ReadNCharactersGivenReadFour::Main();
+	//Solution2019::ReadNCharactersGivenReadFourIICallmultipletimes::Main();
+	//Solution2019::FractiontoRecurringDecimal::Main();	
+	//Solution2019::SlidingWindowMaximum::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -64,12 +69,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SingleNumberII::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
-	//Solution2019::ReadNCharactersGivenReadFour::Main();
-	//Solution2019::ReadNCharactersGivenReadFourIICallmultipletimes::Main();
 	//Solution2019::LongestSubstringwithAtMostTwoDistinctCharacters::Main();
 	//Solution2019::MaximumGap::Main();
 	//Solution2019::CompareVersionNumbers::Main();
-	//Solution2019::FractiontoRecurringDecimal::Main();	
 	//Solution2019::ExcelSheetColumnTitle::Main();
 	//Solution2019::TwoSumIIIDatastructuredesign::Main();
 	//Solution2019::FactorialTrailingZeroes::Main();
@@ -114,7 +116,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PowerofTwo::Main();
 	//Solution2019::ImplementQueueusingStacks::Main();
 	//Solution2019::NumberofDigitOne::Main();
-	//Solution2019::SlidingWindowMaximum::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
 	//Solution2019::ShortestWordDistance::Main();
 	//Solution2019::ShortestWordDistanceII::Main();
@@ -1353,7 +1354,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryTreeRightSideView::Main();
 	//Solution2019::MaxPointsonaLine::Main();
 
-	// Problem Ends
+	//====Problem Ends====
 
 	// Runtime end marker
 	clock_t end = clock();
