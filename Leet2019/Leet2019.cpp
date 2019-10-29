@@ -16,11 +16,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/28/2019
-	//Solution2019::ConsecutiveNumbersSum::Main();
-	//Solution2019::CriticalConnectionsinaNetwork::Main();
-	//Solution2019::BeforeandAfterPuzzle::Main();
-	
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -67,7 +62,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::GasStation::Main();
 	//Solution2019::Candy::Main();
 	//Solution2019::SingleNumberII::Main();
-	//Solution2019::MaxPointsonaLine::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
 	//Solution2019::ReadNCharactersGivenReadFour::Main();
@@ -104,7 +98,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DeleteDuplicateEmails::Main();
 	//Solution2019::RisingTemperature::Main();
 	//Solution2019::HouseRobber::Main();
-	//Solution2019::BinaryTreeRightSideView::Main();
 	//Solution2019::BitwiseANDofNumbersRange::Main();
 	//Solution2019::CountPrimes::Main();
 	//Solution2019::IsomorphicStrings::Main();
@@ -754,19 +747,19 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//================================= Completed ==========================================================
 
-	// 8/15/2019
+	//8/15/2019
 	//Solution2019::TwoSum::Main(); // using sorted array
 
-	// 8/18/2019
+	//8/18/2019
 	//Solution2019::TwoSum::Main(); //using hashmap 
 	//Solution2019::AddTwoNumbers::Main();
 	//Solution2019::AddTwoNumbersII::Main();
 	//Solution2019::ReverseLinkedList::Main();
 
-	// 8/19/2019
+	//8/19/2019
 	//Solution2019::ReverseLinkedListII::Main();
 
-	// 8/20/2019
+	//8/20/2019
 	//Solution2019::LongestSubstringWithoutRepeatingCharacters::Main();
 	//Solution2019::MedianofTwoSortedArrays::Main();???
 
@@ -1352,6 +1345,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DesignTicTacToe::Main();
 	//Solution2019::IntervalListIntersections::Main();
 	//Solution2019::SudokuSolver::Main();
+
+	//10/28/2019
+	//Solution2019::ConsecutiveNumbersSum::Main();
+	//Solution2019::CriticalConnectionsinaNetwork::Main();
+	//Solution2019::BeforeandAfterPuzzle::Main();
+	//Solution2019::BinaryTreeRightSideView::Main();
+	//Solution2019::MaxPointsonaLine::Main();
+
+	// Problem Ends
 
 	// Runtime end marker
 	clock_t end = clock();

@@ -25,20 +25,6 @@ namespace Solution2019
 	namespace CriticalConnectionsinaNetwork
 	{
 		int time;
-		vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
-			vector<vector<int>> neighbors(n, vector<int>());
-			for (auto& con : connections) {
-				neighbors[con[0]].push_back(con[1]);
-				neighbors[con[1]].push_back(con[0]);
-			}
-
-			time = 0;
-			vector<int> low(n, -1);
-			vector<vector<int>> result;
-			dfs(neighbors, 0, -1, low, result);
-			return result;
-		}
-
 		void dfs(vector<vector<int>>& neighbors, int i, int parent, vector<int>& low, vector<vector<int>>& result) {
 			time++;
 			int curt = time;
@@ -56,6 +42,19 @@ namespace Solution2019
 			}
 		}
 
+		vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
+			vector<vector<int>> neighbors(n, vector<int>());
+			for (auto& con : connections) {
+				neighbors[con[0]].push_back(con[1]);
+				neighbors[con[1]].push_back(con[0]);
+			}
+
+			time = 0;
+			vector<int> low(n, -1);
+			vector<vector<int>> result;
+			dfs(neighbors, 0, -1, low, result);
+			return result;
+		}
 		void Main() {
 			string test = "tst test test";
 			print(test);
