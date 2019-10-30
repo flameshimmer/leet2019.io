@@ -39,7 +39,7 @@ namespace Solution2019
 				dq.push_back(i);
 				if (i >= k - 1) {
 					result.push_back(nums[dq.front()]);
-				};
+				}
 			}
 			return result;
 		}
