@@ -16,13 +16,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 	
-	//10/30/2019
-	//Solution2019::PalindromicSubstrings::Main();
-	//Solution2019::BinarySearchTreeIterator::Main();
-	//Solution2019::SimplifyPath::Main();
-	//Solution2019::InterleavingString::Main();
-	//Solution2019::ValidNumber::Main();
-	Solution2019::MultiplyStrings::Main();
+
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -1355,6 +1349,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReadNCharactersGivenReadFourIICallmultipletimes::Main();
 	//Solution2019::FractiontoRecurringDecimal::Main();	
 	//Solution2019::SlidingWindowMaximum::Main();
+
+	//10/30/2019
+	//Solution2019::PalindromicSubstrings::Main();
+	//Solution2019::BinarySearchTreeIterator::Main();
+	//Solution2019::SimplifyPath::Main();
+	//Solution2019::InterleavingString::Main();
+	//Solution2019::ValidNumber::Main();
+	//Solution2019::MultiplyStrings::Main();
 
 	//====Problem Ends====
 
