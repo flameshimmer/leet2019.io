@@ -15,8 +15,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-	
 
+	//10/31/2019
+	//Solution2019::RandomPickwithWeight::Main();	
+	//Solution2019::MinimumCostTreeFromLeafValues::Main();
+	//Solution2019::EmployeeFreeTime::Main();
+	//Solution2019::WildcardMatching::Main();	
+	//Solution2019::AllOoneDataStructure::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -33,7 +38,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::ValidSudoku::Main
-	//Solution2019::WildcardMatching::Main();	
 	//Solution2019::Pow::Main();
 	//Solution2019::NQueensII::Main();
 	//Solution2019::PermutationSequence::Main();
@@ -238,7 +242,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ConstructQuadTree::Main();
 	//Solution2019::SerializeandDeserializeNaryTree::Main();
 	//Solution2019::EncodeNaryTreetoBinaryTree::Main();
-	//Solution2019::AllOoneDataStructure::Main();
 	//Solution2019::MinimumGeneticMutation::Main();
 	//Solution2019::NumberofSegmentsinaString::Main();
 	//Solution2019::NonoverlappingIntervals::Main();
@@ -312,7 +315,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestWordinDictionarythroughDeleting::Main();
 	//Solution2019::ContiguousArray::Main();
 	//Solution2019::WordAbbreviation::Main();
-	//Solution2019::RandomPickwithWeight::Main();
 	//Solution2019::Minesweeper::Main();
 	//Solution2019::GamePlayAnalysisIII::Main();
 	//Solution2019::ConstructBinaryTreefromString::Main();
@@ -467,7 +469,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PyramidTransitionMatrix::Main();
 	//Solution2019::SetIntersectionSizeAtLeastTwo::Main();
 	//Solution2019::BoldWordsinString::Main();
-	//Solution2019::EmployeeFreeTime::Main();
 	//Solution2019::SpecialBinaryString::Main();
 	//Solution2019::PartitionLabels::Main();
 	//Solution2019::LargestPlusSign::Main();
@@ -710,7 +711,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ActiveBusinesses::Main();
 	//Solution2019::UserPurchasePlatform::Main();
 	//Solution2019::ShortestPathwithAlternatingColors::Main();
-	//Solution2019::MinimumCostTreeFromLeafValues::Main();
 	//Solution2019::MaximumofAbsoluteValueExpression::Main();
 	//Solution2019::ReportedPostsII::Main();
 	//Solution2019::ConnectingCitiesWithMinimumCost::Main();
