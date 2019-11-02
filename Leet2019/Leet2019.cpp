@@ -17,6 +17,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Test::Main(); // Medium
 
 
+
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
@@ -51,7 +52,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();	
 	//Solution2019::SumRoottoLeafNumbers::Main();
 	//Solution2019::SurroundedRegions::Main();
-	//Solution2019::CloneGraph::Main();
 	//Solution2019::GasStation::Main();
 	//Solution2019::Candy::Main();
 	//Solution2019::SingleNumberII::Main();
@@ -85,12 +85,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TransposeFile::Main();
 	//Solution2019::TenthLine::Main();
 	//Solution2019::DeleteDuplicateEmails::Main();
-	//Solution2019::RisingTemperature::Main();
-	//Solution2019::HouseRobber::Main();
+	//Solution2019::RisingTemperature::Main
 	//Solution2019::BitwiseANDofNumbersRange::Main();
 	//Solution2019::CountPrimes::Main();
 	//Solution2019::IsomorphicStrings::Main();
-	//Solution2019::CourseSchedule::Main();
 	//Solution2019::ImplementTrie::Main();
 	//Solution2019::CourseScheduleII::Main();
 	//Solution2019::AddandSearchWordDatastructuredesign::Main();
@@ -423,8 +421,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RepeatedStringMatch::Main();
 	//Solution2019::LongestUnivaluePath::Main();
 	//Solution2019::KnightProbabilityinChessboard::Main();	
-	//Solution2019::StickerstoSpellWord::Main();
-	//Solution2019::TopKFrequentWords::Main();
+	//Solution2019::StickerstoSpellWord::Main
 	//Solution2019::NumberofDistinctIslands::Main();
 	//Solution2019::PartitiontoKEqualSumSubsets::Main();
 	//Solution2019::FallingSquares::Main();
@@ -445,7 +442,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ParseLispExpression::Main();
 	//Solution2019::SentenceSimilarityII::Main();
 	//Solution2019::MonotoneIncreasingDigits::Main();
-	//Solution2019::DailyTemperatures::Main();
 	//Solution2019::DeleteandEarn::Main();
 	//Solution2019::ClosestLeafinaBinaryTree::Main();
 	//Solution2019::NetworkDelayTime::Main();
@@ -1361,6 +1357,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Pow::Main();
 	//Solution2019::BasicCalculatorIII::Main();
 
+	//11/2/2019
+	//Solution2019::CourseSchedule::Main();
+	//Solution2019::HouseRobber::Main();
+	//Solution2019::TopKFrequentWords::Main();
+	//Solution2019::CloneGraph::Main();
+	//Solution2019::DailyTemperatures::Main();
 
 	//====Problem Ends====
 

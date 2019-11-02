@@ -14,5 +14,5 @@ DOSKEY ga=git add *
 DOSKEY gc=git commit -m $*
 DOSKEY gp=git push
 DOSKEY open=start $*
-DOSKEY addall=git add *.cpp && git add *.h
+DOSKEY addall=git add *.cpp && git add *.h && git add *.html && git add *.pl
 DOSKEY commit=git commit -m  $*
