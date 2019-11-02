@@ -1359,7 +1359,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ConvertBinarySearchTreetoSortedDoublyLinkedList::Main();
 	//Solution2019::FindAllAnagramsinaString::Main();
 	//Solution2019::Pow::Main();
-	Solution2019::BasicCalculatorIII::Main();
+	//Solution2019::BasicCalculatorIII::Main();
+
 
 	//====Problem Ends====
 

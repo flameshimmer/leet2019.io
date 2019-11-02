@@ -28,6 +28,8 @@ my $content = '<!doctype html>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="./web/index.css" />
 </head>
 <body>
 <h1>Ning\'s Studdy Page</h1>
@@ -58,13 +60,26 @@ for my $line (@lines) {
 	}
 	elsif ($line =~ m/Problem Ends/) {
 		$start = 0;
+		if (scalar @daily > 0) {
+			$content = $content . "\n<h2>$date<h2>\n\t<ul>\n";
+			for my $p (@daily) {
+				if ($p =~ m/.*::(.*)::Main/) {
+					my $pn = $1;
+					my $url = 'https://github.com/flameshimmer/leet2019/blob/master/Leet2019/' . $pn . '.cpp'; 
+					$content = $content . "\t\t<li><a href=\"$url\">$pn</a></li>\n";
+				}else {
+					print "wtf - $p\n";
+				}
+			}
+			$content = $content . "\t</ul>";
+		}		
 	}
 	elsif ($start == 1 && $line !~ m/^\s*$/) {
 		push(@daily, $line);
 	}
 }
-$content = $content . "</body></html>\n";
+$content = $content . "\n</body>\n</html>\n";
 
-open OUT, ">webpage.html" or die;
+open OUT, ">index.html" or die;
 print OUT $content;
 close OUT;
