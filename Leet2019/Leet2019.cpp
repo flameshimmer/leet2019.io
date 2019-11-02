@@ -16,12 +16,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//10/31/2019
-	//Solution2019::RandomPickwithWeight::Main();	
-	//Solution2019::MinimumCostTreeFromLeafValues::Main();
-	//Solution2019::EmployeeFreeTime::Main();
-	//Solution2019::WildcardMatching::Main();	
-	//Solution2019::AllOoneDataStructure::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -38,7 +32,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::ValidSudoku::Main
-	//Solution2019::Pow::Main();
 	//Solution2019::NQueensII::Main();
 	//Solution2019::PermutationSequence::Main();
 	//Solution2019::Combinations::Main();
@@ -48,7 +41,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UniqueBinarySearchTreesII::Main();
 	//Solution2019::UniqueBinarySearchTrees::Main();
 	//Solution2019::RecoverBinarySearchTree::Main();	
-	//Solution2019::BinaryTreeZigzagLevelOrderTraversal::Main();
 	//Solution2019::BalancedBinaryTree::Main();
 	//Solution2019::MinimumDepthofBinaryTree::Main();
 	//Solution2019::PathSum::Main();
@@ -238,7 +230,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReconstructOriginalDigitsfromEnglish::Main();
 	//Solution2019::LongestRepeatingCharacterReplacement::Main();
 	//Solution2019::WordSquares::Main();
-	//Solution2019::ConvertBinarySearchTreetoSortedDoublyLinkedList::Main();
 	//Solution2019::ConstructQuadTree::Main();
 	//Solution2019::SerializeandDeserializeNaryTree::Main();
 	//Solution2019::EncodeNaryTreetoBinaryTree::Main();
@@ -247,7 +238,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NonoverlappingIntervals::Main();
 	//Solution2019::FindRightInterval::Main();
 	//Solution2019::PathSumIII::Main();
-	//Solution2019::FindAllAnagramsinaString::Main();
 	//Solution2019::TernaryExpressionParser::Main();
 	//Solution2019::KthSmallestinLexicographicalOrder::Main();
 	//Solution2019::ArrangingCoins::Main();
@@ -475,7 +465,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CouplesHoldingHands::Main();
 	//Solution2019::ReorganizeString::Main();
 	//Solution2019::BasicCalculatorIV::Main();
-	//Solution2019::BasicCalculatorIII::Main();
 	//Solution2019::SlidingPuzzle::Main();
 	//Solution2019::MinimizeMaxDistancetoGasStation::Main();
 	//Solution2019::SplitBST::Main();
@@ -1357,6 +1346,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::InterleavingString::Main();
 	//Solution2019::ValidNumber::Main();
 	//Solution2019::MultiplyStrings::Main();
+
+	//10/31/2019
+	//Solution2019::RandomPickwithWeight::Main();	
+	//Solution2019::MinimumCostTreeFromLeafValues::Main();
+	//Solution2019::EmployeeFreeTime::Main();
+	//Solution2019::WildcardMatching::Main();
+
+	//11/1/2019
+	//Solution2019::AllOoneDataStructure::Main();
+	//Solution2019::BinaryTreeZigzagLevelOrderTraversal::Main();
+	//Solution2019::ConvertBinarySearchTreetoSortedDoublyLinkedList::Main();
+	//Solution2019::FindAllAnagramsinaString::Main();
+	//Solution2019::Pow::Main();
+	Solution2019::BasicCalculatorIII::Main();
 
 	//====Problem Ends====
 
