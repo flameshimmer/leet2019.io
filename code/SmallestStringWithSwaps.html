@@ -1,0 +1,116 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>SmallestStringWithSwaps</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>SmallestStringWithSwaps</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//You are given a string s, and an array of pairs 
+//of indices in the string pairs where 
+//pairs[i] = [a, b] indicates 2 indices(0-indexed) 
+//of the string.
+//
+//You can swap the characters at any pair of 
+//indices in the given pairs any number of times.
+//
+//Return the lexicographically smallest string 
+//that s can be changed to after using the swaps.
+//
+//Example 1:
+//Input: s = "dcab", pairs = [[0,3],[1,2]]
+//Output: "bacd"
+//Explaination: 
+//Swap s[0] and s[3], s = "bcad"
+//Swap s[1] and s[2], s = "bacd"
+//
+//Example 2:
+//Input: s = "dcab", pairs = [[0,3],[1,2],[0,2]]
+//Output: "abcd"
+//Explaination: 
+//Swap s[0] and s[3], s = "bcad"
+//Swap s[0] and s[2], s = "acbd"
+//Swap s[1] and s[2], s = "abcd"
+//
+//Example 3:
+//Input: s = "cba", pairs = [[0,1],[1,2]]
+//Output: "abc"
+//Explaination: 
+//Swap s[0] and s[1], s = "bca"
+//Swap s[1] and s[2], s = "bac"
+//Swap s[0] and s[1], s = "abc"
+//
+//Constraints:
+//1 <= s.length <= 10^5
+//0 <= pairs.length <= 10^5
+//0 <= pairs[i][0], pairs[i][1] < s.length
+//s only contains lower case English letters.
+
+namespace Solution2019
+{
+	namespace SmallestStringWithSwaps
+	{
+		int find(vector<int>& ds, int i) {
+			if (ds[i] == -1) { return i; }
+
+			int root = find(ds, ds[i]);
+			ds[i] = root;
+			return root;
+		}
+
+		string smallestStringWithSwaps(string s, vector<vector<int>>& pairs) {
+			int len = s.size();
+			vector<int> ds(len, -1);
+			vector<vector<int>> m(len);
+
+			for (vector<int> p : pairs) {
+				int i = find(ds, p[0]);
+				int j = find(ds, p[1]);
+				if (i != j) { ds[j] = i; }
+			}
+
+			for (int i = 0; i < len; i++) {
+				m[find(ds, i)].push_back(i);
+			}
+
+			for (vector<int> idGroup : m) {
+				string ss = "";
+				for (int id : idGroup) { ss += s[id]; }
+				sort(ss.begin(), ss.end());
+				for (int i = 0; i < idGroup.size(); i++) {
+					s[idGroup[i]] = ss[i];
+				}
+			}
+			return s;
+		}
+
+		void Main() {
+			string s = "dcab";
+			vector<vector<int>> pairs = { {0, 3},{1, 2} };
+			print(smallestStringWithSwaps(s, pairs));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

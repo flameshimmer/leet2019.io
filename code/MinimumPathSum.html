@@ -1,0 +1,74 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>MinimumPathSum</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>MinimumPathSum</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	﻿#include "stdafx.h"
+//Given a m x n grid filled with non-negative numbers, find 
+//a path from top left to bottom right which minimizes the sum 
+//of all numbers along its path.
+//
+//Note: You can only move either down or right at any point in time.
+//Example:
+//Input:
+//[
+//  [1,3,1],
+//  [1,5,1],
+//  [4,2,1]
+//]
+//Output: 7
+//Explanation: Because the path 1→3→1→1→1 minimizes the sum. 
+
+namespace Solution2019
+{
+	namespace MinimumPathSum
+	{
+		int minPathSum(vector<vector<int>>& grid) {
+			int rowCount = grid.size();
+			if (rowCount == 0) { return 0; }
+			int colCount = grid[0].size();
+
+			vector<int> dp(grid[0].begin(), grid[0].end());
+			for (int i = 1; i < colCount; i++) {
+				dp[i] += dp[i - 1];
+			}
+			for (int i = 1; i < rowCount; i++) {
+				dp[0] = grid[i][0];
+				for (int j = 1; j < colCount; j++) {				
+					dp[j] = grid[i][j] + min(dp[j], dp[j - 1]);
+				}
+			}
+			return dp[colCount - 1];
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

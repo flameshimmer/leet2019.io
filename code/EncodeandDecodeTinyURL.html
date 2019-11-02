@@ -1,0 +1,107 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>EncodeandDecodeTinyURL</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>EncodeandDecodeTinyURL</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+
+//Note: This is a companion problem to the System Design problem: Design TinyURL.
+//TinyURL is a URL shortening service where you enter a URL such as 
+//https://leetcode.com/problems/design-tinyurl and it returns a short URL
+//such as http://tinyurl.com/4e9iAk.
+//
+//Design the encode and decode methods for the TinyURL service. There is no 
+//restriction on how your encode/decode algorithm should work. You just need 
+//to ensure that a URL can be encoded to a tiny URL and the tiny URL can be 
+//decoded to the original URL.
+
+namespace Solution2019
+{
+	namespace EncodeandDecodeTinyURL
+	{
+		namespace Random {
+			const string charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+			map<string, string> url_code;
+			map<string, string> code_url;
+			random_device rd;
+
+			// Encodes a URL to a shortened URL.
+			string encode(string longUrl) {
+				string code;
+				if (url_code.find(longUrl) == url_code.end()) {
+					int len = charset.size();
+					for (int i = 0; i < 6; i++) {
+						code.push_back(charset[rd() % len]);
+					}
+					url_code[longUrl] = code;
+					code_url[code] = longUrl;
+				}
+				else {
+					code = url_code[longUrl];
+				}
+				return "http://tinyurl.com/" + code;
+			}
+
+			// Decodes a shortened URL to its original URL.
+			string decode(string shortUrl) {
+				if (shortUrl.size() != 25 || !code_url.count(shortUrl.substr(19, 6))) { return ""; }
+				return code_url[shortUrl.substr(19, 6)];
+			}
+		}
+
+		namespace Base64 {
+			uint64_t id;
+			unordered_map<string, string>map;
+			string charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-";
+
+			// Encodes a URL to a shortened URL.
+			string encode(string longUrl) {
+				string code;
+				id++;
+				uint64_t newId = id;
+				while (newId) {
+					code += charset[newId % 64];
+					newId >>= 6;
+				}
+				map[code] = longUrl;
+				return code;
+			}
+
+			// Decodes a shortened URL to its original URL.
+			string decode(string shortUrl) {
+				return map[shortUrl];
+			}
+		}
+
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

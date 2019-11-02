@@ -1,0 +1,69 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>MeetingRooms</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>MeetingRooms</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array of meeting time intervals consisting of 
+//start and end times [[s1,e1],[s2,e2],...] (si < ei), 
+//determine if a person could attend all meetings.
+//
+//Example 1:
+//Input: [[0,30],[5,10],[15,20]]
+//Output: false
+//
+//Example 2:
+//Input: [[7,10],[2,4]]
+//Output: true
+//
+//NOTE: input types have been changed on April 15, 2019. 
+//Please reset to default code definition to get new method signature.
+namespace Solution2019
+{
+	namespace MeetingRooms
+	{
+		bool canAttendMeetings(vector<vector<int>>& intervals) {
+			auto comp = [](vector<int>& a, vector<int>& b) {
+				if (a[0] == b[0]) { return a[1] < b[1]; }
+				return a[0] < b[0];
+			};
+
+			sort(intervals.begin(), intervals.end(), comp);
+
+			for (int i = 1; i < intervals.size(); i++) {
+				if (intervals[i - 1][1] > intervals[i][0]) { return false; }
+			}
+			return true;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

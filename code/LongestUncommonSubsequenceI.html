@@ -1,0 +1,74 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>LongestUncommonSubsequenceI</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>LongestUncommonSubsequenceI</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a group of two strings, you need to find the longest
+//uncommon subsequence of this group of two strings. The 
+//longest uncommon subsequence is defined as the longest 
+//subsequence of one of these strings and this subsequence 
+//should not be any subsequence of the other strings.
+//
+//A subsequence is a sequence that can be derived from one 
+//sequence by deleting some characters without changing the 
+//order of the remaining elements. Trivially, any string is 
+//a subsequence of itself and an empty string is a subsequence
+//of any string.
+//
+//The input will be two strings, and the output needs to be 
+//the length of the longest uncommon subsequence. If the 
+//longest uncommon subsequence doesn't exist, return -1.
+//
+//Example 1:
+//Input: "aba", "cdc"
+//Output: 3
+//Explanation: The longest uncommon subsequence is "aba" (or "cdc"), 
+//because "aba" is a subsequence of "aba", 
+//but not a subsequence of any other strings in the group of 
+//two strings. 
+//
+//Note:
+//Both strings' lengths will not exceed 100.
+//Only letters from a ~ z will appear in input strings.
+
+namespace Solution2019
+{
+	namespace LongestUncommonSubsequenceI
+	{
+		int findLUSlength(string a, string b) {
+			if (a == b) { return -1; }
+
+			return max(a.size(), b.size());
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

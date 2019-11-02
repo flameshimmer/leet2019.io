@@ -1,0 +1,92 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>LowestCommonAncestorofaBinarySearchTree</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>LowestCommonAncestorofaBinarySearchTree</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a binary search tree (BST), find the lowest common ancestor (LCA)
+//of two given nodes in the BST.
+//
+//According to the definition of LCA on Wikipedia: “The lowest common 
+//ancestor is defined between two nodes p and q as the lowest node in
+//T that has both p and q as descendants (where we allow a node to be
+//a descendant of itself).”
+//
+//Given binary search tree:  root = [6,2,8,0,4,7,9,null,null,3,5]
+//
+//Example 1:
+//Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8
+//Output: 6
+//Explanation: The LCA of nodes 2 and 8 is 6.
+//
+//Example 2:
+//Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+//Output: 2
+//Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a 
+//descendant of itself according to the LCA definition.
+// 
+//Note:
+//All of the nodes' values will be unique.
+//p and q are different and both values will exist in the BST.
+
+namespace Solution2019
+{
+	namespace LowestCommonAncestorofaBinarySearchTree
+	{
+
+		TreeNode* lowestCommonAncestorRecursive(TreeNode* root, TreeNode* p, TreeNode* q) {
+			if (!root || !p || !q) { return nullptr; }
+			if (root->val > p->val && root->val > q->val) {
+				return lowestCommonAncestorRecursive(root->left, p, q);
+			}
+			else if (root->val < p->val && root->val < q->val) {
+				return lowestCommonAncestorRecursive(root->right, p, q);
+			}
+			else { return root; }
+		}
+
+		TreeNode* lowestCommonAncestorIterative(TreeNode* root, TreeNode* p, TreeNode* q) {
+			if (!root || !p || !q) { return nullptr; }
+			while (true) {
+				if (root->val > p->val && root->val > q->val) {
+					root = root->left;
+				}
+				else if (root->val < p->val && root->val < q->val) {
+					root = root->right;
+				}
+				else { break; }
+			}
+			return root;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,83 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>NumberofBoomerangs</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>NumberofBoomerangs</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given n points in the plane that are all pairwise distinct,
+//a "boomerang" is a tuple of points (i, j, k) such that the 
+//distance between i and j equals the distance between i and 
+//k (the order of the tuple matters).
+//
+//Find the number of boomerangs. You may assume that n will 
+//be at most 500 and coordinates of points are all in the 
+//range [-10000, 10000] (inclusive).
+//
+//Example:
+//Input:
+//[[0,0],[1,0],[2,0]]
+//Output:
+//2
+//
+//Explanation:
+//The two boomerangs are [[1,0],[0,0],[2,0]] 
+//and [[1,0],[2,0],[0,0]]
+namespace Solution2019
+{
+	namespace NumberofBoomerangs
+	{
+		int getDistance(vector<int>& a, vector<int>& b) {
+			int x = a[0] - b[0];
+			int y = a[1] - b[1];
+			return x * x + y * y;
+		}
+
+		int numberOfBoomerangs(vector<vector<int>>& points) {
+			int len = points.size();
+
+			int result = 0;
+			unordered_map<int, int> map;
+			for (int i = 0; i < len; i++) {
+				for (int j = 0; j < len; j++) {
+					if (i == j) { continue; }
+					map[getDistance(points[i], points[j])]++;
+				}
+				for (auto& p : map) {
+					result += p.second * (p.second - 1);
+				}
+				map.clear();
+			}
+
+			return result;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

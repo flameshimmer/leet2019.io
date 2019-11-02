@@ -1,0 +1,94 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>IntegertoEnglishWords</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>IntegertoEnglishWords</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+#include <regex>
+//Convert a non-negative integer to its english words 
+//representation. Given input is guaranteed to be less
+//than 231 - 1.
+//
+//Example 1:
+//Input: 123
+//Output: "One Hundred Twenty Three"
+//
+//Example 2:
+//Input: 12345
+//Output: "Twelve Thousand Three Hundred Forty Five"
+//
+//Example 3:
+//Input: 1234567
+//Output: "One Million Two Hundred Thirty Four 
+//Thousand Five Hundred Sixty Seven"
+//
+//Example 4:
+//Input: 1234567891
+//Output: "One Billion Two Hundred Thirty Four 
+//Million Five Hundred Sixty Seven Thousand Eight
+//Hundred Ninety One" 
+
+namespace Solution2019
+{
+	namespace IntegertoEnglishWords
+	{
+
+		string lessThan20[20] = { "", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen" };
+		string tens[10] = { "", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety" };
+		string unit[4] = { "", "Thousand", "Million", "Billion" };
+
+		string helper(int num) {
+			if (num == 0) { return ""; }
+			else if (num < 20) { return lessThan20[num] + " "; }
+			else if (num < 100) { return tens[num / 10] + " " + helper(num % 10); }
+			else { return lessThan20[num / 100] + " Hundred " + helper(num % 100); }
+		}
+
+		string numberToWords(int num) {
+			if (num == 0) { return "Zero"; }
+			int i = 0;
+			string result = "";
+			while (num > 0) {
+				if (num % 1000 != 0) {
+					result = helper(num % 1000) + unit[i] + " " + result;
+				}
+				num /= 1000;
+				i++;
+			}
+			result = regex_replace(result, regex("^ +| +$"), "");
+			return result;
+		}
+
+
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

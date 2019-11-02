@@ -1,0 +1,91 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>CombinationSumII</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>CombinationSumII</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a collection of candidate numbers (candidates) and a target 
+//number (target), find all unique combinations in candidates where
+//the candidate numbers sums to target.
+//
+//Each number in candidates may only be used once in the combination.
+//
+//Note:
+//All numbers (including target) will be positive integers.
+//The solution set must not contain duplicate combinations.
+//
+//Example 1:
+//Input: candidates = [10,1,2,7,6,1,5], target = 8,
+//A solution set is:
+//[
+//  [1, 7],
+//  [1, 2, 5],
+//  [2, 6],
+//  [1, 1, 6]
+//]
+//
+//Example 2:
+//Input: candidates = [2,5,2,1,2], target = 5,
+//A solution set is:
+//[
+//  [1,2,2],
+//  [5]
+//]
+
+namespace Solution2019
+{
+	namespace CombinationSumII
+	{
+		void comboHelper(vector<int>& can, int start, int len, int sum, int target, vector<int>& result, vector<vector<int>>& results) {
+			if (sum == target) { results.push_back(result); }
+			if (sum >= target) { return; }
+
+			for (int i = start; i < len; i++) {
+				result.push_back(can[i]);
+				comboHelper(can, i + 1, len, sum + can[i], target, result, results);
+				result.pop_back();
+				while (i+1 < len && can[i] == can[i + 1]) { i++; }
+			}
+		}
+
+		vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
+			sort(candidates.begin(), candidates.end());
+			vector<vector<int>> results;
+			vector<int> result;
+			int len = candidates.size();
+			int sum = 0;
+			comboHelper(candidates, 0, len, sum, target, result, results);
+			return results;
+		}
+
+		void Main() {
+			vector<int> can = { 10,1,2,7,6,1,5 };
+			print(combinationSum2(can, 8));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

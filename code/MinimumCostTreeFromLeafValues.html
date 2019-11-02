@@ -1,0 +1,91 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>MinimumCostTreeFromLeafValues</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>MinimumCostTreeFromLeafValues</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+
+//Given an array arr of positive integers, consider all binary trees such that:
+//Each node has either 0 or 2 children;
+//The values of arr correspond to the values of each leaf in an in-order
+//traversal of the tree.  (Recall that a node is a leaf if and only if it has 0
+//children.)
+//The value of each non-leaf node is equal to the product of the largest leaf
+//value in its left and right subtree respectively.
+//Among all possible binary trees considered, return the smallest possible sum of
+//the values of each non-leaf node.  It is guaranteed this sum fits into a 32-bit
+//integer.
+// 
+//
+//Example 1:
+//Input: arr = [6,2,4]
+//Output: 32
+//Explanation:
+//There are two possible trees.  The first has non-leaf node sum 36, and the
+//second has non-leaf node sum 32.
+//    24            24
+//   /  \          /  \
+//  12   4        6    8
+// /  \               / \
+//6    2             2   4
+// 
+//Constraints:
+//2 <= arr.length <= 40
+//1 <= arr[i] <= 15
+//It is guaranteed that the answer fits into a 32-bit signed integer (ie. it is
+//less than 2^31).
+
+namespace Solution2019
+{
+	namespace MinimumCostTreeFromLeafValues
+	{
+		int mctFromLeafValues(vector<int>& A) {
+			int result = 0;
+			int len = A.size();
+			vector<int> stack = { INT_MAX };
+
+			for (int a : A) {
+				while (stack.back() <= a) {
+					int mid = stack.back();
+					stack.pop_back();
+					result += mid * min(stack.back(), a);
+				}
+				stack.push_back(a);
+			}
+			for (int i = stack.size() - 1; i > 1; i--) {
+				result += stack[i] * stack[i - 1];
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

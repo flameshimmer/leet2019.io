@@ -1,0 +1,69 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>LengthofLastWord</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>LengthofLastWord</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a string s consists of upper/lower-case alphabets and empty space 
+//characters ' ', return the length of last word in the string.
+//
+//If the last word does not exist, return 0.
+//
+//Note: A word is defined as a character sequence consists of non-space characters only.
+//
+//Example:
+//
+//Input: "Hello World"
+//Output: 5
+
+namespace Solution2019
+{
+	namespace LengthofLastWord
+	{
+		int LengthofLastWord(string s) {
+			int len = s.size();
+			if (len == 0) { return 0; }
+
+			int end = len - 1;
+			while (end >= 0) {
+				if (s[end] != ' ') { break; }
+				end--;
+			}
+			int start = end;
+			while (start >= 0) {
+				if (s[start] == ' ') { break; }
+				start--;
+			}
+			return end - start;
+		}
+
+		void Main() {
+			print(LengthofLastWord("Hello World"));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

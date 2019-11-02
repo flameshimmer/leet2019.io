@@ -1,0 +1,80 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>UncommonWordsfromTwoSentences</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>UncommonWordsfromTwoSentences</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//We are given two sentences A and B.  (A sentence is 
+//a string of space separated words.  Each word 
+//consists only of lowercase letters.)
+//
+//A word is uncommon if it appears exactly once in one
+//of the sentences, and does not appear in the other 
+//sentence.
+//
+//Return a list of all uncommon words. 
+//You may return the list in any order.
+//
+//Example 1:
+//Input: A = "this apple is sweet", B = "this apple is sour"
+//Output: ["sweet","sour"]
+//
+//Example 2:
+//Input: A = "apple apple", B = "banana"
+//Output: ["banana"]
+// 
+//Note:
+//0 <= A.length <= 200
+//0 <= B.length <= 200
+//A and B both contain only spaces and lowercase letters.
+
+namespace Solution2019
+{
+	namespace UncommonWordsfromTwoSentences
+	{
+		vector<string> uncommonFromSentences(string A, string B) {
+			unordered_map<string, int> map;
+			istringstream ss(A + " " + B);
+			string cur;
+			while (ss >> cur) {
+				map[cur]++;
+			}
+
+			vector<string> result;
+			for (auto p : map) {
+				if (p.second == 1) { result.push_back(p.first); }
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

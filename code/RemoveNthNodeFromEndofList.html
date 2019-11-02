@@ -1,0 +1,79 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>RemoveNthNodeFromEndofList</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>RemoveNthNodeFromEndofList</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a linked list, remove the n-th node from the end of list and return its head.
+//
+//Example:
+//
+//Given linked list: 1->2->3->4->5, and n = 2.
+//
+//After removing the second node from the end, the linked list becomes 1->2->3->5.
+//Note:
+//
+//Given n will always be valid.
+//
+//Follow up:
+//
+//Could you do this in one pass?
+namespace Solution2019
+{
+	namespace RemoveNthNodeFromEndofList
+	{
+		ListNode* RemoveNthNodeFromEndofList(ListNode* head, int n) {
+			if (!head) { return head; }
+
+			ListNode* dummy = new ListNode(0);
+			dummy->next = head;
+			ListNode* front = dummy;
+			for (int i = 0; i < n; i++) {
+				front = front->next;
+			}
+			ListNode* back = dummy;
+			while (front->next) {
+				front = front->next;
+				back = back->next;
+			}
+			ListNode* tmp = back->next;
+			back->next = back->next->next;
+			delete tmp;
+
+			tmp = dummy->next;
+			delete dummy;
+			return tmp;
+		}
+
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,86 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>GroupAnagrams</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>GroupAnagrams</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array of strings, group anagrams together.
+//
+//Example:
+//
+//Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
+//Output:
+//[
+//  ["ate","eat","tea"],
+//  ["nat","tan"],
+//  ["bat"]
+//]
+//Note:
+//
+//All inputs will be in lowercase.
+//The order of your output does not matter.
+
+namespace Solution2019
+{
+	namespace GroupAnagrams
+	{
+		string getKey(string& s) {
+			int map[26] = { 0 };
+			for (char c : s) {
+				map[c - 'a']++;
+			}
+
+			string result = "";
+			for (int i = 0; i < 26; i++) {
+				if (map[i] > 0) {
+					char c = 'a' + i;
+					result += c + to_string(map[i]);
+				}
+			}
+			return result;
+		}
+
+		vector<vector<string>> groupAnagrams(vector<string>& strs) {
+			vector<vector<string>> result;
+			unordered_map<string, vector<string>> map;
+			for (string s : strs) {
+				map[getKey(s)].push_back(s);
+			}
+
+			for (auto& p : map) {
+				result.push_back(p.second);
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

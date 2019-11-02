@@ -1,0 +1,67 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ContainsDuplicateIII</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ContainsDuplicateIII</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array of integers, find out whether there are two distinct indices i
+// and j in the array such that the absolute difference between nums[i] and nums[j] 
+//is at most t and the absolute difference between iand j is at most k.
+//
+//Example 1:
+//Input: nums = [1, 2, 3, 1], k = 3, t = 0
+//Output : true
+//
+//Example 2 :
+//Input : nums = [1, 0, 1, 1], k = 1, t = 2
+//Output : true
+//
+//Example 3 :
+//Input : nums = [1, 5, 9, 1, 5, 9], k = 2, t = 3
+//Output : false
+
+namespace Solution2019
+{
+	namespace ContainsDuplicateIII
+	{
+		bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
+			set<long long> window;
+			for (int i = 0; i < nums.size(); i++) {
+				if (i > k) { window.erase(nums[i - k - 1]); }
+				auto pos = window.lower_bound((long long)nums[i] - (long long)t);
+				if (pos != window.end() && *pos - nums[i] <= t) { return true; }
+				window.insert(nums[i]);
+			}
+			return false;
+		}
+		void Main() {
+			vector<int> test = { 1, 5, 9, 1, 5, 9 };
+			print(containsNearbyAlmostDuplicate(test, 2, 3));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

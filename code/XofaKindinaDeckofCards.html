@@ -1,0 +1,97 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>XofaKindinaDeckofCards</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>XofaKindinaDeckofCards</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//In a deck of cards, each card has an integer written on it.
+//
+//Return true if and only if you can choose X >= 2 such that it is 
+//possible to split the entire deck into 1 or more groups of cards, where:
+//
+//Each group has exactly X cards.
+//All the cards in each group have the same integer.
+// 
+//Example 1:
+//Input: [1,2,3,4,4,3,2,1]
+//Output: true
+//Explanation: Possible partition [1,1],[2,2],[3,3],[4,4]
+//
+//Example 2:
+//Input: [1,1,1,2,2,2,3,3]
+//Output: false
+//Explanation: No possible partition.
+//
+//Example 3:
+//Input: [1]
+//Output: false
+//Explanation: No possible partition.
+//
+//Example 4:
+//Input: [1,1]
+//Output: true
+//Explanation: Possible partition [1,1]
+//
+//Example 5:
+//Input: [1,1,2,2,2,2]
+//Output: true
+//Explanation: Possible partition [1,1],[2,2],[2,2]
+//
+//Note:
+//1 <= deck.length <= 10000
+//0 <= deck[i] < 10000
+
+namespace Solution2019
+{
+	namespace XofaKindinaDeckofCards
+	{
+		int gcd(int x, int y) {
+			if (x > y) { return gcd(y, x); }
+			return x == 0 ? y : gcd(y % x, x);
+		}
+
+		bool hasGroupsSizeX(vector<int>& deck) {
+			unordered_map<int, int> map;
+			for (int v : deck) { map[v]++; }
+
+			int g = -1;
+			for (auto& it : map) {
+				if (g == -1) { g = it.second; }
+				else {
+					g = gcd(g, it.second);
+				}
+			}
+			return g >= 2;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

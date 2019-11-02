@@ -1,0 +1,97 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>OccurrencesAfterBigram</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>OccurrencesAfterBigram</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given words first and second, consider occurrences in some text
+//of the form "first second third", where second comes immediately
+//after first, and third comes immediately after second.
+//
+//For each such occurrence, add "third" to the answer,
+//and return the answer.
+//
+//Example 1:
+//Input: text = "alice is a good girl she is a good student", 
+//first = "a", second = "good"
+//Output: ["girl","student"]
+//
+//Example 2:
+//Input: text = "we will we will rock you", 
+//first = "we", second = "will"
+//Output: ["we","rock"]
+// 
+//
+//Note:
+//1 <= text.length <= 1000
+//text consists of space separated words, where 
+//each word consists of lowercase English letters.
+//1 <= first.length, second.length <= 10
+//first and second consist of lowercase English letters.
+
+namespace Solution2019
+{
+	namespace OccurrencesAfterBigram
+	{
+		vector<string> findOcurrences(string text, string first, string second) {
+			vector<string> result;
+			istringstream ss(text);
+			string cur;
+			string prev;
+			string prev2;
+			while (ss >> cur) {
+				if (prev2 == first && prev == second) {
+					result.push_back(cur);
+				}
+				prev2 = prev;
+				prev = cur;
+			}
+			return result;
+		}
+
+		vector<string> findOcurrencesAnother(string text, string first, string second) {
+			vector<string> result;
+			string target = " " + first + " " + second + " ";
+			text = " " + text;
+			size_t stringStart = text.find(target);
+			while (stringStart != string::npos) {
+				size_t stringEnd = stringStart + target.size();
+				size_t cur = stringEnd;
+				while (cur < text.size() && text[cur] != ' ') { cur++; }
+				result.push_back(text.substr(stringEnd, cur - stringEnd));
+				stringStart = text.find(target, stringStart + 1);
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

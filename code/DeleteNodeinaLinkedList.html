@@ -1,0 +1,95 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>DeleteNodeinaLinkedList</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>DeleteNodeinaLinkedList</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+/*Write a function to delete a node (except the tail) in a singly 
+linked list, given only access to that node.
+
+Given linked list -- head = [4,5,1,9], which looks like following:
+
+Example 1:
+Input: head = [4,5,1,9], node = 5
+Output: [4,1,9]
+	Explanation: You are given the second node with value 5, the linked
+	list should become 4 -> 1 -> 9 after calling your function.
+
+Example 2:
+Input: head = [4,5,1,9], node = 1
+Output: [4,5,9]
+	Explanation: You are given the third node with value 1, the linked 
+	list should become 4 -> 5 -> 9 after calling your function.
+ 
+Note:
+The linked list will have at least two elements.
+All of the nodes' values will be unique.
+The given node will not be the tail and it will always 
+be a valid node of the linked list.
+Do not return anything from your function.*/ 
+
+namespace Solution2019
+{
+	namespace DeleteNodeinaLinkedList
+	{
+		void DeleteNodeinaLinkedList(ListNode* head) {
+			
+			while (head->next) {
+				head->val = head->next->val;
+				if (!head->next->next) {
+					ListNode* tmp = head->next;
+					head->next = nullptr;
+					delete tmp;
+				} else {
+					head = head->next;
+				}
+			}
+		
+		}
+
+		void DeleteNodeinaLinkedListAnotherWay(ListNode* head) {
+			ListNode* cur = head;
+			ListNode* prev = nullptr;
+
+			while (cur->next) {
+				cur->val = cur->next->val;
+				prev = cur;
+				cur = cur->next;
+			}
+			if (prev) {
+				prev->next = nullptr;
+				delete cur;
+			}
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

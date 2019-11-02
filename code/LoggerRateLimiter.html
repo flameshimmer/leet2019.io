@@ -1,0 +1,100 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>LoggerRateLimiter</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>LoggerRateLimiter</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Design a logger system that receive stream of messages along 
+//with its timestamps, each message should be printed if and 
+//only if it is not printed in the last 10 seconds.
+//
+//Given a message and a timestamp(in seconds granularity),
+//return true if the message should be printed in the 
+//given timestamp, otherwise returns false.
+//
+//It is possible that several messages arrive roughly at 
+//the same time.
+//
+//Example:
+//
+//Logger logger = new Logger();
+//
+//// logging string "foo" at timestamp 1
+//logger.shouldPrintMessage(1, "foo"); returns true;
+//
+//// logging string "bar" at timestamp 2
+//logger.shouldPrintMessage(2, "bar"); returns true;
+//
+//// logging string "foo" at timestamp 3
+//logger.shouldPrintMessage(3, "foo"); returns false;
+//
+//// logging string "bar" at timestamp 8
+//logger.shouldPrintMessage(8, "bar"); returns false;
+//
+//// logging string "foo" at timestamp 10
+//logger.shouldPrintMessage(10, "foo"); returns false;
+//
+//// logging string "foo" at timestamp 11
+//logger.shouldPrintMessage(11, "foo"); returns true;
+
+namespace Solution2019
+{
+	namespace LoggerRateLimiter
+	{
+		class Logger {
+		private:
+			unordered_map<string, int> map;
+		public:
+			/** Initialize your data structure here. */
+			Logger() {
+
+			}
+
+			/** Returns true if the message should be printed in the given timestamp, otherwise returns false.
+				If this method returns false, the message will not be printed.
+				The timestamp is in seconds granularity. */
+			bool shouldPrintMessage(int timestamp, string message) {
+				if (!map.count(message)) {
+					map[message] = timestamp;
+					return true;
+				}
+
+				if (timestamp - map[message] >= 10) {
+					map[message] = timestamp;
+					return true;
+				}
+				return false;
+			}
+		};
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,73 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ConvertSortedArraytoBinarySearchTree</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ConvertSortedArraytoBinarySearchTree</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array where elements are sorted in ascending
+//order, convert it to a height balanced BST.
+//
+//For this problem, a height-balanced binary tree is 
+//defined as a binary tree in which the depth of the 
+//two subtrees of every node never differ by more than 1.
+//
+//Example:
+//Given the sorted array: [-10,-3,0,5,9],
+//One possible answer is: [0,-3,9,-10,null,5], 
+//which represents the following height balanced BST:
+//
+//      0
+//     / \
+//   -3   9
+//   /   /
+// -10  5
+
+namespace Solution2019
+{
+	namespace ConvertSortedArraytoBinarySearchTree
+	{
+		TreeNode* helper(vector<int>& nums, int start, int end)
+		{
+			if (start > end) { return nullptr; }
+			int mid = start + (end - start) / 2;
+			TreeNode* newNode = new TreeNode(nums[mid]);
+			newNode->left = helper(nums, start, mid - 1);
+			newNode->right = helper(nums, mid + 1, end);
+			return newNode;
+		}
+
+		TreeNode* sortedArrayToBST(vector<int>& nums) {
+			int len = nums.size();
+			return helper(nums, 0, len - 1);
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

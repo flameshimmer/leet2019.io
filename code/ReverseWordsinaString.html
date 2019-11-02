@@ -1,0 +1,126 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ReverseWordsinaString</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ReverseWordsinaString</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an input string, reverse the string word by word.
+//
+//Example 1:
+//Input: "the sky is blue"
+//Output: "blue is sky the"
+//
+//Example 2:
+//Input: "  hello world!  "
+//Output: "world! hello"
+//Explanation: Your reversed string should not 
+//contain leading or trailing spaces.
+//
+//Example 3:
+//Input: "a good   example"
+//Output: "example good a"
+//Explanation: You need to reduce multiple spaces 
+//between two words to a single space in the reversed string.
+// 
+//Note:
+//A word is defined as a sequence of non-space characters.
+//Input string may contain leading or trailing spaces. 
+//However, your reversed string should not contain 
+//leading or trailing spaces.
+//You need to reduce multiple spaces between two words 
+//to a single space in the reversed string.
+// 
+//Follow up:
+//For C programmers, try to solve it in-place in O(1) extra space. 
+
+namespace Solution2019
+{
+	namespace ReverseWordsinaString
+	{
+		string reverseWords(string s) {
+			while (s.back() == ' ') { s.pop_back(); }
+			reverse(s.begin(), s.end());
+			int len = s.size();
+
+			int start = 0;
+			int end = 0;
+			while (end < len) {
+				while (end < len && s[end] == ' ') { end++; }
+				if (end == len) { break; }
+
+				start = end;
+				while (end < len && s[end] != ' ') { end++; }
+				reverse(s.begin() + start, s.begin() + end);
+			}
+
+			while (s.back() == ' ') { s.pop_back(); }
+
+			start = 0;
+			end = 0;
+			while (end < len) {
+				if (s[end] != ' ' || (end + 1 < len && s[end + 1] != ' ')) {
+					s[start] = s[end];
+					start++;
+				}
+				end++;
+			}
+
+			return s.substr(0, start);
+		}
+
+		string reverseWordsAnother(string s) {
+			int start = 0;
+			int end = 0;
+			int temp = 0;
+			int len = s.size();
+			int wordCount = 0;
+
+			while (end < len) {
+				while (end < len && s[end] == ' ') { end++; }
+				if (end == len) { break; }
+				if (wordCount > 0) { s[start] = ' '; start++; }
+
+				temp = start;
+				while (end < len && s[end] != ' ') {
+					s[start] = s[end];
+					start++;
+					end++;
+				}
+				reverse(s.begin() + temp, s.begin() + start);
+				wordCount++;
+			}
+			s.resize(start);
+			reverse(s.begin(), s.end());
+			return s;
+		}
+		void Main() {
+			string test = "  hello world!  ";
+			print(reverseWordsAnother(test));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,85 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>MaximumNumberofBalloons</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>MaximumNumberofBalloons</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	
+#include "stdafx.h"
+//Given a string text, you want to use the characters of text to 
+//form as many instances of the word "balloon" as possible.
+//
+//You can use each character in text at most once.Return the 
+//maximum number of instances that can be formed.
+//
+//Example 1:
+//Input: text = "nlaebolko"
+//Output : 1
+//
+//Example 2 :
+//Input : text = "loonbalxballpoon"
+//Output : 2
+//
+//Example 3 :
+//Input : text = "leetcode"
+//Output : 0
+//
+//Constraints :
+//1 <= text.length <= 10 ^ 4
+//text consists of lower case English letters only.
+//
+namespace Solution2019
+{
+	namespace MaximumNumberofBalloons
+	{
+
+		int maxNumberOfBalloons(string text) {
+			int map[26] = { 0 };
+			for (char c : text) {
+				map[c - 'a']++;
+			}
+
+			string tmp = "balloon";
+			int target[26] = { 0 };
+			for (char c : tmp) {
+				target[c - 'a']++;
+			}
+
+			int result = INT_MAX;
+			for (int i = 0; i < 26; i++) {
+				if (target[i] > 0) {
+					result = min(result, map[i] / target[i]);
+				}
+			}
+			return result;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

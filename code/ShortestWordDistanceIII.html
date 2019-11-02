@@ -1,0 +1,83 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ShortestWordDistanceIII</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ShortestWordDistanceIII</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a list of words and two words word1 and word2, 
+//return the shortest distance between these two words in the list.
+//
+//word1 and word2 may be the same and they represent two individual 
+//words in the list.
+//
+//Example:
+//Assume that words = ["practice", "makes", "perfect", "coding", "makes"].
+//
+//Input: word1 = “makes”, word2 = “coding”
+//Output: 1
+//Input: word1 = "makes", word2 = "makes"
+//Output: 3
+//
+//Note:
+//You may assume word1 and word2 are both in the list. 
+
+namespace Solution2019
+{
+	namespace ShortestWordDistanceIII
+	{
+		int shortestWordDistance(vector<string> words, string word1, string word2) {
+			int i1 = -1;
+			int i2 = -1;
+			bool same = word1 == word2;
+			int result = INT_MAX;
+			for (int i = 0; i < words.size(); i++) {
+				string w = words[i];
+				if (w == word1) {
+					if (same) {
+						i2 = i1;
+						i1 = i;
+					}
+					else {
+						i1 = i;
+					}
+				}
+				else if (w == word2) {
+					i2 = i;
+				}
+				if (i1 >= 0 && i2 >= 0) {
+					result = min(result, abs(i2 - i1));
+				}
+			}
+			return result;
+		}
+
+		void Main() {
+			print(shortestWordDistance({"a", "b"}, "a", "b"));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

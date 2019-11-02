@@ -1,0 +1,134 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>IntegertoRoman</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>IntegertoRoman</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+//
+//Symbol       Value
+//I             1
+//V             5
+//X             10
+//L             50
+//C             100
+//D             500
+//M             1000
+//For example, two is written as II in Roman numeral, just two one's added together.
+//Twelve is written as, XII, which is simply X + II. 
+//The number twenty seven is written as XXVII, which is XX + V + II.
+//
+//Roman numerals are usually written largest to smallest from left to right. 
+//However, the numeral for four is not IIII. Instead, the number four is written as IV. 
+//Because the one is before the five we subtract it making four. 
+//The same principle applies to the number nine, which is written as IX. 
+//There are six instances where subtraction is used:
+//
+//I can be placed before V (5) and X (10) to make 4 and 9. 
+//X can be placed before L (50) and C (100) to make 40 and 90. 
+//C can be placed before D (500) and M (1000) to make 400 and 900.
+//Given an integer, convert it to a roman numeral. 
+//Input is guaranteed to be within the range from 1 to 3999.
+//
+//Example 1:
+//
+//Input: 3
+//Output: "III"
+//Example 2:
+//
+//Input: 4
+//Output: "IV"
+//Example 3:
+//
+//Input: 9
+//Output: "IX"
+//Example 4:
+//
+//Input: 58
+//Output: "LVIII"
+//Explanation: L = 50, V = 5, III = 3.
+//Example 5:
+//
+//Input: 1994
+//Output: "MCMXCIV"
+//Explanation: M = 1000, CM = 900, XC = 90 and IV = 4. 
+
+namespace Solution2019
+{
+	namespace IntegertoRoman
+	{
+		//I             1
+		//V             5
+		//X             10
+		//L             50
+		//C             100
+		//D             500
+		//M             1000
+		//I can be placed before V (5) and X (10) to make 4 and 9. 
+		//X can be placed before L (50) and C (100) to make 40 and 90. 
+		//C can be placed before D (500) and M (1000) to make 400 and 900.
+
+		string IntegertoRoman(int val) {
+			vector<pair<int, string>> map;
+			map.push_back(make_pair(1000, "M"));
+			map.push_back(make_pair(900, "CM"));
+			map.push_back(make_pair(500, "D"));
+			map.push_back(make_pair(400, "CD"));
+			map.push_back(make_pair(100, "C"));
+			map.push_back(make_pair(90, "XC"));
+			map.push_back(make_pair(50, "L"));
+			map.push_back(make_pair(40, "XL"));
+			map.push_back(make_pair(10, "X"));
+			map.push_back(make_pair(9, "IX"));
+			map.push_back(make_pair(5, "V"));
+			map.push_back(make_pair(4, "IV"));
+			map.push_back(make_pair(1, "I"));
+
+			string result = "";
+			int i = 0;
+			while (val != 0) {
+				while (val < map[i].first) { i++; }
+				int times = val / map[i].first;
+				while (times > 0) { times--; result += map[i].second; }
+				val %= map[i].first;
+				i++;
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(IntegertoRoman(3));
+			print(IntegertoRoman(4));
+			print(IntegertoRoman(9));
+			print(IntegertoRoman(58));
+			print(IntegertoRoman(1994));
+
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

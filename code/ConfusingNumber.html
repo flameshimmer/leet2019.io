@@ -1,0 +1,98 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ConfusingNumber</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ConfusingNumber</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a number N, return true if and only if it is
+//a confusing number, which satisfies the following 
+//condition:
+//
+//We can rotate digits by 180 degrees to form new digits.
+//When 0, 1, 6, 8, 9 are rotated 180 degrees, they become
+//0, 1, 9, 8, 6 respectively. When 2, 3, 4, 5 and 7 are 
+//rotated 180 degrees, they become invalid. A confusing
+//number is a number that when rotated 180 degrees becomes
+//a different number with each digit valid.
+//
+// 
+//Example 1:
+//Input: 6
+//Output: true
+//Explanation: 
+//We get 9 after rotating 6, 9 is a valid number and 9!=6.
+//
+//Example 2:
+//Input: 89
+//Output: true
+//Explanation: 
+//We get 68 after rotating 89, 86 is a valid number and 86!=89.
+//
+//Example 3:
+//Input: 11
+//Output: false
+//Explanation: 
+//We get 11 after rotating 11, 11 is a valid number but the 
+//value remains the same, thus 11 is not a confusing number.
+//
+//Example 4:
+//Input: 25
+//Output: false
+//Explanation: 
+//We get an invalid number after rotating 25.
+//
+//Note:
+//0 <= N <= 10^9
+//After the rotation we can ignore leading zeros, for example 
+//if after rotation we have 0008 then this number is considered 
+//as just 8. 
+
+namespace Solution2019
+{
+	namespace ConfusingNumber
+	{
+		bool confusingNumber(int N) {
+			int n = N;
+			int reversed = 0;
+			while (n) {
+				int remain = n % 10;
+				if (remain == 2 || remain == 3 || remain == 4 || remain == 5 || remain == 7) { return false; }
+				if (remain == 6) { remain = 9; }
+				else if (remain == 9) { remain = 6; }
+				reversed = reversed * 10 + remain;
+				n /= 10;
+			}
+			return reversed != N;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

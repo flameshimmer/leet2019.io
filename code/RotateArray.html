@@ -1,0 +1,79 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>RotateArray</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>RotateArray</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array, rotate the array to the right by k steps, where k is non-negative.
+//
+//Example 1:
+//Input: [1,2,3,4,5,6,7] and k = 3
+//Output: [5,6,7,1,2,3,4]
+//Explanation:
+//rotate 1 steps to the right: [7,1,2,3,4,5,6]
+//rotate 2 steps to the right: [6,7,1,2,3,4,5]
+//rotate 3 steps to the right: [5,6,7,1,2,3,4]
+//
+//Example 2:
+//Input: [-1,-100,3,99] and k = 2
+//Output: [3,99,-1,-100]
+//Explanation: 
+//rotate 1 steps to the right: [99,-1,-100,3]
+//rotate 2 steps to the right: [3,99,-1,-100]
+//Note:
+//
+//Try to come up as many solutions as you can, there are at 
+//least 3 different ways to solve this problem.
+//Could you do it in-place with O(1) extra space? 
+
+namespace Solution2019
+{
+	namespace RotateArray
+	{
+		void reverse(vector<int>& A, int start, int end) {
+			while (start < end) {
+				swap(A[start], A[end]);
+				start++;
+				end--;
+			}
+		}
+
+		void rotate(vector<int>& nums, int k) {
+			int len = nums.size();
+			k %= len;
+			reverse(nums, 0, len - 1);
+			reverse(nums, 0, k - 1);
+			reverse(nums, k, len - 1);
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

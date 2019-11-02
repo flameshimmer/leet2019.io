@@ -1,0 +1,113 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>StringCompression</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>StringCompression</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array of characters, compress it in-place.
+//
+//The length after compression must always be smaller 
+//than or equal to the original array.
+//
+//Every element of the array should be a character 
+//(not int) of length 1.
+//
+//After you are done modifying the input array in-place, 
+//return the new length of the array.
+//
+//Follow up:
+//Could you solve it using only O(1) extra space?
+//
+//Example 1:
+//Input:
+//["a","a","b","b","c","c","c"]
+//Output:
+//Return 6, and the first 6 characters of the input array 
+//should be: ["a","2","b","2","c","3"]
+//Explanation:
+//"aa" is replaced by "a2". "bb" is replaced by "b2". "ccc" is replaced by "c3".
+// 
+//
+//Example 2:
+//Input:
+//["a"]
+//Output:
+//Return 1, and the first 1 characters of the input array should be: ["a"]
+//Explanation:
+//Nothing is replaced.
+// 
+//Example 3:
+//Input:
+//["a","b","b","b","b","b","b","b","b","b","b","b","b"]
+//Output:
+//Return 4, and the first 4 characters of the input array 
+//should be: ["a","b","1","2"].
+//
+//Explanation:
+//Since the character "a" does not repeat, it is not compressed. 
+//"bbbbbbbbbbbb" is replaced by "b12".
+//Notice each digit has it's own entry in the array.
+// 
+//
+//Note:
+//
+//All characters have an ASCII value in [35, 126].
+//1 <= len(chars) <= 1000.
+
+namespace Solution2019
+{
+	namespace StringCompression
+	{
+		int compress(vector<char>& chars) {
+			int copy = 0;
+			int start = 0;
+			int end = 0;
+
+			int len = chars.size();
+			while (end < len) {
+				while (end < len && chars[start] == chars[end]) { end++; }
+				chars[copy] = chars[start];
+				copy++;
+				if (end - start > 1) {
+					string tmp = to_string(end - start);
+					for (char c : tmp) {
+						chars[copy] = c;
+						copy++;
+					}
+				}
+				start = end;
+			}
+			return copy;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

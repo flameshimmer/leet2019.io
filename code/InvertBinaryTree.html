@@ -1,0 +1,91 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>InvertBinaryTree</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>InvertBinaryTree</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Invert a binary tree.
+//
+//Example:
+//
+//Input:
+//
+//     4
+//   /   \
+//  2     7
+// / \   / \
+//1   3 6   9
+//Output:
+//
+//     4
+//   /   \
+//  7     2
+// / \   / \
+//9   6 3   1
+//Trivia:
+//This problem was inspired by this original tweet by Max Howell:
+//
+//Google: 90% of our engineers use the software you wrote (Homebrew),
+//but you can’t invert a binary tree on a whiteboard so f*** off.
+namespace Solution2019
+{
+	namespace InvertBinaryTree
+	{
+		TreeNode* invertTreeRecursive(TreeNode* root) {
+			if (!root || (!root->left && !root->right)) { return root; }
+
+			TreeNode* l = root->left;
+			root->left = invertTreeRecursive(root->right);
+			root->right = invertTreeRecursive(l);
+			return root;
+		}
+
+		TreeNode* invertTreeIterative(TreeNode* root) {
+			if (!root) { return nullptr; }
+
+			queue<TreeNode*> q;
+			q.push(root);
+			while (!q.empty()) {
+				TreeNode* cur = q.front();
+				q.pop();
+
+				TreeNode* tmp = cur->left;
+				cur->left = cur->right;
+				cur->right = tmp;
+
+				if (cur->left) { q.push(cur->left); }
+				if (cur->right) { q.push(cur->right); }
+			}
+			return root;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

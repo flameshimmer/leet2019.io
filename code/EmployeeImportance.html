@@ -1,0 +1,122 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>EmployeeImportance</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>EmployeeImportance</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//You are given a data structure of employee information, which 
+//includes the employee's unique id, his importance value and 
+//his direct subordinates' id.
+//
+//For example, employee 1 is the leader of employee 2, and employee
+//2 is the leader of employee 3. They have importance value 15, 10 
+//and 5, respectively. Then employee 1 has a data structure like 
+//[1, 15, [2]], and employee 2 has [2, 10, [3]], and employee 3 has 
+//[3, 5, []]. Note that although employee 3 is also a subordinate of 
+//employee 1, the relationship is not direct.
+//
+//Now given the employee information of a company, and an employee id,
+//you need to return the total importance value of this employee and 
+//all his subordinates.
+//
+//Example 1:
+//Input: [[1, 5, [2, 3]], [2, 3, []], [3, 3, []]], 1
+//Output: 11
+//Explanation:
+//Employee 1 has importance value 5, and he has two direct subordinates: 
+//employee 2 and employee 3. They both have importance value 3. So the 
+//total importance value of employee 1 is 5 + 3 + 3 = 11.
+//
+//Note:
+//One employee has at most one direct leader and may have several subordinates.
+//The maximum number of employees won't exceed 2000.
+
+namespace Solution2019
+{
+	namespace EmployeeImportance
+	{
+		class Employee {
+		public:
+			// It's the unique ID of each node.
+			// unique id of this employee
+			int id;
+			// the importance value of this employee
+			int importance;
+			// the id of direct subordinates
+			vector<int> subordinates;
+		};
+
+		namespace BFS {
+			int getImportance(vector<Employee*> employees, int id) {
+				unordered_map<int, Employee*> map;
+				for (Employee* em : employees) {
+					map[em->id] = em;
+				}
+
+				int sum = 0;
+				queue<int> q;
+				q.push(id);
+
+				while (!q.empty()) {
+					Employee* cur = map[q.front()];
+					q.pop();
+
+					sum += cur->importance;
+					for (int v : cur->subordinates) {
+						q.push(v);
+					}
+				}
+				return sum;
+			}
+		}
+
+		namespace DFS {
+			void dfs(int id, unordered_map<int, Employee*>& map, int& result) {
+				Employee* em = map[id];
+				result += em->importance;
+				for (int sub : em->subordinates) {
+					dfs(sub, map, result);
+				}
+			}
+
+			int getImportance(vector<Employee*> employees, int id) {
+				unordered_map<int, Employee*> map;
+				for (Employee* em : employees) {
+					map[em->id] = em;
+				}
+				int result = 0;
+				dfs(id, map, result);
+				return result;
+			}
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,70 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>MiddleoftheLinkedList</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>MiddleoftheLinkedList</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a non-empty, singly linked list with head node head, return a middle node of linked list.
+//
+//If there are two middle nodes, return the second middle node.
+//
+//Example 1:
+//Input: [1,2,3,4,5]
+//Output: Node 3 from this list (Serialization: [3,4,5])
+//The returned node has value 3.  (The judge's serialization of this node is [3,4,5]).
+//Note that we returned a ListNode object ans, such that:
+//ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.
+//
+//Example 2:
+//Input: [1,2,3,4,5,6]
+//Output: Node 4 from this list (Serialization: [4,5,6])
+//Since the list has two middle nodes with values 3 and 4, we return the second one.
+//
+//Note:
+//The number of nodes in the given list will be between 1 and 100.
+
+namespace Solution2019
+{
+	namespace MiddleoftheLinkedList
+	{
+		ListNode* middleNode(ListNode* head) {
+			ListNode* slow = head;
+			ListNode* fast = head;
+			while (fast && fast->next) {
+				fast = fast->next->next;
+				slow = slow->next;
+			}
+			return slow;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

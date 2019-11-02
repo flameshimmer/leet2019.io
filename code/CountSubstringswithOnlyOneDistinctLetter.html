@@ -1,0 +1,75 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>CountSubstringswithOnlyOneDistinctLetter</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>CountSubstringswithOnlyOneDistinctLetter</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a string S, return the number of substrings that have only one distinct letter.
+//
+//Example 1:
+//Input: S = "aaaba"
+//Output: 8
+//Explanation: The substrings with one distinct letter are "aaa", "aa", "a", "b".
+//"aaa" occurs 1 time.
+//"aa" occurs 2 times.
+//"a" occurs 4 times.
+//"b" occurs 1 time.
+//So the answer is 1 + 2 + 4 + 1 = 8.
+//Example 2:
+//
+//Input: S = "aaaaaaaaaa"
+//Output: 55
+// 
+//Constraints:
+//1 <= S.length <= 1000
+//S[i] consists of only lowercase English letters. 
+
+namespace Solution2019
+{
+	namespace CountSubstringswithOnlyOneDistinctLetter
+	{
+		int countLetters(string S) {
+			int len = S.size();
+			int start = 0;
+			int end = 1;
+			int result = 0;
+			while (end <= len) {
+				while (end < len && S[start] == S[end]) { end++; }
+				result += (end - start) * (end - start + 1) / 2;
+				start = end;
+				end++;
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(countLetters("aaaba"));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

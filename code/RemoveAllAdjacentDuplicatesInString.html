@@ -1,0 +1,71 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>RemoveAllAdjacentDuplicatesInString</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>RemoveAllAdjacentDuplicatesInString</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a string S of lowercase letters, a duplicate removal
+//consists of choosing two adjacent and equal letters, and removing them.
+//
+//We repeatedly make duplicate removals on S until we no longer can.
+//
+//Return the final string after all such duplicate removals have 
+//been made.  It is guaranteed the answer is unique.
+//
+//Example 1:
+//Input: "abbaca"
+//Output: "ca"
+//Explanation: 
+//For example, in "abbaca" we could remove "bb" since the letters are 
+//adjacent and equal, and this is the only possible move.  The result
+//of this move is that the string is "aaca", of which only "aa" is 
+//possible, so the final string is "ca".
+// 
+//Note:
+//1 <= S.length <= 20000
+//S consists only of English lowercase letters.
+
+namespace Solution2019
+{
+	namespace RemoveAllAdjacentDuplicatesInString
+	{
+		string removeDuplicates(string S) {
+			string a;
+			for (char c : S) {
+				if (a.size() > 0 && a.back() == c) { a.pop_back(); }
+				else { a += c; }
+			}
+			return a;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

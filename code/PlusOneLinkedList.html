@@ -1,0 +1,85 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>PlusOneLinkedList</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>PlusOneLinkedList</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a non-negative integer represented as non-empty a singly linked list of digits, plus one to the integer.
+//
+//You may assume the integer do not contain any leading zero, except the number 0 itself.
+//
+//The digits are stored such that the most significant digit is at the head of the list.
+//
+//Example :
+//
+//Input: [1,2,3]
+//Output: [1,2,4]
+
+namespace Solution2019
+{
+	namespace PlusOneLinkedList
+	{
+		ListNode* ReverseLinkedList(ListNode* head) {
+			if (!head || !head->next) { return head; }
+			ListNode* cur = head;
+			ListNode* next = head->next;
+			ListNode* nN;
+			cur->next = nullptr;
+			while (next) {
+				nN = next->next;
+				next->next = cur;
+				cur = next;
+				next = nN;
+			}
+			return cur;
+		}
+
+		ListNode* PlusOneLinkedList(ListNode* head) {
+			if (!head) { return nullptr; }
+			int carry = 1;
+			ListNode* reversed = ReverseLinkedList(head);
+			ListNode* cur = reversed;
+			while (cur) {
+				int sum = cur->val + carry;
+				cur->val = sum % 10;
+				carry = sum / 10;
+				cur = cur->next;
+			}
+			if (carry) {
+				head->next = new ListNode(carry);
+				head = head->next;
+			}
+			return ReverseLinkedList(reversed);
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,76 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>NumberofRecentCalls</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>NumberofRecentCalls</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Write a class RecentCounter to count recent requests.
+//
+//It has only one method: ping(int t), where t represents some time in milliseconds.
+//
+//Return the number of pings that have been made from 3000 milliseconds ago until now.
+//
+//Any ping with time in [t - 3000, t] will count, including the current ping.
+//
+//It is guaranteed that every call to ping uses a strictly larger value of t than before.
+//
+//Example 1:
+//Input: inputs = ["RecentCounter","ping","ping","ping","ping"], 
+//inputs = [[],[1],[100],[3001],[3002]]
+//Output: [null,1,2,3,3]
+// 
+//Note:
+//Each test case will have at most 10000 calls to ping.
+//Each test case will call ping with strictly increasing values of t.
+//Each call to ping will have 1 <= t <= 10^9.
+
+namespace Solution2019
+{
+	namespace NumberofRecentCalls
+	{
+		class RecentCounter {
+		public:
+			queue<int> q;
+			RecentCounter() {
+
+			}
+
+			int ping(int t) {
+				q.push(t);
+				while (q.front() < t - 3000) {
+					q.pop();
+				}
+				return q.size();
+			}
+		};
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,104 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>BasicCalculator</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>BasicCalculator</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Implement a basic calculator to evaluate a simple expression string.
+//
+//The expression string may contain open ( and closing parentheses ), 
+//the plus + or minus sign -, non-negative integers and empty spaces .
+//
+//Example 1:
+//Input: "1 + 1"
+//Output: 2
+//
+//Example 2:
+//Input: " 2-1 + 2 "
+//Output: 3
+//
+//Example 3:
+//Input: "(1+(4+5+2)-3)+(6+8)"
+//Output: 23
+//
+//Note:
+//You may assume that the given expression is always valid.
+//Do not use the eval built-in library function.
+
+namespace Solution2019
+{
+	namespace BasicCalculator
+	{
+		namespace SignManipulation {
+			int calculate(string s) {
+				int len = s.size();
+				if (len == 0) { return 0; }
+
+				int local = 1;
+				int global = 1;
+				int result = 0;
+				stack<int> stack;
+				for (int i = 0; i < len; i++) {
+					char c = s[i];
+					switch (c) {
+					case '+':
+					case ' ':
+						break;
+					case '-':
+						local = -1;
+						break;
+					case '(':
+						global *= local;
+						stack.push(local);
+						local = 1;
+						break;
+					case ')':
+						global /= stack.top();
+						stack.pop();
+						local = 1;
+						break;
+					default:
+						long long val = 0;
+						while (i < len && isdigit(s[i])) {
+							val = val * 10 + s[i] - '0';
+							i++;
+						}
+						i--;
+						result += local * global * val;
+						local = 1;
+					}
+				}
+				return result;
+			}
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

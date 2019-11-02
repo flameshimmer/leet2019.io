@@ -1,0 +1,93 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ReverseLinkedListII</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ReverseLinkedListII</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+
+//
+//Reverse a linked list from position m to n.Do it in one - pass.
+//
+//Note: 1 <= m <= n <= length of list.
+//
+//  Example :
+//
+//	  Input : 1->2->3->4->5->NULL, m = 2, n = 4
+//		  Output : 1->4->3->2->5->NULL
+
+namespace Solution2019
+{
+	namespace ReverseLinkedListII
+	{
+
+		ListNode* ReverseLinkedListII(ListNode* l, int m, int n)
+		{
+			if (l == nullptr || l->next == nullptr || m >= n) { return l; }
+
+			ListNode* dummy = new ListNode(0);
+			dummy->next = l;
+			ListNode* prev = dummy;
+			ListNode* cur = l;
+			int counter = 1;
+
+			while (counter < m)
+			{
+				prev = prev->next;
+				cur = cur->next;
+				counter++;
+			}
+
+			ListNode* firstSectionEnd = prev;
+			ListNode* lastSectionStart = cur;
+			ListNode* next = nullptr;
+			while (counter <= n) 
+			{
+				next = cur->next;
+				cur->next = prev;
+				if (counter == n) { break; }
+				prev = cur;
+				cur = next;	
+				counter++;
+			}
+			firstSectionEnd->next = cur;
+			lastSectionStart->next = next;
+
+			ListNode* result = dummy->next;
+			delete dummy;
+			return result;
+		}
+
+
+
+
+		void Main() {
+			string test = "tst test test";
+			print(ReverseLinkedListII(createList({1, 2, 3, 4, 5}), 2, 4));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

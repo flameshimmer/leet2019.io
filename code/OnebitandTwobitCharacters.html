@@ -1,0 +1,80 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>OnebitandTwobitCharacters</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>OnebitandTwobitCharacters</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//We have two special characters. The first character can be 
+//represented by one bit 0. The second character can be 
+//represented by two bits (10 or 11).
+//
+//Now given a string represented by several bits. Return 
+//whether the last character must be a one-bit character 
+//or not. The given string will always end with a zero.
+//
+//Example 1:
+//Input: 
+//bits = [1, 0, 0]
+//Output: True
+//Explanation: 
+//The only way to decode it is two-bit character and 
+//one-bit character. So the last character is one-bit character.
+//
+//Example 2:
+//Input: 
+//bits = [1, 1, 1, 0]
+//Output: False
+//Explanation: 
+//The only way to decode it is two-bit character and two-bit 
+//character. So the last character is NOT one-bit character.
+//
+//Note:
+//1 <= len(bits) <= 1000.
+//bits[i] is always 0 or 1.
+
+namespace Solution2019
+{
+	namespace OnebitandTwobitCharacters
+	{
+		bool isOneBitCharacter(vector<int>& bits) {
+			int i = 0;
+			int len = bits.size();
+			while (i < len) {
+				if (bits[i] == 1) { i++; }
+				else if (i == len - 1) { return true; }
+				i++;
+			}
+			return false;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

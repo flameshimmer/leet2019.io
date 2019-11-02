@@ -1,0 +1,78 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>LinkedListCycle</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>LinkedListCycle</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a linked list, determine if it has a cycle in it.
+//
+//To represent a cycle in the given linked list, we use an integer pos 
+//which represents the position (0-indexed) in the linked list where tail 
+//connects to. If pos is -1, then there is no cycle in the linked list.
+//
+// 
+//Example 1:
+//Input: head = [3,2,0,-4], pos = 1
+//Output: true
+//Explanation: There is a cycle in the linked list, where tail connects to the second node.
+//
+//Example 2:
+//Input: head = [1,2], pos = 0
+//Output: true
+//Explanation: There is a cycle in the linked list, where tail connects to the first node.
+//
+//Example 3:
+//Input: head = [1], pos = -1
+//Output: false
+//Explanation: There is no cycle in the linked list.
+//
+//Follow up:
+//Can you solve it using O(1) (i.e. constant) memory?
+
+namespace Solution2019
+{
+	namespace LinkedListCycle
+	{
+		bool LinkedListCycle(ListNode* head) {
+			if (!head || !head->next) { return false; }
+			ListNode* slow = head;
+			ListNode* fast = head;
+			while (fast && fast->next) {
+				if (fast->next == slow) { return true; }
+				slow = slow->next;
+				fast = fast->next->next;
+			}
+			return false;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

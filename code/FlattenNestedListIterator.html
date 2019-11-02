@@ -1,0 +1,150 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>FlattenNestedListIterator</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>FlattenNestedListIterator</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a nested list of integers, implement an iterator to flatten it.
+//
+//Each element is either an integer, or a list -- 
+//whose elements may also be integers or other lists.
+//
+//Example 1:
+//
+//Input: [[1,1],2,[1,1]]
+//Output: [1,1,2,1,1]
+//Explanation: By calling next repeatedly until hasNext returns false, 
+//             the order of elements returned by next should be: [1,1,2,1,1].
+//Example 2:
+//
+//Input: [1,[4,[6]]]
+//Output: [1,4,6]
+//Explanation: By calling next repeatedly until hasNext returns false, 
+//             the order of elements returned by next should be: [1,4,6].
+
+
+namespace Solution2019
+{
+	namespace FlattenNestedListIterator
+	{
+		/**
+		 * // This is the interface that allows for creating nested lists.
+		 * // You should not implement it, or speculate about its implementation
+		 * class NestedInteger {
+		 *   public:
+		 *     // Return true if this NestedInteger holds a single integer, rather than a nested list.
+		 *     bool isInteger() const;
+		 *
+		 *     // Return the single integer that this NestedInteger holds, if it holds a single integer
+		 *     // The result is undefined if this NestedInteger holds a nested list
+		 *     int getInteger() const;
+		 *
+		 *     // Return the nested list that this NestedInteger holds, if it holds a nested list
+		 *     // The result is undefined if this NestedInteger holds a single integer
+		 *     const vector<NestedInteger> &getList() const;
+		 * };
+		 */
+		/*
+		namespace RealIterator {
+			typedef vector<NestedInteger>::iterator iter;
+			class NestedIterator {
+				stack<iter> begins;
+				stack<iter> ends;
+			public:
+				NestedIterator(vector<NestedInteger>& nestedList) {
+					begins.push(nestedList.begin());
+					ends.push(nestedList.end());
+				}
+
+				int next() {
+					hasNext();
+					int result = begins.top()->getInteger();
+					begins.top()++;
+					return result;
+				}
+
+				bool hasNext() {
+					while (!begins.empty()) {
+						if (begins.top() == ends.top()) {
+							begins.pop();
+							ends.pop();
+						}
+						else {
+							iter x = begins.top();
+							if (x->isInteger()) { return true; }
+							begins.top()++;
+							begins.push(x->getList().begin());
+							ends.push(x->getList().end());
+						}
+					}
+					return false;
+				}
+			};
+
+		}
+		*/
+		/*
+		namespace SpaceOn {
+			class NestedIterator {
+				stack<NestedInteger> s;
+			public:
+				NestedIterator(vector<NestedInteger>& nestedList) {
+					int len = nestedList.size();
+					for (int i = len - 1; i >= 0; i--) {
+						s.push(nestedList[i]);
+					}
+				}
+
+				int next() {
+					int result = s.top().getInteger();
+					s.pop();
+					return result;
+				}
+
+				bool hasNext() {
+					while (!s.empty()) {
+						NestedInteger cur = s.top();
+						if (cur.isInteger()) { return true; }
+
+						s.pop();
+						vector<NestedInteger>& adj = cur.getList();
+						for (int i = adj.size() - 1; i >= 0; i--) {
+							s.push(adj[i]);
+						}
+					}
+					return false;
+				}
+			};
+		}
+		*/
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

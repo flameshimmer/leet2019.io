@@ -1,0 +1,101 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>DietPlanPerformance</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>DietPlanPerformance</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//A dieter consumes calories[i] calories on the i-th day. 
+//
+//Given an integer k, for every consecutive sequence of k days
+//(calories[i], calories[i+1], ..., calories[i+k-1] for all 0 <= i <= n-k),
+//they look at T, the total calories consumed during that sequence 
+//of k days (calories[i] + calories[i+1] + ... + calories[i+k-1]):
+//
+//If T < lower, they performed poorly on their diet and lose 1 point; 
+//If T > upper, they performed well on their diet and gain 1 point;
+//Otherwise, they performed normally and there is no change in points.
+//Initially, the dieter has zero points. Return the total number of 
+//points the dieter has after dieting for calories.length days.
+//
+//Note that the total points can be negative.
+//
+//Example 1:
+//Input: calories = [1,2,3,4,5], k = 1, lower = 3, upper = 3
+//Output: 0
+//Explanation: Since k = 1, we consider each element of the
+//array separately and compare it to lower and upper.
+//calories[0] and calories[1] are less than lower so 2 points are lost.
+//calories[3] and calories[4] are greater than upper so 2 points are gained.
+//
+//Example 2:
+//Input: calories = [3,2], k = 2, lower = 0, upper = 1
+//Output: 1
+//Explanation: Since k = 2, we consider subarrays of length 2.
+//calories[0] + calories[1] > upper so 1 point is gained.
+//
+//Example 3:
+//Input: calories = [6,5,0,0], k = 2, lower = 1, upper = 5
+//Output: 0
+//Explanation:
+//calories[0] + calories[1] > upper so 1 point is gained.
+//lower <= calories[1] + calories[2] <= upper so no change in points.
+//calories[2] + calories[3] < lower so 1 point is lost.
+// 
+//Constraints:
+//1 <= k <= calories.length <= 10^5
+//0 <= calories[i] <= 20000
+//0 <= lower <= upper 
+
+namespace Solution2019
+{
+	namespace DietPlanPerformance
+	{
+		int dietPlanPerformance(vector<int>& c, int k, int lower, int upper) {
+			int sum = 0;
+			for (int i = 0; i < k; i++) {
+				sum += c[i];
+			}
+			int result = 0;
+			if (sum < lower) { result--; }
+			else if (sum > upper) { result++; }
+
+			for (int i = k; i < c.size(); i++) {
+				sum += c[i];
+				sum -= c[i - k];
+				if (sum < lower) { result--; }
+				else if (sum > upper) { result++; }
+			}
+			return result;
+		}
+
+		void Main() {
+			vector<int> test = {1,2, 3, 4, 5};
+			print(dietPlanPerformance(test, 1, 3, 3));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

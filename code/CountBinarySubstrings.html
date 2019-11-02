@@ -1,0 +1,84 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>CountBinarySubstrings</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>CountBinarySubstrings</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Give a string s, count the number of non-empty (contiguous)
+//substrings that have the same number of 0's and 1's, and all
+//the 0's and all the 1's in these substrings are grouped 
+//consecutively.
+//
+//Substrings that occur multiple times are counted the number
+//of times they occur.
+//
+//Example 1:
+//Input: "00110011"
+//Output: 6
+//Explanation: There are 6 substrings that have equal number of 
+//consecutive 1's and 0's: "0011", "01", "1100", "10", "0011", and "01".
+//Notice that some of these substrings repeat and are counted 
+//the number of times they occur.
+//Also, "00110011" is not a valid substring because all the 
+//0's (and 1's) are not grouped together.
+//
+//Example 2:
+//Input: "10101"
+//Output: 4
+//Explanation: There are 4 substrings: "10", "01", "10", "01"
+//that have equal number of consecutive 1's and 0's.
+//
+//Note:
+//s.length will be between 1 and 50,000.
+//s will only consist of "0" or "1" characters. 
+
+namespace Solution2019
+{
+	namespace CountBinarySubstrings
+	{
+		int countBinarySubstrings(string s) {
+			int cur = 1;
+			int prev = 0;
+			int result = 0;
+			for (int i = 1; i < s.size(); i++)
+			{
+				if (s[i] == s[i - 1]) { cur++; }
+				else {
+					result += min(prev, cur);
+					prev = cur;
+					cur = 1;
+				}
+			}
+			return result + min(prev, cur);
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

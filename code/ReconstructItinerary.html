@@ -1,0 +1,84 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ReconstructItinerary</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ReconstructItinerary</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a list of airline tickets represented by pairs of departure and arrival 
+//airports [from, to], reconstruct the itinerary in order. All of the tickets 
+//belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.
+//
+//Note:
+//If there are multiple valid itineraries, you should return the itinerary that
+//has the smallest lexical order when read as a single string. For example,
+//the itinerary ["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"].
+//All airports are represented by three capital letters (IATA code).
+//You may assume all tickets form at least one valid itinerary.
+//
+//Example 1:
+//Input: [["MUC", "LHR"], ["JFK", "MUC"], ["SFO", "SJC"], ["LHR", "SFO"]]
+//Output: ["JFK", "MUC", "LHR", "SFO", "SJC"]
+//
+//Example 2:
+//Input: [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]
+//Output: ["JFK","ATL","JFK","SFO","ATL","SFO"]
+//Explanation: 
+//Another possible reconstruction is ["JFK","SFO","ATL","JFK","ATL","SFO"].
+//But it is larger in lexical order.
+
+namespace Solution2019
+{
+	namespace ReconstructItinerary
+	{
+		void dfs(string city, unordered_map<string, priority_queue<string, vector<string>, greater<string>>>& graph, vector<string>& result) {
+			auto& edges = graph[city];
+			while (!edges.empty()) {
+				string dest = edges.top();
+				edges.pop();
+				dfs(dest, graph, result);
+			}
+			result.push_back(city);
+		}
+
+
+		vector<string> findItinerary(vector<vector<string>>& tickets) {
+			unordered_map<string, priority_queue<string, vector<string>, greater<string>>> graph;
+			for (vector<string>& t : tickets) {
+				graph[t[0]].push(t[1]);
+			}
+			vector<string> result;
+			dfs("JFK", graph, result);
+			reverse(result.begin(), result.end());
+			return result;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

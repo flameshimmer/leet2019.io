@@ -1,0 +1,81 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ReverseStringII</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ReverseStringII</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a string and an integer k, you need to reverse the first k 
+//characters for every 2k characters counting from the start of the 
+//string. If there are less than k characters left, reverse all of
+//them. If there are less than 2k but greater than or equal to k 
+//characters, then reverse the first k characters and left the
+//other as original.
+//
+//Example:
+//Input: s = "abcdefg", k = 2
+//Output: "bacdfeg"
+//Restrictions:
+//The string consists of lower English letters only.
+//Length of the given string and k will in the range [1, 10000]
+
+namespace Solution2019
+{
+	namespace ReverseStringII
+	{
+		string reverseStr(string s, int k) {
+			int len = s.size();
+			for (int i = 0; i < len; i += 2 * k) {
+				int j = min(i + k - 1, len - 1);
+				reverse(s.begin() + i, s.begin() + j+1);
+			}
+			return s;
+		}
+
+		string reverseStrAnother(string s, int k) {
+			int len = s.size();
+			int start = 0;
+			int end = 0;
+			while (end < len) {
+				while (end < len && (end - start + 1) <= 2*k) { end++; }
+				if (end == len && (end - start) < k) {
+					reverse(s.begin() + start, s.begin() + end); 	
+				} else {
+					reverse(s.begin() + start, s.begin() + start + k);
+				}			
+				start = end;
+			}
+			return s;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(reverseStr("a", 2));
+			print(reverseStr("abcdefg", 2));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

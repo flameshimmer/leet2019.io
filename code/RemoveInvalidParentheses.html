@@ -1,0 +1,95 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>RemoveInvalidParentheses</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>RemoveInvalidParentheses</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Remove the minimum number of invalid parentheses in order to 
+//make the input string valid. Return all possible results.
+//
+//Note: The input string may contain letters other than the parentheses ( and ).
+//
+//Example 1:
+//Input: "()())()"
+//Output: ["()()()", "(())()"]
+//
+//Example 2:
+//Input: "(a)())()"
+//Output: ["(a)()()", "(a())()"]
+//
+//Example 3:
+//Input: ")("
+//Output: [""] 
+
+namespace Solution2019
+{
+	namespace RemoveInvalidParentheses
+	{
+		void helper(string s, int istart, int jstart, char openParen, char closeParen, vector<string>& result) {
+			int counter = 0;
+			for (int i = istart; i < s.size(); i++) {
+				if (s[i] == openParen) { counter++; }
+				else if (s[i] == closeParen) { counter--; }
+				if (counter >= 0) { continue; }
+
+				for (int j = jstart; j <= i; j++) {
+					// If s[j] is the first closeParen, drop s[j]
+					// after dropping, i and j will auto be advanced into the next pos
+					// so istart and jstart for next round is still i and j
+					//
+					// Essentially i is scanning position, and j is deleting position. 
+					// The (j == jstart || s[j - 1] != closeParen ensures we delete
+					// the left most ( to avoid duplicates
+					if (s[j] == closeParen && (j == jstart || s[j - 1] != closeParen)) {
+						helper(s.substr(0, j) + s.substr(j + 1), i, j, openParen, closeParen, result);
+					}
+				}
+				return;
+			}
+
+			reverse(s.begin(), s.end());
+			if (openParen == '(') {
+				helper(s, 0, 0, ')', '(', result);
+			}
+			else {
+				result.push_back(s);
+			}
+		}
+
+		vector<string> removeInvalidParentheses(string s) {
+			vector<string> result;
+			helper(s, 0, 0, '(', ')', result);
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

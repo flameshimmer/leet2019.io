@@ -1,0 +1,97 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>FloodFill</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>FloodFill</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//An image is represented by a 2-D array of integers, each integer
+//representing the pixel value of the image (from 0 to 65535).
+//
+//Given a coordinate (sr, sc) representing the starting pixel 
+//(row and column) of the flood fill, and a pixel value newColor, 
+//"flood fill" the image.
+//
+//To perform a "flood fill", consider the starting pixel, plus any
+//pixels connected 4-directionally to the starting pixel of the 
+//same color as the starting pixel, plus any pixels connected 
+//4-directionally to those pixels (also with the same color as the
+//starting pixel), and so on. Replace the color of all of the 
+//aforementioned pixels with the newColor.
+//
+//At the end, return the modified image.
+//
+//Example:
+//
+//Input: 
+//image = [[1,1,1],[1,1,0],[1,0,1]]
+//sr = 1, sc = 1, newColor = 2
+//
+//Output: [[2,2,2],[2,2,0],[2,0,1]]
+//
+//Explanation: 
+//From the center of the image (with position (sr, sc) = (1, 1)),
+//all pixels connected 
+//by a path of the same color as the starting pixel are colored 
+//with the new color. Note the bottom corner is not colored 2, 
+//because it is not 4-directionally connected to the starting pixel.
+//
+//Note:
+//The length of image and image[0] will be in the range [1, 50].
+//The given starting pixel will satisfy 
+//0 <= sr < image.length and 0 <= sc < image[0].length.
+//The value of each color in image[i][j] and newColor
+//will be an integer in [0, 65535].
+
+namespace Solution2019
+{
+	namespace FloodFill
+	{
+		void helper(vector<vector<int>>& image, int color, int i, int j, int rowCount, int colCount, int newColor) {
+			if (i < 0 || i >= rowCount || j < 0 || j >= colCount || image[i][j] != color) { return; }
+			image[i][j] = newColor;
+			helper(image, color, i - 1, j, rowCount, colCount, newColor);
+			helper(image, color, i + 1, j, rowCount, colCount, newColor);
+			helper(image, color, i, j - 1, rowCount, colCount, newColor);
+			helper(image, color, i, j + 1, rowCount, colCount, newColor);
+		}
+
+		vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+			int rowCount = image.size();
+			int colCount = image[0].size();
+			int color = image[sr][sc];
+			if (color != newColor) { ///-------------> if don't check this will stack overflow
+				helper(image, color, sr, sc, rowCount, colCount, newColor);
+			}
+			return image;
+		}
+		void Main() {
+			vector<vector<int>> image = { {0,0,0}, {0,1,1} };
+			print(floodFill(image, 1, 1, 1));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

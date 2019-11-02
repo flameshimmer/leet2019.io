@@ -1,0 +1,106 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ReorderList</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ReorderList</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	﻿#include "stdafx.h"
+//Given a singly linked list L: L0→L1→…→Ln-1→Ln,
+//reorder it to: L0→Ln→L1→Ln-1→L2→Ln-2→…
+//
+//You may not modify the values in the list's nodes, only nodes itself may be changed.
+//
+//Example 1:
+//
+//Given 1->2->3->4, reorder it to 1->4->2->3.
+//Example 2:
+//
+//Given 1->2->3->4->5, reorder it to 1->5->2->4->3.
+
+namespace Solution2019
+{
+	namespace ReorderList
+	{
+		ListNode* ReverseLinkedList(ListNode* head) {
+			if (!head || !head->next) { return head; }
+			ListNode* cur = head;
+			ListNode* next = cur->next;
+			ListNode* nN;
+			cur->next = nullptr;
+			while (next) {
+				nN = next->next;
+				next->next = cur;
+				cur = next;
+				next = nN;
+			}
+			return cur;
+		}
+
+		ListNode* ReorderList(ListNode* head) {
+			if (!head || !head->next) { return head; }
+			ListNode* slow = head;
+			ListNode* fast = head->next;
+			while (fast->next)
+			{
+				slow = slow->next;
+				fast = fast->next;
+				if (fast->next) { fast = fast->next; }
+			}
+			ListNode* secondHead = slow->next;
+			slow->next = nullptr;
+			secondHead = ReverseLinkedList(secondHead);
+
+			ListNode* newHead = nullptr;
+			ListNode* newTail = nullptr;
+
+			int i = 0;
+			while (head && secondHead) {
+				ListNode* cur;
+				if (i % 2 == 0) {
+					cur = head;
+					head = head->next;
+				} else {
+					cur = secondHead;
+					secondHead = secondHead->next;
+				}
+				if (!newHead) { newHead = cur; }
+				else { newTail->next = cur; }
+				newTail = cur;
+				i++;
+			}
+			if (head || secondHead) {
+				newTail->next = head ? head : secondHead;
+			}
+			return newHead;
+		}
+
+		void Main() {
+			print(ReorderList(createList({1, 2, 3, 4, 5})));
+			print(ReorderList(createList({ 1, 2, 3, 4})));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

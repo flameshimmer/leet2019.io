@@ -1,0 +1,88 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>GlobalandLocalInversions</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>GlobalandLocalInversions</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//We have some permutation A of [0, 1, ..., N - 1], 
+//where N is the length of A.
+//
+//The number of (global) inversions is the number
+//of i < j with 0 <= i < j < N and A[i] > A[j].
+//
+//The number of local inversions is the number of 
+//i with 0 <= i < N and A[i] > A[i+1].
+//
+//Return true if and only if the number of global 
+//inversions is equal to the number of local inversions.
+//
+//Example 1:
+//Input: A = [1,0,2]
+//Output: true
+//Explanation: There is 1 global inversion, 
+//and 1 local inversion.
+//
+//Example 2:
+//Input: A = [1,2,0]
+//Output: false
+//Explanation: There are 2 global inversions, 
+//and 1 local inversion.
+//
+//Note:
+//A will be a permutation of [0, 1, ..., A.length - 1].
+//A will have length in range [1, 5000].
+//The time limit for this problem has been reduced.
+//
+namespace Solution2019
+{
+	namespace GlobalandLocalInversions
+	{
+		bool isIdealPermutation(vector<int>& A) {
+			int len = A.size();
+			int minRight = len;
+			for (int i = len - 1; i >= 2; i--) {
+				minRight = min(minRight, A[i]);
+				if (A[i - 2] > minRight) { return false; }
+			}
+			return true;
+		}
+
+		bool isIdealPermutationAnother(vector<int>& A) {
+			int len = A.size();
+			for (int i = 0; i < len; i++) {
+				if (abs(A[i] - i) > 1) { return false; }
+			}
+			return true;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

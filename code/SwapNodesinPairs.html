@@ -1,0 +1,86 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>SwapNodesinPairs</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>SwapNodesinPairs</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a linked list, swap every two adjacent nodes and return its head.
+//
+//You may not modify the values in the list's nodes, only nodes itself may be changed.
+//
+// 
+//
+//Example:
+//
+//Given 1->2->3->4, you should return the list as 2->1->4->3.
+namespace Solution2019
+{
+	namespace SwapNodesinPairs
+	{
+
+		ListNode* SwapNodesinPairsRecursive(ListNode* head) {
+			if (!head || !head->next) { 
+				return head;
+			}
+			
+			ListNode* next = head->next;
+			ListNode* nextSectionHead = SwapNodesinPairsRecursive(next->next);
+			next->next = head;
+			head->next = nextSectionHead;
+			return next;
+		}
+
+		ListNode* SwapNodesinPairs(ListNode* head) {
+			if (!head || !head->next) { return head; }
+
+			ListNode* result = head->next;
+			ListNode* cur = head;
+			ListNode* next = cur->next;
+			ListNode* nN = nullptr;
+			ListNode* prev = nullptr;
+
+			while (next) {
+				nN = next->next;
+				next->next = cur;
+				cur->next = nN;
+
+				if (prev) { prev->next = next; }
+				prev = cur;
+
+				cur = nN;
+				next = cur ? cur->next : nullptr;			
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(SwapNodesinPairs(createList({1, 2, 3, 4})));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

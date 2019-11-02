@@ -1,0 +1,73 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>JewelsandStones</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>JewelsandStones</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//You're given strings J representing the types of stones that are 
+//jewels, and S representing the stones you have.  Each character 
+//in S is a type of stone you have.  You want to know how many of 
+//the stones you have are also jewels.
+//
+//The letters in J are guaranteed distinct, and all characters in 
+//Jand S are letters.Letters are case sensitive, so "a" is 
+//considered a different type of stone from "A".
+//
+//Example 1:
+//
+//Input: J = "aA", S = "aAAbbbb"
+//Output : 3
+//
+//Example 2 :
+//Input : J = "z", S = "ZZ"
+//Output : 0
+//Note :
+//S and J will consist of letters and have length at most 50.
+//The characters in J are distinct.
+
+namespace Solution2019
+{
+	namespace JewelsandStones
+	{
+		int numJewelsInStones(string J, string S) {
+			bool map[256] = { false };
+			for (char c : J) { map[c] = true; }
+			
+			int result = 0;
+			for (char c : S) {
+				if (map[c]) { result++; }
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

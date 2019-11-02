@@ -1,0 +1,87 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>RemoveLinkedListElements</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>RemoveLinkedListElements</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Remove all elements from a linked list of integers that have value val.
+//
+//Example:
+//
+//Input:  1->2->6->3->4->5->6, val = 6
+//Output : 1->2->3->4->5
+
+namespace Solution2019
+{
+	namespace RemoveLinkedListElements
+	{
+		ListNode* RemoveLinkedListElements(ListNode* head, int val) {
+			if (!head) { return nullptr; }
+			
+			ListNode* dummy = new ListNode(-1);
+			dummy->next = head;
+			ListNode* cur = head;
+			ListNode* prev = dummy;
+			while (cur) {
+				if (cur->val == val) {
+					prev->next = cur->next;
+					delete cur;
+					cur = prev->next;
+				}
+				else {
+					prev = cur;
+					cur = cur->next;
+				}
+			}
+			ListNode* result = dummy->next;
+			delete dummy;
+			return result;
+		}
+
+		ListNode* RemoveLinkedListElementsAnotherWay(ListNode* head, int val) {
+			if (!head) { return nullptr; }
+
+			ListNode* newHead = nullptr;
+			ListNode* tail = nullptr;
+			while (head) {
+				if (head->val != val) {
+					if (!newHead) { newHead = head; }
+					else { tail->next = head; }
+					tail = head;
+				}
+				head = head->next;
+			}
+			if (tail) { tail->next = nullptr; } ///-------------------> This is the one place we need to be careful about this method!
+			return newHead;
+		}
+
+		void Main() {
+			print(RemoveLinkedListElementsAnotherWay(createList({1,2,6,3,4,5,6}), 6));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

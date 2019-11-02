@@ -1,0 +1,70 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>NumberofDaysinaMonth</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>NumberofDaysinaMonth</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a year Y and a month M, return how 
+//many days there are in that month.
+//
+//Example 1:
+//Input: Y = 1992, M = 7
+//Output: 31
+//
+//Example 2:
+//Input: Y = 2000, M = 2
+//Output: 29
+//
+//Example 3:
+//Input: Y = 1900, M = 2
+//Output: 28
+//
+//Note:
+//1583 <= Y <= 2100
+//1 <= M <= 12
+
+namespace Solution2019
+{
+	namespace NumberofDaysinaMonth
+	{
+		int numberOfDays(int Y, int M) {
+			int normalYear[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+			int leapYear[12] = { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+
+			bool isLeapYear = (Y % 4 == 0 && Y % 100 != 0) || Y % 400 == 0;
+			if (isLeapYear) {
+				return leapYear[M - 1];
+			}
+			return normalYear[M - 1];
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -1,0 +1,76 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>MovingAveragefromDataStream</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>MovingAveragefromDataStream</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a stream of integersand a window size, calculate
+//the moving average of all integers in the sliding window.
+//
+//Example:
+//
+//MovingAverage m = new MovingAverage(3);
+//m.next(1) = 1
+//m.next(10) = (1 + 10) / 2
+//m.next(3) = (1 + 10 + 3) / 3
+//m.next(5) = (10 + 3 + 5) / 3
+
+namespace Solution2019
+{
+	namespace MovingAveragefromDataStream
+	{
+
+		class MovingAverage {
+		private:
+			int maxSize;
+			queue<int> q;
+			int sum;
+		public:
+			/** Initialize your data structure here. */
+			MovingAverage(int size) {
+				maxSize = size;
+				sum = 0;
+			}
+
+			double next(int val) {
+				sum += val;
+				q.push(val);
+				if (q.size() > maxSize) {
+					sum -= q.front();
+					q.pop();
+				}
+				return double(sum) / double(q.size());
+			}
+		};
+	
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

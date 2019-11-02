@@ -1,0 +1,90 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>NumberofIslands</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>NumberofIslands</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a 2d grid map of '1's (land) and '0's (water), 
+//count the number of islands. An island is surrounded 
+//by water and is formed by connecting adjacent lands 
+//horizontally or vertically. You may assume all four 
+//edges of the grid are all surrounded by water.
+//
+//Example 1:
+//Input:
+//11110
+//11010
+//11000
+//00000
+//Output: 1
+//
+//Example 2:
+//Input:
+//11000
+//11000
+//00100
+//00011
+//Output: 3 
+
+namespace Solution2019
+{
+	namespace NumberofIslands
+	{
+		void helper(vector<vector<char>>& grid, int row, int col, int rowCount, int colCount) {
+			if (row < 0 || row >= rowCount || col < 0 || col >= colCount || grid[row][col] == '0') { return; }
+			grid[row][col] = '0';
+			helper(grid, row - 1, col, rowCount, colCount);
+			helper(grid, row + 1, col, rowCount, colCount);
+			helper(grid, row, col - 1, rowCount, colCount);
+			helper(grid, row, col + 1, rowCount, colCount);
+		}
+
+
+		int numIslands(vector<vector<char>>& grid) {
+			int rowCount = grid.size();
+			if (rowCount == 0) { return 0; }
+			int colCount = grid[0].size();
+			if (colCount == 0) { return 0; }
+
+			int result = 0;
+			for (int i = 0; i < rowCount; i++) {
+				for (int j = 0; j < colCount; j++) {
+					if (grid[i][j] == '1') {
+						result++;
+						helper(grid, i, j, rowCount, colCount);
+					}
+				}
+			}
+			return result;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

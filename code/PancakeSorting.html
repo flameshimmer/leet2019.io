@@ -1,0 +1,88 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>PancakeSorting</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>PancakeSorting</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array A, we can perform a pancake flip: We choose some 
+//positive integer k <= A.length, then reverse the order of the 
+//first k elements of A.  We want to perform zero or more pancake 
+//flips (doing them one after another in succession) to sort the 
+//array A.
+//
+//Return the k-values corresponding to a sequence of pancake flips 
+//that sort A.  Any valid answer that sorts the array within 
+//10 * A.length flips will be judged as correct.
+//
+// 
+//
+//Example 1:
+//Input: [3,2,4,1]
+//Output: [4,2,4,3]
+//Explanation: 
+//We perform 4 pancake flips, with k values 4, 2, 4, and 3.
+//Starting state: A = [3, 2, 4, 1]
+//After 1st flip (k=4): A = [1, 4, 2, 3]
+//After 2nd flip (k=2): A = [4, 1, 2, 3]
+//After 3rd flip (k=4): A = [3, 2, 1, 4]
+//After 4th flip (k=3): A = [1, 2, 3, 4], which is sorted. 
+//
+//Example 2:
+//Input: [1,2,3]
+//Output: []
+//Explanation: The input is already sorted, so there is no need to flip anything.
+//Note that other answers, such as [3, 3], would also be accepted. 
+
+//Note:
+//1 <= A.length <= 100
+//A[i] is a permutation of[1, 2, ..., A.length]
+
+namespace Solution2019
+{
+	namespace PancakeSorting
+	{
+		vector<int> pancakeSort(vector<int> A) {
+			vector<int> result;
+			int len = A.size();
+			for (int i = len; i > 0; i--) {
+				int j = 0;
+				while (A[j] != i) { j++; }
+				result.push_back(j + 1);
+				reverse(A.begin(), A.begin() + j + 1);
+				result.push_back(i);
+				reverse(A.begin(), A.begin() + i);
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

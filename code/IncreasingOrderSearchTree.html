@@ -1,0 +1,116 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>IncreasingOrderSearchTree</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>IncreasingOrderSearchTree</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a binary search tree, rearrange the tree in in-order so that
+//the leftmost node in the tree is now the root of the tree, and 
+//every node has no left child and only 1 right child.
+//
+//Example 1:
+//Input: [5,3,6,2,4,null,8,1,null,null,null,7,9]
+//
+//       5
+//      / \
+//    3    6
+//   / \    \
+//  2   4    8
+// /        / \ 
+//1        7   9
+//
+//Output: [1,null,2,null,3,null,4,null,5,null,6,null,7,null,8,null,9]
+//
+// 1
+//  \
+//   2
+//    \
+//     3
+//      \
+//       4
+//        \
+//         5
+//          \
+//           6
+//            \
+//             7
+//              \
+//               8
+//                \
+//                 9  
+//Note:
+//The number of nodes in the given tree will be between 1 and 100.
+//Each node will have a unique integer value from 0 to 1000.
+
+namespace Solution2019
+{
+	namespace IncreasingOrderSearchTree
+	{
+		namespace Relinking {
+			TreeNode* increasingBST(TreeNode* root, TreeNode* tail = nullptr) {
+				if (!root) { return tail; }
+
+				TreeNode* result = increasingBST(root->left, root);
+				root->left = nullptr;
+				root->right = increasingBST(root->right, tail);
+				return result;
+			}
+		}
+
+		namespace ReconstructNewTree {
+			void GetInorderVal(TreeNode* root, vector<int>& result) {
+				if (!root) { return; }
+				GetInorderVal(root->left, result);
+				result.push_back(root->val);
+				GetInorderVal(root->right, result);
+			}
+
+			TreeNode* increasingBST(TreeNode* root) {
+				if (!root) { return nullptr; }
+
+				TreeNode* result = nullptr;
+				TreeNode* cur = nullptr;
+				vector<int> values;
+				GetInorderVal(root, values);
+				for (int v : values) {
+					TreeNode* newNode = new TreeNode(v);
+					if (!result) { result = newNode; cur = newNode; }
+					else {
+						cur->right = newNode;
+						cur = newNode;
+					}
+				}
+				return result;
+			}
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

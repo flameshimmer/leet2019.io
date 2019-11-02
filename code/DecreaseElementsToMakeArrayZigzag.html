@@ -1,0 +1,79 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>DecreaseElementsToMakeArrayZigzag</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>DecreaseElementsToMakeArrayZigzag</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array nums of integers, a move consists 
+//of choosing any element and decreasing it by 1.
+//
+//An array A is a zigzag array if either:
+//
+//Every even-indexed element is greater than adjacent 
+//elements, ie. A[0] > A[1] < A[2] > A[3] < A[4] > ...
+//OR, every odd-indexed element is greater than adjacent
+//elements, ie. A[0] < A[1] > A[2] < A[3] > A[4] < ...
+//Return the minimum number of moves to transform the 
+//given array nums into a zigzag array.
+//
+//Example 1:
+//Input: nums = [1,2,3]
+//Output: 2
+//Explanation: We can decrease 2 to 0 or 3 to 1.
+//
+//Example 2:
+//Input: nums = [9,6,1,6,2]
+//Output: 4
+// 
+//Constraints:
+//1 <= nums.length <= 1000
+//1 <= nums[i] <= 1000
+
+namespace Solution2019
+{
+	namespace DecreaseElementsToMakeArrayZigzag
+	{
+		int movesToMakeZigzag(vector<int>& A) {
+			int len = A.size();
+			int result[2] = { 0 };
+			int left;
+			int right;
+			for (int i = 0; i < len; i++) {
+				left = (i == 0 ? INT_MAX : A[i - 1]);
+				right = (i == len - 1 ? INT_MAX : A[i + 1]);
+				result[i % 2] += max(0, A[i] - min(left, right) + 1);
+			}
+			return min(result[0], result[1]);
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

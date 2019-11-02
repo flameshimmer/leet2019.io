@@ -1,0 +1,72 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>MissingNumber</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>MissingNumber</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array containing n distinct numbers taken from
+//0, 1, 2, ..., n, find the one that is missing from the array.
+//
+//Example 1:
+//Input: [3,0,1]
+//Output: 2
+//
+//Example 2:
+//Input: [9,6,4,2,3,5,7,0,1]
+//Output: 8
+//
+//Note:
+//Your algorithm should run in linear runtime complexity. 
+//Could you implement it using only constant extra space complexity?
+
+namespace Solution2019
+{
+	namespace MissingNumber
+	{
+		int MissingNumber(vector<int>& A) {
+			int len = A.size();
+			int sum = 0;
+			for (int i : A) { sum += i; }
+			int expected = (0 + len) * (len + 1) / 2;
+			return expected - sum;
+		}
+		int MissingNumberBitManipulation(vector<int>& A) {
+			int len = A.size();
+			int result = len;
+			for (int i = 0; i < len; i ++ ) {
+				result ^= i ^ A[i];
+			}
+			return result;
+		}
+
+		void Main() {
+			vector<int> test = { 9,6,4,2,3,5,7,0,1 };
+			print(MissingNumberBitManipulation(test));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

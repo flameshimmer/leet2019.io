@@ -1,0 +1,77 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>DetectCapital</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>DetectCapital</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a word, you need to judge whether the 
+//usage of capitals in it is right or not.
+//
+//We define the usage of capitals in a word to 
+//be right when one of the following cases holds:
+//
+//All letters in this word are capitals, like "USA".
+//All letters in this word are not capitals, like "leetcode".
+//Only the first letter in this word is capital, like "Google".
+//Otherwise, we define that this word doesn't use capitals in a right way.
+//
+//Example 1:
+//Input: "USA"
+//Output: True
+// 
+//Example 2:
+//Input: "FlaG"
+//Output: False
+//
+//Note: The input will be a non-empty word consisting 
+//of uppercase and lowercase latin letters.
+
+namespace Solution2019
+{
+	namespace DetectCapital
+	{
+		bool detectCapitalUse(string word) {
+			int len = word.size();
+			int lastCapIndex = -1;
+			int totalCap = 0;
+			for (int i = 0; i < len; i++) {
+				if (isupper(word[i])) {
+					totalCap++;
+					lastCapIndex = i;
+				}
+			}
+
+			if (totalCap == len || totalCap == 0) { return true; }
+			return lastCapIndex == 0;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

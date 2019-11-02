@@ -1,0 +1,85 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>SingleRowKeyboard</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>SingleRowKeyboard</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//There is a special keyboard with all keys in a single row.
+//
+//Given a string keyboard of length 26 indicating the layout of the 
+//keyboard(indexed from 0 to 25), initially your finger is at index 0.
+//To type a character, you have to move your finger to the index of 
+//the desired character.The time taken to move your finger from 
+//index i to index j is | i - j | .
+//
+//You want to type a string word.Write a function to calculate
+//how much time it takes to type it with one finger.
+//
+//
+//
+//Example 1:
+//Input: keyboard = "abcdefghijklmnopqrstuvwxyz", word = "cba"
+//Output : 4
+//Explanation : The index moves from 0 to 2 to write 'c'
+//then to 1 to write 'b' then to 0 again to write 'a'.
+//Total time = 2 + 1 + 1 = 4.
+//
+//Example 2 :
+//Input : keyboard = "pqrstuvwxyzabcdefghijklmno", word = "leetcode"
+//Output : 73
+//
+//Constraints :
+//keyboard.length == 26
+//keyboard contains each English lowercase letter exactly once in some order.
+//1 <= word.length <= 10 ^ 4
+//word[i] is an English lowercase letter.
+
+namespace Solution2019
+{
+	namespace SingleRowKeyboard
+	{
+		int calculateTime(string keyboard, string word) {
+			int result = 0;
+			int cur = 0;
+			map<char, int> map;
+			for (int i = 0; i < keyboard.size(); i++) {
+				map[word[i]] = i;
+			}
+
+			for (char c : word) {
+				result += abs(cur - map[c]);
+				cur = map[c];
+			}
+			return result;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(calculateTime("abcdefghijklmnopqrstuvwxyz","cba"));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

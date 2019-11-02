@@ -1,0 +1,88 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>UniqueMorseCodeWords</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>UniqueMorseCodeWords</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//International Morse Code defines a standard encoding where each letter 
+//is mapped to a series of dots and dashes, as follows: "a" maps to ".-",
+//"b" maps to "-...", "c" maps to "-.-.", and so on.
+//
+//For convenience, the full table for the 26 letters of the English alphabet 
+//is given below:
+//
+//[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..",
+//"--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+//Now, given a list of words, each word can be written as a concatenation of 
+//the Morse code of each letter. For example, "cba" can be written as 
+//"-.-..--...", (which is the concatenation "-.-." + "-..." + ".-").
+//We'll call such a concatenation, the transformation of a word.
+//
+//Return the number of different transformations among all words we have.
+//
+//Example:
+//Input: words = ["gin", "zen", "gig", "msg"]
+//Output: 2
+//Explanation: 
+//The transformation of each word is:
+//"gin" -> "--...-."
+//"zen" -> "--...-."
+//"gig" -> "--...--."
+//"msg" -> "--...--."
+//
+//There are 2 different transformations, "--...-." and "--...--.".
+//Note:
+//
+//The length of words will be at most 100.
+//Each words[i] will have length in range [1, 12].
+//words[i] will only consist of lowercase letters.
+
+namespace Solution2019
+{
+	namespace UniqueMorseCodeWords
+	{
+		int uniqueMorseRepresentations(vector<string>& words) {
+			vector<string> map = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
+
+			unordered_set<string> set;
+			for (string w : words) {
+				string code = "";
+				for (char c : w) {
+					code += map[c - 'a'];
+				}
+				set.insert(code);
+			}
+			return set.size();
+
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

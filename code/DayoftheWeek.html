@@ -1,0 +1,94 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>DayoftheWeek</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>DayoftheWeek</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given a date, return the corresponding day of the week for that date.
+//
+//The input is given as three integers representing the day, month and
+//year respectively.
+//
+//Return the answer as one of the following values {"Sunday", "Monday", 
+//"Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"}.
+//
+//Example 1:
+//Input: day = 31, month = 8, year = 2019
+//Output: "Saturday"
+//
+//Example 2:
+//Input: day = 18, month = 7, year = 1999
+//Output: "Sunday"
+//
+//Example 3:
+//Input: day = 15, month = 8, year = 1993
+//Output: "Sunday"
+// 
+//Constraints:
+//The given dates are valid dates between the years 1971 and 2100.
+
+namespace Solution2019
+{
+	namespace DayoftheWeek
+	{
+		int daysOfMonth[2][12] = {
+	   31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31,
+	   31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
+		};
+
+		bool isLeapYear(int year) {
+			return ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0));
+		}
+
+		int daysSince1970(int year, int month, int day) {
+			int result = 0;
+			for (int i = 1970; i < year; i++) {
+				result += isLeapYear(i) ? 366 : 365;
+			}
+			for (int i = 0; i < month - 1; i++) {
+				result += daysOfMonth[!isLeapYear(year)][i];
+			}
+			result += day-1;
+			return result;
+		}
+		
+		
+		string dayOfTheWeek(int day, int month, int year) {
+			string weekName[7] = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
+			int daysLastSunday = daysSince1970(2019,9, 8);
+			int daysTarget = daysSince1970(year, month, day);
+			int daysOff = (((daysTarget - daysLastSunday) % 7) + 7) % 7;
+			return weekName[daysOff];
+		}
+
+		void Main() {
+			//print(dayOfTheWeek(9, 9, 2019));
+			print(dayOfTheWeek(31, 8, 2019));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

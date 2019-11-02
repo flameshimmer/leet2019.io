@@ -1,0 +1,112 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ShortestCompletingWord</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ShortestCompletingWord</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Find the minimum length word from a given dictionary words, 
+//which has all the letters from the string licensePlate. 
+//Such a word is said to complete the given string licensePlate
+//
+//Here, for letters we ignore case. For example, "P" on the 
+//licensePlate still matches "p" on the word.
+//
+//It is guaranteed an answer exists. If there are multiple 
+//answers, return the one that occurs first in the array.
+//
+//The license plate might have the same letter occurring multiple
+//times. For example, given a licensePlate of "PP", the word "pair"
+//does not complete the licensePlate, but the word "supper" does.
+//
+//Example 1:
+//Input: 
+//licensePlate = "1s3 PSt", 
+//words = ["step", "steps", "stripe", "stepple"]
+//Output: "steps"
+//Explanation: The smallest length word that contains the 
+//letters "S", "P", "S", and "T".
+//Note that the answer is not "step", because the letter 
+//"s" must occur in the word twice.
+//Also note that we ignored case for the purposes of comparing
+//whether a letter exists in the word.
+//
+//Example 2:
+//Input: 
+//licensePlate = "1s3 456", 
+//words = ["looks", "pest", "stew", "show"]
+//Output: "pest"
+//Explanation: There are 3 smallest length words that 
+//contains the letters "s".
+//We return the one that occurred first.
+//
+//Note:
+//licensePlate will be a string with length in range [1, 7].
+//licensePlate will contain digits, spaces, or letters 
+//(uppercase or lowercase).
+//words will have a length in the range [10, 1000].
+//Every words[i] will consist of lowercase letters, and 
+//have length in range [1, 15].
+
+namespace Solution2019
+{
+	namespace ShortestCompletingWord
+	{
+		bool isCompleting(const int* lp, string& w) {
+			int map[26] = { 0 };
+			for (char c : w) {
+				map[tolower(c) - 'a']++;
+			}
+			for (int i = 0; i < 26; i++) {
+				if (map[i] < lp[i]) { return false; }
+			}
+			return true;
+		}
+
+
+		string shortestCompletingWord(string licensePlate, vector<string>& words) {
+			int map[26] = { 0 };
+			for (char c : licensePlate) {
+				if (isalpha(c)) {
+					map[tolower(c) - 'a']++;
+				}
+			}
+
+			int minLen = INT_MAX;
+			string result;
+
+			for (string& w : words) {
+				if (isCompleting(map, w) && w.size() < minLen) { result = w; minLen = w.size(); }
+			}
+			return result;
+		}
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

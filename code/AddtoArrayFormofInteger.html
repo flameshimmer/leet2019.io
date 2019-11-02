@@ -1,0 +1,90 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>AddtoArrayFormofInteger</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>AddtoArrayFormofInteger</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	﻿#include "stdafx.h"
+//For a non-negative integer X, the array-form of X is an 
+//array of its digits in left to right order.  For example,
+//if X = 1231, then the array form is [1,2,3,1].
+//
+//Given the array-form A of a non-negative integer X, 
+//return the array-form of the integer X+K.
+//
+//Example 1:
+//Input: A = [1,2,0,0], K = 34
+//Output: [1,2,3,4]
+//Explanation: 1200 + 34 = 1234
+//Example 2:
+//
+//Input: A = [2,7,4], K = 181
+//Output: [4,5,5]
+//Explanation: 274 + 181 = 455
+//
+//Example 3:
+//Input: A = [2,1,5], K = 806
+//Output: [1,0,2,1]
+//Explanation: 215 + 806 = 1021
+//
+//Example 4:
+//Input: A = [9,9,9,9,9,9,9,9,9,9], K = 1
+//Output: [1,0,0,0,0,0,0,0,0,0,0]
+//Explanation: 9999999999 + 1 = 10000000000
+// 
+//Note：
+//1 <= A.length <= 10000
+//0 <= A[i] <= 9
+//0 <= K <= 10000
+//If A.length > 1, then A[0] != 0 
+
+namespace Solution2019
+{
+	namespace AddtoArrayFormofInteger
+	{
+		vector<int> addToArrayForm(vector<int> A, int K) {
+			vector<int> result;
+			int len = A.size();
+			int i = len - 1;
+			int carry = 0;
+			while (K > 0 || carry > 0 || i >=0) {
+				int sum = (K > 0 ? K % 10 : 0) + (i>=0 ? A[i]: 0) + carry;
+				carry = sum / 10;
+				result.push_back(sum % 10);
+				K /= 10;
+				i--;
+			}
+			reverse(result.begin(), result.end());
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(addToArrayForm({ 9,9,9,9,9,9,9,9,9,9 }, 1));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

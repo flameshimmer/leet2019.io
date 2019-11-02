@@ -1,0 +1,98 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>ClimbingStairs</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>ClimbingStairs</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//You are climbing a stair case. It takes n steps to reach to the top.
+//Each time you can either climb 1 or 2 steps. 
+//In how many distinct ways can you climb to the top?
+//Note: Given n will be a positive integer.
+//
+//Example 1:
+//Input: 2
+//Output: 2
+//Explanation: There are two ways to climb to the top.
+//1. 1 step + 1 step
+//2. 2 steps
+//
+//Example 2:
+//Input: 3
+//Output: 3
+//Explanation: There are three ways to climb to the top.
+//1. 1 step + 1 step + 1 step
+//2. 1 step + 2 steps
+//3. 2 steps + 1 step
+
+namespace Solution2019
+{
+	namespace ClimbingStairs
+	{
+		int ClimbingStairsTooSlow(int n) {
+			if (n < 2) { return 1; }
+			int result = ClimbingStairsTooSlow(n - 1);
+			result += ClimbingStairsTooSlow(n - 2);
+			return result;
+		}
+
+		int ClimibingStairsInternal(int n, int* mem) {
+			if (n < 2) { return 1; }
+			if (mem[n] == -1) {
+				mem[n] = ClimibingStairsInternal(n - 1, mem) + ClimibingStairsInternal(n - 2, mem);
+			}
+			return mem[n];
+		}
+
+		int ClimbingStairsRecursionWithMemTable(int n) {
+			if (n < 2) { return 1; }
+			int* mem = new int[n+1];
+			memset(mem, -1, sizeof(int) * (n+1));
+			mem[0] = 1;
+			mem[1] = 1;
+			return ClimibingStairsInternal(n, mem);
+		}
+
+		// Dp way. 
+		int ClimbingStairs(int n) {
+			if (n < 2) { return 1; }
+			int* mem = new int[n + 1];
+			mem[1] = 1;
+			mem[2] = 2;
+			for (int i = 3; i <= n; i++) {
+				mem[i] = mem[i - 1] + mem[i - 2];
+			}
+			return mem[n];
+		}
+
+		void Main() {
+			print(ClimbingStairs(44));
+			print(ClimbingStairs(2));
+			print(ClimbingStairs(3));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

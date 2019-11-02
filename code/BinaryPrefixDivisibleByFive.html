@@ -1,0 +1,78 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>BinaryPrefixDivisibleByFive</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>BinaryPrefixDivisibleByFive</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+//Given an array A of 0s and 1s, consider N_i: the i-th subarray from 
+//A[0] to A[i] interpreted as a binary number 
+//(from most-significant-bit to least-significant-bit.)
+//
+//Return a list of booleans answer, where answer[i] 
+//is true if and only if N_i is divisible by 5.
+//
+//Example 1:
+//Input: [0,1,1]
+//Output: [true,false,false]
+//Explanation: 
+//The input numbers in binary are 0, 01, 011; which are 
+//0, 1, and 3 in base-10.  Only the first number is 
+//divisible by 5, so answer[0] is true.
+//
+//Example 2:
+//Input: [1,1,1]
+//Output: [false,false,false]
+//
+//Example 3:
+//Input: [0,1,1,1,1,1]
+//Output: [true,false,false,false,true,false]
+//
+//Example 4:
+//Input: [1,1,1,0,1]
+//Output: [false,false,false,false,false]
+
+namespace Solution2019
+{
+	namespace BinaryPrefixDivisibleByFive
+	{
+		vector<bool> prefixesDivBy5(vector<int>& A) {
+			vector<bool> result;
+			int cur = 0;
+			for (int i = 0; i < A.size(); i++) {
+				cur = (cur * 2 + A[i]) % 5;
+				result.push_back(cur == 0);
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

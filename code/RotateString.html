@@ -1,0 +1,74 @@
+<!doctype html>
+	<html>
+	<head>
+	<title>RotateString</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>RotateString</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+/*We are given two strings, A and B.
+
+A shift on A consists of taking string A and moving the 
+leftmost character to the rightmost position. For example, 
+if A = 'abcde', then it will be 'bcdea' after one shift on A. 
+Return True if and only if A can become B after some number
+of shifts on A.
+
+Example 1:
+Input: A = 'abcde', B = 'cdeab'
+Output: true
+
+Example 2:
+Input: A = 'abcde', B = 'abced'
+Output: false
+Note:
+
+A and B will have length at most 100.*/ 
+
+namespace Solution2019
+{
+	namespace RotateString
+	{
+		bool rotateString(string A, string B) {
+			return A.size() == B.size() && (A + A).find(B) != string::npos;
+		}
+
+		bool rotateStringAnother(string A, string B) {
+			B += B;
+			auto pos = B.find(A);
+			if (pos == string::npos) { return false; }
+
+			string s1 = B.substr(0, pos);
+			string s2 = B.substr(pos + A.size());
+			return s2 + s1 == A;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	
