@@ -17,6 +17,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Test::Main(); // Medium
 
 
+	//Solution2019::CheapestFlightsWithinKStops::Main();
+
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
@@ -99,8 +101,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ImplementQueueusingStacks::Main();
 	//Solution2019::NumberofDigitOne::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
-	//Solution2019::ShortestWordDistance::Main();
-	//Solution2019::ShortestWordDistanceII::Main();
 	//Solution2019::StrobogrammaticNumber::Main();
 	//Solution2019::StrobogrammaticNumberII::Main();
 	//Solution2019::StrobogrammaticNumberIII::Main();
@@ -275,7 +275,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReversePairs::Main();
 	//Solution2019::TargetSum::Main();
 	//Solution2019::RandomPointinNonoverlappingRectangles::Main();
-	//Solution2019::DiagonalTraverse::Main();
 	//Solution2019::TheMazeIII::Main();
 	//Solution2019::FindModeinBinarySearchTree::Main();
 	//Solution2019::IPO::Main();
@@ -297,7 +296,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestUncommonSubsequenceII::Main();
 	//Solution2019::ContinuousSubarraySum::Main();
 	//Solution2019::LongestWordinDictionarythroughDeleting::Main();
-	//Solution2019::ContiguousArray::Main();
 	//Solution2019::WordAbbreviation::Main();
 	//Solution2019::GamePlayAnalysisIII::Main();
 	//Solution2019::ConstructBinaryTreefromString::Main();
@@ -377,7 +375,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SmallestRangeCoveringElementsfromKLists::Main();
 	//Solution2019::SumofSquareNumbers::Main();
 	//Solution2019::FindtheDerangementofAnArray::Main();
-	//Solution2019::DesignLogStorageSystem::Main();
 	//Solution2019::ExclusiveTimeofFunctions::Main();
 	//Solution2019::ShoppingOffers::Main();
 	//Solution2019::DecodeWaysII::Main();
@@ -462,11 +459,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SwapAdjacentinLRString::Main();
 	//Solution2019::SwiminRisingWater::Main();
 	//Solution2019::KthSymbolinGrammar::Main();
-	//Solution2019::ReachingPoints::Main();
 	//Solution2019::RabbitsinForest::Main();
 	//Solution2019::IsGraphBipartite::Main();
 	//Solution2019::KthSmallestPrimeFraction::Main();
-	//Solution2019::CheapestFlightsWithinKStops::Main();
 	//Solution2019::EscapeTheGhosts::Main();
 	//Solution2019::DominoandTrominoTiling::Main();
 	//Solution2019::CustomSortString::Main();
@@ -522,7 +517,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BuddyStrings::Main();
 	//Solution2019::ScoreAfterFlippingMatrix::Main();
 	//Solution2019::ShortestSubarraywithSumatLeastK::Main();
-	//Solution2019::AllNodesDistanceKinBinaryTree::Main();
 	//Solution2019::ShortestPathtoGetAllKeys::Main();
 	//Solution2019::SmallestSubtreewithalltheDeepestNodes::Main();
 	//Solution2019::BinaryGap::Main();
@@ -1364,6 +1358,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RestoreIPAddresses::Main();
 	//Solution2019::LeastOperatorstoExpressNumber::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
+
+	// 11/4/2019
+	//Solution2019::AllNodesDistanceKinBinaryTree::Main();
+	//Solution2019::ReachingPoints::Main();
+	//Solution2019::DiagonalTraverse::Main();
+	//Solution2019::ContiguousArray::Main();
+	//Solution2019::DesignLogStorageSystem::Main();
+	//Solution2019::ShortestWordDistance::Main();
+	//Solution2019::ShortestWordDistanceII::Main();
+
+
 
 	//====Problem Ends====
 
