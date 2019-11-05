@@ -1,0 +1,81 @@
+<!doctype html>
+	<html>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151395790-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-151395790-1');
+	</script>	
+	<title>CountPrimes</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="./web/codepage.css" />
+	</head>
+	<body>
+	<h1>CountPrimes</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+	#include "stdafx.h"
+
+//Count the number of prime numbers less than a non-negative number, n.
+//
+//Example:
+//Input: 10
+//Output: 4
+//Explanation: There are 4 prime numbers less than 10, they are 2, 3, 5, 7.
+
+namespace Solution2019
+{
+	namespace CountPrimes
+	{
+		int countPrimes(int n) {
+			if (n < 2) { return 0; }
+
+			vector<bool> notPrime(n, false);
+			notPrime[0] = true;
+			notPrime[1] = true;
+
+			// note that sqrt(n) is a double!!! so can't cast into int to use it. 
+			for (int i = 2; i < sqrt(n); i++) {
+				if (!notPrime[i]) {
+					for (int j = 2; i * j < n; j++) {
+						notPrime[i * j] = true;
+					}
+				}
+			}
+
+			int result = 0;
+			for (int i = 2; i < notPrime.size(); i++) {
+				if (!notPrime[i]) { result++; }
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

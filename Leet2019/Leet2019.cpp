@@ -17,7 +17,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Test::Main(); // Medium
 
 
-	//Solution2019::CheapestFlightsWithinKStops::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -86,7 +85,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DeleteDuplicateEmails::Main();
 	//Solution2019::RisingTemperature::Main
 	//Solution2019::BitwiseANDofNumbersRange::Main();
-	//Solution2019::CountPrimes::Main();
 	//Solution2019::IsomorphicStrings::Main();
 	//Solution2019::ImplementTrie::Main();
 	//Solution2019::CourseScheduleII::Main();
@@ -207,7 +205,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NthDigit::Main();
 	//Solution2019::BinaryWatch::Main();
 	//Solution2019::RemoveKDigits::Main();
-	//Solution2019::FrogJump::Main();
 	//Solution2019::ConvertaNumbertoHexadecimal::Main();
 	//Solution2019::QueueReconstructionbyHeight::Main();
 	//Solution2019::TrappingRainWaterII::Main();
@@ -302,7 +299,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ComplexNumberMultiplication::Main();
 	//Solution2019::SingleElementinaSortedArray::Main();
 	//Solution2019::ZeroOneMatrix::Main();
-	//Solution2019::DiameterofBinaryTree::Main();
 	//Solution2019::OutputContestMatches::Main();
 	//Solution2019::BoundaryofBinaryTree::Main();
 	//Solution2019::RemoveBoxes::Main();
@@ -1359,7 +1355,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LeastOperatorstoExpressNumber::Main();
 	//Solution2019::EvaluateReversePolishNotation::Main();
 
-	// 11/4/2019
+	//11/4/2019
 	//Solution2019::AllNodesDistanceKinBinaryTree::Main();
 	//Solution2019::ReachingPoints::Main();
 	//Solution2019::DiagonalTraverse::Main();
@@ -1368,7 +1364,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ShortestWordDistance::Main();
 	//Solution2019::ShortestWordDistanceII::Main();
 
-
+	//11/5/2019
+	//Solution2019::CheapestFlightsWithinKStops::Main();
+	//Solution2019::DiameterofBinaryTree::Main();
+	//Solution2019::FrogJump::Main();
+	//Solution2019::CountPrimes::Main();
 
 	//====Problem Ends====
 
