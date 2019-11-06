@@ -16,6 +16,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
+	//11/6/2019
+	//Solution2019::GuesstheWord::Main();
+	//Solution2019::VerticalOrderTraversalofaBinaryTree::Main();
+	//Solution2019::ValidSudoku::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -31,7 +35,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PalindromePartitioningII::Main();
 	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
-	//Solution2019::ValidSudoku::Main
 	//Solution2019::NQueensII::Main();
 	//Solution2019::PermutationSequence::Main();
 	//Solution2019::Combinations::Main();
@@ -495,7 +498,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SimilarStringGroups::Main();
 	//Solution2019::KeysandRooms::Main();
 	//Solution2019::SplitArrayintoFibonacciSequence::Main();
-	//Solution2019::GuesstheWord::Main();
 	//Solution2019::LongestMountaininArray::Main();
 	//Solution2019::HandofStraights::Main();
 	//Solution2019::ShortestPathVisitingAllNodes::Main();
@@ -585,7 +587,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TripleswithBitwiseANDEqualToZero::Main();
 	//Solution2019::MinimumCostForTickets::Main();
 	//Solution2019::StringWithoutAAAorBBB::Main();
-	//Solution2019::VerticalOrderTraversalofaBinaryTree::Main();
 	//Solution2019::SmallestStringStartingFromLeaf::Main();
 	//Solution2019::SatisfiabilityofEqualityEquations::Main();
 	//Solution2019::BrokenCalculator::Main();
