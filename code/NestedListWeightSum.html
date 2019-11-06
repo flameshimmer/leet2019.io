@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a nested list of integers, return the sum of all 
 //integers in the list weighted by their depth.
 //
@@ -77,11 +77,11 @@ namespace Solution2019
  *
  *     // Return the nested list that this NestedInteger holds, if it holds a nested list
  *     // The result is undefined if this NestedInteger holds a single integer
- *     const vector<NestedInteger> &getList() const;
+ *     const vector&lt;NestedInteger&gt; &getList() const;
  * };
  */
 		/*
-		void helper(vector<NestedInteger>& list, int depth, int& result) {
+		void helper(vector&lt;NestedInteger&gt;& list, int depth, int& result) {
 			for (NestedInteger i : list) {
 				if (i.isInteger()) { result += i.getInteger() * depth; }
 				else {
@@ -90,7 +90,7 @@ namespace Solution2019
 			}
 		}
 
-		int depthSum(vector<NestedInteger>& nestedList) {
+		int depthSum(vector&lt;NestedInteger&gt;& nestedList) {
 			int result = 0;
 			helper(nestedList, 1, result);
 			return result;
@@ -104,14 +104,14 @@ namespace Solution2019
 
 		namespace iterative {
 		/*
-		    int depthSum(vector<NestedInteger>& nestedList) {
-        queue<NestedInteger> q;
+		    int depthSum(vector&lt;NestedInteger&gt;& nestedList) {
+        queue&lt;NestedInteger&gt; q;
         for (NestedInteger ni: nestedList) {q.push(ni);}
         int result = 0;
         int depth = 1;
         while(!q.empty()) {
             int curQueueSize = q.size();            
-            while(curQueueSize > 0) {
+            while(curQueueSize &gt; 0) {
                 NestedInteger cur = q.front();
                 q.pop(); 
                 if (cur.isInteger()) {result += depth * cur.getInteger();}

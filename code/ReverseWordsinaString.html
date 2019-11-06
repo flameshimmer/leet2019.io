@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an input string, reverse the string word by word.
 //
 //Example 1:
@@ -69,12 +69,12 @@ namespace Solution2019
 
 			int start = 0;
 			int end = 0;
-			while (end < len) {
-				while (end < len && s[end] == ' ') { end++; }
+			while (end &lt; len) {
+				while (end &lt; len && s[end] == ' ') { end++; }
 				if (end == len) { break; }
 
 				start = end;
-				while (end < len && s[end] != ' ') { end++; }
+				while (end &lt; len && s[end] != ' ') { end++; }
 				reverse(s.begin() + start, s.begin() + end);
 			}
 
@@ -82,8 +82,8 @@ namespace Solution2019
 
 			start = 0;
 			end = 0;
-			while (end < len) {
-				if (s[end] != ' ' || (end + 1 < len && s[end + 1] != ' ')) {
+			while (end &lt; len) {
+				if (s[end] != ' ' || (end + 1 &lt; len && s[end + 1] != ' ')) {
 					s[start] = s[end];
 					start++;
 				}
@@ -100,13 +100,13 @@ namespace Solution2019
 			int len = s.size();
 			int wordCount = 0;
 
-			while (end < len) {
-				while (end < len && s[end] == ' ') { end++; }
+			while (end &lt; len) {
+				while (end &lt; len && s[end] == ' ') { end++; }
 				if (end == len) { break; }
-				if (wordCount > 0) { s[start] = ' '; start++; }
+				if (wordCount &gt; 0) { s[start] = ' '; start++; }
 
 				temp = start;
-				while (end < len && s[end] != ' ') {
+				while (end &lt; len && s[end] != ' ') {
 					s[start] = s[end];
 					start++;
 					end++;

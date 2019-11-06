@@ -28,17 +28,17 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //
 //Reverse a linked list from position m to n.Do it in one - pass.
 //
-//Note: 1 <= m <= n <= length of list.
+//Note: 1 &lt;= m &lt;= n &lt;= length of list.
 //
 //  Example :
 //
-//	  Input : 1->2->3->4->5->NULL, m = 2, n = 4
-//		  Output : 1->4->3->2->5->NULL
+//	  Input : 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, m = 2, n = 4
+//		  Output : 1-&gt;4-&gt;3-&gt;2-&gt;5-&gt;NULL
 
 namespace Solution2019
 {
@@ -47,37 +47,37 @@ namespace Solution2019
 
 		ListNode* ReverseLinkedListII(ListNode* l, int m, int n)
 		{
-			if (l == nullptr || l->next == nullptr || m >= n) { return l; }
+			if (l == nullptr || l-&gt;next == nullptr || m &gt;= n) { return l; }
 
 			ListNode* dummy = new ListNode(0);
-			dummy->next = l;
+			dummy-&gt;next = l;
 			ListNode* prev = dummy;
 			ListNode* cur = l;
 			int counter = 1;
 
-			while (counter < m)
+			while (counter &lt; m)
 			{
-				prev = prev->next;
-				cur = cur->next;
+				prev = prev-&gt;next;
+				cur = cur-&gt;next;
 				counter++;
 			}
 
 			ListNode* firstSectionEnd = prev;
 			ListNode* lastSectionStart = cur;
 			ListNode* next = nullptr;
-			while (counter <= n) 
+			while (counter &lt;= n) 
 			{
-				next = cur->next;
-				cur->next = prev;
+				next = cur-&gt;next;
+				cur-&gt;next = prev;
 				if (counter == n) { break; }
 				prev = cur;
 				cur = next;	
 				counter++;
 			}
-			firstSectionEnd->next = cur;
-			lastSectionStart->next = next;
+			firstSectionEnd-&gt;next = cur;
+			lastSectionStart-&gt;next = next;
 
-			ListNode* result = dummy->next;
+			ListNode* result = dummy-&gt;next;
 			delete dummy;
 			return result;
 		}

@@ -28,12 +28,12 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array with n integers, your task is to check if it 
 //could become non - decreasing by modifying at most 1 element.
 //
-//We define an array is non - decreasing if array[i] <= array[i + 1]
-//holds for every i(1 <= i < n).
+//We define an array is non - decreasing if array[i] &lt;= array[i + 1]
+//holds for every i(1 &lt;= i &lt; n).
 //
 //Example 1:
 //Input: [4, 2, 3]
@@ -48,14 +48,14 @@ namespace Solution2019
 {
 	namespace NondecreasingArray
 	{
-		bool checkPossibility(vector<int> nums) {
+		bool checkPossibility(vector&lt;int&gt; nums) {
 			int len = nums.size();
 			int count = 0;
-			for (int i = 1; i < nums.size(); i++) {
-				if (nums[i] < nums[i - 1]) {
+			for (int i = 1; i &lt; nums.size(); i++) {
+				if (nums[i] &lt; nums[i - 1]) {
 					count++;
-					if (count > 1) { return false; }
-					if (i - 2 < 0 || nums[i - 2] < nums[i]) {
+					if (count &gt; 1) { return false; }
+					if (i - 2 &lt; 0 || nums[i - 2] &lt; nums[i]) {
 						nums[i - 1] = nums[i];
 					}
 					else {

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a hit counter which counts the number of hits received in the past 5 minutes.
 //
 //Each function accepts a timestamp parameter (in seconds granularity) and you may 
@@ -99,8 +99,8 @@ namespace Solution2019
 					@param timestamp - The current timestamp (in seconds granularity). */
 				int getHits(int timestamp) {
 					int result = 0;
-					for (int i = 0; i < 300; i++) {
-						if ((long long)timestamp - times[i] < 300) {
+					for (int i = 0; i &lt; 300; i++) {
+						if ((long long)timestamp - times[i] &lt; 300) {
 							result += hits[i];
 						}
 					}
@@ -111,21 +111,21 @@ namespace Solution2019
 			/**
 			 * Your HitCounter object will be instantiated and called as such:
 			 * HitCounter* obj = new HitCounter();
-			 * obj->hit(timestamp);
-			 * int param_2 = obj->getHits(timestamp);
+			 * obj-&gt;hit(timestamp);
+			 * int param_2 = obj-&gt;getHits(timestamp);
 			 */
 		}
 
 		namespace UseHashMap {
 			class HitCounter {
-				map<int, int> hitset;
+				map&lt;int, int&gt; hitset;
 				int sum;
 
 				void updateHitset(int t) {
 					for (auto p = hitset.begin(); p != hitset.end(); p++) {
-						if (t - p->first >= 300) {
-							sum -= p->second;
-							hitset.erase(p->first);
+						if (t - p-&gt;first &gt;= 300) {
+							sum -= p-&gt;second;
+							hitset.erase(p-&gt;first);
 						}
 						else {
 							break;
@@ -158,8 +158,8 @@ namespace Solution2019
 			/**
 			 * Your HitCounter object will be instantiated and called as such:
 			 * HitCounter* obj = new HitCounter();
-			 * obj->hit(timestamp);
-			 * int param_2 = obj->getHits(timestamp);
+			 * obj-&gt;hit(timestamp);
+			 * int param_2 = obj-&gt;getHits(timestamp);
 			 */
 		}
 

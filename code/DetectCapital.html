@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a word, you need to judge whether the 
 //usage of capitals in it is right or not.
 //
@@ -59,7 +59,7 @@ namespace Solution2019
 			int len = word.size();
 			int lastCapIndex = -1;
 			int totalCap = 0;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				if (isupper(word[i])) {
 					totalCap++;
 					lastCapIndex = i;

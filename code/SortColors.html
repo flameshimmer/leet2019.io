@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array with n objects colored red, white or blue, 
 //sort them in-place so that objects of the same color are 
 //adjacent, with the colors in the order red, white and blue.
@@ -55,10 +55,10 @@ namespace Solution2019
 {
 	namespace SortColors
 	{
-		void sortColors(vector<int>& nums) {
+		void sortColors(vector&lt;int&gt;& nums) {
 			int start = 0;
 			int end = nums.size() - 1;
-			for (int i = 0; i <= end; i++) { // ----> note i is <= end, and not < end. 
+			for (int i = 0; i &lt;= end; i++) { // ----&gt; note i is &lt;= end, and not &lt; end. 
 				if (nums[i] == 0) {
 					swap(nums[start], nums[i]);
 					start++;
@@ -66,12 +66,12 @@ namespace Solution2019
 				else if (nums[i] == 2) {
 					swap(nums[i], nums[end]);
 					end--;
-					i--;  //----------> note that i-- is only needed when swapping with 2!!!
+					i--;  //----------&gt; note that i-- is only needed when swapping with 2!!!
 				}
 			}
 		}
 		void Main() {
-			vector<int> test = {2,0,1};
+			vector&lt;int&gt; test = {2,0,1};
 			print(test);
 		}
 	}

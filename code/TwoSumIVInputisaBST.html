@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a Binary Search Tree and a target number, return 
 //true if there exist two elements in the BST such that 
 //their sum is equal to the given target.
@@ -64,15 +64,15 @@ namespace Solution2019
 {
 	namespace TwoSumIVInputisaBST
 	{
-		bool findTarget(TreeNode* node, int k, unordered_set<int>& set) {
+		bool findTarget(TreeNode* node, int k, unordered_set&lt;int&gt;& set) {
 			if (!node) { return false; }
-			if (set.find(k - node->val) != set.end()) { return true; }
-			set.insert(node->val);
-			return findTarget(node->left, k, set) || findTarget(node->right, k, set);
+			if (set.find(k - node-&gt;val) != set.end()) { return true; }
+			set.insert(node-&gt;val);
+			return findTarget(node-&gt;left, k, set) || findTarget(node-&gt;right, k, set);
 		}
 
 		bool findTarget(TreeNode* root, int k) {
-			unordered_set<int> set;
+			unordered_set&lt;int&gt; set;
 			return findTarget(root, k, set);
 		}
 

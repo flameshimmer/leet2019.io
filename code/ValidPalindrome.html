@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string, determine if it is a palindrome, 
 //considering only alphanumeric characters and ignoring cases.
 //
@@ -49,12 +49,12 @@ namespace Solution2019
 	{
 		bool ValidPalindrome(string s) {
 			int len = s.size();
-			if (len < 2) { return true; }
+			if (len &lt; 2) { return true; }
 			int start = 0;
 			int end = len - 1;
-			while (start < end) {
-				while (start < end && !isalnum(s[start])) { start++; }
-				while (start < end && !isalnum(s[end])) { end--; }
+			while (start &lt; end) {
+				while (start &lt; end && !isalnum(s[start])) { start++; }
+				while (start &lt; end && !isalnum(s[end])) { end--; }
 				if (tolower(s[start]) != tolower(s[end])) { return false; }
 				start++;
 				end--;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an arbitrary ransom note stringand another string
 //containing letters from all the magazines, write a 
 //function that will return true if the ransom note can be
@@ -40,9 +40,9 @@
 //Note:
 //You may assume that both strings contain only lowercase letters.
 //
-//canConstruct("a", "b") -> false
-//canConstruct("aa", "ab") -> false
-//canConstruct("aa", "aab") -> true
+//canConstruct("a", "b") -&gt; false
+//canConstruct("aa", "ab") -&gt; false
+//canConstruct("aa", "aab") -&gt; true
 
 namespace Solution2019
 {
@@ -56,7 +56,7 @@ namespace Solution2019
 
 			for (char c : ransomNote) {
 				map[c - 'a']--;
-				if (map[c - 'a'] < 0) { return false; }
+				if (map[c - 'a'] &lt; 0) { return false; }
 			}
 			return true;
 		}

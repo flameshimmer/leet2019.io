@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Merge two sorted linked lists and return it as a new list.
 //The new list should be made by splicing together the nodes of the first two lists.
 
@@ -42,19 +42,19 @@ namespace Solution2019
 			ListNode* head =  nullptr;
 			ListNode* cur = nullptr;
 			while (l1 && l2) {
-				bool l1Smaller = l1->val < l2->val;
+				bool l1Smaller = l1-&gt;val &lt; l2-&gt;val;
 				if (head == nullptr) { 
 					head = l1Smaller ? l1 : l2;
 					cur = head;
 				}
 				else {
-					cur->next = l1Smaller ? l1 : l2;
-					cur = cur->next;
+					cur-&gt;next = l1Smaller ? l1 : l2;
+					cur = cur-&gt;next;
 				}
-				if (l1Smaller) { l1 = l1->next; }
-				else { l2 = l2->next; }
+				if (l1Smaller) { l1 = l1-&gt;next; }
+				else { l2 = l2-&gt;next; }
 			}
-			cur->next = l1 ? l1 : l2;
+			cur-&gt;next = l1 ? l1 : l2;
 			return head;
 		}
 

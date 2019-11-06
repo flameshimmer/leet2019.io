@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array, rotate the array to the right by k steps, where k is non-negative.
 //
 //Example 1:
@@ -55,15 +55,15 @@ namespace Solution2019
 {
 	namespace RotateArray
 	{
-		void reverse(vector<int>& A, int start, int end) {
-			while (start < end) {
+		void reverse(vector&lt;int&gt;& A, int start, int end) {
+			while (start &lt; end) {
 				swap(A[start], A[end]);
 				start++;
 				end--;
 			}
 		}
 
-		void rotate(vector<int>& nums, int k) {
+		void rotate(vector&lt;int&gt;& nums, int k) {
 			int len = nums.size();
 			k %= len;
 			reverse(nums, 0, len - 1);

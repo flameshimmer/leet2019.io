@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a linked list, determine if it has a cycle in it.
 //
 //To represent a cycle in the given linked list, we use an integer pos 
@@ -59,13 +59,13 @@ namespace Solution2019
 	namespace LinkedListCycle
 	{
 		bool LinkedListCycle(ListNode* head) {
-			if (!head || !head->next) { return false; }
+			if (!head || !head-&gt;next) { return false; }
 			ListNode* slow = head;
 			ListNode* fast = head;
-			while (fast && fast->next) {
-				if (fast->next == slow) { return true; }
-				slow = slow->next;
-				fast = fast->next->next;
+			while (fast && fast-&gt;next) {
+				if (fast-&gt;next == slow) { return true; }
+				slow = slow-&gt;next;
+				fast = fast-&gt;next-&gt;next;
 			}
 			return false;
 		}

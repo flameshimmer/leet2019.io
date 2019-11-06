@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A self-dividing number is a number that is divisible 
 //by every digit it contains.
 //
@@ -48,7 +48,7 @@
 //Note:
 //
 //The boundaries of each input argument are 
-//1 <= left <= right <= 10000. 
+//1 &lt;= left &lt;= right &lt;= 10000. 
 
 namespace Solution2019
 {
@@ -65,9 +65,9 @@ namespace Solution2019
 			return true;
 		}
 
-		vector<int> selfDividingNumbers(int left, int right) {
-			vector<int> result;
-			for (int i = left; i <= right; i++) {
+		vector&lt;int&gt; selfDividingNumbers(int left, int right) {
+			vector&lt;int&gt; result;
+			for (int i = left; i &lt;= right; i++) {
 				if (isSelfDividing(i)) { result.push_back(i); }
 			}
 			return result;

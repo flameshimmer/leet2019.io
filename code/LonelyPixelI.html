@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a picture consisting of blackand white pixels, 
 //find the number of black lonely pixels.
 //
@@ -55,7 +55,7 @@ namespace Solution2019
 	namespace LonelyPixelI
 	{
 
-		int findLonelyPixel(vector<vector<char>>& picture) {
+		int findLonelyPixel(vector&lt;vector&lt;char&gt;&gt;& picture) {
 			int rowCount = picture.size();
 			if (rowCount == 0) { return 0; }
 			int colCount = picture[0].size();
@@ -64,8 +64,8 @@ namespace Solution2019
 			int* row = new int[rowCount];
 			int* col = new int[colCount];
 
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					if (picture[i][j] == 'B') {
 						row[i]++;
 						col[j]++;
@@ -73,8 +73,8 @@ namespace Solution2019
 				}			
 			}
 			int result = 0;
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					if (picture[i][j] == 'B' && (row[i] == 1) & (col[j] == 1)) {
 						result++;
 					}

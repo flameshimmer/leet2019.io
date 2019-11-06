@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //For a non-negative integer X, the array-form of X is an 
 //array of its digits in left to right order.  For example,
 //if X = 1231, then the array form is [1,2,3,1].
@@ -57,22 +57,22 @@
 //Explanation: 9999999999 + 1 = 10000000000
 // 
 //Note：
-//1 <= A.length <= 10000
-//0 <= A[i] <= 9
-//0 <= K <= 10000
-//If A.length > 1, then A[0] != 0 
+//1 &lt;= A.length &lt;= 10000
+//0 &lt;= A[i] &lt;= 9
+//0 &lt;= K &lt;= 10000
+//If A.length &gt; 1, then A[0] != 0 
 
 namespace Solution2019
 {
 	namespace AddtoArrayFormofInteger
 	{
-		vector<int> addToArrayForm(vector<int> A, int K) {
-			vector<int> result;
+		vector&lt;int&gt; addToArrayForm(vector&lt;int&gt; A, int K) {
+			vector&lt;int&gt; result;
 			int len = A.size();
 			int i = len - 1;
 			int carry = 0;
-			while (K > 0 || carry > 0 || i >=0) {
-				int sum = (K > 0 ? K % 10 : 0) + (i>=0 ? A[i]: 0) + carry;
+			while (K &gt; 0 || carry &gt; 0 || i &gt;=0) {
+				int sum = (K &gt; 0 ? K % 10 : 0) + (i&gt;=0 ? A[i]: 0) + carry;
 				carry = sum / 10;
 				result.push_back(sum % 10);
 				K /= 10;

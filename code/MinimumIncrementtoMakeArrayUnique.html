@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers A, a move consists of 
 //choosing any A[i], and incrementing it by 1.
 //
@@ -46,14 +46,14 @@
 //It can be shown with 5 or less moves that it is impossible for the array to have all unique values.
 //
 //Note:
-//0 <= A.length <= 40000
-//0 <= A[i] < 40000
+//0 &lt;= A.length &lt;= 40000
+//0 &lt;= A[i] &lt; 40000
 
 namespace Solution2019
 {
 	namespace MinimumIncrementtoMakeArrayUnique
 	{
-		int minIncrementForUnique(vector<int>& A) {
+		int minIncrementForUnique(vector&lt;int&gt;& A) {
 			sort(A.begin(), A.end());
 			int result = 0;
 			int need = 0;

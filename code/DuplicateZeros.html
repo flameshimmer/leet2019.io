@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a fixed length array arr of integers, duplicate each 
 //occurrence of zero, shifting the remaining elements to the right.
 //
@@ -51,22 +51,22 @@
 //	array is modified to: [1,2,3]
 //
 //Note:
-//1 <= arr.length <= 10000
-//0 <= arr[i] <= 9
+//1 &lt;= arr.length &lt;= 10000
+//0 &lt;= arr[i] &lt;= 9
 namespace Solution2019
 {
 	namespace DuplicateZeros
 	{
-		void duplicateZeros(vector<int>& a) {
+		void duplicateZeros(vector&lt;int&gt;& a) {
 			int i = 0;
 			int zc = 0;
-			while (i + zc < a.size()) {
+			while (i + zc &lt; a.size()) {
 				if (a[i] == 0) { zc++; }
 				i++;
 			}
 			i--;
 			while (zc) {
-				if (i + zc < a.size()) {
+				if (i + zc &lt; a.size()) {
 					a[i + zc] = a[i];
 				}
 				if (a[i] == 0) {
@@ -78,7 +78,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<int> input = { 1, 2,3};
+			vector&lt;int&gt; input = { 1, 2,3};
 			duplicateZeros(input);
 			print(input);
 		}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A of non-negative integers, return the maximum 
 //sum of elements in two non-overlapping (contiguous) subarrays, 
 //which have lengths L and M.  (For clarification, the L-length 
@@ -38,8 +38,8 @@
 //(A[i] + A[i+1] + ... + A[i+L-1]) + (A[j] + A[j+1] + ... + A[j+M-1]) 
 //and either:
 //
-//0 <= i < i + L - 1 < j < j + M - 1 < A.length, or
-//0 <= j < j + M - 1 < i < i + L - 1 < A.length.
+//0 &lt;= i &lt; i + L - 1 &lt; j &lt; j + M - 1 &lt; A.length, or
+//0 &lt;= j &lt; j + M - 1 &lt; i &lt; i + L - 1 &lt; A.length.
 // 
 //
 //Example 1:
@@ -58,24 +58,24 @@
 //Explanation: One choice of subarrays is [5,6,0,9] with length 4, and [3,8] with length 3.
 // 
 //Note:
-//L >= 1
-//M >= 1
-//L + M <= A.length <= 1000
-//0 <= A[i] <= 1000
+//L &gt;= 1
+//M &gt;= 1
+//L + M &lt;= A.length &lt;= 1000
+//0 &lt;= A[i] &lt;= 1000
 
 namespace Solution2019
 {
 	namespace MaximumSumofTwoNonOverlappingSubarrays
 	{
-		int maxSumTwoNoOverlap(vector<int>& A, int L, int M) {
+		int maxSumTwoNoOverlap(vector&lt;int&gt;& A, int L, int M) {
 			int len = A.size();
-			for (int i = 1; i < len; i++) {
+			for (int i = 1; i &lt; len; i++) {
 				A[i] += A[i - 1];
 			}
 			int result = A[L + M - 1];
 			int Lmax = A[L - 1];
 			int Mmax = A[M - 1];
-			for (int i = L + M; i < len; i++) {
+			for (int i = L + M; i &lt; len; i++) {
 				Lmax = max(Lmax, A[i - M] - A[i - M - L]);
 				Mmax = max(Mmax, A[i - L] - A[i - L - M]);
 				result = max(result, max(Lmax + A[i] - A[i-M], Mmax + A[i] - A[i-L]));

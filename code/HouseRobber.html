@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //You are a professional robber planning to rob houses along a street. Each house
 //has a certain amount of money stashed, the only constraint stopping you from
@@ -56,7 +56,7 @@ namespace Solution2019
 {
 	namespace HouseRobber
 	{
-		int rob(vector<int>& nums) {
+		int rob(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			if (len == 0) { return 0; }
 			if (len == 1) { return nums[0]; }
@@ -67,7 +67,7 @@ namespace Solution2019
 			M[1] = max(nums[0], nums[1]);
 
 			// M[i] = max(M[i-1], M[i-2] + nums[i])
-			for (int i = 2; i < len; i++) {
+			for (int i = 2; i &lt; len; i++) {
 				M[i % 3] = max(M[(i % 3 - 1 + 3) % 3], M[(i % 3 - 2 + 3) % 3] + nums[i]);
 			}
 			return M[(len - 1) % 3];

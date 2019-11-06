@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a reference of a node in a connected undirected graph, return a deep copy
 //(clone) of the graph. Each node in the graph contains a val (int) and a list
@@ -71,22 +71,22 @@ namespace Solution2019
 		class Node {
 		public:
 			int val;
-			vector<Node*> neighbors;
+			vector&lt;Node*&gt; neighbors;
 
 			Node() {}
 
-			Node(int _val, vector<Node*> _neighbors) {
+			Node(int _val, vector&lt;Node*&gt; _neighbors) {
 				val = _val;
 				neighbors = _neighbors;
 			}
 		};
 
 		namespace DFS {
-			Node* helper(Node* node, unordered_map<Node*, Node*>& map) {
+			Node* helper(Node* node, unordered_map&lt;Node*, Node*&gt;& map) {
 				if (map.find(node) == map.end()) {
-					map[node] = new Node(node->val, {});
-					for (Node* n : node->neighbors) {
-						map[node]->neighbors.push_back(helper(n, map));
+					map[node] = new Node(node-&gt;val, {});
+					for (Node* n : node-&gt;neighbors) {
+						map[node]-&gt;neighbors.push_back(helper(n, map));
 					}
 				}
 				return map[node];
@@ -94,7 +94,7 @@ namespace Solution2019
 
 			Node* cloneGraph(Node* node) {
 				if (!node) { return nullptr; }
-				unordered_map<Node*, Node*> map;
+				unordered_map&lt;Node*, Node*&gt; map;
 				return helper(node, map);
 			}
 		}
@@ -103,21 +103,21 @@ namespace Solution2019
 			Node* cloneGraph(Node* node) {
 				if (!node) { return nullptr; }
 
-				unordered_map<Node*, Node*> map;
-				queue<Node*> q;
+				unordered_map&lt;Node*, Node*&gt; map;
+				queue&lt;Node*&gt; q;
 				q.push(node);
-				map[node] = new Node(node->val, {});
+				map[node] = new Node(node-&gt;val, {});
 
 				while (!q.empty()) {
 					Node* cur = q.front();
 					q.pop();
 
-					for (Node* n : cur->neighbors) {
+					for (Node* n : cur-&gt;neighbors) {
 						if (map.find(n) == map.end()) {
-							map[n] = new Node(n->val, {});
+							map[n] = new Node(n-&gt;val, {});
 							q.push(n);
 						}
-						map[cur]->neighbors.push_back(map[n]);
+						map[cur]-&gt;neighbors.push_back(map[n]);
 					}
 				}
 				return map[node];

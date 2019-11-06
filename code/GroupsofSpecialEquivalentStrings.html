@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are given an array A of strings.
 //
 //Two strings S and T are special-equivalent if after any number
@@ -65,8 +65,8 @@
 //Explanation: 1 group ["abcd","cdab","adcb","cbad"]
 // 
 //Note:
-//1 <= A.length <= 1000
-//1 <= A[i].length <= 20
+//1 &lt;= A.length &lt;= 1000
+//1 &lt;= A[i].length &lt;= 20
 //All A[i] have the same length.
 //All A[i] consist of only lowercase letters.
 
@@ -75,13 +75,13 @@ namespace Solution2019
 	namespace GroupsofSpecialEquivalentStrings
 	{
 
-		int numSpecialEquivGroups(vector<string>& A) {
-			unordered_set<string> set;
+		int numSpecialEquivGroups(vector&lt;string&gt;& A) {
+			unordered_set&lt;string&gt; set;
 			
 			for (string s : A) {
 				string odd;
 				string even;
-				for (int i = 0; i < s.size(); i++) {
+				for (int i = 0; i &lt; s.size(); i++) {
 					if (i % 2 == 0) {
 						even += s[i];
 					}
@@ -97,7 +97,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<string> test = {"abcd","cdab","cbad","xyzz","zzxy","zzyx"};
+			vector&lt;string&gt; test = {"abcd","cdab","cbad","xyzz","zzxy","zzyx"};
 			print(numSpecialEquivGroups(test));
 		}
 	}

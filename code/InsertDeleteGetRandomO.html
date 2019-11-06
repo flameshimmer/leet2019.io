@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a data structure that supports all following 
 //operations in average O(1) time.
 //
@@ -70,8 +70,8 @@ namespace Solution2019
 		class RandomizedSet {
 
 		private:
-			unordered_map<int, int> map;
-			vector<int> nums;
+			unordered_map&lt;int, int&gt; map;
+			vector&lt;int&gt; nums;
 		public:
 			/** Initialize your data structure here. */
 			RandomizedSet() {
@@ -107,9 +107,9 @@ namespace Solution2019
 		/**
 		 * Your RandomizedSet object will be instantiated and called as such:
 		 * RandomizedSet* obj = new RandomizedSet();
-		 * bool param_1 = obj->insert(val);
-		 * bool param_2 = obj->remove(val);
-		 * int param_3 = obj->getRandom();
+		 * bool param_1 = obj-&gt;insert(val);
+		 * bool param_2 = obj-&gt;remove(val);
+		 * int param_3 = obj-&gt;getRandom();
 		 */
 		void Main() {
 			string test = "tst test test";

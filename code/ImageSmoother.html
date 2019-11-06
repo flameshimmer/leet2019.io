@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a 2D integer matrix M representing the gray scale of an image, 
 //you need to design a smoother to make the gray scale of each cell 
 //becomes the average gray scale (rounding down) of all the 8 
@@ -56,28 +56,28 @@ namespace Solution2019
 {
 	namespace ImageSmoother
 	{
-		vector<vector<int>> imageSmoother(vector<vector<int>>& M) {
+		vector&lt;vector&lt;int&gt;&gt; imageSmoother(vector&lt;vector&lt;int&gt;&gt;& M) {
 			int rowCount = M.size();
 			int colCount = M[0].size();
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					int count = 0;
 					int sum = 0;
-					for (int dx = -1; dx <= 1; dx++) {
-						for (int dy = -1; dy <= 1; dy++) {
+					for (int dx = -1; dx &lt;= 1; dx++) {
+						for (int dy = -1; dy &lt;= 1; dy++) {
 							int nx = i + dx;
 							int ny = j + dy;
-							if (nx < 0 || ny < 0 || nx >= rowCount || ny >= colCount) { continue; }
+							if (nx &lt; 0 || ny &lt; 0 || nx &gt;= rowCount || ny &gt;= colCount) { continue; }
 							count++;
 							sum += (M[nx][ny] & 255);
 						}
 					}
-					M[i][j] |= (sum/count) << 8;
+					M[i][j] |= (sum/count) &lt;&lt; 8;
 				}
 			}
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
-					M[i][j] >>= 8;
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
+					M[i][j] &gt;&gt;= 8;
 				}
 			}
 			return M;

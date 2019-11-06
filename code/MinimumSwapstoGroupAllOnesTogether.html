@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary array data, return the minimum number of swaps
 //required to group all 1’s present in the array together in any
 //place in the array.
@@ -56,27 +56,27 @@
 //One possible solution that uses 3 swaps is [0,0,0,0,0,1,1,1,1,1,1].
 // 
 //Note:
-//1 <= data.length <= 10^5
-//0 <= data[i] <= 1
+//1 &lt;= data.length &lt;= 10^5
+//0 &lt;= data[i] &lt;= 1
 
 namespace Solution2019
 {
 	namespace MinimumSwapstoGroupAllOnesTogether
 	{
-		int minSwaps(vector<int>& data) {
+		int minSwaps(vector&lt;int&gt;& data) {
 			int len = data.size();
-			if (len < 3) { return 0; }
+			if (len &lt; 3) { return 0; }
 
 			int totalOneCount = 0;
 			for (int v : data) { if (v == 1) { totalOneCount++; } }
 			
 			int curOneCount = 0;
 			int i = 0;
-			for (; i < totalOneCount; i++) {
+			for (; i &lt; totalOneCount; i++) {
 				if (data[i] == 1) { curOneCount++; }
 			}
 			int maxOneCount = curOneCount;
-			for (; i < len; i++) {
+			for (; i &lt; len; i++) {
 				if (data[i] == 1) { curOneCount++; }
 				if (data[i - totalOneCount] == 1) { curOneCount--; }
 				maxOneCount = max(maxOneCount, curOneCount);

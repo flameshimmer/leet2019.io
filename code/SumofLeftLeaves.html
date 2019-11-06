@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Find the sum of all left leaves in a given binary tree.
 //
 //Example:
@@ -48,9 +48,9 @@ namespace Solution2019
 	{
 		void helper(TreeNode* node, bool isLeft, int& sum) {
 			if (!node) { return; }
-			if (!node->left && !node->right && isLeft) { sum += node->val; }
-			helper(node->left, true, sum);
-			helper(node->right, false, sum);
+			if (!node-&gt;left && !node-&gt;right && isLeft) { sum += node-&gt;val; }
+			helper(node-&gt;left, true, sum);
+			helper(node-&gt;right, false, sum);
 		}
 
 		int sumOfLeftLeaves(TreeNode* root) {
@@ -61,10 +61,10 @@ namespace Solution2019
 
 		int sumOfLeftLeavesAnother(TreeNode* root) {
 			if (!root) { return 0; }
-			if (root->left && !root->left->left && !root->left->right) {
-				return root->left->val + sumOfLeftLeaves(root->right);
+			if (root-&gt;left && !root-&gt;left-&gt;left && !root-&gt;left-&gt;right) {
+				return root-&gt;left-&gt;val + sumOfLeftLeaves(root-&gt;right);
 			}
-			return sumOfLeftLeaves(root->left) + sumOfLeftLeaves(root->right);
+			return sumOfLeftLeaves(root-&gt;left) + sumOfLeftLeaves(root-&gt;right);
 		}
 
 		void Main() {

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two binary trees and imagine that when you put one of 
 //them to cover the other, some nodes of the two trees are 
 //overlapped while the others are not.
@@ -65,27 +65,27 @@ namespace Solution2019
 		TreeNode* mergeTrees(TreeNode* t1, TreeNode* t2) {
 			if (!t1 || !t2) { return t1 ? t1 : t2; }
 
-			TreeNode* newNode = new TreeNode(t1->val + t2->val);
-			newNode->left = mergeTrees(t1->left, t2->left);
-			newNode->right = mergeTrees(t1->right, t2->right);
+			TreeNode* newNode = new TreeNode(t1-&gt;val + t2-&gt;val);
+			newNode-&gt;left = mergeTrees(t1-&gt;left, t2-&gt;left);
+			newNode-&gt;right = mergeTrees(t1-&gt;right, t2-&gt;right);
 			return newNode;
 		}
 
 		TreeNode* mergeTreesIterative(TreeNode* t1, TreeNode* t2) {
 			if (!t1 || !t2) { return t1 ? t1 : t2; }
-			stack<pair<TreeNode*, TreeNode*>> s;
+			stack&lt;pair&lt;TreeNode*, TreeNode*&gt;&gt; s;
 			s.push({ t1, t2 });
 			while (!s.empty()) {
-				pair<TreeNode*, TreeNode*> top = s.top();
+				pair&lt;TreeNode*, TreeNode*&gt; top = s.top();
 				s.pop();
 				TreeNode* n1 = top.first;
 				TreeNode* n2 = top.second;
 				
-				n1->val += n2->val;
-				if (!n1->left && n2->left) { n1->left = n2->left; }
-				else if (n1->left && n2->left) { s.push({ n1->left, n2->left }); } //// Note this is else if!!!! Since we modified the tree in the last line
-				if (!n1->right && n2->right) {n1->right = n2->right; }				
-				else if (n1->right && n2->right) { s.push({ n1->right, n2->right }); }
+				n1-&gt;val += n2-&gt;val;
+				if (!n1-&gt;left && n2-&gt;left) { n1-&gt;left = n2-&gt;left; }
+				else if (n1-&gt;left && n2-&gt;left) { s.push({ n1-&gt;left, n2-&gt;left }); } //// Note this is else if!!!! Since we modified the tree in the last line
+				if (!n1-&gt;right && n2-&gt;right) {n1-&gt;right = n2-&gt;right; }				
+				else if (n1-&gt;right && n2-&gt;right) { s.push({ n1-&gt;right, n2-&gt;right }); }
 			}
 			return t1;
 		}
@@ -94,19 +94,19 @@ namespace Solution2019
 			TreeNode* n3 = new TreeNode(3);
 			TreeNode* n2 = new TreeNode(2);
 			TreeNode* n5 = new TreeNode(5);
-			n1->left = n3;
-			n1->right = n2;
-			n3->left = n5;
+			n1-&gt;left = n3;
+			n1-&gt;right = n2;
+			n3-&gt;left = n5;
 
 			TreeNode* m2 = new TreeNode(2);
 			TreeNode* m1 = new TreeNode(1);
 			TreeNode* m3 = new TreeNode(3);
 			TreeNode* m4 = new TreeNode(4);
 			TreeNode* m7 = new TreeNode(7);
-			m2->left = m1;
-			m1->right = m4;
-			m2->right = m3;
-			m3->right = m7;
+			m2-&gt;left = m1;
+			m1-&gt;right = m4;
+			m2-&gt;right = m3;
+			m3-&gt;right = m7;
 
 			mergeTreesIterative(n1, m2);
 		}

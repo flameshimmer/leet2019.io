@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a linked list, return the node where the cycle begins. 
 //If there is no cycle, return null.
 //
@@ -60,17 +60,17 @@ namespace Solution2019
 	namespace LinkedListCycleII
 	{
 		ListNode *detectCycle(ListNode *head) {
-			if (!head || !head->next) { return nullptr; }
-			ListNode* slow = head->next;
-			ListNode* fast = head->next->next;
-			while (fast && fast->next) {
+			if (!head || !head-&gt;next) { return nullptr; }
+			ListNode* slow = head-&gt;next;
+			ListNode* fast = head-&gt;next-&gt;next;
+			while (fast && fast-&gt;next) {
 				if (fast == slow) { break; }
-				fast = fast->next->next;
-				slow = slow->next;
+				fast = fast-&gt;next-&gt;next;
+				slow = slow-&gt;next;
 			}
-			if (!fast || !fast->next) { return nullptr; }
+			if (!fast || !fast-&gt;next) { return nullptr; }
 			fast = head;
-			while (fast != slow) { fast = fast->next; slow = slow->next; }
+			while (fast != slow) { fast = fast-&gt;next; slow = slow-&gt;next; }
 			return fast;
 		}
 

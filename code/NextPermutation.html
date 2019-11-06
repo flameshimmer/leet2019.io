@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Implement next permutation, which rearranges numbers into 
 //the lexicographically next greater permutation of numbers.
 //
@@ -48,19 +48,19 @@ namespace Solution2019
 {
 	namespace NextPermutation
 	{
-		void nextPermutation(vector<int>& nums) {
+		void nextPermutation(vector&lt;int&gt;& nums) {
 			int len = nums.size();
-			if (len < 2) { return; }
+			if (len &lt; 2) { return; }
 
 			int i = len - 2;
-			for (; i >= 0; i--) {
-				if (nums[i] < nums[i + 1]) { break; }
+			for (; i &gt;= 0; i--) {
+				if (nums[i] &lt; nums[i + 1]) { break; }
 			}
-			if (i < 0) { sort(nums.begin(), nums.end()); return; }
+			if (i &lt; 0) { sort(nums.begin(), nums.end()); return; }
 
 			int j = len - 1;
-			for (; j > i; j--) {
-				if (nums[j] > nums[i]) { break; }
+			for (; j &gt; i; j--) {
+				if (nums[j] &gt; nums[i]) { break; }
 			}
 			swap(nums[i], nums[j]);
 			reverse(nums.begin() + i + 1, nums.end());

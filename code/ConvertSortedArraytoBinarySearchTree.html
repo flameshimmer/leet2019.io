@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array where elements are sorted in ascending
 //order, convert it to a height balanced BST.
 //
@@ -51,17 +51,17 @@ namespace Solution2019
 {
 	namespace ConvertSortedArraytoBinarySearchTree
 	{
-		TreeNode* helper(vector<int>& nums, int start, int end)
+		TreeNode* helper(vector&lt;int&gt;& nums, int start, int end)
 		{
-			if (start > end) { return nullptr; }
+			if (start &gt; end) { return nullptr; }
 			int mid = start + (end - start) / 2;
 			TreeNode* newNode = new TreeNode(nums[mid]);
-			newNode->left = helper(nums, start, mid - 1);
-			newNode->right = helper(nums, mid + 1, end);
+			newNode-&gt;left = helper(nums, start, mid - 1);
+			newNode-&gt;right = helper(nums, mid + 1, end);
 			return newNode;
 		}
 
-		TreeNode* sortedArrayToBST(vector<int>& nums) {
+		TreeNode* sortedArrayToBST(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			return helper(nums, 0, len - 1);
 		}

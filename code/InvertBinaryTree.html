@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Invert a binary tree.
 //
 //Example:
@@ -57,29 +57,29 @@ namespace Solution2019
 	namespace InvertBinaryTree
 	{
 		TreeNode* invertTreeRecursive(TreeNode* root) {
-			if (!root || (!root->left && !root->right)) { return root; }
+			if (!root || (!root-&gt;left && !root-&gt;right)) { return root; }
 
-			TreeNode* l = root->left;
-			root->left = invertTreeRecursive(root->right);
-			root->right = invertTreeRecursive(l);
+			TreeNode* l = root-&gt;left;
+			root-&gt;left = invertTreeRecursive(root-&gt;right);
+			root-&gt;right = invertTreeRecursive(l);
 			return root;
 		}
 
 		TreeNode* invertTreeIterative(TreeNode* root) {
 			if (!root) { return nullptr; }
 
-			queue<TreeNode*> q;
+			queue&lt;TreeNode*&gt; q;
 			q.push(root);
 			while (!q.empty()) {
 				TreeNode* cur = q.front();
 				q.pop();
 
-				TreeNode* tmp = cur->left;
-				cur->left = cur->right;
-				cur->right = tmp;
+				TreeNode* tmp = cur-&gt;left;
+				cur-&gt;left = cur-&gt;right;
+				cur-&gt;right = tmp;
 
-				if (cur->left) { q.push(cur->left); }
-				if (cur->right) { q.push(cur->right); }
+				if (cur-&gt;left) { q.push(cur-&gt;left); }
+				if (cur-&gt;right) { q.push(cur-&gt;right); }
 			}
 			return root;
 		}

@@ -28,8 +28,8 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-#include <array>
+#include "stdafx.h"
+#include &lt;array&gt;
 //Given an array A of strings made only from lowercase letters, 
 //return a list of all characters that show up in all strings 
 //within the list(including duplicates).For example, if a character 
@@ -47,54 +47,54 @@
 //Output : ["c", "o"]
 //
 //Note :
-//1 <= A.length <= 100
-//1 <= A[i].length <= 100
+//1 &lt;= A.length &lt;= 100
+//1 &lt;= A[i].length &lt;= 100
 //A[i][j] is a lowercase letter
 
 namespace Solution2019
 {
 	namespace FindCommonCharacters
 	{
-		vector<string> FindCommonCharactersSlow(vector<string>& A) {
-			vector<vector<int>> maps(A.size(), vector<int>(26, 0));
+		vector&lt;string&gt; FindCommonCharactersSlow(vector&lt;string&gt;& A) {
+			vector&lt;vector&lt;int&gt;&gt; maps(A.size(), vector&lt;int&gt;(26, 0));
 
-			for (int i = 0; i < A.size(); i++) {
+			for (int i = 0; i &lt; A.size(); i++) {
 				for (char c : A[i]) { maps[i][c - 'a']++; }
 			}
 
-			vector<string> result;
-			for (int i = 0; i < 26; i++) {
+			vector&lt;string&gt; result;
+			for (int i = 0; i &lt; 26; i++) {
 				int minVal = INT_MAX;
 				for (auto& map : maps) {
 					minVal = min(minVal, map[i]);
 				}
-				while (minVal > 0) { result.push_back(string(1, 'a' + i)); minVal--; }
+				while (minVal &gt; 0) { result.push_back(string(1, 'a' + i)); minVal--; }
 			}
 			return result;
 		}
 
-		vector<string> FindCommonCharactor(vector<string>& A) {
+		vector&lt;string&gt; FindCommonCharactor(vector&lt;string&gt;& A) {
 			int global[26];
-			for (int i = 0; i < 26; i++) { global[i] = INT_MAX; }
+			for (int i = 0; i &lt; 26; i++) { global[i] = INT_MAX; }
 
 			for (string str : A) {
 				int local[26] = { 0 };
 				for (char c : str) {
 					local[c - 'a']++;
 				}
-				for (int i = 0; i < 26; i++) {
+				for (int i = 0; i &lt; 26; i++) {
 					global[i] = min(global[i], local[i]);
 				}
 			}
-			vector<string> result;
-			for (int i = 0; i < 26; i++) {
-				for (int j = 0; j < global[i]; j++) { result.push_back(string(1, 'a' + i)); }
+			vector&lt;string&gt; result;
+			for (int i = 0; i &lt; 26; i++) {
+				for (int j = 0; j &lt; global[i]; j++) { result.push_back(string(1, 'a' + i)); }
 			}
 			return result;
 		}
 
 		void Main() {
-			vector<string> A = { "bella", "label", "roller" };
+			vector&lt;string&gt; A = { "bella", "label", "roller" };
 			print(FindCommonCharactor(A));
 			//print(FindCommonCharacters({ "cool", "lock", "cook" }));
 		}

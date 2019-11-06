@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary tree, imagine yourself standing on the right side of it, return the 
 //values of the nodes you can see ordered from top to bottom.
 //
@@ -38,29 +38,29 @@
 //Output: [1, 3, 4]
 //Explanation:
 //
-//   1            <---
+//   1            &lt;---
 // /   \
-//2     3         <---
+//2     3         &lt;---
 // \     \
-//  5     4       <---
+//  5     4       &lt;---
 
 namespace Solution2019
 {
 	namespace BinaryTreeRightSideView
 	{
-		void getNodes(TreeNode* node, vector<int>& result, int height, int& maxHeight) {
+		void getNodes(TreeNode* node, vector&lt;int&gt;& result, int height, int& maxHeight) {
 			if (!node) { return; }
-			if (height > maxHeight) {
+			if (height &gt; maxHeight) {
 				maxHeight = height;
-				result.push_back(node->val);
+				result.push_back(node-&gt;val);
 			}
-			getNodes(node->right, result, height + 1, maxHeight);
-			getNodes(node->left, result, height + 1, maxHeight);
+			getNodes(node-&gt;right, result, height + 1, maxHeight);
+			getNodes(node-&gt;left, result, height + 1, maxHeight);
 		}
 
 
-		vector<int> rightSideView(TreeNode* root) {
-			vector<int> result;
+		vector&lt;int&gt; rightSideView(TreeNode* root) {
+			vector&lt;int&gt; result;
 			if (!root) { return result; }
 
 			int maxHeight = 0;

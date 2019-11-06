@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an unsorted array of integers, find the length 
 //of longest continuous increasing subsequence (subarray).
 //
@@ -49,11 +49,11 @@ namespace Solution2019
 {
 	namespace LongestContinuousIncreasingSubsequence
 	{
-		int findLengthOfLCIS(vector<int>& nums) {
+		int findLengthOfLCIS(vector&lt;int&gt;& nums) {
 			int result = 0;
 			int curLen = 1;
-			for (int i = 1; i <= nums.size(); i++) {
-				if (i == nums.size() || nums[i] <= nums[i - 1]) {
+			for (int i = 1; i &lt;= nums.size(); i++) {
+				if (i == nums.size() || nums[i] &lt;= nums[i - 1]) {
 					result = max(curLen, result);
 					curLen = 1;
 				}

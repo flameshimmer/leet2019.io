@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //The count-and-say sequence is the sequence of integers with the first five terms as following:
 //
 //1.     1
@@ -51,13 +51,13 @@ namespace Solution2019
 	{
 		string CountandSay(int n) {
 			string input = "1";
-			for (int i = 0; i < n - 1; i++) {
+			for (int i = 0; i &lt; n - 1; i++) {
 				int len = input.size();
 				string newInput = "";
 				int j = 0;
-				while (j < len) {
+				while (j &lt; len) {
 					int count = 1;
-					while (j + 1 < len && input[j] == input[j + 1]) { count++; j++; }
+					while (j + 1 &lt; len && input[j] == input[j + 1]) { count++; j++; }
 					newInput += to_string(count) + input[j];
 					j++;
 				}

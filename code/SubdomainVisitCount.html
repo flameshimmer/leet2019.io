@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A website domain like "discuss.leetcode.com" consists of various
 //subdomains. At the top level, we have "com", at the next level,
 //we have "leetcode.com", and at the lowest level, 
@@ -80,15 +80,15 @@ namespace Solution2019
 {
 	namespace SubdomainVisitCount
 	{
-		vector<string> subdomainVisits(vector<string>& cpdomains) {
-			vector<string> result;
+		vector&lt;string&gt; subdomainVisits(vector&lt;string&gt;& cpdomains) {
+			vector&lt;string&gt; result;
 
-			unordered_map<string, int> map;
+			unordered_map&lt;string, int&gt; map;
 			for (string s : cpdomains) {
 				auto it = s.find(" ");
 				int count = stoi(s.substr(0, it));
 				s = s.substr(it + 1);
-				for (int i = 0; i < s.size(); i++) {
+				for (int i = 0; i &lt; s.size(); i++) {
 					if (s[i] == '.') {
 						map[s.substr(i + 1)] += count;
 					}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given inorder and postorder traversal of a tree, 
 //construct the binary tree.
 //
@@ -51,24 +51,24 @@ namespace Solution2019
 {
 	namespace ConstructBinaryTreefromInorderandPostorderTraversal
 	{
-		TreeNode* helper(vector<int>& postorder, int& index, vector<int>& inorder, int start, int end, unordered_map<int, int>& map) {
-			if (start > end) { return nullptr; }
+		TreeNode* helper(vector&lt;int&gt;& postorder, int& index, vector&lt;int&gt;& inorder, int start, int end, unordered_map&lt;int, int&gt;& map) {
+			if (start &gt; end) { return nullptr; }
 
 			int rootVal = postorder[index];
 			TreeNode* newNode = new TreeNode(rootVal);
 			index--;
 
 			int i = map[rootVal];
-			newNode->right = helper(postorder, index, inorder, i + 1, end, map);
-			newNode->left = helper(postorder, index, inorder, start, i - 1, map);
+			newNode-&gt;right = helper(postorder, index, inorder, i + 1, end, map);
+			newNode-&gt;left = helper(postorder, index, inorder, start, i - 1, map);
 			return newNode;
 		}
 
-		TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+		TreeNode* buildTree(vector&lt;int&gt;& inorder, vector&lt;int&gt;& postorder) {
 			int len = inorder.size();
 			int index = len - 1;
-			unordered_map<int, int> map;
-			for (int i = 0; i < len; i++) {
+			unordered_map&lt;int, int&gt; map;
+			for (int i = 0; i &lt; len; i++) {
 				map[inorder[i]] = i;
 			}
 

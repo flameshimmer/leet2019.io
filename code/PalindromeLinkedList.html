@@ -28,17 +28,17 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a singly linked list, determine if it is a palindrome.
 //
 //Example 1:
 //
-//Input: 1->2
+//Input: 1-&gt;2
 //Output: false
 //Example 2:
 //
-//Input: 1->2->2->1
+//Input: 1-&gt;2-&gt;2-&gt;1
 //Output: true
 //Follow up:
 //Could you do it in O(n) time and O(1) space?
@@ -50,27 +50,27 @@ namespace Solution2019
 		bool PalindromeLinkedListNonFollowUp(ListNode* l) {
 			
 			
-			stack<int> s;
+			stack&lt;int&gt; s;
 			ListNode* cur = l;
-			while (cur) { s.push(cur->val); cur = cur->next; }
+			while (cur) { s.push(cur-&gt;val); cur = cur-&gt;next; }
 			cur = l;
 			while (cur) {
-				if (cur->val != s.top()) { return false; }
+				if (cur-&gt;val != s.top()) { return false; }
 				s.pop();
-				cur = cur->next;
+				cur = cur-&gt;next;
 			}
 			return true;
 		}
 		
 		ListNode* ReverseLinkedList(ListNode* l) {
-			if (l == nullptr || l->next == nullptr) { return l; }
+			if (l == nullptr || l-&gt;next == nullptr) { return l; }
 			ListNode* cur = l;
-			ListNode* next = cur->next;
+			ListNode* next = cur-&gt;next;
 			ListNode* nN;
-			cur->next = nullptr;
+			cur-&gt;next = nullptr;
 			while (next) {
-				nN = next->next;
-				next->next = cur;
+				nN = next-&gt;next;
+				next-&gt;next = cur;
 				cur = next;
 				next = nN;
 			}
@@ -78,27 +78,27 @@ namespace Solution2019
 		}
 		bool IsSameLinkedList(ListNode* l1, ListNode* l2) {
 			while (l1 != nullptr && l2 != nullptr) {
-				if (l1->val != l2->val) { return false; }
-				l1 = l1->next;
-				l2 = l2->next;
+				if (l1-&gt;val != l2-&gt;val) { return false; }
+				l1 = l1-&gt;next;
+				l2 = l2-&gt;next;
 			}
 			return true;
 		}
 
 		bool PalindromeLinkedList(ListNode* l) {
-			if (l == nullptr || l->next == nullptr) { return true; }
+			if (l == nullptr || l-&gt;next == nullptr) { return true; }
 			ListNode* back = l;
 			ListNode* front = l;
 			ListNode* prev = nullptr;
-			while (front && front->next) {
-				front = front->next->next;
+			while (front && front-&gt;next) {
+				front = front-&gt;next-&gt;next;
 				prev = back;
-				back = back->next;
+				back = back-&gt;next;
 			}
-			prev->next = nullptr;
+			prev-&gt;next = nullptr;
 
 			ListNode* l2 = back;			
-			if (front != nullptr) { l2 = l2->next; }
+			if (front != nullptr) { l2 = l2-&gt;next; }
 			
 			l2 = ReverseLinkedList(l2);
 			return IsSameLinkedList(l, l2);

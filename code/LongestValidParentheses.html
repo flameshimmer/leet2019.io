@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string containing just the characters '(' and ')', find the
 //length of the longest valid (well-formed) parentheses substring.
 //
@@ -48,12 +48,12 @@ namespace Solution2019
 	{
 		int longestValidParentheses(string s) {
 			int len = s.size();
-			if (len < 2) { return 0; }
+			if (len &lt; 2) { return 0; }
 
-			stack<pair<int, int>> stack;
+			stack&lt;pair&lt;int, int&gt;&gt; stack;
 			s = ")" + s;
 			int result = 0;
-			for (int i = 0; i < len + 1; i++) {
+			for (int i = 0; i &lt; len + 1; i++) {
 				char c = s[i];
 				if (stack.empty() || c == '(' || c == ')' && stack.top().first != '(') {
 					stack.push(make_pair(c, i));
@@ -72,13 +72,13 @@ namespace Solution2019
 			int len = s.size();
 			int curLen = 0;
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				if (s[i] == '(') {
 					counter++;
 					curLen++;
 				}
 				else {
-					if (counter > 0) {
+					if (counter &gt; 0) {
 						counter--;
 						curLen++;
 						if (counter == 0) {
@@ -94,13 +94,13 @@ namespace Solution2019
 
 			counter = 0;
 			curLen = 0;
-			for (int i = len - 1; i >= 0; i--) {
+			for (int i = len - 1; i &gt;= 0; i--) {
 				if (s[i] == ')') {
 					counter++;
 					curLen++;
 				}
 				else {
-					if (counter > 0) {
+					if (counter &gt; 0) {
 						counter--;
 						curLen++;
 						if (counter == 0) {

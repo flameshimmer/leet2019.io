@@ -28,8 +28,8 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-#include <queue> 
+#include "stdafx.h"
+#include &lt;queue&gt; 
 //Median is the middle value in an ordered integer list. If the size of the 
 //list is even, there is no middle value. So the median is the mean of the 
 //two middle value.
@@ -45,9 +45,9 @@
 //Example:
 //addNum(1)
 //addNum(2)
-//findMedian() -> 1.5
+//findMedian() -&gt; 1.5
 //addNum(3) 
-//findMedian() -> 2
+//findMedian() -&gt; 2
 // 
 //Follow up:
 //If all integer numbers from the stream are between 0 and 100, how would you optimize it?
@@ -68,8 +68,8 @@ namespace Solution2019
 	{
 		class MedianFinder {
 		private:
-			priority_queue<long long> smallerHalf;
-			priority_queue<long long> largerHalf;
+			priority_queue&lt;long long&gt; smallerHalf;
+			priority_queue&lt;long long&gt; largerHalf;
 		public:
 			/** initialize your data structure here. */
 			MedianFinder() {
@@ -79,14 +79,14 @@ namespace Solution2019
 				smallerHalf.push(num);
 				largerHalf.push(-smallerHalf.top());
 				smallerHalf.pop();
-				if (smallerHalf.size() < largerHalf.size()) {
+				if (smallerHalf.size() &lt; largerHalf.size()) {
 					smallerHalf.push(-largerHalf.top());
 					largerHalf.pop();
 				}
 			}
 
 			double findMedian() {
-				return smallerHalf.size() > largerHalf.size()
+				return smallerHalf.size() &gt; largerHalf.size()
 					? smallerHalf.top()
 					: (smallerHalf.top() - largerHalf.top()) / 2.0;
 			}
@@ -95,8 +95,8 @@ namespace Solution2019
 		/**
 		 * Your MedianFinder object will be instantiated and called as such:
 		 * MedianFinder* obj = new MedianFinder();
-		 * obj->addNum(num);
-		 * double param_2 = obj->findMedian();
+		 * obj-&gt;addNum(num);
+		 * double param_2 = obj-&gt;findMedian();
 		 */
 
 		void Main() {

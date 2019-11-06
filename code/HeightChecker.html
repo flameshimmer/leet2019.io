@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Students are asked to stand in non-decreasing order 
 //of heights for an annual photo.
 //
@@ -43,18 +43,18 @@
 //Students with heights 4, 3 and the last 1 are not standing in the right positions.
 //
 //Note:
-//1 <= heights.length <= 100
-//1 <= heights[i] <= 100
+//1 &lt;= heights.length &lt;= 100
+//1 &lt;= heights[i] &lt;= 100
 
 namespace Solution2019
 {
 	namespace HeightChecker
 	{
-		int heightChecker(vector<int>& heights) {
-			vector<int> sorted(heights);
+		int heightChecker(vector&lt;int&gt;& heights) {
+			vector&lt;int&gt; sorted(heights);
 			sort(sorted.begin(), sorted.end());
 			int result = 0;
-			for (int i = 0; i < heights.size(); i++) {
+			for (int i = 0; i &lt; heights.size(); i++) {
 				if (heights[i] != sorted[i]) { result++; }
 			}
 			return result;

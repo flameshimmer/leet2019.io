@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A robot is located at the top - left corner of a m x n grid
 //(marked 'Start' in the diagram below).
 //
@@ -50,9 +50,9 @@
 //Explanation :
 //	From the top - left corner, there are a total of 3 ways 
 //	to reach the bottom - right corner :
-//	1. Right->Right->Down
-//	2. Right->Down->Right
-//	3. Down->Right->Right
+//	1. Right-&gt;Right-&gt;Down
+//	2. Right-&gt;Down-&gt;Right
+//	3. Down-&gt;Right-&gt;Right
 //
 //Example 2 :
 //Input : m = 7, n = 3
@@ -72,7 +72,7 @@ namespace Solution2019
 				// reduce the numerator and denominator and get
 				// C = ( (n - k + 1) * (n - k + 2) * ... * n ) / k!
 				double result = 1;
-				for (int i = 1; i <= k; i++) {
+				for (int i = 1; i &lt;= k; i++) {
 					result = result * (N - k + i) / i;
 				}
 				return (int)result;
@@ -80,9 +80,9 @@ namespace Solution2019
 		}
 		namespace DP {
 			int uniquePath(int m, int n) {
-				vector<int>dp(n, 1);
-				for (int i = 1; i < m; i++) {
-					for (int j = 1; j < n; j++) {
+				vector&lt;int&gt;dp(n, 1);
+				for (int i = 1; i &lt; m; i++) {
+					for (int j = 1; j &lt; n; j++) {
 						dp[j] += dp[j - 1];
 					}
 				}
@@ -94,7 +94,7 @@ namespace Solution2019
 		namespace TooSlow {
 			void helper(int row, int col, int rowCount, int colCount, int& result) {
 				if (row == rowCount - 1 && col == colCount - 1) { result++; }
-				if (row >= rowCount || col >= colCount) { return; }
+				if (row &gt;= rowCount || col &gt;= colCount) { return; }
 
 				helper(row + 1, col, rowCount, colCount, result);
 				helper(row, col + 1, rowCount, colCount, result);

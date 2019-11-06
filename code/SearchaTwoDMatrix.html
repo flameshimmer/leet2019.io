@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Write an efficient algorithm that searches for a value 
 //in an m x n matrix. This matrix has the following properties:
 //
@@ -61,7 +61,7 @@ namespace Solution2019
 	namespace SearchaTwoDMatrix
 	{
 		// Treat the whole matrix like a 1 dimensional sorted array
-		bool searchMatrix(vector<vector<int>>& matrix, int target) {
+		bool searchMatrix(vector&lt;vector&lt;int&gt;&gt;& matrix, int target) {
 			int rowCount = matrix.size();
 			if (rowCount == 0) { return false; }
 			int colCount = matrix[0].size();
@@ -69,11 +69,11 @@ namespace Solution2019
 
 			int start = 0;
 			int end = rowCount * colCount - 1;
-			while (start <= end) {
+			while (start &lt;= end) {
 				int mid = start + (end - start) / 2;
 				int midVal = matrix[mid / colCount][mid % colCount];
 				if (midVal == target) { return true; }
-				else if (midVal < target) { start = mid + 1; }
+				else if (midVal &lt; target) { start = mid + 1; }
 				else { end = mid - 1; }
 			}
 			return false;

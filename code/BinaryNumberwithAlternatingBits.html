@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a positive integer, check whether it has alternating
 //bits: namely, if two adjacent bits will always have different values.
 //
@@ -62,11 +62,11 @@ namespace Solution2019
 	{
 		bool hasAlternatingBits(int n) {
 			int last = n & 1;
-			n >>= 1;
+			n &gt;&gt;= 1;
 			while (n) {
 				if ((n & 1) == last) { return false; }
 				last = (n & 1);
-				n >>= 1;
+				n &gt;&gt;= 1;
 			}
 			return true;
 		}

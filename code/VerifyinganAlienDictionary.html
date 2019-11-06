@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //In an alien language, surprisingly they also use english lowercase letters, 
 //but possibly in a different order. The order of the alphabet is some 
 //permutation of lowercase letters.
@@ -45,20 +45,20 @@
 //Example 2:
 //Input: words = ["word","world","row"], order = "worldabcefghijkmnpqstuvxyz"
 //Output: false
-//Explanation: As 'd' comes after 'l' in this language, then words[0] > words[1], 
+//Explanation: As 'd' comes after 'l' in this language, then words[0] &gt; words[1], 
 //hence the sequence is unsorted.
 //
 //Example 3:
 //Input: words = ["apple","app"], order = "abcdefghijklmnopqrstuvwxyz"
 //Output: false
 //Explanation: The first three characters "app" match, and the second string is
-//shorter (in size.) According to lexicographical rules "apple" > "app", 
-//because 'l' > '∅', where '∅' is defined as the blank character which is 
+//shorter (in size.) According to lexicographical rules "apple" &gt; "app", 
+//because 'l' &gt; '∅', where '∅' is defined as the blank character which is 
 //less than any other character (More info).
 //
 //Note:
-//1 <= words.length <= 100
-//1 <= words[i].length <= 20
+//1 &lt;= words.length &lt;= 100
+//1 &lt;= words[i].length &lt;= 20
 //order.length == 26
 //All characters in words[i] and order are english lowercase letters. 
 
@@ -66,28 +66,28 @@ namespace Solution2019
 {
 	namespace VerifyinganAlienDictionary
 	{
-		bool isAlienSorted(vector<string>& words, string order) {
-			unordered_map<char, int> map;
-			for (int i = 0; i < order.size(); i++) {
+		bool isAlienSorted(vector&lt;string&gt;& words, string order) {
+			unordered_map&lt;char, int&gt; map;
+			for (int i = 0; i &lt; order.size(); i++) {
 				map[order[i]] = i;
 			}
 
 			auto comp = [&map](string& w1, string& w2) {
 				int len1 = w1.size();
 				int len2 = w2.size();
-				for (int i = 0; i < min(len1, len2); i++) {
+				for (int i = 0; i &lt; min(len1, len2); i++) {
 					if (w1[i] != w2[i]) {
-						return map[w1[i]] < map[w2[i]];
+						return map[w1[i]] &lt; map[w2[i]];
 					}
 				}
-				return len1 < len2;
+				return len1 &lt; len2;
 			};
 			return is_sorted(words.begin(), words.end(), comp);
 		}
 
-		bool isAlienSortedAnother(vector<string>& words, string order) {
+		bool isAlienSortedAnother(vector&lt;string&gt;& words, string order) {
 			int map[26] = { 0 };
-			for (int i = 0; i < 26; i++) {
+			for (int i = 0; i &lt; 26; i++) {
 				map[order[i] - 'a'] = i;
 			}
 

@@ -28,12 +28,12 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*We have a collection of rocks, each rock has a positive 
 integer weight.
 
 Each turn, we choose the two heaviest rocks and smash them
-together.  Suppose the stones have weights x and y with x <= y.  
+together.  Suppose the stones have weights x and y with x &lt;= y.  
 The result of this smash is:
 
 If x == y, both stones are totally destroyed;
@@ -53,16 +53,16 @@ we combine 1 and 1 to get 0 so the array converts to [1] then
 that's the value of last stone.
  
 Note:
-1 <= stones.length <= 30
-1 <= stones[i] <= 1000*/ 
+1 &lt;= stones.length &lt;= 30
+1 &lt;= stones[i] &lt;= 1000*/ 
 
 namespace Solution2019
 {
 	namespace LastStoneWeight
 	{
-		int lastStoneWeight(vector<int>& stones) {
-			priority_queue<int> q(begin(stones), end(stones));
-			while (q.size() > 1) {
+		int lastStoneWeight(vector&lt;int&gt;& stones) {
+			priority_queue&lt;int&gt; q(begin(stones), end(stones));
+			while (q.size() &gt; 1) {
 				int v1 = q.top();
 				q.pop();
 				int v2 = q.top();
@@ -72,8 +72,8 @@ namespace Solution2019
 			return q.empty() ? 0 : q.top();
 		}
 
-		int lastStoneWeightAnother(vector<int>& stones) {
-			priority_queue<int> q;
+		int lastStoneWeightAnother(vector&lt;int&gt;& stones) {
+			priority_queue&lt;int&gt; q;
 			for (int v : stones) { q.push(v); }
 
 			while (!q.empty())

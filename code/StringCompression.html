@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of characters, compress it in-place.
 //
 //The length after compression must always be smaller 
@@ -77,23 +77,23 @@
 //Note:
 //
 //All characters have an ASCII value in [35, 126].
-//1 <= len(chars) <= 1000.
+//1 &lt;= len(chars) &lt;= 1000.
 
 namespace Solution2019
 {
 	namespace StringCompression
 	{
-		int compress(vector<char>& chars) {
+		int compress(vector&lt;char&gt;& chars) {
 			int copy = 0;
 			int start = 0;
 			int end = 0;
 
 			int len = chars.size();
-			while (end < len) {
-				while (end < len && chars[start] == chars[end]) { end++; }
+			while (end &lt; len) {
+				while (end &lt; len && chars[start] == chars[end]) { end++; }
 				chars[copy] = chars[start];
 				copy++;
-				if (end - start > 1) {
+				if (end - start &gt; 1) {
 					string tmp = to_string(end - start);
 					for (char c : tmp) {
 						chars[copy] = c;

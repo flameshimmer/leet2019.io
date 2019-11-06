@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array nums of n integers and an integer 
 //target, are there elements a, b, c, and d in nums
 //such that a + b + c + d = target? Find all unique 
@@ -53,35 +53,35 @@ namespace Solution2019
 {
 	namespace FourSum
 	{
-		vector<vector<int>> fourSum(vector<int>& nums, int target) {
+		vector&lt;vector&lt;int&gt;&gt; fourSum(vector&lt;int&gt;& nums, int target) {
 			int len = nums.size();
-			vector<vector<int>> result;
-			if (len < 4) { return result; }
+			vector&lt;vector&lt;int&gt;&gt; result;
+			if (len &lt; 4) { return result; }
 
 			sort(nums.begin(), nums.end());
-			for (int i = len - 1; i >= 3; i--) {
-				for (int j = i - 1; j >= 2; j--) {
+			for (int i = len - 1; i &gt;= 3; i--) {
+				for (int j = i - 1; j &gt;= 2; j--) {
 					int l = 0;
 					int r = j - 1;
-					while (l < r) {
+					while (l &lt; r) {
 						int sum = nums[l] + nums[r] + nums[i] + nums[j];
 						if (sum == target) {
 							result.push_back({ nums[l], nums[r], nums[i], nums[j] });
-							while (l < r && nums[l] == nums[l + 1]) { l++; }
-							while (l < r && nums[r - 1] == nums[r]) { r--; }
+							while (l &lt; r && nums[l] == nums[l + 1]) { l++; }
+							while (l &lt; r && nums[r - 1] == nums[r]) { r--; }
 							l++;
 							r--;
 						}
-						else if (sum < target) {
+						else if (sum &lt; target) {
 							l++;
 						}
 						else {
 							r--;
 						}
 					}
-					while (j >= 2 && nums[j] == nums[j - 1]) { j--; }
+					while (j &gt;= 2 && nums[j] == nums[j - 1]) { j--; }
 				}
-				while (i >= 3 && nums[i] == nums[i - 1]) { i--; }
+				while (i &gt;= 3 && nums[i] == nums[i - 1]) { i--; }
 			}
 			return result;
 		}

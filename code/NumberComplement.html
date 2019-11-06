@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*
 Given a positive integer, output its complement number. 
 The complement strategy is to flip the bits of its binary representation.
@@ -55,7 +55,7 @@ namespace Solution2019
 	{
 		int findComplement(int num) {
 			int result = 0;
-			stack<int> s;
+			stack&lt;int&gt; s;
 			while (num) {
 				s.push(num % 2);
 				num /= 2;
@@ -71,12 +71,12 @@ namespace Solution2019
 
 		int findComplementBitManipulation(int num) {
 			unsigned int mask = ~0;
-			while (num & mask) { mask <<= 1; }
+			while (num & mask) { mask &lt;&lt;= 1; }
 			return ~num & ~mask;
 		}
 
 		int findComplementBitManipulation2(int num) {
-			for (long i = 1; i <= num; i *= 2) {
+			for (long i = 1; i &lt;= num; i *= 2) {
 				num ^= i;
 			}
 			return num;

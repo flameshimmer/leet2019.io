@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a singly linked list where elements are sorted 
 //in ascending order, convert it to a height balanced BST.
 //
@@ -52,37 +52,37 @@ namespace Solution2019
 	{
 		TreeNode* ConvertSortedListtoBinarySearchTreeSlow(ListNode* head) {
 			if (!head) { return nullptr; }
-			if (!head->next) { return new TreeNode(head->val); }
+			if (!head-&gt;next) { return new TreeNode(head-&gt;val); }
 
 			ListNode* dummy = new ListNode(-1);
-			dummy->next = head;
+			dummy-&gt;next = head;
 
 			ListNode* slow = dummy;
 			ListNode* fast = dummy;
-			while (fast->next && fast->next->next) {
-				slow = slow->next;
-				fast = fast->next->next;
+			while (fast-&gt;next && fast-&gt;next-&gt;next) {
+				slow = slow-&gt;next;
+				fast = fast-&gt;next-&gt;next;
 			}
-			ListNode* next = slow->next;
-			slow->next = nullptr;
+			ListNode* next = slow-&gt;next;
+			slow-&gt;next = nullptr;
 
-			TreeNode* root = new TreeNode(next->val);
-			root->left = ConvertSortedListtoBinarySearchTreeSlow(head);
-			root->right = ConvertSortedListtoBinarySearchTreeSlow(next->next);
+			TreeNode* root = new TreeNode(next-&gt;val);
+			root-&gt;left = ConvertSortedListtoBinarySearchTreeSlow(head);
+			root-&gt;right = ConvertSortedListtoBinarySearchTreeSlow(next-&gt;next);
 			delete dummy;
 			return root;
 		}
 
 		TreeNode* ConvertInternal(ListNode*& head, int start, int end) {
-			if (!head || start > end) { return nullptr; }
+			if (!head || start &gt; end) { return nullptr; }
 	
 			
 			int mid = start + (end - start) / 2;
 			TreeNode* left = ConvertInternal(head, start, mid - 1);
-			TreeNode* root = new TreeNode(head->val);
-			root->left = left;
-			head = head->next;
-			root->right = ConvertInternal(head, mid + 1, end);
+			TreeNode* root = new TreeNode(head-&gt;val);
+			root-&gt;left = left;
+			head = head-&gt;next;
+			root-&gt;right = ConvertInternal(head, mid + 1, end);
 			return root;
 		}
 
@@ -91,7 +91,7 @@ namespace Solution2019
 			
 			int len = 0; 
 			ListNode* cur = head;
-			while (cur) { cur = cur->next; len++; }
+			while (cur) { cur = cur-&gt;next; len++; }
 			return ConvertInternal(head, 0, len - 1);
 		}
 

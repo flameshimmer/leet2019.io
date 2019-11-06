@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two words (beginWord and endWord), and a dictionary's word list, 
 //find all shortest transformation sequence(s) from beginWord to endWord, such that:
 //Only one letter can be changed at a time
@@ -66,34 +66,34 @@ namespace Solution2019
 {
 	namespace WordLadderII
 	{
-		vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wl) {
-			vector<vector<string>> ans;
-			queue<vector<string>> paths;
-			unordered_set<string> wordList(wl.begin(), wl.end());
+		vector&lt;vector&lt;string&gt;&gt; findLadders(string beginWord, string endWord, vector&lt;string&gt;& wl) {
+			vector&lt;vector&lt;string&gt;&gt; ans;
+			queue&lt;vector&lt;string&gt;&gt; paths;
+			unordered_set&lt;string&gt; wordList(wl.begin(), wl.end());
 			paths.push({ beginWord });
 			int level = 1;
 			int minLevel = INT_MAX;
 
-			unordered_set<string> visited;
+			unordered_set&lt;string&gt; visited;
 
 			while (!paths.empty()) {
-				vector<string> path = paths.front();
+				vector&lt;string&gt; path = paths.front();
 				paths.pop();
 
-				if (path.size() > level) {
+				if (path.size() &gt; level) {
 					for (string w : visited) { wordList.erase(w); }
 					visited.clear();
-					if (path.size() > minLevel) { break; }
+					if (path.size() &gt; minLevel) { break; }
 					else { level = path.size(); }
 				}
 
 				string last = path.back();
-				for (int i = 0; i < last.size(); i++) {
+				for (int i = 0; i &lt; last.size(); i++) {
 					string news = last;
-					for (char c = 'a'; c <= 'z'; c++) {
+					for (char c = 'a'; c &lt;= 'z'; c++) {
 						news[i] = c;
 						if (wordList.find(news) != wordList.end()) {
-							vector<string> newpath = path;
+							vector&lt;string&gt; newpath = path;
 							newpath.push_back(news);
 							visited.insert(news);
 

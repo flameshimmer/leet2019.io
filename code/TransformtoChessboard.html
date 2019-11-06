@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //An N x N board contains only 0s and 1s. In each move, you 
 //can swap any 2 rows with each other, or any 2 columns with 
 //each other.
@@ -45,7 +45,7 @@
 //One potential sequence of moves is shown below, from left to right:
 //
 //0110     1010     1010
-//0110 --> 1010 --> 0101
+//0110 --&gt; 1010 --&gt; 0101
 //1001     0101     1010
 //1001     0101     0101
 //
@@ -76,20 +76,20 @@ namespace Solution2019
 {
 	namespace TransformtoChessboard
 	{
-		int movesToChessboard(vector<vector<int>>& b) {
+		int movesToChessboard(vector&lt;vector&lt;int&gt;&gt;& b) {
 			int N = b.size();
 			int rowSum = 0;
 			int colSum = 0;
 			int rowSwap = 0;
 			int colSwap = 0;
 
-			for (int i = 0; i < N; i++) {
-				for (int j = 0; j < N; j++) {
+			for (int i = 0; i &lt; N; i++) {
+				for (int j = 0; j &lt; N; j++) {
 					if (b[0][0] ^ b[i][0] ^ b[0][j] ^ b[i][j]) { return -1; }
 				}
 			}
 
-			for (int i = 0; i < N; i++) {
+			for (int i = 0; i &lt; N; i++) {
 				rowSum += b[0][i];
 				colSum += b[i][0];
 				rowSwap += b[i][0] == i % 2;

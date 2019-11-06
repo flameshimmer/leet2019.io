@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //You are given two non - empty linked lists representing two non - negative integers.
 //The most significant digit comes first and each of their nodes contain a single digit.
@@ -41,8 +41,8 @@
 //
 //Example :
 //
-//	Input : (7 -> 2 -> 4 -> 3) + (5 -> 6 -> 4)
-//		Output : 7 -> 8 -> 0 -> 7
+//	Input : (7 -&gt; 2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+//		Output : 7 -&gt; 8 -&gt; 0 -&gt; 7
 
 namespace Solution2019
 {
@@ -50,16 +50,16 @@ namespace Solution2019
 	{
 		ListNode* ReverseLinkedList(ListNode* l)
 		{
-			if (l == nullptr || l->next == nullptr) { return l; }
+			if (l == nullptr || l-&gt;next == nullptr) { return l; }
 			ListNode* cur = l;
-			ListNode* next = cur->next;
+			ListNode* next = cur-&gt;next;
 			ListNode* nN;
-			cur->next = nullptr;
+			cur-&gt;next = nullptr;
 
 			while (next)
 			{
-				nN = next->next;
-				next->next = cur;
+				nN = next-&gt;next;
+				next-&gt;next = cur;
 				cur = next;
 				next = nN;
 			}
@@ -78,17 +78,17 @@ namespace Solution2019
 			ListNode* cur = dummy;
 			int carry = 0;
 			while (l3 != nullptr || l4 != nullptr) {
-				int sum = (l3 ? l3->val : 0) + (l4 ? l4->val : 0) + carry;
+				int sum = (l3 ? l3-&gt;val : 0) + (l4 ? l4-&gt;val : 0) + carry;
 				carry = sum / 10;
-				cur->next = new ListNode(sum % 10);
-				cur = cur->next;
+				cur-&gt;next = new ListNode(sum % 10);
+				cur = cur-&gt;next;
 
-				if (l3 != nullptr) { l3 = l3->next; }
-				if (l4 != nullptr) { l4 = l4->next; }
+				if (l3 != nullptr) { l3 = l3-&gt;next; }
+				if (l4 != nullptr) { l4 = l4-&gt;next; }
 			}
 
-			if (carry > 0) { cur->next = new ListNode(carry); }
-			ListNode* result = dummy->next;
+			if (carry &gt; 0) { cur-&gt;next = new ListNode(carry); }
+			ListNode* result = dummy-&gt;next;
 			delete dummy;
 
 			return ReverseLinkedList(result);
@@ -100,7 +100,7 @@ namespace Solution2019
 			
 			while (l != nullptr) {
 				result++;
-				l = l->next;
+				l = l-&gt;next;
 			}
 			return result;
 		}
@@ -113,14 +113,14 @@ namespace Solution2019
 			int sum = 0;
 			if (d1 == d2) 
 			{				
-				sum = l1->val + l2->val + AddTwoNumbersIIInternal(l1->next, l2->next, &next, d1 - 1, d2 - 1);
+				sum = l1-&gt;val + l2-&gt;val + AddTwoNumbersIIInternal(l1-&gt;next, l2-&gt;next, &next, d1 - 1, d2 - 1);
 			} 
 			else
 			{
-				sum = ((d1 > d2) ? l1->val : l2->val) + AddTwoNumbersIIInternal((d1 > d2) ? l1->next : l1, (d1 > d2) ? l2 : l2->next, &next, (d1 > d2) ? d1 - 1 : d1, (d1 > d2) ? d2 : d2-1);
+				sum = ((d1 &gt; d2) ? l1-&gt;val : l2-&gt;val) + AddTwoNumbersIIInternal((d1 &gt; d2) ? l1-&gt;next : l1, (d1 &gt; d2) ? l2 : l2-&gt;next, &next, (d1 &gt; d2) ? d1 - 1 : d1, (d1 &gt; d2) ? d2 : d2-1);
 			}
 			*result = new ListNode(sum % 10);
-			(*result)->next = next;
+			(*result)-&gt;next = next;
 			return sum / 10;
 		}
 
@@ -129,11 +129,11 @@ namespace Solution2019
 			int d2 = GetLinkedListDepth(l2) + 1;
 			ListNode* result;
 			ListNode* dummy1 = new ListNode(0);
-			dummy1->next = l1;
+			dummy1-&gt;next = l1;
 			ListNode* dummy2 = new ListNode(0);
-			dummy2->next = l2;
+			dummy2-&gt;next = l2;
 			AddTwoNumbersIIInternal(dummy1, dummy2, &result, d1, d2);
-			if (result->val == 0) { ListNode* prev = result; result = result->next; delete prev; }
+			if (result-&gt;val == 0) { ListNode* prev = result; result = result-&gt;next; delete prev; }
 			delete dummy1;
 			delete dummy2;
 			return result;
@@ -142,11 +142,11 @@ namespace Solution2019
 		ListNode* AddTwoNumberIIStack(ListNode* l1, ListNode* l2) {
 			if (l1 == nullptr || l2 == nullptr) { return l1 ? l1 : l2; }
 			
-			stack<int> s1;
-			stack<int> s2;
+			stack&lt;int&gt; s1;
+			stack&lt;int&gt; s2;
 
-			while (l1) { s1.push(l1->val); l1 = l1->next; }
-			while (l2) { s2.push(l2->val); l2 = l2->next; }
+			while (l1) { s1.push(l1-&gt;val); l1 = l1-&gt;next; }
+			while (l2) { s2.push(l2-&gt;val); l2 = l2-&gt;next; }
 
 			ListNode* head = nullptr;
 			ListNode* prev = nullptr;
@@ -156,11 +156,11 @@ namespace Solution2019
 				carry = sum / 10;
 				prev = head;
 				head = new ListNode(sum % 10);
-				head->next = prev;
+				head-&gt;next = prev;
 				if (!s1.empty()) { s1.pop(); }
 				if (!s2.empty()) { s2.pop(); }
 			}
-			if (carry > 0) { prev = head; head = new ListNode(carry); head->next = prev; }
+			if (carry &gt; 0) { prev = head; head = new ListNode(carry); head-&gt;next = prev; }
 			return head;
 		}
 

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string s, we make queries on substrings of s.
 //
 //For each query queries[i] = [left, right, k], we may 
@@ -65,18 +65,18 @@
 //"abcba" which is palidrome.
 //
 //Constraints:
-//1 <= s.length, queries.length <= 10^5
-//0 <= queries[i][0] <= queries[i][1] < s.length
-//0 <= queries[i][2] <= s.length
+//1 &lt;= s.length, queries.length &lt;= 10^5
+//0 &lt;= queries[i][0] &lt;= queries[i][1] &lt; s.length
+//0 &lt;= queries[i][2] &lt;= s.length
 //s only contains lowercase English letters. 
 
 namespace Solution2019
 {
 	namespace CanMakePalindromefromSubstring
 	{
-		vector<bool> canMakePaliQueries(string s, vector<vector<int>>& queries) {
-			vector<vector<int>> maps;
-			vector<int> map(26, 0);
+		vector&lt;bool&gt; canMakePaliQueries(string s, vector&lt;vector&lt;int&gt;&gt;& queries) {
+			vector&lt;vector&lt;int&gt;&gt; maps;
+			vector&lt;int&gt; map(26, 0);
 
 			maps.push_back(map);
 
@@ -85,19 +85,19 @@ namespace Solution2019
 				maps.push_back(map);
 			}
 
-			vector<bool> result;
-			for (vector<int>& q : queries) {
+			vector&lt;bool&gt; result;
+			for (vector&lt;int&gt;& q : queries) {
 				int low = q[0];
 				int high = q[1];
 				int k = q[2];
 
 				int diff = 0;
 				int oddCount = 0;
-				for (int i = 0; i < 26; i++) {
+				for (int i = 0; i &lt; 26; i++) {
 					diff = maps[high + 1][i] - maps[low][i];
 					oddCount += diff % 2;
 				}
-				result.push_back(oddCount / 2 <= k);
+				result.push_back(oddCount / 2 &lt;= k);
 			}
 			return result;
 		}

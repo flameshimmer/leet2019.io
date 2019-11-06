@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two integer arrays A and B, return the maximum
 //length of an subarray that appears in both arrays.
 //
@@ -44,23 +44,23 @@
 //
 //Note:
 //
-//1 <= len(A), len(B) <= 1000
-//0 <= A[i], B[i] < 100
+//1 &lt;= len(A), len(B) &lt;= 1000
+//0 &lt;= A[i], B[i] &lt; 100
 
 namespace Solution2019
 {
 	namespace MaximumLengthofRepeatedSubarray
 	{
 
-		int findLength(vector<int>& A, vector<int>& B) {
+		int findLength(vector&lt;int&gt;& A, vector&lt;int&gt;& B) {
 			int lenA = A.size();
 			int lenB = B.size();
 			if (lenA == 0 || lenB == 0) { return 0; }
 
 			int result = 0;
-			vector<vector<int>> dp(lenA + 1, vector<int>(lenB + 1, 0));
-			for (int i = 1; i < lenA+1; i++) {
-				for (int j = 1; j < lenB+1; j++) {
+			vector&lt;vector&lt;int&gt;&gt; dp(lenA + 1, vector&lt;int&gt;(lenB + 1, 0));
+			for (int i = 1; i &lt; lenA+1; i++) {
+				for (int j = 1; j &lt; lenB+1; j++) {
 					if (A[i-1] == B[j-1]) {
 						dp[i][j] = dp[i - 1][j - 1] + 1;
 						result = max(result, dp[i][j]);
@@ -70,8 +70,8 @@ namespace Solution2019
 			return result;
 		}
 		void Main() {
-			vector<int> A = { 1,2,3,2,1 };
-			vector<int> B = { 3,2,1,4,7 };
+			vector&lt;int&gt; A = { 1,2,3,2,1 };
+			vector&lt;int&gt; B = { 3,2,1,4,7 };
 			print(findLength(A, B));
 		}
 	}

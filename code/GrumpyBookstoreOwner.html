@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Today, the bookstore owner has a store open for customers.length minutes.
 //Every minute, some number of customers(customers[i]) enter the store, 
 //and all those customers leave after the end of that minute.
@@ -50,29 +50,29 @@
 //The maximum number of customers that can be satisfied = 1 + 1 + 1 + 1 + 7 + 5 = 16.
 //
 //Note :
-//1 <= X <= customers.length == grumpy.length <= 20000
-//0 <= customers[i] <= 1000
-//0 <= grumpy[i] <= 1
+//1 &lt;= X &lt;= customers.length == grumpy.length &lt;= 20000
+//0 &lt;= customers[i] &lt;= 1000
+//0 &lt;= grumpy[i] &lt;= 1
 
 namespace Solution2019
 {
 	namespace GrumpyBookstoreOwner
 	{
-		int maxSatisfied(vector<int>& customers, vector<int>& grumpy, int X) {
+		int maxSatisfied(vector&lt;int&gt;& customers, vector&lt;int&gt;& grumpy, int X) {
 			int sat = 0;
 			int addSat = 0;
 			int maxAddSat = 0;
-			for (int i = 0; i < customers.size(); i++) {
+			for (int i = 0; i &lt; customers.size(); i++) {
 				sat += grumpy[i] ? 0 : customers[i];
 				addSat += grumpy[i] ? customers[i] : 0;
-				if (i >= X) { addSat -= customers[i - X] * grumpy[i - X]; }
+				if (i &gt;= X) { addSat -= customers[i - X] * grumpy[i - X]; }
 				maxAddSat = max(maxAddSat, addSat);
 			}
 			return sat + maxAddSat;
 		}
 		void Main() {
-			vector<int>customers = { 4, 10, 10 };
-			vector<int>grumpy = { 1, 1, 0 };
+			vector&lt;int&gt;customers = { 4, 10, 10 };
+			vector&lt;int&gt;grumpy = { 1, 1, 0 };
 			print(maxSatisfied(customers, grumpy, 2));
 		}
 	}

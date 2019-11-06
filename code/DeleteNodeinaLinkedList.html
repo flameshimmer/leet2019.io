@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*Write a function to delete a node (except the tail) in a singly 
 linked list, given only access to that node.
 
@@ -38,13 +38,13 @@ Example 1:
 Input: head = [4,5,1,9], node = 5
 Output: [4,1,9]
 	Explanation: You are given the second node with value 5, the linked
-	list should become 4 -> 1 -> 9 after calling your function.
+	list should become 4 -&gt; 1 -&gt; 9 after calling your function.
 
 Example 2:
 Input: head = [4,5,1,9], node = 1
 Output: [4,5,9]
 	Explanation: You are given the third node with value 1, the linked 
-	list should become 4 -> 5 -> 9 after calling your function.
+	list should become 4 -&gt; 5 -&gt; 9 after calling your function.
  
 Note:
 The linked list will have at least two elements.
@@ -59,14 +59,14 @@ namespace Solution2019
 	{
 		void DeleteNodeinaLinkedList(ListNode* head) {
 			
-			while (head->next) {
-				head->val = head->next->val;
-				if (!head->next->next) {
-					ListNode* tmp = head->next;
-					head->next = nullptr;
+			while (head-&gt;next) {
+				head-&gt;val = head-&gt;next-&gt;val;
+				if (!head-&gt;next-&gt;next) {
+					ListNode* tmp = head-&gt;next;
+					head-&gt;next = nullptr;
 					delete tmp;
 				} else {
-					head = head->next;
+					head = head-&gt;next;
 				}
 			}
 		
@@ -76,13 +76,13 @@ namespace Solution2019
 			ListNode* cur = head;
 			ListNode* prev = nullptr;
 
-			while (cur->next) {
-				cur->val = cur->next->val;
+			while (cur-&gt;next) {
+				cur-&gt;val = cur-&gt;next-&gt;val;
 				prev = cur;
-				cur = cur->next;
+				cur = cur-&gt;next;
 			}
 			if (prev) {
-				prev->next = nullptr;
+				prev-&gt;next = nullptr;
 				delete cur;
 			}
 		}

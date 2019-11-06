@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Find the kth largest element in an unsorted array. Note that it is the
 //kth largest element in the sorted order, not the kth distinct element.
 //
@@ -47,13 +47,13 @@ namespace Solution2019
 {
 	namespace KthLargestElementinanArray
 	{
-		int partition(vector<int>& nums, int start, int end, int pivot) {
+		int partition(vector&lt;int&gt;& nums, int start, int end, int pivot) {
 			int pV = nums[start + pivot];
 			swap(nums[start + pivot], nums[end]);
 
 			int copy = start;
-			for (int i = start; i <= end; i++) {
-				if (nums[i] < pV) {
+			for (int i = start; i &lt;= end; i++) {
+				if (nums[i] &lt; pV) {
 					swap(nums[copy], nums[i]);
 					copy++;
 				}
@@ -61,7 +61,7 @@ namespace Solution2019
 			swap(nums[copy], nums[end]);
 
 			if (copy - start == pivot) { return nums[copy]; }
-			else if (copy - start < pivot) {
+			else if (copy - start &lt; pivot) {
 				return partition(nums, copy + 1, end, pivot - (copy - start + 1));
 			}
 			else {
@@ -70,9 +70,9 @@ namespace Solution2019
 
 		}
 
-		int findKthLargest(vector<int>& nums, int k) {
+		int findKthLargest(vector&lt;int&gt;& nums, int k) {
 			int len = nums.size();
-			if (len < k) { return -1; }
+			if (len &lt; k) { return -1; }
 			return partition(nums, 0, len - 1, len - k);
 		}
 

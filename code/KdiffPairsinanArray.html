@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integersand an integer k, you need to find the 
 //number of unique k - diff pairs in the array.Here a k - diff pair 
 //is defined as an integer pair(i, j), where iand j are both numbers
@@ -63,14 +63,14 @@ namespace Solution2019
 {
 	namespace KdiffPairsinanArray
 	{
-		int findPairs(vector<int>& nums, int k) {
-			if (k < 0) { return 0; }
-			unordered_map<int, int> map;
+		int findPairs(vector&lt;int&gt;& nums, int k) {
+			if (k &lt; 0) { return 0; }
+			unordered_map&lt;int, int&gt; map;
 			for (int v : nums) { map[v]++; }
 			int result = 0;
 			for (auto& p : map) {
 				int target = p.first + k;
-				if (target == p.first && p.second > 1) { result++; }
+				if (target == p.first && p.second &gt; 1) { result++; }
 				else if (target != p.first) {
 					if (map.find(target) != map.end()) { result++; }
 				}
@@ -78,20 +78,20 @@ namespace Solution2019
 			return result;
 		}
 
-		int findPairsWithSort(vector<int> nums, int k) {
-			if (k < 0) { return 0; }
+		int findPairsWithSort(vector&lt;int&gt; nums, int k) {
+			if (k &lt; 0) { return 0; }
 			sort(nums.begin(), nums.end());
 			int len = nums.size();
 			int start = 0;
 			int end = 0;
 			int result = 0;
 
-			while (start < len) {
+			while (start &lt; len) {
 				int target = nums[start] + k;
 				int end = start + 1;
-				while (end < len && nums[end] < target) { end++; }
-				if (end < len && nums[end] == target) { result++; }
-				while (start+1 < len && nums[start] == nums[start + 1]) { start++; }
+				while (end &lt; len && nums[end] &lt; target) { end++; }
+				if (end &lt; len && nums[end] == target) { result++; }
+				while (start+1 &lt; len && nums[start] == nums[start + 1]) { start++; }
 				start++;
 			}
 			return result;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Convert a BST to a sorted circular doubly-linked list in-place. Think of the
 //left and right pointers as synonymous to the previous and next pointers in a
@@ -74,17 +74,17 @@ namespace Solution2019
 
 
 		void inorder(Node* n, Node*& prev, Node*& head) {
-			if (!head && !n->left) {
+			if (!head && !n-&gt;left) {
 				head = n;
 				prev = n;
 			}
 
-			Node* left = n->left;
-			Node* right = n->right;
+			Node* left = n-&gt;left;
+			Node* right = n-&gt;right;
 			if (left) { inorder(left, prev, head); }
 
-			prev->right = n;
-			n->left = prev;
+			prev-&gt;right = n;
+			n-&gt;left = prev;
 
 			prev = n;
 			if (right) { inorder(right, prev, head); }
@@ -95,8 +95,8 @@ namespace Solution2019
 			Node* prev = nullptr;
 			Node* head = nullptr;
 			inorder(root, prev, head);
-			prev->right = head;
-			head->left = prev;
+			prev-&gt;right = head;
+			head-&gt;left = prev;
 			return head;
 		}
 

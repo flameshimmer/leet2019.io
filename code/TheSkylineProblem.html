@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //A city's skyline is the outer contour of the silhouette formed by all the 
 //buildings in that city when viewed from a distance. Now suppose you are 
 //given the locations and height of all the buildings as shown on a cityscape
@@ -39,7 +39,7 @@
 //The geometric information of each building is represented by a triplet of 
 //integers [Li, Ri, Hi], where Li and Ri are the x coordinates of the left 
 //and right edge of the ith building, respectively, and Hi is its height. 
-//It is guaranteed that 0 ≤ Li, Ri ≤ INT_MAX, 0 < Hi ≤ INT_MAX, and Ri - Li > 0. 
+//It is guaranteed that 0 ≤ Li, Ri ≤ INT_MAX, 0 &lt; Hi ≤ INT_MAX, and Ri - Li &gt; 0. 
 //You may assume all buildings are perfect rectangles grounded on an 
 //absolutely flat surface at height 0.
 //
@@ -70,44 +70,44 @@ namespace Solution2019
 {
 	namespace TheSkylineProblem
 	{
-		int maxHeight(multiset<int>& heights) {
+		int maxHeight(multiset&lt;int&gt;& heights) {
 			if (heights.empty()) { return 0; }
 			return *heights.rbegin();
 		}
 
-		vector<vector<int>> getSkyline(vector<vector<int>>& buildings) {
-			typedef pair<int, int> Event;
-			vector<Event> events;
-			multiset<int> heights;
+		vector&lt;vector&lt;int&gt;&gt; getSkyline(vector&lt;vector&lt;int&gt;&gt;& buildings) {
+			typedef pair&lt;int, int&gt; Event;
+			vector&lt;Event&gt; events;
+			multiset&lt;int&gt; heights;
 
-			for (vector<int>& b : buildings) {
+			for (vector&lt;int&gt;& b : buildings) {
 				events.push_back({ b[0], b[2] });
 				events.push_back({ b[1], -b[2] });
 			}
 
 			auto comp = [](Event& a, Event& b) {
 				if (a.first == b.first) {
-					return a.second > b.second;
+					return a.second &gt; b.second;
 				}
-				return a.first < b.first;
+				return a.first &lt; b.first;
 			};
 			sort(events.begin(), events.end(), comp);
 
-			vector<vector<int>> results;
+			vector&lt;vector&lt;int&gt;&gt; results;
 			for (Event& e : events) {
 				int x = e.first;
-				bool entering = e.second > 0;
+				bool entering = e.second &gt; 0;
 				int h = abs(e.second);
 
 				if (entering) {
-					if (h > maxHeight(heights)) {
+					if (h &gt; maxHeight(heights)) {
 						results.push_back({ x, h });
 					}
 					heights.insert(h);
 				}
 				else {
 					heights.erase(heights.equal_range(h).first);
-					if (h > maxHeight(heights)) {
+					if (h &gt; maxHeight(heights)) {
 						results.push_back({ x, maxHeight(heights) });
 					}
 				}

@@ -28,15 +28,15 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //
 //Reverse a singly linked list.
 //
 //Example:
 //
-//Input : 1->2->3->4->5->NULL
-//Output : 5->4->3->2->1->NULL
+//Input : 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL
+//Output : 5-&gt;4-&gt;3-&gt;2-&gt;1-&gt;NULL
 //		 Follow up :
 //
 //		A linked list can be reversed either iteratively or recursively.Could you implement both ?
@@ -47,15 +47,15 @@ namespace Solution2019
 	{
 		ListNode* ReverseLinkedList(ListNode* l)
 		{
-			if (l == nullptr || l->next == nullptr) { return l; }
+			if (l == nullptr || l-&gt;next == nullptr) { return l; }
 
 			ListNode* cur = l;
-			ListNode* next = cur->next;
+			ListNode* next = cur-&gt;next;
 			ListNode* nN;
-			cur->next = nullptr;
+			cur-&gt;next = nullptr;
 			while (next) {
-				nN = next->next;
-				next->next = cur;
+				nN = next-&gt;next;
+				next-&gt;next = cur;
 				cur = next;
 				next = nN;
 			}
@@ -63,13 +63,13 @@ namespace Solution2019
 		}
 
 		ListNode* ReverseLinkedListRecursive(ListNode* l) {
-			if (l == nullptr || l->next == nullptr) {
+			if (l == nullptr || l-&gt;next == nullptr) {
 				return l;
 			}
-			ListNode* nextTail = l->next;
-			ListNode* result = ReverseLinkedList(l->next);
-			nextTail->next = l;
-			l->next = nullptr;
+			ListNode* nextTail = l-&gt;next;
+			ListNode* result = ReverseLinkedList(l-&gt;next);
+			nextTail-&gt;next = l;
+			l-&gt;next = nullptr;
 			return result;
 		}
 

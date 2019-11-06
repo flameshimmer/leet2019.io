@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a matrix A, return the transpose of A.
 //
 //The transpose of a matrix is the matrix flipped over it's main
@@ -43,26 +43,26 @@
 //Output: [[1,4],[2,5],[3,6]]
 //
 //Note:
-//1 <= A.length <= 1000
-//1 <= A[0].length <= 1000
+//1 &lt;= A.length &lt;= 1000
+//1 &lt;= A[0].length &lt;= 1000
 
 namespace Solution2019
 {
 	namespace TransposeMatrix
 	{
-		vector<vector<int>> transpose(vector<vector<int>>& A) {
+		vector&lt;vector&lt;int&gt;&gt; transpose(vector&lt;vector&lt;int&gt;&gt;& A) {
 			int rowCount = A.size();
 			int colCount = A[0].size();
-			vector<vector<int>> result(colCount, vector<int>(rowCount, 0));
-			for (int row = 0; row < rowCount; row++) {
-				for (int col = 0; col < colCount; col++) {
+			vector&lt;vector&lt;int&gt;&gt; result(colCount, vector&lt;int&gt;(rowCount, 0));
+			for (int row = 0; row &lt; rowCount; row++) {
+				for (int col = 0; col &lt; colCount; col++) {
 					result[col][row] = A[row][col];					
 				}
 			}
 			return result;
 		}
 		void Main() {
-			vector<vector<int>> A = { {5}, {8} };
+			vector&lt;vector&lt;int&gt;&gt; A = { {5}, {8} };
 			transpose(A);
 		}
 	}

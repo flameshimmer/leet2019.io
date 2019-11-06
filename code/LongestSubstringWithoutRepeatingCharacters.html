@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a string, find the length of the longest substring without repeating characters.
 //
@@ -55,14 +55,14 @@ namespace Solution2019
 		int LongestSubstringWithoutRepeatingCharacters(string s)
 		{
 			int len = s.size();
-			if (len < 2) { return len; }
+			if (len &lt; 2) { return len; }
 
 			int map[256]; // Using int array instead of hashmap. This is very efficient!. 
 			memset(map, -1, sizeof(map)); // using memset to set the init the array!
 			int start = 0;
 			int end = 0;
 			int longest = 0;
-			while (end < len) {
+			while (end &lt; len) {
 				char c = s[end];
 				if (map[c] != -1) {
 					longest = max(longest, end - start);
@@ -79,19 +79,19 @@ namespace Solution2019
 		int LongestSubstringWithoutRepeatingCharactersNotVeryEffecitent(string input)
 		{
 			int len = input.size();
-			if (len < 2) { return len; }
+			if (len &lt; 2) { return len; }
 
-			unordered_map<char, int> map;
+			unordered_map&lt;char, int&gt; map;
 			int start = 0;
 			int end = 0;
 			int result = 0;
 
-			while (end < len)
+			while (end &lt; len)
 			{
 				if (map.find(input[end]) != map.end())
 				{
 					result = max(result, end - start);
-					while (start < map[input[end]])
+					while (start &lt; map[input[end]])
 					{
 						map.erase(input[start]);
 						start++;

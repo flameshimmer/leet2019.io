@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty array of integers, every element 
 //appears twice except for one. Find that single one.
 //
@@ -48,9 +48,9 @@ namespace Solution2019
 {
 	namespace SingleNumber
 	{
-		int singleNumber(vector<int>& nums) {
+		int singleNumber(vector&lt;int&gt;& nums) {
 			int result = nums[0];
-			for (int i = 1; i < nums.size(); i++) {
+			for (int i = 1; i &lt; nums.size(); i++) {
 				result ^= nums[i];
 			}
 			return result;

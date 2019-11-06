@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Given a 32-bit signed integer, reverse digits of an integer.
 //
 //Example 1:
@@ -57,7 +57,7 @@ namespace Solution2019
 				result = result * 10 + val % 10;
 				val /= 10;
 			}
-			if (result > INT_MAX || result < INT_MIN) { return 0; }
+			if (result &gt; INT_MAX || result &lt; INT_MIN) { return 0; }
 			return (int)result;
 		}
 
@@ -66,8 +66,8 @@ namespace Solution2019
 			while (val != 0) {
 				int remain = val % 10;
 				val /= 10;
-				if (result > INT_MAX / 10 || result == INT_MAX / 10 && remain > 7) { return 0; }
-				if (result < INT_MIN / 10 || result == INT_MIN / 10 && remain < -8) { return 0; }
+				if (result &gt; INT_MAX / 10 || result == INT_MAX / 10 && remain &gt; 7) { return 0; }
+				if (result &lt; INT_MIN / 10 || result == INT_MIN / 10 && remain &lt; -8) { return 0; }
 				result = result * 10 + remain;
 			}
 			return result;

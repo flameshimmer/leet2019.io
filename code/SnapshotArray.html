@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Implement a SnapshotArray that supports the following interface:
 //
 //SnapshotArray(int length) initializes an array-like data 
@@ -54,11 +54,11 @@
 // 
 //
 //Constraints:
-//1 <= length <= 50000
+//1 &lt;= length &lt;= 50000
 //At most 50000 calls will be made to set, snap, and get.
-//0 <= index < length
-//0 <= snap_id < (the total number of times we call snap())
-//0 <= val <= 10^9
+//0 &lt;= index &lt; length
+//0 &lt;= snap_id &lt; (the total number of times we call snap())
+//0 &lt;= val &lt;= 10^9
 
 namespace Solution2019
 {
@@ -66,7 +66,7 @@ namespace Solution2019
 	{
 		class SnapshotArray {
 		private:
-			unordered_map<int, vector<pair<int, int>>>snapshots;
+			unordered_map&lt;int, vector&lt;pair&lt;int, int&gt;&gt;&gt;snapshots;
 			int curSnapIndex;
 		public:
 			SnapshotArray(int length) {
@@ -90,16 +90,16 @@ namespace Solution2019
 			int get(int index, int snap_id) {
 				auto it = upper_bound(snapshots[index].begin(), snapshots[index].end(), make_pair(snap_id, INT_MAX));
 				if (it == snapshots[index].begin()) { return 0; }
-				else { return prev(it)->second; }
+				else { return prev(it)-&gt;second; }
 			}
 		};
 
 		/**
 		 * Your SnapshotArray object will be instantiated and called as such:
 		 * SnapshotArray* obj = new SnapshotArray(length);
-		 * obj->set(index,val);
-		 * int param_2 = obj->snap();
-		 * int param_3 = obj->get(index,snap_id);
+		 * obj-&gt;set(index,val);
+		 * int param_2 = obj-&gt;snap();
+		 * int param_3 = obj-&gt;get(index,snap_id);
 		 */
 		void Main() {
 			string test = "tst test test";

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a collection of distinct integers, return all possible permutations.
 //
 //Example:
@@ -48,13 +48,13 @@ namespace Solution2019
 {
 	namespace Permutations
 	{
-		void helper(vector<int>& nums, int start, int len, vector<bool>& candidate, vector<int>& result, vector<vector<int>>& results) {
+		void helper(vector&lt;int&gt;& nums, int start, int len, vector&lt;bool&gt;& candidate, vector&lt;int&gt;& result, vector&lt;vector&lt;int&gt;&gt;& results) {
 			if (start == len) {
 				results.push_back(result);
 				return;
 			}
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				if (candidate[i]) {
 					result.push_back(nums[i]);
 					candidate[i] = false;
@@ -66,19 +66,19 @@ namespace Solution2019
 		}
 
 
-		vector<vector<int>> permute(vector<int>& nums) {
-			vector<vector<int>> results;
+		vector&lt;vector&lt;int&gt;&gt; permute(vector&lt;int&gt;& nums) {
+			vector&lt;vector&lt;int&gt;&gt; results;
 			int len = nums.size();
 			if (len == 0) { return results; }
 
-			vector<int> result;
-			vector<bool> candidate(len, true);
+			vector&lt;int&gt; result;
+			vector&lt;bool&gt; candidate(len, true);
 			helper(nums, 0, len, candidate, result, results);
 			return results;
 		}
 
 		void Main() {
-			vector<int> test = { 1, 2, 3 };
+			vector&lt;int&gt; test = { 1, 2, 3 };
 			print(permute(test));
 		}
 	}

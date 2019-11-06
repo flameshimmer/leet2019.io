@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Implement function ToLowerCase() that has a string parameter str,
 //and returns the same string in lowercase.
 //
@@ -50,7 +50,7 @@ namespace Solution2019
 		string toLowerCase(string str) {
 			string result;
 			for (char c : str) {
-				if (c >= 'A' && c <= 'Z') { c += 32; }
+				if (c &gt;= 'A' && c &lt;= 'Z') { c += 32; }
 				result += c;
 			}
 			return result;

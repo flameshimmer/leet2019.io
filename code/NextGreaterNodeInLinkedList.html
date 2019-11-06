@@ -28,12 +28,12 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We are given a linked list with head as the first node.  
 //Let's number the nodes in the list: node_1, node_2, node_3, ... etc.
 //
 //Each node may have a next larger value: for node_i, next_larger(node_i)
-//is the node_j.val such that j > i, node_j.val > node_i.val, and j is the
+//is the node_j.val such that j &gt; i, node_j.val &gt; node_i.val, and j is the
 //smallest possible choice.  If such a j does not exist, the next larger value is 0.
 //
 //Return an array of integers answer, where answer[i] = next_larger(node_{i+1}).
@@ -55,7 +55,7 @@
 //Output: [7,9,9,9,0,5,0,0]
 //
 //Note:
-//1 <= node.val <= 10^9 for each node in the linked list.
+//1 &lt;= node.val &lt;= 10^9 for each node in the linked list.
 //The given list has length in the range [0, 10000].
 
 namespace Solution2019
@@ -63,51 +63,51 @@ namespace Solution2019
 	namespace NextGreaterNodeInLinkedList
 	{
 		ListNode* ReverseLinkedList(ListNode* head) {
-			if (!head || !head->next) { return head; }
+			if (!head || !head-&gt;next) { return head; }
 			ListNode* cur = head;
-			ListNode* next = head->next;
+			ListNode* next = head-&gt;next;
 			ListNode* nN;
-			cur->next = nullptr;
+			cur-&gt;next = nullptr;
 			while (next) {
-				nN = next->next;
-				next->next = cur;
+				nN = next-&gt;next;
+				next-&gt;next = cur;
 				cur = next;
 				next = nN;
 			}
 			return cur;
 		}
 
-		vector<int> nextLargerNodes(ListNode* head) {
-			vector<int> result;
+		vector&lt;int&gt; nextLargerNodes(ListNode* head) {
+			vector&lt;int&gt; result;
 			if (!head) { return result; }
-			stack<int> s;
+			stack&lt;int&gt; s;
 
 			ListNode* newHead = ReverseLinkedList(head);
 			ListNode* cur = newHead;
 			while (cur) {
-				while (!s.empty() && s.top() <= cur->val) { s.pop(); }
+				while (!s.empty() && s.top() &lt;= cur-&gt;val) { s.pop(); }
 				if (s.empty()) { result.push_back(0); }
 				else { result.push_back(s.top());}
-				s.push(cur->val);
-				cur = cur->next;
+				s.push(cur-&gt;val);
+				cur = cur-&gt;next;
 			}
 			reverse(result.begin(), result.end());
 			return result;
 		}
 
 
-		vector<int> nextLargerNodesSlow(ListNode* head) {
-			vector<int> result;
+		vector&lt;int&gt; nextLargerNodesSlow(ListNode* head) {
+			vector&lt;int&gt; result;
 			if (!head) { return result; }
 			ListNode* cur = head;
 			while (cur) {
-				ListNode* front = cur->next;
+				ListNode* front = cur-&gt;next;
 				while (front) {
-					if (front->val > cur->val) { result.push_back(front->val); break; }
-					front = front->next;
+					if (front-&gt;val &gt; cur-&gt;val) { result.push_back(front-&gt;val); break; }
+					front = front-&gt;next;
 				}
 				if (!front) { result.push_back(0); }	
-				cur = cur->next;
+				cur = cur-&gt;next;
 			}
 			return result;
 		}

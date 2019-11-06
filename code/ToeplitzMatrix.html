@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A matrix is Toeplitz if every diagonal from top-left 
 //to bottom-right has the same element.
 //
@@ -73,28 +73,28 @@ namespace Solution2019
 {
 	namespace ToeplitzMatrix
 	{
-		int GetTargetVal(vector<vector<int>> matrix, int i, int j) {
+		int GetTargetVal(vector&lt;vector&lt;int&gt;&gt; matrix, int i, int j) {
 			int diff = min(i, j);
 			return matrix[i - diff][j - diff];
 		}
-		bool isToeplitzMatrixSlow(vector<vector<int>>& matrix) {
+		bool isToeplitzMatrixSlow(vector&lt;vector&lt;int&gt;&gt;& matrix) {
 			int rowCount = matrix.size();
 			int colCount = matrix[0].size();
 			
-			for (int i = 1; i < rowCount; i++) {
-				for (int j = 1; j < colCount; j++) {
+			for (int i = 1; i &lt; rowCount; i++) {
+				for (int j = 1; j &lt; colCount; j++) {
 					if (matrix[i][j] != GetTargetVal(matrix, i, j)) { return false; }
 				}
 			}
 			return true;
 		}
 
-		bool isToeplitzMatrixHashMap(vector<vector<int>>& matrix) {
+		bool isToeplitzMatrixHashMap(vector&lt;vector&lt;int&gt;&gt;& matrix) {
 			int rowCount = matrix.size();
 			int colCount = matrix[0].size();
-			unordered_map<int, int> map;
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			unordered_map&lt;int, int&gt; map;
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					if (map.find(i - j) == map.end()) { map[i - j] = matrix[i][j]; }
 					else if (map[i - j] != matrix[i][j]) { return false; }
 				}
@@ -102,9 +102,9 @@ namespace Solution2019
 			return true;
 		}
 
-		bool isToeplitzMatrix(vector<vector<int>>& matrix) {
-			for (int i = 1; i < matrix.size(); i++) {
-				for (int j = 1; j < matrix[0].size(); j++) {
+		bool isToeplitzMatrix(vector&lt;vector&lt;int&gt;&gt;& matrix) {
+			for (int i = 1; i &lt; matrix.size(); i++) {
+				for (int j = 1; j &lt; matrix[0].size(); j++) {
 					if (matrix[i][j] != matrix[i - 1][j - 1]) {
 						return false;
 					}

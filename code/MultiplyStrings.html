@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given two non-negative integers num1 and num2 represented as strings, return
 //the product of num1 and num2, also represented as a string.
@@ -42,7 +42,7 @@
 //Output: "56088"
 //
 //Note:
-//The length of both num1 and num2 is < 110.
+//The length of both num1 and num2 is &lt; 110.
 //Both num1 and num2 contain only digits 0-9.
 //Both num1 and num2 do not contain any leading zero, except the number 0 itself.
 //You must not use any built-in BigInteger library or convert the inputs to
@@ -57,9 +57,9 @@ namespace Solution2019
 			int len2 = num2.size();
 			string result(len1 + len2, '0');
 
-			for (int i = len1 - 1; i >= 0; i--) {
+			for (int i = len1 - 1; i &gt;= 0; i--) {
 				int carry = 0;
-				for (int j = len2 - 1; j >= 0; j--) {
+				for (int j = len2 - 1; j &gt;= 0; j--) {
 					int sum = (num1[i] - '0') * (num2[j] - '0') + carry + (result[i + j + 1] - '0');
 					result[i + j + 1] = sum % 10 + '0';
 					carry = sum / 10;
@@ -83,10 +83,10 @@ namespace Solution2019
 				string result;
 				int carry = 0;
 				int sum = 0;
-				while (i1 >= 0 || i2 >= 0 || carry > 0) {
+				while (i1 &gt;= 0 || i2 &gt;= 0 || carry &gt; 0) {
 					sum = carry;
-					if (i1 >= 0) { sum += s1[i1] - '0'; }
-					if (i2 >= 0) { sum += s2[i2] - '0'; }
+					if (i1 &gt;= 0) { sum += s1[i1] - '0'; }
+					if (i2 &gt;= 0) { sum += s2[i2] - '0'; }
 					result.insert(result.begin(), (sum % 10) + '0');
 					carry = sum / 10;
 					i1--;
@@ -101,9 +101,9 @@ namespace Solution2019
 				int sum = 0;
 				int i = s.size() - 1;
 				string result;
-				while (i >= 0 || carry > 0) {
+				while (i &gt;= 0 || carry &gt; 0) {
 					sum = carry;
-					if (i >= 0) { sum += (s[i] - '0') * cv; }
+					if (i &gt;= 0) { sum += (s[i] - '0') * cv; }
 					result.insert(result.begin(), (sum % 10) + '0');
 					carry = sum / 10;
 					i--;
@@ -117,7 +117,7 @@ namespace Solution2019
 				string result = "0";
 				string append = "";
 				string mulResult;
-				for (int i = num2.size() - 1; i >= 0; i--) {
+				for (int i = num2.size() - 1; i &gt;= 0; i--) {
 					mulResult = mul(num1, num2[i]) + append;
 					result = add(result, mulResult);
 					append += '0';

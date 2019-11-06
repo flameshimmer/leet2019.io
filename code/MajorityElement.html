@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Given an array of size n, find the majority element. 
 //The majority element is the element that appears more than ⌊ n/2 ⌋ times.
 //
@@ -47,7 +47,7 @@ namespace Solution2019
 {
 	namespace MajorityElement
 	{
-		int majorityElement(vector<int>& nums) {
+		int majorityElement(vector&lt;int&gt;& nums) {
 			int halfLen = nums.size() / 2;
 			int count = 0;
 			int curMajor = nums[0];
@@ -58,12 +58,12 @@ namespace Solution2019
 			}
 			return curMajor;
 		}
-		int majorityElementWithMap(vector<int>& nums) {
+		int majorityElementWithMap(vector&lt;int&gt;& nums) {
 			int halfLen = nums.size()/2;
-			unordered_map<int, int> map;
+			unordered_map&lt;int, int&gt; map;
 			for (int i : nums) { 
 				map[i]++; 
-				if (map[i] > halfLen) { return i; }
+				if (map[i] &gt; halfLen) { return i; }
 			}
 			return -1;
 		}

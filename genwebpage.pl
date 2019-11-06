@@ -139,7 +139,7 @@ sub createProblemWebPage {
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	$$CODE$$
+$$CODE$$
 	</code>
 	</pre>
 	</figure>
@@ -151,10 +151,16 @@ sub createProblemWebPage {
 	close IN;
 
 	my $line = join('', @lines);
+	$line =~ s/</&lt;/g;
+	$line =~ s/>/&gt;/g;
+
+
 	my $content = $codeblockTemplate;
 	$content =~ s/\$\$CODE\$\$/$line/g;
 	$content = $subpageHeaderTemplate . $content . $subpageFooterTemplate;
 	$content =~ s/\$\$PROBLEM_NAME\$\$/$filename/g;
+
+
 
 	open OUT, ">./code/$filename.html" or die;
 	print OUT $content;

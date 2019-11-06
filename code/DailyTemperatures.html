@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a list of daily temperatures T, return a list such that, for each day in
 //the input, tells you how many days you would have to wait until a warmer
@@ -44,14 +44,14 @@ namespace Solution2019
 {
 	namespace DailyTemperatures
 	{
-		vector<int> dailyTemperatures(vector<int>& T) {
+		vector&lt;int&gt; dailyTemperatures(vector&lt;int&gt;& T) {
 			int len = T.size();
 			if (len == 0) { return {}; }
 
-			vector<int> result(len, 0);
-			stack<int> s;
-			for (int i = 0; i < T.size(); i++) {
-				while (!s.empty() && T[i] > T[s.top()]) {
+			vector&lt;int&gt; result(len, 0);
+			stack&lt;int&gt; s;
+			for (int i = 0; i &lt; T.size(); i++) {
+				while (!s.empty() && T[i] &gt; T[s.top()]) {
 					int cur = s.top();
 					s.pop();
 					result[cur] = i - cur;
@@ -62,7 +62,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<int> test = { 73,74,75,71,69,72,76,73 };
+			vector&lt;int&gt; test = { 73,74,75,71,69,72,76,73 };
 			print(dailyTemperatures(test));
 		}
 	}

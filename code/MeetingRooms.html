@@ -28,9 +28,9 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of meeting time intervals consisting of 
-//start and end times [[s1,e1],[s2,e2],...] (si < ei), 
+//start and end times [[s1,e1],[s2,e2],...] (si &lt; ei), 
 //determine if a person could attend all meetings.
 //
 //Example 1:
@@ -47,16 +47,16 @@ namespace Solution2019
 {
 	namespace MeetingRooms
 	{
-		bool canAttendMeetings(vector<vector<int>>& intervals) {
-			auto comp = [](vector<int>& a, vector<int>& b) {
-				if (a[0] == b[0]) { return a[1] < b[1]; }
-				return a[0] < b[0];
+		bool canAttendMeetings(vector&lt;vector&lt;int&gt;&gt;& intervals) {
+			auto comp = [](vector&lt;int&gt;& a, vector&lt;int&gt;& b) {
+				if (a[0] == b[0]) { return a[1] &lt; b[1]; }
+				return a[0] &lt; b[0];
 			};
 
 			sort(intervals.begin(), intervals.end(), comp);
 
-			for (int i = 1; i < intervals.size(); i++) {
-				if (intervals[i - 1][1] > intervals[i][0]) { return false; }
+			for (int i = 1; i &lt; intervals.size(); i++) {
+				if (intervals[i - 1][1] &gt; intervals[i][0]) { return false; }
 			}
 			return true;
 		}

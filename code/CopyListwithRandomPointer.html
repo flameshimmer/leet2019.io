@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A linked list is given such that each node contains an additional 
 //random pointer which could point to any node in the list or null.
 //
@@ -68,7 +68,7 @@ namespace Solution2019
 		Node* CopyListwithRandomPointerWithHashMap(Node* head) {
 			if (!head) { return nullptr; }
 
-			unordered_map<Node*, Node*> map;
+			unordered_map&lt;Node*, Node*&gt; map;
 			Node* cur = head;
 			Node* prev = nullptr;
 
@@ -77,25 +77,25 @@ namespace Solution2019
 				if (map.find(cur) != map.end()) {
 					copy = map[cur];
 				} else {
-					copy = new Node(cur->val, nullptr, nullptr);
+					copy = new Node(cur-&gt;val, nullptr, nullptr);
 					map.emplace(cur, copy);
 				}
 				
-				if (prev) { prev->next = copy; }
+				if (prev) { prev-&gt;next = copy; }
 				prev = copy;
 
-				if (cur->random != nullptr) {
+				if (cur-&gt;random != nullptr) {
 					Node* random;
-					if (map.find(cur->random) != map.end()) {
-						random = map[cur->random];
+					if (map.find(cur-&gt;random) != map.end()) {
+						random = map[cur-&gt;random];
 					}
 					else {
-						random = new Node(cur->random->val, nullptr, nullptr);
-						map.emplace(cur->random, random);
+						random = new Node(cur-&gt;random-&gt;val, nullptr, nullptr);
+						map.emplace(cur-&gt;random, random);
 					}
-					copy->random = random;
+					copy-&gt;random = random;
 				}
-				cur = cur->next;
+				cur = cur-&gt;next;
 			}
 			return map[head];
 		}
@@ -105,30 +105,30 @@ namespace Solution2019
 			
 			Node* cur = head;
 			while (cur) {
-				Node* copy = new Node(cur->val, nullptr, nullptr);
-				copy->next = cur->next;
-				cur->next = copy;
-				cur = cur->next->next;
+				Node* copy = new Node(cur-&gt;val, nullptr, nullptr);
+				copy-&gt;next = cur-&gt;next;
+				cur-&gt;next = copy;
+				cur = cur-&gt;next-&gt;next;
 			}
 
 			cur = head;
 			while (cur) {
-				if (cur->random) {
-					cur->next->random = cur->random->next;
+				if (cur-&gt;random) {
+					cur-&gt;next-&gt;random = cur-&gt;random-&gt;next;
 				}
-				cur = cur->next->next;
+				cur = cur-&gt;next-&gt;next;
 			}
 
 			Node* newHead = nullptr;
 			Node* newTail = nullptr;
 			cur = head;
 			while (cur) {
-				if (!newHead) { newHead = cur->next; }
-				else { newTail->next = cur->next; }
-				newTail = cur->next;
+				if (!newHead) { newHead = cur-&gt;next; }
+				else { newTail-&gt;next = cur-&gt;next; }
+				newTail = cur-&gt;next;
 
-				cur->next = cur->next->next;
-				cur = cur->next;
+				cur-&gt;next = cur-&gt;next-&gt;next;
+				cur = cur-&gt;next;
 			}
 			return newHead;
 		}

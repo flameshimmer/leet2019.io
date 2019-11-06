@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Let's play the minesweeper game (Wikipedia, online game)!
 //You are given a 2D char matrix representing the game board. 'M' represents an
@@ -89,14 +89,14 @@ namespace Solution2019
 {
 	namespace Minesweeper
 	{
-		void checkMine(vector<vector<char>>& board, int r, int c, int rowCount, int colCount, int& total) {
-			if (r < 0 || r >= rowCount || c < 0 || c >= colCount) { return; }
+		void checkMine(vector&lt;vector&lt;char&gt;&gt;& board, int r, int c, int rowCount, int colCount, int& total) {
+			if (r &lt; 0 || r &gt;= rowCount || c &lt; 0 || c &gt;= colCount) { return; }
 			if (board[r][c] == 'M') { total++; }
 		}
 
-		void checkPos(vector<vector<char>>& board, int r, int c, int rowCount, int colCount) {
-			if (r < 0 || r >= rowCount || c < 0 || c >= colCount) { return; }
-			if (board[r][c] != 'E') { return; } //--> avoid recalculated values!!!!
+		void checkPos(vector&lt;vector&lt;char&gt;&gt;& board, int r, int c, int rowCount, int colCount) {
+			if (r &lt; 0 || r &gt;= rowCount || c &lt; 0 || c &gt;= colCount) { return; }
+			if (board[r][c] != 'E') { return; } //--&gt; avoid recalculated values!!!!
 			int totalMine = 0;
 			checkMine(board, r - 1, c - 1, rowCount, colCount, totalMine);
 			checkMine(board, r - 1, c, rowCount, colCount, totalMine);
@@ -119,7 +119,7 @@ namespace Solution2019
 			}
 		}
 
-		vector<vector<char>> updateBoard(vector<vector<char>>& board, vector<int>& click) {
+		vector&lt;vector&lt;char&gt;&gt; updateBoard(vector&lt;vector&lt;char&gt;&gt;& board, vector&lt;int&gt;& click) {
 			int rowCount = board.size();
 			int colCount = board[0].size();
 			int r = click[0];

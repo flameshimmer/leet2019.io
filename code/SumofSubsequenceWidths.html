@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers A, consider all non-empty
 //subsequences of A. For any sequence S, let the width 
 //of S be the difference between the maximum and minimum 
@@ -47,8 +47,8 @@
 //The sum of these widths is 6.
 // 
 //Note:
-//1 <= A.length <= 20000
-//1 <= A[i] <= 20000
+//1 &lt;= A.length &lt;= 20000
+//1 &lt;= A[i] &lt;= 20000
 
 namespace Solution2019
 {
@@ -63,14 +63,14 @@ namespace Solution2019
 		//so there are 2 ^ (n - i - 1) sequences in which A[i] is minimum.
 		//we should do res -= A[i] * 2 ^ (n - i - 1)
 
-		int sumSubseqWidths(vector<int>& A) {
+		int sumSubseqWidths(vector&lt;int&gt;& A) {
 			sort(A.begin(), A.end());
 			long c = 1;
 			long result = 0;
 			long mod = 1e9 + 7;
 			int len = A.size();
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				result = (result + A[i] * c - A[len - 1 - i] * c) % mod;
 				c = (c * 2) % mod;
 			}

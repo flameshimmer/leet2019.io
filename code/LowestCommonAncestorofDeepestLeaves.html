@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a rooted binary tree, return the lowest common ancestor of its deepest leaves.
 //
 //Recall that:
@@ -62,15 +62,15 @@ namespace Solution2019
 {
 	namespace LowestCommonAncestorofDeepestLeaves
 	{
-		pair<TreeNode*, int> helper(TreeNode* node) {
+		pair&lt;TreeNode*, int&gt; helper(TreeNode* node) {
 			if (!node) { return { nullptr, 0 }; }
 
-			pair<TreeNode*, int> left = helper(node->left);
-			pair<TreeNode*, int> right = helper(node->right);
-			if (left.second > right.second) {
+			pair&lt;TreeNode*, int&gt; left = helper(node-&gt;left);
+			pair&lt;TreeNode*, int&gt; right = helper(node-&gt;right);
+			if (left.second &gt; right.second) {
 				return { left.first, left.second + 1 };
 			}
-			else if (left.second < right.second) {
+			else if (left.second &lt; right.second) {
 				return { right.first, right.second + 1 };
 			}
 			return { node, left.second + 1 };
@@ -85,8 +85,8 @@ namespace Solution2019
 				deepest = max(deepest, depth);
 				if (!node) { return depth; }
 
-				int left = helper(node->left, depth + 1, deepest, result);
-				int right = helper(node->right, depth + 1, deepest, result);
+				int left = helper(node-&gt;left, depth + 1, deepest, result);
+				int right = helper(node-&gt;right, depth + 1, deepest, result);
 				if (left == deepest && right == deepest) {
 					result = node;
 				}

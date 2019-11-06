@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers, find out whether there are two distinct indices i
 // and j in the array such that the absolute difference between nums[i] and nums[j] 
 //is at most t and the absolute difference between iand j is at most k.
@@ -49,18 +49,18 @@ namespace Solution2019
 {
 	namespace ContainsDuplicateIII
 	{
-		bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
-			set<long long> window;
-			for (int i = 0; i < nums.size(); i++) {
-				if (i > k) { window.erase(nums[i - k - 1]); }
+		bool containsNearbyAlmostDuplicate(vector&lt;int&gt;& nums, int k, int t) {
+			set&lt;long long&gt; window;
+			for (int i = 0; i &lt; nums.size(); i++) {
+				if (i &gt; k) { window.erase(nums[i - k - 1]); }
 				auto pos = window.lower_bound((long long)nums[i] - (long long)t);
-				if (pos != window.end() && *pos - nums[i] <= t) { return true; }
+				if (pos != window.end() && *pos - nums[i] &lt;= t) { return true; }
 				window.insert(nums[i]);
 			}
 			return false;
 		}
 		void Main() {
-			vector<int> test = { 1, 5, 9, 1, 5, 9 };
+			vector&lt;int&gt; test = { 1, 5, 9, 1, 5, 9 };
 			print(containsNearbyAlmostDuplicate(test, 2, 3));
 		}
 	}

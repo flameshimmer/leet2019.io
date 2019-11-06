@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Sort a linked list using insertion sort.
 //
 //A graphical example of insertion sort. The partial sorted list 
@@ -45,41 +45,41 @@
 //It repeats until no input elements remain.
 //
 //Example 1:
-//Input: 4->2->1->3
-//Output: 1->2->3->4
+//Input: 4-&gt;2-&gt;1-&gt;3
+//Output: 1-&gt;2-&gt;3-&gt;4
 //Example 2:
 //
-//Input: -1->5->3->4->0
-//Output: -1->0->3->4->5
+//Input: -1-&gt;5-&gt;3-&gt;4-&gt;0
+//Output: -1-&gt;0-&gt;3-&gt;4-&gt;5
 
 namespace Solution2019
 {
 	namespace InsertionSortList
 	{
 		void insert(ListNode* node, ListNode*& newHead, ListNode*& newTail) {
-			if (node->val <= newHead->val) { node->next = newHead; newHead = node; return; }
-			if (node->val >= newTail->val) { newTail->next = node; newTail = node; return; }
+			if (node-&gt;val &lt;= newHead-&gt;val) { node-&gt;next = newHead; newHead = node; return; }
+			if (node-&gt;val &gt;= newTail-&gt;val) { newTail-&gt;next = node; newTail = node; return; }
 			ListNode* cur = newHead;
-			while (cur->next) {
-				if (cur->next->val >= node->val) {
-					node->next = cur->next;
-					cur->next = node;
+			while (cur-&gt;next) {
+				if (cur-&gt;next-&gt;val &gt;= node-&gt;val) {
+					node-&gt;next = cur-&gt;next;
+					cur-&gt;next = node;
 					return;
 				}
-				cur = cur->next;
+				cur = cur-&gt;next;
 			}
 		}
 
 
 		ListNode* insertionSortList(ListNode* head) {
-			if (!head || !head->next) { return head; }
+			if (!head || !head-&gt;next) { return head; }
 			ListNode* cur = head;
 
 			ListNode* newHead = nullptr;
 			ListNode* newTail = nullptr;
 			while (cur) {
-				ListNode* next = cur->next;
-				cur->next = nullptr;
+				ListNode* next = cur-&gt;next;
+				cur-&gt;next = nullptr;
 				if (!newHead) { newHead = cur; newTail = cur; }
 				else {
 					insert(cur, newHead, newTail);

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You have an array of logs.  
 //Each log is a space delimited string of words.
 //
@@ -56,24 +56,24 @@
 //["let1 art can","let3 art zero","let2 own kit dig","dig1 8 1 5 1","dig2 3 6"]
 // 
 //Constraints:
-//0 <= logs.length <= 100
-//3 <= logs[i].length <= 100
+//0 &lt;= logs.length &lt;= 100
+//3 &lt;= logs[i].length &lt;= 100
 //logs[i] is guaranteed to have an identifier, and a word after the identifier.
 
 namespace Solution2019
 {
 	namespace ReorderDatainLogFiles
 	{
-		vector<string> reorderLogFiles(vector<string>& logs) {
+		vector&lt;string&gt; reorderLogFiles(vector&lt;string&gt;& logs) {
 			auto comp = [](string s1, string s2) {
 				int p1 = s1.find(' ');
 				int p2 = s2.find(' ');
 				if (isalpha(s1[p1 + 1]) && isalpha(s2[p2 + 1])) {
 					if (s1.substr(p1 + 1) == s2.substr(p2 + 1)) {
-						return s1.substr(0, p1) < s2.substr(0, p2);
+						return s1.substr(0, p1) &lt; s2.substr(0, p2);
 					}
 					else {
-						return s1.substr(p1 + 1) < s2.substr(p2 + 1);
+						return s1.substr(p1 + 1) &lt; s2.substr(p2 + 1);
 					}
 				}
 				else {
@@ -87,7 +87,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<string> test = { "dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero" };
+			vector&lt;string&gt; test = { "dig1 8 1 5 1","let1 art can","dig2 3 6","let2 own kit dig","let3 art zero" };
 			print(reorderLogFiles(test));
 		}
 	}

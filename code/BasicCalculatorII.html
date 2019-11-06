@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Implement a basic calculator to evaluate a simple expression string.
 //
 //The expression string contains only non-negative integers, +, -, *, 
@@ -63,7 +63,7 @@ namespace Solution2019
 			bool div = false;
 			bool isNeg = false;
 			int prev = 0;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				char c = s[i];
 				switch (c) {
 				case '+':
@@ -83,7 +83,7 @@ namespace Solution2019
 					break;
 				default:
 					long long val = 0;
-					while (i < len && isdigit(s[i])) {
+					while (i &lt; len && isdigit(s[i])) {
 						val = val * 10 + s[i] - '0';
 						i++;
 					}

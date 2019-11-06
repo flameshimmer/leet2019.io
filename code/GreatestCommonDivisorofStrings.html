@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //For strings S and T, we say "T divides S" if and only
 //if S = T + ... + T  (T concatenated with itself 1 or more times)
 //
@@ -48,8 +48,8 @@
 //Output: ""
 // 
 //Note:
-//1 <= str1.length <= 1000
-//1 <= str2.length <= 1000
+//1 &lt;= str1.length &lt;= 1000
+//1 &lt;= str2.length &lt;= 1000
 //str1[i] and str2[i] are English uppercase letters.
 
 namespace Solution2019
@@ -57,7 +57,7 @@ namespace Solution2019
 	namespace GreatestCommonDivisorofStrings
 	{
 		string gcdOfStrings(string str1, string str2) {
-			if (str1.size() < str2.size()) { return gcdOfStrings(str2, str1); }
+			if (str1.size() &lt; str2.size()) { return gcdOfStrings(str2, str1); }
 			else if (str2.empty()) { return str1; }
 			else if (str1.substr(0, str2.size()) != str2) { return ""; }
 			return gcdOfStrings(str1.substr(str2.size()), str2);
@@ -74,7 +74,7 @@ namespace Solution2019
 				int d = gcd(len1, len2);
 				string s = str1.substr(0, d);
 				string str = str1 + str2;
-				for (int i = 0; i < len1 + len2; i += d) {
+				for (int i = 0; i &lt; len1 + len2; i += d) {
 					if (str.substr(i, d) != s) { return ""; }
 				}
 				return s;

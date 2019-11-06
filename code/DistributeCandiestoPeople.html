@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We distribute some number of candies, to a row of 
 //n = num_people people in the following way:
 //
@@ -69,15 +69,15 @@
 //On the fourth turn, ans[0] += 4, and the final array is [5,2,3].
 //
 //Constraints:
-//1 <= candies <= 10^9
-//1 <= num_people <= 1000 
+//1 &lt;= candies &lt;= 10^9
+//1 &lt;= num_people &lt;= 1000 
 
 namespace Solution2019
 {
 	namespace DistributeCandiestoPeople
 	{
-		vector<int> distributeCandies(int candies, int num_people) {
-			vector<int> result(num_people, 0);
+		vector&lt;int&gt; distributeCandies(int candies, int num_people) {
+			vector&lt;int&gt; result(num_people, 0);
 			if (candies == 0) { return result; }
 
 			int cur = 1;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of distinct integers arr, find all pairs of 
 //elements with the minimum absolute difference of any two elements. 
 //
@@ -36,7 +36,7 @@
 //each pair [a, b] follows
 //
 //a, b are from arr
-//a < b
+//a &lt; b
 //b - a equals to the minimum absolute difference of any two 
 //elements in arr
 // 
@@ -56,22 +56,22 @@
 //Output: [[-14,-10],[19,23],[23,27]]
 // 
 //Constraints:
-//2 <= arr.length <= 10^5
-//-10^6 <= arr[i] <= 10^6
+//2 &lt;= arr.length &lt;= 10^5
+//-10^6 &lt;= arr[i] &lt;= 10^6
 
 namespace Solution2019
 {
 	namespace MinimumAbsoluteDifference
 	{
-		vector<vector<int>> minimumAbsDifference(vector<int>& arr) {
+		vector&lt;vector&lt;int&gt;&gt; minimumAbsDifference(vector&lt;int&gt;& arr) {
 			int minDiff = INT_MAX;
 			sort(arr.begin(), arr.end());
 
-			for (int i = 1; i < arr.size(); i++) {
+			for (int i = 1; i &lt; arr.size(); i++) {
 				minDiff = min(minDiff, arr[i] - arr[i - 1]);
 			}
-			vector<vector<int>> result;
-			for (int i = 1; i < arr.size(); i++) {
+			vector&lt;vector&lt;int&gt;&gt; result;
+			for (int i = 1; i &lt; arr.size(); i++) {
 				if (arr[i] - arr[i - 1] == minDiff) {
 					result.push_back({ arr[i - 1], arr[i] });
 				}

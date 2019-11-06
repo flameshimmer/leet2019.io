@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Design a class which receives a list of words in the constructor, and
 //implements a method that takes two words word1 and word2 and return the
@@ -52,23 +52,23 @@ namespace Solution2019
 	{
 		class WordDistance {
 		private:
-			unordered_map<string, vector<int>> map;
+			unordered_map&lt;string, vector&lt;int&gt;&gt; map;
 		public:
-			WordDistance(vector<string>& words) {
-				for (int i = 0; i < words.size(); i++) {
+			WordDistance(vector&lt;string&gt;& words) {
+				for (int i = 0; i &lt; words.size(); i++) {
 					map[words[i]].push_back(i);
 				}
 			}
 
 			int shortest(string word1, string word2) {
-				vector<int> i1s = map[word1];
-				vector<int> i2s = map[word2];
+				vector&lt;int&gt; i1s = map[word1];
+				vector&lt;int&gt; i2s = map[word2];
 				int i1 = 0;
 				int i2 = 0;
 				int result = INT_MAX;
-				while (i1 < i1s.size() && i2 < i2s.size()) {
+				while (i1 &lt; i1s.size() && i2 &lt; i2s.size()) {
 					result = min(result, abs(i1s[i1] - i2s[i2]));
-					if (i1s[i1] < i2s[i2]) { i1++; }
+					if (i1s[i1] &lt; i2s[i2]) { i1++; }
 					else { i2++; }
 				}
 				return result;
@@ -78,7 +78,7 @@ namespace Solution2019
 		/**
 		 * Your WordDistance object will be instantiated and called as such:
 		 * WordDistance* obj = new WordDistance(words);
-		 * int param_1 = obj->shortest(word1,word2);
+		 * int param_1 = obj-&gt;shortest(word1,word2);
 		 */
 		void Main() {
 			string test = "tst test test";

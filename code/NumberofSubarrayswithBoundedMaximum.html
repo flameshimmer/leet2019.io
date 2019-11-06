@@ -28,9 +28,9 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We are given an array A of positive integers, and two positive
-//integers L and R (L <= R).
+//integers L and R (L &lt;= R).
 //
 //Return the number of (contiguous, non-empty) subarrays such
 //that the value of the maximum array element in that subarray is at least L and at most R.
@@ -51,13 +51,13 @@ namespace Solution2019
 {
 	namespace NumberofSubarrayswithBoundedMaximum
 	{
-		int numSubarrayBoundedMax(vector<int>& A, int L, int R) {
+		int numSubarrayBoundedMax(vector&lt;int&gt;& A, int L, int R) {
 			int result = 0;
 			int l = -1;
 			int r = -1;
-			for (int i = 0; i < A.size(); i++) {
-				if (A[i] > R) { l = i; }
-				if (A[i] >= L) { r = i; }
+			for (int i = 0; i &lt; A.size(); i++) {
+				if (A[i] &gt; R) { l = i; }
+				if (A[i] &gt;= L) { r = i; }
 				result += r - l;
 			}
 			return result;

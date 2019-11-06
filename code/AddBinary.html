@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two binary strings, return their sum (also a binary string).
 //
 //The input strings are both non-empty and contains only characters 1 or 0.
@@ -54,8 +54,8 @@ namespace Solution2019
 		
 		string result;
 		int carry = 0;
-		while (i >= 0 || j >= 0 || carry > 0) {
-			int sum = (i >= 0 ? a[i]-'0' : 0) + (j >= 0 ? b[j]-'0' : 0) + carry;
+		while (i &gt;= 0 || j &gt;= 0 || carry &gt; 0) {
+			int sum = (i &gt;= 0 ? a[i]-'0' : 0) + (j &gt;= 0 ? b[j]-'0' : 0) + carry;
 			result = to_string(sum % 2) + result;
 			carry = sum / 2;
 			i--;

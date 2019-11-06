@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a Binary Search Tree (BST), convert it to a Greater Tree such 
 //that every key of the original BST is changed to the original key 
 //plus sum of all keys greater than the original key in BST.
@@ -53,21 +53,21 @@ namespace Solution2019
 		namespace Iterative {
 			TreeNode* convertBST(TreeNode* root) {
 				int sum = 0;
-				stack<TreeNode*> s;
+				stack&lt;TreeNode*&gt; s;
 
 				TreeNode* cur = root;
 				while (!s.empty() || cur) {
 					while (cur) {
 						s.push(cur);
-						cur = cur->right;
+						cur = cur-&gt;right;
 					}
 
 					cur = s.top();
 					s.pop();
-					sum += cur->val;
-					cur->val = sum;
+					sum += cur-&gt;val;
+					cur-&gt;val = sum;
 
-					cur = cur->left;
+					cur = cur-&gt;left;
 				}
 				return root;
 			}
@@ -75,10 +75,10 @@ namespace Solution2019
 		namespace Recursive {
 			void convert(TreeNode* node, int& sum) {
 				if (!node) { return; }
-				convert(node->right, sum);
-				sum += node->val;
-				node->val = sum;
-				convert(node->left, sum);
+				convert(node-&gt;right, sum);
+				sum += node-&gt;val;
+				node-&gt;val = sum;
+				convert(node-&gt;left, sum);
 			}
 
 			TreeNode* convertBST(TreeNode* root) {

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //In a row of seats, 1 represents a person sitting in that seat, 
 //and 0 represents that the seat is empty. 
 //
@@ -55,24 +55,24 @@
 //This is the maximum distance possible, so the answer is 3.
 //Note:
 //
-//1 <= seats.length <= 20000
+//1 &lt;= seats.length &lt;= 20000
 //seats contains only 0s or 1s, at least one 0, and at least one 1.
 
 namespace Solution2019
 {
 	namespace MaximizeDistancetoClosestPerson
 	{
-		int maxDistToClosest(vector<int>& seats) {
+		int maxDistToClosest(vector&lt;int&gt;& seats) {
 			int maxLen = 0;
 			int len = seats.size();
 
 			int end = 0;
 			int start = 0;
-			while (end < len) {
-				while (end < len && seats[end] == 1) { end++; }
+			while (end &lt; len) {
+				while (end &lt; len && seats[end] == 1) { end++; }
 				if (end == len) { break; }
 				start = end;
-				while (end < len && seats[end] == 0) { end++; }
+				while (end &lt; len && seats[end] == 0) { end++; }
 				if (start == 0 || end == len) { maxLen = max(maxLen, end - start); }
 				else { maxLen = max(maxLen, (end - start + 1) / 2); }
 			}
@@ -80,7 +80,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<int> seats = { 1,0,0,1 };
+			vector&lt;int&gt; seats = { 1,0,0,1 };
 			print(maxDistToClosest(seats));
 		}
 	}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two strings S and T, return if they are equal when both 
 //are typed into empty text editors. # means a backspace character.
 //
@@ -53,8 +53,8 @@
 //Explanation: S becomes "c" while T becomes "b".
 //Note:
 //
-//1 <= S.length <= 200
-//1 <= T.length <= 200
+//1 &lt;= S.length &lt;= 200
+//1 &lt;= T.length &lt;= 200
 //S and T only contain lowercase letters and '#' characters.
 //Follow up:
 //
@@ -69,19 +69,19 @@ namespace Solution2019
 			int i2 = T.size() - 1;
 			int skip1 = 0;
 			int skip2 = 0;
-			while (i1 >= 0 || i2 >= 0) {
-				while (i1 >= 0) {
+			while (i1 &gt;= 0 || i2 &gt;= 0) {
+				while (i1 &gt;= 0) {
 					if (S[i1] == '#') { skip1++; i1--; }
-					else if (skip1 > 0) { skip1--; i1--; }
+					else if (skip1 &gt; 0) { skip1--; i1--; }
 					else { break; }
 				}
-				while (i2 >= 0) {
+				while (i2 &gt;= 0) {
 					if (T[i2] == '#') { skip2++; i2--; }
-					else if (skip2 > 0) { skip2--; i2--; }
+					else if (skip2 &gt; 0) { skip2--; i2--; }
 					else { break; }
 				}
-				if (i1 >= 0 && i2 >= 0 && S[i1] != T[i2]) { return false; }
-				if ((i1 >= 0) != (i2 >= 0)) { return false; }
+				if (i1 &gt;= 0 && i2 &gt;= 0 && S[i1] != T[i2]) { return false; }
+				if ((i1 &gt;= 0) != (i2 &gt;= 0)) { return false; }
 				i1--;
 				i2--;
 			}
@@ -92,7 +92,7 @@ namespace Solution2019
 			string helper(string s) {
 				string result = "";
 				for (char c : s) {
-					if (c == '#' && result.size() > 0) { result.pop_back(); }
+					if (c == '#' && result.size() &gt; 0) { result.pop_back(); }
 					else if (c != '#') { result.push_back(c); }
 				}
 				return result;

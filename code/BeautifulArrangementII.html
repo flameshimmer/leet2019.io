@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two integers nand k, you need to construct a list which
 //contains n different positive integers ranging from 1 to n 
 //and obeys the following requirement :
@@ -51,23 +51,23 @@
 //	integers ranging from 1 to 3, and the[2, 1] has 
 //	exactly 2 distinct integers : 1 and 2.
 //Note :
-//The n and k are in the range 1 <= k < n <= 104.
+//The n and k are in the range 1 &lt;= k &lt; n &lt;= 104.
 
 namespace Solution2019
 {
 	namespace BeautifulArrangementII
 	{
-		vector<int> constructArray(int n, int k) {
-			vector<int> result;
+		vector&lt;int&gt; constructArray(int n, int k) {
+			vector&lt;int&gt; result;
 			int l = 1;
 			int r = k + 1;
-			while (l <= r) {
+			while (l &lt;= r) {
 				result.push_back(l);
 				l++;
-				if (l <= r) { result.push_back(r); }
+				if (l &lt;= r) { result.push_back(r); }
 				r--;
 			}
-			for (int i = k + 2; i <= n; i++) {
+			for (int i = k + 2; i &lt;= n; i++) {
 				result.push_back(i);
 			}
 			return result;

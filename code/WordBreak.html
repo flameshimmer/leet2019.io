@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty string s and a dictionary wordDict containing a list of non-empty words,
 //determine if s can be segmented into a space-separated sequence of one or more dictionary words.
 //
@@ -55,17 +55,17 @@ namespace Solution2019
 {
 	namespace WordBreak
 	{
-		bool wordBreak(string s, vector<string>& wordDict) {
-			unordered_set<string> dict(wordDict.begin(), wordDict.end());
+		bool wordBreak(string s, vector&lt;string&gt;& wordDict) {
+			unordered_set&lt;string&gt; dict(wordDict.begin(), wordDict.end());
 			int lens = s.size();
 			if (lens == 0) { return false; }
 			int len = dict.size();
 			if (len == 0) { return false; }
 
-			vector<bool> M(lens + 1, false);
+			vector&lt;bool&gt; M(lens + 1, false);
 			M[0] = true;
-			for (int i = 1; i <= lens; i++) {
-				for (int j = 0; j < i; j++) {
+			for (int i = 1; i &lt;= lens; i++) {
+				for (int j = 0; j &lt; i; j++) {
 					if (M[j] && dict.find(s.substr(j, i - j)) != dict.end()) {
 						M[i] = true;
 						break;

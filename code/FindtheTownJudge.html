@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //In a town, there are N people labelled from 1 to N.  
 //There is a rumor that one of these people is secretly the town judge.
 //
@@ -64,23 +64,23 @@
 //Output: 3
 // 
 //Note:
-//1 <= N <= 1000
-//trust.length <= 10000
+//1 &lt;= N &lt;= 1000
+//trust.length &lt;= 10000
 //trust[i] are all different
 //trust[i][0] != trust[i][1]
-//1 <= trust[i][0], trust[i][1] <= N
+//1 &lt;= trust[i][0], trust[i][1] &lt;= N
 
 namespace Solution2019
 {
 	namespace FindtheTownJudge
 	{
-		int findJudge(int N, vector<vector<int>>& trust) {
-			vector<int> count(N + 1, 0);
-			for (vector<int>& t : trust) {
+		int findJudge(int N, vector&lt;vector&lt;int&gt;&gt;& trust) {
+			vector&lt;int&gt; count(N + 1, 0);
+			for (vector&lt;int&gt;& t : trust) {
 				count[t[0]]--;
 				count[t[1]]++;
 			}
-			for (int i = 1; i <= N; i++) {
+			for (int i = 1; i &lt;= N; i++) {
 				if (count[i] == N - 1) { return i; }
 			}
 			return -1;

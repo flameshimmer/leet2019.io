@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //You are given two non - empty linked lists representing two non - negative integers.
 //The digits are stored in reverse order and each of their nodes contain a single digit.
@@ -38,8 +38,8 @@
 //
 //Example:
 //
-//Input : (2 -> 4 -> 3) + (5 -> 6 -> 4)
-//Output : 7 -> 0 -> 8
+//Input : (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)
+//Output : 7 -&gt; 0 -&gt; 8
 //	 Explanation : 342 + 465 = 807.
 
 namespace Solution2019
@@ -53,15 +53,15 @@ namespace Solution2019
 
 			int carry = 0;
 			while (l1 != nullptr || l2 != nullptr) {
-				int sum = (l1 ? l1->val : 0) + (l2 ? l2->val : 0) + carry;
+				int sum = (l1 ? l1-&gt;val : 0) + (l2 ? l2-&gt;val : 0) + carry;
 				carry = sum / 10;
-				cur->next = new ListNode(sum % 10);
-				cur = cur->next;
-				if (l1 != nullptr) { l1 = l1->next; }
-				if (l2 != nullptr) { l2 = l2->next; }				
+				cur-&gt;next = new ListNode(sum % 10);
+				cur = cur-&gt;next;
+				if (l1 != nullptr) { l1 = l1-&gt;next; }
+				if (l2 != nullptr) { l2 = l2-&gt;next; }				
 			}
-			if (carry > 0) { cur->next = new ListNode(carry); }
-			ListNode* result = dummy->next;
+			if (carry &gt; 0) { cur-&gt;next = new ListNode(carry); }
+			ListNode* result = dummy-&gt;next;
 			delete dummy;
 			return result;
 		}

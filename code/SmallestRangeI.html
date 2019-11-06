@@ -28,9 +28,9 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A of integers, for each integer A[i]
-//we may choose any x with -K <= x <= K, and add x to A[i].
+//we may choose any x with -K &lt;= x &lt;= K, and add x to A[i].
 //
 //After this process, we have some array B.
 //
@@ -53,15 +53,15 @@
 //Explanation: B = [3,3,3] or B = [4,4,4]
 // 
 //Note:
-//1 <= A.length <= 10000
-//0 <= A[i] <= 10000
-//0 <= K <= 10000
+//1 &lt;= A.length &lt;= 10000
+//0 &lt;= A[i] &lt;= 10000
+//0 &lt;= K &lt;= 10000
 
 namespace Solution2019
 {
 	namespace SmallestRangeI
 	{
-		int smallestRangeI(vector<int>& A, int K) {
+		int smallestRangeI(vector&lt;int&gt;& A, int K) {
 			int minV = A[0];
 			int maxV = A[0];
 			for (int v : A) {

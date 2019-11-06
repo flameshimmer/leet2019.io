@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers nums sorted in ascending order, 
 //find the starting and ending position of a given target value.
 //
@@ -48,12 +48,12 @@ namespace Solution2019
 {
 	namespace FindFirstandLastPositionofElementinSortedArray
 	{
-		int findLower(vector<int>& A, int target) {
+		int findLower(vector&lt;int&gt;& A, int target) {
 			int start = 0;
 			int end = A.size() - 1;
-			while (start < end) {
+			while (start &lt; end) {
 				int mid = start + (end - start) / 2;
-				if (target <= A[mid]) {
+				if (target &lt;= A[mid]) {
 					end = mid;
 				}
 				else {
@@ -63,12 +63,12 @@ namespace Solution2019
 			return A[start] == target ? start : -1;
 		}
 
-		int findUpper(vector<int>& A, int target) {
+		int findUpper(vector&lt;int&gt;& A, int target) {
 			int start = 0;
 			int end = A.size() - 1;
-			while (start < end) {
+			while (start &lt; end) {
 				int mid = start + (end - start) / 2 + 1;
-				if (target >= A[mid]) {
+				if (target &gt;= A[mid]) {
 					start = mid;
 				}
 				else {
@@ -84,14 +84,14 @@ namespace Solution2019
 		make the bias towards the right side index. This will ensure we don't stuck in
 		permanent loop when looking of uppper bound. */
 
-		vector<int> searchRange(vector<int>& nums, int target) {
+		vector&lt;int&gt; searchRange(vector&lt;int&gt;& nums, int target) {
 			int len = nums.size();
 			if (len == 0) { return { -1, -1 }; }
 			return { findLower(nums, target), findUpper(nums, target) };
 		}
 
 		namespace UsingLowerBoundUpperBound {
-			vector<int> searchRange(vector<int>& nums, int target) {
+			vector&lt;int&gt; searchRange(vector&lt;int&gt;& nums, int target) {
 				auto lower = lower_bound(nums.begin(), nums.end(), target);
 				if (lower == nums.end() || *lower != target) {
 					return { -1, -1 };
@@ -103,7 +103,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<int> test = { 5,7,7,8,8,10 };
+			vector&lt;int&gt; test = { 5,7,7,8,8,10 };
 			print(searchRange(test, 8));
 		}
 	}

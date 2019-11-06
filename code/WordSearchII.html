@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a 2D board and a list of words from the 
 //dictionary, find all words in the board.
 //
@@ -73,34 +73,34 @@ namespace Solution2019
 			void addWord(string& word) {
 				Node* cur = root;
 				for (char c : word) {
-					if (cur->children[c - 'a'] == nullptr) {
-						cur->children[c - 'a'] = new Node();
+					if (cur-&gt;children[c - 'a'] == nullptr) {
+						cur-&gt;children[c - 'a'] = new Node();
 					}
-					cur = cur->children[c - 'a'];
+					cur = cur-&gt;children[c - 'a'];
 				}
-				cur->isEnd = true;
+				cur-&gt;isEnd = true;
 			}
 
 			int hasWord(string& word) {
 				Node* cur = root;
 				for (char c : word) {
-					if (cur->children[c - 'a'] == nullptr) { return 0; }
-					cur = cur->children[c - 'a'];
+					if (cur-&gt;children[c - 'a'] == nullptr) { return 0; }
+					cur = cur-&gt;children[c - 'a'];
 				}
-				int result = cur->isEnd ? 2 : 1;
-				if (result == 2) { cur->isEnd = false; }
+				int result = cur-&gt;isEnd ? 2 : 1;
+				if (result == 2) { cur-&gt;isEnd = false; }
 				return result;
 			}
 		};
 
-		void findHere(vector<vector<char>>& board, int row, int col, int rowCount, int colCount, Trie* trie, string& result, vector<string>& results) {
-			if (row < 0 || row >= rowCount || col < 0 || col >= colCount || board[row][col] == '-') { return; }
+		void findHere(vector&lt;vector&lt;char&gt;&gt;& board, int row, int col, int rowCount, int colCount, Trie* trie, string& result, vector&lt;string&gt;& results) {
+			if (row &lt; 0 || row &gt;= rowCount || col &lt; 0 || col &gt;= colCount || board[row][col] == '-') { return; }
 
 			char c = board[row][col];
 			board[row][col] = '-';
 			result.push_back(c);
 
-			int v = trie->hasWord(result);
+			int v = trie-&gt;hasWord(result);
 			if (v == 0) {
 				board[row][col] = c;
 				result.pop_back();
@@ -117,8 +117,8 @@ namespace Solution2019
 			result.pop_back();
 		}
 
-		vector<string> findWords(vector<vector<char>>& board, vector<string>& words) {
-			vector<string> results;
+		vector&lt;string&gt; findWords(vector&lt;vector&lt;char&gt;&gt;& board, vector&lt;string&gt;& words) {
+			vector&lt;string&gt; results;
 			int rowCount = board.size();
 			if (rowCount == 0) { return results; }
 			int colCount = board[0].size();
@@ -127,11 +127,11 @@ namespace Solution2019
 			if (len == 0) { return results; }
 
 			Trie* trie = new Trie();
-			for (string w : words) { trie->addWord(w); }
+			for (string w : words) { trie-&gt;addWord(w); }
 
 			string result;
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					findHere(board, i, j, rowCount, colCount, trie, result, results);
 				}
 			}

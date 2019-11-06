@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a list of directory info including directory path, and all the files with contents in 
 //this directory, you need to find out all the groups of duplicate files in the file system 
 //in terms of their paths.
@@ -40,7 +40,7 @@
 //"root/d1/d2/.../dm f1.txt(f1_content) f2.txt(f2_content) ... fn.txt(fn_content)"
 //
 //It means there are n files (f1.txt, f2.txt ... fn.txt with content f1_content, f2_content ... 
-//fn_content, respectively) in directory root/d1/d2/.../dm. Note that n >= 1 and m >= 0. 
+//fn_content, respectively) in directory root/d1/d2/.../dm. Note that n &gt;= 1 and m &gt;= 0. 
 //If m = 0, it means the directory is just the root directory.
 //
 //The output is a list of group of duplicate file paths. For each group, it contains all the 
@@ -78,21 +78,21 @@ namespace Solution2019
 {
 	namespace FindDuplicateFileinSystem
 	{
-		vector<vector<string>> findDuplicate(vector<string>& paths) {
-			vector<vector<string>> results;
+		vector&lt;vector&lt;string&gt;&gt; findDuplicate(vector&lt;string&gt;& paths) {
+			vector&lt;vector&lt;string&gt;&gt; results;
 			int len = paths.size();
 			if (len == 0) { return results; }
 
-			unordered_map<string, vector<string>> map;
+			unordered_map&lt;string, vector&lt;string&gt;&gt; map;
 			for (string s : paths) {
 				istringstream ss(s);
 				string cur;
-				vector<string> data;
-				while (ss >> cur) {
+				vector&lt;string&gt; data;
+				while (ss &gt;&gt; cur) {
 					data.push_back(cur);
 				}
 
-				for (int i = 1; i < data.size(); i++) {
+				for (int i = 1; i &lt; data.size(); i++) {
 					int pos = data[i].find('(');
 					string filename = data[i].substr(0, pos);
 					string content = data[i].substr(pos + 1);
@@ -101,7 +101,7 @@ namespace Solution2019
 				}
 			}
 			for (auto& p : map) {
-				if (p.second.size() >= 2) {
+				if (p.second.size() &gt;= 2) {
 					results.push_back(p.second);
 				}
 			}
@@ -109,7 +109,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<string> test = {"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"};
+			vector&lt;string&gt; test = {"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"};
 			print(findDuplicate(test));
 		}
 	}

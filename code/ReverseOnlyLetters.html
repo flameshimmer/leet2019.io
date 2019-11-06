@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 // 
 
 namespace Solution2019
@@ -39,9 +39,9 @@ namespace Solution2019
 			string result = S;
 			int start = 0;
 			int end = result.size() - 1;
-			while (start < end) {
-				while (start < end && !isalpha(result[start])) { start++; }
-				while (start < end && !isalpha(result[end])) { end--; }
+			while (start &lt; end) {
+				while (start &lt; end && !isalpha(result[start])) { start++; }
+				while (start &lt; end && !isalpha(result[end])) { end--; }
 				if (start == end) { return result; }
 
 				char tmp = result[start];

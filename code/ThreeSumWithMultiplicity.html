@@ -28,10 +28,10 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an integer array A, and an integer target, 
 //return the number of tuples i, j, k  such that 
-//i < j < k and A[i] + A[j] + A[k] == target.
+//i &lt; j &lt; k and A[i] + A[j] + A[k] == target.
 //
 //As the answer can be very large, return it modulo 10^9 + 7.
 //
@@ -54,16 +54,16 @@
 //and two 2s from [2,2,2,2] in 6 ways.
 //
 //Note:
-//3 <= A.length <= 3000
-//0 <= A[i] <= 100
-//0 <= target <= 300
+//3 &lt;= A.length &lt;= 3000
+//0 &lt;= A[i] &lt;= 100
+//0 &lt;= target &lt;= 300
 
 namespace Solution2019
 {
 	namespace ThreeSumWithMultiplicity
 	{
-		int threeSumMulti(vector<int>& A, int target) {
-			unordered_map<int, long> map;
+		int threeSumMulti(vector&lt;int&gt;& A, int target) {
+			unordered_map&lt;int, long&gt; map;
 			for (int v : A) { map[v]++; }
 
 			long result = 0;
@@ -79,7 +79,7 @@ namespace Solution2019
 					else if (i == j && j != k) {
 						result += map[i] * (map[i] - 1) / 2 * map[k];
 					}
-					else if (i < j && j < k) {
+					else if (i &lt; j && j &lt; k) {
 						result += map[i] * map[j] * map[k];
 					}
 				}

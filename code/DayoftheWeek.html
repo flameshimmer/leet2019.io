@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a date, return the corresponding day of the week for that date.
 //
 //The input is given as three integers representing the day, month and
@@ -67,10 +67,10 @@ namespace Solution2019
 
 		int daysSince1970(int year, int month, int day) {
 			int result = 0;
-			for (int i = 1970; i < year; i++) {
+			for (int i = 1970; i &lt; year; i++) {
 				result += isLeapYear(i) ? 366 : 365;
 			}
-			for (int i = 0; i < month - 1; i++) {
+			for (int i = 0; i &lt; month - 1; i++) {
 				result += daysOfMonth[!isLeapYear(year)][i];
 			}
 			result += day-1;

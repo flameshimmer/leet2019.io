@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Balanced strings are those who have equal quantity 
 //of 'L' and 'R' characters.
 //Given a balanced string s split it in the maximum 
@@ -78,7 +78,7 @@ namespace Solution2019
 				if (len == 0) { return 0; }
 
 				int result = 0;
-				stack<char> s;
+				stack&lt;char&gt; s;
 
 				for (char c : str) {
 					if (s.empty() || !match(c, s.top())) {

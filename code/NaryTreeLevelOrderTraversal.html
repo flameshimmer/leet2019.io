@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an n-ary tree, return the level order traversal
 //of its nodes' values. (ie, from left to right, level by level).
 //
@@ -48,21 +48,21 @@ namespace Solution2019
 {
 	namespace NaryTreeLevelOrderTraversal
 	{
-		vector<vector<int>> levelOrder(Node* root) {
-			vector<vector<int>> result;
+		vector&lt;vector&lt;int&gt;&gt; levelOrder(Node* root) {
+			vector&lt;vector&lt;int&gt;&gt; result;
 			if (!root) { return result; }
 
-			queue<Node*> q;
+			queue&lt;Node*&gt; q;
 			q.push(root);
 			while (!q.empty()) {
 				int sz = q.size();
-				vector<int> level;
+				vector&lt;int&gt; level;
 				while (sz) {
 					sz--;
 					Node* cur = q.front();
 					q.pop();
-					level.push_back(cur->val);
-					for (Node* child : cur->children) { q.push(child); }
+					level.push_back(cur-&gt;val);
+					for (Node* child : cur-&gt;children) { q.push(child); }
 				}
 				result.push_back(level);
 			}
@@ -70,17 +70,17 @@ namespace Solution2019
 		}
 
 		namespace RecursiveDFS {
-			void helper(Node* node, int level, vector<vector<int>>& result) {
+			void helper(Node* node, int level, vector&lt;vector&lt;int&gt;&gt;& result) {
 				if (!node) { return; }
-				if (result.size() < level + 1) { result.push_back({}); }
-				result[level].push_back(node->val);
-				for (Node* child : node->children) {
+				if (result.size() &lt; level + 1) { result.push_back({}); }
+				result[level].push_back(node-&gt;val);
+				for (Node* child : node-&gt;children) {
 					helper(child, level + 1, result);
 				}
 			}
 
-			vector<vector<int>> levelOrder(Node* root) {
-				vector<vector<int>> result;
+			vector&lt;vector&lt;int&gt;&gt; levelOrder(Node* root) {
+				vector&lt;vector&lt;int&gt;&gt; result;
 				helper(root, 0, result);
 				return result;
 			}

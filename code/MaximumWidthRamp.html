@@ -28,9 +28,9 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A of integers, a ramp is a tuple (i, j) 
-//for which i < j and A[i] <= A[j].  
+//for which i &lt; j and A[i] &lt;= A[j].  
 //The width of such a ramp is j - i.
 //
 //Find the maximum width of a ramp in A.  If one doesn't exist, return 0.
@@ -48,15 +48,15 @@
 //The maximum width ramp is achieved at (i, j) = (2, 9): A[2] = 1 and A[9] = 1.
 //
 //Note:
-//2 <= A.length <= 50000
-//0 <= A[i] <= 50000
+//2 &lt;= A.length &lt;= 50000
+//0 &lt;= A[i] &lt;= 50000
 namespace Solution2019
 {
 	namespace MaximumWidthRamp
 	{
-		int maxWidthRamp(vector<int>& A) {
-			multimap<int, int> map;
-			for (int i = 0; i < A.size(); i++) {
+		int maxWidthRamp(vector&lt;int&gt;& A) {
+			multimap&lt;int, int&gt; map;
+			for (int i = 0; i &lt; A.size(); i++) {
 				map.insert({ A[i], i });
 			}
 
@@ -70,21 +70,21 @@ namespace Solution2019
 		}
 
 		namespace UsingStack {
-			int maxWidthRamp(vector<int>& A) {
-				stack<int> s;
+			int maxWidthRamp(vector&lt;int&gt;& A) {
+				stack&lt;int&gt; s;
 				int res = 0, n = A.size();
-				for (int i = 0; i < n; ++i)
-					if (s.empty() || A[s.top()] > A[i])
+				for (int i = 0; i &lt; n; ++i)
+					if (s.empty() || A[s.top()] &gt; A[i])
 						s.push(i);
-				for (int i = n - 1; i > res; --i)
-					while (!s.empty() && A[s.top()] <= A[i])
+				for (int i = n - 1; i &gt; res; --i)
+					while (!s.empty() && A[s.top()] &lt;= A[i])
 						res = max(res, i - s.top()), s.pop();
 				return res;
 			}
 		}
 
 		void Main() {
-			vector<int> test = { 0, 1 };
+			vector&lt;int&gt; test = { 0, 1 };
 			print(maxWidthRamp(test));
 		}
 	}

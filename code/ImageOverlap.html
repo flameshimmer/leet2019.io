@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Two images A and B are given, represented as binary, square matrices 
 //of the same size.  (A binary matrix has only 0s and 1s as values.)
 //
@@ -52,31 +52,31 @@
 //Explanation: We slide A to right by 1 unit and down by 1 unit.
 //
 //Notes: 
-//1 <= A.length = A[0].length = B.length = B[0].length <= 30
-//0 <= A[i][j], B[i][j] <= 1
+//1 &lt;= A.length = A[0].length = B.length = B[0].length &lt;= 30
+//0 &lt;= A[i][j], B[i][j] &lt;= 1
 
 namespace Solution2019
 {
 	namespace ImageOverlap
 	{
-		int largestOverlap(vector<vector<int>>& A, vector<vector<int>>& B) {
-			vector<pair<int, int>> A1;
-			vector<pair<int, int>> B1;
-			for (int i = 0; i < A.size(); i++) {
-				for (int j = 0; j < A[0].size(); j++) {
+		int largestOverlap(vector&lt;vector&lt;int&gt;&gt;& A, vector&lt;vector&lt;int&gt;&gt;& B) {
+			vector&lt;pair&lt;int, int&gt;&gt; A1;
+			vector&lt;pair&lt;int, int&gt;&gt; B1;
+			for (int i = 0; i &lt; A.size(); i++) {
+				for (int j = 0; j &lt; A[0].size(); j++) {
 					if (A[i][j] == 1) { A1.push_back(make_pair(i, j)); }
 				}
 			}
 
-			for (int i = 0; i < B.size(); i++) {
-				for (int j = 0; j < B[0].size(); j++) {
+			for (int i = 0; i &lt; B.size(); i++) {
+				for (int j = 0; j &lt; B[0].size(); j++) {
 					if (B[i][j] == 1) { B1.push_back(make_pair(i, j)); }
 				}
 			}
 
-			unordered_map<string, int> map;
-			for (pair<int, int> a : A1) {
-				for (pair<int, int> b : B1) {
+			unordered_map&lt;string, int&gt; map;
+			for (pair&lt;int, int&gt; a : A1) {
+				for (pair&lt;int, int&gt; b : B1) {
 					map[to_string(a.first - b.first) + "," + to_string(a.second - b.second)] ++;
 				}
 			}

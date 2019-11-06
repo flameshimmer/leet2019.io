@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a list of 24-hour clock time points in "Hour:Minutes" format,
 //find the minimum minutes difference between any two time points in the list.
 //
@@ -44,8 +44,8 @@ namespace Solution2019
 {
 	namespace MinimumTimeDifference
 	{
-		int findMinDifference(vector<string>& times) {
-			vector<int> temp;
+		int findMinDifference(vector&lt;string&gt;& times) {
+			vector&lt;int&gt; temp;
 			for (string t : times) {
 				temp.push_back(stoi(t.substr(0, 2)) * 60 + stoi(t.substr(3, 2)));
 			}
@@ -54,7 +54,7 @@ namespace Solution2019
 			temp.push_back(temp[0] + 24 * 60);
 
 			int minDiff = INT_MAX;
-			for (int i = 1; i < temp.size(); i++) {
+			for (int i = 1; i &lt; temp.size(); i++) {
 				minDiff = min(minDiff, temp[i] - temp[i - 1]);
 			}
 			return minDiff;
@@ -69,12 +69,12 @@ namespace Solution2019
 				return (h2 - h1) * 60 + (m2 - m1);
 			}
 
-			int findMinDifference(vector<string>& times) {
+			int findMinDifference(vector&lt;string&gt;& times) {
 				int len = times.size();
 				sort(times.begin(), times.end());
 				int minDiff = INT_MAX;
 
-				for (int i = 0; i < len; i++) {
+				for (int i = 0; i &lt; len; i++) {
 					int diff = abs(timeDiff(times[(i - 1 + len) % len], times[i]));
 					diff = min(diff, 1440 - diff);
 					minDiff = min(minDiff, diff);
@@ -84,7 +84,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<string> test = { "23:59","00:00" };
+			vector&lt;string&gt; test = { "23:59","00:00" };
 			print(findMinDifference(test));
 		}
 	}

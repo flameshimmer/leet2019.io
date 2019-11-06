@@ -28,8 +28,8 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-//Given an array nums of n integers where n > 1,  return an array 
+#include "stdafx.h"
+//Given an array nums of n integers where n &gt; 1,  return an array 
 //output such that output[i] is equal to the product of all the 
 //elements of nums except nums[i].
 //
@@ -45,15 +45,15 @@ namespace Solution2019
 {
 	namespace ProductofArrayExceptSelf
 	{
-		vector<int> productExceptSelf(vector<int>& nums) {			
+		vector&lt;int&gt; productExceptSelf(vector&lt;int&gt;& nums) {			
 			int len = nums.size();
-			vector<int> result(len, 0);
+			vector&lt;int&gt; result(len, 0);
 			result[0] = 1;
-			for (int i = 1; i < len; i++) {
+			for (int i = 1; i &lt; len; i++) {
 				result[i] = result[i - 1] * nums[i - 1];
 			}
 			int right = 1;
-			for (int j = len - 1; j >= 0; j--) {
+			for (int j = len - 1; j &gt;= 0; j--) {
 				result[j] *= right;
 				right *= nums[j];
 			}

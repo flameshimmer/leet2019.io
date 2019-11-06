@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a string s and a non-empty string p, find all the start indices of p's
 //anagrams in s.
@@ -59,20 +59,20 @@ namespace Solution2019
 {
 	namespace FindAllAnagramsinaString
 	{
-		vector<int> findAnagrams(string s, string p) {
-			vector<int> pv(26, 0);
-			vector<int> sv(26, 0);
-			vector<int> result;
+		vector&lt;int&gt; findAnagrams(string s, string p) {
+			vector&lt;int&gt; pv(26, 0);
+			vector&lt;int&gt; sv(26, 0);
+			vector&lt;int&gt; result;
 			int lens = s.size();
 			int lenp = p.size();
-			if (lens < lenp) { return result; }
+			if (lens &lt; lenp) { return result; }
 
-			for (int i = 0; i < lenp; i++) {
+			for (int i = 0; i &lt; lenp; i++) {
 				pv[p[i] - 'a']++;
 				sv[s[i] - 'a']++;
 			}
 			if (pv == sv) { result.push_back(0); }
-			for (int i = lenp; i < lens; i++) {
+			for (int i = lenp; i &lt; lens; i++) {
 				sv[s[i] - 'a']++;
 				sv[s[i - lenp] - 'a']--;
 				// checking equal is O(26) so O(1)
@@ -81,19 +81,19 @@ namespace Solution2019
 			return result;
 		}
 
-		vector<int> findAnagramsAnother(string s, string p) {
+		vector&lt;int&gt; findAnagramsAnother(string s, string p) {
 			int lens = s.size();
 			int lenp = p.size();
 			if (lens == 0 || lenp == 0) { return {}; }
 
-			vector<int> result;
-			unordered_map<char, int> toBeFound;
-			unordered_map<char, int> hasFound;
+			vector&lt;int&gt; result;
+			unordered_map&lt;char, int&gt; toBeFound;
+			unordered_map&lt;char, int&gt; hasFound;
 			int found = 0;
 			for (char c : p) { toBeFound[c] ++; }
 
 			int start = 0;
-			for (int end = 0; end < lens; end++) {
+			for (int end = 0; end &lt; lens; end++) {
 				char c = s[end];
 				if (toBeFound.count(c) == 0) {
 					start = end + 1;

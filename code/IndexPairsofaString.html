@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a text string and words (a list of strings),
 //return all index pairs [i, j] so that the substring 
 //text[i]...text[j] is in the list of words.
@@ -49,9 +49,9 @@
 //Note:
 //All strings contains only lowercase English letters.
 //It's guaranteed that all strings in words are different.
-//1 <= text.length <= 100
-//1 <= words.length <= 20
-//1 <= words[i].length <= 50
+//1 &lt;= text.length &lt;= 100
+//1 &lt;= words.length &lt;= 20
+//1 &lt;= words[i].length &lt;= 50
 //Return the pairs [i,j] in sorted order (i.e. sort them by their 
 //first coordinate in case of ties sort them by their second coordinate). 
 
@@ -59,8 +59,8 @@ namespace Solution2019
 {
 	namespace IndexPairsofaString
 	{
-		vector<vector<int>> indexPairs(string text, vector<string>& words) {
-			vector<vector<int>> results;
+		vector&lt;vector&lt;int&gt;&gt; indexPairs(string text, vector&lt;string&gt;& words) {
+			vector&lt;vector&lt;int&gt;&gt; results;
 			int len = text.size();
 			if (len == 0) { return results; }
 			for (string w : words) {
@@ -70,9 +70,9 @@ namespace Solution2019
 					pos = text.find(w, pos + 1);
 				}
 			}
-			auto comp = [](vector<int>& a, vector<int>& b) {
-				if (a[0] == b[0]) { return a[1] < b[1]; }
-				return a[0] < b[0];
+			auto comp = [](vector&lt;int&gt;& a, vector&lt;int&gt;& b) {
+				if (a[0] == b[0]) { return a[1] &lt; b[1]; }
+				return a[0] &lt; b[0];
 			};
 			sort(results.begin(), results.end(), comp);
 			return results;

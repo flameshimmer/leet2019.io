@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary tree, return the inorder traversal of its nodes' values.
 //
 //Example:
@@ -48,35 +48,35 @@ namespace Solution2019
 	namespace BinaryTreeInorderTraversal
 	{
 		namespace Iterative {
-			vector<int> inorderTraversal(TreeNode* root) {
-				vector<int> result;
-				stack<TreeNode*> s;
+			vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+				vector&lt;int&gt; result;
+				stack&lt;TreeNode*&gt; s;
 
 				TreeNode* cur = root;
 				while (cur || !s.empty()) {
 					while (cur) {
 						s.push(cur);
-						cur = cur->left;
+						cur = cur-&gt;left;
 					}
 					cur = s.top();
 					s.pop();
-					result.push_back(cur->val);
-					cur = cur->right;
+					result.push_back(cur-&gt;val);
+					cur = cur-&gt;right;
 				}
 				return result;
 			}
 		}
 
 		namespace Recursive {
-			void helper(TreeNode* node, vector<int>& result) {
+			void helper(TreeNode* node, vector&lt;int&gt;& result) {
 				if (!node) { return; }
-				helper(node->left, result);
-				result.push_back(node->val);
-				helper(node->right, result);
+				helper(node-&gt;left, result);
+				result.push_back(node-&gt;val);
+				helper(node-&gt;right, result);
 			}
 
-			vector<int> inorderTraversal(TreeNode* root) {
-				vector<int> result;
+			vector&lt;int&gt; inorderTraversal(TreeNode* root) {
+				vector&lt;int&gt; result;
 				helper(root, result);
 				return result;
 			}

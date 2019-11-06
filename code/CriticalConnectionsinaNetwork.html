@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //There are n servers numbered from 0 to n-1 connected by undirected 
 //server-to-server connections forming a network where 
 //connections[i] = [a, b] represents a connection between servers a and b.
@@ -45,8 +45,8 @@
 //Explanation: [[3,1]] is also accepted.
 // 
 //Constraints:
-//1 <= n <= 10^5
-//n-1 <= connections.length <= 10^5
+//1 &lt;= n &lt;= 10^5
+//n-1 &lt;= connections.length &lt;= 10^5
 //connections[i][0] != connections[i][1]
 //There are no repeated connections.
 
@@ -55,33 +55,33 @@ namespace Solution2019
 	namespace CriticalConnectionsinaNetwork
 	{
 		int time;
-		void dfs(vector<vector<int>>& neighbors, int i, int parent, vector<int>& low, vector<vector<int>>& result) {
+		void dfs(vector&lt;vector&lt;int&gt;&gt;& neighbors, int i, int parent, vector&lt;int&gt;& low, vector&lt;vector&lt;int&gt;&gt;& result) {
 			time++;
 			int curt = time;
 			low[i] = curt;
 
 			for (int j : neighbors[i]) {
 				if (j == parent) { continue; }
-				if (low[j] < 0) {
+				if (low[j] &lt; 0) {
 					dfs(neighbors, j, i, low, result);
 				}
-				if (low[j] > curt) {
+				if (low[j] &gt; curt) {
 					result.push_back({ i, j });
 				}
 				low[i] = min(low[i], low[j]);
 			}
 		}
 
-		vector<vector<int>> criticalConnections(int n, vector<vector<int>>& connections) {
-			vector<vector<int>> neighbors(n, vector<int>());
+		vector&lt;vector&lt;int&gt;&gt; criticalConnections(int n, vector&lt;vector&lt;int&gt;&gt;& connections) {
+			vector&lt;vector&lt;int&gt;&gt; neighbors(n, vector&lt;int&gt;());
 			for (auto& con : connections) {
 				neighbors[con[0]].push_back(con[1]);
 				neighbors[con[1]].push_back(con[0]);
 			}
 
 			time = 0;
-			vector<int> low(n, -1);
-			vector<vector<int>> result;
+			vector&lt;int&gt; low(n, -1);
+			vector&lt;vector&lt;int&gt;&gt; result;
 			dfs(neighbors, 0, -1, low, result);
 			return result;
 		}

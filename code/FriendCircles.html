@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //There are N students in a class. Some of them are friends, while some are not. 
 //Their friendship is transitive in nature. For example, if A is a direct friend 
 //of B, and B is a direct friend of C, then A is an indirect friend of C. And we
@@ -68,24 +68,24 @@ namespace Solution2019
 {
 	namespace FriendCircles
 	{
-		void dfs(int i, vector<bool>& visited, int colCount, vector<vector<int>>& M) {
+		void dfs(int i, vector&lt;bool&gt;& visited, int colCount, vector&lt;vector&lt;int&gt;&gt;& M) {
 			visited[i] = true;
-			for (int j = 0; j < colCount; j++) {
+			for (int j = 0; j &lt; colCount; j++) {
 				if (M[i][j] && !visited[j]) {
 					dfs(j, visited, colCount, M);
 				}
 			}
 		}
 
-		int findCircleNumDFS(vector<vector<int>>& M) {
+		int findCircleNumDFS(vector&lt;vector&lt;int&gt;&gt;& M) {
 			int rowCount = M.size();
 			if (rowCount == 0) { return 0; }
 			int colCount = M[0].size();
 			if (colCount == 0) { return 0; }
-			vector<bool> visited(rowCount, false);
+			vector&lt;bool&gt; visited(rowCount, false);
 
 			int count = 0;
-			for (int i = 0; i < rowCount; i++) {
+			for (int i = 0; i &lt; rowCount; i++) {
 				if (!visited[i]) {
 					dfs(i, visited, colCount, M);
 					count++;
@@ -94,16 +94,16 @@ namespace Solution2019
 			return count;
 		}
 
-		int findCircleNumBFS(vector<vector<int>>& M) {
+		int findCircleNumBFS(vector&lt;vector&lt;int&gt;&gt;& M) {
 			int rowCount = M.size();
 			if (rowCount == 0) { return 0; }
 			int colCount = M[0].size();
 			if (colCount == 0) { return 0; }
-			vector<bool> visited(rowCount, false);
+			vector&lt;bool&gt; visited(rowCount, false);
 
 			int count = 0;
-			queue<int> q;
-			for (int i = 0; i < rowCount; i++) {
+			queue&lt;int&gt; q;
+			for (int i = 0; i &lt; rowCount; i++) {
 				if (!visited[i]) {
 					q.push(i);
 
@@ -111,7 +111,7 @@ namespace Solution2019
 						int cur = q.front();
 						q.pop();
 						visited[cur] = true;
-						for (int j = 0; j < colCount; j++) {
+						for (int j = 0; j &lt; colCount; j++) {
 							if (M[cur][j] && !visited[j]) {
 								q.push(j);
 							}
@@ -124,21 +124,21 @@ namespace Solution2019
 		}
 
 		namespace UnionFind {
-			int find(int x, vector<int>& parents) {
+			int find(int x, vector&lt;int&gt;& parents) {
 				return parents[x] == x ? x : find(parents[x], parents);
 			}
 
 
-			int findCircleNum(vector<vector<int>>& M) {
+			int findCircleNum(vector&lt;vector&lt;int&gt;&gt;& M) {
 				int n = M.size();
 				if (n == 0) { return 0; }
 
-				vector<int> leads(n, 0);
-				for (int i = 0; i < n; i++) { leads[i] = i; }
+				vector&lt;int&gt; leads(n, 0);
+				for (int i = 0; i &lt; n; i++) { leads[i] = i; }
 
 				int result = n;
-				for (int i = 0; i < n; i++) {
-					for (int j = i + 1; j < n; j++) {
+				for (int i = 0; i &lt; n; i++) {
+					for (int j = i + 1; j &lt; n; j++) {
 						if (M[i][j]) {
 							int lead1 = find(i, leads);
 							int lead2 = find(j, leads);

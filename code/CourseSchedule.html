@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //There are a total of n courses you have to take, labeled from 0 to n-1.
 //Some courses may have prerequisites, for example to take course 0 you have to
@@ -61,18 +61,18 @@ namespace Solution2019
 	namespace CourseSchedule
 	{
 		namespace TopologicalSort {
-			bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+			bool canFinish(int numCourses, vector&lt;vector&lt;int&gt;&gt;& prerequisites) {
 				if (prerequisites.size() == 0) { return true; }
 
-				unordered_map<int, int> indegree; // course id, indegree count
-				unordered_map<int, vector<int>> adj; // adjacent nodes
-				for (vector<int>& pre : prerequisites) {
+				unordered_map&lt;int, int&gt; indegree; // course id, indegree count
+				unordered_map&lt;int, vector&lt;int&gt;&gt; adj; // adjacent nodes
+				for (vector&lt;int&gt;& pre : prerequisites) {
 					adj[pre[1]].push_back(pre[0]);
-					indegree[pre[1]]; //---> dont' forget to insert the starting node too!!!!
+					indegree[pre[1]]; //---&gt; dont' forget to insert the starting node too!!!!
 					indegree[pre[0]]++;
 				}
 
-				queue<int> q;
+				queue&lt;int&gt; q;
 				for (auto p : indegree) {
 					if (p.second == 0) { q.push(p.first); }
 				}
@@ -92,7 +92,7 @@ namespace Solution2019
 		}
 
 		namespace DFS {
-			bool dfs(int node, unordered_map<int, vector<int>>& adj, unordered_set<int>& path, unordered_set<int>& visited) {
+			bool dfs(int node, unordered_map&lt;int, vector&lt;int&gt;&gt;& adj, unordered_set&lt;int&gt;& path, unordered_set&lt;int&gt;& visited) {
 				if (path.count(node)) { return false; }
 				if (visited.count(node)) { return true; }
 				visited.insert(node);
@@ -104,18 +104,18 @@ namespace Solution2019
 				return true;
 			}
 
-			bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
+			bool canFinish(int numCourses, vector&lt;vector&lt;int&gt;&gt;& prerequisites) {
 				if (prerequisites.empty()) { return true; }
-				unordered_set<int> nodes;
-				unordered_map<int, vector<int>> adj;
-				for (vector<int>& pre : prerequisites) {
+				unordered_set&lt;int&gt; nodes;
+				unordered_map&lt;int, vector&lt;int&gt;&gt; adj;
+				for (vector&lt;int&gt;& pre : prerequisites) {
 					adj[pre[1]].push_back(pre[0]);
 					nodes.insert(pre[0]);
 					nodes.insert(pre[1]);
 				}
 
-				unordered_set<int> path;
-				unordered_set<int> visited;
+				unordered_set&lt;int&gt; path;
+				unordered_set&lt;int&gt; visited;
 				for (int n : nodes) {
 					if (!dfs(n, adj, path, visited)) { return false; }
 				}
@@ -124,8 +124,8 @@ namespace Solution2019
 		}
 
 		void Main() {
-			//vector<vector<int>> test = { {0, 1} , {1, 0} };
-			vector<vector<int>> test = {{1, 0} };
+			//vector&lt;vector&lt;int&gt;&gt; test = { {0, 1} , {1, 0} };
+			vector&lt;vector&lt;int&gt;&gt; test = {{1, 0} };
 			print(DFS::canFinish(2, test));
 		}
 	}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //An image is represented by a 2-D array of integers, each integer
 //representing the pixel value of the image (from 0 to 65535).
 //
@@ -63,7 +63,7 @@
 //Note:
 //The length of image and image[0] will be in the range [1, 50].
 //The given starting pixel will satisfy 
-//0 <= sr < image.length and 0 <= sc < image[0].length.
+//0 &lt;= sr &lt; image.length and 0 &lt;= sc &lt; image[0].length.
 //The value of each color in image[i][j] and newColor
 //will be an integer in [0, 65535].
 
@@ -71,8 +71,8 @@ namespace Solution2019
 {
 	namespace FloodFill
 	{
-		void helper(vector<vector<int>>& image, int color, int i, int j, int rowCount, int colCount, int newColor) {
-			if (i < 0 || i >= rowCount || j < 0 || j >= colCount || image[i][j] != color) { return; }
+		void helper(vector&lt;vector&lt;int&gt;&gt;& image, int color, int i, int j, int rowCount, int colCount, int newColor) {
+			if (i &lt; 0 || i &gt;= rowCount || j &lt; 0 || j &gt;= colCount || image[i][j] != color) { return; }
 			image[i][j] = newColor;
 			helper(image, color, i - 1, j, rowCount, colCount, newColor);
 			helper(image, color, i + 1, j, rowCount, colCount, newColor);
@@ -80,17 +80,17 @@ namespace Solution2019
 			helper(image, color, i, j + 1, rowCount, colCount, newColor);
 		}
 
-		vector<vector<int>> floodFill(vector<vector<int>>& image, int sr, int sc, int newColor) {
+		vector&lt;vector&lt;int&gt;&gt; floodFill(vector&lt;vector&lt;int&gt;&gt;& image, int sr, int sc, int newColor) {
 			int rowCount = image.size();
 			int colCount = image[0].size();
 			int color = image[sr][sc];
-			if (color != newColor) { ///-------------> if don't check this will stack overflow
+			if (color != newColor) { ///-------------&gt; if don't check this will stack overflow
 				helper(image, color, sr, sc, rowCount, colCount, newColor);
 			}
 			return image;
 		}
 		void Main() {
-			vector<vector<int>> image = { {0,0,0}, {0,1,1} };
+			vector&lt;vector&lt;int&gt;&gt; image = { {0,0,0}, {0,1,1} };
 			print(floodFill(image, 1, 1, 1));
 		}
 	}

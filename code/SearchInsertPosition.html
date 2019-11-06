@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a sorted array and a target value, return the index if the target is found. 
 //If not, return the index where it would be if it were inserted in order.
 //
@@ -54,24 +54,24 @@ namespace Solution2019
 {
 	namespace SearchInsertPosition
 	{
-		int SearchInsertPositionLinear(vector<int> nums, int target) {
+		int SearchInsertPositionLinear(vector&lt;int&gt; nums, int target) {
 			int len = nums.size();
 			if (len == 0) { return 0; }
 
-			for (int i = 0; i < len; i++) {
-				if (nums[i] >= target) { return i; }
+			for (int i = 0; i &lt; len; i++) {
+				if (nums[i] &gt;= target) { return i; }
 			}
 			return len;
 		}
 
-		int SearchInsertPosition(vector<int> nums, int target) {
+		int SearchInsertPosition(vector&lt;int&gt; nums, int target) {
 			int len = nums.size();
 			int start = 0;
 			int end = len - 1;
-			while (start <= end) {
+			while (start &lt;= end) {
 				int mid = start + (end - start) / 2;
 				if (nums[mid] == target) { return mid; }
-				else if (nums[mid] < target) { start = mid + 1; }
+				else if (nums[mid] &lt; target) { start = mid + 1; }
 				else { end = mid - 1; }
 			}
 			return start;

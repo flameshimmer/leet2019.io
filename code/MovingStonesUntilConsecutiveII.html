@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //On an infinite number line, the position of the i-th stone 
 //is given by stones[i].  Call a stone an endpoint stone if 
 //it has the smallest or largest position.
@@ -52,15 +52,15 @@
 //Input: [7,4,9]
 //Output: [1,2]
 //Explanation: 
-//We can move 4 -> 8 for one move to finish the game.
-//Or, we can move 9 -> 5, 4 -> 6 for two moves to finish the game.
+//We can move 4 -&gt; 8 for one move to finish the game.
+//Or, we can move 9 -&gt; 5, 4 -&gt; 6 for two moves to finish the game.
 //
 //Example 2:
 //Input: [6,5,4,3,10]
 //Output: [2,3]
-//We can move 3 -> 8 then 10 -> 7 to finish the game.
-//Or, we can move 3 -> 7, 4 -> 8, 5 -> 9 to finish the game.
-//Notice we cannot move 10 -> 2 to finish the game, 
+//We can move 3 -&gt; 8 then 10 -&gt; 7 to finish the game.
+//Or, we can move 3 -&gt; 7, 4 -&gt; 8, 5 -&gt; 9 to finish the game.
+//Notice we cannot move 10 -&gt; 2 to finish the game, 
 //because that would be an illegal move.
 //
 //Example 3:
@@ -68,22 +68,22 @@
 //Output: [0,0]
 // 
 //Note:
-//3 <= stones.length <= 10^4
-//1 <= stones[i] <= 10^9
+//3 &lt;= stones.length &lt;= 10^4
+//1 &lt;= stones[i] &lt;= 10^9
 //stones[i] have distinct values.
 
 namespace Solution2019
 {
 	namespace MovingStonesUntilConsecutiveII
 	{
-		vector<int> numMovesStonesII(vector<int>& A) {
+		vector&lt;int&gt; numMovesStonesII(vector&lt;int&gt;& A) {
 			sort(A.begin(), A.end());
 			int len = A.size();
 			int low = len;
 
 			int i = 0;
-			for (int j = 0; j < len; j++) {
-				while (A[j] - A[i] + 1 > len) { i++; }
+			for (int j = 0; j &lt; len; j++) {
+				while (A[j] - A[i] + 1 &gt; len) { i++; }
 				int already_store = (j - i + 1);
 				if (already_store == len - 1 && A[j] - A[i] + 1 == len - 1) {
 					low = min(low, 2);

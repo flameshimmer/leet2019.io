@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a m x n matrix, if an element is 0, 
 //set its entire row and column to 0. Do it in-place.
 //
@@ -71,23 +71,23 @@ namespace Solution2019
 {
 	namespace SetMatrixZeroes
 	{
-		void setZeroes(vector<vector<int>>& matrix) {
+		void setZeroes(vector&lt;vector&lt;int&gt;&gt;& matrix) {
 			int rowCount = matrix.size();
 			if (rowCount == 0) { return; }
 			int colCount = matrix[0].size();
 			if (colCount == 0) { return; }
 
 			bool firstRowZero = false;
-			for (int i = 0; i < colCount; i++) {
+			for (int i = 0; i &lt; colCount; i++) {
 				if (matrix[0][i] == 0) { firstRowZero = true; break; }
 			}
 			bool firstColZero = false;
-			for (int i = 0; i < rowCount; i++) {
+			for (int i = 0; i &lt; rowCount; i++) {
 				if (matrix[i][0] == 0) { firstColZero = true; break; }
 			}
 
-			for (int i = 1; i < rowCount; i++) {
-				for (int j = 1; j < colCount; j++) {
+			for (int i = 1; i &lt; rowCount; i++) {
+				for (int j = 1; j &lt; colCount; j++) {
 					if (matrix[i][j] == 0) {
 						matrix[0][j] = 0;
 						matrix[i][0] = 0;
@@ -95,18 +95,18 @@ namespace Solution2019
 				}
 			}
 
-			for (int i = 1; i < rowCount; i++) {
-				for (int j = 1; j < colCount; j++) {
+			for (int i = 1; i &lt; rowCount; i++) {
+				for (int j = 1; j &lt; colCount; j++) {
 					if (matrix[0][j] == 0 || matrix[i][0] == 0) {
 						matrix[i][j] = 0;
 					}
 				}
 			}
 			if (firstRowZero) {
-				for (int i = 0; i < colCount; i++) { matrix[0][i] = 0; }
+				for (int i = 0; i &lt; colCount; i++) { matrix[0][i] = 0; }
 			}
 			if (firstColZero) {
-				for (int i = 0; i < rowCount; i++) { matrix[i][0] = 0; }
+				for (int i = 0; i &lt; rowCount; i++) { matrix[i][0] = 0; }
 			}
 		}
 		void Main() {

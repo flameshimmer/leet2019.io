@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are given coins of different denominations and a total amount 
 //of money amount. Write a function to compute the fewest number of 
 //coins that you need to make up that amount. If that amount of money 
@@ -49,12 +49,12 @@ namespace Solution2019
 {
 	namespace CoinChange
 	{
-		int coinChange(vector<int>& coins, int amount) {
-			vector<long long> dp(amount + 1, INT_MAX);
+		int coinChange(vector&lt;int&gt;& coins, int amount) {
+			vector&lt;long long&gt; dp(amount + 1, INT_MAX);
 			dp[0] = 0;
-			for (int i = 1; i <= amount; i++) {
+			for (int i = 1; i &lt;= amount; i++) {
 				for (int coinV : coins) {
-					if (i >= coinV) {
+					if (i &gt;= coinV) {
 						dp[i] = min(dp[i], dp[i - coinV] + 1);
 					}
 				}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design and implement a data structure for Least Frequently Used (LFU) cache.
 //It should support the following operations: get and put.
 //
@@ -71,12 +71,12 @@ namespace Solution2019
 				int key;
 				int value;
 				int freq;
-				list<int>::const_iterator it;
+				list&lt;int&gt;::const_iterator it;
 			};
 			int cap;
 			int min_freq;
-			unordered_map<int, Node> n; // key, node
-			unordered_map<int, list<int>> l; // freq, list of keys of nodes of this freq
+			unordered_map&lt;int, Node&gt; n; // key, node
+			unordered_map&lt;int, list&lt;int&gt;&gt; l; // freq, list of keys of nodes of this freq
 
 			void touch(Node& node) {
 				const int prev_freq = node.freq;
@@ -101,8 +101,8 @@ namespace Solution2019
 			int get(int key) {
 				auto it = n.find(key);
 				if (it == n.end()) { return -1; }
-				touch(it->second);
-				return it->second.value;
+				touch(it-&gt;second);
+				return it-&gt;second.value;
 			}
 
 			void put(int key, int value) {
@@ -110,8 +110,8 @@ namespace Solution2019
 
 				auto it = n.find(key);
 				if (it != n.cend()) {
-					it->second.value = value;
-					touch(it->second);
+					it-&gt;second.value = value;
+					touch(it-&gt;second);
 					return;
 				}
 
@@ -130,8 +130,8 @@ namespace Solution2019
 		/**
 		 * Your LFUCache object will be instantiated and called as such:
 		 * LFUCache* obj = new LFUCache(capacity);
-		 * int param_1 = obj->get(key);
-		 * obj->put(key,value);
+		 * int param_1 = obj-&gt;get(key);
+		 * obj-&gt;put(key,value);
 		 */
 		void Main() {
 			string test = "tst test test";

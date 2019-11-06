@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Every email consists of a local name and a domain name, 
 //separated by the @ sign.
 //
@@ -62,8 +62,8 @@
 //Explanation: "testemail@leetcode.com" and "testemail@lee.tcode.com" actually receive mails
 // 
 //Note:
-//1 <= emails[i].length <= 100
-//1 <= emails.length <= 100
+//1 &lt;= emails[i].length &lt;= 100
+//1 &lt;= emails.length &lt;= 100
 //Each emails[i] contains exactly one '@' character.
 //All local and domain names are non-empty.
 //Local names do not start with a '+' character.
@@ -76,7 +76,7 @@ namespace Solution2019
 			string result;
 			int len = s.size();
 			bool skip = false;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				if (s[i] == '@') { result += s.substr(i, len - i); return result; }
 				else if (s[i] == '+') { skip = true; }
 				else if (!skip && s[i] != '.') { result += s[i]; }
@@ -84,8 +84,8 @@ namespace Solution2019
 			return result;
 		}
 
-		int numUniqueEmails(vector<string>& emails) {
-			unordered_set<string> set;
+		int numUniqueEmails(vector&lt;string&gt;& emails) {
+			unordered_set&lt;string&gt; set;
 			for (string s : emails) {
 				set.insert(getEmail(s));
 			}

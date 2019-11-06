@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two strings s and t , write a function 
 //to determine if t is an anagram of s.
 //
@@ -62,7 +62,7 @@ namespace Solution2019
 				map2[c - 'a']++;
 			}
 
-			for (int i = 0; i < 26; i++) {
+			for (int i = 0; i &lt; 26; i++) {
 				if (map[i] != map2[i]) { return false; }
 			}
 			return true;

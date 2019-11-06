@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 //
 //Symbol       Value
@@ -94,7 +94,7 @@ namespace Solution2019
 		//C can be placed before D (500) and M (1000) to make 400 and 900.
 
 		string IntegertoRoman(int val) {
-			vector<pair<int, string>> map;
+			vector&lt;pair&lt;int, string&gt;&gt; map;
 			map.push_back(make_pair(1000, "M"));
 			map.push_back(make_pair(900, "CM"));
 			map.push_back(make_pair(500, "D"));
@@ -112,9 +112,9 @@ namespace Solution2019
 			string result = "";
 			int i = 0;
 			while (val != 0) {
-				while (val < map[i].first) { i++; }
+				while (val &lt; map[i].first) { i++; }
 				int times = val / map[i].first;
-				while (times > 0) { times--; result += map[i].second; }
+				while (times &gt; 0) { times--; result += map[i].second; }
 				val %= map[i].first;
 				i++;
 			}

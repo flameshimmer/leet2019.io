@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Write a function that reverses a string. The input string 
 //is given as an array of characters char[].
 //
@@ -48,10 +48,10 @@ namespace Solution2019
 {
 	namespace ReverseString
 	{
-		void reverseString(vector<char>& s) {
+		void reverseString(vector&lt;char&gt;& s) {
 			int start = 0;
 			int end = s.size() - 1;
-			while (start < end) {
+			while (start &lt; end) {
 				swap(s[start], s[end]);
 				start++;
 				end--;

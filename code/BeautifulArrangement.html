@@ -28,10 +28,10 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*Suppose you have N integers from 1 to N. We define a beautiful arrangement
 as an array that is constructed by these N numbers successfully if one of 
-the following is true for the ith position (1 <= i <= N) in this array:
+the following is true for the ith position (1 &lt;= i &lt;= N) in this array:
 
 The number at the ith position is divisible by i.
 i is divisible by the number at the ith position.
@@ -58,13 +58,13 @@ namespace Solution2019
 {
 	namespace BeautifulArrangement
 	{
-		void helper(int start, int N, vector<bool>& visited, int& count) {
-			if (start > N) {
+		void helper(int start, int N, vector&lt;bool&gt;& visited, int& count) {
+			if (start &gt; N) {
 				count++;
 				return;
 			}
 
-			for (int i = 1; i <= N; i++) {
+			for (int i = 1; i &lt;= N; i++) {
 				if (!visited[i] && (i % start == 0 || start % i == 0)) {
 					visited[i] = true;
 					helper(start + 1, N, visited, count);
@@ -75,7 +75,7 @@ namespace Solution2019
 
 		int countArrangement(int N) {
 			if (N == 0) { return 0; }
-			vector<bool> visited (N+1, false);
+			vector&lt;bool&gt; visited (N+1, false);
 			int count = 0;
 			helper(1, N, visited, count);
 			return count;

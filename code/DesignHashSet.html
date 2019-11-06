@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a HashSet without using any built-in hash table libraries.
 //
 //To be specific, your design should include these functions:
@@ -61,7 +61,7 @@ namespace Solution2019
 		namespace DoublyLinkedList {
 			class MyHashSet {
 			private:
-				vector<list<int>> data;
+				vector&lt;list&lt;int&gt;&gt; data;
 				int size = 100000;
 			public:
 				/** Initialize your data structure here. */
@@ -92,9 +92,9 @@ namespace Solution2019
 			/**
 			 * Your MyHashSet object will be instantiated and called as such:
 			 * MyHashSet* obj = new MyHashSet();
-			 * obj->add(key);
-			 * obj->remove(key);
-			 * bool param_3 = obj->contains(key);
+			 * obj-&gt;add(key);
+			 * obj-&gt;remove(key);
+			 * bool param_3 = obj-&gt;contains(key);
 			 */
 		}
 
@@ -124,9 +124,9 @@ namespace Solution2019
 			/**
 			 * Your MyHashSet object will be instantiated and called as such:
 			 * MyHashSet* obj = new MyHashSet();
-			 * obj->add(key);
-			 * obj->remove(key);
-			 * bool param_3 = obj->contains(key);
+			 * obj-&gt;add(key);
+			 * obj-&gt;remove(key);
+			 * bool param_3 = obj-&gt;contains(key);
 			 */
 		}
 		void Main() {

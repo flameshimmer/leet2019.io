@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array nums of n integers, are there elements
 //a, b, c in nums such that a + b + c = 0? Find all 
 //unique triplets in the array which gives the sum of zero.
@@ -48,31 +48,31 @@ namespace Solution2019
 {
 	namespace ThreeSum
 	{
-		vector<vector<int>> threeSum(vector<int>& nums) {
+		vector&lt;vector&lt;int&gt;&gt; threeSum(vector&lt;int&gt;& nums) {
 			sort(nums.begin(), nums.end());
 			int len = nums.size();
 
-			vector<vector<int>> result;
-			for (int i = len - 1; i >= 2; i--) {
+			vector&lt;vector&lt;int&gt;&gt; result;
+			for (int i = len - 1; i &gt;= 2; i--) {
 				int l = 0;
 				int r = i - 1;
-				while (l < r) {
+				while (l &lt; r) {
 					int sum = nums[l] + nums[r] + nums[i];
 					if (sum == 0) {
-						while (l < r && nums[r - 1] == nums[r]) { r--; }
-						while (l < r && nums[l + 1] == nums[l]) { l++; }
+						while (l &lt; r && nums[r - 1] == nums[r]) { r--; }
+						while (l &lt; r && nums[l + 1] == nums[l]) { l++; }
 						result.push_back({ nums[l], nums[r], nums[i] });
 						r--;
 						l++;
 					}
-					else if (sum < 0) {
+					else if (sum &lt; 0) {
 						l++;
 					}
 					else {
 						r--;
 					}
 				}
-				while (i - 1 >= 2 && nums[i - 1] == nums[i]) { i--; }
+				while (i - 1 &gt;= 2 && nums[i - 1] == nums[i]) { i--; }
 			}
 			return result;
 		}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a logger system that receive stream of messages along 
 //with its timestamps, each message should be printed if and 
 //only if it is not printed in the last 10 seconds.
@@ -68,7 +68,7 @@ namespace Solution2019
 	{
 		class Logger {
 		private:
-			unordered_map<string, int> map;
+			unordered_map&lt;string, int&gt; map;
 		public:
 			/** Initialize your data structure here. */
 			Logger() {
@@ -84,7 +84,7 @@ namespace Solution2019
 					return true;
 				}
 
-				if (timestamp - map[message] >= 10) {
+				if (timestamp - map[message] &gt;= 10) {
 					map[message] = timestamp;
 					return true;
 				}

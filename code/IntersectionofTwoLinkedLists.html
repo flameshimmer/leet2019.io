@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Write a program to find the node at which the intersection of two singly linked lists begins.
 //
 //For example, the following two linked lists:
@@ -73,24 +73,24 @@ namespace Solution2019
 			if (!headA || !headB) { return nullptr; }
 
 			ListNode* tailA = headA;
-			while (tailA->next) { tailA = tailA->next; }
+			while (tailA-&gt;next) { tailA = tailA-&gt;next; }
 
-			tailA->next = headB;
+			tailA-&gt;next = headB;
 
-			ListNode* slow = headA->next;
-			ListNode* fast = headA->next->next;
-			while (fast && fast->next) {
+			ListNode* slow = headA-&gt;next;
+			ListNode* fast = headA-&gt;next-&gt;next;
+			while (fast && fast-&gt;next) {
 				if (slow == fast) { break; }
-				slow = slow->next;
-				fast = fast->next->next;
+				slow = slow-&gt;next;
+				fast = fast-&gt;next-&gt;next;
 			}
-			if (!fast || !fast->next) { tailA->next = nullptr; return nullptr; }
+			if (!fast || !fast-&gt;next) { tailA-&gt;next = nullptr; return nullptr; }
 			fast = headA;
 			while (slow != fast) {
-				slow = slow->next;
-				fast = fast->next;
+				slow = slow-&gt;next;
+				fast = fast-&gt;next;
 			}
-			tailA->next = nullptr;
+			tailA-&gt;next = nullptr;
 			return slow;
 		}
 
@@ -99,20 +99,20 @@ namespace Solution2019
 			int lenB = 0;
 			ListNode* curA = headA;
 			ListNode* curB = headB;
-			while (curA) { lenA++; curA = curA->next; }
-			while (curB) { lenB++; curB = curB->next; }
+			while (curA) { lenA++; curA = curA-&gt;next; }
+			while (curB) { lenB++; curB = curB-&gt;next; }
 
-			bool curALonger = lenA > lenB;
+			bool curALonger = lenA &gt; lenB;
 			ListNode* longer = curALonger ? headA : headB;
 			ListNode* shorter = curALonger ? headB : headA;
 			int diff = curALonger ? (lenA - lenB) : (lenB - lenA);
-			while (diff > 0) {
-				longer = longer->next;
+			while (diff &gt; 0) {
+				longer = longer-&gt;next;
 				diff--;
 			}
-			while (longer != shorter) { ///--------> note that when both of them are null this also breaks, and returns null
-				longer = longer->next;
-				shorter = shorter->next;
+			while (longer != shorter) { ///--------&gt; note that when both of them are null this also breaks, and returns null
+				longer = longer-&gt;next;
+				shorter = shorter-&gt;next;
 			}
 			return shorter;
 		}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	/*
+/*
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -45,16 +45,16 @@ namespace Solution2019
 {
 	namespace TwoSum
 	{
-		static bool compare(const pair<int, int>& p1, const pair<int, int>& p2)
+		static bool compare(const pair&lt;int, int&gt;& p1, const pair&lt;int, int&gt;& p2)
 		{
-			return p1.first < p2.first;
+			return p1.first &lt; p2.first;
 		}
-		vector<int> TwoSumSortFirst(vector<int> nums, int target) {
-			vector<int> result;
-			if (nums.size() < 2) { return result; }
+		vector&lt;int&gt; TwoSumSortFirst(vector&lt;int&gt; nums, int target) {
+			vector&lt;int&gt; result;
+			if (nums.size() &lt; 2) { return result; }
 
-			vector<pair<int, int>> newArray;
-			for (int i = 0; i < nums.size(); i++)
+			vector&lt;pair&lt;int, int&gt;&gt; newArray;
+			for (int i = 0; i &lt; nums.size(); i++)
 			{
 				newArray.push_back(make_pair(nums[i], i));
 			}
@@ -62,27 +62,27 @@ namespace Solution2019
 
 			int start = 0;
 			int end = nums.size() - 1;
-			while (start < end) {
+			while (start &lt; end) {
 				int sum = newArray[start].first + newArray[end].first;
 				if (sum == target) {
 					result.push_back(newArray[start].second);
 					result.push_back(newArray[end].second);
 					break;
 				}
-				else if (sum < target) { start++; }
+				else if (sum &lt; target) { start++; }
 				else { end--; }
 			}
 			return result;
 		}
 		
-		vector<int> TwoSum(vector<int> nums, int target)
+		vector&lt;int&gt; TwoSum(vector&lt;int&gt; nums, int target)
 		{
-			vector<int> result;
+			vector&lt;int&gt; result;
 			int len = nums.size();
-			if (len < 2) { return result; }
+			if (len &lt; 2) { return result; }
 
-			unordered_map<int, int> map;
-			for (int i = 0; i < len; i++) {
+			unordered_map&lt;int, int&gt; map;
+			for (int i = 0; i &lt; len; i++) {
 				int curTarget = target - nums[i];
 				if (map.find(curTarget) != map.end()) {
 					result.push_back(map[curTarget]);
@@ -95,7 +95,7 @@ namespace Solution2019
 
 
 		void Main() {
-			vector<int> nums = {3, 2, 4};
+			vector&lt;int&gt; nums = {3, 2, 4};
 			
 			print(TwoSum(nums, 6));
 		}

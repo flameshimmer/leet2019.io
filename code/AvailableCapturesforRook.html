@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //On an 8 x 8 chessboard, there is one white rook.  There also may be 
 //empty squares, white bishops, and black pawns.  These are given as 
 //characters 'R', '.', 'B', and 'p' respectively. Uppercase characters
@@ -70,11 +70,11 @@ namespace Solution2019
 {
 	namespace AvailableCapturesforRook
 	{
-		int numRookCaptures(vector<vector<char>>& board) {
+		int numRookCaptures(vector&lt;vector&lt;char&gt;&gt;& board) {
 			int row = 0;
 			int col = 0;
-			for (int i = 0; i < 8; i++) {
-				for (int j = 0; j < 8; j++) {
+			for (int i = 0; i &lt; 8; i++) {
+				for (int j = 0; j &lt; 8; j++) {
 					if (board[i][j] == 'R') { 
 						row = i;
 						col = j;
@@ -86,7 +86,7 @@ namespace Solution2019
 			//LookUp
 			int curRow = row;
 			int curCol = col;
-			while (curRow < 8) {
+			while (curRow &lt; 8) {
 				char c = board[curRow][curCol];
 				if (c == 'p') { result++; break; }
 				else if (c == 'B') { break; }
@@ -94,7 +94,7 @@ namespace Solution2019
 			}
 			//LookDown
 			curRow = row;
-			while (curRow >= 0) {
+			while (curRow &gt;= 0) {
 				char c = board[curRow][curCol];
 				if (c == 'p') { result++; break; }
 				else if (c == 'B') { break; }
@@ -103,7 +103,7 @@ namespace Solution2019
 			//LookRight
 			curRow = row;
 			curCol = col;
-			while (curCol < 8) {
+			while (curCol &lt; 8) {
 				char c = board[curRow][curCol];
 				if (c == 'p') { result++; break; }
 				else if (c == 'B') { break; }
@@ -111,7 +111,7 @@ namespace Solution2019
 			}
 			//LookLeft
 			curCol = col;
-			while (curCol >= 0) {
+			while (curCol &gt;= 0) {
 				char c = board[curRow][curCol];
 				if (c == 'p') { result++; break; }
 				else if (c == 'B') { break; }
@@ -121,7 +121,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<vector<char>> board{ {'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.','.'},{'.','.','.','R','.','.','.','p'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'} };
+			vector&lt;vector&lt;char&gt;&gt; board{ {'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.','.'},{'.','.','.','R','.','.','.','p'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','p','.','.','.','.'},{'.','.','.','.','.','.','.','.'},{'.','.','.','.','.','.','.','.'} };
 			print(numRookCaptures(board));
 		}
 	}

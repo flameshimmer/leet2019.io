@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two words (beginWord and endWord), and a dictionary's word list, 
 //find the length of shortest transformation sequence from beginWord to endWord, such that:
 //
@@ -48,7 +48,7 @@
 //endWord = "cog",
 //wordList = ["hot","dot","dog","lot","log","cog"]
 //Output: 5
-//Explanation: As one shortest transformation is "hit" -> "hot" -> "dot" -> "dog" -> "cog",
+//Explanation: As one shortest transformation is "hit" -&gt; "hot" -&gt; "dot" -&gt; "dog" -&gt; "cog",
 //return its length 5.
 //
 //Example 2:
@@ -65,19 +65,19 @@ namespace Solution2019
 	namespace WordLadder
 	{
 		namespace Short1 {
-			int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
-				unordered_set<string> wl(wordList.begin(), wordList.end());
-				unordered_set<string> visited;
+			int ladderLength(string beginWord, string endWord, vector&lt;string&gt;& wordList) {
+				unordered_set&lt;string&gt; wl(wordList.begin(), wordList.end());
+				unordered_set&lt;string&gt; visited;
 				int level = 0;
 
-				queue<vector<string>> q;
+				queue&lt;vector&lt;string&gt;&gt; q;
 				q.push({ beginWord });
 
 				while (!q.empty()) {
-					vector<string> path = q.front();
+					vector&lt;string&gt; path = q.front();
 					q.pop();
 
-					if (path.size() > level) {
+					if (path.size() &gt; level) {
 						level = path.size();
 						for (string w : visited) {
 							wl.erase(w);
@@ -86,9 +86,9 @@ namespace Solution2019
 					}
 
 					string last = path.back();
-					for (int i = 0; i < last.size(); i++) {
+					for (int i = 0; i &lt; last.size(); i++) {
 						string news = last;
-						for (char c = 'a'; c < 'z'; c++) {
+						for (char c = 'a'; c &lt; 'z'; c++) {
 							if (c == news[i]) { continue; }
 							news[i] = c;
 
@@ -97,7 +97,7 @@ namespace Solution2019
 									return level + 1;
 								}
 								else {
-									vector<string> newPath = path;
+									vector&lt;string&gt; newPath = path;
 									newPath.push_back(news);
 									visited.insert(news);
 									q.push(newPath);
@@ -111,9 +111,9 @@ namespace Solution2019
 		}
 
 		namespace Short2 {
-			int ladderLength(string beginWord, string endWord, vector<string>& wordList) {
-				unordered_set<string> wl(wordList.begin(), wordList.end());
-				queue<string> q;
+			int ladderLength(string beginWord, string endWord, vector&lt;string&gt;& wordList) {
+				unordered_set&lt;string&gt; wl(wordList.begin(), wordList.end());
+				queue&lt;string&gt; q;
 				q.push(beginWord);
 				int level = 1;
 
@@ -126,9 +126,9 @@ namespace Solution2019
 						if (word == endWord) { return level; }
 						wl.erase(word);
 
-						for (int i = 0; i < word.size(); i++) {
+						for (int i = 0; i &lt; word.size(); i++) {
 							char tmp = word[i];
-							for (char c = 'a'; c < 'z'; c++) {
+							for (char c = 'a'; c &lt; 'z'; c++) {
 								word[i] = c;
 								if (wl.find(word) != wl.end()) {
 									q.push(word);

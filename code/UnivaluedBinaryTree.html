@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A binary tree is univalued if every node in the tree has the same value.
 //
 //Return true if and only if the given tree is univalued.
@@ -54,17 +54,17 @@ namespace Solution2019
 		namespace Iterative {
 			bool isUnivalTree(TreeNode* root) {
 				if (!root) { return true; }
-				int target = root->val;
-				stack<TreeNode*> s;
+				int target = root-&gt;val;
+				stack&lt;TreeNode*&gt; s;
 				s.push(root);
 
 				while (!s.empty()) {
 					TreeNode* top = s.top();
 					s.pop();
 
-					if (top->val != target) { return false; }
-					if (top->left) { s.push(top->left); }
-					if (top->right) { s.push(top->right); }
+					if (top-&gt;val != target) { return false; }
+					if (top-&gt;left) { s.push(top-&gt;left); }
+					if (top-&gt;right) { s.push(top-&gt;right); }
 				}
 				return true;
 			}
@@ -73,13 +73,13 @@ namespace Solution2019
 		namespace Recursive {
 			bool helper(TreeNode* root, int target) {
 				if (!root) { return true; }
-				if (root->val != target) { return false; }
-				return helper(root->left, target) && helper(root->right, target);
+				if (root-&gt;val != target) { return false; }
+				return helper(root-&gt;left, target) && helper(root-&gt;right, target);
 			}
 
 			bool isUnivalTree(TreeNode* root) {
 				if (!root) { return true; }
-				return helper(root, root->val);
+				return helper(root, root-&gt;val);
 			}
 		}
 		void Main() {

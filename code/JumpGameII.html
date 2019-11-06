@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of non-negative integers, you are 
 //initially positioned at the first index of the array.
 //
@@ -49,7 +49,7 @@ namespace Solution2019
 {
 	namespace JumpGameII
 	{
-		int jump(vector<int>& nums) {
+		int jump(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			if (len == 0) { return 0; }
 
@@ -57,10 +57,10 @@ namespace Solution2019
 			int end = 0;
 			int result = 0;
 			int reach = 0;
-			for (int i = 0; i < len; i++) {
-				while (reach < len - 1) {
+			for (int i = 0; i &lt; len; i++) {
+				while (reach &lt; len - 1) {
 					result++;
-					for (int i = start; i <= end; i++) {
+					for (int i = start; i &lt;= end; i++) {
 						reach = max(reach, i + nums[i]);
 					}
 					start = end + 1;

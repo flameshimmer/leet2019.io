@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a sorted array nums, remove the duplicates in-place
 //such that duplicates appeared at most twice and return 
 //the new length.
@@ -68,7 +68,7 @@
 //
 //// any modification to nums in your function would be known by the caller.
 //// using the length returned by your function, it prints the first len elements.
-//for (int i = 0; i < len; i++) {
+//for (int i = 0; i &lt; len; i++) {
 //    print(nums[i]);
 //} 
 
@@ -76,10 +76,10 @@ namespace Solution2019
 {
 	namespace RemoveDuplicatesfromSortedArrayII
 	{
-		int removeDuplicates(vector<int>& nums) {
+		int removeDuplicates(vector&lt;int&gt;& nums) {
 			int i = 0;
 			for (int v : nums) {
-				if (i<2 || v > nums[i-2]) {
+				if (i&lt;2 || v &gt; nums[i-2]) {
 					nums[i] = v;
 					i++;
 				}
@@ -87,14 +87,14 @@ namespace Solution2019
 			return i;
 		}
 		
-		int removeDuplicatesAnother(vector<int>& nums) {
+		int removeDuplicatesAnother(vector&lt;int&gt;& nums) {
 			int len = nums.size();
-			if (len < 3) { return len; }
+			if (len &lt; 3) { return len; }
 
 			int count = 1;
 			int i = 0;
-			for (int j = 1; j < len; j++) {
-				if (nums[j] != nums[i] || count < 2) {
+			for (int j = 1; j &lt; len; j++) {
+				if (nums[j] != nums[i] || count &lt; 2) {
 					if (nums[j] != nums[i]) { count = 1; }
 					else { count++; }
 					i++;

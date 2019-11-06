@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string date representing a Gregorian calendar date
 //formatted as YYYY-MM-DD, return the day number of the year.
 //
@@ -65,8 +65,8 @@ namespace Solution2019
 			int days[12] = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
 			int result = day;
-			if (month > 2 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) { result++; }
-			for (int i = 0; i < month - 1; i++) {
+			if (month &gt; 2 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) { result++; }
+			for (int i = 0; i &lt; month - 1; i++) {
 				result += days[i];
 			}
 			return result;
@@ -75,7 +75,7 @@ namespace Solution2019
 		int dayOfYearAnother(string date) {
 			istringstream ss(date);
 			string val;
-			vector<int> date2;
+			vector&lt;int&gt; date2;
 			while (getline(ss, val, '-')) {
 				date2.push_back(stoi(val));
 			}
@@ -90,7 +90,7 @@ namespace Solution2019
 			if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) { leap = true; }
 
 			int result = day;
-			for (int i = 0; i < month - 1; i++) {
+			for (int i = 0; i &lt; month - 1; i++) {
 				if (leap) {
 					result += days2[i];
 				}

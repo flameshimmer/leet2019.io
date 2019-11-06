@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Calculate the sum of two integers a and b, but you are 
 //not allowed to use the operator + and -.
 //
@@ -49,7 +49,7 @@ namespace Solution2019
 			while (b != 0) {
 				carry = a & b;
 				a = a ^ b;
-				b = ((carry & 0xffffffff) << 1); // limited to 32 bits
+				b = ((carry & 0xffffffff) &lt;&lt; 1); // limited to 32 bits
 			}
 			return a;
 		}

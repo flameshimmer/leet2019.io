@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of strings, group anagrams together.
 //
 //Example:
@@ -56,8 +56,8 @@ namespace Solution2019
 			}
 
 			string result = "";
-			for (int i = 0; i < 26; i++) {
-				if (map[i] > 0) {
+			for (int i = 0; i &lt; 26; i++) {
+				if (map[i] &gt; 0) {
 					char c = 'a' + i;
 					result += c + to_string(map[i]);
 				}
@@ -65,9 +65,9 @@ namespace Solution2019
 			return result;
 		}
 
-		vector<vector<string>> groupAnagrams(vector<string>& strs) {
-			vector<vector<string>> result;
-			unordered_map<string, vector<string>> map;
+		vector&lt;vector&lt;string&gt;&gt; groupAnagrams(vector&lt;string&gt;& strs) {
+			vector&lt;vector&lt;string&gt;&gt; result;
+			unordered_map&lt;string, vector&lt;string&gt;&gt; map;
 			for (string s : strs) {
 				map[getKey(s)].push_back(s);
 			}

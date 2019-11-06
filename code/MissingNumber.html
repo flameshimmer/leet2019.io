@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array containing n distinct numbers taken from
 //0, 1, 2, ..., n, find the one that is missing from the array.
 //
@@ -48,24 +48,24 @@ namespace Solution2019
 {
 	namespace MissingNumber
 	{
-		int MissingNumber(vector<int>& A) {
+		int MissingNumber(vector&lt;int&gt;& A) {
 			int len = A.size();
 			int sum = 0;
 			for (int i : A) { sum += i; }
 			int expected = (0 + len) * (len + 1) / 2;
 			return expected - sum;
 		}
-		int MissingNumberBitManipulation(vector<int>& A) {
+		int MissingNumberBitManipulation(vector&lt;int&gt;& A) {
 			int len = A.size();
 			int result = len;
-			for (int i = 0; i < len; i ++ ) {
+			for (int i = 0; i &lt; len; i ++ ) {
 				result ^= i ^ A[i];
 			}
 			return result;
 		}
 
 		void Main() {
-			vector<int> test = { 9,6,4,2,3,5,7,0,1 };
+			vector&lt;int&gt; test = { 9,6,4,2,3,5,7,0,1 };
 			print(MissingNumberBitManipulation(test));
 		}
 	}

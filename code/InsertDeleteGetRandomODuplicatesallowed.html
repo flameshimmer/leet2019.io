@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a data structure that supports all following 
 //operations in average O(1) time.
 //
@@ -70,8 +70,8 @@ namespace Solution2019
 	{
 		class RandomizedCollection {
 		private:
-			unordered_multimap<int, int> map;
-			vector<int> nums;
+			unordered_multimap&lt;int, int&gt; map;
+			vector&lt;int&gt; nums;
 		public:
 			/** Initialize your data structure here. */
 			RandomizedCollection() {
@@ -94,7 +94,7 @@ namespace Solution2019
 
 				int len = nums.size();
 				auto it = map.find(val);
-				int index = it->second;
+				int index = it-&gt;second;
 
 				int lastVal = nums[len - 1];
 
@@ -102,8 +102,8 @@ namespace Solution2019
 					swap(nums[index], nums[len - 1]);
 					auto range = map.equal_range(lastVal);
 					for (auto b = range.first; b != range.second; b++) {
-						if (b->second == len - 1) {
-							b->second = index;
+						if (b-&gt;second == len - 1) {
+							b-&gt;second = index;
 							break;
 						}
 					}
@@ -122,10 +122,10 @@ namespace Solution2019
 
 		void Main() {
 			RandomizedCollection* obj = new RandomizedCollection();
-			bool param_1 = obj->insert(1);
-			bool param_2 = obj->remove(1);
-			bool param_3 = obj->insert(1);
-			int param_4 = obj->getRandom();
+			bool param_1 = obj-&gt;insert(1);
+			bool param_2 = obj-&gt;remove(1);
+			bool param_3 = obj-&gt;insert(1);
+			int param_4 = obj-&gt;getRandom();
 		}
 	}
 }

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //International Morse Code defines a standard encoding where each letter 
 //is mapped to a series of dots and dashes, as follows: "a" maps to ".-",
 //"b" maps to "-...", "c" maps to "-.-.", and so on.
@@ -50,10 +50,10 @@
 //Output: 2
 //Explanation: 
 //The transformation of each word is:
-//"gin" -> "--...-."
-//"zen" -> "--...-."
-//"gig" -> "--...--."
-//"msg" -> "--...--."
+//"gin" -&gt; "--...-."
+//"zen" -&gt; "--...-."
+//"gig" -&gt; "--...--."
+//"msg" -&gt; "--...--."
 //
 //There are 2 different transformations, "--...-." and "--...--.".
 //Note:
@@ -66,10 +66,10 @@ namespace Solution2019
 {
 	namespace UniqueMorseCodeWords
 	{
-		int uniqueMorseRepresentations(vector<string>& words) {
-			vector<string> map = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
+		int uniqueMorseRepresentations(vector&lt;string&gt;& words) {
+			vector&lt;string&gt; map = { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--.." };
 
-			unordered_set<string> set;
+			unordered_set&lt;string&gt; set;
 			for (string w : words) {
 				string code = "";
 				for (char c : w) {

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Given a non-empty array of integers, return the k most frequent elements.
 //
 //Example 1:
@@ -48,17 +48,17 @@ namespace Solution2019
 {
 	namespace TopKFrequentElements
 	{
-		vector<int> topKFrequent(vector<int>& nums, int k) {
-			unordered_map<int, int> map;
+		vector&lt;int&gt; topKFrequent(vector&lt;int&gt;& nums, int k) {
+			unordered_map&lt;int, int&gt; map;
 			for (int v : nums) { map[v]++; }
 
-			auto comp = [](pair<int, int>& a, pair<int, int>& b) {return a.second > b.second; };
-			priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp)> pq(comp);
+			auto comp = [](pair&lt;int, int&gt;& a, pair&lt;int, int&gt;& b) {return a.second &gt; b.second; };
+			priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, decltype(comp)&gt; pq(comp);
 			for (auto& p : map) {
 				pq.push(make_pair(p.first, p.second));
-				if (pq.size() > k) { pq.pop(); }
+				if (pq.size() &gt; k) { pq.pop(); }
 			}
-			vector<int> result;
+			vector&lt;int&gt; result;
 			while (!pq.empty()) {
 				result.push_back(pq.top().first);
 				pq.pop();

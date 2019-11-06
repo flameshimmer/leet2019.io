@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //This question is the same as "Max Chunks to Make Sorted"
 //except the integers of the given array are not necessarily
 //distinct, the input array could be up to length 2000, and
@@ -66,13 +66,13 @@ namespace Solution2019
 {
 	namespace MaxChunksToMakeSortedII
 	{
-		int maxChunksToSorted(vector<int>& arr) {
-			vector<int> t(arr.begin(), arr.end());
+		int maxChunksToSorted(vector&lt;int&gt;& arr) {
+			vector&lt;int&gt; t(arr.begin(), arr.end());
 			sort(t.begin(), t.end());
 			long long sum1 = 0;
 			long long sum2 = 0;
 			int result = 0;
-			for (int i = 0; i < arr.size(); i++) {
+			for (int i = 0; i &lt; arr.size(); i++) {
 				sum1 += t[i];
 				sum2 += arr[i];
 				if (sum1 == sum2) { result++; }

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a set of candidate numbers (candidates) (without duplicates)
 //and a target number (target), find all unique combinations in 
 //candidates where the candidate numbers sums to target.
@@ -61,23 +61,23 @@ namespace Solution2019
 {
 	namespace CombinationSum
 	{
-		void comboSumHelper(vector<int>& can, int start, int len, int sum, int target, vector<int>& result, vector<vector<int>>& results) {
+		void comboSumHelper(vector&lt;int&gt;& can, int start, int len, int sum, int target, vector&lt;int&gt;& result, vector&lt;vector&lt;int&gt;&gt;& results) {
 			if (sum == target) { 
 				results.push_back(result); 
 			}
-			if (sum >= target) { return; }
+			if (sum &gt;= target) { return; }
 
-			for (int i = start; i < len; i++) {
+			for (int i = start; i &lt; len; i++) {
 				result.push_back(can[i]);
 				comboSumHelper(can, i, len, sum + can[i], target, result, results);
 				result.pop_back();
 			}			
 		}
 
-		vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+		vector&lt;vector&lt;int&gt;&gt; combinationSum(vector&lt;int&gt;& candidates, int target) {
 			int len = candidates.size();
-			vector<vector<int>> results;
-			vector<int> result;
+			vector&lt;vector&lt;int&gt;&gt; results;
+			vector&lt;int&gt; result;
 			if (len == 0) { return results; }
 
 			int sum = 0;
@@ -86,7 +86,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<int> candidate = { 2, 3, 5 };
+			vector&lt;int&gt; candidate = { 2, 3, 5 };
 			print(combinationSum(candidate, 8));
 		}
 	}

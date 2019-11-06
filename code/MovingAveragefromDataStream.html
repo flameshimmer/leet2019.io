@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a stream of integersand a window size, calculate
 //the moving average of all integers in the sliding window.
 //
@@ -48,7 +48,7 @@ namespace Solution2019
 		class MovingAverage {
 		private:
 			int maxSize;
-			queue<int> q;
+			queue&lt;int&gt; q;
 			int sum;
 		public:
 			/** Initialize your data structure here. */
@@ -60,7 +60,7 @@ namespace Solution2019
 			double next(int val) {
 				sum += val;
 				q.push(val);
-				if (q.size() > maxSize) {
+				if (q.size() &gt; maxSize) {
 					sum -= q.front();
 					q.pop();
 				}

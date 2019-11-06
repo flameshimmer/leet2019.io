@@ -28,8 +28,8 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-#include <bitset>
+#include "stdafx.h"
+#include &lt;bitset&gt;
 /*Given a string, determine if a permutation 
 of the string could form a palindrome.
 
@@ -51,15 +51,15 @@ namespace Solution2019
 	namespace PalindromePermutation
 	{
 		bool canPermutePalindromeUsingBitset(string s) {
-			bitset<256> bs;
+			bitset&lt;256&gt; bs;
 			for (char c : s) {
 				bs.flip(c);
 			}
-			return bs.count() < 2;
+			return bs.count() &lt; 2;
 		}
 
 		bool canPermutePalindrome(string s) {
-			unordered_map<char, int> map;
+			unordered_map&lt;char, int&gt; map;
 			for (char c : s) {
 				map[c] ++;
 			}
@@ -67,7 +67,7 @@ namespace Solution2019
 			for (auto& p : map) {
 				if (p.second % 2) {
 					oddCount++;
-					if (oddCount > 1) { return false; }
+					if (oddCount &gt; 1) { return false; }
 				}
 			}
 			return true;

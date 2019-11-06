@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a matrix of m x n elements (m rows, n columns), 
 //return all elements of the matrix in spiral order.
 //
@@ -55,20 +55,20 @@ namespace Solution2019
 {
 	namespace SpiralMatrix
 	{
-		vector<int> spiralOrder(vector<vector<int>>& matrix) {
-			vector<int> result;
+		vector&lt;int&gt; spiralOrder(vector&lt;vector&lt;int&gt;&gt;& matrix) {
+			vector&lt;int&gt; result;
 			int rowCount = matrix.size();
 			if (rowCount == 0) { return result; }
 			int colCount = matrix[0].size();
 			if (colCount == 0) { return result; }
 
-			vector<vector<int>> dir = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
-			vector<int> dirLen = { colCount, rowCount - 1 };
+			vector&lt;vector&lt;int&gt;&gt; dir = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
+			vector&lt;int&gt; dirLen = { colCount, rowCount - 1 };
 			int curDir = 0;
 			int row = 0;
 			int col = -1;
 			while (dirLen[curDir % 2]) {
-				for (int i = 0; i < dirLen[curDir % 2]; i++) {
+				for (int i = 0; i &lt; dirLen[curDir % 2]; i++) {
 					row += dir[curDir][0];
 					col += dir[curDir][1];
 					result.push_back(matrix[row][col]);

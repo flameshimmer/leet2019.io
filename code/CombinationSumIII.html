@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Find all possible combinations of k numbers that add up to a number n, 
 //given that only numbers from 1 to 9 can be used and each combination 
 //should be a unique set of numbers.
@@ -49,21 +49,21 @@ namespace Solution2019
 {
 	namespace CombinationSumIII
 	{
-		void comboHelper(int start, int maxLen, int target, int sum, vector<int>& result, vector<vector<int>>& results) {
+		void comboHelper(int start, int maxLen, int target, int sum, vector&lt;int&gt;& result, vector&lt;vector&lt;int&gt;&gt;& results) {
 			int curLen = result.size();
 			if (curLen == maxLen && sum == target) { results.push_back(result); }
-			if (curLen >= maxLen || sum > target) { return; }
+			if (curLen &gt;= maxLen || sum &gt; target) { return; }
 
-			for (int i = start; i <= 9; i++) {
+			for (int i = start; i &lt;= 9; i++) {
 				result.push_back(i);
 				comboHelper(i + 1, maxLen, target, sum + i, result, results);
 				result.pop_back();
 			}
 		}
 
-		vector<vector<int>> combinationSum3(int k, int n) {
-			vector<vector<int>> results;
-			vector<int> result;
+		vector&lt;vector&lt;int&gt;&gt; combinationSum3(int k, int n) {
+			vector&lt;vector&lt;int&gt;&gt; results;
+			vector&lt;int&gt; result;
 			int sum = 0;
 			
 			comboHelper(1, k, n, sum, result, results);

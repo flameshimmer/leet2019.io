@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two lists Aand B, and B is an anagram of A.B is an anagram 
 //of A means B is made by randomizing the order of the elements in A.
 //
@@ -56,13 +56,13 @@ namespace Solution2019
 {
 	namespace FindAnagramMappings
 	{
-		vector<int> anagramMappings(vector<int>& A, vector<int>& B) {
-			unordered_map<int, int> map;
-			for (int i = 0; i < B.size(); i++) {
+		vector&lt;int&gt; anagramMappings(vector&lt;int&gt;& A, vector&lt;int&gt;& B) {
+			unordered_map&lt;int, int&gt; map;
+			for (int i = 0; i &lt; B.size(); i++) {
 				map[B[i]] = i;
 			}
 
-			vector<int> result;
+			vector&lt;int&gt; result;
 			for (int v : A)
 			{
 				result.push_back(map[v]);

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary tree, find its maximum depth.
 //
 //The maximum depth is the number of nodes along the 
@@ -53,7 +53,7 @@ namespace Solution2019
 	{
 		int maxDepth(TreeNode* root) {
 			if (!root) { return 0; }
-			return 1 + max(maxDepth(root->left), maxDepth(root->right));
+			return 1 + max(maxDepth(root-&gt;left), maxDepth(root-&gt;right));
 		}
 
 		void Main() {

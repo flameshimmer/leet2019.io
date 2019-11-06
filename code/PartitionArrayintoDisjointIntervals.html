@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A, partition it into two (contiguous) subarrays left and right so that:
 //
 //Every element in left is less than or equal to every element in right.
@@ -48,21 +48,21 @@
 //Explanation: left = [1,1,1,0], right = [6,12]
 // 
 //Note:
-//2 <= A.length <= 30000
-//0 <= A[i] <= 10^6
+//2 &lt;= A.length &lt;= 30000
+//0 &lt;= A[i] &lt;= 10^6
 //It is guaranteed there is at least one way to partition A as described.
 
 namespace Solution2019
 {
 	namespace PartitionArrayintoDisjointIntervals
 	{
-		int partitionDisjoint(vector<int>& A) {
+		int partitionDisjoint(vector&lt;int&gt;& A) {
 			int len = A.size();
 			int maxV = INT_MIN;
 			int minV = INT_MAX;
-			vector<int> maxLeft(len);
-			vector<int> minRight(len);
-			for (int i = 0; i < len; i++) {
+			vector&lt;int&gt; maxLeft(len);
+			vector&lt;int&gt; minRight(len);
+			for (int i = 0; i &lt; len; i++) {
 				maxV = max(maxV, A[i]);
 				maxLeft[i] = maxV;
 
@@ -70,8 +70,8 @@ namespace Solution2019
 				minRight[len - 1 - i] = minV;
 			}
 
-			for (int i = 1; i < len; i++) {
-				if (maxLeft[i - 1] <= minRight[i]) {
+			for (int i = 1; i &lt; len; i++) {
+				if (maxLeft[i - 1] &lt;= minRight[i]) {
 					return i;
 				}
 			}

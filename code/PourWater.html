@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We are given an elevation map, heights[i] representing the 
 //height of the terrain at that index. The width at each 
 //index is 1. After V units of water fall at index K, 
@@ -60,7 +60,7 @@
 //#       #
 //##  # ###
 //#########
-// 0123456    <- index
+// 0123456    &lt;- index
 //
 //The first drop of water lands at index K = 3:
 //
@@ -168,22 +168,22 @@ namespace Solution2019
 {
 	namespace PourWater
 	{
-		vector<int> pourWater(vector<int>& heights, int V, int K) {
+		vector&lt;int&gt; pourWater(vector&lt;int&gt;& heights, int V, int K) {
 			int len = heights.size();
 
-			for (int i = 0; i < V; i++)
+			for (int i = 0; i &lt; V; i++)
 			{
 				int cur = K;
-				while (cur > 0 && heights[cur] >= heights[cur - 1]) { cur--; }
-				while (cur < len - 1 && heights[cur] >= heights[cur + 1]) { cur++; }
-				while (cur > K && heights[cur] >= heights[cur - 1]) { cur--; }
+				while (cur &gt; 0 && heights[cur] &gt;= heights[cur - 1]) { cur--; }
+				while (cur &lt; len - 1 && heights[cur] &gt;= heights[cur + 1]) { cur++; }
+				while (cur &gt; K && heights[cur] &gt;= heights[cur - 1]) { cur--; }
 				heights[cur]++;
 			}
 			return heights;
 		}
 
 		void Main() {
-			vector<int> test = { 2, 1, 1, 2, 1, 2, 2 };
+			vector&lt;int&gt; test = { 2, 1, 1, 2, 1, 2, 2 };
 			print(pourWater(test, 4, 3));
 		}
 	}

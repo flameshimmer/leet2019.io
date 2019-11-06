@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string, you need to reverse the order of characters 
 //in each word within a sentence while still preserving 
 //whitespaceand initial word order.
@@ -44,13 +44,13 @@ namespace Solution2019
 	{
 		string reverseWords(string s) {
 			int len = s.size();
-			if (len < 2) { return s; }
+			if (len &lt; 2) { return s; }
 			int start = 0;
 			int end = 0;
-			while (end < len) {
-				while (end < len && s[end] == ' ') { end++; }
+			while (end &lt; len) {
+				while (end &lt; len && s[end] == ' ') { end++; }
 				start = end;
-				while (end < len && s[end] != ' ') { end++; }
+				while (end &lt; len && s[end] != ' ') { end++; }
 				if (start != end) { reverse(s.begin() + start, s.begin() + end); }
 			}
 			return s;

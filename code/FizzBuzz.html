@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*Write a program that outputs the string representation 
 of numbers from 1 to n.
 
@@ -60,9 +60,9 @@ namespace Solution2019
 {
 	namespace FizzBuzz
 	{
-		vector<string> fizzBuzz(int n) {
-			vector<string> result(n);
-			for (int i = 1; i <= n; i++) {
+		vector&lt;string&gt; fizzBuzz(int n) {
+			vector&lt;string&gt; result(n);
+			for (int i = 1; i &lt;= n; i++) {
 				if (i % 3 != 0 && i % 5 != 0) {
 					result[i - 1] = to_string(i);
 					continue;

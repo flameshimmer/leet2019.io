@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty array of non-negative integers nums, the degree
 //of this array is defined as the maximum frequency of any one of its elements.
 //
@@ -56,16 +56,16 @@ namespace Solution2019
 {
 	namespace DegreeofanArray
 	{
-		int DegreeofanArray(vector<int> A) {
-			unordered_map<int, pair<int, int>> map;
+		int DegreeofanArray(vector&lt;int&gt; A) {
+			unordered_map&lt;int, pair&lt;int, int&gt;&gt; map;
 			int result = 1;
 			int degree = 1;
-			for (int i = 0; i < A.size(); i++) {
+			for (int i = 0; i &lt; A.size(); i++) {
 				int v = A[i];
 				if (map.find(v) == map.end()) { map[v] = make_pair(1, i); }
 				else {
 					map[v].first++;
-					if (map[v].first > degree) {
+					if (map[v].first &gt; degree) {
 						degree = map[v].first;
 						result = i - map[v].second + 1;
 					}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given numRows, generate the first numRows of Pascal's triangle.
 //Input: 5
 //Output:
@@ -44,18 +44,18 @@ namespace Solution2019
 {
 	namespace PascalsTriangle
 	{
-		vector<vector<int>> generate(int numRows) {
-			vector<vector<int>> result;
+		vector&lt;vector&lt;int&gt;&gt; generate(int numRows) {
+			vector&lt;vector&lt;int&gt;&gt; result;
 			if (numRows == 0) { return result; }
 			result.push_back({1});
 
-			for (int i = 1; i < numRows; i++) {
-				vector<int> lastRow = result.back();
-				vector<int> curRow;
+			for (int i = 1; i &lt; numRows; i++) {
+				vector&lt;int&gt; lastRow = result.back();
+				vector&lt;int&gt; curRow;
 				int len = lastRow.size();
-				for (int j = 0; j <= len; j++)
+				for (int j = 0; j &lt;= len; j++)
 				{
-					curRow.push_back((j == len ? 0 :lastRow[j]) + (j-1<0 ? 0 : lastRow[j - 1]));
+					curRow.push_back((j == len ? 0 :lastRow[j]) + (j-1&lt;0 ? 0 : lastRow[j - 1]));
 				}
 				result.push_back(curRow);
 			}

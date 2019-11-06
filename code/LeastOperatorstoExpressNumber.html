@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a single positive integer x, we will write an expression of the form x
 //(op1) x (op2) x (op3) x ... where each operator op1, op2, etc. is either
@@ -65,17 +65,17 @@
 // 
 //
 //Note:
-//2 <= x <= 100
-//1 <= target <= 2 * 10^8
+//2 &lt;= x &lt;= 100
+//1 &lt;= target &lt;= 2 * 10^8
 
 namespace Solution2019
 {
 	namespace LeastOperatorstoExpressNumber
 	{
 		namespace DP {
-			int dp(int x, int t, unordered_map<int, int>& map) {
+			int dp(int x, int t, unordered_map&lt;int, int&gt;& map) {
 				if (t == 0) { return 0; }
-				if (t < x) {
+				if (t &lt; x) {
 					return min(2 * t - 1, 2 * (x - t));
 				}
 				if (map.find(t) != map.end()) { return map[t]; }
@@ -88,7 +88,7 @@ namespace Solution2019
 				}
 				int result = dp(x, t - p, map) + k;
 				long long left = p * x - t;
-				if (left < t) {
+				if (left &lt; t) {
 					result = min(result, dp(x, left, map) + k + 1);
 				}
 				map[t] = result;
@@ -96,15 +96,15 @@ namespace Solution2019
 			}
 
 			int leastOpsExpressTarget(int x, int target) {
-				unordered_map<int, int> map;
+				unordered_map&lt;int, int&gt; map;
 				return dp(x, target, map);
 			}
 		}
 
 		namespace BFS {
 			int leastOpsExpressTarget(int x, int target) {
-				priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> q;
-				unordered_set<int> s;
+				priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, greater&lt;pair&lt;int, int&gt;&gt;&gt; q;
+				unordered_set&lt;int&gt; s;
 				q.push({ 0, target });
 				while (!q.empty()) {
 					const int c = q.top().first;
@@ -129,7 +129,7 @@ namespace Solution2019
 
 		namespace SlowButEasyToUnderstand {
 			int leastOpsExpressTarget(int x, int target) {
-				if (x > target) {
+				if (x &gt; target) {
 					return min(target * 2 - 1, (x - target) * 2);
 				}
 				if (x == target) {
@@ -138,14 +138,14 @@ namespace Solution2019
 
 				long long sums = x;
 				int times = 0;
-				while (sums < target) {
+				while (sums &lt; target) {
 					times++;
 					sums *= x;
 				}
 
 				if (sums == target) { return times; }
 				int l = INT_MAX;
-				if (sums - target < target) {
+				if (sums - target &lt; target) {
 					l = leastOpsExpressTarget(x, sums - target) + times;
 				}
 				int r = leastOpsExpressTarget(x, target - (sums / x)) + times - 1;

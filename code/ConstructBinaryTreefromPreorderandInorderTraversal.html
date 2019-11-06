@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given preorder and inorder traversal of a tree, 
 //construct the binary tree.
 //
@@ -51,26 +51,26 @@ namespace Solution2019
 {
 	namespace ConstructBinaryTreefromPreorderandInorderTraversal
 	{
-		TreeNode* helper(vector<int>& preorder, int& rootIndex, vector<int>& inorder, int start, int end, unordered_map<int, int>& map) {
-			if (start > end) { return nullptr; }
+		TreeNode* helper(vector&lt;int&gt;& preorder, int& rootIndex, vector&lt;int&gt;& inorder, int start, int end, unordered_map&lt;int, int&gt;& map) {
+			if (start &gt; end) { return nullptr; }
 
 			int rootVal = preorder[rootIndex];
 			TreeNode* root = new TreeNode(rootVal);
 			rootIndex++;
 
 			int i = map[rootVal];
-			root->left = helper(preorder, rootIndex, inorder, start, i - 1, map);
-			root->right = helper(preorder, rootIndex, inorder, i + 1, end, map);
+			root-&gt;left = helper(preorder, rootIndex, inorder, start, i - 1, map);
+			root-&gt;right = helper(preorder, rootIndex, inorder, i + 1, end, map);
 
 			return root;
 		}
 
 
-		TreeNode* buildTree(vector<int>& preorder, vector<int>& inorder) {
+		TreeNode* buildTree(vector&lt;int&gt;& preorder, vector&lt;int&gt;& inorder) {
 			int len = preorder.size();
 			if (len == 0) { return nullptr; }
-			unordered_map<int, int> map;
-			for (int i = 0; i < len; i++) {
+			unordered_map&lt;int, int&gt; map;
+			for (int i = 0; i &lt; len; i++) {
 				map[inorder[i]] = i;
 			}
 

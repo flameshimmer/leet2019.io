@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Design a class which receives a list of words in the constructor, and
 //implements a method that takes two words word1 and word2 and return the
@@ -50,14 +50,14 @@ namespace Solution2019
 {
 	namespace ShortestWordDistance
 	{
-		int shortestDistance(vector<string>& words, string word1, string word2) {
+		int shortestDistance(vector&lt;string&gt;& words, string word1, string word2) {
 			int i1 = -1;
 			int i2 = -1;
 			int result = words.size();
-			for (int i = 0; i < words.size(); i++) {
+			for (int i = 0; i &lt; words.size(); i++) {
 				if (words[i] == word1) { i1 = i; }
 				else if (words[i] == word2) { i2 = i; }
-				if (i1 >= 0 && i2 >= 0) {
+				if (i1 &gt;= 0 && i2 &gt;= 0) {
 					result = min(result, abs(i1 - i2));
 				}
 			}

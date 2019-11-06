@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Write an algorithm to determine if a number is "happy".
 //
 //A happy number is a number defined by the following 
@@ -53,7 +53,7 @@ namespace Solution2019
 	namespace HappyNumber
 	{
 		bool isHappy(int n) {
-			unordered_set<int> set;
+			unordered_set&lt;int&gt; set;
 			while (n != 1 && set.count(n) == 0) {
 				set.insert(n);
 				int newNum = 0;

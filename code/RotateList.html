@@ -28,67 +28,67 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a linked list, rotate the list to the right by k places, where k is non-negative.
 //
 //Example 1:
-//Input: 1->2->3->4->5->NULL, k = 2
-//Output: 4->5->1->2->3->NULL
+//Input: 1-&gt;2-&gt;3-&gt;4-&gt;5-&gt;NULL, k = 2
+//Output: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
 //Explanation:
-//rotate 1 steps to the right: 5->1->2->3->4->NULL
-//rotate 2 steps to the right: 4->5->1->2->3->NULL
+//rotate 1 steps to the right: 5-&gt;1-&gt;2-&gt;3-&gt;4-&gt;NULL
+//rotate 2 steps to the right: 4-&gt;5-&gt;1-&gt;2-&gt;3-&gt;NULL
 //
 //Example 2:
-//Input: 0->1->2->NULL, k = 4
-//Output: 2->0->1->NULL
+//Input: 0-&gt;1-&gt;2-&gt;NULL, k = 4
+//Output: 2-&gt;0-&gt;1-&gt;NULL
 //Explanation:
-//rotate 1 steps to the right: 2->0->1->NULL
-//rotate 2 steps to the right: 1->2->0->NULL
-//rotate 3 steps to the right: 0->1->2->NULL
-//rotate 4 steps to the right: 2->0->1->NULL
+//rotate 1 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
+//rotate 2 steps to the right: 1-&gt;2-&gt;0-&gt;NULL
+//rotate 3 steps to the right: 0-&gt;1-&gt;2-&gt;NULL
+//rotate 4 steps to the right: 2-&gt;0-&gt;1-&gt;NULL
 
 namespace Solution2019
 {
 	namespace RotateList
 	{
 		ListNode* RotateListTooSlow(ListNode* head, int k) {
-			if (!head || !head->next || k == 0) { return head; }
+			if (!head || !head-&gt;next || k == 0) { return head; }
 
 			ListNode* front = head;
 			ListNode* back = head; 
 
-			for (int i = 0; i < k; i++) {
-				front = front->next ? front->next : head;
+			for (int i = 0; i &lt; k; i++) {
+				front = front-&gt;next ? front-&gt;next : head;
 			}
-			while (front->next) {
-				front = front->next;
-				back = back->next;
+			while (front-&gt;next) {
+				front = front-&gt;next;
+				back = back-&gt;next;
 			}
-			ListNode* secondHalfStart = back->next;
+			ListNode* secondHalfStart = back-&gt;next;
 			if (!secondHalfStart) { return head; }
-			back->next = nullptr;
-			front->next = head;
+			back-&gt;next = nullptr;
+			front-&gt;next = head;
 			return secondHalfStart;
 		}
 
 		ListNode* RotateList(ListNode* head, int k) {
-			if (!head || !head->next || k == 0) {
+			if (!head || !head-&gt;next || k == 0) {
 				return head;
 			}
 			int i = 0;
 			ListNode* cur = head;
-			while (cur) { i++; cur = cur->next; }
+			while (cur) { i++; cur = cur-&gt;next; }
 			k %= i;
 			if (k == 0) { return head; }
 			
 			cur = head;
 			ListNode* back = head;
-			for (int i = 0; i < k; i++) { cur = cur->next; }
-			while (cur->next) { cur = cur->next; back = back->next; }
+			for (int i = 0; i &lt; k; i++) { cur = cur-&gt;next; }
+			while (cur-&gt;next) { cur = cur-&gt;next; back = back-&gt;next; }
 
-			ListNode* secondHalfStart = back->next;
-			back->next = nullptr;
-			cur->next = head;
+			ListNode* secondHalfStart = back-&gt;next;
+			back-&gt;next = nullptr;
+			cur-&gt;next = head;
 			return secondHalfStart;
 		}
 

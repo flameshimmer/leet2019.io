@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a linked list, reverse the nodes of a linked 
 //list k at a time and return its modified list.
 //
@@ -37,11 +37,11 @@
 //
 //Example:
 //
-//Given this linked list: 1->2->3->4->5
+//Given this linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5
 //
-//For k = 2, you should return: 2->1->4->3->5
+//For k = 2, you should return: 2-&gt;1-&gt;4-&gt;3-&gt;5
 //
-//For k = 3, you should return: 3->2->1->4->5
+//For k = 3, you should return: 3-&gt;2-&gt;1-&gt;4-&gt;5
 //
 //Note:
 //
@@ -53,15 +53,15 @@ namespace Solution2019
 	namespace ReverseNodesinkGroup
 	{
 		ListNode* ReverseLinkedList(ListNode* head) {
-			if (!head || !head->next) { return head; }
+			if (!head || !head-&gt;next) { return head; }
 			ListNode* cur = head;
-			ListNode* next = cur->next;
+			ListNode* next = cur-&gt;next;
 			ListNode* nN;
 
-			cur->next = nullptr;
+			cur-&gt;next = nullptr;
 			while (next) {
-				nN = next->next;
-				next->next = cur;
+				nN = next-&gt;next;
+				next-&gt;next = cur;
 				cur = next;
 				next = nN;			
 			}
@@ -69,7 +69,7 @@ namespace Solution2019
 		}
 
 		ListNode* reverseKGroup(ListNode* head, int n) {
-			if (!head || !head->next) { return head; }
+			if (!head || !head-&gt;next) { return head; }
 			
 			ListNode* resultHead = nullptr;
 			ListNode* resultTail = nullptr;
@@ -78,14 +78,14 @@ namespace Solution2019
 			ListNode* next;
 			while (end) {
 				int i = 0;
-				while (end && i < n - 1) { end = end->next; i++; }
+				while (end && i &lt; n - 1) { end = end-&gt;next; i++; }
 				if (end) {
-					next = end->next;
-					end->next = nullptr;
+					next = end-&gt;next;
+					end-&gt;next = nullptr;
 					ReverseLinkedList(start);
 
 					if (!resultHead) { resultHead = end; }
-					else { resultTail->next = end; }
+					else { resultTail-&gt;next = end; }
 					resultTail = start;
 
 					start = next;
@@ -93,7 +93,7 @@ namespace Solution2019
 				}			
 			}
 			if (!resultTail) { return head; }
-			resultTail->next = start;
+			resultTail-&gt;next = start;
 			return resultHead;
 		}
 

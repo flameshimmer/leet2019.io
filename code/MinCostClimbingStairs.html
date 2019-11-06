@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //On a staircase, the i-th step has some non-negative 
 //cost cost[i] assigned (0 indexed).
 //
@@ -58,12 +58,12 @@ namespace Solution2019
 	namespace MinCostClimbingStairs
 	{
 
-		int minCostClimbingStairs(vector<int>& cost) {
+		int minCostClimbingStairs(vector&lt;int&gt;& cost) {
 			int len = cost.size();
-			vector<int> dp(len);
+			vector&lt;int&gt; dp(len);
 			dp[0] = cost[0];
 			dp[1] = cost[1];
-			for (int i = 2; i < len; i++) {
+			for (int i = 2; i &lt; len; i++) {
 				dp[i] = cost[i] + min(dp[i - 1], dp[i - 2]);
 			}
 			return min(dp[len-1], dp[len-2]);

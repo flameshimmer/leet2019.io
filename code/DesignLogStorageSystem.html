@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //You are given several logs that each log contains a unique id and timestamp.
 //Timestamp is a string that has the following format:
@@ -66,7 +66,7 @@ namespace Solution2019
 		namespace UseMultiMap {
 			class LogSystem {
 			private:
-				multimap<string, int> map;
+				multimap&lt;string, int&gt; map;
 			public:
 				LogSystem() {
 				}
@@ -75,8 +75,8 @@ namespace Solution2019
 					map.emplace(timestamp, id);
 				}
 
-				vector<int> retrieve(string s, string e, string gra) {
-					vector<int> result;
+				vector&lt;int&gt; retrieve(string s, string e, string gra) {
+					vector&lt;int&gt; result;
 
 					if (gra == "Year") {
 						s = s.substr(0, 4) + ":01:01:00:00:00";
@@ -102,7 +102,7 @@ namespace Solution2019
 					auto it1 = map.lower_bound(s);
 					auto it2 = map.upper_bound(e);
 					for (auto it = it1; it != it2; it++) {
-						result.push_back(it->second);
+						result.push_back(it-&gt;second);
 					}
 					return result;
 				}
@@ -111,8 +111,8 @@ namespace Solution2019
 			/**
 			 * Your LogSystem object will be instantiated and called as such:
 			 * LogSystem* obj = new LogSystem();
-			 * obj->put(id,timestamp);
-			 * vector<int> param_2 = obj->retrieve(s,e,gra);
+			 * obj-&gt;put(id,timestamp);
+			 * vector&lt;int&gt; param_2 = obj-&gt;retrieve(s,e,gra);
 			 */
 		}
 		void Main() {

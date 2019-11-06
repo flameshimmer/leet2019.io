@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a set of distinct integers, nums, return 
 //all possible subsets (the power set).
 //
@@ -53,25 +53,25 @@ namespace Solution2019
 {
 	namespace Subsets
 	{
-		void subsetInternal(vector<int>& nums, int start, int len, vector<int>& result, vector<vector<int>>& results) {
+		void subsetInternal(vector&lt;int&gt;& nums, int start, int len, vector&lt;int&gt;& result, vector&lt;vector&lt;int&gt;&gt;& results) {
 			results.push_back(result);
 
 			if (start == len) { return; }
 
-			for (int i = start; i < len; i++) {
+			for (int i = start; i &lt; len; i++) {
 				result.push_back(nums[i]);
 				subsetInternal(nums, i + 1, len, result, results);
 				result.pop_back();
-				while (start+1 < len && nums[start] == nums[start + 1]) { start++; }
+				while (start+1 &lt; len && nums[start] == nums[start + 1]) { start++; }
 			}			
 		}
 
 
-		vector<vector<int>> subsets(vector<int>& nums) {
+		vector&lt;vector&lt;int&gt;&gt; subsets(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			sort(nums.begin(), nums.end());
-			vector<vector<int>> results;
-			vector<int> result;
+			vector&lt;vector&lt;int&gt;&gt; results;
+			vector&lt;int&gt; result;
 
 			subsetInternal(nums, 0, len, result, results);
 			return results;

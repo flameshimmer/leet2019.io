@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are given a data structure of employee information, which 
 //includes the employee's unique id, his importance value and 
 //his direct subordinates' id.
@@ -68,26 +68,26 @@ namespace Solution2019
 			// the importance value of this employee
 			int importance;
 			// the id of direct subordinates
-			vector<int> subordinates;
+			vector&lt;int&gt; subordinates;
 		};
 
 		namespace BFS {
-			int getImportance(vector<Employee*> employees, int id) {
-				unordered_map<int, Employee*> map;
+			int getImportance(vector&lt;Employee*&gt; employees, int id) {
+				unordered_map&lt;int, Employee*&gt; map;
 				for (Employee* em : employees) {
-					map[em->id] = em;
+					map[em-&gt;id] = em;
 				}
 
 				int sum = 0;
-				queue<int> q;
+				queue&lt;int&gt; q;
 				q.push(id);
 
 				while (!q.empty()) {
 					Employee* cur = map[q.front()];
 					q.pop();
 
-					sum += cur->importance;
-					for (int v : cur->subordinates) {
+					sum += cur-&gt;importance;
+					for (int v : cur-&gt;subordinates) {
 						q.push(v);
 					}
 				}
@@ -96,18 +96,18 @@ namespace Solution2019
 		}
 
 		namespace DFS {
-			void dfs(int id, unordered_map<int, Employee*>& map, int& result) {
+			void dfs(int id, unordered_map&lt;int, Employee*&gt;& map, int& result) {
 				Employee* em = map[id];
-				result += em->importance;
-				for (int sub : em->subordinates) {
+				result += em-&gt;importance;
+				for (int sub : em-&gt;subordinates) {
 					dfs(sub, map, result);
 				}
 			}
 
-			int getImportance(vector<Employee*> employees, int id) {
-				unordered_map<int, Employee*> map;
+			int getImportance(vector&lt;Employee*&gt; employees, int id) {
+				unordered_map&lt;int, Employee*&gt; map;
 				for (Employee* em : employees) {
-					map[em->id] = em;
+					map[em-&gt;id] = em;
 				}
 				int result = 0;
 				dfs(id, map, result);

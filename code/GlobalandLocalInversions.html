@@ -28,15 +28,15 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We have some permutation A of [0, 1, ..., N - 1], 
 //where N is the length of A.
 //
 //The number of (global) inversions is the number
-//of i < j with 0 <= i < j < N and A[i] > A[j].
+//of i &lt; j with 0 &lt;= i &lt; j &lt; N and A[i] &gt; A[j].
 //
 //The number of local inversions is the number of 
-//i with 0 <= i < N and A[i] > A[i+1].
+//i with 0 &lt;= i &lt; N and A[i] &gt; A[i+1].
 //
 //Return true if and only if the number of global 
 //inversions is equal to the number of local inversions.
@@ -62,20 +62,20 @@ namespace Solution2019
 {
 	namespace GlobalandLocalInversions
 	{
-		bool isIdealPermutation(vector<int>& A) {
+		bool isIdealPermutation(vector&lt;int&gt;& A) {
 			int len = A.size();
 			int minRight = len;
-			for (int i = len - 1; i >= 2; i--) {
+			for (int i = len - 1; i &gt;= 2; i--) {
 				minRight = min(minRight, A[i]);
-				if (A[i - 2] > minRight) { return false; }
+				if (A[i - 2] &gt; minRight) { return false; }
 			}
 			return true;
 		}
 
-		bool isIdealPermutationAnother(vector<int>& A) {
+		bool isIdealPermutationAnother(vector&lt;int&gt;& A) {
 			int len = A.size();
-			for (int i = 0; i < len; i++) {
-				if (abs(A[i] - i) > 1) { return false; }
+			for (int i = 0; i &lt; len; i++) {
+				if (abs(A[i] - i) &gt; 1) { return false; }
 			}
 			return true;
 		}

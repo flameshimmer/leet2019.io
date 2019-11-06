@@ -28,9 +28,9 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We are given a matrix with R rows and C columns has cells with 
-//integer coordinates (r, c), where 0 <= r < R and 0 <= c < C.
+//integer coordinates (r, c), where 0 &lt;= r &lt; R and 0 &lt;= c &lt; C.
 //
 //Additionally, we are given a cell in that matrix with coordinates (r0, c0).
 //
@@ -59,23 +59,23 @@
 //correct, such as [[1,2],[1,1],[0,2],[1,0],[0,1],[0,0]].
 // 
 //Note:
-//1 <= R <= 100
-//1 <= C <= 100
-//0 <= r0 < R
-//0 <= c0 < C
+//1 &lt;= R &lt;= 100
+//1 &lt;= C &lt;= 100
+//0 &lt;= r0 &lt; R
+//0 &lt;= c0 &lt; C
 
 namespace Solution2019
 {
 	namespace MatrixCellsinDistanceOrder
 	{
-		vector<vector<int>> allCellsDistOrderWithCustomSortFunc(int R, int C, int r0, int c0) {
-			auto comp = [r0, c0](vector<int>& a, vector<int>& b) {
-				return abs(a[0] - r0) + abs(a[1] - c0) < abs(b[0] - r0) + abs(b[1] - c0);
+		vector&lt;vector&lt;int&gt;&gt; allCellsDistOrderWithCustomSortFunc(int R, int C, int r0, int c0) {
+			auto comp = [r0, c0](vector&lt;int&gt;& a, vector&lt;int&gt;& b) {
+				return abs(a[0] - r0) + abs(a[1] - c0) &lt; abs(b[0] - r0) + abs(b[1] - c0);
 			};
 
-			vector<vector<int>> result;
-			for (int i = 0; i < R; i++) {
-				for (int j = 0; j < C; j++) {
+			vector&lt;vector&lt;int&gt;&gt; result;
+			for (int i = 0; i &lt; R; i++) {
+				for (int j = 0; j &lt; C; j++) {
 					result.push_back({ i, j });
 				}
 			}
@@ -84,12 +84,12 @@ namespace Solution2019
 			return result;
 		}
 
-		vector<vector<int>> allCellsDistOrder(int R, int C, int r0, int c0) {
-			vector<vector<int>> result;
-			multimap<int, vector<int>> map;
+		vector&lt;vector&lt;int&gt;&gt; allCellsDistOrder(int R, int C, int r0, int c0) {
+			vector&lt;vector&lt;int&gt;&gt; result;
+			multimap&lt;int, vector&lt;int&gt;&gt; map;
 
-			for (int i = 0; i < R; i++) {
-				for (int j = 0; j < C; j++) {
+			for (int i = 0; i &lt; R; i++) {
+				for (int j = 0; j &lt; C; j++) {
 					map.insert({ abs(i - r0) + abs(j - c0), {i, j} });
 				}
 			}

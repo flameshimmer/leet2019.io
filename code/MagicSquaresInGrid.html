@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A 3 x 3 magic square is a 3 x 3 grid filled with distinct numbers 
 //from 1 to 9 such that each row, column, and both diagonals all have the same sum.
 //
@@ -54,29 +54,29 @@
 //In total, there is only one magic square inside the given grid.
 //Note:
 //
-//1 <= grid.length <= 10
-//1 <= grid[0].length <= 10
-//0 <= grid[i][j] <= 15
+//1 &lt;= grid.length &lt;= 10
+//1 &lt;= grid[0].length &lt;= 10
+//0 &lt;= grid[i][j] &lt;= 15
 namespace Solution2019
 {
 	namespace MagicSquaresInGrid
 	{
-		bool check(const vector<vector<int>>& G, int row, int col) {
+		bool check(const vector&lt;vector&lt;int&gt;&gt;& G, int row, int col) {
 			int map[16] = { 0 };
-			for (int i = 0; i < 3; i++) {
-				for (int j = 0; j < 3; j++) {
+			for (int i = 0; i &lt; 3; i++) {
+				for (int j = 0; j &lt; 3; j++) {
 					map[G[row+i][col+j]]++;
 				}
 			}
-			for (int i = 1; i <= 9; i++) { if (map[i] == 0) { return false; } }
+			for (int i = 1; i &lt;= 9; i++) { if (map[i] == 0) { return false; } }
 
 			int target = G[row][col] + G[row][col+1] + G[row][col+2];
-			for (int i = 1; i < 3; i++) {
+			for (int i = 1; i &lt; 3; i++) {
 				if (G[row + i][col] + G[row + i][col + 1] + G[row + i][col + 2] != target) {
 					return false; 
 				}
 			}
-			for (int i = 0; i < 3; i++) {
+			for (int i = 0; i &lt; 3; i++) {
 				if (G[row][col+i] + G[row + 1][col+i] + G[row + 2][col+i] != target) { 
 					return false; 
 				}
@@ -90,15 +90,15 @@ namespace Solution2019
 			return true;
 		}
 
-		int numMagicSquaresInside(vector<vector<int>>& grid) {
+		int numMagicSquaresInside(vector&lt;vector&lt;int&gt;&gt;& grid) {
 			int rowCount = grid.size();
-			if (rowCount < 3) { return 0; }
+			if (rowCount &lt; 3) { return 0; }
 			int colCount = grid[0].size();
-			if (colCount < 3) { return 0; }
+			if (colCount &lt; 3) { return 0; }
 
 			int result = 0;
-			for (int i = 0; i < rowCount-2; i++) {
-				for (int j = 0; j < colCount-2; j++) {
+			for (int i = 0; i &lt; rowCount-2; i++) {
+				for (int j = 0; j &lt; colCount-2; j++) {
 					if (check(grid, i, j)) { result++; }
 				}
 			}
@@ -106,7 +106,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<vector<int>> test = { {4,3,8,4},{9,5,1,9},{2,7,6,2} };
+			vector&lt;vector&lt;int&gt;&gt; test = { {4,3,8,4},{9,5,1,9},{2,7,6,2} };
 			print(numMagicSquaresInside(test));
 		}
 	}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers A, find the sum of min(B), 
 //where B ranges over every (contiguous) subarray of A.
 //
@@ -44,37 +44,37 @@
 //Sum is 17.
 // 
 //Note:
-//1 <= A.length <= 30000
-//1 <= A[i] <= 30000
+//1 &lt;= A.length &lt;= 30000
+//1 &lt;= A[i] &lt;= 30000
 
 namespace Solution2019
 {
 	namespace SumofSubarrayMinimums
 	{
-		int sumSubarrayMins(vector<int>& A) {
-			stack<pair<int, int>> ple;
-			stack<pair<int, int>> nle;
+		int sumSubarrayMins(vector&lt;int&gt;& A) {
+			stack&lt;pair&lt;int, int&gt;&gt; ple;
+			stack&lt;pair&lt;int, int&gt;&gt; nle;
 
 			int len = A.size();
 			// left is for the distance to previous less element
 			// right is for the distance to next less element
-			vector<int> left(len);
-			vector<int> right(len);
-			for (int i = 0; i < len; i++) {
+			vector&lt;int&gt; left(len);
+			vector&lt;int&gt; right(len);
+			for (int i = 0; i &lt; len; i++) {
 				left[i] = i + 1;
 				right[i] = len - i;
 			}
 
-			for (int i = 0; i < len; i++) {
-				while (!ple.empty() && ple.top().first > A[i]) {
+			for (int i = 0; i &lt; len; i++) {
+				while (!ple.empty() && ple.top().first &gt; A[i]) {
 					ple.pop();
 				}
 				left[i] = ple.empty() ? i + 1 : i - ple.top().second;
 				ple.push({ A[i], i });
 
 
-				while (!nle.empty() && nle.top().first > A[i]) {
-					pair<int, int> x = nle.top();
+				while (!nle.empty() && nle.top().first &gt; A[i]) {
+					pair&lt;int, int&gt; x = nle.top();
 					nle.pop();
 					right[x.second] = i - x.second;
 				}
@@ -83,7 +83,7 @@ namespace Solution2019
 
 			int result = 0;
 			int mod = 1e9 + 7;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				result = (result + A[i] * left[i] * right[i]) % mod;
 				// result = (result + (A[i] * left[i] * right[i]) % mod) % mod; 
 				// (a + b)%n = (a%n + b%n)%n
@@ -93,7 +93,7 @@ namespace Solution2019
 			/* Below is also fine
 			long long result = 0;
 			long long mod = 1e9+7;
-			for (int i = 0; i<len; i++) {
+			for (int i = 0; i&lt;len; i++) {
 				result += A[i] * left[i] * right[i];
 			}
 			return (int)(result%mod);   

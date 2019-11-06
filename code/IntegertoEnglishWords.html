@@ -28,8 +28,8 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-#include <regex>
+#include "stdafx.h"
+#include &lt;regex&gt;
 //Convert a non-negative integer to its english words 
 //representation. Given input is guaranteed to be less
 //than 231 - 1.
@@ -64,8 +64,8 @@ namespace Solution2019
 
 		string helper(int num) {
 			if (num == 0) { return ""; }
-			else if (num < 20) { return lessThan20[num] + " "; }
-			else if (num < 100) { return tens[num / 10] + " " + helper(num % 10); }
+			else if (num &lt; 20) { return lessThan20[num] + " "; }
+			else if (num &lt; 100) { return tens[num / 10] + " " + helper(num % 10); }
 			else { return lessThan20[num / 100] + " Hundred " + helper(num % 100); }
 		}
 
@@ -73,7 +73,7 @@ namespace Solution2019
 			if (num == 0) { return "Zero"; }
 			int i = 0;
 			string result = "";
-			while (num > 0) {
+			while (num &gt; 0) {
 				if (num % 1000 != 0) {
 					result = helper(num % 1000) + unit[i] + " " + result;
 				}

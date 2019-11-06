@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty array of digits representing a 
 //non-negative integer, plus one to the integer.
 //
@@ -52,31 +52,31 @@ namespace Solution2019
 {
 	namespace PlusOne
 	{
-		vector<int> plusOne(vector<int>& digits) {
+		vector&lt;int&gt; plusOne(vector&lt;int&gt;& digits) {
 			int len = digits.size();
 			if (len == 0) { return digits; }
 
 			int carry = 0;
-			for (int i = len - 1; i >= 0; i--) {
+			for (int i = len - 1; i &gt;= 0; i--) {
 				int sum = digits[i] + carry + (i == len - 1 ? 1 : 0);
 				digits[i] = sum % 10;
 				carry = sum / 10;
 			}
-			if (carry > 0) {
+			if (carry &gt; 0) {
 				digits.insert(digits.begin(), carry);
 			}
 			return digits;
 		}
 
-		vector<int> plusOneAnotherWay(vector<int>& digits) {
+		vector&lt;int&gt; plusOneAnotherWay(vector&lt;int&gt;& digits) {
 			int len = digits.size();
 			if (len == 0) { return digits; }
 			
-			vector<int> result;
+			vector&lt;int&gt; result;
 			int carry = 1;
 			int i = len - 1;
-			while (i >= 0 || carry > 0) {
-				int sum = carry + (i >= 0 ? digits[i] : 0);
+			while (i &gt;= 0 || carry &gt; 0) {
+				int sum = carry + (i &gt;= 0 ? digits[i] : 0);
 				result.insert(result.begin(), sum % 10);
 				carry = sum / 10;
 				i--;

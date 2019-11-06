@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a stack that supports push, pop, top, and 
 //retrieving the minimum element in constant time.
 //
@@ -44,10 +44,10 @@
 //minStack.push(-2);
 //minStack.push(0);
 //minStack.push(-3);
-//minStack.getMin();   --> Returns -3.
+//minStack.getMin();   --&gt; Returns -3.
 //minStack.pop();
-//minStack.top();      --> Returns 0.
-//minStack.getMin();   --> Returns -2.
+//minStack.top();      --&gt; Returns 0.
+//minStack.getMin();   --&gt; Returns -2.
 
 namespace Solution2019
 {
@@ -57,7 +57,7 @@ namespace Solution2019
 			class MinStack {
 			private:
 				long min;
-				stack<long> s;
+				stack&lt;long&gt; s;
 			public:
 				/** initialize your data structure here. */
 				MinStack() {
@@ -71,7 +71,7 @@ namespace Solution2019
 					}
 					else {
 						s.push(x - min);
-						if (x < min) { min = x; }
+						if (x &lt; min) { min = x; }
 					}
 				}
 
@@ -79,12 +79,12 @@ namespace Solution2019
 					if (s.empty()) { return; }
 					long top = s.top();
 					s.pop();
-					if (top < 0) { min = min - top; }
+					if (top &lt; 0) { min = min - top; }
 				}
 
 				int top() {
 					long top = s.top();
-					if (top > 0) { return (int)(min + top); }
+					if (top &gt; 0) { return (int)(min + top); }
 					else {
 						return (int)(min);
 					}
@@ -99,7 +99,7 @@ namespace Solution2019
 		namespace UsingPair {
 			class MinStack {
 			private:
-				vector<pair<int, int>> data;
+				vector&lt;pair&lt;int, int&gt;&gt; data;
 				int minV;
 			public:
 				/** initialize your data structure here. */
@@ -135,30 +135,30 @@ namespace Solution2019
 		/**
 		 * Your MinStack object will be instantiated and called as such:
 		 * MinStack* obj = new MinStack();
-		 * obj->push(x);
-		 * obj->pop();
-		 * int param_3 = obj->top();
-		 * int param_4 = obj->getMin();
+		 * obj-&gt;push(x);
+		 * obj-&gt;pop();
+		 * int param_3 = obj-&gt;top();
+		 * int param_4 = obj-&gt;getMin();
 		 */
 		void Main() {
 			Ideal::MinStack* obj = new Ideal::MinStack();
-			obj->push(2147483646);
-			obj->push(2147483646);
-			obj->push(2147483647);
-			int param_3 = obj->top();
-			obj->pop();
-			int param_4 = obj->getMin();
-			obj->pop();
-			param_4 = obj->getMin();
-			obj->pop();
-			obj->push(2147483647);
-			param_3 = obj->top();
-			param_4 = obj->getMin();
-			obj->push(INT_MIN);
-			param_3 = obj->top();
-			param_4 = obj->getMin();
-			obj->pop();
-			param_4 = obj->getMin();
+			obj-&gt;push(2147483646);
+			obj-&gt;push(2147483646);
+			obj-&gt;push(2147483647);
+			int param_3 = obj-&gt;top();
+			obj-&gt;pop();
+			int param_4 = obj-&gt;getMin();
+			obj-&gt;pop();
+			param_4 = obj-&gt;getMin();
+			obj-&gt;pop();
+			obj-&gt;push(2147483647);
+			param_3 = obj-&gt;top();
+			param_4 = obj-&gt;getMin();
+			obj-&gt;push(INT_MIN);
+			param_3 = obj-&gt;top();
+			param_4 = obj-&gt;getMin();
+			obj-&gt;pop();
+			param_4 = obj-&gt;getMin();
 		}
 	}
 }

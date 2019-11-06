@@ -28,20 +28,20 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a circular array C of integers represented 
 //by A, find the maximum possible sum of a non-empty 
 //subarray of C.
 //
 //Here, a circular array means the end of the array 
 //connects to the beginning of the array.  
-//(Formally, C[i] = A[i] when 0 <= i < A.length, 
-//and C[i+A.length] = C[i] when i >= 0.)
+//(Formally, C[i] = A[i] when 0 &lt;= i &lt; A.length, 
+//and C[i+A.length] = C[i] when i &gt;= 0.)
 //
 //Also, a subarray may only include each element of the
 //fixed buffer A at most once.  
 //(Formally, for a subarray C[i], C[i+1], ..., C[j], 
-//there does not exist i <= k1, k2 <= j with 
+//there does not exist i &lt;= k1, k2 &lt;= j with 
 //k1 % A.length = k2 % A.length.)
 //
 //Example 1:
@@ -70,13 +70,13 @@
 //Explanation: Subarray [-1] has maximum sum -1
 // 
 //Note:
-//-30000 <= A[i] <= 30000
-//1 <= A.length <= 30000
+//-30000 &lt;= A[i] &lt;= 30000
+//1 &lt;= A.length &lt;= 30000
 namespace Solution2019
 {
 	namespace MaximumSumCircularSubarray
 	{
-		int maxSubarraySumCircular(vector<int>& A) {
+		int maxSubarraySumCircular(vector&lt;int&gt;& A) {
 			int total = 0;
 			int maxSum = INT_MIN;
 			int curMax = 0;
@@ -91,7 +91,7 @@ namespace Solution2019
 				curMin = min(curMin + v, v);
 				minSum = min(minSum, curMin);
 			}
-			return maxSum > 0 ? max(maxSum, total - minSum) : maxSum;
+			return maxSum &gt; 0 ? max(maxSum, total - minSum) : maxSum;
 		}
 
 		void Main() {

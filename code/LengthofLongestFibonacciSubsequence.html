@@ -28,11 +28,11 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A sequence X_1, X_2, ..., X_n is fibonacci-like if:
 //
-//n >= 3
-//X_i + X_{i+1} = X_{i+2} for all i + 2 <= n
+//n &gt;= 3
+//X_i + X_{i+1} = X_{i+2} for all i + 2 &lt;= n
 //Given a strictly increasing array A of positive integers forming a sequence, 
 //find the length of the longest fibonacci-like subsequence of A. 
 //If one does not exist, return 0.
@@ -56,19 +56,19 @@
 //[1,11,12], [3,11,14] or [7,11,18].
 // 
 //Note:
-//3 <= A.length <= 1000
-//1 <= A[0] < A[1] < ... < A[A.length - 1] <= 10^9
+//3 &lt;= A.length &lt;= 1000
+//1 &lt;= A[0] &lt; A[1] &lt; ... &lt; A[A.length - 1] &lt;= 10^9
 //(The time limit has been reduced by 50% for submissions in Java, C, and C++.)
 
 namespace Solution2019
 {
 	namespace LengthofLongestFibonacciSubsequence
 	{
-		int lenLongestFibSubseqWithSet(vector<int>& A) {
-			unordered_set<int> set(A.begin(), A.end());
+		int lenLongestFibSubseqWithSet(vector&lt;int&gt;& A) {
+			unordered_set&lt;int&gt; set(A.begin(), A.end());
 			int result = 0;
-			for (int i = 0; i < A.size(); i++) {
-				for (int j = i + 1; j < A.size(); j++) {
+			for (int i = 0; i &lt; A.size(); i++) {
+				for (int j = i + 1; j &lt; A.size(); j++) {
 					int a = A[i];
 					int b = A[j];
 					int len = 2;
@@ -80,28 +80,28 @@ namespace Solution2019
 					result = max(result, len);
 				}
 			}
-			return result > 2 ? result : 0;
+			return result &gt; 2 ? result : 0;
 		}
 
-		int lenLongestFibSubseq(vector<int>& A) {
+		int lenLongestFibSubseq(vector&lt;int&gt;& A) {
 			int len = A.size();
-			unordered_map<int, int> index;
-			for (int i = 0; i < len; i++) {
+			unordered_map&lt;int, int&gt; index;
+			for (int i = 0; i &lt; len; i++) {
 				index[A[i]] = i;
 			}
 
-			unordered_map<int, int> longest;
+			unordered_map&lt;int, int&gt; longest;
 			int result = 0;
-			for (int k = 0; k < len; k++) {
-				for (int j = 0; j < k; j++) {
-					if (A[k] - A[j] < A[j] && index.count(A[k] - A[j])) {
+			for (int k = 0; k &lt; len; k++) {
+				for (int j = 0; j &lt; k; j++) {
+					if (A[k] - A[j] &lt; A[j] && index.count(A[k] - A[j])) {
 						int i = index[A[k] - A[j]];
 						longest[j * len + k] = longest[i * len + j] + 1;
 						result = max(result, longest[j * len + k] + 2);
 					}
 				}
 			}
-			return result >= 3 ? result : 0;
+			return result &gt;= 3 ? result : 0;
 		}
 		void Main() {
 			string test = "tst test test";

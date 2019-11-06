@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a HashMap without using any built-in hash table libraries.
 //
 //To be specific, your design should include these functions:
@@ -90,7 +90,7 @@ namespace Solution2019
 		namespace DoublyLinkedList {
 			class MyHashMap {
 			public:
-				vector<list<pair<int, int>>>data;
+				vector&lt;list&lt;pair&lt;int, int&gt;&gt;&gt;data;
 				int size = 10000;
 				/** Initialize your data structure here. */
 				MyHashMap() {
@@ -100,7 +100,7 @@ namespace Solution2019
 				/** value will always be non-negative. */
 				void put(int key, int value) {
 					auto& list = data[key % size];
-					for (pair<int, int>& p : list) {  ///-----------> Note don't forget & here!!!! otherwise data won't get modified!!!
+					for (pair&lt;int, int&gt;& p : list) {  ///-----------&gt; Note don't forget & here!!!! otherwise data won't get modified!!!
 						if (p.first == key) { p.second = value; return; }
 					}
 					list.emplace_back(key, value);
@@ -110,7 +110,7 @@ namespace Solution2019
 				int get(int key) {
 					auto& list = data[key % size];
 					if (list.empty()) { return -1; }
-					for (pair<int, int>p : list) {
+					for (pair&lt;int, int&gt;p : list) {
 						if (p.first == key) { return p.second; }
 					}
 					return -1;
@@ -127,9 +127,9 @@ namespace Solution2019
 		/**
 		 * Your MyHashMap object will be instantiated and called as such:
 		 * MyHashMap* obj = new MyHashMap();
-		 * obj->put(key,value);
-		 * int param_2 = obj->get(key);
-		 * obj->remove(key);
+		 * obj-&gt;put(key,value);
+		 * int param_2 = obj-&gt;get(key);
+		 * obj-&gt;remove(key);
 		 */
 		void Main() {
 			string test = "tst test test";

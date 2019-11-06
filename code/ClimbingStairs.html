@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are climbing a stair case. It takes n steps to reach to the top.
 //Each time you can either climb 1 or 2 steps. 
 //In how many distinct ways can you climb to the top?
@@ -54,14 +54,14 @@ namespace Solution2019
 	namespace ClimbingStairs
 	{
 		int ClimbingStairsTooSlow(int n) {
-			if (n < 2) { return 1; }
+			if (n &lt; 2) { return 1; }
 			int result = ClimbingStairsTooSlow(n - 1);
 			result += ClimbingStairsTooSlow(n - 2);
 			return result;
 		}
 
 		int ClimibingStairsInternal(int n, int* mem) {
-			if (n < 2) { return 1; }
+			if (n &lt; 2) { return 1; }
 			if (mem[n] == -1) {
 				mem[n] = ClimibingStairsInternal(n - 1, mem) + ClimibingStairsInternal(n - 2, mem);
 			}
@@ -69,7 +69,7 @@ namespace Solution2019
 		}
 
 		int ClimbingStairsRecursionWithMemTable(int n) {
-			if (n < 2) { return 1; }
+			if (n &lt; 2) { return 1; }
 			int* mem = new int[n+1];
 			memset(mem, -1, sizeof(int) * (n+1));
 			mem[0] = 1;
@@ -79,11 +79,11 @@ namespace Solution2019
 
 		// Dp way. 
 		int ClimbingStairs(int n) {
-			if (n < 2) { return 1; }
+			if (n &lt; 2) { return 1; }
 			int* mem = new int[n + 1];
 			mem[1] = 1;
 			mem[2] = 2;
-			for (int i = 3; i <= n; i++) {
+			for (int i = 3; i &lt;= n; i++) {
 				mem[i] = mem[i - 1] + mem[i - 2];
 			}
 			return mem[n];

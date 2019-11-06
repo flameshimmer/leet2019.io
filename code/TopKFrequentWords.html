@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 
 
 //Given a non-empty list of words, return the k most frequent elements.
@@ -61,24 +61,24 @@ namespace Solution2019
 	namespace TopKFrequentWords
 	{
 		namespace HashMapAndPriorityQueue {
-			vector<string> topKFrequent(vector<string>& words, int k) {
-				unordered_map<string, int> map;
+			vector&lt;string&gt; topKFrequent(vector&lt;string&gt;& words, int k) {
+				unordered_map&lt;string, int&gt; map;
 				for (string w : words) { map[w]++; }
 
-				auto comp = [](const pair<string, int>& p1, const pair<string, int>& p2) {
-					if (p1.second == p2.second) { return p1.first < p2.first; }
-					return p1.second > p2.second;
+				auto comp = [](const pair&lt;string, int&gt;& p1, const pair&lt;string, int&gt;& p2) {
+					if (p1.second == p2.second) { return p1.first &lt; p2.first; }
+					return p1.second &gt; p2.second;
 				};
 
-				priority_queue<pair<string, int>, vector<pair<string, int>>, decltype(comp)> pq(comp);
+				priority_queue&lt;pair&lt;string, int&gt;, vector&lt;pair&lt;string, int&gt;&gt;, decltype(comp)&gt; pq(comp);
 
 				for (auto& p : map) {
 					pq.push({ p.first, p.second });
-					if (pq.size() > k) {
+					if (pq.size() &gt; k) {
 						pq.pop();
 					}
 				}
-				vector<string> result;
+				vector&lt;string&gt; result;
 				while (!pq.empty()) {
 					result.insert(result.begin(), pq.top().first);
 					pq.pop();
@@ -88,25 +88,25 @@ namespace Solution2019
 		}
 
 		namespace HashMapAndVector {
-			vector<string> topKFrequent(vector<string>& words, int k) {
-				unordered_map<string, int> myMap;
+			vector&lt;string&gt; topKFrequent(vector&lt;string&gt;& words, int k) {
+				unordered_map&lt;string, int&gt; myMap;
 				for (string w : words) {
 					myMap[w] ++;
 				}
 
-				vector<pair<string, int>> A;
+				vector&lt;pair&lt;string, int&gt;&gt; A;
 				for (auto& p : myMap) {
 					A.push_back(p);
 				}
-				auto comp = [](const pair<string, int>& p1, const pair<string, int>& p2) {
-					if (p1.second == p2.second) { return p1.first < p2.first; }
-					return p1.second > p2.second;
+				auto comp = [](const pair&lt;string, int&gt;& p1, const pair&lt;string, int&gt;& p2) {
+					if (p1.second == p2.second) { return p1.first &lt; p2.first; }
+					return p1.second &gt; p2.second;
 				};
 				sort(A.begin(), A.end(), comp);
 
-				vector<string> result;
+				vector&lt;string&gt; result;
 				int i = 0;
-				for (pair<string, int>& a : A) {
+				for (pair&lt;string, int&gt;& a : A) {
 					result.push_back(a.first);
 					i++;
 					if (i == k) { break; }
@@ -115,7 +115,7 @@ namespace Solution2019
 			}
 		}
 		void Main() {
-			vector<string> test = { "i", "love", "leetcode", "i", "love", "coding" };
+			vector&lt;string&gt; test = { "i", "love", "leetcode", "i", "love", "coding" };
 			print(HashMapAndPriorityQueue::topKFrequent(test, 2));
 		}
 	}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given an input string (s) and a pattern (p), implement wildcard pattern
 //matching with support for '?' and '*'.
@@ -106,14 +106,14 @@ namespace Solution2019
 				int lens = s.size();
 				int lenp = p.size();
 
-				vector<vector<bool>> M(lens + 1, vector<bool>(lenp + 1));
+				vector&lt;vector&lt;bool&gt;&gt; M(lens + 1, vector&lt;bool&gt;(lenp + 1));
 				M[0][0] = true;
-				for (int i = 1; i < lenp + 1 && p[i - 1] == '*'; i++) {
+				for (int i = 1; i &lt; lenp + 1 && p[i - 1] == '*'; i++) {
 					M[0][i] = true;
 				}
 
-				for (int i = 1; i < lens + 1; i++) {
-					for (int j = 1; j < lenp + 1; j++) {
+				for (int i = 1; i &lt; lens + 1; i++) {
+					for (int j = 1; j &lt; lenp + 1; j++) {
 						if (s[i - 1] == p[j - 1] || p[j - 1] == '?') { M[i][j] = M[i - 1][j - 1]; }
 						else if (p[j - 1] == '*') { M[i][j] = M[i - 1][j] || M[i][j - 1]; }
 					}
@@ -126,13 +126,13 @@ namespace Solution2019
 			bool isMatch(string s, string p) {
 				int lens = s.size();
 				int lenp = p.size();
-				vector<bool> M(lens + 1, false);
+				vector&lt;bool&gt; M(lens + 1, false);
 				M[0] = true;
 
-				for (int j = 1; j < lenp + 1; j++) {
+				for (int j = 1; j &lt; lenp + 1; j++) {
 					bool pre = M[0];
 					M[0] = (M[0] && p[j - 1] == '*');
-					for (int i = 1; i < lens + 1; i++) {
+					for (int i = 1; i &lt; lens + 1; i++) {
 						bool temp = M[i];
 						if (p[j - 1] == '*') { M[i] = M[i - 1] || M[i]; }
 						else { M[i] = (s[i - 1] == p[j - 1] || p[j - 1] == '?') && pre; }

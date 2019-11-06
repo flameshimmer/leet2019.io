@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Create a timebased key-value store class TimeMap, that supports two operations.
 //
 //1. set(string key, string value, int timestamp)
@@ -37,7 +37,7 @@
 //2. get(string key, int timestamp)
 //
 //Returns a value such that set(key, value, timestamp_prev) was called 
-//previously, with timestamp_prev <= timestamp.
+//previously, with timestamp_prev &lt;= timestamp.
 //If there are multiple such values, it returns the one with the largest timestamp_prev.
 //If there are no values, it returns the empty string ("").
 // 
@@ -64,7 +64,7 @@
 //All key/value strings are lowercase.
 //All key/value strings have length in the range [1, 100]
 //The timestamps for all TimeMap.set operations are strictly increasing.
-//1 <= timestamp <= 10^7
+//1 &lt;= timestamp &lt;= 10^7
 //TimeMap.set and TimeMap.get functions will be called a total of 
 //120000 times (combined) per test case.
 
@@ -75,7 +75,7 @@ namespace Solution2019
 		class TimeMap {
 
 		private:
-			unordered_map<string, map<int, string>> m;
+			unordered_map&lt;string, map&lt;int, string&gt;&gt; m;
 		public:
 			/** Initialize your data structure here. */
 			TimeMap() {
@@ -88,15 +88,15 @@ namespace Solution2019
 
 			string get(string key, int timestamp) {
 				auto it = m[key].upper_bound(timestamp);
-				return it == m[key].begin() ? "" : prev(it)->second;
+				return it == m[key].begin() ? "" : prev(it)-&gt;second;
 			}
 		};
 
 		/**
 		 * Your TimeMap object will be instantiated and called as such:
 		 * TimeMap* obj = new TimeMap();
-		 * obj->set(key,value,timestamp);
-		 * string param_2 = obj->get(key,timestamp);
+		 * obj-&gt;set(key,value,timestamp);
+		 * string param_2 = obj-&gt;get(key,timestamp);
 		 */
 
 		void Main() {

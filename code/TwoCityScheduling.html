@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //There are 2N people a company is planning to interview. 
 //The cost of flying the i-th person to city A is costs[i][0],
 //and the cost of flying the i-th person to city B is costs[i][1].
@@ -49,17 +49,17 @@
 //half the people interviewing in each city.
 // 
 //Note:
-//1 <= costs.length <= 100
+//1 &lt;= costs.length &lt;= 100
 //It is guaranteed that costs.length is even.
-//1 <= costs[i][0], costs[i][1] <= 1000
+//1 &lt;= costs[i][0], costs[i][1] &lt;= 1000
 
 namespace Solution2019
 {
 	namespace TwoCityScheduling
 	{
-		int twoCitySchedCost(vector<vector<int>>& costs) {
-			auto comp = [](vector<int>& a, vector<int>& b) {
-				return a[0] - a[1] < b[0] - b[1]; // sort by savings
+		int twoCitySchedCost(vector&lt;vector&lt;int&gt;&gt;& costs) {
+			auto comp = [](vector&lt;int&gt;& a, vector&lt;int&gt;& b) {
+				return a[0] - a[1] &lt; b[0] - b[1]; // sort by savings
 			};
 
 			sort(costs.begin(), costs.end(), comp);
@@ -67,7 +67,7 @@ namespace Solution2019
 			int result = 0;
 			int halfLen = costs.size() / 2;
 
-			for (int i = 0; i < halfLen; i++)
+			for (int i = 0; i &lt; halfLen; i++)
 			{
 				result += costs[i][0] + costs[halfLen + i][1];
 			}

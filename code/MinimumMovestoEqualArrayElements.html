@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*Given a non-empty integer array of size n, find the minimum 
 number of moves required to make all array elements equal, 
 where a move is incrementing n - 1 elements by 1.
@@ -43,7 +43,7 @@ Output:
 Explanation:
 Only three moves are needed 
 (remember each move increments two elements):
-[1,2,3]  =>  [2,3,3]  =>  [3,4,3]  =>  [4,4,4]*/ 
+[1,2,3]  =&gt;  [2,3,3]  =&gt;  [3,4,3]  =&gt;  [4,4,4]*/ 
 
 namespace Solution2019
 {
@@ -55,9 +55,9 @@ namespace Solution2019
 		//number of(subtract 1 from any element) operations.The only way to make
 		//all elements equal this way is to make them all equal to the min element
 		//of the array. Hence, number of moves = sum(array) - n * min_element
-		int minMoves(vector<int>& nums) {
+		int minMoves(vector&lt;int&gt;& nums) {
 			int len = nums.size();
-			if (len < 2) { return 0; }
+			if (len &lt; 2) { return 0; }
 
 			long long sum = 0;
 			for (int v : nums) {

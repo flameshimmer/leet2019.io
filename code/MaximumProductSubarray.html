@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an integer array nums, find the contiguous subarray
 //within an array (containing at least one number) which has
 //the largest product.
@@ -48,13 +48,13 @@ namespace Solution2019
 {
 	namespace MaximumProductSubarray
 	{
-		int maxProduct(vector<int>& nums) {
+		int maxProduct(vector&lt;int&gt;& nums) {
 			int result = nums[0];
 			int maxR = nums[0];
 			int minR = nums[0];
 
-			for (int i = 1; i < nums.size(); i++) {
-				if (nums[i] < 0) {
+			for (int i = 1; i &lt; nums.size(); i++) {
+				if (nums[i] &lt; 0) {
 					swap(maxR, minR);
 				}
 				maxR = max(maxR * nums[i], nums[i]);
@@ -70,14 +70,14 @@ namespace Solution2019
 		//For the first pattern, the maximum product would be "aBcD";
 		//and for the second pattern, the maximum product would be
 		//"max (aBcD, BcDe)".
-		int maxProductAnother(vector<int>& nums) {
+		int maxProductAnother(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			if (len == 0) { return 0; }
 
 			int frontProduct = 1;
 			int backProduct = 1;
 			int result = INT_MIN;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				frontProduct *= nums[i];
 				backProduct *= nums[len - 1 - i];
 				result = max(result, max(frontProduct, backProduct));

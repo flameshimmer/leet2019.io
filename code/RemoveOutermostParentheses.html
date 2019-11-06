@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A valid parentheses string is either empty (""), "(" + A + ")", 
 //or A + B, where A and B are valid parentheses strings, 
 //and + represents string concatenation.  
@@ -72,7 +72,7 @@
 //After removing outer parentheses of each part, this is "" + "" = "".
 // 
 //Note:
-//S.length <= 10000
+//S.length &lt;= 10000
 //S[i] is "(" or ")"
 //S is a valid parentheses string
 
@@ -85,11 +85,11 @@ namespace Solution2019
 			int opened = 0;
 			for (char c : S) {
 				if (c == '(') { 
-					if (opened > 0) { result += c; }
+					if (opened &gt; 0) { result += c; }
 					opened++;
 				}
 				else if (c == ')') {
-					if (opened > 1) { result += c; }
+					if (opened &gt; 1) { result += c; }
 					opened--;
 				}
 			}

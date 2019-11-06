@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //You are given a circular array nums of positive and 
 //negative integers. If a number k at an index is positive,
 //then move forward k steps. Conversely, if it's negative 
@@ -39,29 +39,29 @@
 //
 //Determine if there is a loop (or a cycle) in nums. A cycle
 //must start and end at the same index and the cycle's
-//length > 1. Furthermore, movements in a cycle must all 
+//length &gt; 1. Furthermore, movements in a cycle must all 
 //follow a single direction. In other words, a cycle must 
 //not consist of both forward and backward movements.
 //
 //Example 1:
 //Input: [2,-1,1,2,2]
 //Output: true
-//Explanation: There is a cycle, from index 0 -> 2 -> 3 -> 0. 
+//Explanation: There is a cycle, from index 0 -&gt; 2 -&gt; 3 -&gt; 0. 
 //The cycle's length is 3.
 //
 //Example 2:
 //Input: [-1,2]
 //Output: false
-//Explanation: The movement from index 1 -> 1 -> 1 ... is 
+//Explanation: The movement from index 1 -&gt; 1 -&gt; 1 ... is 
 //not a cycle, because the cycle's length is 1. By definition
 //the cycle's length must be greater than 1.
 //
 //Example 3:
 //Input: [-2,1,-1,-2,-2]
 //Output: false
-//Explanation: The movement from index 1 -> 2 -> 1 -> ... is
-//not a cycle, because movement from index 1 -> 2 is a forward
-//movement, but movement from index 2 -> 1 is a backward 
+//Explanation: The movement from index 1 -&gt; 2 -&gt; 1 -&gt; ... is
+//not a cycle, because movement from index 1 -&gt; 2 is a forward
+//movement, but movement from index 2 -&gt; 1 is a backward 
 //movement. All movements in a cycle must follow a single direction.
 // 
 //Note:
@@ -76,20 +76,20 @@ namespace Solution2019
 {
 	namespace CircularArrayLoop
 	{
-		int getIndex(int i, vector<int>& nums) {
+		int getIndex(int i, vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			return (i + nums[i] % len + len) % len;
 		}
 
-		bool circularArrayLoop(vector<int>& nums) {
+		bool circularArrayLoop(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				if (nums[i] == 0) { continue; }
 
 				int slow = i;
 				int fast = getIndex(i, nums);
-				while (nums[i] * nums[fast] > 0 && nums[fast] * nums[getIndex(fast, nums)] > 0) {
+				while (nums[i] * nums[fast] &gt; 0 && nums[fast] * nums[getIndex(fast, nums)] &gt; 0) {
 					if (slow == fast) {
 						if (fast == getIndex(fast, nums)) { break; }
 						return true;
@@ -100,7 +100,7 @@ namespace Solution2019
 
 				slow = i;
 				int val = nums[i];
-				while (nums[slow] * val > 0) {
+				while (nums[slow] * val &gt; 0) {
 					int next = getIndex(slow, nums);
 					nums[slow] = 0;
 					slow = next;
@@ -110,7 +110,7 @@ namespace Solution2019
 		}
 	
 		void Main() {
-			vector<int> test = { -1 };
+			vector&lt;int&gt; test = { -1 };
 			print(circularArrayLoop(test));
 		}
 	}

@@ -28,14 +28,14 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Implement a MyCalendarTwo class to store your events. 
 //A new event can be added if adding the event will not 
 //cause a triple booking.
 //
 //Your class will have one method, book(int start, int end). 
 //Formally, this represents a booking on the half open interval
-//[start, end), the range of real numbers x such that start <= x < end.
+//[start, end), the range of real numbers x such that start &lt;= x &lt; end.
 //
 //A triple booking happens when three events have some non-empty 
 //intersection (ie., there is some time that is common to all 3 events.)
@@ -81,18 +81,18 @@ namespace Solution2019
 		namespace RememberOverlapSection {
 			class MyCalendarTwo {
 			public:
-				vector<pair<int, int>> overlaps;
-				vector<pair<int, int>> bookings;
+				vector&lt;pair&lt;int, int&gt;&gt; overlaps;
+				vector&lt;pair&lt;int, int&gt;&gt; bookings;
 				MyCalendarTwo() { }
 
 				bool book(int start, int end)
 				{
-					for (pair<int, int> p : overlaps) {
-						if (max(p.first, start) < min(p.second, end)) { return false; }
+					for (pair&lt;int, int&gt; p : overlaps) {
+						if (max(p.first, start) &lt; min(p.second, end)) { return false; }
 					}
 
-					for (pair<int, int> p : bookings) {
-						if (max(p.first, start) < min(p.second, end)) {
+					for (pair&lt;int, int&gt; p : bookings) {
+						if (max(p.first, start) &lt; min(p.second, end)) {
 							overlaps.push_back({ max(start, p.first), min(end, p.second) });
 						}
 					}
@@ -107,7 +107,7 @@ namespace Solution2019
 		namespace UsingSum {
 			class MyCalendarTwo {
 			public:
-				map<int, int> myBook;
+				map&lt;int, int&gt; myBook;
 				MyCalendarTwo() {
 
 				}

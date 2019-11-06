@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given n points on a 2D plane, find the maximum number of points that
 //lie on the same straight line.
 //
@@ -42,7 +42,7 @@
 //|        o
 //|     o
 //|  o  
-//+------------->
+//+-------------&gt;
 //0  1  2  3  4
 //Example 2:
 //
@@ -55,7 +55,7 @@
 //|     o        o
 //|        o
 //|  o        o
-//+------------------->
+//+-------------------&gt;
 //0  1  2  3  4  5  6
 //NOTE: input types have been changed on April 15, 2019. Please reset to
 //default code definition to get new method signature.
@@ -69,21 +69,21 @@ namespace Solution2019
 				if (x == 0) { return y; }
 				return GCD(x, y % x);
 			}
-			int maxPoints(vector<vector<int>>& points) {
+			int maxPoints(vector&lt;vector&lt;int&gt;&gt;& points) {
 				int len = points.size();
-				if (len < 2) { return len; }
+				if (len &lt; 2) { return len; }
 
 				int result = 0;
 				int x, y, gcd;
 				string key;
-				for (int i = 0; i < len; i++) {
-					vector<int> cur = points[i];
+				for (int i = 0; i &lt; len; i++) {
+					vector&lt;int&gt; cur = points[i];
 					int dupe = 1;
 					int verCount = 0;
 					int maxNonVerCount = 0;
-					unordered_map<string, int> map;
-					for (int j = i + 1; j < len; j++) {
-						vector<int> next = points[j];
+					unordered_map&lt;string, int&gt; map;
+					for (int j = i + 1; j &lt; len; j++) {
+						vector&lt;int&gt; next = points[j];
 						if (cur[0] == next[0] && cur[1] == next[1]) {
 							dupe++;
 						}
@@ -104,20 +104,20 @@ namespace Solution2019
 			}
 		}
 
-		namespace UseDoubleAsHashKey {//---> be careful of precision of double if choosing this method. 
-			int maxPoints(vector<vector<int>>& points) {
+		namespace UseDoubleAsHashKey {//---&gt; be careful of precision of double if choosing this method. 
+			int maxPoints(vector&lt;vector&lt;int&gt;&gt;& points) {
 				int len = points.size();
-				if (len < 2) { return len; }
+				if (len &lt; 2) { return len; }
 
 				int result = 0;
-				for (int i = 0; i < len; i++) {
+				for (int i = 0; i &lt; len; i++) {
 					int dupe = 1;
-					vector<int> cur = points[i];
-					unordered_map<double, int> map; // slope, count
+					vector&lt;int&gt; cur = points[i];
+					unordered_map&lt;double, int&gt; map; // slope, count
 					int verCount = 0;
 					int maxNonVer = 0;
-					for (int j = i + 1; j < len; j++) {
-						vector<int> next = points[j];
+					for (int j = i + 1; j &lt; len; j++) {
+						vector&lt;int&gt; next = points[j];
 						if (cur[0] == next[0] && cur[1] == next[1]) { dupe++; }
 						else if (cur[0] == next[0]) { verCount++; }
 						else {
@@ -135,7 +135,7 @@ namespace Solution2019
 			}
 		}
 		void Main() {
-			vector<vector<int>> test = { {0,0},{94911151,94911150},{94911152,94911151} };
+			vector&lt;vector&lt;int&gt;&gt; test = { {0,0},{94911151,94911150},{94911152,94911151} };
 			print(UseDoubleAsHashKey::maxPoints(test));
 		}
 	}

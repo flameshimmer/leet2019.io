@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a node from a cyclic linked list which is sorted in ascending order, 
 //write a function to insert a value into the list such that it remains a 
 //cyclic sorted list. The given node can be a reference to any single node
@@ -70,17 +70,17 @@ namespace Solution2019
 		Node* insert(Node* head, int insertVal) {
 			Node* newNode = new Node(insertVal, nullptr);
 			if (!head) {
-				newNode->next = newNode;
+				newNode-&gt;next = newNode;
 				return newNode;
 			}
 			Node* cur = head;
-			while (cur->next != head) {
-				if (cur->val <= insertVal && cur->next->val >= insertVal) { break; }
-				if ((insertVal >= cur->val || insertVal <= cur->next->val) && cur->val > cur->next->val) { break; }
-				cur = cur->next;
+			while (cur-&gt;next != head) {
+				if (cur-&gt;val &lt;= insertVal && cur-&gt;next-&gt;val &gt;= insertVal) { break; }
+				if ((insertVal &gt;= cur-&gt;val || insertVal &lt;= cur-&gt;next-&gt;val) && cur-&gt;val &gt; cur-&gt;next-&gt;val) { break; }
+				cur = cur-&gt;next;
 			}
-			cur->next = newNode;
-			newNode->next = head;
+			cur-&gt;next = newNode;
+			newNode-&gt;next = head;
 			return head;
 		}
 
@@ -88,9 +88,9 @@ namespace Solution2019
 			Node* head = new Node(3, nullptr);
 			Node* n2 = new Node(3, nullptr);
 			Node* n3 = new Node(3, nullptr);
-			head->next = n2;
-			n2->next = n3;
-			n3->next = head;
+			head-&gt;next = n2;
+			n2-&gt;next = n3;
+			n3-&gt;next = head;
 			insert(head, 0);
 		}
 	}

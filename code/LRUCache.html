@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design and implement a data structure for Least Recently
 //Used (LRU) cache. It should support the following 
 //operations: get and put.
@@ -64,8 +64,8 @@ namespace Solution2019
 		class LRUCache {
 		private:
 			int m_cap;
-			list<int> m_keyList;
-			unordered_map<int, pair<list<int>::iterator, int>> m_map;
+			list&lt;int&gt; m_keyList;
+			unordered_map&lt;int, pair&lt;list&lt;int&gt;::iterator, int&gt;&gt; m_map;
 
 			void moveToFront(int key) {
 				m_keyList.erase(m_map[key].first);
@@ -94,7 +94,7 @@ namespace Solution2019
 					m_keyList.push_front(key);
 					m_map[key] = make_pair(m_keyList.begin(), value);
 
-					if (m_keyList.size() > m_cap) {
+					if (m_keyList.size() &gt; m_cap) {
 						m_map.erase(m_keyList.back());
 						m_keyList.pop_back();
 					}
@@ -105,8 +105,8 @@ namespace Solution2019
 		/**
 		 * Your LRUCache object will be instantiated and called as such:
 		 * LRUCache* obj = new LRUCache(capacity);
-		 * int param_1 = obj->get(key);
-		 * obj->put(key,value);
+		 * int param_1 = obj-&gt;get(key);
+		 * obj-&gt;put(key,value);
 		 */
 
 		void Main() {

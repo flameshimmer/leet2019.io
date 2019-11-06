@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary search tree (BST), find the lowest common ancestor (LCA)
 //of two given nodes in the BST.
 //
@@ -61,11 +61,11 @@ namespace Solution2019
 
 		TreeNode* lowestCommonAncestorRecursive(TreeNode* root, TreeNode* p, TreeNode* q) {
 			if (!root || !p || !q) { return nullptr; }
-			if (root->val > p->val && root->val > q->val) {
-				return lowestCommonAncestorRecursive(root->left, p, q);
+			if (root-&gt;val &gt; p-&gt;val && root-&gt;val &gt; q-&gt;val) {
+				return lowestCommonAncestorRecursive(root-&gt;left, p, q);
 			}
-			else if (root->val < p->val && root->val < q->val) {
-				return lowestCommonAncestorRecursive(root->right, p, q);
+			else if (root-&gt;val &lt; p-&gt;val && root-&gt;val &lt; q-&gt;val) {
+				return lowestCommonAncestorRecursive(root-&gt;right, p, q);
 			}
 			else { return root; }
 		}
@@ -73,11 +73,11 @@ namespace Solution2019
 		TreeNode* lowestCommonAncestorIterative(TreeNode* root, TreeNode* p, TreeNode* q) {
 			if (!root || !p || !q) { return nullptr; }
 			while (true) {
-				if (root->val > p->val && root->val > q->val) {
-					root = root->left;
+				if (root-&gt;val &gt; p-&gt;val && root-&gt;val &gt; q-&gt;val) {
+					root = root-&gt;left;
 				}
-				else if (root->val < p->val && root->val < q->val) {
-					root = root->right;
+				else if (root-&gt;val &lt; p-&gt;val && root-&gt;val &lt; q-&gt;val) {
+					root = root-&gt;right;
 				}
 				else { break; }
 			}

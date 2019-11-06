@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a list of unique words, find all pairs of distinct indices (i, j) 
 //in the given list, so that the concatenation of the two words, 
 //i.e. words[i] + words[j] is a palindrome.
@@ -49,7 +49,7 @@ namespace Solution2019
 	namespace PalindromePairs
 	{
 		bool isPalindrome(string& w, int i, int j) {
-			while (i < j) {
+			while (i &lt; j) {
 				if (w[i] != w[j]) { return false; }
 				i++;
 				j--;
@@ -57,17 +57,17 @@ namespace Solution2019
 			return true;
 		}
 
-		vector<vector<int>> palindromePairs(vector<string>& words) {
-			vector<vector<int>> result;
-			unordered_map<string, int> dict;
+		vector&lt;vector&lt;int&gt;&gt; palindromePairs(vector&lt;string&gt;& words) {
+			vector&lt;vector&lt;int&gt;&gt; result;
+			unordered_map&lt;string, int&gt; dict;
 			int len = words.size();
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				dict[words[i]] = i;
 			}
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				string w = words[i];
-				for (int j = 0; j <= w.size(); j++) {
+				for (int j = 0; j &lt;= w.size(); j++) {
 					if (isPalindrome(w, j, w.size() - 1)) {
 						string prefix = w.substr(0, j);
 						reverse(prefix.begin(), prefix.end());
@@ -76,8 +76,8 @@ namespace Solution2019
 						}
 					}
 
-					// j>0 avoids the duplicates with 0 length case
-					if (j > 0 && isPalindrome(w, 0, j - 1)) {
+					// j&gt;0 avoids the duplicates with 0 length case
+					if (j &gt; 0 && isPalindrome(w, 0, j - 1)) {
 						string suffix = w.substr(j);
 						reverse(suffix.begin(), suffix.end());
 						if (dict.find(suffix) != dict.end() && dict[suffix] != i) {

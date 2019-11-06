@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Say you have an array for which the ith element is the 
 //price of a given stock on day i.
 //
@@ -63,11 +63,11 @@ namespace Solution2019
 {
 	namespace BestTimetoBuyandSellStockII
 	{
-		int maxProfit(vector<int>& prices) {
+		int maxProfit(vector&lt;int&gt;& prices) {
 			int len = prices.size();
 			int result = 0;
-			for (int i = 1; i < len; i++) {
-				if (prices[i] > prices[i - 1]) {
+			for (int i = 1; i &lt; len; i++) {
+				if (prices[i] &gt; prices[i - 1]) {
 					result += prices[i] - prices[i - 1];
 				}
 			}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Write a program to solve a Sudoku puzzle by filling the empty cells.
 //
 //A sudoku solution must satisfy all of the following rules :
@@ -57,13 +57,13 @@ namespace Solution2019
 			bool grid[3][3][10];
 
 
-			bool solve(vector<vector<char>>& board, int i, int j) {
-				if (i >= 9) { return true; }
+			bool solve(vector&lt;vector&lt;char&gt;&gt;& board, int i, int j) {
+				if (i &gt;= 9) { return true; }
 				int nextRow = i + (j + 1) / 9;
 				int nextCol = (j + 1) % 9;
 				if (board[i][j] != '.') { return solve(board, nextRow, nextCol); }
 
-				for (int v = 1; v <= 9; v++) {
+				for (int v = 1; v &lt;= 9; v++) {
 					if (!row[i][v] && !col[j][v] && !grid[i / 3][j / 3][v]) {
 						board[i][j] = '0' + v;
 						row[i][v] = true;
@@ -79,13 +79,13 @@ namespace Solution2019
 				return false;
 			}
 
-			void solveSudoku(vector<vector<char>>& board) {
+			void solveSudoku(vector&lt;vector&lt;char&gt;&gt;& board) {
 				memset(row, 0, sizeof(row));
 				memset(col, 0, sizeof(row));
 				memset(grid, 0, sizeof(grid));
 
-				for (int i = 0; i < 9; i++) {
-					for (int j = 0; j < 9; j++) {
+				for (int i = 0; i &lt; 9; i++) {
+					for (int j = 0; j &lt; 9; j++) {
 						if (board[i][j] != '.') {
 							int v = board[i][j] - '0';
 							row[i][v] = true;
@@ -99,26 +99,26 @@ namespace Solution2019
 		}
 
 		namespace LineByLine {
-			bool check(vector<vector<char>>& board, int i, int j, char val) {
-				for (int x = 0; x < 9; x++) { if (board[x][j] == val) { return false; } }
-				for (int y = 0; y < 9; y++) { if (board[i][y] == val) { return false; } }
+			bool check(vector&lt;vector&lt;char&gt;&gt;& board, int i, int j, char val) {
+				for (int x = 0; x &lt; 9; x++) { if (board[x][j] == val) { return false; } }
+				for (int y = 0; y &lt; 9; y++) { if (board[i][y] == val) { return false; } }
 
 				int row = i - i % 3;
 				int col = j - j % 3;
-				for (int x = 0; x < 3; x++) {
-					for (int y = 0; y < 3; y++) {
+				for (int x = 0; x &lt; 3; x++) {
+					for (int y = 0; y &lt; 3; y++) {
 						if (board[row + x][col + y] == val) { return false; }
 					}
 				}
 				return true;
 			}
 
-			bool solve(vector<vector<char>>& board, int i, int j) {
+			bool solve(vector&lt;vector&lt;char&gt;&gt;& board, int i, int j) {
 				if (i == 9) { return true; }
 				if (j == 9) { return solve(board, i + 1, 0); }
 				if (board[i][j] != '.') { return solve(board, i, j + 1); }
 
-				for (char c = '1'; c <= '9'; c++) {
+				for (char c = '1'; c &lt;= '9'; c++) {
 					if (check(board, i, j, c)) {
 						board[i][j] = c;
 						if (solve(board, i, j + 1)) { return true; }
@@ -128,7 +128,7 @@ namespace Solution2019
 				return false;
 			}
 
-			void solveSudoku(vector<vector<char>>& board) {
+			void solveSudoku(vector&lt;vector&lt;char&gt;&gt;& board) {
 				solve(board, 0, 0);
 			}
 		}

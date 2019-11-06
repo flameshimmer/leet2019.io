@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //In LOL world, there is a hero called Teemo and his attacking can make his enemy
 //Ashe be in poisoned condition. Now, given the Teemo's attacking ascending time 
 //series towards Ashe and the poisoning time duration per Teemo's attacking, you 
@@ -67,11 +67,11 @@ namespace Solution2019
 {
 	namespace TeemoAttacking
 	{
-		int findPoisonedDuration(vector<int>& ts, int duration) {
+		int findPoisonedDuration(vector&lt;int&gt;& ts, int duration) {
 			int len = ts.size();
 			if (len == 0) { return len; }
 			int result = duration;
-			for (int i = 0; i < ts.size()-1; i++) {
+			for (int i = 0; i &lt; ts.size()-1; i++) {
 				result += min(ts[i + 1] - ts[i], duration);
 			}
 			return result;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given two integers representing the numerator and denominator of a fraction,
 //return the fraction in string format.
@@ -53,7 +53,7 @@ namespace Solution2019
 		string fractionToDecimal(int numerator, int denominator) {
 			if (!numerator) { return "0"; }
 			string result;
-			if (numerator > 0 ^ denominator > 0) { result += '-'; }
+			if (numerator &gt; 0 ^ denominator &gt; 0) { result += '-'; }
 			long long n = labs(numerator);
 			long long d = labs(denominator);
 			result += to_string(n / d);
@@ -61,7 +61,7 @@ namespace Solution2019
 			if (!r) { return result; }
 
 			result += '.';
-			unordered_map<long long, int> insertPos; // remain, pos
+			unordered_map&lt;long long, int&gt; insertPos; // remain, pos
 			while (r) {
 				if (insertPos.find(r) != insertPos.end()) {
 					result.insert(insertPos[r], "(");

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A of integers, for each integer A[i]
 //we need to choose either x = -K or x = K, and add 
 //x to A[i] (only once).
@@ -54,20 +54,20 @@
 //Explanation: B = [4,6,3]
 // 
 //Note:
-//1 <= A.length <= 10000
-//0 <= A[i] <= 10000
-//0 <= K <= 10000
+//1 &lt;= A.length &lt;= 10000
+//0 &lt;= A[i] &lt;= 10000
+//0 &lt;= K &lt;= 10000
 
 namespace Solution2019
 {
 	namespace SmallestRangeII
 	{
-		int smallestRangeII(vector<int>& A, int K) {
+		int smallestRangeII(vector&lt;int&gt;& A, int K) {
 			int len = A.size();
 			sort(A.begin(), A.end());
 			int result = A[len - 1] - A[0];
 
-			for (int i = 0; i < len - 1; i++) {
+			for (int i = 0; i &lt; len - 1; i++) {
 				int high = max(A[len - 1] - K, A[i] + K);
 				int low = min(A[0] + K, A[i + 1] - K);
 				result = min(result, high - low);

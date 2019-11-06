@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a list of airline tickets represented by pairs of departure and arrival 
 //airports [from, to], reconstruct the itinerary in order. All of the tickets 
 //belong to a man who departs from JFK. Thus, the itinerary must begin with JFK.
@@ -55,7 +55,7 @@ namespace Solution2019
 {
 	namespace ReconstructItinerary
 	{
-		void dfs(string city, unordered_map<string, priority_queue<string, vector<string>, greater<string>>>& graph, vector<string>& result) {
+		void dfs(string city, unordered_map&lt;string, priority_queue&lt;string, vector&lt;string&gt;, greater&lt;string&gt;&gt;&gt;& graph, vector&lt;string&gt;& result) {
 			auto& edges = graph[city];
 			while (!edges.empty()) {
 				string dest = edges.top();
@@ -66,12 +66,12 @@ namespace Solution2019
 		}
 
 
-		vector<string> findItinerary(vector<vector<string>>& tickets) {
-			unordered_map<string, priority_queue<string, vector<string>, greater<string>>> graph;
-			for (vector<string>& t : tickets) {
+		vector&lt;string&gt; findItinerary(vector&lt;vector&lt;string&gt;&gt;& tickets) {
+			unordered_map&lt;string, priority_queue&lt;string, vector&lt;string&gt;, greater&lt;string&gt;&gt;&gt; graph;
+			for (vector&lt;string&gt;& t : tickets) {
 				graph[t[0]].push(t[1]);
 			}
-			vector<string> result;
+			vector&lt;string&gt; result;
 			dfs("JFK", graph, result);
 			reverse(result.begin(), result.end());
 			return result;

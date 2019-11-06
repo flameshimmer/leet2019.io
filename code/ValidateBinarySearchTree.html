@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary tree, determine if it is a valid binary search tree (BST).
 //
 //Assume a BST is defined as follows:
@@ -66,12 +66,12 @@ namespace Solution2019
 			bool helper(const TreeNode* node, const long long minV, const long long maxV) {
 				if (!node) { return true; }
 
-				if (node->val <= minV || node->val >= maxV) {
+				if (node-&gt;val &lt;= minV || node-&gt;val &gt;= maxV) {
 					return false;
 				}
 
-				return helper(node->left, minV, node->val)
-					&& helper(node->right, node->val, maxV);
+				return helper(node-&gt;left, minV, node-&gt;val)
+					&& helper(node-&gt;right, node-&gt;val, maxV);
 			}
 
 
@@ -84,10 +84,10 @@ namespace Solution2019
 			bool helper(const TreeNode* node, const TreeNode* minNode, const TreeNode* maxNode) {
 				if (!node) { return true; }
 
-				if (minNode && node->val <= minNode->val || maxNode && node->val >= maxNode->val) { return false; }
+				if (minNode && node-&gt;val &lt;= minNode-&gt;val || maxNode && node-&gt;val &gt;= maxNode-&gt;val) { return false; }
 
-				return helper(node->left, minNode, node)
-					&& helper(node->right, node, maxNode);
+				return helper(node-&gt;left, minNode, node)
+					&& helper(node-&gt;right, node, maxNode);
 			}
 
 
@@ -99,11 +99,11 @@ namespace Solution2019
 		namespace InorderTraversal {
 			bool helper(TreeNode* root, TreeNode*& prev) {
 				if (!root) { return true; }
-				if (!helper(root->left, prev)) { return false; }
+				if (!helper(root-&gt;left, prev)) { return false; }
 
-				if (prev && root->val <= prev->val) { return false; }
+				if (prev && root-&gt;val &lt;= prev-&gt;val) { return false; }
 				prev = root;
-				return helper(root->right, prev);
+				return helper(root-&gt;right, prev);
 			}
 
 			bool isValidBST(TreeNode* root) {
@@ -115,8 +115,8 @@ namespace Solution2019
 
 		void Main() {
 			TreeNode* root = new TreeNode(2);
-			root->left = new TreeNode(1);
-			root->right = new TreeNode(3);
+			root-&gt;left = new TreeNode(1);
+			root-&gt;right = new TreeNode(3);
 			print(UseLongLong::isValidBST(root));
 		}
 	}

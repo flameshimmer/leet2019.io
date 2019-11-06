@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 //
 //Example:
@@ -44,19 +44,19 @@ namespace Solution2019
 {
 	namespace MoveZeroes
 	{
-		void moveZeroes(vector<int>& nums) {
+		void moveZeroes(vector&lt;int&gt;& nums) {
 			int len = nums.size();
-			if (len < 2) { return; }
+			if (len &lt; 2) { return; }
 			int start = 0;
 			int end = 0;
-			while (end < len) {
+			while (end &lt; len) {
 				if (nums[end] != 0) {
 					nums[start] = nums[end];
 					start++;
 				}
 				end++;
 			}
-			while (start < len) { nums[start] = 0; start++; }
+			while (start &lt; len) { nums[start] = 0; start++; }
 		}
 		void Main() {
 			string test = "tst test test";

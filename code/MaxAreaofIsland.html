@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non - empty 2D array grid of 0's and 1's, an island is a 
 //group of 1's (representing land) connected 4-directionally 
 //(horizontal or vertical.) You may assume all four edges of 
@@ -57,20 +57,20 @@ namespace Solution2019
 {
 	namespace MaxAreaofIsland
 	{
-		int GetSum(vector<vector<int>>& grid, int i, int j, int rowCount, int colCount) {
-			if (i < 0 || i >= rowCount || j < 0 || j >= colCount || grid[i][j] == 0) { return 0; }
+		int GetSum(vector&lt;vector&lt;int&gt;&gt;& grid, int i, int j, int rowCount, int colCount) {
+			if (i &lt; 0 || i &gt;= rowCount || j &lt; 0 || j &gt;= colCount || grid[i][j] == 0) { return 0; }
 			grid[i][j] = 0;
 			return 1 + GetSum(grid, i - 1, j, rowCount, colCount) + GetSum(grid, i + 1, j, rowCount, colCount) + GetSum(grid, i, j-1, rowCount, colCount) + GetSum(grid, i, j+1, rowCount, colCount);
 		}
 		
-		int maxAreaOfIsland(vector<vector<int>>& grid) {
+		int maxAreaOfIsland(vector&lt;vector&lt;int&gt;&gt;& grid) {
 			int rowCount = grid.size();
 			if (rowCount == 0) { return 0; }
 			int colCount = grid[0].size();
 			if (colCount == 0) { return 0; }
 			int sum = 0;
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					if (grid[i][j] == 1) {
 						sum = max(sum, GetSum(grid, i, j, rowCount, colCount));
 					}

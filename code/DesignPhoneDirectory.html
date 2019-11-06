@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a Phone Directory which supports the following operations:
 //
 //get: Provide a number which is not assigned to anyone.
@@ -65,9 +65,9 @@ namespace Solution2019
 	namespace DesignPhoneDirectory
 	{
 		class PhoneDirectoryTooSlow {
-			map<int, bool> book;
+			map&lt;int, bool&gt; book;
 			PhoneDirectoryTooSlow(int maxNumbers) {
-				for (int i = 0; i < maxNumbers; i++) {
+				for (int i = 0; i &lt; maxNumbers; i++) {
 					book.emplace(i, true);
 				}
 			}
@@ -76,7 +76,7 @@ namespace Solution2019
 				@return - Return an available number. Return -1 if none is available. */
 			int get() {
 				for (auto it = book.begin(); it != book.end(); it++) {
-					if (it->second) { it->second = false; return it->first; }
+					if (it-&gt;second) { it-&gt;second = false; return it-&gt;first; }
 				}
 				return -1;
 			}
@@ -108,7 +108,7 @@ namespace Solution2019
 			  /** Provide a number which is not assigned to anyone.
 				  @return - Return an available number. Return -1 if none is available. */
 			  int get() {
-				  for (int i = 0; i < size; i++) {
+				  for (int i = 0; i &lt; size; i++) {
 					  if (book[i]) {
 						  book[i] = false;
 						  return i;
@@ -140,10 +140,10 @@ namespace Solution2019
 			/** Initialize your data structure here
 				@param maxNumbers - The maximum numbers that can be stored in the phone directory. */
 			PhoneDirectoryCanBeFaster(int maxNumbers) {
-				for (int i = 0; i < maxNumbers; i++) {
+				for (int i = 0; i &lt; maxNumbers; i++) {
 					ListNode* cur = new ListNode(i);
 					if (!head) { head = cur; }
-					else { tail->next = cur; }
+					else { tail-&gt;next = cur; }
 					tail = cur;
 				}
 			}
@@ -153,8 +153,8 @@ namespace Solution2019
 			int get() {
 				if (!head) { return -1; }
 				ListNode* tmp = head;
-				head = head->next;
-				int result = tmp->val;
+				head = head-&gt;next;
+				int result = tmp-&gt;val;
 				delete tmp;
 				if (!head) { tail = nullptr; }
 				return result;
@@ -162,20 +162,20 @@ namespace Solution2019
 
 			/** Check if a number is available or not. */
 			bool check(int number) {
-				ListNode* cur = head;//-----------------------> Note that don't operate on head pointer directly!!!
+				ListNode* cur = head;//-----------------------&gt; Note that don't operate on head pointer directly!!!
 				while (cur) {
-					if (cur->val == number) { return true; }
-					cur = cur->next;
+					if (cur-&gt;val == number) { return true; }
+					cur = cur-&gt;next;
 				}
 				return false;
 			}
 
 			/** Recycle or release a number. */
 			void release(int number) {
-				if (check(number)) { return; } ///-----------------------> Note that to check this first!
+				if (check(number)) { return; } ///-----------------------&gt; Note that to check this first!
 				ListNode* newNode = new ListNode(number);
 				if (!head) { head = newNode; }
-				else { tail->next = newNode; }
+				else { tail-&gt;next = newNode; }
 				tail = newNode;
 			}
 		};
@@ -190,14 +190,14 @@ namespace Solution2019
 				ListNode(int x) { val = x; next = nullptr; }
 			};
 
-			unordered_set<int> book;
+			unordered_set&lt;int&gt; book;
 			ListNode* head = nullptr;
 			ListNode* tail = nullptr;
 			PhoneDirectory(int maxNumbers) {
-				for (int i = 0; i < maxNumbers; i++) {
+				for (int i = 0; i &lt; maxNumbers; i++) {
 					ListNode* cur = new ListNode(i);
 					if (!head) { head = cur; }
-					else { tail->next = cur; }
+					else { tail-&gt;next = cur; }
 					tail = cur;
 					book.insert(i);
 				}
@@ -208,9 +208,9 @@ namespace Solution2019
 				@return - Return an available number. Return -1 if none is available. */
 			int get() {
 				if (!head) { return -1; }
-				int result = head->val;
+				int result = head-&gt;val;
 				ListNode* tmp = head;
-				head = head->next;
+				head = head-&gt;next;
 				if (!head) { tail = nullptr; }
 				delete tmp;
 				book.erase(result);
@@ -227,7 +227,7 @@ namespace Solution2019
 				if (book.find(number) != book.end()) { return; }
 				ListNode* newNode = new ListNode(number);
 				if (!head) { head = newNode; }
-				else { tail->next = newNode; }
+				else { tail-&gt;next = newNode; }
 				tail = newNode;
 				book.insert(number);
 			}
@@ -235,10 +235,10 @@ namespace Solution2019
 		void Main() {
 			
 			PhoneDirectory* obj = new PhoneDirectory(2);
-			print(obj->get());
-			print(obj->get());
-			print(obj->check(0));
-			print(obj->check(1));			
+			print(obj-&gt;get());
+			print(obj-&gt;get());
+			print(obj-&gt;check(0));
+			print(obj-&gt;check(1));			
 		}
 	}
 }

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two strings s and t, determine if they are 
 //both one edit distance apart.
 //
@@ -60,9 +60,9 @@ namespace Solution2019
 		bool isOneEditDistance(string s, string t) {
 			int lens = s.size();
 			int lent = t.size();
-			if (lens > lent) { return isOneEditDistance(t, s); }
+			if (lens &gt; lent) { return isOneEditDistance(t, s); }
 
-			for (int i = 0; i < lens; i++) {
+			for (int i = 0; i &lt; lens; i++) {
 				if (s[i] != t[i]) {
 					if (lens == lent) {
 						return s.substr(i + 1) == t.substr(i + 1);

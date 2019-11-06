@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an n-ary tree, return the preorder traversal of its nodes' values.
 //
 //For example, given a 3-ary tree:
@@ -47,29 +47,29 @@ namespace Solution2019
 		class Node {
 		public:
 			int val;
-			vector<Node*> children;
+			vector&lt;Node*&gt; children;
 
 			Node() {}
 
-			Node(int _val, vector<Node*> _children) {
+			Node(int _val, vector&lt;Node*&gt; _children) {
 				val = _val;
 				children = _children;
 			}
 		};
 
 		namespace Iterative {
-			vector<int> preorder(Node* root) {
-				vector<int> result;
+			vector&lt;int&gt; preorder(Node* root) {
+				vector&lt;int&gt; result;
 				if (!root) { return result; }
 
-				stack<Node*> s;
+				stack&lt;Node*&gt; s;
 				s.push(root);
 				while (!s.empty()) {
 					Node* cur = s.top();
 					s.pop();
-					result.push_back(cur->val);
-					reverse(cur->children.begin(), cur->children.end());
-					for (Node* child : cur->children) {
+					result.push_back(cur-&gt;val);
+					reverse(cur-&gt;children.begin(), cur-&gt;children.end());
+					for (Node* child : cur-&gt;children) {
 						s.push(child);
 					}
 				}
@@ -77,16 +77,16 @@ namespace Solution2019
 			}
 		}
 		namespace Recursive {
-			void helper(Node* node, vector<int>& result) {
+			void helper(Node* node, vector&lt;int&gt;& result) {
 				if (!node) { return; }
-				result.push_back(node->val);
-				for (Node* child : node->children) {
+				result.push_back(node-&gt;val);
+				for (Node* child : node-&gt;children) {
 					helper(child, result);
 				}
 			}
 
-			vector<int> preorder(Node* root) {
-				vector<int> result;
+			vector&lt;int&gt; preorder(Node* root) {
+				vector&lt;int&gt; result;
 				helper(root, result);
 				return result;
 			}

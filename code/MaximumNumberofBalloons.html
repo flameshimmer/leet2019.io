@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	
+
 #include "stdafx.h"
 //Given a string text, you want to use the characters of text to 
 //form as many instances of the word "balloon" as possible.
@@ -49,7 +49,7 @@
 //Output : 0
 //
 //Constraints :
-//1 <= text.length <= 10 ^ 4
+//1 &lt;= text.length &lt;= 10 ^ 4
 //text consists of lower case English letters only.
 //
 namespace Solution2019
@@ -70,8 +70,8 @@ namespace Solution2019
 			}
 
 			int result = INT_MAX;
-			for (int i = 0; i < 26; i++) {
-				if (target[i] > 0) {
+			for (int i = 0; i &lt; 26; i++) {
+				if (target[i] &gt; 0) {
 					result = min(result, map[i] / target[i]);
 				}
 			}

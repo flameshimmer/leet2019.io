@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary search tree with non-negative values, 
 //find the minimum absolute difference between values 
 //of any two nodes.
@@ -57,10 +57,10 @@ namespace Solution2019
 	namespace MinimumAbsoluteDifferenceinBST
 	{
 		void inorderTraverse(TreeNode* node, int& lastVal, int& minDiff) {
-			if (node->left) { inorderTraverse(node->left, lastVal, minDiff); }
-			if (lastVal >= 0) { minDiff = min(minDiff, node->val - lastVal); }
-			lastVal = node->val;
-			if (node->right) { inorderTraverse(node->right, lastVal, minDiff); }
+			if (node-&gt;left) { inorderTraverse(node-&gt;left, lastVal, minDiff); }
+			if (lastVal &gt;= 0) { minDiff = min(minDiff, node-&gt;val - lastVal); }
+			lastVal = node-&gt;val;
+			if (node-&gt;right) { inorderTraverse(node-&gt;right, lastVal, minDiff); }
 		}
 
 

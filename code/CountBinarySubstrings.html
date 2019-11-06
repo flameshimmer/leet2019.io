@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Give a string s, count the number of non-empty (contiguous)
 //substrings that have the same number of 0's and 1's, and all
 //the 0's and all the 1's in these substrings are grouped 
@@ -65,7 +65,7 @@ namespace Solution2019
 			int cur = 1;
 			int prev = 0;
 			int result = 0;
-			for (int i = 1; i < s.size(); i++)
+			for (int i = 1; i &lt; s.size(); i++)
 			{
 				if (s[i] == s[i - 1]) { cur++; }
 				else {

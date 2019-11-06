@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an encoded string, return its decoded string.
 //
 //The encoding rule is: k[encoded_string], where the encoded_string inside 
@@ -55,21 +55,21 @@ namespace Solution2019
 		string decodeString(const string& s, int len, int& i) {
 			string result;
 
-			while (i < len && s[i] != ']') {
+			while (i &lt; len && s[i] != ']') {
 				if (!isdigit(s[i])) {
 					result += s[i];
 					i++;
 				}
 				else {
 					int n = 0;
-					while (i < len && isdigit(s[i])) {
+					while (i &lt; len && isdigit(s[i])) {
 						n = n * 10 + (s[i] - '0');
 						i++;
 					}
 					i++;
 					string t = decodeString(s, len, i);
 					i++;
-					while (n > 0) {
+					while (n &gt; 0) {
 						result += t;
 						n--;
 					}
@@ -86,10 +86,10 @@ namespace Solution2019
 
 		string decodeStringStack(string s) {
 			string result;
-			stack<int> countStack;
-			stack<string> resStack;
+			stack&lt;int&gt; countStack;
+			stack&lt;string&gt; resStack;
 			int i = 0;
-			while (i < s.size()) {
+			while (i &lt; s.size()) {
 				char c = s[i];
 				if (isdigit(c)) {
 					int count = 0;
@@ -107,7 +107,7 @@ namespace Solution2019
 				else if (c == ']') {
 					string temp = resStack.top();
 					resStack.pop();
-					for (int i = 0; i < countStack.top(); i++) {
+					for (int i = 0; i &lt; countStack.top(); i++) {
 						temp += result;
 					}
 					countStack.pop();

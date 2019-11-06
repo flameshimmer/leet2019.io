@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given an absolute path for a file (Unix-style), simplify it. Or in other words,
 //convert it to the canonical path.
@@ -81,7 +81,7 @@ namespace Solution2019
 			int len = path.size();
 			if (len == 0) { return "/"; }
 
-			vector<string> s;
+			vector&lt;string&gt; s;
 			istringstream ss(path);
 			string cur;
 			while (getline(ss, cur, '/')) {

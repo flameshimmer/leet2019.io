@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a set of non-overlapping intervals, insert 
 //a new interval into the intervals (merge if necessary).
 //
@@ -54,24 +54,24 @@ namespace Solution2019
 {
 	namespace InsertInterval
 	{
-		vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
-			vector<vector<int>> result;
+		vector&lt;vector&lt;int&gt;&gt; insert(vector&lt;vector&lt;int&gt;&gt;& intervals, vector&lt;int&gt;& newInterval) {
+			vector&lt;vector&lt;int&gt;&gt; result;
 			int len = intervals.size();
 
 			int i = 0;
-			while (i < len && intervals[i][1] < newInterval[0]) {
+			while (i &lt; len && intervals[i][1] &lt; newInterval[0]) {
 				result.push_back(intervals[i]);
 				i++;
 			}
 
-			while (i < len && intervals[i][0] <= newInterval[1]) {
+			while (i &lt; len && intervals[i][0] &lt;= newInterval[1]) {
 				newInterval[0] = min(intervals[i][0], newInterval[0]);
 				newInterval[1] = max(intervals[i][1], newInterval[1]);
 				i++;
 			}
 			result.push_back(newInterval);
 
-			while (i < len) {
+			while (i &lt; len) {
 				result.push_back(intervals[i]);
 				i++;
 			}

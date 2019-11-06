@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a char array representing tasks CPU need to do. It contains 
 //capital letters A to Z where different letters represent different
 //tasks. Tasks could be done without original order. Each task
@@ -45,7 +45,7 @@
 //Example:
 //Input: tasks = ["A","A","A","B","B","B"], n = 2
 //Output: 8
-//Explanation: A -> B -> idle -> A -> B -> idle -> A -> B.
+//Explanation: A -&gt; B -&gt; idle -&gt; A -&gt; B -&gt; idle -&gt; A -&gt; B.
 // 
 //Note:
 //The number of tasks is in the range [1, 10000].
@@ -55,19 +55,19 @@ namespace Solution2019
 {
 	namespace TaskScheduler
 	{
-		int leastInterval(vector<char>& tasks, int n) {
-			vector<int> map(26, 0);
+		int leastInterval(vector&lt;char&gt;& tasks, int n) {
+			vector&lt;int&gt; map(26, 0);
 			for (char c : tasks) {
 				map[c - 'A'] ++;
 			}
 			sort(map.begin(), map.end());
 
 			int result = 0;
-			while (map[25] > 0) {
+			while (map[25] &gt; 0) {
 				int i = 0;
-				while (i <= n) {
+				while (i &lt;= n) {
 					if (map[25] == 0) { break; }
-					if (25 - i >= 0 && map[25 - i] > 0) { map[25 - i]--; }
+					if (25 - i &gt;= 0 && map[25 - i] &gt; 0) { map[25 - i]--; }
 					result++;
 					i++;
 				}
@@ -76,10 +76,10 @@ namespace Solution2019
 			return result;
 		}
 
-		int leastIntervalAnother(vector<char>& tasks, int n) {
+		int leastIntervalAnother(vector&lt;char&gt;& tasks, int n) {
 
 			int maxCount = 0;
-			vector<int> map(26, 0);
+			vector&lt;int&gt; map(26, 0);
 			for (char c : tasks) {
 				map[c - 'A']++;
 				maxCount = max(maxCount, map[c - 'A']);
@@ -94,7 +94,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<char> test = { 'A', 'A', 'A', 'B', 'B', 'B'};
+			vector&lt;char&gt; test = { 'A', 'A', 'A', 'B', 'B', 'B'};
 			print(leastInterval(test, 2));
 		}
 	}

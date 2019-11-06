@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty binary tree, find the maximum path sum.
 //
 //For this problem, a path is defined as any sequence of nodes from some starting
@@ -61,10 +61,10 @@ namespace Solution2019
 	{
 		int maxToRoot(TreeNode* root, int& result) {
 			if (!root) { return 0; }
-			int l = max(0, maxToRoot(root->left, result));
-			int r = max(0, maxToRoot(root->right, result));
-			result = max(result, l + r + root->val);
-			return root->val + max(l, r);
+			int l = max(0, maxToRoot(root-&gt;left, result));
+			int r = max(0, maxToRoot(root-&gt;right, result));
+			result = max(result, l + r + root-&gt;val);
+			return root-&gt;val + max(l, r);
 		}
 
 		int maxPathSum(TreeNode* root) {

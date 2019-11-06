@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are given an integer array nums and you have to return a new counts array. 
 //The counts array has the property where counts[i] is the number of smaller 
 //elements to the right of nums[i].
@@ -46,34 +46,34 @@ namespace Solution2019
 {
 	namespace CountofSmallerNumbersAfterSelf
 	{
-		void merge(vector<pair<int, int>>::iterator begin, vector<pair<int, int>>::iterator end, vector<int>& result) {
-			if (end - begin <= 1) { return; }
+		void merge(vector&lt;pair&lt;int, int&gt;&gt;::iterator begin, vector&lt;pair&lt;int, int&gt;&gt;::iterator end, vector&lt;int&gt;& result) {
+			if (end - begin &lt;= 1) { return; }
 
 			auto mid = begin + (end - begin) / 2;
 			auto j = mid;
 			merge(begin, mid, result);
 			merge(mid, end, result);
-			for (auto i = begin; i < mid; i++) {
-				while (j < end && i->first > j->first) {
+			for (auto i = begin; i &lt; mid; i++) {
+				while (j &lt; end && i-&gt;first &gt; j-&gt;first) {
 					j++;
 				}
-				result[i->second] += j - mid;
+				result[i-&gt;second] += j - mid;
 			}
 			inplace_merge(begin, mid, end);
 		}
 
-		vector<int> countSmaller(vector<int>& nums) {
+		vector&lt;int&gt; countSmaller(vector&lt;int&gt;& nums) {
 			int len = nums.size();
-			vector<int> result(len);
-			vector<pair<int, int>> A;
-			for (int i = 0; i < len; i++) {
+			vector&lt;int&gt; result(len);
+			vector&lt;pair&lt;int, int&gt;&gt; A;
+			for (int i = 0; i &lt; len; i++) {
 				A.push_back({ nums[i], i });
 			}
 			merge(A.begin(), A.end(), result);
 			return result;
 		}
 		void Main() {
-			vector<int> test = {5, 2, 6, 1};
+			vector&lt;int&gt; test = {5, 2, 6, 1};
 			print(countSmaller(test));
 		}
 	}

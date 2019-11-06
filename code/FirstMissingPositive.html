@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*Given an unsorted integer array, find the 
 smallest missing positive integer.
 
@@ -52,16 +52,16 @@ namespace Solution2019
 {
 	namespace FirstMissingPositive
 	{
-		int firstMissingPositive(vector<int>& A) {
+		int firstMissingPositive(vector&lt;int&gt;& A) {
 			int len = A.size();
 
-			for (int i = 0; i < len; i++) {
-				while (A[i] > 0 && A[i] <= len && A[i] != A[A[i] - 1]) {
+			for (int i = 0; i &lt; len; i++) {
+				while (A[i] &gt; 0 && A[i] &lt;= len && A[i] != A[A[i] - 1]) {
 					swap(A[i], A[A[i] - 1]);
 				}
 			}
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				if (A[i] != i + 1) {
 					return i + 1;
 				}
@@ -69,7 +69,7 @@ namespace Solution2019
 			return len + 1;
 		}
 
-		int firstMissingPositiveAnother(vector<int>& A) {
+		int firstMissingPositiveAnother(vector&lt;int&gt;& A) {
 			int len = A.size();
 			if (len == 0) { return 1; }
 
@@ -80,11 +80,11 @@ namespace Solution2019
 
 			if (!foundOne) { return 1; }
 
-			for (int i = 0; i < len; i++) {
-				if (A[i] <= 0 || A[i] > len) { A[i] = 1; }
+			for (int i = 0; i &lt; len; i++) {
+				if (A[i] &lt;= 0 || A[i] &gt; len) { A[i] = 1; }
 			}
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				int v = abs(A[i]);
 				if (v == len) { A[0] = -abs(A[0]); }
 				else { A[v] = -abs(A[v]); }
@@ -93,18 +93,18 @@ namespace Solution2019
 			// Note that need to check 1 to len-1 before checking 0!!!
 			// after checking all, then check A[0]
 			// because A[0] is representing position len.
-			for (int i = 1; i < len; i++) {
-				if (A[i] > 0) {
+			for (int i = 1; i &lt; len; i++) {
+				if (A[i] &gt; 0) {
 					return i;
 				}
 			}
 
-			if (A[0] > 0) { return len; }
+			if (A[0] &gt; 0) { return len; }
 			return len + 1;
 		}
 
 		void Main() {
-			vector<int> test = { 0,-1, 3, 1 };
+			vector&lt;int&gt; test = { 0,-1, 3, 1 };
 			print(firstMissingPositiveAnother(test));
 		}
 	}

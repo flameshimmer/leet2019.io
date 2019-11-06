@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a collection of numbers that might contain duplicates, 
 //return all possible unique permutations.
 //
@@ -46,13 +46,13 @@ namespace Solution2019
 {
 	namespace PermutationsII
 	{
-		void helper(vector<int>& nums, int start, int len, vector<int>& candidate, vector<int>& result, vector<vector<int>>& results) {
+		void helper(vector&lt;int&gt;& nums, int start, int len, vector&lt;int&gt;& candidate, vector&lt;int&gt;& result, vector&lt;vector&lt;int&gt;&gt;& results) {
 			if (start == len) {
 				results.push_back(result);
 				return;
 			}
 
-			for (int i = 0; i < len; i++)
+			for (int i = 0; i &lt; len; i++)
 			{
 				if (candidate[i]) {
 					result.push_back(nums[i]);
@@ -60,18 +60,18 @@ namespace Solution2019
 					helper(nums, start + 1, len, candidate, result, results);
 					result.pop_back();
 					candidate[i] = true;
-					while (i + 1 < len && nums[i] == nums[i + 1]) { i++; }
+					while (i + 1 &lt; len && nums[i] == nums[i + 1]) { i++; }
 				}
 			}
 		}
 
-		vector<vector<int>> permuteUnique(vector<int>& nums) {
-			vector<vector<int>> results;
+		vector&lt;vector&lt;int&gt;&gt; permuteUnique(vector&lt;int&gt;& nums) {
+			vector&lt;vector&lt;int&gt;&gt; results;
 			int len = nums.size();
 			if (len == 0) { return results; }
 
-			vector<int> result;
-			vector<int> candidate(len, true);
+			vector&lt;int&gt; result;
+			vector&lt;int&gt; candidate(len, true);
 			sort(nums.begin(), nums.end());
 			helper(nums, 0, len, candidate, result, results);
 			return results;

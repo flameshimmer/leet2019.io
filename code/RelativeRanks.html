@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given scores of N athletes, find their relative ranks and
 //the people with the top three highest scores, who will be 
 //awarded medals: "Gold Medal", "Silver Medal" and "Bronze Medal".
@@ -49,13 +49,13 @@ namespace Solution2019
 {
 	namespace RelativeRanks
 	{
-		vector<string> findRelativeRanks(vector<int>& nums) {
-			map<int, int, greater<int>> rank;
-			for (int i = 0; i < nums.size(); i++) {
+		vector&lt;string&gt; findRelativeRanks(vector&lt;int&gt;& nums) {
+			map&lt;int, int, greater&lt;int&gt;&gt; rank;
+			for (int i = 0; i &lt; nums.size(); i++) {
 				rank[nums[i]] = i;
 			}
 
-			vector<string> result(nums.size());
+			vector&lt;string&gt; result(nums.size());
 			int i = 1;
 			for (auto& p : rank) {
 				if (i == 1) { result[p.second] = "Gold Medal"; }

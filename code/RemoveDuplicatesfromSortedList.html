@@ -28,33 +28,33 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a sorted linked list, delete all duplicates such that each element appear only once.
 //
 //Example 1:
-//Input: 1->1->2
-//Output: 1->2
+//Input: 1-&gt;1-&gt;2
+//Output: 1-&gt;2
 //
 //Example 2:
-//Input: 1->1->2->3->3
-//Output: 1->2->3
+//Input: 1-&gt;1-&gt;2-&gt;3-&gt;3
+//Output: 1-&gt;2-&gt;3
 
 namespace Solution2019
 {
 	namespace RemoveDuplicatesfromSortedList
 	{
 		ListNode* deleteDuplicates(ListNode* head) {
-			if (head == nullptr || head->next == nullptr) { return head; }
+			if (head == nullptr || head-&gt;next == nullptr) { return head; }
 			ListNode* cur = head;
-			while (cur->next) {
-				if (cur->val == cur->next->val) {
-					ListNode* tmp = cur->next;
-					cur->next = cur->next->next;
+			while (cur-&gt;next) {
+				if (cur-&gt;val == cur-&gt;next-&gt;val) {
+					ListNode* tmp = cur-&gt;next;
+					cur-&gt;next = cur-&gt;next-&gt;next;
 					delete tmp;
 				}
 				else
 				{
-					cur = cur->next;
+					cur = cur-&gt;next;
 				}
 			}
 			return head;

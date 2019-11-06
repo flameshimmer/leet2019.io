@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string S, we can transform every letter individually 
 //to be lowercase or uppercase to create another string.  
 //Return a list of all possible strings we could create.
@@ -51,7 +51,7 @@ namespace Solution2019
 {
 	namespace LetterCasePermutation
 	{
-		void helper(string& S, int start, int len, string result, vector<string>& results) {
+		void helper(string& S, int start, int len, string result, vector&lt;string&gt;& results) {
 			if (start == len) {
 				results.push_back(result);
 				return;
@@ -68,8 +68,8 @@ namespace Solution2019
 			}
 		}
 
-		vector<string> letterCasePermutation(string S) {
-			vector<string> results;
+		vector&lt;string&gt; letterCasePermutation(string S) {
+			vector&lt;string&gt; results;
 			int len = S.size();
 			if (len == 0) { return results; }
 

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 
 //Implement pow(x, n), which calculates x raised to the power n (xn).
 //
@@ -46,7 +46,7 @@
 //Explanation: 2-2 = 1/22 = 1/4 = 0.25
 //
 //Note:
-//-100.0 < x < 100.0
+//-100.0 &lt; x &lt; 100.0
 //n is a 32-bit signed integer, within the range [−231, 231 − 1]
 
 namespace Solution2019
@@ -56,7 +56,7 @@ namespace Solution2019
 		double myPowIterative(double x, int n) {
 			double result = 1;
 			long long p = n;
-			if (p < 0) {
+			if (p &lt; 0) {
 				p = -p;
 				x = 1 / x;
 			}
@@ -74,7 +74,7 @@ namespace Solution2019
 			if (n == 0) { return 1; }
 
 			long long n2 = n;
-			if (n2 < 0) {
+			if (n2 &lt; 0) {
 				n2 = -n2;
 				x = 1 / x;
 			}

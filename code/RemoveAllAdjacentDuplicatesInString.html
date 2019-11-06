@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string S of lowercase letters, a duplicate removal
 //consists of choosing two adjacent and equal letters, and removing them.
 //
@@ -47,7 +47,7 @@
 //possible, so the final string is "ca".
 // 
 //Note:
-//1 <= S.length <= 20000
+//1 &lt;= S.length &lt;= 20000
 //S consists only of English lowercase letters.
 
 namespace Solution2019
@@ -57,7 +57,7 @@ namespace Solution2019
 		string removeDuplicates(string S) {
 			string a;
 			for (char c : S) {
-				if (a.size() > 0 && a.back() == c) { a.pop_back(); }
+				if (a.size() &gt; 0 && a.back() == c) { a.pop_back(); }
 				else { a += c; }
 			}
 			return a;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a linked list, swap every two adjacent nodes and return its head.
 //
 //You may not modify the values in the list's nodes, only nodes itself may be changed.
@@ -37,43 +37,43 @@
 //
 //Example:
 //
-//Given 1->2->3->4, you should return the list as 2->1->4->3.
+//Given 1-&gt;2-&gt;3-&gt;4, you should return the list as 2-&gt;1-&gt;4-&gt;3.
 namespace Solution2019
 {
 	namespace SwapNodesinPairs
 	{
 
 		ListNode* SwapNodesinPairsRecursive(ListNode* head) {
-			if (!head || !head->next) { 
+			if (!head || !head-&gt;next) { 
 				return head;
 			}
 			
-			ListNode* next = head->next;
-			ListNode* nextSectionHead = SwapNodesinPairsRecursive(next->next);
-			next->next = head;
-			head->next = nextSectionHead;
+			ListNode* next = head-&gt;next;
+			ListNode* nextSectionHead = SwapNodesinPairsRecursive(next-&gt;next);
+			next-&gt;next = head;
+			head-&gt;next = nextSectionHead;
 			return next;
 		}
 
 		ListNode* SwapNodesinPairs(ListNode* head) {
-			if (!head || !head->next) { return head; }
+			if (!head || !head-&gt;next) { return head; }
 
-			ListNode* result = head->next;
+			ListNode* result = head-&gt;next;
 			ListNode* cur = head;
-			ListNode* next = cur->next;
+			ListNode* next = cur-&gt;next;
 			ListNode* nN = nullptr;
 			ListNode* prev = nullptr;
 
 			while (next) {
-				nN = next->next;
-				next->next = cur;
-				cur->next = nN;
+				nN = next-&gt;next;
+				next-&gt;next = cur;
+				cur-&gt;next = nN;
 
-				if (prev) { prev->next = next; }
+				if (prev) { prev-&gt;next = next; }
 				prev = cur;
 
 				cur = nN;
-				next = cur ? cur->next : nullptr;			
+				next = cur ? cur-&gt;next : nullptr;			
 			}
 			return result;
 		}

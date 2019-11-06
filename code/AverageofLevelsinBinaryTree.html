@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty binary tree, return the average value 
 //of the nodes on each level in the form of an array.
 //Example 1:
@@ -50,23 +50,23 @@ namespace Solution2019
 {
 	namespace AverageofLevelsinBinaryTree
 	{
-		vector<double> averageOfLevels(TreeNode* root) {
-			vector<double> result;
+		vector&lt;double&gt; averageOfLevels(TreeNode* root) {
+			vector&lt;double&gt; result;
 			if (!root) { return result; }
 
-			queue<TreeNode*> q;
+			queue&lt;TreeNode*&gt; q;
 			q.push(root);
 			while (!q.empty()) {
 				double sz = q.size();
 				double sum = 0;
 				double i = 0;
-				while (i < sz) {
+				while (i &lt; sz) {
 					i++;
 					TreeNode* cur = q.front();
-					sum += cur->val;
+					sum += cur-&gt;val;
 					q.pop();
-					if (cur->left) { q.push(cur->left); }
-					if (cur->right) { q.push(cur->right); }
+					if (cur-&gt;left) { q.push(cur-&gt;left); }
+					if (cur-&gt;right) { q.push(cur-&gt;right); }
 				}
 				result.push_back(sum / sz);
 			}

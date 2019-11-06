@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Find the minimum length word from a given dictionary words, 
 //which has all the letters from the string licensePlate. 
 //Such a word is said to complete the given string licensePlate
@@ -81,14 +81,14 @@ namespace Solution2019
 			for (char c : w) {
 				map[tolower(c) - 'a']++;
 			}
-			for (int i = 0; i < 26; i++) {
-				if (map[i] < lp[i]) { return false; }
+			for (int i = 0; i &lt; 26; i++) {
+				if (map[i] &lt; lp[i]) { return false; }
 			}
 			return true;
 		}
 
 
-		string shortestCompletingWord(string licensePlate, vector<string>& words) {
+		string shortestCompletingWord(string licensePlate, vector&lt;string&gt;& words) {
 			int map[26] = { 0 };
 			for (char c : licensePlate) {
 				if (isalpha(c)) {
@@ -100,7 +100,7 @@ namespace Solution2019
 			string result;
 
 			for (string& w : words) {
-				if (isCompleting(map, w) && w.size() < minLen) { result = w; minLen = w.size(); }
+				if (isCompleting(map, w) && w.size() &lt; minLen) { result = w; minLen = w.size(); }
 			}
 			return result;
 		}

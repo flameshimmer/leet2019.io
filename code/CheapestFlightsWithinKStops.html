@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //There are n cities connected by m flights. Each fight starts from city u and
 //arrives at v with a price w.
@@ -84,19 +84,19 @@ namespace Solution2019
 	namespace CheapestFlightsWithinKStops
 	{
 		namespace Dijkstra {
-			typedef tuple<int, int, int> ti;
-			int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int K) {
-				vector<vector<pair<int, int>>> adj(n);
-				for (const vector<int>& f : flights) { adj[f[0]].push_back({ f[1], f[2] }); }
+			typedef tuple&lt;int, int, int&gt; ti;
+			int findCheapestPrice(int n, vector&lt;vector&lt;int&gt;&gt;& flights, int src, int dst, int K) {
+				vector&lt;vector&lt;pair&lt;int, int&gt;&gt;&gt; adj(n);
+				for (const vector&lt;int&gt;& f : flights) { adj[f[0]].push_back({ f[1], f[2] }); }
 
-				priority_queue<ti, vector<ti>, greater<ti>> pq;
+				priority_queue&lt;ti, vector&lt;ti&gt;, greater&lt;ti&gt;&gt; pq;
 				pq.push({ 0, src, K + 1 });
 				while (!pq.empty()) {
 					auto [cost, u, stops] = pq.top();
 					pq.pop();
 					if (u == dst) { return cost; }
 					if (stops == 0) { continue; }
-					for (const pair<int, int>& p : adj[u]) {
+					for (const pair&lt;int, int&gt;& p : adj[u]) {
 						auto [v, c] = p;
 						pq.push({ cost + c, v, stops - 1 });
 					}
@@ -106,12 +106,12 @@ namespace Solution2019
 		}
 
 		namespace BellmanFord {
-			int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int K) {
-				vector<long long> c(n, INT_MAX);
+			int findCheapestPrice(int n, vector&lt;vector&lt;int&gt;&gt;& flights, int src, int dst, int K) {
+				vector&lt;long long&gt; c(n, INT_MAX);
 				c[src] = 0;
 
-				for (int i = 0; i <= K; i++) {
-					vector<long long> C(c);
+				for (int i = 0; i &lt;= K; i++) {
+					vector&lt;long long&gt; C(c);
 					for (auto f : flights) {
 						C[f[1]] = min(C[f[1]], c[f[0]] + f[2]);
 					}
@@ -122,15 +122,15 @@ namespace Solution2019
 		}
 
 		namespace DFS {
-			void dfs(int src, int dest, unordered_map<int, vector<pair<int, int>>>& adj, unordered_set<int>& visited, int K, int sum, int& result)
+			void dfs(int src, int dest, unordered_map&lt;int, vector&lt;pair&lt;int, int&gt;&gt;&gt;& adj, unordered_set&lt;int&gt;& visited, int K, int sum, int& result)
 			{
 				if (src == dest) { result = sum; return; }
 				if (K == 0) { return; }
 
 				visited.insert(src);
-				for (pair<int, int> n : adj[src]) {
+				for (pair&lt;int, int&gt; n : adj[src]) {
 					if (visited.find(n.first) == visited.end()) {
-						if (sum + n.second > result) { continue; }
+						if (sum + n.second &gt; result) { continue; }
 						dfs(n.first, dest, adj, visited, K - 1, sum + n.second, result);
 					}
 				}
@@ -138,13 +138,13 @@ namespace Solution2019
 			}
 
 
-			int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dest, int K) {
+			int findCheapestPrice(int n, vector&lt;vector&lt;int&gt;&gt;& flights, int src, int dest, int K) {
 				int len = flights.size();
 				if (len == 0) { return 0; }
 
-				unordered_set<int> visited;
-				unordered_map<int, vector<pair<int, int>>> adj;
-				for (vector<int> f : flights) {
+				unordered_set&lt;int&gt; visited;
+				unordered_map&lt;int, vector&lt;pair&lt;int, int&gt;&gt;&gt; adj;
+				for (vector&lt;int&gt; f : flights) {
 					adj[f[0]].push_back({ f[1], f[2] });
 				}
 				int result = INT_MAX;
@@ -153,7 +153,7 @@ namespace Solution2019
 			}
 		}
 		void Main() {
-			vector<vector<int>> test = { {0,1,100},{1,2,100},{0,2,500} };
+			vector&lt;vector&lt;int&gt;&gt; test = { {0,1,100},{1,2,100},{0,2,500} };
 			print(findCheapestPrice(3, test, 0, 2, 1));
 		}
 	}

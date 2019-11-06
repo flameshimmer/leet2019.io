@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A of non-negative integers, half of 
 //the integers in A are odd, and half of the integers are even.
 //
@@ -44,17 +44,17 @@
 //Explanation: [4,7,2,5], [2,5,4,7], [2,7,4,5] would also have been accepted.
 // 
 //Note:
-//2 <= A.length <= 20000
+//2 &lt;= A.length &lt;= 20000
 //A.length % 2 == 0
-//0 <= A[i] <= 1000
+//0 &lt;= A[i] &lt;= 1000
 
 namespace Solution2019
 {
 	namespace SortArrayByParityII
 	{
-		vector<int> SortArrayByParityII(vector<int>& A) {
+		vector&lt;int&gt; SortArrayByParityII(vector&lt;int&gt;& A) {
 			int end = 1;
-			for (int start = 0;start < A.size(); start += 2) {
+			for (int start = 0;start &lt; A.size(); start += 2) {
 				if (A[start] % 2 != 0) {
 					while (A[end] % 2 == 1) { end += 2; }
 
@@ -68,7 +68,7 @@ namespace Solution2019
 
 		void Main() {
 			string test = "tst test test";
-			vector<int> A = { 4, 2, 5, 7 };
+			vector&lt;int&gt; A = { 4, 2, 5, 7 };
 			print(SortArrayByParityII(A));
 		}
 	}

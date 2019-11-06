@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We are to write the letters of a given string S, 
 //from left to right into lines. Each line has 
 //maximum width 100 units, and if writing a letter
@@ -77,7 +77,7 @@ namespace Solution2019
 {
 	namespace NumberofLinesToWriteString
 	{
-		vector<int> numberOfLines(vector<int>& widths, string S) {
+		vector&lt;int&gt; numberOfLines(vector&lt;int&gt;& widths, string S) {
 			int len = S.size();
 			if (len == 0) { return { 0, 0 }; }
 
@@ -85,7 +85,7 @@ namespace Solution2019
 			int lineCount = 1;
 			for (char c : S) {
 				int curW = widths[c - 'a'];
-				if (width + curW > 100) { lineCount++; width = curW; }
+				if (width + curW &gt; 100) { lineCount++; width = curW; }
 				else { width += curW; }
 			}
 			return { lineCount, width };

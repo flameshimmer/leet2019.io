@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given words first and second, consider occurrences in some text
 //of the form "first second third", where second comes immediately
 //after first, and third comes immediately after second.
@@ -48,23 +48,23 @@
 // 
 //
 //Note:
-//1 <= text.length <= 1000
+//1 &lt;= text.length &lt;= 1000
 //text consists of space separated words, where 
 //each word consists of lowercase English letters.
-//1 <= first.length, second.length <= 10
+//1 &lt;= first.length, second.length &lt;= 10
 //first and second consist of lowercase English letters.
 
 namespace Solution2019
 {
 	namespace OccurrencesAfterBigram
 	{
-		vector<string> findOcurrences(string text, string first, string second) {
-			vector<string> result;
+		vector&lt;string&gt; findOcurrences(string text, string first, string second) {
+			vector&lt;string&gt; result;
 			istringstream ss(text);
 			string cur;
 			string prev;
 			string prev2;
-			while (ss >> cur) {
+			while (ss &gt;&gt; cur) {
 				if (prev2 == first && prev == second) {
 					result.push_back(cur);
 				}
@@ -74,15 +74,15 @@ namespace Solution2019
 			return result;
 		}
 
-		vector<string> findOcurrencesAnother(string text, string first, string second) {
-			vector<string> result;
+		vector&lt;string&gt; findOcurrencesAnother(string text, string first, string second) {
+			vector&lt;string&gt; result;
 			string target = " " + first + " " + second + " ";
 			text = " " + text;
 			size_t stringStart = text.find(target);
 			while (stringStart != string::npos) {
 				size_t stringEnd = stringStart + target.size();
 				size_t cur = stringEnd;
-				while (cur < text.size() && text[cur] != ' ') { cur++; }
+				while (cur &lt; text.size() && text[cur] != ' ') { cur++; }
 				result.push_back(text.substr(stringEnd, cur - stringEnd));
 				stringStart = text.find(target, stringStart + 1);
 			}

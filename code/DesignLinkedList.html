@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 // 
 
 namespace Solution2019
@@ -55,12 +55,12 @@ namespace Solution2019
 
 				/** Get the value of the index-th node in the linked list. If the index is invalid, return -1. */
 				int get(int index) {
-					if (index < 0 || index > len-1) { return -1; }
+					if (index &lt; 0 || index &gt; len-1) { return -1; }
 					ListNode* cur = head;
 					int i = 0;
 					while (cur) {
-						if (i == index) { return cur->val; }
-						cur = cur->next;
+						if (i == index) { return cur-&gt;val; }
+						cur = cur-&gt;next;
 						i++;
 					}
 					return -1;
@@ -70,7 +70,7 @@ namespace Solution2019
 				void addAtHead(int val) {
 					ListNode* newNode = new ListNode(val);
 					if (!tail) { tail = newNode; }
-					else { newNode->next = head; }
+					else { newNode-&gt;next = head; }
 					head = newNode;
 					len++;
 				}
@@ -79,14 +79,14 @@ namespace Solution2019
 				void addAtTail(int val) {
 					ListNode* newNode = new ListNode(val);
 					if (!head) { head = newNode; }
-					else { tail->next = newNode; }
+					else { tail-&gt;next = newNode; }
 					tail = newNode;
 					len++;
 				}
 
 				/** Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted. */
 				void addAtIndex(int index, int val) {
-					if (index < 0 || index > len) { return; }
+					if (index &lt; 0 || index &gt; len) { return; }
 					if (index == 0) { addAtHead(val); }
 					else if (index == len) { addAtTail(val); }
 					else {
@@ -94,22 +94,22 @@ namespace Solution2019
 						int i = 0;
 						while (cur) {
 							if (i == index - 1) { break; }
-							cur = cur->next;
+							cur = cur-&gt;next;
 							i++;
 						}
 						ListNode* newNode = new ListNode(val);
-						newNode->next = cur->next;
-						cur->next = newNode;
+						newNode-&gt;next = cur-&gt;next;
+						cur-&gt;next = newNode;
 						len++;
 					}
 				}
 
 				/** Delete the index-th node in the linked list, if the index is valid. */
 				void deleteAtIndex(int index) {
-					if (index < 0 || index > len - 1) { return; }
+					if (index &lt; 0 || index &gt; len - 1) { return; }
 					if (index == 0) {
 						ListNode* tmp = head;
-						head = head->next;
+						head = head-&gt;next;
 						delete tmp;
 						if (!head) { tail = nullptr; }
 					}
@@ -118,13 +118,13 @@ namespace Solution2019
 						int i = 0;
 						while (cur) {
 							if (i == index - 1) { break; }
-							cur = cur->next;
+							cur = cur-&gt;next;
 							i++;
 						}						
-						ListNode* tmp = cur->next;
-						cur->next = cur->next->next;
+						ListNode* tmp = cur-&gt;next;
+						cur-&gt;next = cur-&gt;next-&gt;next;
 						delete tmp;
-						if (cur->next == nullptr) { tail = cur; }
+						if (cur-&gt;next == nullptr) { tail = cur; }
 					}
 					len--;
 					

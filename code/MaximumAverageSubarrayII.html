@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array consisting of n integers, find the contiguous
 //subarray whose length is greater than or equal to k that has
 //the maximum average value. And you need to output the maximum
@@ -43,7 +43,7 @@
 //Thus return 12.75.
 //
 //Note:
-//1 <= k <= n <= 10,000.
+//1 &lt;= k &lt;= n &lt;= 10,000.
 //Elements of the given array will be in range [-10,000, 10,000].
 //The answer with the calculation error less than 10-5 will be accepted.
 
@@ -51,23 +51,23 @@ namespace Solution2019
 {
 	namespace MaximumAverageSubarrayII
 	{
-		bool isLarger(vector<int>& nums, double mid, int k) {
+		bool isLarger(vector&lt;int&gt;& nums, double mid, int k) {
 			double sum = 0;
 			double prev_sum = 0;
 			double min_sum = 0;
-			for (int i = 0; i < nums.size(); i++) {
+			for (int i = 0; i &lt; nums.size(); i++) {
 				sum += nums[i] - mid;
-				if (i >= k) {
+				if (i &gt;= k) {
 					prev_sum += nums[i - k] - mid;
 					min_sum = min(min_sum, prev_sum);
 				}
-				if (i >= k - 1 && sum > min_sum) return false;
+				if (i &gt;= k - 1 && sum &gt; min_sum) return false;
 			}
 			return true;
 		}
 
 
-		double findMaxAverage(vector<int>& nums, int k) {
+		double findMaxAverage(vector&lt;int&gt;& nums, int k) {
 			double left = INT_MAX;
 			double right = INT_MIN;
 			double mid = 0;
@@ -77,7 +77,7 @@ namespace Solution2019
 				right = max(right, double(v));
 			}
 
-			while (left + 0.00001 < right) {
+			while (left + 0.00001 &lt; right) {
 				mid = left + (right - left) / 2;
 				if (isLarger(nums, mid, k)) {
 					right = mid;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Given a m x n grid filled with non-negative numbers, find 
 //a path from top left to bottom right which minimizes the sum 
 //of all numbers along its path.
@@ -48,18 +48,18 @@ namespace Solution2019
 {
 	namespace MinimumPathSum
 	{
-		int minPathSum(vector<vector<int>>& grid) {
+		int minPathSum(vector&lt;vector&lt;int&gt;&gt;& grid) {
 			int rowCount = grid.size();
 			if (rowCount == 0) { return 0; }
 			int colCount = grid[0].size();
 
-			vector<int> dp(grid[0].begin(), grid[0].end());
-			for (int i = 1; i < colCount; i++) {
+			vector&lt;int&gt; dp(grid[0].begin(), grid[0].end());
+			for (int i = 1; i &lt; colCount; i++) {
 				dp[i] += dp[i - 1];
 			}
-			for (int i = 1; i < rowCount; i++) {
+			for (int i = 1; i &lt; rowCount; i++) {
 				dp[0] = grid[i][0];
-				for (int j = 1; j < colCount; j++) {				
+				for (int j = 1; j &lt; colCount; j++) {				
 					dp[j] = grid[i][j] + min(dp[j], dp[j - 1]);
 				}
 			}

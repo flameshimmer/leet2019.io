@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Implement strStr().
 //
 //Return the index of the first occurrence of needle in haystack, 
@@ -58,13 +58,13 @@ namespace Solution2019
 			int lent = t.size();
 			if (lent == 0) { return 0; }
 			int lens = s.size();
-			if (lens < lent) { return -1; }
+			if (lens &lt; lent) { return -1; }
 			
 			int i = 0;
 			
-			while (i <= lens - lent) {
+			while (i &lt;= lens - lent) {
 				int j = 0;
-				while (j < lent) {
+				while (j &lt; lent) {
 					if (s[i + j] != t[j]) { break; }
 					j++;
 				}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We have two special characters. The first character can be 
 //represented by one bit 0. The second character can be 
 //represented by two bits (10 or 11).
@@ -54,17 +54,17 @@
 //character. So the last character is NOT one-bit character.
 //
 //Note:
-//1 <= len(bits) <= 1000.
+//1 &lt;= len(bits) &lt;= 1000.
 //bits[i] is always 0 or 1.
 
 namespace Solution2019
 {
 	namespace OnebitandTwobitCharacters
 	{
-		bool isOneBitCharacter(vector<int>& bits) {
+		bool isOneBitCharacter(vector&lt;int&gt;& bits) {
 			int i = 0;
 			int len = bits.size();
-			while (i < len) {
+			while (i &lt; len) {
 				if (bits[i] == 1) { i++; }
 				else if (i == len - 1) { return true; }
 				i++;

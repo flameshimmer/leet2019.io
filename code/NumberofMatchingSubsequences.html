@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given string S and a dictionary of words words, 
 //find the number of words[i] that is a subsequence of S.
 //
@@ -50,13 +50,13 @@ namespace Solution2019
 {
 	namespace NumberofMatchingSubsequences
 	{
-		bool isSubseq(string& w, vector<vector<int>>& map, unordered_map<string, bool>& cache) {
+		bool isSubseq(string& w, vector&lt;vector&lt;int&gt;&gt;& map, unordered_map&lt;string, bool&gt;& cache) {
 
 			if (cache.count(w)) { return cache[w]; }
 			int lastIndex = -1;
 			int len = w.size();
 			for (char c : w) {
-				vector<int>& pos = map[c];
+				vector&lt;int&gt;& pos = map[c];
 				auto it = lower_bound(pos.begin(), pos.end(), lastIndex + 1);
 				if (it == pos.end()) { cache[w] = false; return false; }
 				lastIndex = *it;
@@ -65,10 +65,10 @@ namespace Solution2019
 			return true;
 		}
 
-		int numMatchingSubseq(string S, vector<string>& words) {
-			vector<vector<int>> myMap(128);
-			unordered_map<string, bool> cache;
-			for (int i = 0; i < S.size(); i++) {
+		int numMatchingSubseq(string S, vector&lt;string&gt;& words) {
+			vector&lt;vector&lt;int&gt;&gt; myMap(128);
+			unordered_map&lt;string, bool&gt; cache;
+			for (int i = 0; i &lt; S.size(); i++) {
 				myMap[S[i]].push_back(i);
 			}
 

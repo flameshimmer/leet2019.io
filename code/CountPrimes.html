@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Count the number of prime numbers less than a non-negative number, n.
 //
@@ -42,23 +42,23 @@ namespace Solution2019
 	namespace CountPrimes
 	{
 		int countPrimes(int n) {
-			if (n < 2) { return 0; }
+			if (n &lt; 2) { return 0; }
 
-			vector<bool> notPrime(n, false);
+			vector&lt;bool&gt; notPrime(n, false);
 			notPrime[0] = true;
 			notPrime[1] = true;
 
 			// note that sqrt(n) is a double!!! so can't cast into int to use it. 
-			for (int i = 2; i < sqrt(n); i++) {
+			for (int i = 2; i &lt; sqrt(n); i++) {
 				if (!notPrime[i]) {
-					for (int j = 2; i * j < n; j++) {
+					for (int j = 2; i * j &lt; n; j++) {
 						notPrime[i * j] = true;
 					}
 				}
 			}
 
 			int result = 0;
-			for (int i = 2; i < notPrime.size(); i++) {
+			for (int i = 2; i &lt; notPrime.size(); i++) {
 				if (!notPrime[i]) { result++; }
 			}
 			return result;

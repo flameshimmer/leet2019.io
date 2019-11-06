@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A of positive integers (not necessarily distinct), 
 //return the lexicographically largest permutation that is smaller 
 //than A, that can be made with one swap (A swap exchanges the 
@@ -56,21 +56,21 @@
 //Explanation: Swapping 1 and 3.
 // 
 //Note:
-//1 <= A.length <= 10000
-//1 <= A[i] <= 10000
+//1 &lt;= A.length &lt;= 10000
+//1 &lt;= A[i] &lt;= 10000
 namespace Solution2019
 {
 	namespace PreviousPermutationWithOneSwap
 	{
-		vector<int> prevPermOpt1(vector<int>& A) {
+		vector&lt;int&gt; prevPermOpt1(vector&lt;int&gt;& A) {
 			int len = A.size();
 			int i = len - 2;
-			while (i >= 0 && A[i] <= A[i + 1]) { i--; }
+			while (i &gt;= 0 && A[i] &lt;= A[i + 1]) { i--; }
 
-			if (i < 0) { return A; }
+			if (i &lt; 0) { return A; }
 
 			int j = len - 1;
-			while (A[i] <= A[j]) { j--; }
+			while (A[i] &lt;= A[j]) { j--; }
 			while (A[j] == A[j - 1]) { j--; }
 			swap(A[i], A[j]);
 			return A;

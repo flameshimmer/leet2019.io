@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given m arrays, and each array is sorted in ascending order. 
 //Now you can pick up two integers from two different arrays 
 //(each array picks one) and calculate the distance. We define 
@@ -53,12 +53,12 @@ namespace Solution2019
 {
 	namespace MaximumDistanceinArrays
 	{
-		int maxDistance(vector<vector<int>>& arrays) {
+		int maxDistance(vector&lt;vector&lt;int&gt;&gt;& arrays) {
 			int left = arrays[0].front();
 			int right = arrays[0].back();
 			int result = 0;
-			for (int i = 1; i < arrays.size(); i++) {
-				vector<int> a = arrays[i];
+			for (int i = 1; i &lt; arrays.size(); i++) {
+				vector&lt;int&gt; a = arrays[i];
 				result = max(result, max(right - a.front(), a.back() - left));
 				left = min(left, a.front());
 				right = max(right, a.back());
@@ -67,7 +67,7 @@ namespace Solution2019
 		}
 
 
-		int maxDistanceAnother(vector<vector<int>>& arrays) {
+		int maxDistanceAnother(vector&lt;vector&lt;int&gt;&gt;& arrays) {
 			int min1 = INT_MAX;
 			int min2 = INT_MAX;
 			int max1 = INT_MIN;
@@ -77,26 +77,26 @@ namespace Solution2019
 			int imax1 = -1;
 			int imax2 = -1;
 
-			for (int i = 0; i < arrays.size(); i++) {
+			for (int i = 0; i &lt; arrays.size(); i++) {
 				int vmin = arrays[i][0];
-				if (vmin < min1) { 
+				if (vmin &lt; min1) { 
 					min2 = min1; 
 					imin2 = imin1;
 					min1 = vmin;
 					imin1 = i;
 				}
-				else if (vmin < min2) {
+				else if (vmin &lt; min2) {
 					min2 = vmin;
 					imin2 = i;
 				}
 				int vmax = arrays[i][arrays[i].size() - 1];
-				if (vmax > max1) {
+				if (vmax &gt; max1) {
 					max2 = max1;
 					imax2 = imax1;
 					max1 = vmax;
 					imax1 = i;
 				}
-				else if (vmax > max2) {
+				else if (vmax &gt; max2) {
 					max2 = vmax;
 					imax2 = i;
 				}

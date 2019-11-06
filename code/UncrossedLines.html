@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We write the integers of A and B (in the order they are given) 
 //on two separate horizontal lines.
 //
@@ -59,21 +59,21 @@
 //Output: 2
 // 
 //Note:
-//1 <= A.length <= 500
-//1 <= B.length <= 500
-//1 <= A[i], B[i] <= 2000
+//1 &lt;= A.length &lt;= 500
+//1 &lt;= B.length &lt;= 500
+//1 &lt;= A[i], B[i] &lt;= 2000
 
 namespace Solution2019
 {
 	namespace UncrossedLines
 	{
-		int maxUncrossedLines(vector<int>& A, vector<int>& B) {
+		int maxUncrossedLines(vector&lt;int&gt;& A, vector&lt;int&gt;& B) {
 			int lenA = A.size();
 			int lenB = B.size();
-			vector<vector<int>> dp(lenA + 1, vector<int>(lenB + 1, 0));
+			vector&lt;vector&lt;int&gt;&gt; dp(lenA + 1, vector&lt;int&gt;(lenB + 1, 0));
 
-			for (int i = 1; i <= lenA; i++) {
-				for (int j = 1; j <= lenB; j++) {
+			for (int i = 1; i &lt;= lenA; i++) {
+				for (int j = 1; j &lt;= lenB; j++) {
 					dp[i][j] = (A[i - 1] == B[j - 1]) ? (dp[i - 1][j - 1] + 1) : max(dp[i][j - 1], dp[i-1][j]);
 				}
 			}

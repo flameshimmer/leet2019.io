@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Given an integer array of size n, find all 
 //elements that appear more than ⌊ n/3 ⌋ times.
 //
@@ -46,8 +46,8 @@ namespace Solution2019
 {
 	namespace MajorityElementII
 	{
-		vector<int> majorityElement(vector<int>& nums) {
-			vector<int> result;
+		vector&lt;int&gt; majorityElement(vector&lt;int&gt;& nums) {
+			vector&lt;int&gt; result;
 			int len = nums.size();
 			if (len == 0) { return result; }
 
@@ -69,8 +69,8 @@ namespace Solution2019
 				if (v == num1) { c1++; }
 				else if (v == num2) { c2++; }
 			}
-			if (c1 > len / 3) { result.push_back(num1); }
-			if (c2 > len / 3) { result.push_back(num2); }
+			if (c1 &gt; len / 3) { result.push_back(num1); }
+			if (c2 &gt; len / 3) { result.push_back(num2); }
 			return result;
 		}
 		void Main() {

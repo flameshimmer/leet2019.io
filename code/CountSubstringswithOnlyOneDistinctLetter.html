@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string S, return the number of substrings that have only one distinct letter.
 //
 //Example 1:
@@ -46,7 +46,7 @@
 //Output: 55
 // 
 //Constraints:
-//1 <= S.length <= 1000
+//1 &lt;= S.length &lt;= 1000
 //S[i] consists of only lowercase English letters. 
 
 namespace Solution2019
@@ -58,8 +58,8 @@ namespace Solution2019
 			int start = 0;
 			int end = 1;
 			int result = 0;
-			while (end <= len) {
-				while (end < len && S[start] == S[end]) { end++; }
+			while (end &lt;= len) {
+				while (end &lt; len && S[start] == S[end]) { end++; }
 				result += (end - start) * (end - start + 1) / 2;
 				start = end;
 				end++;

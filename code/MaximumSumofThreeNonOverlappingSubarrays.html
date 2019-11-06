@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //In a given array nums of positive integers, find three 
 //non-overlapping subarrays with maximum sum.
 //
@@ -57,18 +57,18 @@ namespace Solution2019
 {
 	namespace MaximumSumofThreeNonOverlappingSubarrays
 	{
-		vector<int> maxSumOfThreeSubarrays(vector<int>& nums, int k) {
+		vector&lt;int&gt; maxSumOfThreeSubarrays(vector&lt;int&gt;& nums, int k) {
 			int n = nums.size();
 			int maxsum = 0;
-			vector<int> sum = { 0 };
-			vector<int> posLeft(n, 0);
-			vector<int> posRight(n, n - k);
-			vector<int> ans(3, 0);
+			vector&lt;int&gt; sum = { 0 };
+			vector&lt;int&gt; posLeft(n, 0);
+			vector&lt;int&gt; posRight(n, n - k);
+			vector&lt;int&gt; ans(3, 0);
 
 			for (int i : nums) { sum.push_back(sum.back() + i); }
 
-			for (int i = k, tot = sum[k] - sum[0]; i < n; i++) {
-				if (sum[i + 1] - sum[i + 1 - k] > tot) {
+			for (int i = k, tot = sum[k] - sum[0]; i &lt; n; i++) {
+				if (sum[i + 1] - sum[i + 1 - k] &gt; tot) {
 					posLeft[i] = i + 1 - k;
 					tot = sum[i + 1] - sum[i + 1 - k];
 				}
@@ -76,8 +76,8 @@ namespace Solution2019
 					posLeft[i] = posLeft[i - 1];
 				}
 			}
-			for (int i = n - 1 - k, tot = sum[n] - sum[n - k]; i >= 0; i--) {
-				if (sum[i + k] - sum[i] >= tot) {
+			for (int i = n - 1 - k, tot = sum[n] - sum[n - k]; i &gt;= 0; i--) {
+				if (sum[i + k] - sum[i] &gt;= tot) {
 					posRight[i] = i;
 					tot = sum[i + k] - sum[i];
 				}
@@ -86,11 +86,11 @@ namespace Solution2019
 				}
 			}
 
-			for (int i = k; i <= n - 2 * k; i++) {
+			for (int i = k; i &lt;= n - 2 * k; i++) {
 				int l = posLeft[i - 1];
 				int r = posRight[i + k];
 				int tot = (sum[i + k] - sum[i]) + (sum[l + k] - sum[l]) + (sum[r + k] - sum[r]);
-				if (tot > maxsum) {
+				if (tot &gt; maxsum) {
 					maxsum = tot;
 					ans = { l, i, r };
 				}

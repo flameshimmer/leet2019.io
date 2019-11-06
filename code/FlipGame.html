@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are playing the following Flip Game with your friend: 
 //Given a string that contains only these two characters: + and -, 
 //you and your friend take turns to flip two consecutive "++" into "--". 
@@ -52,12 +52,12 @@ namespace Solution2019
 {
 	namespace FlipGame
 	{
-		vector<string> generatePossibleNextMoves(string s) {
-			vector<string> result;
+		vector&lt;string&gt; generatePossibleNextMoves(string s) {
+			vector&lt;string&gt; result;
 			int len = s.size();
-			if (len < 2) { return result; }
+			if (len &lt; 2) { return result; }
 
-			for (int i = 1; i < s.size(); i++) {
+			for (int i = 1; i &lt; s.size(); i++) {
 				if (s[i] == '+' && s[i - 1] == '+') {
 					string r = s;
 					r[i] = '-';

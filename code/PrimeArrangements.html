@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Return the number of permutations of 1 to n so that prime
 //numbers are at prime indices (1-indexed.)
 //
@@ -49,29 +49,29 @@
 //Output: 682289015
 // 
 //Constraints:
-//1 <= n <= 100
+//1 &lt;= n &lt;= 100
 
 namespace Solution2019
 {
 	namespace PrimeArrangements
 	{
 		int numPrimeArrangements(int n) {
-			vector<bool> prime(n + 1, true);
+			vector&lt;bool&gt; prime(n + 1, true);
 			int count = 0;
 
-			for (int i = 2; i <= n; i++) {
+			for (int i = 2; i &lt;= n; i++) {
 				if (prime[i]) {
 					count++;
-					for (int j = i + i; j <= n; j += i) { prime[j] = false; }
+					for (int j = i + i; j &lt;= n; j += i) { prime[j] = false; }
 				}
 			}
 
 			long long result = 1;
 			long long mod = 1e9 + 7;
-			for (int i = 1; i <= count; i++) {
+			for (int i = 1; i &lt;= count; i++) {
 				result = result * i % mod;
 			}
-			for (int i = 1; i <= n - count; i++) {
+			for (int i = 1; i &lt;= n - count; i++) {
 				result = result * i % mod;
 			}
 			return result % mod;
@@ -79,7 +79,7 @@ namespace Solution2019
 
 		namespace NotAsFast {
 			bool isPrime(int n) {
-				for (int i = 2; i * i <= n; i++) {
+				for (int i = 2; i * i &lt;= n; i++) {
 					if (n % i == 0) { return false; }
 				}
 				return true;
@@ -87,16 +87,16 @@ namespace Solution2019
 
 			int numPrimeArrangements(int n) {
 				int primeCount = 1;
-				for (int i = 3; i <= n; i++) {
+				for (int i = 3; i &lt;= n; i++) {
 					if (isPrime(i)) { primeCount++; }
 				}
 
 				long long result = 1;
 				long long mod = 1e9 + 7;
-				for (int i = 1; i <= primeCount; i++) {
+				for (int i = 1; i &lt;= primeCount; i++) {
 					result = result * i % mod;
 				}
-				for (int i = 1; i <= n - primeCount; i++) {
+				for (int i = 1; i &lt;= n - primeCount; i++) {
 					result = result * i % mod;
 				}
 				return result;

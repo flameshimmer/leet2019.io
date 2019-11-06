@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a string and an integer k, you need to reverse the first k 
 //characters for every 2k characters counting from the start of the 
 //string. If there are less than k characters left, reverse all of
@@ -49,7 +49,7 @@ namespace Solution2019
 	{
 		string reverseStr(string s, int k) {
 			int len = s.size();
-			for (int i = 0; i < len; i += 2 * k) {
+			for (int i = 0; i &lt; len; i += 2 * k) {
 				int j = min(i + k - 1, len - 1);
 				reverse(s.begin() + i, s.begin() + j+1);
 			}
@@ -60,9 +60,9 @@ namespace Solution2019
 			int len = s.size();
 			int start = 0;
 			int end = 0;
-			while (end < len) {
-				while (end < len && (end - start + 1) <= 2*k) { end++; }
-				if (end == len && (end - start) < k) {
+			while (end &lt; len) {
+				while (end &lt; len && (end - start + 1) &lt;= 2*k) { end++; }
+				if (end == len && (end - start) &lt; k) {
 					reverse(s.begin() + start, s.begin() + end); 	
 				} else {
 					reverse(s.begin() + start, s.begin() + start + k);

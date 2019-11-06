@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary search tree, rearrange the tree in in-order so that
 //the leftmost node in the tree is now the root of the tree, and 
 //every node has no left child and only 1 right child.
@@ -75,19 +75,19 @@ namespace Solution2019
 			TreeNode* increasingBST(TreeNode* root, TreeNode* tail = nullptr) {
 				if (!root) { return tail; }
 
-				TreeNode* result = increasingBST(root->left, root);
-				root->left = nullptr;
-				root->right = increasingBST(root->right, tail);
+				TreeNode* result = increasingBST(root-&gt;left, root);
+				root-&gt;left = nullptr;
+				root-&gt;right = increasingBST(root-&gt;right, tail);
 				return result;
 			}
 		}
 
 		namespace ReconstructNewTree {
-			void GetInorderVal(TreeNode* root, vector<int>& result) {
+			void GetInorderVal(TreeNode* root, vector&lt;int&gt;& result) {
 				if (!root) { return; }
-				GetInorderVal(root->left, result);
-				result.push_back(root->val);
-				GetInorderVal(root->right, result);
+				GetInorderVal(root-&gt;left, result);
+				result.push_back(root-&gt;val);
+				GetInorderVal(root-&gt;right, result);
 			}
 
 			TreeNode* increasingBST(TreeNode* root) {
@@ -95,13 +95,13 @@ namespace Solution2019
 
 				TreeNode* result = nullptr;
 				TreeNode* cur = nullptr;
-				vector<int> values;
+				vector&lt;int&gt; values;
 				GetInorderVal(root, values);
 				for (int v : values) {
 					TreeNode* newNode = new TreeNode(v);
 					if (!result) { result = newNode; cur = newNode; }
 					else {
-						cur->right = newNode;
+						cur-&gt;right = newNode;
 						cur = newNode;
 					}
 				}

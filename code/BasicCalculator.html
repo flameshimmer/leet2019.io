@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Implement a basic calculator to evaluate a simple expression string.
 //
 //The expression string may contain open ( and closing parentheses ), 
@@ -62,8 +62,8 @@ namespace Solution2019
 				int local = 1;
 				int global = 1;
 				int result = 0;
-				stack<int> stack;
-				for (int i = 0; i < len; i++) {
+				stack&lt;int&gt; stack;
+				for (int i = 0; i &lt; len; i++) {
 					char c = s[i];
 					switch (c) {
 					case '+':
@@ -84,7 +84,7 @@ namespace Solution2019
 						break;
 					default:
 						long long val = 0;
-						while (i < len && isdigit(s[i])) {
+						while (i &lt; len && isdigit(s[i])) {
 							val = val * 10 + s[i] - '0';
 							i++;
 						}

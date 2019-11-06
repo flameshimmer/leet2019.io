@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers arr, write a function that 
 //returns true if and only if the number of occurrences 
 //of each value in the array is unique.
@@ -48,17 +48,17 @@
 //Output: true
 // 
 //Constraints:
-//1 <= arr.length <= 1000
-//-1000 <= arr[i] <= 1000
+//1 &lt;= arr.length &lt;= 1000
+//-1000 &lt;= arr[i] &lt;= 1000
 
 namespace Solution2019
 {
 	namespace UniqueNumerofOccurrence
 	{
-		bool uniqueOccurrences(vector<int>& arr) {
-			unordered_map<int, int> map1;
+		bool uniqueOccurrences(vector&lt;int&gt;& arr) {
+			unordered_map&lt;int, int&gt; map1;
 			for (int v : arr) { map1[v]++; }
-			unordered_set<int> set1;
+			unordered_set&lt;int&gt; set1;
 			for (auto& p : map1) {
 				if (set1.count(p.second)) { return false; }
 				set1.insert(p.second);

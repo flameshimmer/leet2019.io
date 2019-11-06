@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //In a given integer array nums, there is always exactly one largest element.
 //Find whether the largest element in the array is at least twice 
 //as much as every other number in the array.
@@ -53,15 +53,15 @@ namespace Solution2019
 {
 	namespace LargestNumberAtLeastTwiceofOthers
 	{
-		int dominantIndex(vector<int> nums) {
+		int dominantIndex(vector&lt;int&gt; nums) {
 			int maxIndex = -1;
 			int maxVal = INT_MIN;
-			for (int i = 0; i < nums.size(); i++) {
-				if (nums[i] > maxVal) { maxVal = nums[i]; maxIndex = i; }
+			for (int i = 0; i &lt; nums.size(); i++) {
+				if (nums[i] &gt; maxVal) { maxVal = nums[i]; maxIndex = i; }
 			}
-			for (int i = 0; i < nums.size(); i++) {
+			for (int i = 0; i &lt; nums.size(); i++) {
 				if (i != maxIndex) {
-					if (nums[i] * 2 > maxVal) {
+					if (nums[i] * 2 &gt; maxVal) {
 						return -1;
 					}
 				}

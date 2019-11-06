@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given two arrays, write a function to compute their intersection.
 //
 //Example 1:
@@ -54,61 +54,61 @@ namespace Solution2019
 	namespace IntersectionofTwoArraysII
 	{
 		namespace UsingMap {
-			vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
-				unordered_map<int, int> map1;
+			vector&lt;int&gt; intersect(vector&lt;int&gt;& nums1, vector&lt;int&gt;& nums2) {
+				unordered_map&lt;int, int&gt; map1;
 				for (int v : nums1) { map1[v]++; }
 
-				unordered_map<int, int> map2;
+				unordered_map&lt;int, int&gt; map2;
 				for (int v : nums2) { map2[v]++; }
 
-				vector<int> result;
+				vector&lt;int&gt; result;
 				for (auto& p : map1) {
 					if (map2.count(p.first)) {
 						int count = min(p.second, map2[p.first]);
-						for (int i = 0; i < count; i++) { result.push_back(p.first); }
+						for (int i = 0; i &lt; count; i++) { result.push_back(p.first); }
 					}
 				}
 				return result;
 			}
 		}
 		namespace BinarySearch {
-			int findStartIndex(vector<int>& A, int target) {
+			int findStartIndex(vector&lt;int&gt;& A, int target) {
 				int start = 0;
 				int end = A.size() - 1;
-				while (start <= end) {
+				while (start &lt;= end) {
 					int mid = start + (end - start) / 2;
-					if (A[mid] >= target) { end = mid - 1; }
+					if (A[mid] &gt;= target) { end = mid - 1; }
 					else { start = mid + 1; }
 				}
-				return  (start < A.size() && A[start] == target) ? start : -1;
+				return  (start &lt; A.size() && A[start] == target) ? start : -1;
 			}
 
-			int findLen(vector<int>& A, int i) {
+			int findLen(vector&lt;int&gt;& A, int i) {
 				int j = i;
-				while (j < A.size() && A[j] == A[i]) { j++; }
+				while (j &lt; A.size() && A[j] == A[i]) { j++; }
 				return j - i;
 			}
 
-			vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
-				vector<int> result;
+			vector&lt;int&gt; intersect(vector&lt;int&gt;& nums1, vector&lt;int&gt;& nums2) {
+				vector&lt;int&gt; result;
 				if (nums1.size() == 0 || nums2.size() == 0) { return result; }
 				sort(nums1.begin(), nums1.end());
 				sort(nums2.begin(), nums2.end());
-				for (int i = 0; i < nums1.size(); i++) {
+				for (int i = 0; i &lt; nums1.size(); i++) {
 					int target = nums1[i];
 					int j = findStartIndex(nums2, target);
 					if (j == -1) { continue; }
-					for (int k = 0; k < min(findLen(nums1, i), findLen(nums2, j)); k++) {
+					for (int k = 0; k &lt; min(findLen(nums1, i), findLen(nums2, j)); k++) {
 						result.push_back(target);
 					}
-					while (i + 1 < nums1.size() && nums1[i] == nums1[i + 1]) { i++; }
+					while (i + 1 &lt; nums1.size() && nums1[i] == nums1[i + 1]) { i++; }
 				}
 				return result;
 			}
 		}
 		void Main() {
-			vector<int> nums1 = { 1, 2 };
-			vector<int> nums2 = { 1, 1 };
+			vector&lt;int&gt; nums1 = { 1, 2 };
+			vector&lt;int&gt; nums2 = { 1, 1 };
 			print(BinarySearch::intersect(nums1, nums2));
 		}
 	}

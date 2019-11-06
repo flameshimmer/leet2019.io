@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a binary tree, you need to compute the length of the diameter of the
 //tree. The diameter of a binary tree is the length of the longest path between
@@ -53,8 +53,8 @@ namespace Solution2019
 		int height(TreeNode* node, int& diameter) {
 			if (!node) { return 0; }
 
-			int lh = height(node->left, diameter);
-			int rh = height(node->right, diameter);
+			int lh = height(node-&gt;left, diameter);
+			int rh = height(node-&gt;right, diameter);
 			diameter = max(diameter, lh + rh);
 			return 1 + max(lh, rh);
 		}

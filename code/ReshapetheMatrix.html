@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //In MATLAB, there is a very useful function called 'reshape', 
 //which can reshape a matrix into a new one with different size 
 //but keep its original data.
@@ -77,14 +77,14 @@ namespace Solution2019
 {
 	namespace ReshapetheMatrix
 	{
-		vector<vector<int>> matrixReshape(vector<vector<int>>& nums, int r, int c) {
+		vector&lt;vector&lt;int&gt;&gt; matrixReshape(vector&lt;vector&lt;int&gt;&gt;& nums, int r, int c) {
 			int rowCount = nums.size();
 			int colCount = nums[0].size();
 			if (rowCount * colCount != r * c) { return nums; }
-			vector<vector<int>> result(r, vector<int>(c, 0));
+			vector&lt;vector&lt;int&gt;&gt; result(r, vector&lt;int&gt;(c, 0));
 
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					int total = colCount * i + j;
 					result[total/c][total%c] = nums[i][j];
 				}
@@ -92,19 +92,19 @@ namespace Solution2019
 			return result;
 		}
 
-		vector<vector<int>> matrixReshapeAnother(vector<vector<int>>& nums, int r, int c) {
+		vector&lt;vector&lt;int&gt;&gt; matrixReshapeAnother(vector&lt;vector&lt;int&gt;&gt;& nums, int r, int c) {
 			int rowCount = nums.size();
 			int colCount = nums[0].size();
 			if (rowCount * colCount != r * c) { return nums; }
-			vector<vector<int>> result(r, vector<int>(c, 0));
+			vector&lt;vector&lt;int&gt;&gt; result(r, vector&lt;int&gt;(c, 0));
 
-			for (int i = 0; i < r*c; i++) {
+			for (int i = 0; i &lt; r*c; i++) {
 				result[i / c][i % c] = nums[i / colCount][i % colCount];
 			}
 			return result;
 		}
 		void Main() {
-			vector<vector<int>> nums = { {1, 2}, {3, 4} };
+			vector&lt;vector&lt;int&gt;&gt; nums = { {1, 2}, {3, 4} };
 			print(matrixReshapeAnother(nums, 1, 4));
 		}
 	}

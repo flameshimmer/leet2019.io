@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Given an array which consists of non-negative integers and an integer m, you can split the
 //array into m non-empty continuous subarrays. Write an algorithm to minimize the largest sum
 //among these m subarrays.
@@ -59,20 +59,20 @@ namespace Solution2019
 		namespace BinarySearch {
 			// if we have cut+1 chunk and every chunk's sum can be controlled under max
 			// return true, otherwise returns false
-			bool doable(const vector<int>& nums, int cuts, long long max) {
+			bool doable(const vector&lt;int&gt;& nums, int cuts, long long max) {
 				long long acc = 0;
 				for (int num : nums) {
-					if (acc + num <= max) { acc += num; }
+					if (acc + num &lt;= max) { acc += num; }
 					else {
 						cuts--;
 						acc = num;
-						if (cuts < 0) { return false; }
+						if (cuts &lt; 0) { return false; }
 					}
 				}
 				return true;
 			}
 
-			int splitArray(vector<int>& nums, int m) {
+			int splitArray(vector&lt;int&gt;& nums, int m) {
 				long long left = 0; // maxElem in the array - if each chunk size is 1
 				long long right = 0; // sum of the array - if the entire array is a single chunk
 				for (int num : nums) {
@@ -80,7 +80,7 @@ namespace Solution2019
 					right += num;
 				}
 
-				while (left < right) {
+				while (left &lt; right) {
 					long long mid = left + (right - left) / 2;
 					if (doable(nums, m - 1, mid)) {
 						right = mid;
@@ -94,22 +94,22 @@ namespace Solution2019
 		}
 
 		namespace DP {
-			int splitArray(vector<int>& nums, int m) {
+			int splitArray(vector&lt;int&gt;& nums, int m) {
 				const int len = nums.size();
-				vector<long long> sum(len);
+				vector&lt;long long&gt; sum(len);
 				// spliting nums from 0 ~ j index into i groups.
-				vector<vector<int>> dp(m + 1, vector<int>(len, INT_MAX));
+				vector&lt;vector&lt;int&gt;&gt; dp(m + 1, vector&lt;int&gt;(len, INT_MAX));
 
 				sum[0] = nums[0];
-				for (int i = 1; i < len; i++) { sum[i] = sum[i - 1] + nums[i]; }
+				for (int i = 1; i &lt; len; i++) { sum[i] = sum[i - 1] + nums[i]; }
 
-				for (int i = 0; i < len; i++) {
+				for (int i = 0; i &lt; len; i++) {
 					dp[1][i] = sum[i];
 				}
 
-				for (int i = 2; i <= m; i++) {
-					for (int j = i - 1; j < len; j++) {
-						for (int k = 0; k < j; k++) {
+				for (int i = 2; i &lt;= m; i++) {
+					for (int j = i - 1; j &lt; len; j++) {
+						for (int k = 0; k &lt; j; k++) {
 							dp[i][j] = min(dp[i][j], max(dp[i - 1][k], (int)(sum[j] - sum[k])));
 						}
 					}

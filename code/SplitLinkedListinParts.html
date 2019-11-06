@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a (singly) linked list with head node root, write a function 
 //to split the linked list into k consecutive linked list "parts".
 //
@@ -42,7 +42,7 @@
 //Return a List of ListNode's representing the linked list parts
 //that are formed.
 //
-//Examples 1->2->3->4, k = 5 // 5 equal parts [ [1], [2], [3], [4], null ]
+//Examples 1-&gt;2-&gt;3-&gt;4, k = 5 // 5 equal parts [ [1], [2], [3], [4], null ]
 //
 //Example 1:
 //Input:
@@ -73,33 +73,33 @@ namespace Solution2019
 {
 	namespace SplitLinkedListinParts
 	{
-		vector<ListNode*> splitListToParts(ListNode* root, int k) {
-			vector<ListNode*> result;
+		vector&lt;ListNode*&gt; splitListToParts(ListNode* root, int k) {
+			vector&lt;ListNode*&gt; result;
 
 			int len = 0;
 			ListNode* cur = root;
-			while (cur) { len++; cur = cur->next; }
+			while (cur) { len++; cur = cur-&gt;next; }
 			int s1 = len / k;
 			int s2 = len % k;
 			
 			ListNode* curHead = root;
 			ListNode* curTail = root;
 			ListNode* curTailPrev = nullptr;
-			for (int i = 0; i < k; i++) {				
+			for (int i = 0; i &lt; k; i++) {				
 				int s = s1;
-				while (s > 0) { curTailPrev = curTail; curTail = curTail->next; s--; }
-				if (s2 > 0) { curTailPrev = curTail; curTail = curTail->next; s2--; }
+				while (s &gt; 0) { curTailPrev = curTail; curTail = curTail-&gt;next; s--; }
+				if (s2 &gt; 0) { curTailPrev = curTail; curTail = curTail-&gt;next; s2--; }
 				result.push_back(curHead);
-				if (curTailPrev) { curTailPrev->next = nullptr; }
+				if (curTailPrev) { curTailPrev-&gt;next = nullptr; }
 				curHead = curTail;
 			}
 			return result;
 		}
 
-		void print(vector<ListNode*> list)
+		void print(vector&lt;ListNode*&gt; list)
 		{
-			cout << "vector of ListNode: \n";
-			if (list.empty()) { cout << "Empty vector!!!\n"; return; }
+			cout &lt;&lt; "vector of ListNode: \n";
+			if (list.empty()) { cout &lt;&lt; "Empty vector!!!\n"; return; }
 			for (ListNode* n : list) {
 				print(n);
 			}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given n non-negative integers representing the histogram's bar 
 //height where the width of each bar is 1, find the area of largest
 //rectangle in the histogram.
@@ -46,13 +46,13 @@ namespace Solution2019
 {
 	namespace LargestRectangleinHistogram
 	{
-		int largestRectangleArea(vector<int>& heights) {
-			stack<int> s;
+		int largestRectangleArea(vector&lt;int&gt;& heights) {
+			stack&lt;int&gt; s;
 			heights.push_back(0);
 
 			int result = 0;
-			for (int i = 0; i < heights.size(); i++) {
-				if (s.empty() || heights[s.top()] <= heights[i]) {
+			for (int i = 0; i &lt; heights.size(); i++) {
+				if (s.empty() || heights[s.top()] &lt;= heights[i]) {
 					s.push(i);
 				}
 				else {

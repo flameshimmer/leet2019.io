@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given n points in the plane that are all pairwise distinct,
 //a "boomerang" is a tuple of points (i, j, k) such that the 
 //distance between i and j equals the distance between i and 
@@ -51,19 +51,19 @@ namespace Solution2019
 {
 	namespace NumberofBoomerangs
 	{
-		int getDistance(vector<int>& a, vector<int>& b) {
+		int getDistance(vector&lt;int&gt;& a, vector&lt;int&gt;& b) {
 			int x = a[0] - b[0];
 			int y = a[1] - b[1];
 			return x * x + y * y;
 		}
 
-		int numberOfBoomerangs(vector<vector<int>>& points) {
+		int numberOfBoomerangs(vector&lt;vector&lt;int&gt;&gt;& points) {
 			int len = points.size();
 
 			int result = 0;
-			unordered_map<int, int> map;
-			for (int i = 0; i < len; i++) {
-				for (int j = 0; j < len; j++) {
+			unordered_map&lt;int, int&gt; map;
+			for (int i = 0; i &lt; len; i++) {
+				for (int j = 0; j &lt; len; j++) {
 					if (i == j) { continue; }
 					map[getDistance(points[i], points[j])]++;
 				}

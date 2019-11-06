@@ -28,8 +28,8 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-#include <numeric>
+#include "stdafx.h"
+#include &lt;numeric&gt;
 //You're now a baseball game point recorder.
 //
 //Given a list of strings, each string can be one of the 4 following types:
@@ -71,21 +71,21 @@ namespace Solution2019
 {
 	namespace BaseballGame
 	{
-		int calPoints(vector<string>& ops) {
-			vector<int> results;
+		int calPoints(vector&lt;string&gt;& ops) {
+			vector&lt;int&gt; results;
 			for (string s : ops) {
 				int len = results.size();
-				if (len > 0) {
+				if (len &gt; 0) {
 					if (s == "C") { results.pop_back(); continue; }
 					else if (s == "D") { results.push_back(results.back() * 2); continue; }
 				}
-				if (len >= 2 && s == "+") { results.push_back(results[len - 1] + results[len - 2]); continue; }
+				if (len &gt;= 2 && s == "+") { results.push_back(results[len - 1] + results[len - 2]); continue; }
 				results.push_back(stoi(s));
 			}
 			return accumulate(results.begin(), results.end(), 0);
 		}
 		void Main() {
-			vector<string> test = { "5","2","C","D","+" };
+			vector&lt;string&gt; test = { "5","2","C","D","+" };
 			print(calPoints(test));
 		}
 	}

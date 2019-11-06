@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an integer array, you need to find one continuous subarray that if 
 //you only sort this subarray in ascending order, then the whole array will 
 //be sorted in ascending order, too.
@@ -43,41 +43,41 @@
 //
 //Note:
 //Then length of the input array is in range [1, 10,000].
-//The input array may contain duplicates, so ascending order here means <=.
+//The input array may contain duplicates, so ascending order here means &lt;=.
 
 namespace Solution2019
 {
 	namespace ShortestUnsortedContinuousSubarray
 	{
-		int findUnsortedSubarray(vector<int> nums) {
+		int findUnsortedSubarray(vector&lt;int&gt; nums) {
 			int len = nums.size();
 			int maxV = INT_MIN;
 			int end = -2;
-			for (int i = 0; i < len; i++)
+			for (int i = 0; i &lt; len; i++)
 			{
 				maxV = max(maxV, nums[i]);
-				if (nums[i] < maxV) { end = i; }
+				if (nums[i] &lt; maxV) { end = i; }
 			}
 			int start = -1;
 			int minV = INT_MAX;
-			for (int i = len - 1; i >= 0; i--) {
+			for (int i = len - 1; i &gt;= 0; i--) {
 				minV = min(minV, nums[i]);
-				if (nums[i] > minV) {
+				if (nums[i] &gt; minV) {
 					start = i;
 				}
 			}
 			return end - start + 1;
 		}
 
-		int findUnsortedSubarrayWithSort(vector<int> nums) {
-			vector<int> sorted(nums.begin(), nums.end());
+		int findUnsortedSubarrayWithSort(vector&lt;int&gt; nums) {
+			vector&lt;int&gt; sorted(nums.begin(), nums.end());
 			sort(sorted.begin(), sorted.end());
 			int len = nums.size();
 			int i = 0;
-			while (i<len && nums[i] == sorted[i]) { i++; }
+			while (i&lt;len && nums[i] == sorted[i]) { i++; }
 			int j = len - 1;
-			while ( j >= 0 && nums[j] == sorted[j]) { j--; }
-			return j > i ? j - i + 1 : 0;
+			while ( j &gt;= 0 && nums[j] == sorted[j]) { j--; }
+			return j &gt; i ? j - i + 1 : 0;
 		}
 
 		void Main() {

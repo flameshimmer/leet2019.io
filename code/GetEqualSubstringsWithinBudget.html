@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are given two strings s and t of the same length. 
 //You want to change s to t. Changing the i-th character 
 //of s to i-th character of t costs |s[i] - t[i]| that is, 
@@ -63,8 +63,8 @@
 //maximum length is 1.
 //
 //Constraints:
-//1 <= s.length, t.length <= 10^5
-//0 <= maxCost <= 10^6
+//1 &lt;= s.length, t.length &lt;= 10^5
+//0 &lt;= maxCost &lt;= 10^6
 //s and t only contain lower case English letters.
 
 namespace Solution2019
@@ -76,9 +76,9 @@ namespace Solution2019
 			int start = 0;
 			int end = 0;
 			int result = 0;
-			for (; end < len; end++) {
+			for (; end &lt; len; end++) {
 				maxCost -= abs(s[end] - t[end]);
-				while (maxCost < 0) {
+				while (maxCost &lt; 0) {
 					maxCost += abs(s[start] - t[start]);
 					start++;
 				}

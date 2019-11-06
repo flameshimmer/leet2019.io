@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a file and assume that you can only read the file using a given method 
 //read4, implement a method to read n characters.
 //
@@ -104,11 +104,11 @@ namespace Solution2019
 
 		int read(char* buf, int n) {
 			int result = 0;
-			while (n > 0) {
+			while (n &gt; 0) {
 				int temp = min(read4(buf), n);
 				result += temp;
 				buf += temp;
-				if (temp < 4) { break; }
+				if (temp &lt; 4) { break; }
 				n -= 4;
 			}
 			return result;

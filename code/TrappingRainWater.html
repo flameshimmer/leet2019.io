@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given n non-negative integers representing an elevation 
 //map where the width of each bar is 1, compute how much 
 //water it is able to trap after raining.
@@ -47,24 +47,24 @@ namespace Solution2019
 {
 	namespace TrappingRainWater
 	{
-		int trapOnePass(vector<int>& height) {
+		int trapOnePass(vector&lt;int&gt;& height) {
 			int len = height.size();
 			int l = 0;
 			int r = len - 1;
 			int result = 0;
 
-			while (l < r) {
+			while (l &lt; r) {
 				int minV = min(height[l], height[r]);
 				if (minV == height[l]) {
 					l++;
-					while (height[l] < minV) {
+					while (height[l] &lt; minV) {
 						result += minV - height[l];
 						l++;
 					}
 				}
 				else {
 					r--;
-					while (height[r] < minV) {
+					while (height[r] &lt; minV) {
 						result += minV - height[r];
 						r--;
 					}
@@ -72,15 +72,15 @@ namespace Solution2019
 			}
 			return result;
 		}
-		int trapTwoPass(vector<int>& height) {
+		int trapTwoPass(vector&lt;int&gt;& height) {
 			int len = height.size();
-			if (len < 2) { return 0; }
+			if (len &lt; 2) { return 0; }
 
-			vector<int> leftMax(len, 0);
-			vector<int> rightMax(len, 0);
+			vector&lt;int&gt; leftMax(len, 0);
+			vector&lt;int&gt; rightMax(len, 0);
 			int curLeftMax = 0;
 			int curRightMax = 0;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				leftMax[i] = curLeftMax;
 				curLeftMax = max(curLeftMax, height[i]);
 
@@ -89,7 +89,7 @@ namespace Solution2019
 			}
 
 			int result = 0;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				result += max(0, min(leftMax[i], rightMax[i]) - height[i]);
 			}
 			return result;

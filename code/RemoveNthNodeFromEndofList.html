@@ -28,14 +28,14 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a linked list, remove the n-th node from the end of list and return its head.
 //
 //Example:
 //
-//Given linked list: 1->2->3->4->5, and n = 2.
+//Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2.
 //
-//After removing the second node from the end, the linked list becomes 1->2->3->5.
+//After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5.
 //Note:
 //
 //Given n will always be valid.
@@ -51,21 +51,21 @@ namespace Solution2019
 			if (!head) { return head; }
 
 			ListNode* dummy = new ListNode(0);
-			dummy->next = head;
+			dummy-&gt;next = head;
 			ListNode* front = dummy;
-			for (int i = 0; i < n; i++) {
-				front = front->next;
+			for (int i = 0; i &lt; n; i++) {
+				front = front-&gt;next;
 			}
 			ListNode* back = dummy;
-			while (front->next) {
-				front = front->next;
-				back = back->next;
+			while (front-&gt;next) {
+				front = front-&gt;next;
+				back = back-&gt;next;
 			}
-			ListNode* tmp = back->next;
-			back->next = back->next->next;
+			ListNode* tmp = back-&gt;next;
+			back-&gt;next = back-&gt;next-&gt;next;
 			delete tmp;
 
-			tmp = dummy->next;
+			tmp = dummy-&gt;next;
 			delete dummy;
 			return tmp;
 		}

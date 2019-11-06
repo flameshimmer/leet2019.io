@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a Tic-tac-toe game that is played between two players on a n x n grid.
 //
 //You may assume the following rules:
@@ -43,37 +43,37 @@
 //
 //TicTacToe toe = new TicTacToe(3);
 //
-//toe.move(0, 0, 1); -> Returns 0 (no one wins)
+//toe.move(0, 0, 1); -&gt; Returns 0 (no one wins)
 //|X| | |
 //| | | |    // Player 1 makes a move at (0, 0).
 //| | | |
 //
-//toe.move(0, 2, 2); -> Returns 0 (no one wins)
+//toe.move(0, 2, 2); -&gt; Returns 0 (no one wins)
 //|X| |O|
 //| | | |    // Player 2 makes a move at (0, 2).
 //| | | |
 //
-//toe.move(2, 2, 1); -> Returns 0 (no one wins)
+//toe.move(2, 2, 1); -&gt; Returns 0 (no one wins)
 //|X| |O|
 //| | | |    // Player 1 makes a move at (2, 2).
 //| | |X|
 //
-//toe.move(1, 1, 2); -> Returns 0 (no one wins)
+//toe.move(1, 1, 2); -&gt; Returns 0 (no one wins)
 //|X| |O|
 //| |O| |    // Player 2 makes a move at (1, 1).
 //| | |X|
 //
-//toe.move(2, 0, 1); -> Returns 0 (no one wins)
+//toe.move(2, 0, 1); -&gt; Returns 0 (no one wins)
 //|X| |O|
 //| |O| |    // Player 1 makes a move at (2, 0).
 //|X| |X|
 //
-//toe.move(1, 0, 2); -> Returns 0 (no one wins)
+//toe.move(1, 0, 2); -&gt; Returns 0 (no one wins)
 //|X| |O|
 //|O|O| |    // Player 2 makes a move at (1, 0).
 //|X| |X|
 //
-//toe.move(2, 1, 1); -> Returns 1 (player 1 wins)
+//toe.move(2, 1, 1); -&gt; Returns 1 (player 1 wins)
 //|X| |O|
 //|O|O| |    // Player 1 makes a move at (2, 1).
 //|X|X|X|
@@ -86,8 +86,8 @@ namespace Solution2019
 	{
 		class TicTacToe {
 		private:
-			vector<int> r;
-			vector<int> c;
+			vector&lt;int&gt; r;
+			vector&lt;int&gt; c;
 			int d;
 			int a;
 			int sz;
@@ -98,7 +98,7 @@ namespace Solution2019
 				d = 0;
 				a = 0;
 				r.resize(n);
-				c.resize(n); //---> second param of resize is the fill value. if omitted is the auto init value. 
+				c.resize(n); //---&gt; second param of resize is the fill value. if omitted is the auto init value. 
 			}
 
 			/** Player {player} makes a move at ({row}, {col}).
@@ -113,8 +113,8 @@ namespace Solution2019
 				int add = player == 1 ? 1 : -1;
 				r[row] += add;
 				c[col] += add;
-				if (row == col) { d += add; } //---> only central line matters
-				if (row + col + 1 == sz) { a += add; } // --->  this is very interesting
+				if (row == col) { d += add; } //---&gt; only central line matters
+				if (row + col + 1 == sz) { a += add; } // ---&gt;  this is very interesting
 				if (abs(r[row]) == sz || abs(c[col]) == sz || abs(d) == sz || abs(a) == sz) {
 					return player;
 				}
@@ -125,7 +125,7 @@ namespace Solution2019
 		/**
 		 * Your TicTacToe object will be instantiated and called as such:
 		 * TicTacToe* obj = new TicTacToe(n);
-		 * int param_1 = obj->move(row,col,player);
+		 * int param_1 = obj-&gt;move(row,col,player);
 		 */
 
 		void Main() {
@@ -134,9 +134,9 @@ namespace Solution2019
 			//[[2],[0,0,2],[1,1,1],[0,1,2]]
 
 			TicTacToe* game = new TicTacToe(2);
-			print(game->move(0, 0, 2));
-			print(game->move(1, 1, 1));
-			print(game->move(0, 1, 2));
+			print(game-&gt;move(0, 0, 2));
+			print(game-&gt;move(1, 1, 1));
+			print(game-&gt;move(0, 1, 2));
 		}
 	}
 }

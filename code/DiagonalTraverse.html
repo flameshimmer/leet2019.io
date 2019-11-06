@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given a matrix of M x N elements (M rows, N columns), return all elements of
 //the matrix in diagonal order as shown in the below image.
@@ -53,16 +53,16 @@ namespace Solution2019
 	namespace DiagonalTraverse
 	{
 		namespace DirectPipe {
-			vector<int> findDiagonalOrder(vector<vector<int>>& matrix) {
+			vector&lt;int&gt; findDiagonalOrder(vector&lt;vector&lt;int&gt;&gt;& matrix) {
 				int rowCount = matrix.size();
 				if (rowCount == 0) { return {}; }
 				int colCount = matrix[0].size();
 				if (colCount == 0) { return {}; }
 
-				vector<int> result(rowCount * colCount);
+				vector&lt;int&gt; result(rowCount * colCount);
 				int r = 0;
 				int c = 0;
-				for (int i = 0; i < result.size(); i++) {
+				for (int i = 0; i &lt; result.size(); i++) {
 					result[i] = matrix[r][c];
 					if ((r + c) % 2 == 0) {
 						// cannot change the if else sequence, otherwise
@@ -84,20 +84,20 @@ namespace Solution2019
 		}
 
 		namespace UseHashMapAndReverse {
-			vector<int> findDiagonalOrder(vector<vector<int>>& matrix) {
+			vector&lt;int&gt; findDiagonalOrder(vector&lt;vector&lt;int&gt;&gt;& matrix) {
 				int rowCount = matrix.size();
 				if (rowCount == 0) { return {}; }
 				int colCount = matrix[0].size();
 				if (colCount == 0) { return {}; }
 
-				map<int, vector<int>> M;
-				for (int i = 0; i < rowCount; i++) {
-					for (int j = 0; j < colCount; j++) {
+				map&lt;int, vector&lt;int&gt;&gt; M;
+				for (int i = 0; i &lt; rowCount; i++) {
+					for (int j = 0; j &lt; colCount; j++) {
 						M[i + j].push_back(matrix[i][j]);
 					}
 				}
 
-				vector<int> result;
+				vector&lt;int&gt; result;
 				bool r = true;
 				for (auto& p : M) {
 					if (r) { reverse(p.second.begin(), p.second.end()); }

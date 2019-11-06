@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a nested list of integers, return the sum of all integers in the 
 //list weighted by their depth.
 //
@@ -81,20 +81,20 @@ namespace Solution2019
 
 			// Return the nested list that this NestedInteger holds, if it holds a nested list
 			// The result is undefined if this NestedInteger holds a single integer
-			const vector<NestedInteger>& getList() const;
+			const vector&lt;NestedInteger&gt;& getList() const;
 		};
 
-		int depthSumInverse(vector<NestedInteger>& nestedList) {
+		int depthSumInverse(vector&lt;NestedInteger&gt;& nestedList) {
 			int len = nestedList.size();
 			if (len == 0) { return 0; }
 
-			vector<vector<int>> results;
-			queue<NestedInteger> q;
+			vector&lt;vector&lt;int&gt;&gt; results;
+			queue&lt;NestedInteger&gt; q;
 			for (auto n : nestedList) { q.push(n); }
 
 			while (!q.empty()) {
 				int sz = q.size();
-				vector<int> level;
+				vector&lt;int&gt; level;
 				while (sz) {
 					sz--;
 					NestedInteger cur = q.front();
@@ -109,17 +109,17 @@ namespace Solution2019
 
 			int result = 0;
 			int weight = results.size();
-			for (vector<int>& r : results) {
+			for (vector&lt;int&gt;& r : results) {
 				result += accumulate(r.begin(), r.end(), 0) * weight;
 				weight--;
 			}
 			return result;
 		}
 
-		int depthSumInverseAnother(vector<NestedInteger>& nestedList) {
+		int depthSumInverseAnother(vector&lt;NestedInteger&gt;& nestedList) {
 			int sum = 0;
 			int result = 0;
-			vector<NestedInteger> newList;
+			vector&lt;NestedInteger&gt; newList;
 			while(!nestedList.empty()) {
 				newList.clear();
 				for (NestedInteger n : nestedList) {

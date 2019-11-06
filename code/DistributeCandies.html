@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an integer array with even length, where different 
 //numbers in this array represent different kinds of candies. 
 //Each number means one candy of the corresponding kind. 
@@ -58,8 +58,8 @@ namespace Solution2019
 {
 	namespace DistributeCandies
 	{
-		int distributeCandies(vector<int>& candies) {
-			unordered_set<int> set(candies.begin(), candies.end());
+		int distributeCandies(vector&lt;int&gt;& candies) {
+			unordered_set&lt;int&gt; set(candies.begin(), candies.end());
 			return min(candies.size() / 2, set.size());
 		}
 

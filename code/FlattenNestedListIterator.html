@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a nested list of integers, implement an iterator to flatten it.
 //
 //Each element is either an integer, or a list -- 
@@ -66,24 +66,24 @@ namespace Solution2019
 		 *
 		 *     // Return the nested list that this NestedInteger holds, if it holds a nested list
 		 *     // The result is undefined if this NestedInteger holds a single integer
-		 *     const vector<NestedInteger> &getList() const;
+		 *     const vector&lt;NestedInteger&gt; &getList() const;
 		 * };
 		 */
 		/*
 		namespace RealIterator {
-			typedef vector<NestedInteger>::iterator iter;
+			typedef vector&lt;NestedInteger&gt;::iterator iter;
 			class NestedIterator {
-				stack<iter> begins;
-				stack<iter> ends;
+				stack&lt;iter&gt; begins;
+				stack&lt;iter&gt; ends;
 			public:
-				NestedIterator(vector<NestedInteger>& nestedList) {
+				NestedIterator(vector&lt;NestedInteger&gt;& nestedList) {
 					begins.push(nestedList.begin());
 					ends.push(nestedList.end());
 				}
 
 				int next() {
 					hasNext();
-					int result = begins.top()->getInteger();
+					int result = begins.top()-&gt;getInteger();
 					begins.top()++;
 					return result;
 				}
@@ -96,10 +96,10 @@ namespace Solution2019
 						}
 						else {
 							iter x = begins.top();
-							if (x->isInteger()) { return true; }
+							if (x-&gt;isInteger()) { return true; }
 							begins.top()++;
-							begins.push(x->getList().begin());
-							ends.push(x->getList().end());
+							begins.push(x-&gt;getList().begin());
+							ends.push(x-&gt;getList().end());
 						}
 					}
 					return false;
@@ -111,11 +111,11 @@ namespace Solution2019
 		/*
 		namespace SpaceOn {
 			class NestedIterator {
-				stack<NestedInteger> s;
+				stack&lt;NestedInteger&gt; s;
 			public:
-				NestedIterator(vector<NestedInteger>& nestedList) {
+				NestedIterator(vector&lt;NestedInteger&gt;& nestedList) {
 					int len = nestedList.size();
-					for (int i = len - 1; i >= 0; i--) {
+					for (int i = len - 1; i &gt;= 0; i--) {
 						s.push(nestedList[i]);
 					}
 				}
@@ -132,8 +132,8 @@ namespace Solution2019
 						if (cur.isInteger()) { return true; }
 
 						s.pop();
-						vector<NestedInteger>& adj = cur.getList();
-						for (int i = adj.size() - 1; i >= 0; i--) {
+						vector&lt;NestedInteger&gt;& adj = cur.getList();
+						for (int i = adj.size() - 1; i &gt;= 0; i--) {
 							s.push(adj[i]);
 						}
 					}

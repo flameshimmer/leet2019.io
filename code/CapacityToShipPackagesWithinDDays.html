@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A conveyor belt has packages that must be shipped from one port to 
 //another within D days.
 //
@@ -76,14 +76,14 @@
 //4th day: 1, 1
 // 
 //Note:
-//1 <= D <= weights.length <= 50000
-//1 <= weights[i] <= 500
+//1 &lt;= D &lt;= weights.length &lt;= 50000
+//1 &lt;= weights[i] &lt;= 500
 
 namespace Solution2019
 {
 	namespace CapacityToShipPackagesWithinDDays
 	{
-		int shipWithinDays(vector<int>& weights, int D) {
+		int shipWithinDays(vector&lt;int&gt;& weights, int D) {
 			int len = weights.size();
 			int start = 0;
 			int end = 0;
@@ -92,18 +92,18 @@ namespace Solution2019
 				end += v;
 			}
 
-			while (start <= end) {
+			while (start &lt;= end) {
 				int mid = start + (end - start) / 2;
 				int d = 1;
 				int curSum = 0;
-				for (int i = 0; i < len && d <= D; i++) {
+				for (int i = 0; i &lt; len && d &lt;= D; i++) {
 					curSum += weights[i];
-					if (curSum > mid) {
+					if (curSum &gt; mid) {
 						curSum = weights[i];
 						d++;
 					}
 				}
-				if (d > D) { start = mid + 1; }
+				if (d &gt; D) { start = mid + 1; }
 				else { end = mid - 1; }
 			}
 			return start;

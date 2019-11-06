@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a 2d grid map of '1's (land) and '0's (water), 
 //count the number of islands. An island is surrounded 
 //by water and is formed by connecting adjacent lands 
@@ -55,8 +55,8 @@ namespace Solution2019
 {
 	namespace NumberofIslands
 	{
-		void helper(vector<vector<char>>& grid, int row, int col, int rowCount, int colCount) {
-			if (row < 0 || row >= rowCount || col < 0 || col >= colCount || grid[row][col] == '0') { return; }
+		void helper(vector&lt;vector&lt;char&gt;&gt;& grid, int row, int col, int rowCount, int colCount) {
+			if (row &lt; 0 || row &gt;= rowCount || col &lt; 0 || col &gt;= colCount || grid[row][col] == '0') { return; }
 			grid[row][col] = '0';
 			helper(grid, row - 1, col, rowCount, colCount);
 			helper(grid, row + 1, col, rowCount, colCount);
@@ -65,15 +65,15 @@ namespace Solution2019
 		}
 
 
-		int numIslands(vector<vector<char>>& grid) {
+		int numIslands(vector&lt;vector&lt;char&gt;&gt;& grid) {
 			int rowCount = grid.size();
 			if (rowCount == 0) { return 0; }
 			int colCount = grid[0].size();
 			if (colCount == 0) { return 0; }
 
 			int result = 0;
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					if (grid[i][j] == '1') {
 						result++;
 						helper(grid, i, j, rowCount, colCount);

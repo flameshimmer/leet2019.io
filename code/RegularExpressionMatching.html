@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an input string (s) and a pattern (p), implement regular
 //expression matching with support for '.' and '*'.
 //
@@ -88,24 +88,24 @@ namespace Solution2019
 			bool isMatch(string s, string p) {
 				int lens = s.size();
 				int lenp = p.size();
-				vector<vector<bool>> M(lens + 1, vector<bool>(lenp + 1, false));
+				vector&lt;vector&lt;bool&gt;&gt; M(lens + 1, vector&lt;bool&gt;(lenp + 1, false));
 				M[0][0] = true;
 
-				for (int i = 0; i < lens + 1; i++) {
-					for (int j = 1; j < lenp + 1; j++) {
-						if (i - 1 >= 0 && matches(s, p, i - 1, j - 1) && M[i - 1][j - 1]) {
+				for (int i = 0; i &lt; lens + 1; i++) {
+					for (int j = 1; j &lt; lenp + 1; j++) {
+						if (i - 1 &gt;= 0 && matches(s, p, i - 1, j - 1) && M[i - 1][j - 1]) {
 							M[i][j] = true;
 							continue;
 						}
 
 						// if we want to match X*
-						if (i - 1 >= 0 && j - 2 >= 0 && p[j - 1] == '*' && matches(s, p, i - 1, j - 2) && M[i - 1][j]) {
+						if (i - 1 &gt;= 0 && j - 2 &gt;= 0 && p[j - 1] == '*' && matches(s, p, i - 1, j - 2) && M[i - 1][j]) {
 							M[i][j] = true;
 							continue;
 						}
 
 						// if we don't want to matching X*
-						if (j >= 2 && p[j - 1] == '*' && M[i][j - 2]) {
+						if (j &gt;= 2 && p[j - 1] == '*' && M[i][j - 2]) {
 							M[i][j] = true;
 							continue;
 						}

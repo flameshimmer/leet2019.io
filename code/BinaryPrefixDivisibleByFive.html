@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A of 0s and 1s, consider N_i: the i-th subarray from 
 //A[0] to A[i] interpreted as a binary number 
 //(from most-significant-bit to least-significant-bit.)
@@ -60,10 +60,10 @@ namespace Solution2019
 {
 	namespace BinaryPrefixDivisibleByFive
 	{
-		vector<bool> prefixesDivBy5(vector<int>& A) {
-			vector<bool> result;
+		vector&lt;bool&gt; prefixesDivBy5(vector&lt;int&gt;& A) {
+			vector&lt;bool&gt; result;
 			int cur = 0;
-			for (int i = 0; i < A.size(); i++) {
+			for (int i = 0; i &lt; A.size(); i++) {
 				cur = (cur * 2 + A[i]) % 5;
 				result.push_back(cur == 0);
 			}

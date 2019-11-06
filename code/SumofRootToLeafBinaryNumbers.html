@@ -28,11 +28,11 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary tree, each node has value 0 or 1.  
 //Each root-to-leaf path represents a binary number 
 //starting with the most significant bit.  For example, 
-//if the path is 0 -> 1 -> 1 -> 0 -> 1, then this could 
+//if the path is 0 -&gt; 1 -&gt; 1 -&gt; 0 -&gt; 1, then this could 
 //represent 01101 in binary, which is 13.
 //
 //For all leaves in the tree, consider the numbers 
@@ -56,21 +56,21 @@ namespace Solution2019
 	{
 		int sumRootToLeaf(TreeNode* root, int sum = 0) {
 			if (!root) { return 0; }
-			sum = sum * 2 + root->val;
-			if (!root->left && !root->right) { return sum; }
-			else { return sumRootToLeaf(root->left, sum) + sumRootToLeaf(root->right, sum); }
+			sum = sum * 2 + root-&gt;val;
+			if (!root-&gt;left && !root-&gt;right) { return sum; }
+			else { return sumRootToLeaf(root-&gt;left, sum) + sumRootToLeaf(root-&gt;right, sum); }
 		}
 
 		namespace Another {
 			void helper(TreeNode* node, int sum, int& result) {
 				if (!node) { return; }
-				sum = sum * 2 + node->val;
-				if (!node->left && !node->right) {
+				sum = sum * 2 + node-&gt;val;
+				if (!node-&gt;left && !node-&gt;right) {
 					result += sum;
 					return;
 				}
-				helper(node->left, sum, result);
-				helper(node->right, sum, result);
+				helper(node-&gt;left, sum, result);
+				helper(node-&gt;right, sum, result);
 			}
 
 			int sumRootToLeaf(TreeNode* root) {

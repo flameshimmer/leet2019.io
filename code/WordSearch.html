@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a 2D board and a word, find if the word exists in the grid.
 //
 //The word can be constructed from letters of sequentially 
@@ -53,9 +53,9 @@ namespace Solution2019
 {
 	namespace WordSearch
 	{
-		bool helper(vector<vector<char>>& board, int rowCount, int colCount, int row, int col, string& word, int i, int len, vector<vector<bool>>& used) {
+		bool helper(vector&lt;vector&lt;char&gt;&gt;& board, int rowCount, int colCount, int row, int col, string& word, int i, int len, vector&lt;vector&lt;bool&gt;&gt;& used) {
 			if (i == len) { return true; }
-			if (row < 0 || row >= rowCount || col < 0 || col >= colCount || used[row][col] || board[row][col] != word[i]) { return false; }
+			if (row &lt; 0 || row &gt;= rowCount || col &lt; 0 || col &gt;= colCount || used[row][col] || board[row][col] != word[i]) { return false; }
 
 			// To save space, can also store the value of cur char, change board[row][col] to '*'
 			// Then restore the board[row][col] to the stored value after the recursive call. 
@@ -68,7 +68,7 @@ namespace Solution2019
 			return result;
 		}
 
-		bool exist(vector<vector<char>>& board, string word) {
+		bool exist(vector&lt;vector&lt;char&gt;&gt;& board, string word) {
 			int rowCount = board.size();
 			if (rowCount == 0) { return false; }
 			int colCount = board[0].size();
@@ -76,9 +76,9 @@ namespace Solution2019
 			int len = word.size();
 			if (len == 0) { return true; }
 
-			vector<vector<bool>> used(rowCount, vector<bool>(colCount, false));
-			for (int i = 0; i < rowCount; i++) {
-				for (int j = 0; j < colCount; j++) {
+			vector&lt;vector&lt;bool&gt;&gt; used(rowCount, vector&lt;bool&gt;(colCount, false));
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
 					if (helper(board, rowCount, colCount, i, j, word, 0, len, used)) { return true; }
 				}
 			}

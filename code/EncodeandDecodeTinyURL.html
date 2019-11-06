@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Note: This is a companion problem to the System Design problem: Design TinyURL.
 //TinyURL is a URL shortening service where you enter a URL such as 
@@ -46,8 +46,8 @@ namespace Solution2019
 	{
 		namespace Random {
 			const string charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-			map<string, string> url_code;
-			map<string, string> code_url;
+			map&lt;string, string&gt; url_code;
+			map&lt;string, string&gt; code_url;
 			random_device rd;
 
 			// Encodes a URL to a shortened URL.
@@ -55,7 +55,7 @@ namespace Solution2019
 				string code;
 				if (url_code.find(longUrl) == url_code.end()) {
 					int len = charset.size();
-					for (int i = 0; i < 6; i++) {
+					for (int i = 0; i &lt; 6; i++) {
 						code.push_back(charset[rd() % len]);
 					}
 					url_code[longUrl] = code;
@@ -76,7 +76,7 @@ namespace Solution2019
 
 		namespace Base64 {
 			uint64_t id;
-			unordered_map<string, string>map;
+			unordered_map&lt;string, string&gt;map;
 			string charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-";
 
 			// Encodes a URL to a shortened URL.
@@ -86,7 +86,7 @@ namespace Solution2019
 				uint64_t newId = id;
 				while (newId) {
 					code += charset[newId % 64];
-					newId >>= 6;
+					newId &gt;&gt;= 6;
 				}
 				map[code] = longUrl;
 				return code;

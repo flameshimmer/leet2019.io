@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 
 //Given a string s, find the longest palindromic substring in s.
@@ -51,21 +51,21 @@ namespace Solution2019
 	{
 		string LongestPalindromicSubstring(string s) {
 			int len = s.size();
-			if (len < 2) { return s; }
+			if (len &lt; 2) { return s; }
 
 			int longest = 0;
 			int head = 0;
-			for (int i = 0; i < len; i++)
+			for (int i = 0; i &lt; len; i++)
 			{
 				int start = i;
-				while (i + 1 < len && s[i] == s[i + 1]) { i++; }
+				while (i + 1 &lt; len && s[i] == s[i + 1]) { i++; }
 				int end = i;
 
-				while (start >= 0 && end < len && s[start] == s[end]) {
+				while (start &gt;= 0 && end &lt; len && s[start] == s[end]) {
 					start--;
 					end++;
 				}
-				if (end - start - 1 > longest) {
+				if (end - start - 1 &gt; longest) {
 					longest = end - start - 1;
 					head = start + 1;
 				}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an integer array, return the k-th smallest distance
 //among all the pairs. The distance of a pair (A, B) is 
 //defined as the absolute difference between A and B.
@@ -40,34 +40,34 @@
 //Output: 0 
 //Explanation:
 //Here are all the pairs:
-//(1,3) -> 2
-//(1,1) -> 0
-//(3,1) -> 2
+//(1,3) -&gt; 2
+//(1,1) -&gt; 0
+//(3,1) -&gt; 2
 //Then the 1st smallest distance pair is (1,1), and its distance is 0.
 //
 //Note:
-//2 <= len(nums) <= 10000.
-//0 <= nums[i] < 1000000.
-//1 <= k <= len(nums) * (len(nums) - 1) / 2.
+//2 &lt;= len(nums) &lt;= 10000.
+//0 &lt;= nums[i] &lt; 1000000.
+//1 &lt;= k &lt;= len(nums) * (len(nums) - 1) / 2.
 
 namespace Solution2019
 {
 	namespace FindKthSmallestPairDistance
 	{
-		int smallestDistancePair(vector<int>& nums, int k) {
+		int smallestDistancePair(vector&lt;int&gt;& nums, int k) {
 			sort(nums.begin(), nums.end());
 			int len = nums.size();
 			int low = 0;
 			int high = nums[len - 1] - nums[0];
 
-			while (low < high) {
+			while (low &lt; high) {
 				int mid = low + (high - low) / 2;
 				int count = 0;
-				for (int i = 0, j = 0; i < len; i++) {
-					while (j < len && nums[j] - nums[i] <= mid) { j++; }
-					count += j - i - 1; //--> total length is j-i, but extra -1 here because i and j must be different, (i, i) is not vaild.
+				for (int i = 0, j = 0; i &lt; len; i++) {
+					while (j &lt; len && nums[j] - nums[i] &lt;= mid) { j++; }
+					count += j - i - 1; //--&gt; total length is j-i, but extra -1 here because i and j must be different, (i, i) is not vaild.
 				}
-				if (count < k) {
+				if (count &lt; k) {
 					low = mid + 1;
 				}
 				else {

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //We are given some website visits: the user with name
 //username[i] visited the website website[i] at time 
 //timestamp[i].
@@ -70,10 +70,10 @@
 // 
 //
 //Note:
-//3 <= N = username.length = timestamp.length = website.length <= 50
-//1 <= username[i].length <= 10
-//0 <= timestamp[i] <= 10^9
-//1 <= website[i].length <= 10
+//3 &lt;= N = username.length = timestamp.length = website.length &lt;= 50
+//1 &lt;= username[i].length &lt;= 10
+//0 &lt;= timestamp[i] &lt;= 10^9
+//1 &lt;= website[i].length &lt;= 10
 //Both username[i] and website[i] contain only lowercase characters.
 //It is guaranteed that there is at least one user who 
 //visited at least 3 websites. No user visits two websites at the same time.
@@ -82,22 +82,22 @@ namespace Solution2019
 {
 	namespace AnalyzeUserWebsiteVisitPattern
 	{
-		vector<string> mostVisitedPattern(vector<string>& username, vector<int>& timestamp, vector<string>& website) {
+		vector&lt;string&gt; mostVisitedPattern(vector&lt;string&gt;& username, vector&lt;int&gt;& timestamp, vector&lt;string&gt;& website) {
 			int len = username.size();
-			unordered_map<string, map<int, string>> m;
-			for (int i = 0; i < len; i++) {
+			unordered_map&lt;string, map&lt;int, string&gt;&gt; m;
+			for (int i = 0; i &lt; len; i++) {
 				m[username[i]][timestamp[i]] = website[i];
 			}
-			map<vector<string>, int> counter;
+			map&lt;vector&lt;string&gt;, int&gt; counter;
 			for (auto& m1 : m) {
-				vector<string> allSites;
+				vector&lt;string&gt; allSites;
 				for (auto& m2 : m1.second) { 
 					allSites.push_back(m2.second); 
 				}
-				set<vector<string>> seqs;
-				for (int k = 0; k < allSites.size(); k++) {
-					for (int j = 0; j < k; j++) {
-						for (int i = 0; i < j; i++) {
+				set&lt;vector&lt;string&gt;&gt; seqs;
+				for (int k = 0; k &lt; allSites.size(); k++) {
+					for (int j = 0; j &lt; k; j++) {
+						for (int i = 0; i &lt; j; i++) {
 							seqs.insert({ allSites[i], allSites[j], allSites[k] });
 						}
 					}
@@ -105,10 +105,10 @@ namespace Solution2019
 				for (auto seq : seqs) { counter[seq]++; }
 			}
 			auto comp = [](auto& p1, auto& p2) {
-				return p1.second < p2.second || p1.second == p2.second && p1.first>p2.first;
+				return p1.second &lt; p2.second || p1.second == p2.second && p1.first&gt;p2.first;
 			};
 
-			return max_element(counter.begin(), counter.end(), comp)->first;
+			return max_element(counter.begin(), counter.end(), comp)-&gt;first;
 		}
 		void Main() {
 			string test = "tst test test";

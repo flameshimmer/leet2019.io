@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers A, return the largest integer that
 //only occurs once. If no integer occurs once, return -1.
 //
@@ -46,20 +46,20 @@
 //There is no number that occurs only once.
 // 
 //Note:
-//1 <= A.length <= 2000
-//0 <= A[i] <= 1000
+//1 &lt;= A.length &lt;= 2000
+//0 &lt;= A[i] &lt;= 1000
 
 namespace Solution2019
 {
 	namespace LargestUniqueNumber
 	{
-		int LargestUniqueNumber(vector<int> nums) {
+		int LargestUniqueNumber(vector&lt;int&gt; nums) {
 			int len = nums.size();
 			if (len == 0) { return -1; }
 			int map[1001] = {0};
 
 			for (int i : nums) { map[i]++; }
-			for (int i = 1000; i >= 0; i--) {
+			for (int i = 1000; i &gt;= 0; i--) {
 				if (map[i] == 1) { return i; }
 			}
 			return -1;

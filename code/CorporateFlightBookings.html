@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //There are n flights, and they are labeled from 1 to n.
 //
 //We have a list of flight bookings.  The i-th booking 
@@ -43,21 +43,21 @@
 //Output: [10,55,45,25,25]
 // 
 //Constraints:
-//1 <= bookings.length <= 20000
-//1 <= bookings[i][0] <= bookings[i][1] <= n <= 20000
-//1 <= bookings[i][2] <= 10000
+//1 &lt;= bookings.length &lt;= 20000
+//1 &lt;= bookings[i][0] &lt;= bookings[i][1] &lt;= n &lt;= 20000
+//1 &lt;= bookings[i][2] &lt;= 10000
 
 namespace Solution2019
 {
 	namespace CorporateFlightBookings
 	{
-		vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
-			vector<int> result(n + 1, 0);
-			for (vector<int> b : bookings) {
+		vector&lt;int&gt; corpFlightBookings(vector&lt;vector&lt;int&gt;&gt;& bookings, int n) {
+			vector&lt;int&gt; result(n + 1, 0);
+			for (vector&lt;int&gt; b : bookings) {
 				result[b[0] - 1] += b[2];
 				result[b[1]] -= b[2];
 			}
-			for (int i = 1; i < n; i++) {
+			for (int i = 1; i &lt; n; i++) {
 				result[i] += result[i - 1];
 			}
 			result.pop_back();

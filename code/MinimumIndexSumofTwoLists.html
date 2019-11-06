@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Suppose Andy and Doris want to choose a restaurant for dinner, 
 //and they both have a list of favorite restaurants represented 
 //by strings.
@@ -63,18 +63,18 @@ namespace Solution2019
 {
 	namespace MinimumIndexSumofTwoLists
 	{
-		vector<string> findRestaurant(vector<string>& list1, vector<string>& list2) {
-			unordered_map<string, int> map;
-			for (int i = 0; i < list1.size(); i++) {
+		vector&lt;string&gt; findRestaurant(vector&lt;string&gt;& list1, vector&lt;string&gt;& list2) {
+			unordered_map&lt;string, int&gt; map;
+			for (int i = 0; i &lt; list1.size(); i++) {
 				map[list1[i]] = i;
 			}
 
 			int minSum = INT_MAX;
-			vector<string> result;
-			for (int i = 0; i < list2.size(); i++) {
+			vector&lt;string&gt; result;
+			for (int i = 0; i &lt; list2.size(); i++) {
 				if (map.count(list2[i])) {
 					int sum = i + map[list2[i]];
-					if (sum < minSum) {
+					if (sum &lt; minSum) {
 						minSum = sum;
 						result = { list2[i] };
 					}

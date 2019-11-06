@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //We are given a binary tree (with root node root), a target node, and an integer
 //value K.
@@ -58,47 +58,47 @@
 //
 //Note:
 //The given tree is non-empty.
-//Each node in the tree has unique values 0 <= node.val <= 500.
+//Each node in the tree has unique values 0 &lt;= node.val &lt;= 500.
 //The target node is a node in the tree.
-//0 <= K <= 1000.
+//0 &lt;= K &lt;= 1000.
 
 namespace Solution2019
 {
 	namespace AllNodesDistanceKinBinaryTree
 	{
 		namespace RememberParentPointerWithDFS {
-			void findParent(TreeNode* node, unordered_map<TreeNode*, TreeNode*>& parent) {
-				if (node->left) {
-					parent[node->left] = node;
-					findParent(node->left, parent);
+			void findParent(TreeNode* node, unordered_map&lt;TreeNode*, TreeNode*&gt;& parent) {
+				if (node-&gt;left) {
+					parent[node-&gt;left] = node;
+					findParent(node-&gt;left, parent);
 				}
-				if (node->right) {
-					parent[node->right] = node;
-					findParent(node->right, parent);
+				if (node-&gt;right) {
+					parent[node-&gt;right] = node;
+					findParent(node-&gt;right, parent);
 				}
 			}
 
-			void dfs(TreeNode* node, unordered_map<TreeNode*, TreeNode*>& parent, set<TreeNode*>& visited, int K, vector<int>& result) {
+			void dfs(TreeNode* node, unordered_map&lt;TreeNode*, TreeNode*&gt;& parent, set&lt;TreeNode*&gt;& visited, int K, vector&lt;int&gt;& result) {
 				if (!node || visited.count(node)) { return; }
 				visited.insert(node);
 				if (K == 0) {
-					result.push_back(node->val);
+					result.push_back(node-&gt;val);
 					return;
 				}
-				dfs(node->left, parent, visited, K - 1, result);
-				dfs(node->right, parent, visited, K - 1, result);
+				dfs(node-&gt;left, parent, visited, K - 1, result);
+				dfs(node-&gt;right, parent, visited, K - 1, result);
 				dfs(parent[node], parent, visited, K - 1, result);
 			}
 
-			vector<int> distanceK(TreeNode* root, TreeNode* target, int K) {
+			vector&lt;int&gt; distanceK(TreeNode* root, TreeNode* target, int K) {
 				if (!root || !target) return {};
-				if (K == 0) { return { target->val }; }
+				if (K == 0) { return { target-&gt;val }; }
 
-				unordered_map<TreeNode*, TreeNode*> parent;
+				unordered_map&lt;TreeNode*, TreeNode*&gt; parent;
 				findParent(root, parent);
 
-				vector<int> result;
-				set<TreeNode*> visited;
+				vector&lt;int&gt; result;
+				set&lt;TreeNode*&gt; visited;
 				dfs(target, parent, visited, K, result);
 				return result;
 			}
@@ -106,34 +106,34 @@ namespace Solution2019
 
 
 		namespace WithoutStoringParentPointers {
-			void subtree_add(TreeNode* node, int K, int dist, vector<int>& result) {
+			void subtree_add(TreeNode* node, int K, int dist, vector&lt;int&gt;& result) {
 				if (!node) { return; }
 				if (dist == K) {
-					result.push_back(node->val);
+					result.push_back(node-&gt;val);
 				}
 				else {
-					subtree_add(node->left, K, dist + 1, result);
-					subtree_add(node->right, K, dist + 1, result);
+					subtree_add(node-&gt;left, K, dist + 1, result);
+					subtree_add(node-&gt;right, K, dist + 1, result);
 				}
 			}
 
-			int dfs(TreeNode* node, TreeNode* target, int K, vector<int>& result) {
+			int dfs(TreeNode* node, TreeNode* target, int K, vector&lt;int&gt;& result) {
 				if (!node) { return -1; }
 				else if (node == target) {
 					subtree_add(node, K, 0, result);
 					return 1;
 				}
 				else {
-					int L = dfs(node->left, target, K, result);
-					int R = dfs(node->right, target, K, result);
+					int L = dfs(node-&gt;left, target, K, result);
+					int R = dfs(node-&gt;right, target, K, result);
 					if (L != -1) {
-						if (L == K) { result.push_back(node->val); }
-						subtree_add(node->right, K, L + 1, result);
+						if (L == K) { result.push_back(node-&gt;val); }
+						subtree_add(node-&gt;right, K, L + 1, result);
 						return L + 1;
 					}
 					else if (R != -1) {
-						if (R == K) { result.push_back(node->val); }
-						subtree_add(node->left, K, R + 1, result);
+						if (R == K) { result.push_back(node-&gt;val); }
+						subtree_add(node-&gt;left, K, R + 1, result);
 						return R + 1;
 					}
 					else {
@@ -142,8 +142,8 @@ namespace Solution2019
 				}
 			}
 
-			vector<int> distanceK(TreeNode* root, TreeNode* target, int K) {
-				vector<int> result;
+			vector&lt;int&gt; distanceK(TreeNode* root, TreeNode* target, int K) {
+				vector&lt;int&gt; result;
 				dfs(root, target, K, result);
 				return result;
 			}

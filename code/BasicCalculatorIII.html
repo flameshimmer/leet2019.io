@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Implement a basic calculator to evaluate a simple expression string.
 //The expression string may contain open ( and closing parentheses ), the plus +
@@ -53,7 +53,7 @@ namespace Solution2019
 	{
 		long long parseNum(string& s, int& i) {
 			long long n = 0;
-			while (i < s.size() && isdigit(s[i])) {
+			while (i &lt; s.size() && isdigit(s[i])) {
 				n = n * 10 + (s[i] - '0');
 				i++;
 			}
@@ -61,9 +61,9 @@ namespace Solution2019
 		}
 
 		int parseExpr(string& s, int& i) {
-			vector<long long> nums;
+			vector&lt;long long&gt; nums;
 			char op = '+';
-			for (; i < s.size() && op != ')'; i++) { //--> this is op!=')' instead of s[i] != ')'
+			for (; i &lt; s.size() && op != ')'; i++) { //--&gt; this is op!=')' instead of s[i] != ')'
 				if (s[i] == ' ') { continue; }
 				long long n = s[i] == '(' ? parseExpr(s, ++i) : parseNum(s, i);
 				switch (op) {

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a picture consisting of black and white pixels, and a 
 //positive integer N, find the number of black pixels located 
 //at some specific row R and column C that align with all the 
@@ -68,17 +68,17 @@
 
 namespace Solution2019
 {
-	int findBlackPixel(vector<vector<char>>& picture, int N) {
+	int findBlackPixel(vector&lt;vector&lt;char&gt;&gt;& picture, int N) {
 		int rowCount = picture.size();
 		if (rowCount == 0) { return 0; }
 		int colCount = picture[0].size();
 		if (colCount == 0) { return 0; }
 
-		unordered_map<int, set<int>> row;
-		unordered_map<int, set<int>> col;
+		unordered_map&lt;int, set&lt;int&gt;&gt; row;
+		unordered_map&lt;int, set&lt;int&gt;&gt; col;
 
-		for (int i = 0; i < rowCount; i++) {
-			for (int j = 0; j < colCount; j++) {
+		for (int i = 0; i &lt; rowCount; i++) {
+			for (int j = 0; j &lt; colCount; j++) {
 				if (picture[i][j] == 'B') {
 					row[i].insert(j);
 					col[j].insert(i);

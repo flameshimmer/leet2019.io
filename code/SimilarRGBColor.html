@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*In the following, every capital letter represents some hexadecimal digit from 0 to f.
 
 The red-green-blue color "#AABBCC" can be written as "#ABC" in shorthand.  
@@ -49,7 +49,7 @@ This is the highest among any shorthand color.
 Note:
 
 color is a string of length 7.
-color is a valid RGB color: for i > 0, color[i] is a hexadecimal digit from 0 to f
+color is a valid RGB color: for i &gt; 0, color[i] is a hexadecimal digit from 0 to f
 Any answer which has the same (highest) similarity as the best answer will be accepted.
 All inputs and outputs should use lowercase letters, and the output is 7 characters.
 Accepted*/ 
@@ -59,15 +59,15 @@ namespace Solution2019
 	namespace SimilarRGBColor
 	{
 		string similarRGB(string color) {
-			for (int i = 1; i < 7; i += 2) {
+			for (int i = 1; i &lt; 7; i += 2) {
 				int value = stoi(color.substr(i, 2), nullptr, 16);
 
 				int index = value / 17; // [ 0x00(0) , 0x11(17), 0x22(34),  0x33(51), ........., 0xff(255) ]
 				int remainder = value % 17;
-				if (remainder > 17 / 2) {
+				if (remainder &gt; 17 / 2) {
 					index++;
 				}
-				color[i] = index > 9 ? index - 10 + 'a' : index + '0';
+				color[i] = index &gt; 9 ? index - 10 + 'a' : index + '0';
 				color[i + 1] = color[i];
 			}
 			return color;

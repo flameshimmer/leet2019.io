@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //A zero-indexed array A of length N contains all integers from 0 to N-1. 
 //Find and return the longest length of set S, 
 //where S[i] = {A[i], A[A[i]], A[A[A[i]]], ... } subjected to the rule below.
@@ -56,9 +56,9 @@ namespace Solution2019
 {
 	namespace ArrayNesting
 	{
-		int arrayNesting(vector<int>& nums) {
+		int arrayNesting(vector&lt;int&gt;& nums) {
 			int result = 0;
-			for (int i = 0; i < nums.size(); i++) {
+			for (int i = 0; i &lt; nums.size(); i++) {
 				if (nums[i] == INT_MAX) { continue; }
 				int count = 0;
 				int j = i;
@@ -73,10 +73,10 @@ namespace Solution2019
 			return result;
 		}
 
-		int arrayNestingUseExtraArray(vector<int>& nums) {
+		int arrayNestingUseExtraArray(vector&lt;int&gt;& nums) {
 			int visited[20000] = { false };
 			int result = 0;
-			for (int i = 0; i < nums.size(); i++) {
+			for (int i = 0; i &lt; nums.size(); i++) {
 				if (visited[i]) { continue; }
 				
 				int count = 0;

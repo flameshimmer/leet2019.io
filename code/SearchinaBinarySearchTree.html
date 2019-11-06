@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given the root node of a binary search tree (BST) and a value. 
 //You need to find the node in the BST that the node's value 
 //equals the given value. Return the subtree rooted with that 
@@ -62,15 +62,15 @@ namespace Solution2019
 	{
 		TreeNode* searchBSTRecursive(TreeNode* root, int val) {
 			if (!root) { return nullptr; }
-			if (root->val == val) { return root; }
-			else if (root->val > val) { return searchBSTRecursive(root->left, val); }
-			else { return searchBSTRecursive(root->right, val); }
+			if (root-&gt;val == val) { return root; }
+			else if (root-&gt;val &gt; val) { return searchBSTRecursive(root-&gt;left, val); }
+			else { return searchBSTRecursive(root-&gt;right, val); }
 		}
 
 
 		TreeNode* searchBSTIterative(TreeNode* root, int val) {
-			while (root && root->val != val) {
-				root = (root->val > val) ? root->left : root->right;
+			while (root && root-&gt;val != val) {
+				root = (root-&gt;val &gt; val) ? root-&gt;left : root-&gt;right;
 			}
 			return root;
 		}

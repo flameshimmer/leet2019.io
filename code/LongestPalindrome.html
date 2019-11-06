@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //
 //Given a string which consists of lowercase or uppercase letters, 
 //find the length of the longest palindromes that can be built with those letters.
@@ -52,7 +52,7 @@ namespace Solution2019
 	{
 		int LongestPalindrome(string s) {
 			int len = s.size();
-			if (len < 2) return len;
+			if (len &lt; 2) return len;
 
 			int map[256];
 			memset(map, 0, sizeof(map));

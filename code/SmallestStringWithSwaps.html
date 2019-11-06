@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //You are given a string s, and an array of pairs 
 //of indices in the string pairs where 
 //pairs[i] = [a, b] indicates 2 indices(0-indexed) 
@@ -64,16 +64,16 @@
 //Swap s[0] and s[1], s = "abc"
 //
 //Constraints:
-//1 <= s.length <= 10^5
-//0 <= pairs.length <= 10^5
-//0 <= pairs[i][0], pairs[i][1] < s.length
+//1 &lt;= s.length &lt;= 10^5
+//0 &lt;= pairs.length &lt;= 10^5
+//0 &lt;= pairs[i][0], pairs[i][1] &lt; s.length
 //s only contains lower case English letters.
 
 namespace Solution2019
 {
 	namespace SmallestStringWithSwaps
 	{
-		int find(vector<int>& ds, int i) {
+		int find(vector&lt;int&gt;& ds, int i) {
 			if (ds[i] == -1) { return i; }
 
 			int root = find(ds, ds[i]);
@@ -81,26 +81,26 @@ namespace Solution2019
 			return root;
 		}
 
-		string smallestStringWithSwaps(string s, vector<vector<int>>& pairs) {
+		string smallestStringWithSwaps(string s, vector&lt;vector&lt;int&gt;&gt;& pairs) {
 			int len = s.size();
-			vector<int> ds(len, -1);
-			vector<vector<int>> m(len);
+			vector&lt;int&gt; ds(len, -1);
+			vector&lt;vector&lt;int&gt;&gt; m(len);
 
-			for (vector<int> p : pairs) {
+			for (vector&lt;int&gt; p : pairs) {
 				int i = find(ds, p[0]);
 				int j = find(ds, p[1]);
 				if (i != j) { ds[j] = i; }
 			}
 
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				m[find(ds, i)].push_back(i);
 			}
 
-			for (vector<int> idGroup : m) {
+			for (vector&lt;int&gt; idGroup : m) {
 				string ss = "";
 				for (int id : idGroup) { ss += s[id]; }
 				sort(ss.begin(), ss.end());
-				for (int i = 0; i < idGroup.size(); i++) {
+				for (int i = 0; i &lt; idGroup.size(); i++) {
 					s[idGroup[i]] = ss[i];
 				}
 			}
@@ -109,7 +109,7 @@ namespace Solution2019
 
 		void Main() {
 			string s = "dcab";
-			vector<vector<int>> pairs = { {0, 3},{1, 2} };
+			vector&lt;vector&lt;int&gt;&gt; pairs = { {0, 3},{1, 2} };
 			print(smallestStringWithSwaps(s, pairs));
 		}
 	}

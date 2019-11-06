@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a list of words and two words word1 and word2, 
 //return the shortest distance between these two words in the list.
 //
@@ -50,12 +50,12 @@ namespace Solution2019
 {
 	namespace ShortestWordDistanceIII
 	{
-		int shortestWordDistance(vector<string> words, string word1, string word2) {
+		int shortestWordDistance(vector&lt;string&gt; words, string word1, string word2) {
 			int i1 = -1;
 			int i2 = -1;
 			bool same = word1 == word2;
 			int result = INT_MAX;
-			for (int i = 0; i < words.size(); i++) {
+			for (int i = 0; i &lt; words.size(); i++) {
 				string w = words[i];
 				if (w == word1) {
 					if (same) {
@@ -69,7 +69,7 @@ namespace Solution2019
 				else if (w == word2) {
 					i2 = i;
 				}
-				if (i1 >= 0 && i2 >= 0) {
+				if (i1 &gt;= 0 && i2 &gt;= 0) {
 					result = min(result, abs(i2 - i1));
 				}
 			}

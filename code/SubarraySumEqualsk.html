@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers and an integer k, you need to find
 //the total number of continuous subarrays whose sum equals to k.
 //
@@ -46,8 +46,8 @@ namespace Solution2019
 {
 	namespace SubarraySumEqualsK
 	{
-		int subarraySum(vector<int>& nums, int k) {
-			unordered_map<int, int> map;
+		int subarraySum(vector&lt;int&gt;& nums, int k) {
+			unordered_map&lt;int, int&gt; map;
 			int sum = 0;
 			int result = 0;
 			map[0] = 1;

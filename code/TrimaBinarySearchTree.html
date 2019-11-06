@@ -28,10 +28,10 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a binary search tree and the lowest and highest
 //boundaries as L and R, trim the tree so that all its 
-//elements lies in [L, R] (R >= L). You might need to 
+//elements lies in [L, R] (R &gt;= L). You might need to 
 //change the root of the tree, so the result should 
 //return the new root of the trimmed binary search tree.
 //
@@ -76,35 +76,35 @@ namespace Solution2019
 		TreeNode* trimBST(TreeNode* root, int L, int R) {
 			if (!root) { return nullptr; }
 
-			if (root->val < L) { return trimBST(root->right, L, R); }
-			if (root->val > R) { return trimBST(root->left, L, R); }
+			if (root-&gt;val &lt; L) { return trimBST(root-&gt;right, L, R); }
+			if (root-&gt;val &gt; R) { return trimBST(root-&gt;left, L, R); }
 
-			root->left = trimBST(root->left, L, R);
-			root->right = trimBST(root->right, L, R);
+			root-&gt;left = trimBST(root-&gt;left, L, R);
+			root-&gt;right = trimBST(root-&gt;right, L, R);
 			return root;
 		}
 
 		namespace Iterative {
 			TreeNode* trimBST(TreeNode* root, int L, int R) {
 				if (!root) { return nullptr; }
-				while (root->val < L || root->val > R) {
-					if (root->val < L) { root = root->right; }
-					if (root->val > R) { root = root->left; }
+				while (root-&gt;val &lt; L || root-&gt;val &gt; R) {
+					if (root-&gt;val &lt; L) { root = root-&gt;right; }
+					if (root-&gt;val &gt; R) { root = root-&gt;left; }
 				}
 
 				TreeNode* cur = root;
 				while (cur) {
-					while (cur->left && cur->left->val < L) {
-						cur->left = cur->left->right;
+					while (cur-&gt;left && cur-&gt;left-&gt;val &lt; L) {
+						cur-&gt;left = cur-&gt;left-&gt;right;
 					}
-					cur = cur->left;
+					cur = cur-&gt;left;
 				}
 				cur = root;
 				while (cur) {
-					while (cur->right && cur->right->val > R) {
-						cur->right = cur->right->left;
+					while (cur-&gt;right && cur-&gt;right-&gt;val &gt; R) {
+						cur-&gt;right = cur-&gt;right-&gt;left;
 					}
-					cur = cur->right;
+					cur = cur-&gt;right;
 				}
 				return root;
 			}
@@ -114,14 +114,14 @@ namespace Solution2019
 		TreeNode* trimBSTAnother(TreeNode* root, int L, int R) {
 			if (!root) { return nullptr; }
 
-			if (root->val <= R && root->val >= L) {
-				root->left = trimBSTAnother(root->left, L, R);
-				root->right = trimBSTAnother(root->right, L, R);
+			if (root-&gt;val &lt;= R && root-&gt;val &gt;= L) {
+				root-&gt;left = trimBSTAnother(root-&gt;left, L, R);
+				root-&gt;right = trimBSTAnother(root-&gt;right, L, R);
 				return root;
 			}
 
-			TreeNode* l = trimBSTAnother(root->left, L, R);
-			TreeNode* r = trimBSTAnother(root->right, L, R);
+			TreeNode* l = trimBSTAnother(root-&gt;left, L, R);
+			TreeNode* r = trimBSTAnother(root-&gt;right, L, R);
 			return l ? l : r;
 		}
 

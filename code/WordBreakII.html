@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty string s and a dictionary wordDict containing a list of 
 //non-empty words, add spaces in s to construct a sentence where each word 
 //is a valid dictionary word. Return all such possible sentences.
@@ -70,12 +70,12 @@ namespace Solution2019
 {
 	namespace WordBreakII
 	{
-		void breakWord(string& s, int len, int start, unordered_set<string>& dict, string result, vector<string>& results, vector<bool>& P) {
-			if (start >= len) {
+		void breakWord(string& s, int len, int start, unordered_set&lt;string&gt;& dict, string result, vector&lt;string&gt;& results, vector&lt;bool&gt;& P) {
+			if (start &gt;= len) {
 				result.pop_back();
 				results.push_back(result);
 			}
-			for (int i = start; i < len; i++) {
+			for (int i = start; i &lt; len; i++) {
 				string cur = s.substr(start, i - start + 1);
 				if (dict.find(cur) != dict.end() && P[i + 1]) {
 					int oldSize = results.size();
@@ -85,12 +85,12 @@ namespace Solution2019
 			}
 		}
 
-		vector<string> wordBreak(string s, vector<string>& wordDict) {
+		vector&lt;string&gt; wordBreak(string s, vector&lt;string&gt;& wordDict) {
 			int len = s.size();
-			unordered_set<string> dict(wordDict.begin(), wordDict.end());
-			vector<string> results;
+			unordered_set&lt;string&gt; dict(wordDict.begin(), wordDict.end());
+			vector&lt;string&gt; results;
 			string result;
-			vector<bool> P(len + 1, true);
+			vector&lt;bool&gt; P(len + 1, true);
 			breakWord(s, len, 0, dict, result, results, P);
 			return results;
 		}

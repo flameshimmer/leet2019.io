@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a Binary Search Tree (BST) with the root node root, 
 //return the minimum difference between the values of any 
 //two different nodes in the tree.
@@ -61,10 +61,10 @@ namespace Solution2019
 	namespace MinimumDistanceBetweenBSTNodes
 	{
 		void inorderTraverse(TreeNode* node, TreeNode*& prev, int& minDiff) {
-			if (node->left) { inorderTraverse(node->left, prev, minDiff); }
-			if (prev) { minDiff = min(minDiff, node->val - prev->val); }
+			if (node-&gt;left) { inorderTraverse(node-&gt;left, prev, minDiff); }
+			if (prev) { minDiff = min(minDiff, node-&gt;val - prev-&gt;val); }
 			prev = node;
-			if (node->right) { inorderTraverse(node->right, prev, minDiff); }
+			if (node-&gt;right) { inorderTraverse(node-&gt;right, prev, minDiff); }
 		}
 
 		int minDiffInBST(TreeNode* root) {

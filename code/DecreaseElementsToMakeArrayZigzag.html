@@ -28,16 +28,16 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array nums of integers, a move consists 
 //of choosing any element and decreasing it by 1.
 //
 //An array A is a zigzag array if either:
 //
 //Every even-indexed element is greater than adjacent 
-//elements, ie. A[0] > A[1] < A[2] > A[3] < A[4] > ...
+//elements, ie. A[0] &gt; A[1] &lt; A[2] &gt; A[3] &lt; A[4] &gt; ...
 //OR, every odd-indexed element is greater than adjacent
-//elements, ie. A[0] < A[1] > A[2] < A[3] > A[4] < ...
+//elements, ie. A[0] &lt; A[1] &gt; A[2] &lt; A[3] &gt; A[4] &lt; ...
 //Return the minimum number of moves to transform the 
 //given array nums into a zigzag array.
 //
@@ -51,19 +51,19 @@
 //Output: 4
 // 
 //Constraints:
-//1 <= nums.length <= 1000
-//1 <= nums[i] <= 1000
+//1 &lt;= nums.length &lt;= 1000
+//1 &lt;= nums[i] &lt;= 1000
 
 namespace Solution2019
 {
 	namespace DecreaseElementsToMakeArrayZigzag
 	{
-		int movesToMakeZigzag(vector<int>& A) {
+		int movesToMakeZigzag(vector&lt;int&gt;& A) {
 			int len = A.size();
 			int result[2] = { 0 };
 			int left;
 			int right;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				left = (i == 0 ? INT_MAX : A[i - 1]);
 				right = (i == len - 1 ? INT_MAX : A[i + 1]);
 				result[i % 2] += max(0, A[i] - min(left, right) + 1);

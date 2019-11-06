@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Design a max stack that supports push, pop, top, peekMaxand popMax.
 //
 //push(x) --Push element x onto stack.
@@ -43,15 +43,15 @@
 //stack.push(5);
 //stack.push(1);
 //stack.push(5);
-//stack.top(); -> 5
-//stack.popMax(); -> 5
-//stack.top(); -> 1
-//stack.peekMax(); -> 5
-//stack.pop(); -> 1
-//stack.top(); -> 5
+//stack.top(); -&gt; 5
+//stack.popMax(); -&gt; 5
+//stack.top(); -&gt; 1
+//stack.peekMax(); -&gt; 5
+//stack.pop(); -&gt; 1
+//stack.top(); -&gt; 5
 //
 //Note:
-//-1e7 <= x <= 1e7
+//-1e7 &lt;= x &lt;= 1e7
 //Number of operations won't exceed 10000.
 //The last four operations won't be called when stack is empty. 
 
@@ -62,11 +62,11 @@ namespace Solution2019
 		namespace UseTwoStacks {
 			class MaxStack {
 			private:
-				stack<int> data;
-				stack<int> max;
+				stack&lt;int&gt; data;
+				stack&lt;int&gt; max;
 
 				void addMax(int x) {
-					if (max.empty() || x >= max.top()) {
+					if (max.empty() || x &gt;= max.top()) {
 						max.push(x);
 					}
 				}
@@ -101,7 +101,7 @@ namespace Solution2019
 				int popMax() {
 					int result = max.top();
 
-					stack<int> tmp;
+					stack&lt;int&gt; tmp;
 					while (data.top() != result) {
 						tmp.push(data.top());
 						data.pop();
@@ -110,7 +110,7 @@ namespace Solution2019
 					max.pop();
 					while (!tmp.empty()) {
 						data.push(tmp.top());
-						addMax(tmp.top()); //----> don't forget to re-establish max!!!!
+						addMax(tmp.top()); //----&gt; don't forget to re-establish max!!!!
 						tmp.pop();
 					}
 					return result;
@@ -121,8 +121,8 @@ namespace Solution2019
 		namespace UseListAndHashMap {
 
 			class MaxStack {
-				list<int> data;
-				map<int, vector<list<int>::iterator>> myMap;
+				list&lt;int&gt; data;
+				map&lt;int, vector&lt;list&lt;int&gt;::iterator&gt;&gt; myMap;
 			public:
 				/** initialize your data structure here. */
 				MaxStack() {
@@ -147,14 +147,14 @@ namespace Solution2019
 				}
 
 				int peekMax() {
-					return myMap.rbegin()->first;
+					return myMap.rbegin()-&gt;first;
 				}
 
 				int popMax() {
-					int result = myMap.rbegin()->first;
-					auto it = myMap.rbegin()->second.back();
-					myMap.rbegin()->second.pop_back();
-					if (myMap.rbegin()->second.empty()) { myMap.erase(result); }
+					int result = myMap.rbegin()-&gt;first;
+					auto it = myMap.rbegin()-&gt;second.back();
+					myMap.rbegin()-&gt;second.pop_back();
+					if (myMap.rbegin()-&gt;second.empty()) { myMap.erase(result); }
 					data.erase(it);
 					return result;
 				}
@@ -164,11 +164,11 @@ namespace Solution2019
 		/**
 		 * Your MaxStack object will be instantiated and called as such:
 		 * MaxStack* obj = new MaxStack();
-		 * obj->push(x);
-		 * int param_2 = obj->pop();
-		 * int param_3 = obj->top();
-		 * int param_4 = obj->peekMax();
-		 * int param_5 = obj->popMax();
+		 * obj-&gt;push(x);
+		 * int param_2 = obj-&gt;pop();
+		 * int param_3 = obj-&gt;top();
+		 * int param_4 = obj-&gt;peekMax();
+		 * int param_5 = obj-&gt;popMax();
 		 */
 		void Main() {
 			string test = "tst test test";

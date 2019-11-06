@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.
 //
 //Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
@@ -60,7 +60,7 @@
 //
 //// any modification to nums in your function would be known by the caller.
 //// using the length returned by your function, it prints the first len elements.
-//for (int i = 0; i < len; i++) {
+//for (int i = 0; i &lt; len; i++) {
 //    print(nums[i]);
 //}
 
@@ -68,12 +68,12 @@ namespace Solution2019
 {
 	namespace RemoveDuplicatesfromSortedArray
 	{
-		int removeDuplicates(vector<int>& nums) {
+		int removeDuplicates(vector&lt;int&gt;& nums) {
 			int len = nums.size();
-			if (len < 2) { return len; }
+			if (len &lt; 2) { return len; }
 
 			int i = 0;
-			for (int j = 1; j < len; j++)  {
+			for (int j = 1; j &lt; len; j++)  {
 				if (nums[i] != nums[j]) {
 					i++;
 					nums[i] = nums[j];
@@ -84,7 +84,7 @@ namespace Solution2019
 
 		void Main() {
 			string test = "tst test test";
-			vector<int> nums;
+			vector&lt;int&gt; nums;
 			nums = { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
 			print(removeDuplicates(nums));
 			nums = { 0,1 };

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Implement an iterator over a binary search tree (BST). Your iterator will be
 //initialized with the root node of a BST.
@@ -65,12 +65,12 @@ namespace Solution2019
 	namespace BinarySearchTreeIterator
 	{
 		class BSTIterator {
-			stack<TreeNode*> s;
+			stack&lt;TreeNode*&gt; s;
 
 			void pushAllLeft(TreeNode* node) {
 				while (node) {
 					s.push(node);
-					node = node->left;
+					node = node-&gt;left;
 				}
 			}
 
@@ -83,8 +83,8 @@ namespace Solution2019
 			int next() {
 				TreeNode* tmp = s.top();
 				s.pop();
-				pushAllLeft(tmp->right);
-				return tmp->val;
+				pushAllLeft(tmp-&gt;right);
+				return tmp-&gt;val;
 			}
 
 			/** @return whether we have a next smallest number */
@@ -96,8 +96,8 @@ namespace Solution2019
 		/**
 		 * Your BSTIterator object will be instantiated and called as such:
 		 * BSTIterator* obj = new BSTIterator(root);
-		 * int param_1 = obj->next();
-		 * bool param_2 = obj->hasNext();
+		 * int param_1 = obj-&gt;next();
+		 * bool param_2 = obj-&gt;hasNext();
 		 */
 
 		void Main() {

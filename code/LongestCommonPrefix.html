@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Write a function to find the longest common prefix string amongst an array of strings.
 //
 //If there is no common prefix, return an empty string "".
@@ -50,16 +50,16 @@ namespace Solution2019
 {
 	namespace LongestCommonPrefix
 	{
-		string LongestCommonPrefix(vector<string> input) {
+		string LongestCommonPrefix(vector&lt;string&gt; input) {
 			string result = "";
 			if (input.empty()) { return result; }
 			int minLen = INT_MAX;
 			for (string s : input) {
 				minLen = min(minLen, (int)s.size());
 			}
-			for (int i = 0; i < minLen; i++)
+			for (int i = 0; i &lt; minLen; i++)
 			{
-				for (int j = 0; j<input.size() - 1; j++) // one less loop
+				for (int j = 0; j&lt;input.size() - 1; j++) // one less loop
 				{
 					if (input[j][i] != input[j + 1][i]) { return result; }
 				}
@@ -68,14 +68,14 @@ namespace Solution2019
 			return result;
 		}
 
-		string LongestCommonPrefixSlow(vector<string> input) {
+		string LongestCommonPrefixSlow(vector&lt;string&gt; input) {
 			string result = "";
 			if (input.empty()) { return result; }
 			int minLen = INT_MAX;
 			for (string s : input) {
 				minLen = min(minLen, (int)s.size());
 			}
-			for (int i = 0; i < minLen; i++)
+			for (int i = 0; i &lt; minLen; i++)
 			{
 				char cur = input[0][i];
 				for (string s : input) {

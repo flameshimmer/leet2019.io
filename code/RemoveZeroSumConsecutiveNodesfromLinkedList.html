@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given the head of a linked list, we repeatedly delete consecutive
 //sequences of nodes that sum to 0 until there are no such sequences.
 //
@@ -52,7 +52,7 @@
 // 
 //Constraints:
 //The given linked list will contain between 1 and 1000 nodes.
-//Each node in the linked list has -1000 <= node.val <= 1000.
+//Each node in the linked list has -1000 &lt;= node.val &lt;= 1000.
 
 namespace Solution2019
 {
@@ -61,24 +61,24 @@ namespace Solution2019
 		ListNode* RemoveZeroSumConsecutiveNodesfromLinkedList(ListNode* head) {
 			if (!head) { return head; }
 			ListNode* dummy = new ListNode(0);
-			dummy->next = head;
-			unordered_map<int, ListNode*> map;
+			dummy-&gt;next = head;
+			unordered_map&lt;int, ListNode*&gt; map;
 			ListNode* cur = dummy;
 			int sum = 0;
 			while (cur) {
-				sum += cur->val;
+				sum += cur-&gt;val;
 				map[sum] = cur;
-				cur = cur->next;
+				cur = cur-&gt;next;
 			}
 
 			sum = 0;
 			cur = dummy;
 			while (cur) {
-				sum += cur->val;
-				cur->next = map[sum]->next;
-				cur = cur->next;
+				sum += cur-&gt;val;
+				cur-&gt;next = map[sum]-&gt;next;
+				cur = cur-&gt;next;
 			}
-			ListNode* result = dummy->next;
+			ListNode* result = dummy-&gt;next;
 			delete dummy;
 			return result;
 		}

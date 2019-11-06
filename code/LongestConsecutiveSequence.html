@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 /*Given an unsorted array of integers, find the length 
 of the longest consecutive elements sequence.
 
@@ -44,11 +44,11 @@ namespace Solution2019
 {
 	namespace LongestConsecutiveSequence
 	{
-		int longestConsecutive(vector<int>& nums) {
+		int longestConsecutive(vector&lt;int&gt;& nums) {
 			int result = 0;
-			unordered_map<int, int> map;
+			unordered_map&lt;int, int&gt; map;
 			for (int v : nums) {
-				if (map.count(v) > 0) { continue; }
+				if (map.count(v) &gt; 0) { continue; }
 
 				int left = map.count(v - 1) ? map[v - 1] : 0;
 				int right = map.count(v + 1) ? map[v + 1] : 0;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	﻿#include "stdafx.h"
+﻿#include "stdafx.h"
 //Given a non-negative index k where k ≤ 33, return 
 //the kth index row of the Pascal's triangle.
 //
@@ -52,11 +52,11 @@ namespace Solution2019
 {
 	namespace PascalsTriangleII
 	{
-		vector<int> PascalsTriangleII(int rowIndex)
+		vector&lt;int&gt; PascalsTriangleII(int rowIndex)
 		{
-			vector<int> result(rowIndex + 1, 1);
-			for (int i = 2; i <= rowIndex; i++) {
-				for (int j = i - 1; j >= 1; j--) {
+			vector&lt;int&gt; result(rowIndex + 1, 1);
+			for (int i = 2; i &lt;= rowIndex; i++) {
+				for (int j = i - 1; j &gt;= 1; j--) {
 					result[j] += result[j - 1];
 				}
 			}

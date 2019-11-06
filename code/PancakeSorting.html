@@ -28,9 +28,9 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array A, we can perform a pancake flip: We choose some 
-//positive integer k <= A.length, then reverse the order of the 
+//positive integer k &lt;= A.length, then reverse the order of the 
 //first k elements of A.  We want to perform zero or more pancake 
 //flips (doing them one after another in succession) to sort the 
 //array A.
@@ -59,17 +59,17 @@
 //Note that other answers, such as [3, 3], would also be accepted. 
 
 //Note:
-//1 <= A.length <= 100
+//1 &lt;= A.length &lt;= 100
 //A[i] is a permutation of[1, 2, ..., A.length]
 
 namespace Solution2019
 {
 	namespace PancakeSorting
 	{
-		vector<int> pancakeSort(vector<int> A) {
-			vector<int> result;
+		vector&lt;int&gt; pancakeSort(vector&lt;int&gt; A) {
+			vector&lt;int&gt; result;
 			int len = A.size();
-			for (int i = len; i > 0; i--) {
+			for (int i = len; i &gt; 0; i--) {
 				int j = 0;
 				while (A[j] != i) { j++; }
 				result.push_back(j + 1);

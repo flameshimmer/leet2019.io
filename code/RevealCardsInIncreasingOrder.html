@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //After reordering, the deck starts as [2,13,3,11,5,17,7], where 2 is the top of the deck.
 //We reveal 2, and move 13 to the bottom.  The deck is now [3,11,5,17,7,13].
@@ -43,8 +43,8 @@
 //
 //Note:
 //
-//1 <= A.length <= 1000
-//1 <= A[i] <= 10^6
+//1 &lt;= A.length &lt;= 1000
+//1 &lt;= A[i] &lt;= 10^6
 //A[i] != A[j] for all i != j
 
 
@@ -53,21 +53,21 @@ namespace Solution2019
 {
 	namespace RevealCardsInIncreasingOrder
 	{
-		vector<int> deckRevealedIncreasing(vector<int>& deck) {
+		vector&lt;int&gt; deckRevealedIncreasing(vector&lt;int&gt;& deck) {
 			sort(deck.rbegin(), deck.rend());
-			deque<int> d;
+			deque&lt;int&gt; d;
 			d.push_back(deck[0]);
-			for (int i = 1; i < deck.size(); i++) {
+			for (int i = 1; i &lt; deck.size(); i++) {
 				d.push_front(d.back());
 				d.pop_back();
 				d.push_front(deck[i]);
 			}
-			vector<int> result(d.begin(), d.end());
+			vector&lt;int&gt; result(d.begin(), d.end());
 			return result;
 		}
 
 		void Main() {
-			vector<int> test = { 2,13,3,11,5,17,7 };
+			vector&lt;int&gt; test = { 2,13,3,11,5,17,7 };
 			print(deckRevealedIncreasing(test));
 		}
 	}

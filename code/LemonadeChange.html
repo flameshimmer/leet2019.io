@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //At a lemonade stand, each lemonade costs $5. 
 //Customers are standing in a queue to buy from you, 
 //and order one at a time (in the order specified by bills).
@@ -68,22 +68,22 @@
 //Since not every customer received correct change, the answer is false.
 // 
 //Note:
-//0 <= bills.length <= 10000
+//0 &lt;= bills.length &lt;= 10000
 //bills[i] will be either 5, 10, or 20.
 
 namespace Solution2019
 {
 	namespace LemonadeChange
 	{
-		bool lemonadeChange(vector<int>& bills) {
+		bool lemonadeChange(vector&lt;int&gt;& bills) {
 			int c5 = 0;
 			int c10 = 0;
 			for (int v : bills) {
 				if (v == 5) { c5++; }
 				else if (v == 10) { c5--; c10++; }
-				else if (c10 > 0) { c10--; c5--; }
+				else if (c10 &gt; 0) { c10--; c5--; }
 				else { c5 -= 3; }
-				if (c5 < 0) { return false; }
+				if (c5 &lt; 0) { return false; }
 			}
 			return true;
 		}

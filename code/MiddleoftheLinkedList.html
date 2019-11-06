@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a non-empty, singly linked list with head node head, return a middle node of linked list.
 //
 //If there are two middle nodes, return the second middle node.
@@ -55,9 +55,9 @@ namespace Solution2019
 		ListNode* middleNode(ListNode* head) {
 			ListNode* slow = head;
 			ListNode* fast = head;
-			while (fast && fast->next) {
-				fast = fast->next->next;
-				slow = slow->next;
+			while (fast && fast-&gt;next) {
+				fast = fast-&gt;next-&gt;next;
+				slow = slow-&gt;next;
 			}
 			return slow;
 		}

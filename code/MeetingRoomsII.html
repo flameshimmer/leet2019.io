@@ -28,9 +28,9 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of meeting time intervals consisting of start and end 
-//times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of 
+//times [[s1,e1],[s2,e2],...] (si &lt; ei), find the minimum number of 
 //conference rooms required.
 //
 //Example 1:
@@ -48,16 +48,16 @@ namespace Solution2019
 {
 	namespace MeetingRoomsII
 	{
-		int minMeetingRooms(vector<vector<int>>& intervals) {
-			vector<pair<int, int>> meetings;
-			for (vector<int>& interval : intervals) {
+		int minMeetingRooms(vector&lt;vector&lt;int&gt;&gt;& intervals) {
+			vector&lt;pair&lt;int, int&gt;&gt; meetings;
+			for (vector&lt;int&gt;& interval : intervals) {
 				meetings.push_back({ interval[0], 1 });
 				meetings.push_back({ interval[1], -1 });
 			}
 			sort(meetings.begin(), meetings.end());
 			int room = 0;
 			int maxRoom = 0;
-			for (pair<int, int>& p : meetings) {
+			for (pair&lt;int, int&gt;& p : meetings) {
 				room += p.second;
 				maxRoom = max(maxRoom, room);
 			}
@@ -66,11 +66,11 @@ namespace Solution2019
 
 
 		namespace Another {
-			void helper(vector<vector<int>>& intervals, int& result) {
-				vector<vector<int>> overlap;
-				vector<int> last = intervals[0];
-				for (int i = 1; i < intervals.size(); i++) {
-					if (last[1] > intervals[i][0]) {
+			void helper(vector&lt;vector&lt;int&gt;&gt;& intervals, int& result) {
+				vector&lt;vector&lt;int&gt;&gt; overlap;
+				vector&lt;int&gt; last = intervals[0];
+				for (int i = 1; i &lt; intervals.size(); i++) {
+					if (last[1] &gt; intervals[i][0]) {
 						overlap.push_back(intervals[i]);
 					}
 					else {
@@ -83,12 +83,12 @@ namespace Solution2019
 				}
 			}
 
-			int minMeetingRooms(vector<vector<int>>& intervals) {
+			int minMeetingRooms(vector&lt;vector&lt;int&gt;&gt;& intervals) {
 				int len = intervals.size();
-				if (len < 2) { return len; }
-				auto comp = [](vector<int>& a, vector<int>& b) {
-					if (a[0] == b[0]) { return a[1] < b[1]; }
-					return a[0] < b[0];
+				if (len &lt; 2) { return len; }
+				auto comp = [](vector&lt;int&gt;& a, vector&lt;int&gt;& b) {
+					if (a[0] == b[0]) { return a[1] &lt; b[1]; }
+					return a[0] &lt; b[0];
 				};
 
 				sort(intervals.begin(), intervals.end(), comp);
@@ -98,7 +98,7 @@ namespace Solution2019
 			}
 		}
 		void Main() {
-			vector<vector<int>> test = { {7,10},{2,4} };
+			vector&lt;vector&lt;int&gt;&gt; test = { {7,10},{2,4} };
 			print(minMeetingRooms(test));
 		}
 	}

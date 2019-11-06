@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 
 //Implement a data structure supporting the following operations:
@@ -51,17 +51,17 @@ namespace Solution2019
 		private:
 			struct curB {
 				int value;
-				unordered_set<string> keys;
+				unordered_set&lt;string&gt; keys;
 			};
-			list<curB> buckets;
-			unordered_map<string, list<curB>::iterator> bucketOfKey;
+			list&lt;curB&gt; buckets;
+			unordered_map&lt;string, list&lt;curB&gt;::iterator&gt; bucketOfKey;
 		public:
 			/** Initialize your data structure here. */
 			AllOne() {
 
 			}
 
-			/** Inserts a new key <Key> with value 1. Or increments an existing key by 1. */
+			/** Inserts a new key &lt;Key&gt; with value 1. Or increments an existing key by 1. */
 			void inc(string key) {
 				if (!bucketOfKey.count(key)) {
 					bucketOfKey[key] = buckets.insert(buckets.begin(), { 0, {key} });
@@ -70,16 +70,16 @@ namespace Solution2019
 				auto curB = bucketOfKey[key];
 				auto nextB = next(curB);
 
-				if (nextB == buckets.end() || nextB->value > curB->value + 1) {
-					nextB = buckets.insert(nextB, { curB->value + 1, {key} });
+				if (nextB == buckets.end() || nextB-&gt;value &gt; curB-&gt;value + 1) {
+					nextB = buckets.insert(nextB, { curB-&gt;value + 1, {key} });
 				}
 				else {
-					nextB->keys.insert(key);
+					nextB-&gt;keys.insert(key);
 				}
 				bucketOfKey[key] = nextB;
 
-				curB->keys.erase(key);
-				if (curB->keys.empty()) { buckets.erase(curB); }
+				curB-&gt;keys.erase(key);
+				if (curB-&gt;keys.empty()) { buckets.erase(curB); }
 			}
 
 			/** Decrements an existing key by 1. If Key's value is 1, remove it from the data structure. */
@@ -88,51 +88,51 @@ namespace Solution2019
 
 				auto curB = bucketOfKey[key];
 				auto prevB = prev(curB);
-				bucketOfKey.erase(key); ///---> Don't forget to erase the key!!!
-				if (curB->value > 1) {
-					if (curB == buckets.begin() || prevB->value < curB->value - 1) {
-						prevB = buckets.insert(curB, { curB->value - 1, {key} });
+				bucketOfKey.erase(key); ///---&gt; Don't forget to erase the key!!!
+				if (curB-&gt;value &gt; 1) {
+					if (curB == buckets.begin() || prevB-&gt;value &lt; curB-&gt;value - 1) {
+						prevB = buckets.insert(curB, { curB-&gt;value - 1, {key} });
 					}
-					else { prevB->keys.insert(key); }
+					else { prevB-&gt;keys.insert(key); }
 					bucketOfKey[key] = prevB;
 				}
 
-				curB->keys.erase(key);
-				if (curB->keys.empty()) {
+				curB-&gt;keys.erase(key);
+				if (curB-&gt;keys.empty()) {
 					buckets.erase(curB);
 				}
 			}
 
 			/** Returns one of the keys with maximal value. */
 			string getMaxKey() {
-				return buckets.empty() ? "" : *(buckets.rbegin()->keys.begin());
+				return buckets.empty() ? "" : *(buckets.rbegin()-&gt;keys.begin());
 			}
 
 			/** Returns one of the keys with Minimal value. */
 			string getMinKey() {
-				return buckets.empty() ? "" : *(buckets.begin()->keys.begin());
+				return buckets.empty() ? "" : *(buckets.begin()-&gt;keys.begin());
 			}
 		};
 		/**
 		 * Your AllOne object will be instantiated and called as such:
 		 * AllOne* obj = new AllOne();
-		 * obj->inc(key);
-		 * obj->dec(key);
-		 * string param_3 = obj->getMaxKey();
-		 * string param_4 = obj->getMinKey();
+		 * obj-&gt;inc(key);
+		 * obj-&gt;dec(key);
+		 * string param_3 = obj-&gt;getMaxKey();
+		 * string param_4 = obj-&gt;getMinKey();
 		 */
 
 		void Main() {
 			AllOne* obj = new AllOne();
-			obj->inc("a");
-			obj->inc("b");
-			obj->inc("b");
-			obj->inc("b");
-			obj->inc("b");
-			obj->dec("b");
-			obj->dec("b");
-			string param_3 = obj->getMaxKey();
-			string param_4 = obj->getMinKey();
+			obj-&gt;inc("a");
+			obj-&gt;inc("b");
+			obj-&gt;inc("b");
+			obj-&gt;inc("b");
+			obj-&gt;inc("b");
+			obj-&gt;dec("b");
+			obj-&gt;dec("b");
+			string param_3 = obj-&gt;getMaxKey();
+			string param_4 = obj-&gt;getMinKey();
 		}
 	}
 }

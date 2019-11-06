@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array nums of n integersand an integer target, 
 //find three integers in nums such that the sum is closest 
 //to target.Return the sum of the three integers.
@@ -42,25 +42,25 @@ namespace Solution2019
 {
 	namespace ThreeSumClosest
 	{
-		int threeSumClosest(vector<int>& nums, int target) {
+		int threeSumClosest(vector&lt;int&gt;& nums, int target) {
 			sort(nums.begin(), nums.end());
 			int len = nums.size();
-			if (len < 3) { return 0; }
+			if (len &lt; 3) { return 0; }
 
 			int result = nums[0] + nums[1] + nums[2];
 			int diff = abs(result - target);
-			for (int i = len - 1; i >= 2; i--) {
+			for (int i = len - 1; i &gt;= 2; i--) {
 				int l = 0;
 				int r = i - 1;
-				while (l < r) {
+				while (l &lt; r) {
 					int sum = nums[l] + nums[r] + nums[i];
 					int curDiff = abs(sum - target);
 					if (curDiff == 0) { return target; }
-					if (curDiff < diff) {
+					if (curDiff &lt; diff) {
 						result = sum;
 						diff = curDiff;
 					}
-					else if (sum < target) {
+					else if (sum &lt; target) {
 						l++;
 					}
 					else {

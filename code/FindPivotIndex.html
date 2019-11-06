@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given an array of integers nums, write a method that 
 //returns the "pivot" index of this array.
 //
@@ -66,28 +66,28 @@ namespace Solution2019
 {
 	namespace FindPivotIndex
 	{
-		int pivotIndex(vector<int>& nums) {
+		int pivotIndex(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			if (len == 0) {return -1;}
 			int sum = 0;
-			for (int i = 0; i < len; i++) { sum += nums[i]; nums[i] = sum; }
+			for (int i = 0; i &lt; len; i++) { sum += nums[i]; nums[i] = sum; }
 
 			int last = nums[len - 1];
-			for (int i = 0; i < len; i++) {
-				int prev = i - 1 < 0 ? 0 : nums[i - 1];
+			for (int i = 0; i &lt; len; i++) {
+				int prev = i - 1 &lt; 0 ? 0 : nums[i - 1];
 				if (prev == last - nums[i]) { return i; }
 			}
 			return -1;
 		}
 
-		int pivotIndexAnother(vector<int>& nums) {
+		int pivotIndexAnother(vector&lt;int&gt;& nums) {
 			int len = nums.size();
 			if (len == 0) { return -1; }
 			int totalSum = 0;
-			for (int i = 0; i < len; i++) { totalSum += nums[i];}
+			for (int i = 0; i &lt; len; i++) { totalSum += nums[i];}
 
 			int leftSum = 0;
-			for (int i = 0; i < len; i++) {
+			for (int i = 0; i &lt; len; i++) {
 				if (leftSum == totalSum - (nums[i]+leftSum)) { return i; }
 				leftSum += nums[i];
 			}
@@ -95,7 +95,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<int> nums = {1, 7, 3, 6, 5, 6};
+			vector&lt;int&gt; nums = {1, 7, 3, 6, 5, 6};
 			print(pivotIndexAnother(nums));
 		}
 	}

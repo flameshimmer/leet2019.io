@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Consider all the leaves of a binary tree.  
 //From left to right order, the values of those 
 //leaves form a leaf value sequence.
@@ -49,15 +49,15 @@ namespace Solution2019
 {
 	namespace LeafSimilarTrees
 	{
-		void getLeafSequence(TreeNode* root, vector<int>& result) {
+		void getLeafSequence(TreeNode* root, vector&lt;int&gt;& result) {
 			if (!root) { return; }
-			if (!root->left && !root->right) { result.push_back(root->val); }
-			getLeafSequence(root->left, result);
-			getLeafSequence(root->right, result);
+			if (!root-&gt;left && !root-&gt;right) { result.push_back(root-&gt;val); }
+			getLeafSequence(root-&gt;left, result);
+			getLeafSequence(root-&gt;right, result);
 		}
 		bool leafSimilar(TreeNode* root1, TreeNode* root2) {
-			vector<int> s1;
-			vector<int> s2;
+			vector&lt;int&gt; s1;
+			vector&lt;int&gt; s2;
 			getLeafSequence(root1, s1);
 			getLeafSequence(root2, s2);
 			return s1 == s2;

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 // 
 
 namespace Solution2019
@@ -41,8 +41,8 @@ namespace Solution2019
 			}
 			if (root == p || root == q) { return root; }
 
-			TreeNode* l = lowestCommonAncestor(root->left, p, q);
-			TreeNode* r = lowestCommonAncestor(root->right, p, q);
+			TreeNode* l = lowestCommonAncestor(root-&gt;left, p, q);
+			TreeNode* r = lowestCommonAncestor(root-&gt;right, p, q);
 			if (l && r) { return root; }
 			else { return l ? l : r; }
 		}

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a collection of integers that might contain duplicates,
 //nums, return all possible subsets (the power set).
 //
@@ -49,22 +49,22 @@
 
 namespace Solution2019
 {
-	void helper(vector<int>& nums, int start, int len, vector<int>& result, vector<vector<int>>& results) {
+	void helper(vector&lt;int&gt;& nums, int start, int len, vector&lt;int&gt;& result, vector&lt;vector&lt;int&gt;&gt;& results) {
 		results.push_back(result);
 
 		if (start == len) { return; }
-		for (int i = start; i < len; i++) {
+		for (int i = start; i &lt; len; i++) {
 			result.push_back(nums[i]);
 			helper(nums, i + 1, len, result, results);
 			result.pop_back();
-			while (i + 1 < len && nums[i] == nums[i + 1]) { i++; }
+			while (i + 1 &lt; len && nums[i] == nums[i + 1]) { i++; }
 		}
 	}
 
-	vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+	vector&lt;vector&lt;int&gt;&gt; subsetsWithDup(vector&lt;int&gt;& nums) {
 		int len = nums.size();
-		vector<int> result;
-		vector<vector<int>> results;
+		vector&lt;int&gt; result;
+		vector&lt;vector&lt;int&gt;&gt; results;
 		sort(nums.begin(), nums.end());
 
 		helper(nums, 0, len, result, results);

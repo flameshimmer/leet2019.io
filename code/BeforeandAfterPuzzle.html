@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given a list of phrases, generate a list of Before and After puzzles.
 //
 //A phrase is a string that consists of lowercase English letters and 
@@ -70,8 +70,8 @@
 //Output: ["a"]
 // 
 //Constraints:
-//1 <= phrases.length <= 100
-//1 <= phrases[i].length <= 100
+//1 &lt;= phrases.length &lt;= 100
+//1 &lt;= phrases[i].length &lt;= 100
 
 namespace Solution2019
 {
@@ -81,40 +81,40 @@ namespace Solution2019
 			int start = 0;
 			int end = 0;
 			int len = s.size();
-			while (end < len && s[end] != ' ') { end++; }
+			while (end &lt; len && s[end] != ' ') { end++; }
 			f = s.substr(0, end - start);
 
 			end = len - 1;
 			start = len - 1;
-			while (start >= 0 && s[start] != ' ') { start--; }
+			while (start &gt;= 0 && s[start] != ' ') { start--; }
 			l = s.substr(start + 1, end - start + 1);
 		}
 
-		vector<string> beforeAndAfterPuzzles(vector<string>& phrases) {
-			unordered_map<string, vector<int>> first;
-			unordered_map<string, vector<int>> last;
+		vector&lt;string&gt; beforeAndAfterPuzzles(vector&lt;string&gt;& phrases) {
+			unordered_map&lt;string, vector&lt;int&gt;&gt; first;
+			unordered_map&lt;string, vector&lt;int&gt;&gt; last;
 
 			string fp = "";
 			string lp = "";
-			for (int i = 0; i < phrases.size(); i++) {
+			for (int i = 0; i &lt; phrases.size(); i++) {
 				if (empty(phrases[i])) { continue; }
 				getFirstLast(phrases[i], fp, lp);
 				first[fp].push_back(i);
 				last[lp].push_back(i);
 			}
 
-			set<string> result;
+			set&lt;string&gt; result;
 			for (auto& l : last) {
 				if (first.find(l.first) != first.end()) {
 					for (int i : l.second) {
 						for (int j : first[l.first]) {
 							if (i == j) { continue; }
-							result.insert(phrases[i] + phrases[j].substr(l.first.size())); //--> substr returns "" when pos is equal to len, but will break if pos is larger than len
+							result.insert(phrases[i] + phrases[j].substr(l.first.size())); //--&gt; substr returns "" when pos is equal to len, but will break if pos is larger than len
 						}
 					}
 				}
 			}
-			vector<string> results(result.begin(), result.end());
+			vector&lt;string&gt; results(result.begin(), result.end());
 			return results;
 		}
 		void Main() {

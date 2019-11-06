@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Given n pairs of parentheses, write a function to 
 //generate all combinations of well-formed parentheses.
 //
@@ -46,8 +46,8 @@ namespace Solution2019
 {
 	namespace GenerateParentheses
 	{
-		void helper(int sp, int ep, int n, string& result, vector<string>& results) {
-			if (sp > n || ep > n || ep > sp) { return; }
+		void helper(int sp, int ep, int n, string& result, vector&lt;string&gt;& results) {
+			if (sp &gt; n || ep &gt; n || ep &gt; sp) { return; }
 			if (sp == n && ep == n) {
 				results.push_back(result);
 				return;
@@ -61,27 +61,27 @@ namespace Solution2019
 			result.pop_back();
 		}
 
-		void helperAnother(int sp, int ep, int n, string& result, vector<string>& results) {
+		void helperAnother(int sp, int ep, int n, string& result, vector&lt;string&gt;& results) {
 			if (sp == n && ep == n) {
 				results.push_back(result);
 				return;
 			}
 
-			if (sp < n) {
+			if (sp &lt; n) {
 				result.push_back('(');
 				helper(sp + 1, ep, n, result, results);
 				result.pop_back();
 			}
 
-			if (ep < sp) {
+			if (ep &lt; sp) {
 				result.push_back(')');
 				helper(sp, ep + 1, n, result, results);
 				result.pop_back();
 			}
 		}
 
-		vector<string> generateParenthesis(int n) {
-			vector<string> results;
+		vector&lt;string&gt; generateParenthesis(int n) {
+			vector&lt;string&gt; results;
 			if (n == 0) { return results; }
 
 			string result = "";

@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Implement a MyCalendar class to store your events. 
 //A new event can be added if adding the event will 
 //not cause a double booking.
@@ -36,7 +36,7 @@
 //Your class will have the method, book(int start, int end). 
 //Formally, this represents a booking on the half open
 //interval [start, end), the range of real numbers x 
-//such that start <= x < end.
+//such that start &lt;= x &lt; end.
 //
 //A double booking happens when two events have some
 //non-empty intersection (ie., there is some time 
@@ -76,15 +76,15 @@ namespace Solution2019
 		namespace UsingSet {
 			class MyCalendar {
 			public:
-				set<pair<int, int>> mySet;
+				set&lt;pair&lt;int, int&gt;&gt; mySet;
 				MyCalendar() {
 
 				}
 
 				bool book(int start, int end) {
 					auto it = mySet.lower_bound({ start, end });
-					if (it != mySet.end() && it->first < end) { return false; }
-					if (it != mySet.begin() && start < (--it)->second) { return false; }
+					if (it != mySet.end() && it-&gt;first &lt; end) { return false; }
+					if (it != mySet.begin() && start &lt; (--it)-&gt;second) { return false; }
 					mySet.insert({ start, end });
 					return true;
 				}
@@ -94,15 +94,15 @@ namespace Solution2019
 		namespace UsingMap {
 			class MyCalendar {
 			public:
-				map<int, int> myMap;
+				map&lt;int, int&gt; myMap;
 				MyCalendar() {
 
 				}
 
 				bool book(int start, int end) {
 					auto it = myMap.lower_bound(start);
-					if (it != myMap.end() && it->first < end) { return false; }
-					if (it != myMap.begin() && start < (--it)->second) { return false; }
+					if (it != myMap.end() && it-&gt;first &lt; end) { return false; }
+					if (it != myMap.begin() && start &lt; (--it)-&gt;second) { return false; }
 					myMap[start] = end;
 					return true;
 				}
@@ -112,7 +112,7 @@ namespace Solution2019
 		/**
 		 * Your MyCalendar object will be instantiated and called as such:
 		 * MyCalendar* obj = new MyCalendar();
-		 * bool param_1 = obj->book(start,end);
+		 * bool param_1 = obj-&gt;book(start,end);
 		 */
 		void Main() {
 			string test = "tst test test";

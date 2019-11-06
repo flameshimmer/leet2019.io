@@ -28,13 +28,13 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Remove all elements from a linked list of integers that have value val.
 //
 //Example:
 //
-//Input:  1->2->6->3->4->5->6, val = 6
-//Output : 1->2->3->4->5
+//Input:  1-&gt;2-&gt;6-&gt;3-&gt;4-&gt;5-&gt;6, val = 6
+//Output : 1-&gt;2-&gt;3-&gt;4-&gt;5
 
 namespace Solution2019
 {
@@ -44,21 +44,21 @@ namespace Solution2019
 			if (!head) { return nullptr; }
 			
 			ListNode* dummy = new ListNode(-1);
-			dummy->next = head;
+			dummy-&gt;next = head;
 			ListNode* cur = head;
 			ListNode* prev = dummy;
 			while (cur) {
-				if (cur->val == val) {
-					prev->next = cur->next;
+				if (cur-&gt;val == val) {
+					prev-&gt;next = cur-&gt;next;
 					delete cur;
-					cur = prev->next;
+					cur = prev-&gt;next;
 				}
 				else {
 					prev = cur;
-					cur = cur->next;
+					cur = cur-&gt;next;
 				}
 			}
-			ListNode* result = dummy->next;
+			ListNode* result = dummy-&gt;next;
 			delete dummy;
 			return result;
 		}
@@ -69,14 +69,14 @@ namespace Solution2019
 			ListNode* newHead = nullptr;
 			ListNode* tail = nullptr;
 			while (head) {
-				if (head->val != val) {
+				if (head-&gt;val != val) {
 					if (!newHead) { newHead = head; }
-					else { tail->next = head; }
+					else { tail-&gt;next = head; }
 					tail = head;
 				}
-				head = head->next;
+				head = head-&gt;next;
 			}
-			if (tail) { tail->next = nullptr; } ///-------------------> This is the one place we need to be careful about this method!
+			if (tail) { tail-&gt;next = nullptr; } ///-------------------&gt; This is the one place we need to be careful about this method!
 			return newHead;
 		}
 

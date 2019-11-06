@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 
 //Given an array arr of positive integers, consider all binary trees such that:
 //Each node has either 0 or 2 children;
@@ -55,8 +55,8 @@
 //6    2             2   4
 // 
 //Constraints:
-//2 <= arr.length <= 40
-//1 <= arr[i] <= 15
+//2 &lt;= arr.length &lt;= 40
+//1 &lt;= arr[i] &lt;= 15
 //It is guaranteed that the answer fits into a 32-bit signed integer (ie. it is
 //less than 2^31).
 
@@ -64,20 +64,20 @@ namespace Solution2019
 {
 	namespace MinimumCostTreeFromLeafValues
 	{
-		int mctFromLeafValues(vector<int>& A) {
+		int mctFromLeafValues(vector&lt;int&gt;& A) {
 			int result = 0;
 			int len = A.size();
-			vector<int> stack = { INT_MAX };
+			vector&lt;int&gt; stack = { INT_MAX };
 
 			for (int a : A) {
-				while (stack.back() <= a) {
+				while (stack.back() &lt;= a) {
 					int mid = stack.back();
 					stack.pop_back();
 					result += mid * min(stack.back(), a);
 				}
 				stack.push_back(a);
 			}
-			for (int i = stack.size() - 1; i > 1; i--) {
+			for (int i = stack.size() - 1; i &gt; 1; i--) {
 				result += stack[i] * stack[i - 1];
 			}
 			return result;
