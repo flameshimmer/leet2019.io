@@ -17,7 +17,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Test::Main(); // Medium
 
 
-
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
@@ -336,7 +335,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DesignInMemoryFileSystem::Main();
 	//Solution2019::NaryTreePreorderTraversal::Main();
 	//Solution2019::NaryTreePostorderTraversal::Main();
-	//Solution2019::TagValidator::Main();
 	//Solution2019::FractionAdditionandSubtraction::Main();
 	//Solution2019::ValidSquare::Main();
 	//Solution2019::LongestHarmoniousSubsequence::Main();
@@ -1369,6 +1367,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DiameterofBinaryTree::Main();
 	//Solution2019::FrogJump::Main();
 	//Solution2019::CountPrimes::Main();
+	//Solution2019::TagValidator::Main();
 
 	//====Problem Ends====
 
