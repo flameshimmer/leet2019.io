@@ -124,7 +124,7 @@ namespace Solution2019
 		}
 		void Main() {
 			vector<vector<int>> test = { {0,1,100},{1,2,100},{0,2,500} };
-			print(findCheapestPrice(3, test, 0, 2, 1));
+			print(Dijkstra::findCheapestPrice(3, test, 0, 2, 1));
 		}
 	}
 }

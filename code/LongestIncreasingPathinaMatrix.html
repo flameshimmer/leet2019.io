@@ -20,7 +20,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="./web/codepage.css" />
+	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
 	<h1>LongestIncreasingPathinaMatrix</h1>
@@ -28,13 +28,71 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-// 
+#include "stdafx.h"
+
+//Given an integer matrix, find the length of the longest increasing path.
+//From each cell, you can either move to four directions: left, right, up or
+//down. You may NOT move diagonally or move outside of the boundary (i.e.
+//wrap-around is not allowed).
+//
+//Example 1:
+//Input: nums = 
+//[
+//  [9,9,4],
+//  [6,6,8],
+//  [2,1,1]
+//] 
+//Output: 4 
+//Explanation: The longest increasing path is [1, 2, 6, 9].
+//
+//Example 2:
+//Input: nums = 
+//[
+//  [3,4,5],
+//  [3,2,6],
+//  [2,2,1]
+//] 
+//Output: 4 
+//Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is
+//not allowed. 
 
 namespace Solution2019
 {
 	namespace LongestIncreasingPathinaMatrix
 	{
+		namespace DFSAndMemoryTable {
+
+			vector&lt;pair&lt;int, int&gt;&gt; dirs = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
+			int dfs(vector&lt;vector&lt;int&gt;&gt;& matrix, int i, int j, int rowCount, int colCount, vector&lt;vector&lt;int&gt;&gt;& M) {
+				if (M[i][j] != 0) { return M[i][j]; }
+				int result = 1;
+				for (pair&lt;int, int&gt;& dir : dirs) {
+					int x = i + dir.first;
+					int y = j + dir.second;
+					if (x &lt; 0 || x &gt;= rowCount || y &lt; 0 || y &gt;= colCount || matrix[x][y] &lt;= matrix[i][j]) { continue; }
+					result = max(result, 1 + dfs(matrix, x, y, rowCount, colCount, M));
+				}
+				M[i][j] = result;
+				return result;
+			}
+
+			int longestIncreasingPath(vector&lt;vector&lt;int&gt;&gt;& matrix) {
+				int rowCount = matrix.size();
+				if (rowCount == 0) { return 0; }
+				int colCount = matrix[0].size();
+				if (colCount == 0) { return 0; }
+
+				vector&lt;vector&lt;int&gt;&gt; M(rowCount, vector&lt;int&gt;(colCount, 0));
+				int result = 1;
+				for (int i = 0; i &lt; rowCount; i++) {
+					for (int j = 0; j &lt; colCount; j++) {
+						result = max(result, dfs(matrix, i, j, rowCount, colCount, M));
+					}
+				}
+				return result;
+			}
+		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);

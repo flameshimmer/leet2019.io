@@ -15,11 +15,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-
-	//11/6/2019
-	//Solution2019::GuesstheWord::Main();
-	//Solution2019::VerticalOrderTraversalofaBinaryTree::Main();
-	//Solution2019::ValidSudoku::Main();
+	
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -33,7 +29,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PalindromePermutationII::Main();
 	//Solution2019::PalindromePartitioning::Main();
 	//Solution2019::PalindromePartitioningII::Main();
-	//Solution2019::DivideTwoIntegers::Main();
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::NQueensII::Main();
 	//Solution2019::PermutationSequence::Main();
@@ -57,7 +52,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::Candy::Main();
 	//Solution2019::SingleNumberII::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
-	//Solution2019::LongestSubstringwithAtMostTwoDistinctCharacters::Main();
 	//Solution2019::MaximumGap::Main();
 	//Solution2019::CompareVersionNumbers::Main();
 	//Solution2019::ExcelSheetColumnTitle::Main();
@@ -88,7 +82,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RisingTemperature::Main
 	//Solution2019::BitwiseANDofNumbersRange::Main();
 	//Solution2019::IsomorphicStrings::Main();
-	//Solution2019::ImplementTrie::Main();
 	//Solution2019::CourseScheduleII::Main();
 	//Solution2019::AddandSearchWordDatastructuredesign::Main();
 	//Solution2019::HouseRobberII::Main();	
@@ -149,7 +142,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SuperUglyNumber::Main();
 	//Solution2019::BinaryTreeVerticalOrderTraversal::Main();
 	//Solution2019::RemoveDuplicateLetters::Main();
-	//Solution2019::ShortestDistancefromAllBuildings::Main();
 	//Solution2019::MaximumProductofWordLengths::Main();
 	//Solution2019::BulbSwitcher::Main();
 	//Solution2019::GeneralizedAbbreviation::Main();
@@ -158,7 +150,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::WiggleSortII::Main();
 	//Solution2019::PowerofThree::Main();
 	//Solution2019::CountofRangeSum::Main();
-	//Solution2019::LongestIncreasingPathinaMatrix::Main();
 	//Solution2019::PatchingArray::Main();
 	//Solution2019::VerifyPreorderSerializationofaBinaryTree::Main();
 	//Solution2019::LargestBSTSubtree::Main();
@@ -705,6 +696,8 @@ int _tmain(int argc, _TCHAR* argv[])
 //Solution2019::ProductSalesAnalysisIII::Main();
 
 	//================================= Completed ==========================================================
+
+	//====Problem Starts====
 
 	//8/15/2019
 	//Solution2019::TwoSum::Main(); // using sorted array
@@ -1369,6 +1362,18 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FrogJump::Main();
 	//Solution2019::CountPrimes::Main();
 	//Solution2019::TagValidator::Main();
+
+	//11/6/2019
+	//Solution2019::GuesstheWord::Main();
+	//Solution2019::VerticalOrderTraversalofaBinaryTree::Main();
+	//Solution2019::ValidSudoku::Main();
+
+	//11/7/2019
+	//Solution2019::ImplementTrie::Main();
+	//Solution2019::LongestIncreasingPathinaMatrix::Main();
+	//Solution2019::LongestSubstringwithAtMostTwoDistinctCharacters::Main();
+	//Solution2019::ShortestDistancefromAllBuildings::Main();
+	//Solution2019::DivideTwoIntegers::Main();
 
 	//====Problem Ends====
 
