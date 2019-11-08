@@ -36,7 +36,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ScrambleString::Main();
 	//Solution2019::GrayCode::Main();
 	//Solution2019::UniqueBinarySearchTreesII::Main();
-	//Solution2019::UniqueBinarySearchTrees::Main();
 	//Solution2019::RecoverBinarySearchTree::Main();	
 	//Solution2019::BalancedBinaryTree::Main();
 	//Solution2019::MinimumDepthofBinaryTree::Main();
@@ -86,7 +85,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::AddandSearchWordDatastructuredesign::Main();
 	//Solution2019::HouseRobberII::Main();	
 	//Solution2019::CombinationSumIII::Main();
-	//Solution2019::CountCompleteTreeNodes::Main();
 	//Solution2019::RectangleArea::Main();
 	//Solution2019::ImplementStackusingQueues::Main();
 	//Solution2019::KthSmallestElementinaBST::Main();
@@ -199,7 +197,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BinaryWatch::Main();
 	//Solution2019::RemoveKDigits::Main();
 	//Solution2019::ConvertaNumbertoHexadecimal::Main();
-	//Solution2019::QueueReconstructionbyHeight::Main();
 	//Solution2019::TrappingRainWaterII::Main();
 	//Solution2019::ValidWordAbbreviation::Main();
 	//Solution2019::MinimumUniqueWordAbbreviation::Main();
@@ -617,7 +614,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ActorsandDirectorsWhoCooperatedAtLeastThreeTimes::Main();
 	//Solution2019::DistantBarcodes::Main();
 	//Solution2019::ShortestWaytoFormString::Main();
-	//Solution2019::CampusBikes::Main();
 	//Solution2019::MinimizeRoundingErrortoMeetTarget::Main();
 	//Solution2019::AllPathsfromSourceLeadtoDestination::Main();
 	//Solution2019::MissingElementinSortedArray::Main();
@@ -723,7 +719,6 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//8/22/2019
 	//Solution2019::ValidPalindromeII::Main();
-	//Solution2019::ShortestPalindrome::Main();	
 	//Solution2019::PalindromeLinkedList::Main();
 
 	//8/24/2019	
@@ -1374,6 +1369,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LongestSubstringwithAtMostTwoDistinctCharacters::Main();
 	//Solution2019::ShortestDistancefromAllBuildings::Main();
 	//Solution2019::DivideTwoIntegers::Main();
+
+	//11/8/2019
+	//Solution2019::ShortestPalindrome::Main();	// Need to check out the KMP solve!
+	//Solution2019::CampusBikes::Main();
+	//Solution2019::CountCompleteTreeNodes::Main();
+	//Solution2019::UniqueBinarySearchTrees::Main();
+	//Solution2019::QueueReconstructionbyHeight::Main();
 
 	//====Problem Ends====
 
