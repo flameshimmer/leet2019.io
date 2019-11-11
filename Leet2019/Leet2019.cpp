@@ -48,7 +48,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SumRoottoLeafNumbers::Main();
 	//Solution2019::SurroundedRegions::Main();
 	//Solution2019::Candy::Main();
-	//Solution2019::SingleNumberII::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
 	//Solution2019::MaximumGap::Main();
 	//Solution2019::CompareVersionNumbers::Main();
@@ -132,7 +131,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::AdditiveNumber::Main();
 	//Solution2019::RangeSumQueryMutable::Main();
 	//Solution2019::RangeSumQueryTwoDMutable::Main();
-	//Solution2019::BestTimetoBuyandSellStockwithCooldown::Main();
 	//Solution2019::MinimumHeightTrees::Main();
 	//Solution2019::SparseMatrixMultiplication::Main();
 	//Solution2019::SuperUglyNumber::Main();
@@ -237,7 +235,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ConvexPolygon::Main();
 	//Solution2019::ImplementRandOneZero::Main();
 	//Solution2019::EncodeStringwithShortestLength::Main();
-	//Solution2019::ConcatenatedWords::Main();
 	//Solution2019::MatchstickstoSquare::Main();
 	//Solution2019::OnesandZeroes::Main();
 	//Solution2019::Heaters::Main();
@@ -304,7 +301,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MedianEmployeeSalary::Main();
 	//Solution2019::ManagerswithatLeastFiveDirectReports::Main();
 	//Solution2019::FindMedianGivenFrequencyofNumbers::Main();
-	//Solution2019::SubtreeofAnotherTree::Main();
 	//Solution2019::SquirrelSimulation::Main();
 	//Solution2019::WinningCandidate::Main();
 	//Solution2019::OutofBoundaryPaths::Main();
@@ -406,7 +402,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RemoveComments::Main();
 	//Solution2019::NumberofAtoms::Main();
 	//Solution2019::MinimumWindowSubsequence::Main();
-	//Solution2019::CountDifferentPalindromicSubsequences::Main();
 	//Solution2019::SentenceSimilarity::Main();
 	//Solution2019::ParseLispExpression::Main();
 	//Solution2019::SentenceSimilarityII::Main();
@@ -1380,6 +1375,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RectangleOverlap::Main();
 	//Solution2019::TwoFourGame::Main();	
 	//Solution2019::PartitiontoKEqualSumSubsets::Main();
+
+	//11/11/2019
+	//Solution2019::SubtreeofAnotherTree::Main();
+	//Solution2019::BestTimetoBuyandSellStockwithCooldown::Main();
+	//Solution2019::CountDifferentPalindromicSubsequences::Main();
+	//Solution2019::SingleNumberII::Main();
+	//Solution2019::ConcatenatedWords::Main();
 
 	//====Problem Ends====
 

@@ -20,7 +20,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="./web/codepage.css" />
+	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
 	<h1>SingleNumberII</h1>
@@ -28,13 +28,41 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-// 
+#include "stdafx.h"
+
+//Given a non-empty array of integers, every element appears three times except
+//for one, which appears exactly once. Find that single one.
+//
+//Note:
+//Your algorithm should have a linear runtime complexity. Could you implement it
+//without using extra memory?
+//
+//Example 1:
+//Input: [2,2,3,2]
+//Output: 3
+//
+//Example 2:
+//Input: [0,1,0,1,0,1,99]
+//Output: 99
 
 namespace Solution2019
 {
 	namespace SingleNumberII
 	{
+		int singleNumber(vector&lt;int&gt;& nums) {
+			if (nums.size() == 1) { return nums[0]; }
+			int result = 0;
+			for (int i = 0; i &lt; 32; i++) {
+				int sum = 0;
+				for (int num : nums) {
+					sum += (num &gt;&gt; i) & 1;
+				}
+				sum %= 3;
+				result = result | (sum &lt;&lt; i);
+			}
+			return result;
+		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);
