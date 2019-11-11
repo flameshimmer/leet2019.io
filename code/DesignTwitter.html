@@ -20,7 +20,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="./web/codepage.css" />
+	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
 	<h1>DesignTwitter</h1>
@@ -28,13 +28,98 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-// 
+#include "stdafx.h"
+
+//Design a simplified version of Twitter where users can post tweets,
+//follow/unfollow another user and is able to see the 10 most recent tweets in
+//the user's news feed. Your design should support the following methods:
+//postTweet(userId, tweetId): Compose a new tweet.
+//getNewsFeed(userId): Retrieve the 10 most recent tweet ids in the user's news
+//feed. Each item in the news feed must be posted by users who the user followed
+//or by the user herself. Tweets must be ordered from most recent to least
+//recent.
+//follow(followerId, followeeId): Follower follows a followee.
+//unfollow(followerId, followeeId): Follower unfollows a followee.
+//
+//Example:
+//Twitter twitter = new Twitter();
+//// User 1 posts a new tweet (id = 5).
+//twitter.postTweet(1, 5);
+//// User 1's news feed should return a list with 1 tweet id -&gt; [5].
+//twitter.getNewsFeed(1);
+//// User 1 follows user 2.
+//twitter.follow(1, 2);
+//// User 2 posts a new tweet (id = 6).
+//twitter.postTweet(2, 6);
+//// User 1's news feed should return a list with 2 tweet ids -&gt; [6, 5].
+//// Tweet id 6 should precede tweet id 5 because it is posted after tweet id 5.
+//twitter.getNewsFeed(1);
+//// User 1 unfollows user 2.
+//twitter.unfollow(1, 2);
+//// User 1's news feed should return a list with 1 tweet id -&gt; [5],
+//// since user 1 is no longer following user 2.
+//twitter.getNewsFeed(1);
 
 namespace Solution2019
 {
 	namespace DesignTwitter
 	{
+		class Twitter {
+			unordered_map&lt;int, set&lt;int&gt;&gt; followMap;
+			unordered_map&lt;int, vector&lt;pair&lt;int, int&gt;&gt;&gt; tweets;
+			int id;
+		public:
+			/** Initialize your data structure here. */
+			Twitter() {
+				id = 0;
+			}
+
+			/** Compose a new tweet. */
+			void postTweet(int userId, int tweetId) {
+				tweets[userId].push_back({ id, tweetId });
+				id++;
+			}
+
+			/** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
+			vector&lt;int&gt; getNewsFeed(int userId) {
+				set&lt;pair&lt;int, int&gt;, greater&lt;pair&lt;int, int&gt;&gt;&gt; mySet;
+				vector&lt;pair&lt;int, int&gt;&gt;& userTweet = tweets[userId];
+				for (int i = userTweet.size() - 1; i &gt;= max(0, (int)(userTweet.size() - 10)); i--) {
+					mySet.insert(userTweet[i]);
+				}
+				for (int f : followMap[userId]) {
+					vector&lt;pair&lt;int, int&gt;&gt;& userTweet = tweets[f];
+					for (int i = userTweet.size() - 1; i &gt;= max(0, (int)(userTweet.size() - 10)); i--) {
+						mySet.insert(userTweet[i]);
+					}
+				}
+				vector&lt;int&gt; result;
+				for (auto& p : mySet) {
+					result.push_back(p.second);
+					if (result.size() == 10) { break; }
+				}
+				return result;
+			}
+
+			/** Follower follows a followee. If the operation is invalid, it should be a no-op. */
+			void follow(int followerId, int followeeId) {
+				followMap[followerId].insert(followeeId);
+			}
+
+			/** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
+			void unfollow(int followerId, int followeeId) {
+				followMap[followerId].erase(followeeId);
+			}
+		};
+
+		/**
+		 * Your Twitter object will be instantiated and called as such:
+		 * Twitter* obj = new Twitter();
+		 * obj-&gt;postTweet(userId,tweetId);
+		 * vector&lt;int&gt; param_2 = obj-&gt;getNewsFeed(userId);
+		 * obj-&gt;follow(followerId,followeeId);
+		 * obj-&gt;unfollow(followerId,followeeId);
+		 */
 		void Main() {
 			string test = "tst test test";
 			print(test);

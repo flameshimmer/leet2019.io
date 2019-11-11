@@ -161,7 +161,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DataStreamasDisjointIntervals::Main();
 	//Solution2019::DesignSnakeGame::Main();
 	//Solution2019::RussianDollEnvelopes::Main();
-	//Solution2019::DesignTwitter::Main();
 	//Solution2019::LineReflection::Main();
 	//Solution2019::CountNumberswithUniqueDigits::Main();
 	//Solution2019::RearrangeStringkDistanceApart::Main();
@@ -386,7 +385,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ImplementMagicDictionary::Main();
 	//Solution2019::MapSumPairs::Main();
 	//Solution2019::ValidParenthesisString::Main();
-	//Solution2019::TwoFourGame::Main();	
 	//Solution2019::NextClosestTime::Main();
 	//Solution2019::KEmptySlots::Main();
 	//Solution2019::RedundantConnection::Main();
@@ -396,7 +394,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::KnightProbabilityinChessboard::Main();	
 	//Solution2019::StickerstoSpellWord::Main
 	//Solution2019::NumberofDistinctIslands::Main();
-	//Solution2019::PartitiontoKEqualSumSubsets::Main();
 	//Solution2019::FallingSquares::Main();
 	//Solution2019::InsertintoaBinarySearchTree::Main();
 	//Solution2019::SearchinaSortedArrayofUnknownSize::Main();
@@ -406,7 +403,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumASCIIDeleteSumforTwoStrings::Main();
 	//Solution2019::RangeModule::Main();
 	//Solution2019::LongestWordinDictionary::Main();
-	//Solution2019::AccountsMerge::Main();
 	//Solution2019::RemoveComments::Main();
 	//Solution2019::NumberofAtoms::Main();
 	//Solution2019::MinimumWindowSubsequence::Main();
@@ -476,7 +472,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaskingPersonalInformation::Main();
 	//Solution2019::FindAndReplaceinString::Main();
 	//Solution2019::SumofDistancesinTree::Main();
-	//Solution2019::RectangleOverlap::Main();
 	//Solution2019::NewTwoOneGame::Main();
 	//Solution2019::PushDominoes::Main();
 	//Solution2019::SimilarStringGroups::Main();
@@ -1378,6 +1373,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::GasStation::Main();
 	//Solution2019::SuperEggDrop::Main();
 	//Solution2019::CoinChangeTwo::Main();
+
+	//11/10/2019
+	//Solution2019::AccountsMerge::Main();
+	//Solution2019::DesignTwitter::Main();
+	//Solution2019::RectangleOverlap::Main();
+	//Solution2019::TwoFourGame::Main();	
+	//Solution2019::PartitiontoKEqualSumSubsets::Main();
 
 	//====Problem Ends====
 
