@@ -16,6 +16,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
+	//11/12/2019
+	//Solution2019::ReorganizeString::Main();
+	Solution2019::KokoEatingBananas::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -423,7 +426,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PartitionLabels::Main();
 	//Solution2019::LargestPlusSign::Main();
 	//Solution2019::CouplesHoldingHands::Main();
-	//Solution2019::ReorganizeString::Main();
 	//Solution2019::BasicCalculatorIV::Main();
 	//Solution2019::SlidingPuzzle::Main();
 	//Solution2019::MinimizeMaxDistancetoGasStation::Main();
@@ -493,7 +495,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReorderedPowerofTwo::Main();
 	//Solution2019::MinimumNumberofRefuelingStops::Main();
 	//Solution2019::WalkingRobotSimulation::Main();
-	//Solution2019::KokoEatingBananas::Main();
 	//Solution2019::StoneGame::Main();
 	//Solution2019::NthMagicalNumber::Main();
 	//Solution2019::ProfitableSchemes::Main();

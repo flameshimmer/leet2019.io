@@ -25,19 +25,6 @@ namespace Solution2019
 {
 	namespace ConcatenatedWords
 	{
-		vector<string> findAllConcatenatedWordsInADict(vector<string>& words) {
-			vector<string> result;
-			unordered_set<string> dict;
-			sort(words.begin(), words.end(), [](string& a, string& b) {return a.size() < b.size(); });
-			for (string& w : words) {
-				if (formWord(w, dict)) {
-					result.push_back(w);
-				}
-				dict.insert(w);
-			}
-			return result;
-		}
-
 		bool formWord(string& s, unordered_set<string>& dict) {
 			if (s.empty()) { return false; }
 
@@ -53,6 +40,19 @@ namespace Solution2019
 				}
 			}
 			return dp[len];
+		}
+
+		vector<string> findAllConcatenatedWordsInADict(vector<string>& words) {
+			vector<string> result;
+			unordered_set<string> dict;
+			sort(words.begin(), words.end(), [](string& a, string& b) {return a.size() < b.size(); });
+			for (string& w : words) {
+				if (formWord(w, dict)) {
+					result.push_back(w);
+				}
+				dict.insert(w);
+			}
+			return result;
 		}
 
 		void Main() {
