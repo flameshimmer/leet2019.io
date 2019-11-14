@@ -24,9 +24,67 @@ namespace Solution2019
 {
 	namespace ConstructQuadTree
 	{
+
+		// Definition for a QuadTree node.
+		class Node {
+		public:
+			bool val;
+			bool isLeaf;
+			Node* topLeft;
+			Node* topRight;
+			Node* bottomLeft;
+			Node* bottomRight;
+
+			Node() {}
+
+			Node(bool _val, bool _isLeaf, Node* _topLeft, Node* _topRight, Node* _bottomLeft, Node* _bottomRight) {
+				val = _val;
+				isLeaf = _isLeaf;
+				topLeft = _topLeft;
+				topRight = _topRight;
+				bottomLeft = _bottomLeft;
+				bottomRight = _bottomRight;
+			}
+		};
+
+
+		Node* helper(vector<vector<int>>& grid, int x, int y, int len) {
+			if (len == 1) {
+				return new Node(grid[x][y], true, nullptr, nullptr, nullptr, nullptr);
+			}
+
+			Node* result = new Node(0, false, nullptr, nullptr, nullptr, nullptr);
+			Node* topLeft = helper(grid, x, y, len / 2);
+			Node* topRight = helper(grid, x, y + len / 2, len / 2);
+			Node* bottomLeft = helper(grid, x + len / 2, y, len / 2);
+			Node* bottomRight = helper(grid, x + len / 2, y + len / 2, len / 2);
+
+			if (topLeft->isLeaf &&
+				topRight->isLeaf &&
+				bottomLeft->isLeaf &&
+				bottomRight->isLeaf &&
+				topLeft->val == topRight->val &&
+				topRight->val == bottomLeft->val &&
+				bottomLeft->val == bottomRight->val) {
+				result->isLeaf = true;
+				result->val = topLeft->val;
+			}
+			else {
+				result->topLeft = topLeft;
+				result->topRight = topRight;
+				result->bottomLeft = bottomLeft;
+				result->bottomRight = bottomRight;
+			}
+			return result;
+		}
+
+		Node* construct(vector<vector<int>>& grid) {
+			return helper(grid, 0, 0, grid.size());
+		}
+
 		void Main() {
-			string test = "tst test test";
-			print(test);
+			vector<vector<int>> test = { {1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,1,1,1,1},{1,1,1,1,1,1,1,1},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0},{1,1,1,1,0,0,0,0} };
+			construct(test);
 		}
 	}
 }

@@ -16,12 +16,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//11/13/2019
-	//Solution2019::RobotBoundedInCircle::Main();
-	//Solution2019::SubstringwithConcatenationofAllWords::Main();
-	//Solution2019::DesignInMemoryFileSystem::Main();
-	//Solution2019::RemoveDuplicateLetters::Main();
+	//11/14/2019
 	//Solution2019::ConstructQuadTree::Main();
+	//Solution2019::SlidingPuzzle::Main();
+	//Solution2019::OptimalAccountBalancing::Main(); // need some more looking
+	//Solution2019::StrongPasswordChecker::Main(); // need some more looking
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -204,7 +203,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PacificAtlanticWaterFlow::Main();
 	//Solution2019::SentenceScreenFitting::Main();
 	//Solution2019::BattleshipsinaBoard::Main();
-	//Solution2019::StrongPasswordChecker::Main();
 	//Solution2019::MaximumXORofTwoNumbersinanArray::Main();
 	//Solution2019::ValidWordSquare::Main();
 	//Solution2019::ReconstructOriginalDigitsfromEnglish::Main();
@@ -231,7 +229,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RepeatedSubstringPattern::Main();
 	//Solution2019::MinimumMovestoEqualArrayElementsII::Main();
 	//Solution2019::CanIWin::Main();
-	//Solution2019::OptimalAccountBalancing::Main();
 	//Solution2019::CountTheRepetitions::Main();
 	//Solution2019::UniqueSubstringsinWraparoundString::Main();
 	//Solution2019::ValidateIPAddress::Main();
@@ -426,7 +423,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LargestPlusSign::Main();
 	//Solution2019::CouplesHoldingHands::Main();
 	//Solution2019::BasicCalculatorIV::Main();
-	//Solution2019::SlidingPuzzle::Main();
 	//Solution2019::MinimizeMaxDistancetoGasStation::Main();
 	//Solution2019::SplitBST::Main();
 	//Solution2019::SwapAdjacentinLRString::Main();
@@ -1385,6 +1381,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//11/12/2019
 	//Solution2019::ReorganizeString::Main();
 	//Solution2019::KokoEatingBananas::Main();
+
+	//11/13/2019
+	//Solution2019::RobotBoundedInCircle::Main();
+	//Solution2019::SubstringwithConcatenationofAllWords::Main();
+	//Solution2019::DesignInMemoryFileSystem::Main();
+	//Solution2019::RemoveDuplicateLetters::Main();
 
 	//====Problem Ends====
 
