@@ -20,7 +20,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="./web/codepage.css" />
+	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
 	<h1>ReorganizeString</h1>
@@ -28,16 +28,55 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-// 
+#include "stdafx.h"
+
+//Given a string S, check if the letters can be rearranged so that two characters
+//that are adjacent to each other are not the same.
+//If possible, output any possible result.  If not possible, return the empty
+//string.
+//
+//Example 1:
+//Input: S = "aab"
+//Output: "aba"
+//
+//Example 2:
+//Input: S = "aaab"
+//Output: ""
+//
+//Note:
+//S will consist of lowercase letters and have length in range [1, 500].
 
 namespace Solution2019
 {
 	namespace ReorganizeString
 	{
+		string reorganizeString(string S) {
+			int map[26] = { 0 };
+			int len = S.size();
+			for (char c : S) { map[c - 'a']++; }
+			vector&lt;pair&lt;int, char&gt;&gt; charCounts;
+			for (int i = 0; i &lt; 26; i++) {
+				if (map[i] &gt; (len + 1) / 2) { return ""; }
+				if (map[i] &gt; 0) { charCounts.push_back({ map[i], i + 'a' }); }
+			}
+
+			sort(charCounts.rbegin(), charCounts.rend());
+			string sorted;
+			for (auto& p : charCounts) {
+				sorted += string(p.first, p.second);
+			}
+
+			string result;
+			for (int i = 0, j = (len + 1) / 2; i &lt; (len + 1) / 2; i++, j++) {
+				result += sorted[i];
+				if (j &lt; len) { result += sorted[j]; }
+			}
+			return result;
+		}
+
 		void Main() {
 			string test = "tst test test";
-			print(test);
+			print(reorganizeString("aaab"));
 		}
 	}
 }

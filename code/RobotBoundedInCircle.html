@@ -1,0 +1,107 @@
+<!doctype html>
+	<html>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151395790-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-151395790-1');
+	</script>	
+	<title>RobotBoundedInCircle</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="../web/codepage.css" />
+	</head>
+	<body>
+	<h1>RobotBoundedInCircle</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+#include "stdafx.h"
+
+//On an infinite plane, a robot initially stands at (0, 0) and faces north.  The
+//robot can receive one of three instructions:
+//"G": go straight 1 unit;
+//"L": turn 90 degrees to the left;
+//"R": turn 90 degress to the right.
+//The robot performs the instructions given in order, and repeats them forever.
+//Return true if and only if there exists a circle in the plane such that the
+//robot never leaves the circle.
+// 
+//
+//Example 1:
+//Input: "GGLLGG"
+//Output: true
+//Explanation: 
+//The robot moves from (0,0) to (0,2), turns 180 degrees, and then returns to
+//(0,0).
+//When repeating these instructions, the robot remains in the circle of radius 2
+//centered at the origin.
+//
+//Example 2:
+//Input: "GG"
+//Output: false
+//Explanation: 
+//The robot moves north indefinitely.
+//
+//Example 3:
+//Input: "GL"
+//Output: true
+//Explanation: 
+//The robot moves from (0, 0) -&gt; (0, 1) -&gt; (-1, 1) -&gt; (-1, 0) -&gt; (0, 0) -&gt; ...
+// 
+//
+//Note:
+//1 &lt;= instructions.length &lt;= 100
+//instructions[i] is in {'G', 'L', 'R'}
+
+namespace Solution2019
+{
+	namespace RobotBoundedInCircle
+	{
+		bool isRobotBounded(string instructions) {
+			int x = 0;
+			int y = 0;
+			int i = 0;
+			vector&lt;vector&lt;int&gt;&gt;d = { {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
+			for (char c : instructions) {
+				if (c == 'R') {
+					i = (i + 1) % 4;
+				}
+				else if (c == 'L') {
+					i = (i + 3) % 4;
+				}
+				else {
+					x += d[i][0];
+					y += d[i][1];
+				}
+			}
+			return x == 0 && y == 0 || i &gt; 0;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

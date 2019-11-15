@@ -16,7 +16,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-
+	//11/14/2019
+	//Solution2019::ConstructQuadTree::Main();
+	//Solution2019::SlidingPuzzle::Main();
+	//Solution2019::OptimalAccountBalancing::Main(); // need some more looking
+	//Solution2019::StrongPasswordChecker::Main(); // need some more looking
+	Solution2019::ExpressionAddOperators::Main();
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -345,6 +350,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SmallestRangeCoveringElementsfromKLists::Main();
 	//Solution2019::SumofSquareNumbers::Main();
 	//Solution2019::FindtheDerangementofAnArray::Main();
+	//Solution2019::ExclusiveTimeofFunctions::Main();
 	//Solution2019::ShoppingOffers::Main();
 	//Solution2019::DecodeWaysII::Main();
 	//Solution2019::SolvetheEquation::Main();
@@ -1381,14 +1387,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SubstringwithConcatenationofAllWords::Main();
 	//Solution2019::DesignInMemoryFileSystem::Main();
 	//Solution2019::RemoveDuplicateLetters::Main();
-
-	//11/14/2019
-	//Solution2019::ConstructQuadTree::Main();
-	//Solution2019::SlidingPuzzle::Main();
-	//Solution2019::OptimalAccountBalancing::Main(); // need some more looking
-	//Solution2019::StrongPasswordChecker::Main(); // need some more looking
-	//Solution2019::ExpressionAddOperators::Main();
-	//Solution2019::ExclusiveTimeofFunctions::Main();
 
 	//====Problem Ends====
 
