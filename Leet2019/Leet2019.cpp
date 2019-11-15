@@ -16,6 +16,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
+	//11/15/2019
+	//Solution2019::FirstBadVersion::Main();
+	//Solution2019::AddandSearchWordDatastructuredesign::Main();
+	//Solution2019::RangeSumQueryTwoDMutable::Main();
+	//Solution2019::ContinuousSubarraySum::Main();
 
 
 	// ========================= Untackled =================================		
@@ -79,7 +84,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RisingTemperature::Main
 	//Solution2019::BitwiseANDofNumbersRange::Main();
 	//Solution2019::IsomorphicStrings::Main();
-	//Solution2019::AddandSearchWordDatastructuredesign::Main();
 	//Solution2019::HouseRobberII::Main();	
 	//Solution2019::CombinationSumIII::Main();
 	//Solution2019::RectangleArea::Main();
@@ -110,7 +114,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HIndex::Main();
 	//Solution2019::HIndexII::Main();
 	//Solution2019::PaintFence::Main();
-	//Solution2019::FirstBadVersion::Main();
 	//Solution2019::PerfectSquares::Main();
 	//Solution2019::ZigzagIterator::Main();
 	//Solution2019::PeekingIterator::Main();
@@ -129,7 +132,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NumberofIslandsII::Main();
 	//Solution2019::AdditiveNumber::Main();
 	//Solution2019::RangeSumQueryMutable::Main();
-	//Solution2019::RangeSumQueryTwoDMutable::Main();
 	//Solution2019::MinimumHeightTrees::Main();
 	//Solution2019::SparseMatrixMultiplication::Main();
 	//Solution2019::SuperUglyNumber::Main();
@@ -268,7 +270,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SuperWashingMachines::Main();
 	//Solution2019::RandomFlipMatrix::Main();
 	//Solution2019::LongestUncommonSubsequenceII::Main();
-	//Solution2019::ContinuousSubarraySum::Main();
 	//Solution2019::LongestWordinDictionarythroughDeleting::Main();
 	//Solution2019::WordAbbreviation::Main();
 	//Solution2019::GamePlayAnalysisIII::Main();
