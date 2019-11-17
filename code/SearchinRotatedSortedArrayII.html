@@ -20,7 +20,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="./web/codepage.css" />
+	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
 	<h1>SearchinRotatedSortedArrayII</h1>
@@ -28,7 +28,7 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
+#include "stdafx.h"
 //Suppose an array sorted in ascending order is 
 //rotated at some pivot unknown to you beforehand.
 //
@@ -54,25 +54,25 @@ namespace Solution2019
 {
 	namespace SearchinRotatedSortedArrayII
 	{
-		bool search(vector<int>& nums, int target) {
+		bool search(vector&lt;int&gt;& nums, int target) {
 			int len = nums.size();
 			if (len == 0) { return false; }
 
 			int start = 0;
 			int end = nums.size() - 1;
-			while (start < end) {
+			while (start &lt; end) {
 				int mid = start + (end - start) / 2;
 				if (nums[mid] == target) { return true; }
-				if (nums[start] <= nums[mid]) {
-					if (nums[start] <= target && target < nums[mid]) {
+				if (nums[start] &lt;= nums[mid]) {
+					if (nums[start] &lt;= target && target &lt; nums[mid]) {
 						end = mid - 1;
 					}
 					else {
 						start = mid + 1;
 					}
 				}
-				else if (nums[mid] < nums[end]) {
-					if (nums[mid] < target && target <= nums[end]) {
+				else if (nums[mid] &lt; nums[end]) {
+					if (nums[mid] &lt; target && target &lt;= nums[end]) {
 						start = mid + 1;
 					}
 					else {
@@ -85,7 +85,7 @@ namespace Solution2019
 		}
 
 		void Main() {
-			vector<int> test = {2,5,6,0,0,1,2};
+			vector&lt;int&gt; test = {2,5,6,0,0,1,2};
 			print(search(test,3));
 		}
 	}

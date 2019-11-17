@@ -16,12 +16,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//11/15/2019
-	//Solution2019::FirstBadVersion::Main();
-	//Solution2019::AddandSearchWordDatastructuredesign::Main();
-	//Solution2019::RangeSumQueryTwoDMutable::Main();
-	//Solution2019::ContinuousSubarraySum::Main();
-
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -108,7 +102,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UglyNumber::Main();
 	//Solution2019::UglyNumberII::Main();
 	//Solution2019::PaintHouseII::Main();
-	//Solution2019::ClosestBinarySearchTreeValue::Main();
 	//Solution2019::EncodeandDecodeStrings::Main();
 	//Solution2019::ClosestBinarySearchTreeValueII::Main();
 	//Solution2019::HIndex::Main();
@@ -424,7 +417,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SwiminRisingWater::Main();
 	//Solution2019::KthSymbolinGrammar::Main();
 	//Solution2019::RabbitsinForest::Main();
-	//Solution2019::IsGraphBipartite::Main();
 	//Solution2019::KthSmallestPrimeFraction::Main();
 	//Solution2019::EscapeTheGhosts::Main();
 	//Solution2019::DominoandTrominoTiling::Main();
@@ -452,7 +444,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ShortEncodingofWords::Main();
 	//Solution2019::CardFlippingGame::Main();
 	//Solution2019::BinaryTreesWithFactors::Main();
-	//Solution2019::GoatLatin::Main();
 	//Solution2019::MostProfitAssigningWork::Main();
 	//Solution2019::MakingALargeIsland::Main();
 	//Solution2019::UniqueLetterString::Main();
@@ -535,7 +526,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::DeleteColumnstoMakeSortedII::Main();
 	//Solution2019::TallestBillboard::Main();
 	//Solution2019::PrisonCellsAfterNDays::Main();
-	//Solution2019::CheckCompletenessofaBinaryTree::Main();
 	//Solution2019::RegionsCutBySlashes::Main();
 	//Solution2019::DeleteColumnstoMakeSortedIII::Main();
 	//Solution2019::MinimumAreaRectangleII::Main();
@@ -1390,6 +1380,19 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::StrongPasswordChecker::Main(); // need some more looking
 	//Solution2019::ExpressionAddOperators::Main();
 	//Solution2019::ExclusiveTimeofFunctions::Main();
+
+	//11/15/2019
+	//Solution2019::FirstBadVersion::Main();
+	//Solution2019::AddandSearchWordDatastructuredesign::Main();
+	//Solution2019::RangeSumQueryTwoDMutable::Main();
+	//Solution2019::ContinuousSubarraySum::Main();
+
+	//11/16/2019
+	//Solution2019::IsGraphBipartite::Main();
+	//Solution2019::ClosestBinarySearchTreeValue::Main();
+	//Solution2019::CheckCompletenessofaBinaryTree::Main();
+	//Solution2019::GoatLatin::Main();
+
 
 	//====Problem Ends====
 

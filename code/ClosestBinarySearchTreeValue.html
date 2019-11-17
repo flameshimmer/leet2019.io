@@ -20,7 +20,7 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
-	<link rel="stylesheet" href="./web/codepage.css" />
+	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
 	<h1>ClosestBinarySearchTreeValue</h1>
@@ -28,13 +28,45 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-	#include "stdafx.h"
-// 
+#include "stdafx.h"
+
+//Given a non-empty binary search tree and a target value, find the value in the
+//BST that is closest to the target.
+//
+//Note:
+//Given target value is a floating point.
+//You are guaranteed to have only one unique value in the BST that is closest to
+//the target.
+//
+//Example:
+//Input: root = [4,2,5,1,3], target = 3.714286
+//    4
+//   / \
+//  2   5
+// / \
+//1   3
+//Output: 4
 
 namespace Solution2019
 {
 	namespace ClosestBinarySearchTreeValue
 	{
+		int closestValue(TreeNode* root, double target) {
+			double minDiff = DBL_MAX;
+			int result;
+			double diff;
+			while (root) {
+				diff = fabs((double)(root-&gt;val) - target);
+				if (diff &lt; minDiff) {
+					minDiff = diff;
+					result = root-&gt;val;
+				}
+				if (root-&gt;val == target) { return result; }
+				else if (root-&gt;val &lt; target) { root = root-&gt;right; }
+				else { root = root-&gt;left; }
+			}
+			return result;
+		}
 		void Main() {
 			string test = "tst test test";
 			print(test);
