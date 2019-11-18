@@ -29,12 +29,100 @@
 	<pre>
 	<code class="language-html">
 #include "stdafx.h"
-// 
+
+//Given a binary tree
+//struct Node {
+//  int val;
+//  Node *left;
+//  Node *right;
+//  Node *next;
+//}
+//Populate each next pointer to point to its next right node. If there is no next
+//right node, the next pointer should be set to NULL.
+//Initially, all next pointers are set to NULL.
+//
+//				1
+//			   / \
+//			  2   3
+//			 / \   \
+//			4  5    7
+//After calling your function, the tree should look like :
+//				1-&gt;NULL
+//			   /  \
+//			  2 -&gt; 3-&gt;NULL
+//			 / \    \
+//			4--&gt;5---&gt;7-&gt;NULL
+//
+//Note:
+//You may only use constant extra space.
+//Recursive approach is fine, implicit stack space does not count as extra space
+//for this problem.
 
 namespace Solution2019
 {
 	namespace PopulatingNextRightPointersinEachNodeII
 	{
+		class Node {
+		public:
+			int val;
+			Node* left;
+			Node* right;
+			Node* next;
+
+			Node() {}
+
+			Node(int _val, Node* _left, Node* _right, Node* _next) {
+				val = _val;
+				left = _left;
+				right = _right;
+				next = _next;
+			}
+		};
+
+		Node* connectIterative(Node* root) {
+			Node* result = root;
+			Node* cur = root;
+			while (cur) {
+				Node* prev = nullptr;
+				Node* next = nullptr;
+				while (cur) {
+					if (cur-&gt;left) {
+						if (!prev) { prev = cur-&gt;left; }
+						else { prev-&gt;next = cur-&gt;left; prev = prev-&gt;next; }
+						if (!next) { next = cur-&gt;left; }
+					}
+					if (cur-&gt;right) {
+						if (!prev) { prev = cur-&gt;right; }
+						else { prev-&gt;next = cur-&gt;right; prev = prev-&gt;next; }
+						if (!next) { next = cur-&gt;right; }
+					}
+					cur = cur-&gt;next;
+				}
+				cur = next;
+			}
+			return result;
+		}
+
+		Node* connectRecursive(Node* root) {
+			if (!root) { return nullptr; }
+			Node* result = root;
+			Node* child = nullptr;
+			if (root-&gt;left) { root-&gt;left-&gt;next = root-&gt;right; child = root-&gt;left; }
+			if (root-&gt;right) { child = root-&gt;right; }
+
+			if (child) {
+				Node* cur = root-&gt;next;
+				while (cur) {
+					if (cur-&gt;left) { child-&gt;next = cur-&gt;left; break; }
+					if (cur-&gt;right) { child-&gt;next = cur-&gt;right; break; }
+					cur = cur-&gt;next;
+				}
+			}
+			connectRecursive(root-&gt;right); // right first!
+			connectRecursive(root-&gt;left);
+			return result;
+		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);

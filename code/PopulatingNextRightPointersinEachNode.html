@@ -29,12 +29,110 @@
 	<pre>
 	<code class="language-html">
 #include "stdafx.h"
-// 
+
+//You are given a perfect binary tree where all leaves are on the same level, and
+//every parent has two children. The binary tree has the following definition:
+//struct Node {
+//  int val;
+//  Node *left;
+//  Node *right;
+//  Node *next;
+//}
+//Populate each next pointer to point to its next right node. If there is no next
+//right node, the next pointer should be set to NULL.
+//Initially, all next pointers are set to NULL.
+//
+//Example:
+/*
+			 1
+			/ \
+		   2   3
+		  /\   /\
+		 4  5 6  7
+		 (Figure A)
+
+		 1 -&gt; NULL
+		/  \
+	   2 -&gt; 3 -&gt; NULL
+	  /\    /\
+	 4-&gt;5-&gt;6-&gt;7 -&gt; NULL
+	 (Figure B)
+*/
+//Explanation: Given the above perfect binary tree (Figure A), your function
+//should populate each next pointer to point to its next right node, just like in
+//Figure B.
+//
+//Note:
+//You may only use constant extra space.
+//Recursive approach is fine, implicit stack space does not count as extra space
+//for this problem. 
 
 namespace Solution2019
 {
 	namespace PopulatingNextRightPointersinEachNode
 	{
+		class Node {
+		public:
+			int val;
+			Node* left;
+			Node* right;
+			Node* next;
+
+			Node() {}
+
+			Node(int _val, Node* _left, Node* _right, Node* _next) {
+				val = _val;
+				left = _left;
+				right = _right;
+				next = _next;
+			}
+		};
+
+		Node* connectRecursive(Node* root) {
+			if (!root || !root-&gt;left || !root-&gt;right) { return root; }
+			root-&gt;left-&gt;next = root-&gt;right;
+			root-&gt;right-&gt;next = root-&gt;next ? root-&gt;next-&gt;left : nullptr;
+			connectRecursive(root-&gt;left);
+			connectRecursive(root-&gt;right);
+			return root;
+		}
+
+		Node* connectIterative(Node* root) {
+			if (!root) { return nullptr; }
+
+			Node* levelStart = root; // do a backup of the root here due to return requirement
+			while (levelStart-&gt;left) {
+				Node* cur = levelStart;
+				while (cur) {
+					cur-&gt;left-&gt;next = cur-&gt;right;
+					cur-&gt;right-&gt;next = cur-&gt;next ? cur-&gt;next-&gt;left : nullptr;
+					cur = cur-&gt;next;
+				}
+				levelStart = levelStart-&gt;left; // levelStart go down a level
+			}
+			return root;
+		}
+
+		Node* connectBFS(Node* root) {
+			if (!root) { return nullptr; }
+			queue&lt;Node*&gt; q;
+			q.push(root);
+			while (!q.empty()) {
+				int sz = q.size();
+				Node* cur;
+				while (sz) {
+					sz--;
+					cur = q.front();
+					q.pop();
+					cur-&gt;next = q.front();
+					if (cur-&gt;left) { q.push(cur-&gt;left); }
+					if (cur-&gt;right) { q.push(cur-&gt;right); }
+				}
+				cur-&gt;next = nullptr;
+			}
+			return root;
+		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);

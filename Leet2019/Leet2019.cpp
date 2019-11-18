@@ -16,7 +16,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
@@ -41,8 +40,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PathSumII::Main();
 	//Solution2019::FlattenBinaryTreetoLinkedList::Main();
 	//Solution2019::DistinctSubsequences::Main();
-	//Solution2019::PopulatingNextRightPointersinEachNode::Main();
-	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();	
 	//Solution2019::SumRoottoLeafNumbers::Main();
 	//Solution2019::Candy::Main();
 	//Solution2019::BinaryTreeUpsideDown::Main();
@@ -79,7 +76,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CombinationSumIII::Main();
 	//Solution2019::RectangleArea::Main();
 	//Solution2019::ImplementStackusingQueues::Main();
-	//Solution2019::KthSmallestElementinaBST::Main();
 	//Solution2019::PowerofTwo::Main();
 	//Solution2019::ImplementQueueusingStacks::Main();
 	//Solution2019::NumberofDigitOne::Main();
@@ -89,7 +85,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::StrobogrammaticNumberIII::Main();
 	//Solution2019::GroupShiftedStrings::Main();
 	//Solution2019::CountUnivalueSubtrees::Main();
-	//Solution2019::FlattenTwoDVector::Main();
 	//Solution2019::FactorCombinations::Main();
 	//Solution2019::VerifyPreorderSequenceinBinarySearchTree::Main();
 	//Solution2019::BinaryTreePaths::Main();
@@ -104,7 +99,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HIndex::Main();
 	//Solution2019::HIndexII::Main();
 	//Solution2019::PaintFence::Main();
-	//Solution2019::PerfectSquares::Main();
 	//Solution2019::ZigzagIterator::Main();
 	//Solution2019::PeekingIterator::Main();
 	//Solution2019::InorderSuccessorinBST::Main();
@@ -1394,6 +1388,13 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::IncreasingTripletSubsequence::Main();
 	//Solution2019::WiggleSortII::Main();
 	//Solution2019::LongestSubstringwithAtLeastKRepeatingCharacters::Main();
+
+	//11/18/2019
+	//Solution2019::PopulatingNextRightPointersinEachNode::Main();
+	//Solution2019::PopulatingNextRightPointersinEachNodeII::Main();	
+	//Solution2019::PerfectSquares::Main();
+	//Solution2019::FlattenTwoDVector::Main();
+	//Solution2019::KthSmallestElementinaBST::Main();
 
 	//====Problem Ends====
 
