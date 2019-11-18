@@ -28,16 +28,60 @@
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
-#include "stdafx.h"
-// 
+﻿#include "stdafx.h"
+
+//Given a n x n matrix where each of the rows and columns are sorted in ascending
+//order, find the kth smallest element in the matrix.
+//
+//Note that it is the kth smallest element in the sorted order, not the kth
+//distinct element.
+//
+//Example:
+//matrix = [
+//   [ 1,  5,  9],
+//   [10, 11, 13],
+//   [12, 13, 15]
+//],
+//k = 8,
+//return 13.
+//
+//Note:
+//You may assume k is always valid, 1 ≤ k ≤ n2.
 
 namespace Solution2019
 {
 	namespace KthSmallestElementinaSortedMatrix
 	{
+
+		struct Elem {
+			int r;
+			int c;
+			int v;
+			bool operator&lt;(const Elem& rhs) const {
+				return v &gt; rhs.v;
+			}
+		};
+
+		int kthSmallest(vector&lt;vector&lt;int&gt;&gt;& matrix, int k) {
+			int rowCount = matrix.size();
+			int colCount = matrix[0].size();
+
+			priority_queue&lt;Elem&gt; pq;
+			for (int j = 0; j &lt; colCount; j++) {
+				pq.push({ 0, j, matrix[0][j] });
+			}
+			for (int i = 0; i &lt; k - 1; i++) {
+				auto [r, c, v] = pq.top();
+				pq.pop();
+				if (r == rowCount - 1) { continue; }
+				pq.push({ r + 1, c, matrix[r + 1][c] });
+			}
+			return pq.top().v;
+		}
+
 		void Main() {
-			string test = "tst test test";
-			print(test);
+			vector&lt;vector&lt;int&gt;&gt; test = { {1,5,9},{10,11,13},{12,13,15} };
+			print(kthSmallest(test, 8));
 		}
 	}
 }
