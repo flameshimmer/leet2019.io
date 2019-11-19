@@ -16,7 +16,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
+
+
 	// ========================= Untackled =================================		
+	//Solution2019::RangeSumQueryTwoDMutable::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
@@ -47,7 +50,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CompareVersionNumbers::Main();
 	//Solution2019::ExcelSheetColumnTitle::Main();
 	//Solution2019::TwoSumIIIDatastructuredesign::Main();
-	//Solution2019::FactorialTrailingZeroes::Main();
 	//Solution2019::DungeonGame::Main();
 	//Solution2019::CombineTwoTables::Main();
 	//Solution2019::SecondHighestSalary::Main();
@@ -63,7 +65,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RepeatedDNASequences::Main();
 	//Solution2019::BestTimetoBuyandSellStockIV::Main();
 	//Solution2019::ReverseBits::Main();
-	//Solution2019::NumberofOneBits::Main();
 	//Solution2019::WordFrequency::Main();
 	//Solution2019::ValidPhoneNumbers::Main();
 	//Solution2019::TransposeFile::Main();
@@ -101,7 +102,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PaintFence::Main();
 	//Solution2019::ZigzagIterator::Main();
 	//Solution2019::PeekingIterator::Main();
-	//Solution2019::InorderSuccessorinBST::Main();
 	//Solution2019::WallsandGates::Main();
 	//Solution2019::UniqueWordAbbreviation::Main();
 	//Solution2019::WordPattern::Main();
@@ -112,10 +112,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BullsandCows::Main();
 	//Solution2019::SmallestRectangleEnclosingBlackPixels::Main();
 	//Solution2019::RangeSumQueryImmutable::Main();
-	//Solution2019::RangeSumQueryTwoDImmutable::Main();
 	//Solution2019::NumberofIslandsII::Main();
 	//Solution2019::AdditiveNumber::Main();
-	//Solution2019::RangeSumQueryMutable::Main();
 	//Solution2019::MinimumHeightTrees::Main();
 	//Solution2019::SparseMatrixMultiplication::Main();
 	//Solution2019::SuperUglyNumber::Main();
@@ -158,7 +156,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::WiggleSubsequence::Main();
 	//Solution2019::CombinationSumIV::Main();
 	//Solution2019::LinkedListRandomNode::Main();
-	//Solution2019::ShuffleanArray::Main();
 	//Solution2019::MiniParser::Main();
 	//Solution2019::LexicographicalNumbers::Main();
 	//Solution2019::LongestAbsoluteFilePath::Main();
@@ -1371,7 +1368,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//11/15/2019
 	//Solution2019::FirstBadVersion::Main();
 	//Solution2019::AddandSearchWordDatastructuredesign::Main();
-	//Solution2019::RangeSumQueryTwoDMutable::Main();
+	//Solution2019::RangeSumQueryTwoDImmutable::Main();	
 	//Solution2019::ContinuousSubarraySum::Main();
 
 	//11/16/2019
@@ -1395,6 +1392,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PerfectSquares::Main();
 	//Solution2019::FlattenTwoDVector::Main();
 	//Solution2019::KthSmallestElementinaBST::Main();
+
+	//11/19/2019
+	//Solution2019::ShuffleanArray::Main();
+	//Solution2019::InorderSuccessorinBST::Main();
+	//Solution2019::FactorialTrailingZeroes::Main();
+	//Solution2019::NumberofOneBits::Main();
+	//Solution2019::RangeSumQueryMutable::Main();
+
 
 	//====Problem Ends====
 
