@@ -19,7 +19,6 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 	// ========================= Untackled =================================		
-	//Solution2019::RangeSumQueryTwoDMutable::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
@@ -64,7 +63,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReverseWordsinaStringII::Main();
 	//Solution2019::RepeatedDNASequences::Main();
 	//Solution2019::BestTimetoBuyandSellStockIV::Main();
-	//Solution2019::ReverseBits::Main();
 	//Solution2019::WordFrequency::Main();
 	//Solution2019::ValidPhoneNumbers::Main();
 	//Solution2019::TransposeFile::Main();
@@ -77,7 +75,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CombinationSumIII::Main();
 	//Solution2019::RectangleArea::Main();
 	//Solution2019::ImplementStackusingQueues::Main();
-	//Solution2019::PowerofTwo::Main();
 	//Solution2019::ImplementQueueusingStacks::Main();
 	//Solution2019::NumberofDigitOne::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
@@ -123,7 +120,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::GeneralizedAbbreviation::Main();
 	//Solution2019::CreateMaximumNumber::Main();
 	//Solution2019::NumberofConnectedComponentsinanUndirectedGraph::Main();
-	//Solution2019::PowerofThree::Main();
 	//Solution2019::CountofRangeSum::Main();
 	//Solution2019::PatchingArray::Main();
 	//Solution2019::VerifyPreorderSerializationofaBinaryTree::Main();
@@ -132,7 +128,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::HouseRobberIII::Main();
 	//Solution2019::CountingBits::Main();
 	//Solution2019::LongestSubstringwithAtMostKDistinctCharacters::Main();
-	//Solution2019::PowerofFour::Main();
 	//Solution2019::IntegerBreak::Main();
 	//Solution2019::ReverseVowelsofaString::Main();
 	//Solution2019::AndroidUnlockPatterns::Main();
@@ -146,7 +141,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BombEnemy::Main();
 	//Solution2019::MaxSumofRectangleNoLargerThanK::Main();
 	//Solution2019::WaterandJugProblem::Main();
-	//Solution2019::FindLeavesofBinaryTree::Main();
 	//Solution2019::ValidPerfectSquare::Main();
 	//Solution2019::LargestDivisibleSubset::Main();
 	//Solution2019::SuperPow::Main();
@@ -1399,7 +1393,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::FactorialTrailingZeroes::Main();
 	//Solution2019::NumberofOneBits::Main();
 	//Solution2019::RangeSumQueryMutable::Main();
-
+	//Solution2019::ReverseBits::Main();
+	//Solution2019::PowerofThree::Main();
+	//Solution2019::PowerofTwo::Main();
+	//Solution2019::PowerofFour::Main();
+	//Solution2019::RangeSumQueryTwoDMutable::Main();
+	//Solution2019::FindLeavesofBinaryTree::Main();
 
 	//====Problem Ends====
 
