@@ -15,8 +15,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-
-
+	
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -152,7 +151,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LinkedListRandomNode::Main();
 	//Solution2019::MiniParser::Main();
 	//Solution2019::LexicographicalNumbers::Main();
-	//Solution2019::LongestAbsoluteFilePath::Main();
 	//Solution2019::EliminationGame::Main();
 	//Solution2019::PerfectRectangle::Main();
 	//Solution2019::RotateFunction::Main();
@@ -249,7 +247,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SingleElementinaSortedArray::Main();
 	//Solution2019::ZeroOneMatrix::Main();
 	//Solution2019::OutputContestMatches::Main();
-	//Solution2019::BoundaryofBinaryTree::Main();
 	//Solution2019::RemoveBoxes::Main();
 	//Solution2019::BinaryTreeLongestConsecutiveSequenceII::Main();
 	//Solution2019::GamePlayAnalysisIV::Main();
@@ -418,7 +415,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BusRoutes::Main();
 	//Solution2019::AmbiguousCoordinates::Main();
 	//Solution2019::RaceCar::Main();
-	//Solution2019::MostCommonWord::Main();
 	//Solution2019::ShortEncodingofWords::Main();
 	//Solution2019::CardFlippingGame::Main();
 	//Solution2019::BinaryTreesWithFactors::Main();
@@ -503,7 +499,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::LargestComponentSizebyCommonFactor::Main();
 	//Solution2019::DeleteColumnstoMakeSortedII::Main();
 	//Solution2019::TallestBillboard::Main();
-	//Solution2019::PrisonCellsAfterNDays::Main();
 	//Solution2019::RegionsCutBySlashes::Main();
 	//Solution2019::DeleteColumnstoMakeSortedIII::Main();
 	//Solution2019::MinimumAreaRectangleII::Main();
@@ -523,7 +518,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SatisfiabilityofEqualityEquations::Main();
 	//Solution2019::BrokenCalculator::Main();
 	//Solution2019::SubarrayswithKDifferentIntegers::Main();
-	//Solution2019::RottingOranges::Main();
 	//Solution2019::MinimumNumberofKConsecutiveBitFlips::Main();
 	//Solution2019::NumberofSquarefulArrays::Main();
 	//Solution2019::MaximumBinaryTreeII::Main();
@@ -1399,6 +1393,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PowerofFour::Main();
 	//Solution2019::RangeSumQueryTwoDMutable::Main();
 	//Solution2019::FindLeavesofBinaryTree::Main();
+
+	//11/20/2019
+	//Solution2019::PrisonCellsAfterNDays::Main();
+	//Solution2019::MostCommonWord::Main();
+	//Solution2019::BoundaryofBinaryTree::Main();
+	//Solution2019::RottingOranges::Main();
+	//Solution2019::LongestAbsoluteFilePath::Main();
+
 
 	//====Problem Ends====
 

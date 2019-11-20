@@ -1,0 +1,116 @@
+<!doctype html>
+	<html>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151395790-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-151395790-1');
+	</script>	
+	<title>RottingOranges</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="../web/codepage.css" />
+	</head>
+	<body>
+	<h1>RottingOranges</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+#include "stdafx.h"
+
+//In a given grid, each cell can have one of three values:
+//the value 0 representing an empty cell;
+//the value 1 representing a fresh orange;
+//the value 2 representing a rotten orange.
+//Every minute, any fresh orange that is adjacent (4-directionally) to a rotten
+//orange becomes rotten.
+//Return the minimum number of minutes that must elapse until no cell has a fresh
+//orange.  If this is impossible, return -1 instead.
+// 
+//
+//Example 1:
+//Input: [[2,1,1],[1,1,0],[0,1,1]]
+//Output: 4
+//
+//Example 2:
+//Input: [[2,1,1],[0,1,1],[1,0,1]]
+//Output: -1
+//Explanation:  The orange in the bottom left corner (row 2, column 0) is never
+//rotten, because rotting only happens 4-directionally.
+//
+//Example 3:
+//Input: [[0,2]]
+//Output: 0
+//Explanation:  Since there are already no fresh oranges at minute 0, the answer
+//is just 0.
+// 
+//
+//Note:
+//1 &lt;= grid.length &lt;= 10
+//1 &lt;= grid[0].length &lt;= 10
+//grid[i][j] is only 0, 1, or 2.
+
+namespace Solution2019
+{
+	namespace RottingOranges
+	{
+		int orangesRotting(vector&lt;vector&lt;int&gt;&gt;& grid) {
+			int rowCount = grid.size();
+			if (rowCount == 0) { return 0; }
+			int colCount = grid[0].size();
+			if (colCount == 0) { return 0; }
+
+			int fresh = 0;
+			queue&lt;pair&lt;int, int&gt;&gt; q;
+			vector&lt;vector&lt;bool&gt;&gt; visited(rowCount, vector&lt;bool&gt;(colCount, false));
+			for (int i = 0; i &lt; rowCount; i++) {
+				for (int j = 0; j &lt; colCount; j++) {
+					if (grid[i][j] == 1) { fresh++; }
+					else if (grid[i][j] == 2) { q.push({ i, j }); visited[i][j] = true; }
+				}
+			}
+
+			int result = 0;
+			while (!q.empty() && fresh &gt; 0) {
+				int sz = q.size();
+				result++;
+				while (sz) {
+					sz--;
+					auto [i, j] = q.front();
+					q.pop();
+					if (i - 1 &gt;= 0 && !visited[i - 1][j] && grid[i - 1][j] == 1) { q.push({ i - 1, j }); visited[i - 1][j] = true; fresh--; }
+					if (i + 1 &lt; rowCount && !visited[i + 1][j] && grid[i + 1][j] == 1) { q.push({ i + 1, j }); visited[i + 1][j] = true; fresh--; }
+					if (j - 1 &gt;= 0 && !visited[i][j - 1] && grid[i][j - 1] == 1) { q.push({ i, j - 1 }); visited[i][j - 1] = true; fresh--; }
+					if (j + 1 &lt; colCount && !visited[i][j + 1] && grid[i][j + 1] == 1) { q.push({ i, j + 1 }); visited[i][j + 1] = true; fresh--; }
+				}
+			}
+			return fresh == 0 ? result : -1;
+		}
+
+		void Main() {
+			vector&lt;vector&lt;int&gt;&gt; test = { {2,1,1},{1,1,0},{0,1,1} };
+			print(orangesRotting(test));
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

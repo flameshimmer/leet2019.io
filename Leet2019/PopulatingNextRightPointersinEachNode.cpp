@@ -89,7 +89,7 @@ namespace Solution2019
 			q.push(root);
 			while (!q.empty()) {
 				int sz = q.size();
-				Node* cur;
+				Node* cur = nullptr;
 				while (sz) {
 					sz--;
 					cur = q.front();
