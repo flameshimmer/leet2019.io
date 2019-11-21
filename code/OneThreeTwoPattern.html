@@ -29,12 +29,50 @@
 	<pre>
 	<code class="language-html">
 #include "stdafx.h"
-// 
+
+//Given a sequence of n integers a1, a2, ..., an, a 132 pattern is a subsequence
+//ai, aj, ak such that i &lt; j &lt; k and ai &lt; ak &lt; aj. Design an algorithm that takes
+//a list of n numbers as input and checks whether there is a 132 pattern in the
+//list.
+//
+//Note: n will be less than 15,000.
+//
+//Example 1:
+//Input: [1, 2, 3, 4]
+//Output: False
+//Explanation: There is no 132 pattern in the sequence.
+//
+//Example 2:
+//Input: [3, 1, 4, 2]
+//Output: True
+//Explanation: There is a 132 pattern in the sequence: [1, 4, 2].
+//
+//Example 3:
+//Input: [-1, 3, 2, 0]
+//Output: True
+//Explanation: There are three 132 patterns in the sequence: [-1, 3, 2], [-1, 3,
+//0] and [-1, 2, 0].
 
 namespace Solution2019
 {
 	namespace OneThreeTwoPattern
 	{
+		bool find132pattern(vector&lt;int&gt;& nums) {
+			int s2 = INT_MIN;
+			stack&lt;int&gt; s;
+			for (int i = nums.size() - 1; i &gt;= 0; i--) {
+				if (nums[i] &lt; s2) { return true; }
+				else {
+					while (!s.empty() && nums[i] &gt; s.top()) {
+						s2 = s.top();
+						s.pop();
+					}
+				}
+				s.push(nums[i]);
+			}
+			return false;
+		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);

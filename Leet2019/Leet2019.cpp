@@ -15,13 +15,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-	
 
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
-	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::SuperPalindromes::Main();
 	//Solution2019::LargestPalindromeProduct::Main();
 	//Solution2019::FindtheClosestPalindrome::Main();
@@ -131,7 +129,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ReverseVowelsofaString::Main();
 	//Solution2019::AndroidUnlockPatterns::Main();
 	//Solution2019::DataStreamasDisjointIntervals::Main();
-	//Solution2019::DesignSnakeGame::Main();
 	//Solution2019::RussianDollEnvelopes::Main();
 	//Solution2019::LineReflection::Main();
 	//Solution2019::CountNumberswithUniqueDigits::Main();
@@ -190,7 +187,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumNumberofArrowstoBurstBalloons::Main();
 	//Solution2019::MinimumMovestoEqualArrayElements::Main();
 	//Solution2019::AssignCookies::Main();
-	//Solution2019::OneThreeTwoPattern::Main();
 	//Solution2019::PoorPigs::Main();
 	//Solution2019::RepeatedSubstringPattern::Main();
 	//Solution2019::MinimumMovestoEqualArrayElementsII::Main();
@@ -573,7 +569,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::BraceExpansion::Main();
 	//Solution2019::ConfusingNumberII::Main();
 	//Solution2019::LargestValuesFromLabels::Main();
-	//Solution2019::ShortestPathinBinaryMatrix::Main();
 	//Solution2019::ShortestCommonSupersequence::Main();
 	//Solution2019::StatisticsfromaLargeSample::Main();
 	//Solution2019::CarPooling::Main();
@@ -1401,6 +1396,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::RottingOranges::Main();
 	//Solution2019::LongestAbsoluteFilePath::Main();
 
+	//11/21/2019
+	//Solution2019::OneThreeTwoPattern::Main();
+	//Solution2019::ShortestPathinBinaryMatrix::Main();	
+	//Solution2019::PrimePalindrome::Main();
+	//Solution2019::DesignSnakeGame::Main();
+	//Solution2019::MinimumCosttoConnectSticks::Main();
 
 	//====Problem Ends====
 

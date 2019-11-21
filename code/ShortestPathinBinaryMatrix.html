@@ -1,0 +1,111 @@
+<!doctype html>
+	<html>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151395790-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-151395790-1');
+	</script>	
+	<title>ShortestPathinBinaryMatrix</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="../web/codepage.css" />
+	</head>
+	<body>
+	<h1>ShortestPathinBinaryMatrix</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+#include "stdafx.h"
+
+//In an N by N square grid, each cell is either empty (0) or blocked (1).
+//A clear path from top-left to bottom-right has length k if and only if it is
+//composed of cells C_1, C_2, ..., C_k such that:
+//Adjacent cells C_i and C_{i+1} are connected 8-directionally (ie., they are
+//different and share an edge or corner)
+//C_1 is at location (0, 0) (ie. has value grid[0][0])
+//C_k is at location (N-1, N-1) (ie. has value grid[N-1][N-1])
+//If C_i is located at (r, c), then grid[r][c] is empty (ie. grid[r][c] == 0).
+//Return the length of the shortest such clear path from top-left to
+//bottom-right.  If such a path does not exist, return -1.
+// 
+//
+//Example 1:
+//Input: [[0,1],[1,0]]
+//Output: 2
+//
+//Example 2:
+//Input: [[0,0,0],[1,1,0],[1,1,0]]
+//Output: 4
+// 
+//
+//Note:
+//1 &lt;= grid.length == grid[0].length &lt;= 100
+//grid[r][c] is 0 or 1
+
+namespace Solution2019
+{
+	namespace ShortestPathinBinaryMatrix
+	{
+		int shortestPathBinaryMatrix(vector&lt;vector&lt;int&gt;&gt;& grid) {
+			int rowCount = grid.size();
+			if (rowCount == 0) { return -1; }
+			int colCount = grid[0].size();
+			if (colCount == 0) { return -1; }
+			if (grid[0][0] == 1 || grid[rowCount - 1][colCount - 1] == 1) { return -1;  //---&gt; notice this special case!!!!
+			if (rowCount == 1 && colCount == 1) { return 1; } //---&gt; notice this special case!!!!
+
+			vector&lt;vector&lt;bool&gt;&gt; visited(rowCount, vector&lt;bool&gt;(colCount, false));
+			queue&lt;pair&lt;int, int&gt;&gt; q;
+			q.push({ 0, 0 });
+			visited[0][0] = true;
+			int result = 1;
+
+			pair&lt;int, int&gt; dirs[8] = { {0, 1}, {0, -1}, {1, 0}, {-1, 0}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1} };
+			while (!q.empty()) {
+				int sz = q.size();
+				result++;
+				while (sz) {
+					sz--;
+					auto [i, j] = q.front();
+					q.pop();
+					for (pair&lt;int, int&gt;& dir : dirs) {
+						int x = i + dir.first;
+						int y = j + dir.second;
+						if (x == rowCount - 1 && y == colCount - 1) { return result; }
+						if (x &lt; 0 || x &gt;= rowCount || y &lt; 0 || y &gt;= colCount || visited[x][y] || grid[x][y]) { continue; }
+						visited[x][y] = true;
+						q.push({ x, y });
+					}
+				}
+			}
+			return -1;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

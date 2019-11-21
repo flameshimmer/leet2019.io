@@ -10,7 +10,7 @@
 
 	  gtag('config', 'UA-151395790-1');
 	</script>	
-	<title>PrimePalindrome</title>
+	<title>MinimumCosttoConnectSticks</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -23,62 +23,48 @@
 	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
-	<h1>PrimePalindrome</h1>
+	<h1>MinimumCosttoConnectSticks</h1>
 	
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
 #include "stdafx.h"
 
-//Find the smallest prime palindrome greater than or equal to N.
-//Recall that a number is prime if it's only divisors are 1 and itself, and it is
-//greater than 1. 
-//For example, 2,3,5,7,11 and 13 are primes.
-//Recall that a number is a palindrome if it reads the same from left to right as
-//it does from right to left. 
-//For example, 12321 is a palindrome.
+//You have some sticks with positive integer lengths.
+//You can connect any two sticks of lengths X and Y into one stick by paying a
+//cost of X + Y.  You perform this action until there is one stick remaining.
+//Return the minimum cost of connecting all the given sticks into one stick in
+//this way.
 // 
 //
 //Example 1:
-//Input: 6
-//Output: 7
+//Input: sticks = [2,4,3]
+//Output: 14
 //
 //Example 2:
-//Input: 8
-//Output: 11
-//
-//Example 3:
-//Input: 13
-//Output: 101
+//Input: sticks = [1,8,3,5]
+//Output: 30
 // 
-//
-//Note:
-//1 &lt;= N &lt;= 10^8
-//The answer is guaranteed to exist and be less than 2 * 10^8.
+//Constraints:
+//1 &lt;= sticks.length &lt;= 10^4
+//1 &lt;= sticks[i] &lt;= 10^4
 
 namespace Solution2019
 {
-	namespace PrimePalindrome
+	namespace MinimumCosttoConnectSticks
 	{
-		bool isPrime(int num) {
-			if (num &lt;= 2 || num % 2 == 0) { return num == 2; }
-			for (int i = 3; i * i &lt;= num; i += 2) {
-				if (num % i == 0) { return false; }
+		int connectSticks(vector&lt;int&gt;& sticks) {
+			priority_queue&lt;int, vector&lt;int&gt;, greater&lt;int&gt;&gt; pq(sticks.begin(), sticks.end());
+			int result = 0;
+			while (pq.size() &gt; 1) {
+				int a = pq.top();
+				pq.pop();
+				int b = pq.top();
+				pq.pop();
+				result += a + b;
+				pq.push(a + b);
 			}
-			return true;
-		}
-
-		int primePalindrome(int N) {
-			if (N &gt;= 8 && N &lt;= 11) { return 11; }
-			for (int x = 1; x &lt; 100000; x++) {
-				string s = to_string(x);
-				string r(s.rbegin(), s.rend());
-				int y = stoi(s + r.substr(1));
-				if (y &gt;= N && isPrime(y)) {
-					return y;
-				}
-			}
-			return -1;
+			return result;
 		}
 
 		void Main() {
