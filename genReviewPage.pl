@@ -13,8 +13,7 @@ close IN;
 	//Solution2019::RemoveDuplicatesfromSortedArray::Main();
 =cut
 my $start = 0;
-my @daily = ();
-my $date="";
+my @all = ();
 
 my $content = '<!doctype html>
 <html>
@@ -43,63 +42,39 @@ my $content = '<!doctype html>
 <link rel="stylesheet" href="./web/index.css" />
 </head>
 <body>
-<h1>Ning\'s Studdy Page</h1>
+<h1>Ning\'s Review Page</h1>
+<ol>
 ';
 
 my %hashset = ();
+my $index = 0;
+#//Solution2019::MarketAnalysisII::Main();
 for my $line (@lines) {
-	if ($line =~ m/^\s*\/\/(\d+\/\d+\/\d+)\s*$/) {
-		my $newdate = $1;
-		if ($date eq "") {$date = $newdate;}
-		#print $line;
+	if ($line =~ m/Problem Starts/) {
 		$start = 1;
-
-		if (scalar @daily > 0) {
-			$content = $content . "\n<h2>$date<h2>\n\t<ul>\n";
-			for my $p (@daily) {
-				if ($p =~ m/.*::(.*)::Main/) {
-					my $problemName = $1;
-					my $url = './code/' . $problemName . '.html'; 
-					$content = $content . "\t\t<li><a href=\"$url\">$problemName</a></li>\n";
-					createProblemWebPage($problemName);				
-				}else {
-					print "wtf - $p\n";
-				}
-			}
-			$content = $content . "\t</ul>";
-		}
-
-		@daily = ();
-		$date = $newdate;
 	}
 	elsif ($line =~ m/Problem Ends/) {
 		$start = 0;
-		if (scalar @daily > 0) {
-			$content = $content . "\n<h2>$date<h2>\n\t<ul>\n";
-			for my $p (@daily) {
-				if ($p =~ m/.*::(.*)::Main/) {
-					my $problemName = $1;
-					my $url = './code/' . $problemName . '.html'; 
-					$content = $content . "\t\t<li><a href=\"$url\">$problemName</a></li>\n";
-					createProblemWebPage($problemName);
-				}else {
-					print "wtf - $p\n";
-				}
-			}
-			$content = $content . "\t</ul>";
-		}		
 	}
-	elsif ($start == 1 && $line !~ m/^\s*$/) {
-		push(@daily, $line);
+	elsif ($start == 1 && $line =~ m/Solution2019::(.*)::/) {
+		my $problemName = $1;
+		if (exists $hashset{$problemName}) {next;}
+		$hashset{$problemName} = 1;	
+		my $url = './code/' . $problemName . '.html'; 
+		$content = $content . "\t\t<li><a href=\"$url\">$problemName</a></li>\n";
+		if ($index > 0 && $index % 10 == 0) {$content = $content . "<hr>"}
+		$index ++;
+		#createProblemWebPage($problemName);
 	}
 }
-$content = $content . "\n</body>\n</html>\n";
+
+$content = $content . "</ol>\n</body>\n</html>\n";
 
 open OUT, ">index.html" or die;
 print OUT $content;
 close OUT;
-
 print "\n\nCompleted!\n\n";
+
 
 sub createProblemWebPage {
 	my $subpageHeaderTemplate = '<!doctype html>
