@@ -220,7 +220,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::TheMazeIII::Main();
 	//Solution2019::FindModeinBinarySearchTree::Main();
 	//Solution2019::IPO::Main();
-	//Solution2019::NextGreaterElementII::Main();
 	//Solution2019::BaseSeven::Main();
 	//Solution2019::TheMazeII::Main();
 	//Solution2019::PerfectNumber::Main();
@@ -506,7 +505,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::EqualRationalNumbers::Main();
 	//Solution2019::OddEvenJump::Main();
 	//Solution2019::DistributeCoinsinBinaryTree::Main();
-	//Solution2019::UniquePathsIII::Main();
 	//Solution2019::TripleswithBitwiseANDEqualToZero::Main();
 	//Solution2019::MinimumCostForTickets::Main();
 	//Solution2019::StringWithoutAAAorBBB::Main();
@@ -517,7 +515,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumNumberofKConsecutiveBitFlips::Main();
 	//Solution2019::NumberofSquarefulArrays::Main();
 	//Solution2019::MaximumBinaryTreeII::Main();
-	//Solution2019::MinimumCosttoMergeStones::Main();
 	//Solution2019::GridIllumination::Main();
 	//Solution2019::CheckIfWordIsValidAfterSubstitutions::Main();
 	//Solution2019::MaxConsecutiveOnesIII::Main();
@@ -578,7 +575,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UnpopularBooks::Main();
 	//Solution2019::FindKLengthSubstringsWithNoRepeatedCharacters::Main();
 	//Solution2019::TheEarliestMomentWhenEveryoneBecomeFriends::Main();
-	//Solution2019::PathWithMaximumMinimumValue::Main();
 	//Solution2019::PathInZigzagLabelledBinaryTree::Main();
 	//Solution2019::FillingBookcaseShelves::Main();
 	//Solution2019::ParsingABooleanExpression::Main();
@@ -1402,6 +1398,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PrimePalindrome::Main();
 	//Solution2019::DesignSnakeGame::Main();
 	//Solution2019::MinimumCosttoConnectSticks::Main();
+
+	//11/22/2019
+	//Solution2019::UniquePathsIII::Main();
+	//Solution2019::MinimumCosttoMergeStones::Main();
+	//Solution2019::NextGreaterElementII::Main();
+	//Solution2019::PathWithMaximumMinimumValue::Main();
 
 	//====Problem Ends====
 

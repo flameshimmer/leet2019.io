@@ -1184,4 +1184,6 @@ namespace Solution2019
 	namespace SplitaStringinBalancedStrings { void Main(); }
 	namespace CriticalConnectionsinaNetwork { void Main(); }	
 	namespace BeforeandAfterPuzzle { void Main(); }
+	namespace MinimumCosttoConnectSticks { void Main(); }
+	
 };

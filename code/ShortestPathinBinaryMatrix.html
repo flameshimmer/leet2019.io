@@ -64,7 +64,7 @@ namespace Solution2019
 			if (rowCount == 0) { return -1; }
 			int colCount = grid[0].size();
 			if (colCount == 0) { return -1; }
-			if (grid[0][0] == 1 || grid[rowCount - 1][colCount - 1] == 1) { return -1;  //---&gt; notice this special case!!!!
+			if (grid[0][0] == 1 || grid[rowCount - 1][colCount - 1] == 1) { return -1; }  //---&gt; notice this special case!!!!
 			if (rowCount == 1 && colCount == 1) { return 1; } //---&gt; notice this special case!!!!
 
 			vector&lt;vector&lt;bool&gt;&gt; visited(rowCount, vector&lt;bool&gt;(colCount, false));

@@ -1,0 +1,106 @@
+<!doctype html>
+	<html>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151395790-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-151395790-1');
+	</script>	
+	<title>PathWithMaximumMinimumValue</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="../web/codepage.css" />
+	</head>
+	<body>
+	<h1>PathWithMaximumMinimumValue</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+﻿#include "stdafx.h"
+
+//Given a matrix of integers A with R rows and C columns, find the maximum score
+//of a path starting at [0,0] and ending at [R-1,C-1].
+//The score of a path is the minimum value in that path.  For example, the value
+//of the path 8 →  4 →  5 →  9 is 4.
+//A path moves some number of times from one visited cell to any neighbouring
+//unvisited cell in one of the 4 cardinal directions (north, east, west, south).
+// 
+//
+//Example 1:
+//Input: [[5,4,5],[1,2,6],[7,4,6]]
+//Output: 4
+//Explanation: 
+//The path with the maximum score is highlighted in yellow. 
+//
+//Example 2:
+//Input: [[2,2,1,2,2,2],[1,2,2,2,1,2]]
+//Output: 2
+//
+//Example 3:
+//Input:
+//[[3,4,6,3,4],[0,2,1,1,7],[8,8,3,2,7],[3,2,4,9,8],[4,1,2,0,0],[4,6,5,4,3]]
+//Output: 3
+// 
+//
+//Note:
+//1 &lt;= R, C &lt;= 100
+//0 &lt;= A[i][j] &lt;= 10^9
+
+namespace Solution2019
+{
+	namespace PathWithMaximumMinimumValue
+	{
+		int maximumMinimumPath(vector&lt;vector&lt;int&gt;&gt;& A) {
+			vector&lt;vector&lt;int&gt;&gt; dirs = { {0, 1}, {0, -1}, {1, 0} , {-1, 0} };
+			priority_queue&lt;tuple&lt;int, int, int&gt;&gt; pq;
+			pq.push({ A[0][0], 0, 0 });
+			int rowCount = A.size();
+			int colCount = A[0].size();
+			int result = A[0][0];
+
+			A[0][0] = -1;
+			while (!pq.empty()) {
+				auto [a, i, j] = pq.top();
+				pq.pop();
+				result = min(result, a);
+				if (i == rowCount - 1 && j == colCount - 1) {
+					return result;
+				}
+				for (const auto& dir : dirs) {
+					int x = i + dir[0];
+					int y = j + dir[1];
+					if (x &lt; 0 || x &gt;= rowCount || y &lt; 0 || y &gt;= colCount || A[x][y] &lt; 0) { continue; }
+					pq.push({ A[x][y], x, y });
+					A[x][y] = -1;
+				}
+			}
+			return -1;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	
