@@ -1185,5 +1185,5 @@ namespace Solution2019
 	namespace CriticalConnectionsinaNetwork { void Main(); }	
 	namespace BeforeandAfterPuzzle { void Main(); }
 	namespace MinimumCosttoConnectSticks { void Main(); }
-	
+	namespace MinimumRemovetoMakeValidParentheses { void Main(); }
 };
