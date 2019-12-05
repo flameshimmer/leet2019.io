@@ -16,8 +16,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
 
-	//12/3/2019
-	//Solution2019::MinimumRemovetoMakeValidParentheses::Main();
+
+
 	
 	// ========================= Untackled =================================		
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -40,7 +40,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumDepthofBinaryTree::Main();
 	//Solution2019::PathSum::Main();
 	//Solution2019::PathSumII::Main();
-	//Solution2019::FlattenBinaryTreetoLinkedList::Main();
 	//Solution2019::DistinctSubsequences::Main();
 	//Solution2019::SumRoottoLeafNumbers::Main();
 	//Solution2019::Candy::Main();
@@ -153,7 +152,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::PerfectRectangle::Main();
 	//Solution2019::RotateFunction::Main();
 	//Solution2019::IntegerReplacement::Main();
-	//Solution2019::RandomPickIndex::Main();
 	//Solution2019::EvaluateDivision::Main();
 	//Solution2019::NthDigit::Main();
 	//Solution2019::BinaryWatch::Main();
@@ -1409,6 +1407,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MinimumCostForTickets::Main();
 	//Solution2019::ImplementQueueusingStacks::Main();
 	//Solution2019::ImplementStackusingQueues::Main();
+
+	//12/3/2019
+	//Solution2019::MinimumRemovetoMakeValidParentheses::Main();
+
+	//12/4/2019
+	//Solution2019::RandomPickIndex::Main();
+
+	//12/5/2019
+	//Solution2019::FlattenBinaryTreetoLinkedList::Main();
 
 	//====Problem Ends====
 

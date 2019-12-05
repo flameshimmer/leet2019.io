@@ -60,6 +60,41 @@ namespace Solution2019
 	namespace FindAllAnagramsinaString
 	{
 		vector&lt;int&gt; findAnagrams(string s, string p) {
+			vector&lt;int&gt; result;
+			int lens = s.size();
+			int lenp = p.size();
+			if (lens &lt; lenp || lenp == 0) { return result; }
+
+			unordered_map&lt;char, int&gt; to_be_found;
+			for (char c : p) { to_be_found[c]++; }
+
+			int start = 0;
+			int found = 0;
+			for (int end = 0; end &lt; lens; end++) {
+				char c = s[end];
+				if (to_be_found.find(c) != to_be_found.end()) {
+					to_be_found[c]--;
+					found++;
+					while (to_be_found[c] &lt; 0) {
+						to_be_found[s[start]]++;
+						found--;
+						start++;
+					}
+					if (found == lenp) { result.push_back(start); }
+				}
+				else {
+					while (start &lt; end) {
+						to_be_found[s[start]]++;
+						found--;
+						start++;
+					}
+					start++;
+				}
+			}
+			return result;
+		}
+
+		vector&lt;int&gt; findAnagramsCompareTwoHashMapArray(string s, string p) {
 			vector&lt;int&gt; pv(26, 0);
 			vector&lt;int&gt; sv(26, 0);
 			vector&lt;int&gt; result;
@@ -77,47 +112,6 @@ namespace Solution2019
 				sv[s[i - lenp] - 'a']--;
 				// checking equal is O(26) so O(1)
 				if (pv == sv) { result.push_back(i - lenp + 1); }
-			}
-			return result;
-		}
-
-		vector&lt;int&gt; findAnagramsAnother(string s, string p) {
-			int lens = s.size();
-			int lenp = p.size();
-			if (lens == 0 || lenp == 0) { return {}; }
-
-			vector&lt;int&gt; result;
-			unordered_map&lt;char, int&gt; toBeFound;
-			unordered_map&lt;char, int&gt; hasFound;
-			int found = 0;
-			for (char c : p) { toBeFound[c] ++; }
-
-			int start = 0;
-			for (int end = 0; end &lt; lens; end++) {
-				char c = s[end];
-				if (toBeFound.count(c) == 0) {
-					start = end + 1;
-					found = 0;
-					hasFound.clear();
-				}
-				else if (hasFound[c] == toBeFound[c]) {
-					while (s[start] != c) {
-						found--;
-						hasFound[s[start]]--;
-						start++;
-					}
-					start++;
-				}
-				else {
-					hasFound[c] ++;
-					found++;
-					if (found == lenp) {
-						result.push_back(start);
-						hasFound[s[start]]--;
-						start++;
-						found--;
-					}
-				}
 			}
 			return result;
 		}

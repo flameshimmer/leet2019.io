@@ -74,13 +74,13 @@ namespace Solution2019
 		}
 
 		namespace PriorityQueue {
-			
+
 			struct compare {
 				bool operator() (vector&lt;int&gt; a, vector&lt;int&gt; b) {
 					return a[0] * a[0] + a[1] * a[1] &gt; b[0] * b[0] + b[1] * b[1];
 				}
 			};
-			
+
 			vector&lt;vector&lt;int&gt;&gt; kClosest(vector&lt;vector&lt;int&gt;&gt;& points, int K) {
 				priority_queue&lt;vector&lt;int&gt;, vector&lt;vector&lt;int&gt;&gt;, compare&gt; pq(points.begin(), points.end());
 				vector&lt;vector&lt;int&gt;&gt; result;
@@ -89,6 +89,48 @@ namespace Solution2019
 					pq.pop();
 				}
 				return result;
+			}
+
+		}
+
+		namespace AnotherPriorityQueue {
+			struct Dist {
+				int x;
+				int y;
+				double d;
+				Dist(int x, int y) {
+					this-&gt;x = x;
+					this-&gt;y = y;
+					this-&gt;d = sqrt(x * x + y * y);
+				}
+
+				bool operator&lt; (const Dist& rhs) const {
+					return d &lt; rhs.d;
+				}
+			};
+
+			vector&lt;vector&lt;int&gt;&gt; kClosest(vector&lt;vector&lt;int&gt;&gt;& points, int K) {
+				vector&lt;vector&lt;int&gt;&gt; results;
+				int len = points.size();
+				if (len == 0 || K &lt; 1) { return results; }
+
+				priority_queue&lt;Dist&gt; pq;
+				for (vector&lt;int&gt;& p : points) {
+					if (pq.size() &lt; K) { pq.push({ p[0], p[1] }); }
+					else {
+						auto [x, y, d] = pq.top();
+						if (d &gt; sqrt(p[0] * p[0] + p[1] * p[1])) {
+							pq.pop();
+							pq.push({ p[0], p[1] });
+						}
+					}
+				}
+				while (!pq.empty()) {
+					auto [x, y, d] = pq.top();
+					pq.pop();
+					results.push_back({ x, y });
+				}
+				return results;
 			}
 
 		}

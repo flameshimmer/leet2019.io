@@ -30,41 +30,6 @@ namespace Solution2019
 	namespace FindAllAnagramsinaString
 	{
 		vector<int> findAnagrams(string s, string p) {
-			vector<int> result;
-			int lens = s.size();
-			int lenp = p.size();
-			if (lens < lenp || lenp == 0) { return result; }
-
-			unordered_map<char, int> to_be_found;
-			for (char c : p) { to_be_found[c]++; }
-
-			int start = 0;
-			int found = 0;
-			for (int end = 0; end < lens; end++) {
-				char c = s[end];
-				if (to_be_found.find(c) != to_be_found.end()) {
-					to_be_found[c]--;
-					found++;
-					while (to_be_found[c] < 0) {
-						to_be_found[s[start]]++;
-						found--;
-						start++;
-					}
-					if (found == lenp) { result.push_back(start); }
-				}
-				else {
-					while (start < end) {
-						to_be_found[s[start]]++;
-						found--;
-						start++;
-					}
-					start++;
-				}
-			}
-			return result;
-		}
-
-		vector<int> findAnagramsCompareTwoHashMapArray(string s, string p) {
 			vector<int> pv(26, 0);
 			vector<int> sv(26, 0);
 			vector<int> result;
@@ -82,6 +47,47 @@ namespace Solution2019
 				sv[s[i - lenp] - 'a']--;
 				// checking equal is O(26) so O(1)
 				if (pv == sv) { result.push_back(i - lenp + 1); }
+			}
+			return result;
+		}
+
+		vector<int> findAnagramsAnother(string s, string p) {
+			int lens = s.size();
+			int lenp = p.size();
+			if (lens == 0 || lenp == 0) { return {}; }
+
+			vector<int> result;
+			unordered_map<char, int> toBeFound;
+			unordered_map<char, int> hasFound;
+			int found = 0;
+			for (char c : p) { toBeFound[c] ++; }
+
+			int start = 0;
+			for (int end = 0; end < lens; end++) {
+				char c = s[end];
+				if (toBeFound.count(c) == 0) {
+					start = end + 1;
+					found = 0;
+					hasFound.clear();
+				}
+				else if (hasFound[c] == toBeFound[c]) {
+					while (s[start] != c) {
+						found--;
+						hasFound[s[start]]--;
+						start++;
+					}
+					start++;
+				}
+				else {
+					hasFound[c] ++;
+					found++;
+					if (found == lenp) {
+						result.push_back(start);
+						hasFound[s[start]]--;
+						start++;
+						found--;
+					}
+				}
 			}
 			return result;
 		}
