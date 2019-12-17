@@ -15,8 +15,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	// Runtime begin marker start
 	clock_t begin = clock();
 	//Solution2019::Test::Main(); // Medium
-
-
+	//Solution2019::BinaryTreeLongestConsecutiveSequence::Main();
+	//Solution2019::BinaryTreeColoringGame::Main();
 
 	
 	// ========================= Untackled =================================		
@@ -102,14 +102,12 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::WordPatternII::Main();
 	//Solution2019::FlipGameII::Main();
 	//Solution2019::BestMeetingPoint::Main();
-	//Solution2019::BinaryTreeLongestConsecutiveSequence::Main();
 	//Solution2019::BullsandCows::Main();
 	//Solution2019::SmallestRectangleEnclosingBlackPixels::Main();
 	//Solution2019::RangeSumQueryImmutable::Main();
 	//Solution2019::NumberofIslandsII::Main();
 	//Solution2019::AdditiveNumber::Main();
 	//Solution2019::MinimumHeightTrees::Main();
-	//Solution2019::SparseMatrixMultiplication::Main();
 	//Solution2019::SuperUglyNumber::Main();
 	//Solution2019::BinaryTreeVerticalOrderTraversal::Main();
 	//Solution2019::MaximumProductofWordLengths::Main();
@@ -192,7 +190,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CanIWin::Main();
 	//Solution2019::CountTheRepetitions::Main();
 	//Solution2019::UniqueSubstringsinWraparoundString::Main();
-	//Solution2019::ValidateIPAddress::Main();
 	//Solution2019::ConvexPolygon::Main();
 	//Solution2019::ImplementRandOneZero::Main();
 	//Solution2019::EncodeStringwithShortestLength::Main();
@@ -336,7 +333,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CutOffTreesforGolfEvent::Main();
 	//Solution2019::ImplementMagicDictionary::Main();
 	//Solution2019::MapSumPairs::Main();
-	//Solution2019::ValidParenthesisString::Main();
 	//Solution2019::NextClosestTime::Main();
 	//Solution2019::KEmptySlots::Main();
 	//Solution2019::RedundantConnection::Main();
@@ -602,7 +598,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::UserActivityforthePastThreeZeroDaysI::Main();
 	//Solution2019::UserActivityforthePastThreeZeroDaysII::Main();
 	//Solution2019::LongestCommonSubsequence::Main();
-	//Solution2019::BinaryTreeColoringGame::Main();
 	//Solution2019::ArticleViewsI::Main();
 	//Solution2019::ArticleViewsII::Main();
 	//Solution2019::StringTransformsIntoAnotherString::Main();
@@ -1416,6 +1411,11 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	//12/5/2019
 	//Solution2019::FlattenBinaryTreetoLinkedList::Main();
+
+	//12/17/2019
+	//Solution2019::SparseMatrixMultiplication::Main();
+	//Solution2019::ValidParenthesisString::Main();
+	//Solution2019::ValidateIPAddress::Main();
 
 	//====Problem Ends====
 

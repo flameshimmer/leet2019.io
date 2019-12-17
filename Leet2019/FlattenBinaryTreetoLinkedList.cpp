@@ -45,7 +45,7 @@ namespace Solution2019
 				while (root) {
 					if (root->left && root->right) {
 						TreeNode* t = root->left;
-						while (t->right) { t = t->right };
+						while (t->right) { t = t->right; };
 						t->right = root->right;
 					}
 				}

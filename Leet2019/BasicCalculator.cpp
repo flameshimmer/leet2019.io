@@ -24,6 +24,82 @@ namespace Solution2019
 {
 	namespace BasicCalculator
 	{
+		namespace Generic {
+
+			long long calc(stack<long long>& num, stack<char>& op) {
+				long long a = num.top();
+				num.pop();
+				long long b = num.top();
+				num.pop();
+				char c = op.top();
+				op.pop();
+				switch (c) {
+				case '+': return b + a;
+				case '-': return b - a;
+				case '*': return b * a;
+				case '/': return b / a;
+				default: return 0;
+				}
+			}
+
+			int calculate(string s) {
+				unordered_map<char, int> map;
+				map['('] = -1;
+				map['+'] = 0;
+				map['-'] = 0;
+				map['*'] = 1;
+				map['/'] = 1;
+
+				stack<long long> num;
+				stack<char> op;
+				int len = s.size();
+				for (int i = 0; i < len; i++) {
+					char c = s[i];
+					if (i == 0 && c == '-') {
+						num.push(-1);
+						op.push('*');
+					}
+					else if (isdigit(c)) {
+						long long val = c - '0';
+						while (i + 1 < len && isdigit(s[i + 1])) {
+							val = 10 * val + (s[i + 1] - '0');
+							i++;
+						}
+						num.push(val);
+					}
+					else if (c == ' ') {
+						continue;
+					}
+					else if (c == '(') {
+						op.push(c);
+						if (i + 1 < len && s[i + 1] == '-' && i + 2 < len && isdigit(s[i + 2])) {
+							num.push(-1);
+							op.push('*');
+							i++;
+						}
+					}
+					else if (c == ')') {
+						while (op.top() != '(') {
+							num.push(calc(num, op));
+						}
+						op.pop();
+					}
+					else {
+						while (!op.empty() && map[c] <= map[op.top()]) {
+							num.push(calc(num, op));
+						}
+						op.push(c);
+					}
+				}
+
+				while (!op.empty()) {
+					num.push(calc(num, op));
+				}
+				return int(num.top());
+			}
+
+		}
+
 		namespace SignManipulation {
 			int calculate(string s) {
 				int len = s.size();
@@ -67,8 +143,9 @@ namespace Solution2019
 			}
 		}
 		void Main() {
-			string test = "tst test test";
-			print(test);
+			//print(Generic::calculate("-1+4*3/3/3"));
+			//print(Generic::calculate("1 + 1"));
+			print(Generic::calculate("0-2147483648"));
 		}
 	}
 }
