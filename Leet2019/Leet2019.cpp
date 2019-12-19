@@ -204,7 +204,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SmallestGoodBase::Main();
 	//Solution2019::FindPermutation::Main();
 	//Solution2019::PredicttheWinner::Main();
-	//Solution2019::MaxConsecutiveOnesII::Main();
 	//Solution2019::ZumaGame::Main();
 	//Solution2019::RobotRoomCleaner::Main();
 	//Solution2019::TheMaze::Main();
@@ -246,7 +245,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::OptimalDivision::Main();
 	//Solution2019::BrickWall::Main();
 	//Solution2019::SplitConcatenatedStrings::Main();
-	//Solution2019::NextGreaterElementIII::Main();
 	//Solution2019::ReverseWordsinaStringIII::Main();
 	//Solution2019::QuadTreeIntersection::Main();
 	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
@@ -511,7 +509,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaximumBinaryTreeII::Main();
 	//Solution2019::GridIllumination::Main();
 	//Solution2019::CheckIfWordIsValidAfterSubstitutions::Main();
-	//Solution2019::MaxConsecutiveOnesIII::Main();
 	//Solution2019::ClumsyFactorial::Main();
 	//Solution2019::ConstructBinarySearchTreefromPreorderTraversal::Main();
 	//Solution2019::NumbersWithRepeatedDigits::Main();
@@ -540,7 +537,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ShortestWaytoFormString::Main();
 	//Solution2019::MinimizeRoundingErrortoMeetTarget::Main();
 	//Solution2019::AllPathsfromSourceLeadtoDestination::Main();
-	//Solution2019::MissingElementinSortedArray::Main();
 	//Solution2019::LexicographicallySmallestEquivalentString::Main();
 	//Solution2019::LongestRepeatingSubstring::Main();
 	//Solution2019::NumberofValidSubarrays::Main();
@@ -1416,6 +1412,14 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SparseMatrixMultiplication::Main();
 	//Solution2019::ValidParenthesisString::Main();
 	//Solution2019::ValidateIPAddress::Main();
+
+	//12/18/2019
+	//Solution2019::NextGreaterElementIII::Main();
+
+	//12/19/2019
+	//Solution2019::MaxConsecutiveOnesII::Main();
+	//Solution2019::MaxConsecutiveOnesIII::Main();
+	//Solution2019::MissingElementinSortedArray::Main();
 
 	//====Problem Ends====
 

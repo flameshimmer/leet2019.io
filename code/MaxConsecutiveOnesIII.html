@@ -10,7 +10,7 @@
 
 	  gtag('config', 'UA-151395790-1');
 	</script>	
-	<title>CoinChange</title>
+	<title>MaxConsecutiveOnesIII</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 
@@ -23,42 +23,56 @@
 	<link rel="stylesheet" href="../web/codepage.css" />
 	</head>
 	<body>
-	<h1>CoinChange</h1>
+	<h1>MaxConsecutiveOnesIII</h1>
 	
 	<figure class="highlight">
 	<pre>
 	<code class="language-html">
 #include "stdafx.h"
-//You are given coins of different denominations and a total amount 
-//of money amount. Write a function to compute the fewest number of 
-//coins that you need to make up that amount. If that amount of money 
-//cannot be made up by any combination of the coins, return -1.
+
+//Given an array A of 0s and 1s, we may change up to K values from 0 to 1.
+//Return the length of the longest (contiguous) subarray that contains only 1s. 
+// 
 //
 //Example 1:
-//Input: coins = [1, 2, 5], amount = 11
-//Output: 3 
-//Explanation: 11 = 5 + 5 + 1
+//Input: A = [1,1,1,0,0,0,1,1,1,1,0], K = 2
+//Output: 6
+//Explanation: 
+//[1,1,1,0,0,1,1,1,1,1,1]
+//Bolded numbers were flipped from 0 to 1.  The longest subarray is underlined.
 //
 //Example 2:
-//Input: coins = [2], amount = 3
-//Output: -1
+//Input: A = [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], K = 3
+//Output: 10
+//Explanation: 
+//[0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1,1,1,1]
+//Bolded numbers were flipped from 0 to 1.  The longest subarray is underlined.
+// 
+//
 //Note:
-//You may assume that you have an infinite number of each kind of coin.
+//1 &lt;= A.length &lt;= 20000
+//0 &lt;= K &lt;= A.length
+//A[i] is 0 or 1  
 
 namespace Solution2019
 {
-	namespace CoinChange
+	namespace MaxConsecutiveOnesIII
 	{
-		int coinChange(vector&lt;int&gt;& coins, int amount) {
-			vector&lt;long long&gt; dp(amount + 1, INT_MAX);
-			dp[0] = 0;
+		int longestOnes(vector&lt;int&gt;& A, int K) {
+			int len = A.size();
+			if (len == 0) { return 0; }
 
-			for (int cv : coins) {
-				for (int i = cv; i &lt;= amount; i++) {
-					dp[i] = min(dp[i], dp[i - cv] + 1);
+			int result = 0;
+			int start = 0;
+			for (int end = 0; end &lt; len; end++) {
+				if (A[end] == 0) { K--; }
+				while (K &lt; 0) {
+					if (A[start] == 0) { K++; }
+					start++;
 				}
+				result = max(result, end - start + 1);
 			}
-			return dp[amount] == INT_MAX ? -1 : dp[amount];
+			return result;
 		}
 
 		void Main() {
