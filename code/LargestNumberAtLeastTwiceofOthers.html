@@ -53,6 +53,27 @@ namespace Solution2019
 {
 	namespace LargestNumberAtLeastTwiceofOthers
 	{
+		int dominantIndex(vector&lt;int&gt;& nums) {
+			int result = -1;
+			long long max1 = INT_MIN;
+			long long max2 = INT_MIN;
+
+			for (int i = 0; i &lt; nums.size(); i++) {
+				int v = nums[i];
+				if (v &gt; max1) {
+					max2 = max1;
+					max1 = v;
+					result = i;
+				}
+				else if (v &gt; max2) {
+					max2 = v;
+				}
+			}
+			if (max1 &gt;= max2 * 2) { return result; }
+			return -1;
+
+		}
+
 		int dominantIndex(vector&lt;int&gt; nums) {
 			int maxIndex = -1;
 			int maxVal = INT_MIN;

@@ -21,6 +21,40 @@ namespace Solution2019
 	namespace ReorganizeString
 	{
 		string reorganizeString(string S) {
+			int len = S.size();
+			if (len < 2) { return S; }
+			unordered_map<char, int> map;
+			for (char c : S) { map[c]++; }
+
+			char maxChar;
+			int maxCount = 0;
+			for (auto& p : map) {
+				if (p.second > maxCount) {
+					maxCount = p.second;
+					maxChar = p.first;
+				}
+			}
+
+			if (maxCount > (len + 1) / 2) { return ""; }
+
+			string result(len, 0);
+			int i = 0;
+			for (; i < len && map[maxChar] > 0; i += 2) {
+				result[i] = maxChar;
+				map[maxChar]--;
+			}
+			for (auto& p : map) {
+				while (p.second > 0) {
+					if (i >= len) { i = 1; }
+					result[i] = p.first;
+					p.second--;
+					i += 2;
+				}
+			}
+			return result;
+		}
+
+		string reorganizeStringWithSort(string S) {
 			int map[26] = { 0 };
 			int len = S.size();
 			for (char c : S) { map[c - 'a']++; }

@@ -52,6 +52,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,6 +137,7 @@
     <ClCompile Include="BeautifulArrangement.cpp" />
     <ClCompile Include="BeautifulArrangementII.cpp" />
     <ClCompile Include="BeautifulArray.cpp" />
+    <ClCompile Include="BeforeandAfterPuzzle.cpp" />
     <ClCompile Include="BestMeetingPoint.cpp" />
     <ClCompile Include="BestSightseeingPair.cpp" />
     <ClCompile Include="BestTimetoBuyandSellStock.cpp" />
@@ -285,6 +287,7 @@
     <ClCompile Include="CousinsinBinaryTree.cpp" />
     <ClCompile Include="CrackingtheSafe.cpp" />
     <ClCompile Include="CreateMaximumNumber.cpp" />
+    <ClCompile Include="CriticalConnectionsinaNetwork.cpp" />
     <ClCompile Include="CustomerPlacingtheLargestNumberofOrders.cpp" />
     <ClCompile Include="CustomersWhoBoughtAllProducts.cpp" />
     <ClCompile Include="CustomersWhoNeverOrder.cpp" />
@@ -703,6 +706,7 @@
     <ClCompile Include="MinimumAreaRectangleII.cpp" />
     <ClCompile Include="MinimumASCIIDeleteSumforTwoStrings.cpp" />
     <ClCompile Include="MinimumCostForTickets.cpp" />
+    <ClCompile Include="MinimumCosttoConnectSticks.cpp" />
     <ClCompile Include="MinimumCosttoHireKWorkers.cpp" />
     <ClCompile Include="MinimumCosttoMergeStones.cpp" />
     <ClCompile Include="MinimumCostTreeFromLeafValues.cpp" />
@@ -721,6 +725,7 @@
     <ClCompile Include="MinimumNumberofKConsecutiveBitFlips.cpp" />
     <ClCompile Include="MinimumNumberofRefuelingStops.cpp" />
     <ClCompile Include="MinimumPathSum.cpp" />
+    <ClCompile Include="MinimumRemovetoMakeValidParentheses.cpp" />
     <ClCompile Include="MinimumScoreTriangulationofPolygon.cpp" />
     <ClCompile Include="MinimumSizeSubarraySum.cpp" />
     <ClCompile Include="MinimumSwapstoGroupAllOnesTogether.cpp" />

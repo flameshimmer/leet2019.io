@@ -14,12 +14,33 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	// Runtime begin marker start
 	clock_t begin = clock();
-	//Solution2019::Test::Main(); // Medium
-	//Solution2019::BinaryTreeLongestConsecutiveSequence::Main();
-	//Solution2019::BinaryTreeColoringGame::Main();
+	Solution2019::Test::Main(); // Medium
+
+
+
+
+
+
+
 
 	
-	// ========================= Untackled =================================		
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	// ========================= Untackled =================================	
+	//Solution2019::BinaryTreeLongestConsecutiveSequence::Main();
+	//Solution2019::BinaryTreeColoringGame::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
 	//Solution2019::ProjectionAreaofThreeDShapes::Main();
 	//Solution2019::IsSubsequence::Main();
@@ -74,7 +95,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CombinationSumIII::Main();
 	//Solution2019::RectangleArea::Main();
 	//Solution2019::NumberofDigitOne::Main();
-	//Solution2019::DifferentWaystoAddParentheses::Main();
 	//Solution2019::StrobogrammaticNumber::Main();
 	//Solution2019::StrobogrammaticNumberII::Main();
 	//Solution2019::StrobogrammaticNumberIII::Main();
@@ -247,7 +267,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::SplitConcatenatedStrings::Main();
 	//Solution2019::ReverseWordsinaStringIII::Main();
 	//Solution2019::QuadTreeIntersection::Main();
-	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
+	
 	//Solution2019::BinaryTreeTilt::Main();
 	//Solution2019::PermutationinString::Main();
 	//Solution2019::MaximumVacationDays::Main();
@@ -270,7 +290,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::NaryTreePreorderTraversal::Main();
 	//Solution2019::NaryTreePostorderTraversal::Main();
 	//Solution2019::FractionAdditionandSubtraction::Main();
-	//Solution2019::ValidSquare::Main();
 	//Solution2019::LongestHarmoniousSubsequence::Main();
 	//Solution2019::BigCountries::Main();
 	//Solution2019::ClassesMoreThanFiveStudents::Main();
@@ -1420,6 +1439,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::MaxConsecutiveOnesII::Main();
 	//Solution2019::MaxConsecutiveOnesIII::Main();
 	//Solution2019::MissingElementinSortedArray::Main();
+
+    //1/26/2020
+	//Solution2019::ValidSquare::Main();
+	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
+	//Solution2019::DifferentWaystoAddParentheses::Main();
 
 	//====Problem Ends====
 

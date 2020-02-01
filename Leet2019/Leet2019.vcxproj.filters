@@ -3593,5 +3593,17 @@
     <ClCompile Include="PrimeArrangements.cpp">
       <Filter>Solution2019</Filter>
     </ClCompile>
+    <ClCompile Include="CriticalConnectionsinaNetwork.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="BeforeandAfterPuzzle.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumCosttoConnectSticks.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
+    <ClCompile Include="MinimumRemovetoMakeValidParentheses.cpp">
+      <Filter>Solution2019</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

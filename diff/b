@@ -1,0 +1,12 @@
+if (pos >= len) {
+    result.pop_back();
+    results.push_back(result);
+}
+for (int i = pos; i<len; i++) {
+    string cur = s.substr(i, i-pos+1);
+    if (P[i+1] && dict.find(cur) != dict.end()) {
+        int oldSize = results.size();
+        breakWord(s, len, i+1, dict, P, result + cur + " ", results);
+        if (results.size() == oldSize) {P[i+1] = false;}
+    }
+}
