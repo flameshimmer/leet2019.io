@@ -18,22 +18,49 @@ namespace Solution2019
 {
 	namespace TopKFrequentElements
 	{
-		vector<int> topKFrequent(vector<int>& nums, int k) {
-			unordered_map<int, int> map;
-			for (int v : nums) { map[v]++; }
+		namespace BucketSort {
+			vector<int> topKFrequent(vector<int>& nums, int k) {
+				int len = nums.size();
+				if (len == 0) { return {}; }
 
-			auto comp = [](pair<int, int>& a, pair<int, int>& b) {return a.second > b.second; };
-			priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp)> pq(comp);
-			for (auto& p : map) {
-				pq.push(make_pair(p.first, p.second));
-				if (pq.size() > k) { pq.pop(); }
+				unordered_map<int, int> map;
+				for (int v : nums) { map[v]++; }
+
+				vector<vector<int>> freq(len + 1);
+				for (auto& p : map) {
+					freq[p.second].push_back(p.first);
+				}
+
+				vector<int> result;
+				for (int i = len; i >= 0 && k > 0; i--) {
+					if (!freq[i].empty()) {
+						int count = min(k, (int)(freq[i].size()));
+						result.insert(result.end(), freq[i].begin(), freq[i].begin() + count);
+						k -= count;
+					}
+				}
+				return result;
+			}		
+		}
+
+		namespace PriorityQueue {
+			vector<int> topKFrequent(vector<int>& nums, int k) {
+				unordered_map<int, int> map;
+				for (int v : nums) { map[v]++; }
+
+				auto comp = [](pair<int, int>& a, pair<int, int>& b) {return a.second > b.second; };
+				priority_queue<pair<int, int>, vector<pair<int, int>>, decltype(comp)> pq(comp);
+				for (auto& p : map) {
+					pq.push(make_pair(p.first, p.second));
+					if (pq.size() > k) { pq.pop(); }
+				}
+				vector<int> result;
+				while (!pq.empty()) {
+					result.push_back(pq.top().first);
+					pq.pop();
+				}
+				return result;
 			}
-			vector<int> result;
-			while (!pq.empty()) {
-				result.push_back(pq.top().first);
-				pq.pop();
-			}
-			return result;
 		}
 
 		void Main() {

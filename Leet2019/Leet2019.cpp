@@ -38,7 +38,8 @@ int _tmain(int argc, _TCHAR* argv[])
 
 
 	
-	// ========================= Untackled =================================	
+	// ========================= Untackled =================================
+	//Solution2019::StrobogrammaticNumberIII::Main();
 	//Solution2019::BinaryTreeLongestConsecutiveSequence::Main();
 	//Solution2019::BinaryTreeColoringGame::Main();
 	//Solution2019::SearchinRotatedSortedArrayII::Main();
@@ -95,9 +96,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CombinationSumIII::Main();
 	//Solution2019::RectangleArea::Main();
 	//Solution2019::NumberofDigitOne::Main();
-	//Solution2019::StrobogrammaticNumber::Main();
-	//Solution2019::StrobogrammaticNumberII::Main();
-	//Solution2019::StrobogrammaticNumberIII::Main();
 	//Solution2019::GroupShiftedStrings::Main();
 	//Solution2019::CountUnivalueSubtrees::Main();
 	//Solution2019::FactorCombinations::Main();
@@ -538,7 +536,6 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::CamelcaseMatching::Main();
 	//Solution2019::VideoStitching::Main();
 	//Solution2019::MaximumDifferenceBetweenNodeandAncestor::Main();
-	//Solution2019::LongestArithmeticSequence::Main();
 	//Solution2019::RecoveraTreeFromPreorderTraversal::Main();
 	//Solution2019::StreamofCharacters::Main();
 	//Solution2019::ColoringABorder::Main();
@@ -1444,6 +1441,11 @@ int _tmain(int argc, _TCHAR* argv[])
 	//Solution2019::ValidSquare::Main();
 	//Solution2019::MaximumSizeSubarraySumEqualsk::Main();
 	//Solution2019::DifferentWaystoAddParentheses::Main();
+
+	//2/2/2019
+	//Solution2019::StrobogrammaticNumber::Main();
+	//Solution2019::StrobogrammaticNumberII::Main();
+	//Solution2019::LongestArithmeticSequence::Main();
 
 	//====Problem Ends====
 

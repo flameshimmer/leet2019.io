@@ -1,0 +1,95 @@
+<!doctype html>
+	<html>
+	<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151395790-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-151395790-1');
+	</script>	
+	<title>LongestArithmeticSequence</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="../web/codepage.css" />
+	</head>
+	<body>
+	<h1>LongestArithmeticSequence</h1>
+	
+	<figure class="highlight">
+	<pre>
+	<code class="language-html">
+#include "stdafx.h"
+
+//Given an array A of integers, return the length of the longest arithmetic
+//subsequence in A.
+//Recall that a subsequence of A is a list A[i_1], A[i_2], ..., A[i_k] with 0 &lt;=
+//i_1 &lt; i_2 &lt; ... &lt; i_k &lt;= A.length - 1, and that a sequence B is arithmetic if
+//B[i+1] - B[i] are all the same value (for 0 &lt;= i &lt; B.length - 1).
+// 
+//
+//Example 1:
+//Input: [3,6,9,12]
+//Output: 4
+//Explanation: 
+//The whole array is an arithmetic sequence with steps of length = 3.
+//
+//Example 2:
+//Input: [9,4,7,2,10]
+//Output: 3
+//Explanation: 
+//The longest arithmetic subsequence is [4,7,10].
+//
+//Example 3:
+//Input: [20,1,15,3,10,5,8]
+//Output: 4
+//Explanation: 
+//The longest arithmetic subsequence is [20,15,10,5].
+// 
+//
+//Note:
+//2 &lt;= A.length &lt;= 2000
+//0 &lt;= A[i] &lt;= 10000
+
+namespace Solution2019
+{
+	namespace LongestArithmeticSequence
+	{
+		int longestArithSeqLength(vector&lt;int&gt;& A) {
+			unordered_map&lt;int, unordered_map&lt;int, int&gt;&gt; dp; //{distance, {end, count}}
+			int result = 2;
+			int n = A.size();
+			for (int i = 0; i &lt; n; i++) {
+				for (int j = i + 1; j &lt; n; j++) {
+					int d = A[j] - A[i];
+					dp[d][j] = dp[d].count(i) ? dp[d][i] + 1 : 2;
+					result = max(result, dp[d][j]);
+				}
+			}
+			return result;
+		}
+
+		void Main() {
+			string test = "tst test test";
+			print(test);
+		}
+	}
+}
+
+
+	</code>
+	</pre>
+	</figure>
+	
+	</body>
+	</html>
+	

@@ -53,48 +53,39 @@ namespace Solution2019
 {
 	namespace MedianofTwoSortedArrays
 	{
-		const int INF = 2e9;
+		double findMedianSortedArrays(vector&lt;int&gt;& nums1, vector&lt;int&gt;& nums2) {
+			int n1 = nums1.size();
+			int n2 = nums2.size();
+			if (n1 &gt; n2) { return findMedianSortedArrays(nums2, nums1); }
 
-		double findK(vector&lt;int&gt; & nums1, vector&lt;int&gt; & nums2, int k) {
-			int len1 = nums1.size();
-			int len2 = nums2.size();
-			int lenSum = len1 + len2;
-			for (int i = 0; i &lt; 2; i++) {
-				int l = -1;
-				int r = len1;
-				while (l != r - 1) {
-					int nums1_index = (l + r) / 2;
-					int nums2_index = k - nums1_index - 1;
+			int k = (n1 + n2 + 1) / 2;
 
-					int nums2_prev = (nums2_index &lt; 0 ? -INF : (nums2_index &gt;= len2 ? INF : nums2[nums2_index]));
-					int nums2_next = (nums2_index &lt; -1 ? -INF : (nums2_index &gt;= len2 - 1 ? INF : nums2[nums2_index + 1]));
-
-					if (nums1[nums1_index] &gt;= nums2_prev && nums1[nums1_index] &lt;= nums2_next) return nums1[nums1_index];
-					if (nums1[nums1_index] &lt; nums2_prev) {
-						l = nums1_index;
-					}
-					else {
-						r = nums1_index;
-					}
+			int l = 0;
+			int r = n1;
+			while (l &lt; r) {
+				int m1 = l + (r - l) / 2;
+				int m2 = k - m1;
+				if (nums1[m1] &lt; nums2[m2 - 1]) {
+					l = m1 + 1;
 				}
-				swap(nums1, nums2);  swap(len1, len2);
-			}
-			return 0;
-		}
-
-		double MedianofTwoSortedArrays(vector&lt;int&gt;& nums1, vector&lt;int&gt;& nums2) {
-			int len1 = nums1.size() + nums2.size();
-			if (len1 & 1) {
-				return findK(nums1, nums2, len1 / 2);
-			}
-			else {
-				return (findK(nums1, nums2, len1 / 2) + findK(nums1, nums2, len1 / 2 - 1))*0.5;
+				else {
+					r = m1;
+				}
 			}
 
+			int m1 = l;
+			int m2 = k - l;
+			int c1 = max(m1 &lt;= 0 ? INT_MIN : nums1[m1 - 1],
+				m2 &lt;= 0 ? INT_MIN : nums2[m2 - 1]);
+			if ((n1 + n2) % 2 == 1) { return c1; }
+
+			int c2 = min(m1 &gt;= n1 ? INT_MAX : nums1[m1],
+				m2 &gt;= n2 ? INT_MAX : nums2[m2]);
+			return (c1 + c2) * 0.5;
 		}
 
 		void Main() {
-			print(MedianofTwoSortedArrays(createVector({ 1, 2 }), createVector({ 3, 4 })));
+			print(findMedianSortedArrays(createVector({ 1, 2 }), createVector({ 3, 4 })));
 		}
 	}
 }

@@ -48,22 +48,49 @@ namespace Solution2019
 {
 	namespace TopKFrequentElements
 	{
-		vector&lt;int&gt; topKFrequent(vector&lt;int&gt;& nums, int k) {
-			unordered_map&lt;int, int&gt; map;
-			for (int v : nums) { map[v]++; }
+		namespace BucketSort {
+			vector&lt;int&gt; topKFrequent(vector&lt;int&gt;& nums, int k) {
+				int len = nums.size();
+				if (len == 0) { return {}; }
 
-			auto comp = [](pair&lt;int, int&gt;& a, pair&lt;int, int&gt;& b) {return a.second &gt; b.second; };
-			priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, decltype(comp)&gt; pq(comp);
-			for (auto& p : map) {
-				pq.push(make_pair(p.first, p.second));
-				if (pq.size() &gt; k) { pq.pop(); }
+				unordered_map&lt;int, int&gt; map;
+				for (int v : nums) { map[v]++; }
+
+				vector&lt;vector&lt;int&gt;&gt; freq(len + 1);
+				for (auto& p : map) {
+					freq[p.second].push_back(p.first);
+				}
+
+				vector&lt;int&gt; result;
+				for (int i = len; i &gt;= 0 && k &gt; 0; i--) {
+					if (!freq[i].empty()) {
+						int count = min(k, (int)(freq[i].size()));
+						result.insert(result.end(), freq[i].begin(), freq[i].begin() + count);
+						k -= count;
+					}
+				}
+				return result;
+			}		
+		}
+
+		namespace PriorityQueue {
+			vector&lt;int&gt; topKFrequent(vector&lt;int&gt;& nums, int k) {
+				unordered_map&lt;int, int&gt; map;
+				for (int v : nums) { map[v]++; }
+
+				auto comp = [](pair&lt;int, int&gt;& a, pair&lt;int, int&gt;& b) {return a.second &gt; b.second; };
+				priority_queue&lt;pair&lt;int, int&gt;, vector&lt;pair&lt;int, int&gt;&gt;, decltype(comp)&gt; pq(comp);
+				for (auto& p : map) {
+					pq.push(make_pair(p.first, p.second));
+					if (pq.size() &gt; k) { pq.pop(); }
+				}
+				vector&lt;int&gt; result;
+				while (!pq.empty()) {
+					result.push_back(pq.top().first);
+					pq.pop();
+				}
+				return result;
 			}
-			vector&lt;int&gt; result;
-			while (!pq.empty()) {
-				result.push_back(pq.top().first);
-				pq.pop();
-			}
-			return result;
 		}
 
 		void Main() {
