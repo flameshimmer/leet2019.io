@@ -1,7 +1,7 @@
 use strict;
 use warnings;
-
-
+use Time::localtime;
+use File::stat;
 
 my $content = '<!doctype html>
 <html>
@@ -36,27 +36,28 @@ my $content = '<!doctype html>
 
 my @lines;
 
-=pod
+
 my %hash = ();
-my $filedir = "./code";
+my $filedir = "./Leet2019";
 
 opendir(my $dir, $filedir) or die "Could not load directory";
 my @read_dir = sort grep {!-d}readdir($dir);
 foreach my $fileInDir(@read_dir)
 {
 
-    my $currentDestination = "$filedir/$fileInDir";
-    my $filesize = (-s $currentDestination) / 1024;
-
-	print "Filename: $fileInDir Size: $filesize\n";
-    if ($filesize > 1.5)
-    {
-        
-        $fileInDir =~ s/\.html//g;
+    my $fh = "$filedir/$fileInDir";
+	my $timestamp = ctime(stat($fh)->mtime);
+	#print "Filename: $fileInDir modtime: $timestamp\n";
+    if ($timestamp !~ m/Wed Sep  4 19:52:\d+ 2019/)
+    {        
+        $fileInDir =~ s/\.cpp//g;
         $hash{$fileInDir} = 1;
+    } else {
+    	#print "Empty file! $fileInDir\n";
     }
 }
 
+=pod
 
 
 open IN, "<index.html" or die;
@@ -103,7 +104,7 @@ for my $line (@lines) {
 		$question =~ s/9/Nine/g;
 		$question =~ s/0/Zero/g;
 
-		#if (!exists $hash{$question}) {print "Can't find question: $question\n";}
+		if (!exists $hash{$question}) {print "Can't find question: $question\n";}
 		my $url = './code/' . $question . '.html'; 
 		$content = $content . "\t\t<li><a href=\"$url\">$index - $question</a></li>\n";
 	} elsif ($line =~ m/(\d+)[\t|\s]*/) {

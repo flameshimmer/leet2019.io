@@ -27,7 +27,8 @@ namespace Solution2019
 	{
 		vector<int> diffWaysToCompute(string input) {
 			unordered_map<string, vector<int>> map;
-			return helper(input, map);
+			return {};
+			//return helper(input, map);
 		}
 
 		vector<int> helper(string input, unordered_map<string, vector<int>>& map) {
