@@ -15,19 +15,39 @@ namespace Solution2019
 {
 	namespace ProductofArrayExceptSelf
 	{
-		vector<int> productExceptSelf(vector<int>& nums) {			
-			int len = nums.size();
-			vector<int> result(len, 0);
-			result[0] = 1;
-			for (int i = 1; i < len; i++) {
-				result[i] = result[i - 1] * nums[i - 1];
+		namespace OnePass {
+			vector<int> productExceptSelf(vector<int>& nums) {
+				int len = nums.size();
+				if (len == 0) { return {}; }
+
+				vector<int> result(len, 1);
+				int left = 1;
+				int right = 1;
+				for (int i = 0; i < len; i++) {
+					result[i] *= left;
+					left *= nums[i];
+					result[len - 1 - i] *= right;
+					right *= nums[len - 1 - i];
+				}
+				return result;
 			}
-			int right = 1;
-			for (int j = len - 1; j >= 0; j--) {
-				result[j] *= right;
-				right *= nums[j];
+		}
+
+		namespace TwoPasses {
+			vector<int> productExceptSelf(vector<int>& nums) {
+				int len = nums.size();
+				vector<int> result(len, 0);
+				result[0] = 1;
+				for (int i = 1; i < len; i++) {
+					result[i] = result[i - 1] * nums[i - 1];
+				}
+				int right = 1;
+				for (int j = len - 1; j >= 0; j--) {
+					result[j] *= right;
+					right *= nums[j];
+				}
+				return result;
 			}
-			return result;
 		}
 
 		void Main() {

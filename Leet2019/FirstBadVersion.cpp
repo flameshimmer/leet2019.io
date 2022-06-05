@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ #include "stdafx.h"
 
 //You are a product manager and currently leading a team to develop a new
 //product. Unfortunately, the latest version of your product fails the quality

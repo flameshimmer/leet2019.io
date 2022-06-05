@@ -103,6 +103,31 @@ namespace Solution2019
 				return results;
 			}
 
+			vector<vector<int>> kClosestAnother(vector<vector<int>>& points, int K) {
+				vector<vector<int>> result;
+				int len = points.size();
+				if (len == 0 || K == 0) { return result; }
+
+				auto comp = [](const vector<int>& p1, const vector<int>& p2) {
+					return p1[0] * p1[0] + p1[1] * p1[1] < p2[0] * p2[0] + p2[1] * p2[1];
+				};
+
+				priority_queue<vector<int>, vector<vector<int>>, decltype(comp)> pq(comp);
+
+				for (vector<int>& p : points) {
+					if (pq.size() < K) { pq.push(p); }
+					else {
+						vector<int> top = pq.top();
+						if (top[0] * top[0] + top[1] * top[1] > p[0] * p[0] + p[1] * p[1]) { pq.pop(); pq.push(p); }
+					}
+				}
+				while (!pq.empty()) {
+					result.push_back(pq.top());
+					pq.pop();
+				}
+				return result;
+			}
+
 		}
 
 		void Main() {

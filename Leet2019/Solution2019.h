@@ -1186,4 +1186,6 @@ namespace Solution2019
 	namespace BeforeandAfterPuzzle { void Main(); }
 	namespace MinimumCosttoConnectSticks { void Main(); }
 	namespace MinimumRemovetoMakeValidParentheses { void Main(); }
+	namespace IntervalListUnion { void Main(); }
+	
 };

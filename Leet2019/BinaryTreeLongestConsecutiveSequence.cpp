@@ -33,6 +33,17 @@ namespace Solution2019
 {
 	namespace BinaryTreeLongestConsecutiveSequence
 	{
+		int helper(TreeNode* node, TreeNode* parent, int len) {
+			if (!node) { return len; }
+
+			len = (parent && parent->val + 1 == node->val) ? len + 1 : 1;
+			return max(len, max(helper(node->left, node, len), helper(node->right, node, len)));
+		}
+
+		int longestConsecutive(TreeNode* root) {
+			return helper(root, nullptr, 0);
+		}
+
 		namespace TooSlow {
 			void helper(TreeNode* node, int cur, int& result) {
 				if (!node) { return; }

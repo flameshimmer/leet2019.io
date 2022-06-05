@@ -38,6 +38,28 @@ namespace Solution2019
 			return vector<int>(arr.begin() + start, arr.begin() + start + k);
 		}
 
+		namespace NotAsFast {
+			vector<int> findClosestElements(vector<int>& arr, int k, int x) {
+				vector<int> result;
+				int len = arr.size();
+				if (len == 0) { return result; }
+
+				int pos = lower_bound(arr.begin(), arr.end(), x) - arr.begin();
+				int l = pos - 1;
+				int r = pos;
+				while (result.size() < k) {
+					int disL = INT_MAX;
+					int disR = INT_MAX;
+					if (l >= 0) { disL = abs(arr[l] - x); }
+					if (r < len) { disR = abs(arr[r] - x); }
+					if (disL <= disR) { result.insert(result.begin(), arr[l]); l--; }
+					else { result.push_back(arr[r]); r++; }
+				}
+				return result;
+			}
+		
+		}
+
 		void Main() {
 			string test = "tst test test";
 			print(test);
